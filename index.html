@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ribbon Masters</title>
+		<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			function changeTheme(t){
+				localStorage.setItem("theme", t);
+				$("body").attr("class", t);
+			}
+			function toggleNew(){
+				$("#addnewpkmn-button, #addnewpkmn").toggle();
+			}
+			function resetForm(){
+				$("#addnewpkmn input").each(function(){
+					$(this).val("");
+				});
+				$("#addnewpkmn select").each(function(){
+					$(this).find("option:disabled").prop("selected", "selected").change();
+				});
+			}
+			function deletePkmn(t){
+				var name = $(t).parents("tr").find("td:nth(0)").text();
+				if(confirm("Are you sure? All of " + name + "'s data will be permanently erased!")){
+					var id = $(t).parents("tr").attr("pokemon");
+					allpkmn = JSON.parse(localStorage.getItem("pokemon"));
+					delete allpkmn.entries[id];
+					allpkmn.entries = allpkmn.entries.filter(Boolean);
+					localStorage.setItem("pokemon", JSON.stringify(allpkmn));
+					clearTable(allpkmn);
+				}
+			}
+			function createTable(allpkmn){
+				for(let i in allpkmn.entries){
+					addRow(allpkmn.entries[i], i);
+				}
+			}
+			function clearTable(allpkmn){
+				$(".tablelist tr:not(.protected)").each(function(){
+					$(this).remove();
+				});
+				createTable(allpkmn);
+			}
+			function gameInfo(s, o){
+				const games = {
+					"go": {"name": "GO", "mark": "go"},
+					"scar": {"name": "Scarlet", "mark": "unknown"},
+					"vio": {"name": "Violet", "mark": "unknown"},
+					"sw": {"name": "Sword", "mark": "galar"},
+					"sh": {"name": "Shield", "mark": "galar"},
+					"bd": {"name": "Brilliant Diamond", "mark": "bdsp"},
+					"sp": {"name": "Shining Pearl", "mark": "bdsp"},
+					"pla": {"name": "Legends: Arceus", "mark": "hisui"},
+					"sun": {"name": "Sun", "mark": "clover"},
+					"moon": {"name": "Moon", "mark": "clover"},
+					"usun": {"name": "Ultra Sun", "mark": "clover"},
+					"umoon": {"name": "Ultra Moon", "mark": "clover"},
+					"lgp": {"name": "Let's Go, Pikachu!", "mark": "lets-go"},
+					"lge": {"name": "Let's Go, Eevee!", "mark": "lets-go"},
+					"x": {"name": "X", "mark": "pentagon"},
+					"y": {"name": "Y", "mark": "pentagon"},
+					"or": {"name": "Omega Ruby", "mark": "pentagon"},
+					"as": {"name": "Alpha Sapphire", "mark": "pentagon"},
+					"black": {"name": "Black", "mark": null},
+					"white": {"name": "White", "mark": null},
+					"black2": {"name": "Black 2", "mark": null},
+					"white2": {"name": "White 2", "mark": null},
+					"diamond": {"name": "Diamond", "mark": null},
+					"pearl": {"name": "Pearl", "mark": null},
+					"platinum": {"name": "Platinum", "mark": null},
+					"hg": {"name": "HeartGold", "mark": null},
+					"ss": {"name": "SoulSilver", "mark": null},
+					"ruby": {"name": "Ruby", "mark": null},
+					"sapphire": {"name": "Sapphire", "mark": null},
+					"emerald": {"name": "Emerald", "mark": null},
+					"fr": {"name": "FireRed", "mark": null},
+					"lg": {"name": "LeafGreen", "mark": null},
+					"colosseum": {"name": "Colosseum", "mark": null},
+					"xd": {"name": "XD: Gale of Darkness", "mark": null},
+					"gold": {"name": "Gold", "mark": "game-boy"},
+					"silver": {"name": "Silver", "mark": "game-boy"},
+					"crystal": {"name": "Crystal", "mark": "game-boy"},
+					"red-jpn": {"name": "Red (JPN)", "mark": "game-boy"},
+					"green": {"name": "Green", "mark": "game-boy"},
+					"blue-jpn": {"name": "Blue (JPN)", "mark": "game-boy"},
+					"red-eng": {"name": "Red (ENG)", "mark": "game-boy"},
+					"blue-eng": {"name": "Blue (ENG)", "mark": "game-boy"},
+					"yellow": {"name": "Yellow", "mark": "game-boy"}
+				};
+				if(o){
+					if(games[s]["mark"]){
+						return "origin-" + games[s]["mark"];
+					} else {
+						return "";
+					}
+				} else {
+					return games[s]["name"];
+				}
+			}
+			function addRow(pkmn, i){
+				var shinyDir = pkmn.shiny ? "shiny/" : "";
+				$("#addnewpkmn").before("<tr pokemon='" + i + "'><td><b>" + pkmn.name + "</b></td><td style='text-align:center;'><img src='sprites/pkmn/" + shinyDir + pkmn.dex + ".png' style='height:50px;'></td><td style='text-align:center;'><img src='sprites/balls/" + pkmn.ball + ".png' style='width:32px;'></td><td>" + pkmn.ot + "</td><td>" + pkmn.id + "</td><td class='nature'>" + pkmn.nature + "</td><td class='origin "+gameInfo(pkmn.origin, true)+"'>" + gameInfo(pkmn.origin, false) + "</td><td class='ribbons'><span class='button'>Edit</span> <span class='button delete' onclick='deletePkmn(this)'>Delete</span></td></tr>");
+			}
+			function makePkmn(name, dex, shiny, gender, ball, ot, id, nature, origin){
+				return {
+					name: name,
+					dex: dex,
+					shiny: shiny,
+					gender: gender,
+					ball: ball,
+					ot: ot,
+					id: id,
+					nature: nature,
+					origin: origin
+				}
+			}
+			$(function(){
+				resetForm();
+				var theme = localStorage.getItem("theme");
+				if(!theme) theme = "dark";
+				changeTheme(theme);
+				var allpkmn = localStorage.getItem("pokemon");
+				if(!allpkmn){
+					allpkmn = { "entries": [] };
+					localStorage.setItem("pokemon", JSON.stringify(allpkmn));
+				} else {
+					allpkmn = JSON.parse(allpkmn);
+					for(let i in allpkmn.entries){
+						addRow(allpkmn.entries[i], i);
+					}
+				}
+				$("#themeswitch").click(function(){
+					var current = $("body").attr("class");
+					current === "dark" ? changeTheme("light") : changeTheme("dark");
+				});
+				$("#addnewpkmn-button .button").click(function(){
+					toggleNew();
+				});
+				$("#addnewpkmn .button.cancel").click(function(){
+					if(confirm("Are you sure? All of the data you've entered will be lost!")){
+						toggleNew();
+						resetForm();
+					}
+				});
+				$("#addnewpkmn .button.add").click(function(){
+					var str = {
+						name: $("[name=nickname]").val(),
+						dex: $("[name=dex]").val(),
+						shiny: true,
+						gender: "male",
+						ball: $("[name=pokeball]").val(),
+						ot: $("[name=trainer]").val(),
+						id: $("[name=id]").val(),
+						nature: $("[name=nature]").val(),
+						origin: $("[name=origin]").val(),
+						ribbons: []
+					};
+					allpkmn = JSON.parse(localStorage.getItem("pokemon"));
+					var n = allpkmn.entries.length;
+					allpkmn.entries[n] = str;
+					localStorage.setItem("pokemon", JSON.stringify(allpkmn));
+					addRow(str, n);
+					toggleNew();
+					resetForm();
+				});
+			});
+		</script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+		<style type="text/css">body.dark { background: #121212; color: #fff; } body.light { background:#fff; color: #121212; } body { width:95%; font-family: "Nunito Sans", sans-serif; font-size: 12pt; margin: 20px auto 0; } header { text-align:center;font-size:20pt;font-weight:bold;} .subhead { text-align:center;font-size:14pt;margin-top:10px;} .subheadbtns { text-align:center;font-size:10pt;margin-top:20px;} .masterlist { padding:10px;margin:20px 0;border:1px solid #aaa;border-left:none;border-right:none;} .sprite { display:flex;align-items:center;justify-content:space-evenly; } .sprite > div {display:inline-block;} .sprite > div.sprball {background:url("sprites/balls/ball.png") no-repeat center center;width:32px;height:32px;background-size:32px;}.sprite > div.sprball2 {background:url("sprites/balls/safari.png") no-repeat center center;width:32px;height:32px;background-size:32px;} .tablelist { width: 100%;padding: 10px 0 0;margin:20px 0;border:1px solid #aaa;border-left:none;border-right:none;border-spacing:0; } /*.tablelist th:not(:last-child), .tablelist td:not(:last-child) { border-right: 1px solid #666; }*/ .tablelist th, .tablelist td { text-align:left; min-height:60px; border-bottom:1px solid #666; padding-left:10px; } .tablelist th { height:40px; } .tablelist #addnewpkmn-button td, .tablelist #addnewpkmn td { border-bottom: none; padding:25px 0 25px 10px;text-align:center; } .tablelist #addnewpkmn-button td { padding-bottom:27px } .tablelist .origin { position:relative;padding-left:35px; } .tablelist .origin:before { content:"";width:32px;height:100%; position:absolute; top:0;left:0; background:transparent no-repeat left center; background-size:32px; } .tablelist .shinymark { background:url("sprites/shiny.png") no-repeat right center; background-size:16px;} .tablelist .shinymark2 { position:relative; } .tablelist .shinymark2 .shiny { position: absolute; left: 42px; top:22px; } .button { padding:5px 10px; background:#efefef;border:2px solid #222;border-radius:10px;cursor:default;user-select: none; } .ribbons .button { display: inline-block; } .button:hover { background: #ddd; } .button:active { background:#ccc;} body.dark .button { background:#222; border-color:#888; } body.dark .button:hover { background: #444; } body.dark .button:active { background:#555; } footer { font-size: 9pt; text-align:center; } .ribbons img { width:40px;margin-right:5px; } * { font-family: "Nunito Sans", sans-serif; } #addnewpkmn { display: none; } .nature { text-transform: capitalize }
+
+body.dark .tablelist .origin-bdsp:before {background-image:url("sprites/origins/light/bdsp.png");}
+body.light .tablelist .origin-bdsp:before {background-image:url("sprites/origins/dark/bdsp.png");}
+body.dark .tablelist .origin-clover:before {background-image:url("sprites/origins/light/clover.png");}
+body.light .tablelist .origin-clover:before {background-image:url("sprites/origins/dark/clover.png");}
+body.dark .tablelist .origin-galar:before {background-image:url("sprites/origins/light/galar.png");}
+body.light .tablelist .origin-galar:before {background-image:url("sprites/origins/dark/galar.png");}
+body.dark .tablelist .origin-game-boy:before {background-image:url("sprites/origins/light/game-boy.png");}
+body.light .tablelist .origin-game-boy:before {background-image:url("sprites/origins/dark/game-boy.png");}
+body.dark .tablelist .origin-go:before {background-image:url("sprites/origins/light/go.png");}
+body.light .tablelist .origin-go:before {background-image:url("sprites/origins/dark/go.png");}
+body.dark .tablelist .origin-hisui:before {background-image:url("sprites/origins/light/hisui.png");}
+body.light .tablelist .origin-hisui:before {background-image:url("sprites/origins/dark/hisui.png");}
+body.dark .tablelist .origin-lets-go:before {background-image:url("sprites/origins/light/lets-go.png");}
+body.light .tablelist .origin-lets-go:before {background-image:url("sprites/origins/dark/lets-go.png");}
+body.dark .tablelist .origin-pentagon:before {background-image:url("sprites/origins/light/pentagon.png");}
+body.light .tablelist .origin-pentagon:before {background-image:url("sprites/origins/dark/pentagon.png");}</style>
+	</head>
+	<body>
+		<header>Ribbon Masters</header>
+		<div class="subhead">Keep track of your Ribboned Pokémon!</div>
+		<div class="subheadbtns"><span class="button" id="themeswitch">Switch Light/Dark</span> <span class="button">Backup</span> <span class="button">Restore</span></div>
+		<table class="tablelist">
+			<tr class="header protected">
+				<th style="width:150px;">Name</th>
+				<th style="width:150px;text-align:center;">Sprite</th>
+				<th style="width:115px;text-align:center;">Ball</th>
+				<th style="width:100px;">OT</th>
+				<th style="width:100px;">ID No.</th>
+				<th style="width:100px;">Nature</th>
+				<th style="width:300px;">Origin</th>
+				<th>Ribbons</th>
+			</tr>
+			<!--<tr>
+				<td><b>Blue Friendo</b></td>
+				<td class="shinymark2" style="text-align:center;"><img src="sprites/shiny.png" class="shiny" style="width:16px;height:16px;"> <img src="sprites/pkmn/shiny/151.png" style="height:50px;"></td>
+				<td style="text-align:center;"><img src="sprites/balls/ball.png" style="width:32px;"></td>
+				<td>Sly</td>
+				<td>999999</td>
+				<td>Quirky</td>
+				<td class="origin origin-go">GO</td>
+				<td class="ribbons"><img src="sprites/ribbons/BestFriends.png"><img src="sprites/ribbons/MasterRank.png"><br><span class="button">Edit</span></td>
+			</tr>
+			<tr>
+				<td><b>This Guy</b></td>
+				<td style="text-align:center;"><img src="sprites/pkmn/286.png" style="height:50px;"></td>
+				<td style="text-align:center;"><img src="sprites/balls/safari.png" style="width:32px;"></td>
+				<td>Sly</td>
+				<td>999999</td>
+				<td>Jolly</td>
+				<td class="origin origin-bdsp">Brilliant Diamond</td>
+				<td class="ribbons"><span class="button">Edit</span></td>
+			</tr>-->
+			<tr id="addnewpkmn" class="protected">
+				<td><input type="text" name="nickname" maxlength="12" style="width:calc(100% - 20px);" placeholder="Name"></td>
+				<td><img src="sprites/shiny.png" style="filter:grayscale(100%);width:16px;height:16px;vertical-align:middle;"> <select name="dex" style="width:calc(100% - 24px);"><option disabled>Species</option><option value="151">Mew</option><option value="286">Breloom</option></select></td>
+				<td style="text-align:center;"><select name="pokeball" style="width:calc(100% - 10px);">
+					<option disabled>Ball</option>
+					<optgroup label="Standard">
+						<option value="poke">Poké Ball</option>
+						<option value="great">Great Ball</option>
+						<option value="ultra">Ultra Ball</option>
+						<option value="master">Master Ball</option>
+						<option value="safari">Safari Ball</option>
+						<option value="fast">Fast Ball</option>
+						<option value="level">Level Ball</option>
+						<option value="lure">Lure Ball</option>
+						<option value="heavy">Heavy Ball</option>
+						<option value="love">Love Ball</option>
+						<option value="friend">Friend Ball</option>
+						<option value="moon">Moon Ball</option>
+						<option value="sport">Sport Ball</option>
+						<option value="net">Net Ball</option>
+						<option value="dive">Dive Ball</option>
+						<option value="nest">Nest Ball</option>
+						<option value="repeat">Repeat Ball</option>
+						<option value="timer">Timer Ball</option>
+						<option value="luxury">Luxury Ball</option>
+						<option value="premier">Premier Ball</option>
+						<option value="dusk">Dusk Ball</option>
+						<option value="heal">Heal Ball</option>
+						<option value="quick">Quick Ball</option>
+						<option value="cherish">Cherish Ball</option>
+						<option value="dream">Dream Ball</option>
+						<option value="beast">Beast Ball</option>
+					</optgroup>
+					<optgroup label="Hisui">
+						<option value="hisui-poke">Hisuian Poké Ball</option>
+						<option value="hisui-great">Hisuian Great Ball</option>
+						<option value="hisui-ultra">Hisuian Ultra Ball</option>
+						<option value="hisui-heavy">Hisuian Heavy Ball</option>
+						<option value="hisui-leaden">Leaden Ball</option>
+						<option value="hisui-gigaton">Gigaton Ball</option>
+						<option value="hisui-feather">Feather Ball</option>
+						<option value="hisui-wing">Wing Ball</option>
+						<option value="hisui-jet">Jet Ball</option>
+						<option value="hisui-origin">Origin Ball</option>
+					</optgroup>
+				</select></td>
+				<td><input type="text" name="trainer" maxlength="15" style="width:calc(100% - 5px);" placeholder="OT"></td>
+				<td><input type="text" name="id" maxlength="6" style="width:calc(100% - 5px);" placeholder="ID No."></td>
+				<td><select name="nature" style="width:calc(100% - 10px);">
+					<option disabled>Nature</option>
+					<option value="hardy">Hardy</option>
+					<option value="lonely">Lonely</option>
+					<option value="brave">Brave</option>
+					<option value="adamant">Adamant</option>
+					<option value="naughty">Naughty</option>
+					<option value="bold">Bold</option>
+					<option value="docile">Docile</option>
+					<option value="relaxed">Relaxed</option>
+					<option value="impish">Impish</option>
+					<option value="lax">Lax</option>
+					<option value="timid">Timid</option>
+					<option value="hasty">Hasty</option>
+					<option value="serious">Serious</option>
+					<option value="jolly">Jolly</option>
+					<option value="naive">Naive</option>
+					<option value="modest">Modest</option>
+					<option value="mild">Mild</option>
+					<option value="quiet">Quiet</option>
+					<option value="bashful">Bashful</option>
+					<option value="rash">Rash</option>
+					<option value="calm">Calm</option>
+					<option value="gentle">Gentle</option>
+					<option value="sassy">Sassy</option>
+					<option value="careful">Careful</option>
+					<option value="quirky">Quirky</option>
+				</select></td>
+				<td class="origin"><select name="origin" style="width:calc(100% - 10px);">
+					<option disabled>Origin</option>
+					<option value="go">GO</option>
+					<optgroup label="Gen IX">
+						<option value="scar">Scarlet</option>
+						<option value="vio">Violet</option>
+					</optgroup>
+					<optgroup label="Gen VIII">
+						<option value="sw">Sword</option>
+						<option value="sh">Shield</option>
+						<option value="bd">Brilliant Diamond</option>
+						<option value="sp">Shining Pearl</option>
+						<option value="pla">Legends: Arceus</option>
+					</optgroup>
+					<optgroup label="Gen VII">
+						<option value="sun">Sun</option>
+						<option value="moon">Moon</option>
+						<option value="usun">Ultra Sun</option>
+						<option value="umoon">Ultra Moon</option>
+						<option value="lgp">Let's Go, Pikachu!</option>
+						<option value="lge">Let's Go, Eevee!</option>
+					</optgroup>
+					<optgroup label="Gen VI">
+						<option value="x">X</option>
+						<option value="y">Y</option>
+						<option value="or">Omega Ruby</option>
+						<option value="as">Alpha Sapphire</option>
+					</optgroup>
+					<optgroup label="Gen V">
+						<option value="black">Black</option>
+						<option value="white">White</option>
+						<option value="black2">Black 2</option>
+						<option value="white2">White 2</option>
+					</optgroup>
+					<optgroup label="Gen IV">
+						<option value="diamond">Diamond</option>
+						<option value="pearl">Pearl</option>
+						<option value="platinum">Platinum</option>
+						<option value="hg">HeartGold</option>
+						<option value="ss">SoulSilver</option>
+					</optgroup>
+					<optgroup label="Gen III">
+						<option value="ruby">Ruby</option>
+						<option value="sapphire">Sapphire</option>
+						<option value="emerald">Emerald</option>
+						<option value="fr">FireRed</option>
+						<option value="lg">LeafGreen</option>
+						<option value="colosseum">Colosseum</option>
+						<option value="xd">XD: Gale of Darkness</option>
+					</optgroup>
+					<optgroup label="Gen II">
+						<option value="gold">Gold</option>
+						<option value="silver">Silver</option>
+						<option value="crystal">Crystal</option>
+					</optgroup>
+					<optgroup label="Gen I">
+						<option value="red-jpn">Red (JPN)</option>
+						<option value="green">Green</option>
+						<option value="blue-jpn">Blue (JPN)</option>
+						<option value="red-eng">Red (ENG)</option>
+						<option value="blue-eng">Blue (ENG)</option>
+						<option value="yellow">Yellow</option>
+					</optgroup>
+				</select></td>
+				<td style="text-align:left;"><span class="button add">Add</span> <span class="button cancel">Cancel</span></td>
+			</tr>
+			<tr id="addnewpkmn-button" class="protected">
+				<td colspan="8"><span class="button">Track New Pokémon</span></td>
+			</tr>
+		</table>
+		<footer>This site is not affiliated with Nintendo, Game Freak, or The Pokémon Company.<br>All data is stored on your browser.</footer>
+	</body>
+</html>
