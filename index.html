@@ -155,37 +155,22 @@
 						origin: $("[name=origin]").val(),
 						ribbons: []
 					};
-					allpkmn = JSON.parse(localStorage.getItem("pokemon"));
-					var n = allpkmn.entries.length;
-					allpkmn.entries[n] = str;
-					localStorage.setItem("pokemon", JSON.stringify(allpkmn));
-					addRow(str, n);
-					toggleNew();
-					resetForm();
+					if(str.name && str.dex && str.ball && str.ot && str.id && str.nature && str.origin){
+						allpkmn = JSON.parse(localStorage.getItem("pokemon"));
+						var n = allpkmn.entries.length;
+						allpkmn.entries[n] = str;
+						localStorage.setItem("pokemon", JSON.stringify(allpkmn));
+						addRow(str, n);
+						toggleNew();
+						resetForm();
+					}
 				});
 			});
 		</script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet"> 
-		<style type="text/css">body.dark { background: #121212; color: #fff; } body.light { background:#fff; color: #121212; } body { width:95%; font-family: "Nunito Sans", sans-serif; font-size: 12pt; margin: 20px auto 0; } header { text-align:center;font-size:20pt;font-weight:bold;} .subhead { text-align:center;font-size:14pt;margin-top:10px;} .subheadbtns { text-align:center;font-size:10pt;margin-top:20px;} .masterlist { padding:10px;margin:20px 0;border:1px solid #aaa;border-left:none;border-right:none;} .sprite { display:flex;align-items:center;justify-content:space-evenly; } .sprite > div {display:inline-block;} .sprite > div.sprball {background:url("sprites/balls/ball.png") no-repeat center center;width:32px;height:32px;background-size:32px;}.sprite > div.sprball2 {background:url("sprites/balls/safari.png") no-repeat center center;width:32px;height:32px;background-size:32px;} .tablelist { width: 100%;padding: 10px 0 0;margin:20px 0;border:1px solid #aaa;border-left:none;border-right:none;border-spacing:0; } /*.tablelist th:not(:last-child), .tablelist td:not(:last-child) { border-right: 1px solid #666; }*/ .tablelist th, .tablelist td { text-align:left; min-height:60px; border-bottom:1px solid #666; padding-left:10px; } .tablelist th { height:40px; } .tablelist #addnewpkmn-button td, .tablelist #addnewpkmn td { border-bottom: none; padding:25px 0 25px 10px;text-align:center; } .tablelist #addnewpkmn-button td { padding-bottom:27px } .tablelist .origin { position:relative;padding-left:35px; } .tablelist .origin:before { content:"";width:32px;height:100%; position:absolute; top:0;left:0; background:transparent no-repeat left center; background-size:32px; } .tablelist .shinymark { background:url("sprites/shiny.png") no-repeat right center; background-size:16px;} .tablelist .shinymark2 { position:relative; } .tablelist .shinymark2 .shiny { position: absolute; left: 42px; top:22px; } .button { padding:5px 10px; background:#efefef;border:2px solid #222;border-radius:10px;cursor:default;user-select: none; } .ribbons .button { display: inline-block; } .button:hover { background: #ddd; } .button:active { background:#ccc;} body.dark .button { background:#222; border-color:#888; } body.dark .button:hover { background: #444; } body.dark .button:active { background:#555; } footer { font-size: 9pt; text-align:center; } .ribbons img { width:40px;margin-right:5px; } * { font-family: "Nunito Sans", sans-serif; } #addnewpkmn { display: none; } .nature { text-transform: capitalize }
-
-body.dark .tablelist .origin-bdsp:before {background-image:url("sprites/origins/light/bdsp.png");}
-body.light .tablelist .origin-bdsp:before {background-image:url("sprites/origins/dark/bdsp.png");}
-body.dark .tablelist .origin-clover:before {background-image:url("sprites/origins/light/clover.png");}
-body.light .tablelist .origin-clover:before {background-image:url("sprites/origins/dark/clover.png");}
-body.dark .tablelist .origin-galar:before {background-image:url("sprites/origins/light/galar.png");}
-body.light .tablelist .origin-galar:before {background-image:url("sprites/origins/dark/galar.png");}
-body.dark .tablelist .origin-game-boy:before {background-image:url("sprites/origins/light/game-boy.png");}
-body.light .tablelist .origin-game-boy:before {background-image:url("sprites/origins/dark/game-boy.png");}
-body.dark .tablelist .origin-go:before {background-image:url("sprites/origins/light/go.png");}
-body.light .tablelist .origin-go:before {background-image:url("sprites/origins/dark/go.png");}
-body.dark .tablelist .origin-hisui:before {background-image:url("sprites/origins/light/hisui.png");}
-body.light .tablelist .origin-hisui:before {background-image:url("sprites/origins/dark/hisui.png");}
-body.dark .tablelist .origin-lets-go:before {background-image:url("sprites/origins/light/lets-go.png");}
-body.light .tablelist .origin-lets-go:before {background-image:url("sprites/origins/dark/lets-go.png");}
-body.dark .tablelist .origin-pentagon:before {background-image:url("sprites/origins/light/pentagon.png");}
-body.light .tablelist .origin-pentagon:before {background-image:url("sprites/origins/dark/pentagon.png");}</style>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
 	</head>
 	<body>
 		<header>Ribbon Masters</header>
@@ -223,10 +208,10 @@ body.light .tablelist .origin-pentagon:before {background-image:url("sprites/ori
 				<td class="ribbons"><span class="button">Edit</span></td>
 			</tr>-->
 			<tr id="addnewpkmn" class="protected">
-				<td><input type="text" name="nickname" maxlength="12" style="width:calc(100% - 20px);" placeholder="Name"></td>
-				<td><img src="sprites/shiny.png" style="filter:grayscale(100%);width:16px;height:16px;vertical-align:middle;"> <select name="dex" style="width:calc(100% - 24px);"><option disabled>Species</option><option value="151">Mew</option><option value="286">Breloom</option></select></td>
-				<td style="text-align:center;"><select name="pokeball" style="width:calc(100% - 10px);">
-					<option disabled>Ball</option>
+				<td><input form="newpkmnform" required type="text" name="nickname" maxlength="12" style="width:calc(100% - 20px);" placeholder="Name"></td>
+				<td><img src="sprites/shiny.png" style="filter:grayscale(100%);width:16px;height:16px;vertical-align:middle;"> <select required form="newpkmnform" name="dex" style="width:calc(100% - 24px);"><option disabled value="">Species</option><option value="mew">Mew</option><option value="breloom">Breloom</option></select></td>
+				<td style="text-align:center;"><select required form="newpkmnform" name="pokeball" style="width:calc(100% - 10px);">
+					<option disabled value="">Ball</option>
 					<optgroup label="Standard">
 						<option value="poke">Poké Ball</option>
 						<option value="great">Great Ball</option>
@@ -256,50 +241,50 @@ body.light .tablelist .origin-pentagon:before {background-image:url("sprites/ori
 						<option value="beast">Beast Ball</option>
 					</optgroup>
 					<optgroup label="Hisui">
-						<option value="hisui-poke">Hisuian Poké Ball</option>
-						<option value="hisui-great">Hisuian Great Ball</option>
-						<option value="hisui-ultra">Hisuian Ultra Ball</option>
-						<option value="hisui-heavy">Hisuian Heavy Ball</option>
-						<option value="hisui-leaden">Leaden Ball</option>
-						<option value="hisui-gigaton">Gigaton Ball</option>
-						<option value="hisui-feather">Feather Ball</option>
-						<option value="hisui-wing">Wing Ball</option>
-						<option value="hisui-jet">Jet Ball</option>
-						<option value="hisui-origin">Origin Ball</option>
+						<option value="hisuian-poke">Hisuian Poké Ball</option>
+						<option value="hisuian-great">Hisuian Great Ball</option>
+						<option value="hisuian-ultra">Hisuian Ultra Ball</option>
+						<option value="hisuian-heavy">Hisuian Heavy Ball</option>
+						<option value="leaden">Leaden Ball</option>
+						<option value="gigaton">Gigaton Ball</option>
+						<option value="feather">Feather Ball</option>
+						<option value="wing">Wing Ball</option>
+						<option value="jet">Jet Ball</option>
+						<option value="origin">Origin Ball</option>
 					</optgroup>
 				</select></td>
-				<td><input type="text" name="trainer" maxlength="15" style="width:calc(100% - 5px);" placeholder="OT"></td>
-				<td><input type="text" name="id" maxlength="6" style="width:calc(100% - 5px);" placeholder="ID No."></td>
-				<td><select name="nature" style="width:calc(100% - 10px);">
-					<option disabled>Nature</option>
-					<option value="hardy">Hardy</option>
-					<option value="lonely">Lonely</option>
-					<option value="brave">Brave</option>
-					<option value="adamant">Adamant</option>
-					<option value="naughty">Naughty</option>
-					<option value="bold">Bold</option>
-					<option value="docile">Docile</option>
-					<option value="relaxed">Relaxed</option>
-					<option value="impish">Impish</option>
-					<option value="lax">Lax</option>
-					<option value="timid">Timid</option>
-					<option value="hasty">Hasty</option>
-					<option value="serious">Serious</option>
-					<option value="jolly">Jolly</option>
-					<option value="naive">Naive</option>
-					<option value="modest">Modest</option>
-					<option value="mild">Mild</option>
-					<option value="quiet">Quiet</option>
-					<option value="bashful">Bashful</option>
-					<option value="rash">Rash</option>
-					<option value="calm">Calm</option>
-					<option value="gentle">Gentle</option>
-					<option value="sassy">Sassy</option>
-					<option value="careful">Careful</option>
-					<option value="quirky">Quirky</option>
+				<td><input required form="newpkmnform" type="text" name="trainer" maxlength="15" style="width:calc(100% - 5px);" placeholder="OT"></td>
+				<td><input required form="newpkmnform" type="text" name="id" minlength="5" maxlength="6" pattern="[0-9]{6}" style="width:calc(100% - 5px);" placeholder="######"></td>
+				<td><select required form="newpkmnform" name="nature" style="width:calc(100% - 10px);">
+					<option disabled value="">Nature</option>
+					<option>Hardy</option>
+					<option>Lonely</option>
+					<option>Brave</option>
+					<option>Adamant</option>
+					<option>Naughty</option>
+					<option>Bold</option>
+					<option>Docile</option>
+					<option>Relaxed</option>
+					<option>Impish</option>
+					<option>Lax</option>
+					<option>Timid</option>
+					<option>Hasty</option>
+					<option>Serious</option>
+					<option>Jolly</option>
+					<option>Naive</option>
+					<option>Modest</option>
+					<option>Mild</option>
+					<option>Quiet</option>
+					<option>Bashful</option>
+					<option>Rash</option>
+					<option>Calm</option>
+					<option>Gentle</option>
+					<option>Sassy</option>
+					<option>Careful</option>
+					<option>Quirky</option>
 				</select></td>
-				<td class="origin"><select name="origin" style="width:calc(100% - 10px);">
-					<option disabled>Origin</option>
+				<td class="origin"><select required form="newpkmnform" name="origin" style="width:calc(100% - 10px);">
+					<option disabled value="">Origin</option>
 					<option value="go">GO</option>
 					<optgroup label="Gen IX">
 						<option value="scar">Scarlet</option>
@@ -362,12 +347,13 @@ body.light .tablelist .origin-pentagon:before {background-image:url("sprites/ori
 						<option value="yellow">Yellow</option>
 					</optgroup>
 				</select></td>
-				<td style="text-align:left;"><span class="button add">Add</span> <span class="button cancel">Cancel</span></td>
+				<td style="text-align:left;"><button form="newpkmnform" class="button add">Add</button> <span class="button cancel">Cancel</span></td>
 			</tr>
 			<tr id="addnewpkmn-button" class="protected">
 				<td colspan="8"><span class="button">Track New Pokémon</span></td>
 			</tr>
 		</table>
+		<form id="newpkmnform" action="javascript:void(0);"></form>
 		<footer>This site is not affiliated with Nintendo, Game Freak, or The Pokémon Company.<br>All data is stored on your browser.</footer>
 	</body>
 </html>
