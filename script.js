@@ -13,12 +13,15 @@ function toggleCheck(id){
 
 function resetForm(){
 	$("#addnewpkmn input").each(function(){
-		$(this).val("");
+		if($(this).attr("type") === "text"){
+			$(this).val("");
+		} else if($(this).attr("type") === "checkbox"){
+			$(this).prop("checked", false);
+		}
 	});
 	$("#addnewpkmn select").each(function(){
 		$(this).find("option:disabled").prop("selected", "selected").change();
 	});
-	$("#shinycheck").prop("checked", false);
 }
 
 function deletePkmn(t){
