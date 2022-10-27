@@ -149,7 +149,7 @@ $(function(){
 			origin: $("#add-origin").val(),
 			ribbons: []
 		};
-		if(str.name && str.dex && str.ball && str.ot && isNumber(str.id) && str.nature && str.origin){
+		if(str.name && str.dex && str.ball && str.ot && !isNaN(str.id) && str.nature && str.origin){
 			allpkmn = JSON.parse(localStorage.getItem("pokemon"));
 			var n = allpkmn.entries.length;
 			allpkmn.entries[n] = str;
