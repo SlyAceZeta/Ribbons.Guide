@@ -15,6 +15,36 @@ body.light {
 	background: #fff;
 	color: #121212;
 }
+button, .button {
+	padding: 5px 10px;
+	background: #efefef;
+	border: 2px solid #222;
+	border-radius: 10px;
+	cursor: default;
+	user-select: none;
+	font-size: 12pt;
+	color: #121212;
+}
+.ribbons .button {
+	display: inline-block;
+}
+button:hover, .button:hover {
+	background: #ddd;
+}
+button:hover, .button:active {
+	background: #ccc;
+}
+body.dark button, body.dark .button {
+	background: #222;
+	border-color: #888;
+	color: #fff;
+}
+body.dark button:hover, body.dark .button:hover {
+	background: #444;
+}
+body.dark button:active, body.dark .button:active {
+	background: #555;
+}
 header {
 	text-align: center;
 	font-size: 20pt;
@@ -30,32 +60,8 @@ header {
 	font-size: 10pt;
 	margin-top: 20px;
 }
-.masterlist {
-	padding: 10px;
-	margin: 20px 0;
-	border: 1px solid #aaa;
-	border-left: none;
-	border-right: none;
-}
-.sprite {
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-}
-.sprite > div {
-	display: inline-block;
-}
-.sprite > div.sprball {
-	background: url("sprites/balls/ball.png") no-repeat center center;
-	width: 32px;
-	height: 32px;
-	background-size: 32px;
-}
-.sprite > div.sprball2 {
-	background: url("sprites/balls/safari.png") no-repeat center center;
-	width: 32px;
-	height: 32px;
-	background-size: 32px;
+.subheadbtns .button {
+	font-size: 10pt
 }
 .tablelist {
 	width: 100%;
@@ -76,6 +82,32 @@ header {
 .tablelist th {
 	height: 40px;
 }
+.tablelist th:nth-child(1),
+.tablelist td:nth-child(1) {
+	width: 150px;
+}
+.tablelist th:nth-child(2),
+.tablelist td:nth-child(2) {
+	width: 150px;
+	text-align: center;
+}
+.tablelist th:nth-child(3),
+.tablelist td:nth-child(3) {
+	width: 100px;
+	text-align: center;
+}
+.tablelist th:nth-child(4),
+.tablelist td:nth-child(4),
+.tablelist th:nth-child(5),
+.tablelist td:nth-child(5),
+.tablelist th:nth-child(6),
+.tablelist td:nth-child(6) {
+	width: 100px;
+}
+.tablelist th:nth-child(7),
+.tablelist td:nth-child(7) {
+	width: 300px;
+}
 .tablelist #addnewpkmn-button td,
 .tablelist #addnewpkmn td {
 	border-bottom: none;
@@ -85,11 +117,11 @@ header {
 .tablelist #addnewpkmn-button td {
 	padding-bottom: 27px
 }
-.tablelist .origin {
+.tablelist td:nth-child(7) {
 	position: relative;
 	padding-left: 35px;
 }
-.tablelist .origin:before {
+.tablelist td:nth-child(7):before {
 	content: "";
 	width: 32px;
 	height: 100%;
@@ -111,33 +143,6 @@ header {
 	left: 42px;
 	top: 22px;
 }
-.button {
-	padding: 5px 10px;
-	background: #efefef;
-	border: 2px solid #222;
-	border-radius: 10px;
-	cursor: default;
-	user-select: none;
-}
-.ribbons .button {
-	display: inline-block;
-}
-.button:hover {
-	background: #ddd;
-}
-.button:active {
-	background: #ccc;
-}
-body.dark .button {
-	background: #222;
-	border-color: #888;
-}
-body.dark .button:hover {
-	background: #444;
-}
-body.dark .button:active {
-	background: #555;
-}
 footer {
 	font-size: 9pt;
 	text-align: center;
@@ -149,8 +154,36 @@ footer {
 #addnewpkmn {
 	display: none;
 }
-.nature {
-	text-transform: capitalize
+.sprite-mon {
+	height: 50px;
+}
+#add-name {
+	width: calc(100% - 20px);
+}
+#add-dex {
+	width: calc(100% - 24px);
+}
+#add-ball,
+#add-trainer,
+#add-id {
+	width: calc(100% - 5px);
+}
+#add-nature,
+#add-origin {
+	width: calc(100% - 10px);
+}
+#add-shiny + img {
+	filter: grayscale(100%);
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+#add-shiny:checked + img {
+	filter: none;
+}
+#addnewpkmn td:last-child {
+	text-align: left;
 }
 
 body.dark .tablelist .origin-bdsp:before {
