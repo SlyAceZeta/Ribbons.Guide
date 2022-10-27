@@ -155,13 +155,15 @@ header {
 	background: url("sprites/shiny.png") no-repeat right center;
 	background-size: 16px;
 }
-.tablelist .shinymark2 {
+.tablelist td:nth-child(2) {
 	position: relative;
 }
-.tablelist .shinymark2 .shiny {
+.tablelist td:nth-child(2) .shiny {
 	position: absolute;
 	left: 42px;
 	top: 22px;
+	width: 16px;
+	height: 16px;
 }
 footer {
 	font-size: 9pt;

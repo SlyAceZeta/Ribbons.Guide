@@ -9,6 +9,7 @@ function toggleNew(){
 
 function toggleCheck(id){
 	$("#" + id).prop("checked", !$("#" + id).prop("checked"));
+	addPreviews();
 }
 
 function resetForm(){
@@ -52,8 +53,8 @@ function clearTable(allpkmn){
 function gameInfo(s, o){
 	const games = {
 		"go": {"name": "GO", "mark": "go"},
-		"scar": {"name": "Scarlet", "mark": "unknown"},
-		"vio": {"name": "Violet", "mark": "unknown"},
+		"scar": {"name": "Scarlet", "mark": "paldea"},
+		"vio": {"name": "Violet", "mark": "paldea"},
 		"sw": {"name": "Sword", "mark": "galar"},
 		"sh": {"name": "Shield", "mark": "galar"},
 		"bd": {"name": "Brilliant Diamond", "mark": "bdsp"},
@@ -106,9 +107,18 @@ function gameInfo(s, o){
 	}
 }
 
+function addPreviews(){
+	if($("#add-dex").val()){
+		var shinyDir = $("#add-shiny").prop("checked") ? "shiny/" : "regular/";
+		$("#add-preview").attr("src", "sprites/pkmn/" + shinyDir + $("#add-dex").val() + ".png");
+	}
+	if($("#add-ball").val()) $("#add-preball").attr("src", "sprites/balls/" + $("#add-ball").val() + ".png");
+}
+
 function addRow(pkmn, i){
 	var shinyDir = pkmn.shiny ? "shiny/" : "regular/";
-	$("#addnewpkmn").before("<tr pokemon='" + i + "'><td><b>" + pkmn.name + "</b></td><td><img src='sprites/pkmn/" + shinyDir + pkmn.dex + ".png' class='sprite-mon'></td><td><img src='sprites/balls/" + pkmn.ball + ".png'></td><td>" + pkmn.ot + "</td><td>" + pkmn.id + "</td><td>" + pkmn.nature + "</td><td class='"+gameInfo(pkmn.origin, true)+"'>" + gameInfo(pkmn.origin, false) + "</td><td class='ribbons'><span class='button disabled' onclick='alert(\"Not ready yet!\")'>Edit</span> <span class='button delete' onclick='deletePkmn(this)'>Delete</span></td></tr>");
+	var shinyMark = pkmn.shiny ? "<img src='sprites/shiny.png' class='shiny'>" : "";
+	$("#addnewpkmn").before("<tr pokemon='" + i + "'><td><b>" + pkmn.name + "</b></td><td>" + shinyMark + "<img src='sprites/pkmn/" + shinyDir + pkmn.dex + ".png' class='sprite-mon'></td><td><img src='sprites/balls/" + pkmn.ball + ".png'></td><td>" + pkmn.ot + "</td><td>" + pkmn.id + "</td><td>" + pkmn.nature + "</td><td class='"+gameInfo(pkmn.origin, true)+"'>" + gameInfo(pkmn.origin, false) + "</td><td class='ribbons'><span class='button disabled' onclick='alert(\"Not ready yet!\")'>Edit</span> <span class='button delete' onclick='deletePkmn(this)'>Delete</span></td></tr>");
 }
 
 $(function(){
@@ -138,6 +148,9 @@ $(function(){
 			toggleNew();
 			resetForm();
 		}
+	});
+	$("#add-dex, #add-ball").change(function(){
+		addPreviews();
 	});
 	$("#addnewpkmn .button.add").click(function(){
 		var str = {
