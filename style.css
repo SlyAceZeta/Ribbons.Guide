@@ -7,6 +7,16 @@ body {
 * {
 	font-family: "Nunito Sans", sans-serif;
 }
+a {
+	color: #38578e;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+body.dark a {
+	color: #81a6e9;
+}
 body.dark {
 	background: #121212;
 	color: #fff;
