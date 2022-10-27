@@ -34,6 +34,11 @@ button:hover, .button:hover {
 button:hover, .button:active {
 	background: #ccc;
 }
+.button.disabled {
+	background: #efefef;
+	border-color: #ccc;
+	color: #bbb;
+}
 body.dark button, body.dark .button {
 	background: #222;
 	border-color: #888;
@@ -44,6 +49,11 @@ body.dark button:hover, body.dark .button:hover {
 }
 body.dark button:active, body.dark .button:active {
 	background: #555;
+}
+body.dark .button.disabled {
+	background: #222;
+	border-color: #333;
+	color: #555;
 }
 header {
 	text-align: center;
