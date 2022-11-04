@@ -3,9 +3,11 @@
 RibbonMasters is a web app that allows you to keep track of your Pokémon and their Ribbons!\
 This was developed as a love letter to the helpful and welcoming [r/PokémonRibbons](https://www.reddit.com/r/pokemonribbons/) community.
 
-The icons used in this app were provided by https://github.com/msikma/pokesprite.
-
 This project is not affiliated with Nintendo, Game Freak, or The Pokémon Company.
+
+The icons used in this app were provided by:
+- https://github.com/msikma/pokesprite - Pokémon sprites, ball sprites, shiny icon, Origin Marks, and Ribbons
+- https://github.com/PokeMiners/pogo_assets - gender icons
 
 ### How to Use
 
