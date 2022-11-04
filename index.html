@@ -3,7 +3,7 @@
 	<head>
 		<title>Ribbon Masters</title>
 		<link rel="icon" type="image/png" href="sprites/ribbons/best-friends-ribbon.png" />
-		<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="jquery-3.6.1.min.js"></script>
 		<script type="text/javascript" src="script.js"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,8 +35,14 @@
 				</td>
 				<td>
 					<input form="newpkmnform" hidden type="checkbox" id="add-shiny" hidden>
-					<img src="sprites/shiny.png" onclick="toggleCheck('add-shiny')">
-					<img id="add-preview" class="sprite-mon">
+					<img id="add-shiny-toggle" src="sprites/shiny.png" onclick="toggleCheck('add-shiny')">
+					<img id="add-preview" class="sprite-mon" src="1x1.png">
+					<select form="newpkmnform" id="add-gender">
+						<option>unknown</option>
+						<option>male</option>
+						<option>female</option>
+					</select>
+					<img id="add-gender-toggle" src="sprites/gender/unknown.png" lock="unknown" onclick="switchGender()">
 					<select required form="newpkmnform" id="add-dex">
 						<option disabled value="">Species</option>
 						<optgroup label="Gen I">
@@ -960,12 +966,12 @@
 							<option value="overqwil">Overqwil</option>
 							<option value="enamorus">Enamorus</option>
 						</optgroup>
-						<optgroup label="Gen IX">
-						</optgroup>
 					</select>
 				</td>
 				<td>
-					<img id="add-preball">
+					<div>
+						<img id="add-preball" src="1x1.png">
+					</div>
 					<select required form="newpkmnform" id="add-ball">
 						<option disabled value="">Ball</option>
 						<optgroup label="Standard">
@@ -1049,7 +1055,11 @@
 				<td>
 					<select required form="newpkmnform" id="add-origin">
 						<option disabled value="">Origin Game</option>
-						<option value="go">GO</option>
+						<optgroup label="Non-Mainline">
+							<option value="go">GO</option>
+							<option value="colosseum">Colosseum</option>
+							<option value="xd">XD: Gale of Darkness</option>
+						</optgroup>
 						<optgroup label="Gen IX">
 							<option value="scar">Scarlet</option>
 							<option value="vio">Violet</option>
@@ -1094,15 +1104,13 @@
 							<option value="emerald">Emerald</option>
 							<option value="fr">FireRed</option>
 							<option value="lg">LeafGreen</option>
-							<option value="colosseum">Colosseum</option>
-							<option value="xd">XD: Gale of Darkness</option>
 						</optgroup>
-						<optgroup label="Gen II">
+						<optgroup label="Gen II Virtual Console">
 							<option value="gold">Gold</option>
 							<option value="silver">Silver</option>
 							<option value="crystal">Crystal</option>
 						</optgroup>
-						<optgroup label="Gen I">
+						<optgroup label="Gen I Virtual Console">
 							<option value="red-jpn">Red (JPN)</option>
 							<option value="green">Green</option>
 							<option value="blue-jpn">Blue (JPN)</option>

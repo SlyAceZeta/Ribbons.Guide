@@ -1,3 +1,14 @@
+// Gender restrictions
+const onlyF = ["nidoran-f", "nidorina", "nidoqueen", "illumise", "latias", "froslass", "wormadam", "vespiquen", "salazzle", "happiny", "chansey", "blissey", "kangaskhan", "smoochum", "jynx", "miltank", "cresselia", "petilil", "lilligant", "vullaby", "mandibuzz", "flabebe", "floette", "florges", "bounsweet", "steenee", "tsareena", "hatenna", "hattrem", "hatterene", "milcery", "alcremie", "enamorus"];
+
+const onlyM = ["nidoran-m", "nidorino", "nidoking", "volbeat", "latios", "gallade", "mothim", "tyrogue", "hitmonlee", "hitmonchan", "hitmontop", "tauros", "throh", "sawk", "rufflet", "braviary", "tornadus", "thundurus", "landorus", "impidimp", "morgrem", "grimmsnarl"];
+
+const onlyU = ["magnemite", "magneton", "voltorb", "electrode", "staryu", "starmie", "porygon", "porygon2", "shedinja", "lunatone", "solrock", "baltoy", "claydol", "beldum", "metang", "metagross", "bronzor", "bronzong", "magnezone", "porygon-z", "rotom", "phione", "manaphy", "klink", "klang", "klinklang", "cryogonal", "golett", "golurk", "carbink", "minior", "dhelmise", "sinistea", "polteageist", "falinks", "ditto", "articuno", "zapdos", "moltres", "mewtwo", "mew", "unown", "raikou", "entei", "suicune", "lugia", "ho-oh", "celebi", "regirock", "regice", "registeel", "kyogre", "groudon", "rayquaza", "jirachi", "deoxys", "uxie", "mesprit", "azelf", "dialga", "palkia", "regigigas", "giratina", "darkrai", "shaymin", "arceus", "victini", "cobalion", "terrakion", "virizion", "reshiram", "zekrom", "kyurem", "keldeo", "meloetta", "genesect", "xerneas", "yveltal", "zygarde", "diancie", "hoopa", "volcanion", "type-null", "silvally", "tapu-koko", "tapu-lele", "tapu-bulu", "tapu-fini", "cosmog", "cosmoem", "solgaleo", "lunala", "nihilego", "buzzwole", "pheromosa", "xurkitree", "celesteela", "kartana", "guzzlord", "necrozma", "magearna", "marshadow", "poipole", "naganadel", "stakataka", "blacephalon", "zeraora", "meltan", "melmetal", "dracozolt", "arctozolt", "dracovish", "arctovish", "zacian", "zamazenta", "eternatus", "zarude", "regieleki", "regidrago", "glastrier", "spectrier", "calyrex"];
+
+// Gender-specific sprites
+const spriteF = ["basculegion", "frillish", "hippopotas", "hippowdon", "indeedee", "jellicent", "meowstic", "pikachu", "pyroar", "unfezant", "wobbuffet"];
+
+// Functions
 function changeTheme(t){
 	localStorage.setItem("theme", t);
 	$("body").attr("class", t);
@@ -12,6 +23,30 @@ function toggleCheck(id){
 	addPreviews();
 }
 
+function switchGender(){
+	if($("#add-gender-toggle").attr("lock") === "none"){
+		var newGender = "male";
+		if($("#add-gender").val() === "male") newGender = "female";
+		$("#add-gender").val(newGender);
+		$("#add-gender-toggle").attr("src", "sprites/gender/"+newGender+".png");
+	}
+	addPreviews();
+}
+
+function lockGender(x = "unknown"){
+	$("#add-gender").val(x);
+	$("#add-gender-toggle").attr({ src: "sprites/gender/" + x + ".png", lock: x });
+}
+
+function unlockGender(){
+	if($("#add-gender").val() === "unknown"){
+		$("#add-gender").val("male");
+		$("#add-gender-toggle").attr({ src: "sprites/gender/male.png", lock: "none" });
+	} else {
+		$("#add-gender-toggle").attr("lock", "none");
+	}
+}
+
 function resetForm(){
 	$("#addnewpkmn input").each(function(){
 		if($(this).attr("type") === "text"){
@@ -21,8 +56,9 @@ function resetForm(){
 		}
 	});
 	$("#addnewpkmn select").each(function(){
-		$(this).find("option:disabled").prop("selected", "selected").change();
+		if($(this).attr("id") !== "add-gender") $(this).find("option:disabled").prop("selected", "selected").change();
 	});
+	lockGender();
 }
 
 function deletePkmn(t){
@@ -108,19 +144,33 @@ function gameInfo(s, o){
 }
 
 function addPreviews(){
-	if($("#add-dex").val()){
+	var poke = $("#add-dex").val();
+	if(poke){
+		if(onlyF.indexOf(poke) > -1){
+			lockGender("female");
+		} else if(onlyM.indexOf(poke) > -1){
+			lockGender("male");
+		} else if(onlyU.indexOf(poke) > -1){
+			lockGender();
+		} else {
+			unlockGender();
+		}
 		var shinyDir = $("#add-shiny").prop("checked") ? "shiny/" : "regular/";
-		$("#add-preview").attr("src", "sprites/pkmn/" + shinyDir + $("#add-dex").val() + ".png");
+		var femaleDir = (spriteF.indexOf(poke) > -1 && $("#add-gender").val() === "female") ? "female/" : "";
+		$("#add-preview").attr("src", "sprites/pkmn/" + shinyDir + femaleDir + poke + ".png");
 	}
 	if($("#add-ball").val()) $("#add-preball").attr("src", "sprites/balls/" + $("#add-ball").val() + ".png");
+	if($("#add-origin").val()) $("#add-origin").parent().attr("class", gameInfo($("#add-origin").val(), true));
 }
 
 function addRow(pkmn, i){
 	var shinyDir = pkmn.shiny ? "shiny/" : "regular/";
+	var femaleDir = (spriteF.indexOf(pkmn.dex) > -1 && pkmn.gender === "female") ? "female/" : "";
 	var shinyMark = pkmn.shiny ? "<img src='sprites/shiny.png' class='shiny'>" : "";
-	$("#addnewpkmn").before("<tr pokemon='" + i + "'><td><b>" + pkmn.name + "</b></td><td>" + shinyMark + "<img src='sprites/pkmn/" + shinyDir + pkmn.dex + ".png' class='sprite-mon'></td><td><img src='sprites/balls/" + pkmn.ball + ".png'></td><td>" + pkmn.ot + "</td><td>" + pkmn.id + "</td><td>" + pkmn.nature + "</td><td class='"+gameInfo(pkmn.origin, true)+"'>" + gameInfo(pkmn.origin, false) + "</td><td class='ribbons'><span class='button disabled' onclick='alert(\"Not ready yet!\")'>Edit</span> <span class='button delete' onclick='deletePkmn(this)'>Delete</span></td></tr>");
+	$("#addnewpkmn").before("<tr pokemon='" + i + "'><td><b>" + pkmn.name + "</b></td><td>" + shinyMark + "<img src='sprites/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' class='sprite-mon'><img src='sprites/gender/"+pkmn.gender+".png' class='gender'></td><td><img src='sprites/balls/" + pkmn.ball + ".png'></td><td>" + pkmn.ot + "</td><td>" + pkmn.id + "</td><td>" + pkmn.nature + "</td><td class='"+gameInfo(pkmn.origin, true)+"'>" + gameInfo(pkmn.origin, false) + "</td><td class='ribbons'><span class='button disabled' onclick='alert(\"Not ready yet!\")'>Edit</span> <span class='button delete' onclick='deletePkmn(this)'>Delete</span></td></tr>");
 }
 
+// On load
 $(function(){
 	resetForm();
 	var theme = localStorage.getItem("theme");
@@ -149,7 +199,7 @@ $(function(){
 			resetForm();
 		}
 	});
-	$("#add-dex, #add-ball").change(function(){
+	$("#add-dex, #add-ball, #add-origin").change(function(){
 		addPreviews();
 	});
 	$("#addnewpkmn .button.add").click(function(){
@@ -157,7 +207,7 @@ $(function(){
 			name: $("#add-name").val(),
 			dex: $("#add-dex").val(),
 			shiny: $("#add-shiny").prop("checked"),
-			gender: "male",
+			gender: $("#add-gender").val(),
 			ball: $("#add-ball").val(),
 			ot: $("#add-trainer").val(),
 			id: $("#add-id").val(),

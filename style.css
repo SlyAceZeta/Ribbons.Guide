@@ -116,6 +116,9 @@ header {
 	width: 100px;
 	text-align: center;
 }
+.tablelist td:nth-child(3) > img {
+	vertical-align: middle;
+}
 .tablelist th:nth-child(4),
 .tablelist td:nth-child(4),
 .tablelist th:nth-child(5),
@@ -131,11 +134,17 @@ header {
 .tablelist #addnewpkmn-button td,
 .tablelist #addnewpkmn td {
 	border-bottom: none;
-	padding: 25px 0 25px 10px;
+	padding-bottom: 10px;
 	text-align: center;
+	vertical-align: bottom;
 }
 .tablelist #addnewpkmn-button td {
-	padding-bottom: 27px
+	padding: 34px 0 34px 10px;
+}
+.tablelist #addnewpkmn input,
+.tablelist #addnewpkmn select {
+	margin-left: -5px;
+	width: calc(100% - 5px);
 }
 .tablelist td:nth-child(7) {
 	position: relative;
@@ -151,6 +160,9 @@ header {
 	background: transparent no-repeat left center;
 	background-size: 32px;
 }
+.tablelist #addnewpkmn td:nth-child(7):before {
+	background-position: left calc(100% - 5px);
+}
 .tablelist .shinymark {
 	background: url("sprites/shiny.png") no-repeat right center;
 	background-size: 16px;
@@ -158,9 +170,18 @@ header {
 .tablelist td:nth-child(2) {
 	position: relative;
 }
-.tablelist td:nth-child(2) .shiny {
+.tablelist td:nth-child(2) .shiny,
+#add-shiny-toggle {
 	position: absolute;
-	left: 42px;
+	left: 34px;
+	top: 22px;
+	width: 16px;
+	height: 16px;
+}
+.tablelist td:nth-child(2) .gender,
+#add-gender-toggle {
+	position: absolute;
+	right: 18px;
 	top: 22px;
 	width: 16px;
 	height: 16px;
@@ -173,39 +194,31 @@ footer {
 	width: 40px;
 	margin-right: 5px;
 }
-#addnewpkmn {
+#addnewpkmn,
+#add-gender {
 	display: none;
 }
 .sprite-mon {
 	height: 50px;
 }
-#add-name {
-	width: calc(100% - 20px);
+#add-preview {
+	height: 50px;
 }
-#add-dex {
-	width: calc(100% - 24px);
-}
-#add-ball,
-#add-trainer,
-#add-id {
-	width: calc(100% - 5px);
-}
-#add-nature,
-#add-origin {
-	width: calc(100% - 10px);
-}
-#add-shiny + img {
+#add-shiny-toggle {
 	filter: grayscale(100%);
-	width: 16px;
-	height: 16px;
-	vertical-align: middle;
 	cursor: pointer;
 }
-#add-shiny:checked + img {
+#add-shiny:checked ~ #add-shiny-toggle {
 	filter: none;
+}
+#add-gender-toggle[lock="none"] {
+	cursor: pointer;
 }
 #addnewpkmn td:last-child {
 	text-align: left;
+}
+#addnewpkmn td:last-child > * {
+	margin-bottom: -5px;
 }
 
 body.dark .tablelist .origin-bdsp:before {
