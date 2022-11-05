@@ -195,7 +195,8 @@ footer {
 	margin-right: 5px;
 }
 #addnewpkmn,
-#add-gender {
+#add-gender,
+.subheadbtns input {
 	display: none;
 }
 .sprite-mon {

@@ -3,20 +3,20 @@
 	<head>
 		<title>Ribbon Masters</title>
 		<link rel="icon" type="image/png" href="sprites/ribbons/best-friends-ribbon.png" />
-		<script type="text/javascript" src="jquery-3.6.1.min.js"></script>
-		<script type="text/javascript" src="script.js"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
 		<link href="style.css" rel="stylesheet">
+		<script type="text/javascript" src="jquery-3.6.1.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
 	</head>
 	<body>
 		<header>Ribbon Masters</header>
 		<div class="subhead">Keep track of your Ribboned Pokémon!</div>
 		<div class="subheadbtns">
 			<span class="button" id="themeswitch">Switch Light/Dark</span>
-			<span class="button disabled" id="backup" onclick="alert('Not ready yet!')">Backup</span>
-			<span class="button disabled" id="restore" onclick="alert('Not ready yet!')">Restore</span>
+			<span class="button" id="backup" onclick="saveBackup()">Backup</span>
+			<label class="button" id="restore">Restore<input type="file" id="restoreinput"></label>
 		</div>
 		<table class="tablelist">
 			<tr class="header protected">

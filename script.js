@@ -9,6 +9,35 @@ const onlyU = ["magnemite", "magneton", "voltorb", "electrode", "staryu", "starm
 const spriteF = ["basculegion", "frillish", "hippopotas", "hippowdon", "indeedee", "jellicent", "meowstic", "pikachu", "pyroar", "unfezant", "wobbuffet"];
 
 // Functions
+function saveBackup(){
+	var data = localStorage.getItem("pokemon");
+	var blob = new Blob([data], {type: 'application/json'});
+
+	var ele = document.createElement('a');
+	ele.href = URL.createObjectURL(blob);
+	ele.target = "_blank";
+	ele.download = "RibbonBackup.json";
+
+	document.body.appendChild(ele);
+	ele.click();
+	document.body.removeChild(ele);
+}
+
+function loadBackup(file, filename){
+	var filename = filename.replace("C:\\fakepath\\", "");
+	var reader = new FileReader();
+	reader.onload = function(e){
+		var contents = e.target.result;
+		if(confirm("Are you sure you want to replace all of the current data with " + filename + "? You can't reverse this decision!")){
+			var allpkmn = JSON.parse(contents);
+			allpkmn.entries = allpkmn.entries.filter(Boolean);
+			localStorage.setItem("pokemon", JSON.stringify(allpkmn));
+			clearTable(allpkmn);
+		}
+	}
+	reader.readAsText(file);
+}
+
 function changeTheme(t){
 	localStorage.setItem("theme", t);
 	$("body").attr("class", t);
@@ -201,6 +230,14 @@ $(function(){
 	});
 	$("#add-dex, #add-ball, #add-origin").change(function(){
 		addPreviews();
+	});
+	const restoreBtn = document.getElementById("restoreinput");
+	restoreBtn.addEventListener("change", (e) => {
+		var file = event.target.files[0];
+		if(file) loadBackup(file, restoreBtn.value);
+	});
+	$("#restore").click(function(){
+		$("#restore input").val(null);
 	});
 	$("#addnewpkmn .button.add").click(function(){
 		var str = {
