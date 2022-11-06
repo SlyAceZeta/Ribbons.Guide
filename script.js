@@ -87,6 +87,8 @@ function resetForm(){
 	$("#addnewpkmn select").each(function(){
 		if($(this).attr("id") !== "add-gender") $(this).find("option:disabled").prop("selected", "selected").change();
 	});
+	$("#add-preview, #add-preball").attr("src", "1x1.png");
+	$("#add-origin").parent().attr("class", "");
 	lockGender();
 }
 
