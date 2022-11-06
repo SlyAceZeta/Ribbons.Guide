@@ -233,6 +233,9 @@ $(function(){
 	$("#add-dex, #add-ball, #add-origin").change(function(){
 		addPreviews();
 	});
+	$("#backup").click(function(){
+		saveBackup();
+	});
 	const restoreBtn = document.getElementById("restoreinput");
 	restoreBtn.addEventListener("change", (e) => {
 		var file = event.target.files[0];
@@ -240,6 +243,12 @@ $(function(){
 	});
 	$("#restore").click(function(){
 		$("#restore input").val(null);
+	});
+	$("#add-gender-toggle").click(function(){
+		switchGender();
+	});
+	$("#add-shiny-toggle").click(function(){
+		toggleCheck("add-shiny");
 	});
 	$("#addnewpkmn .button.add").click(function(){
 		var str = {
