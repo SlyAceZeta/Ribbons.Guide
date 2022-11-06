@@ -140,7 +140,7 @@ header {
 }
 .mint {
 	position: absolute;
-	bottom: 2px;
+	top: calc(50% + 11px);
 	font-size: 9pt;
 	padding-left: 18px;
 }
@@ -201,7 +201,7 @@ header {
 #add-shiny-toggle {
 	position: absolute;
 	left: 34px;
-	top: 22px;
+	top: calc(50% - 8px);
 	width: 16px;
 	height: 16px;
 }
@@ -209,9 +209,13 @@ header {
 #add-gender-toggle {
 	position: absolute;
 	right: 18px;
-	top: 22px;
+	top: calc(50% - 8px);
 	width: 16px;
 	height: 16px;
+}
+#add-shiny-toggle,
+#add-gender-toggle {
+	top: 22px;
 }
 footer {
 	font-size: 9pt;
