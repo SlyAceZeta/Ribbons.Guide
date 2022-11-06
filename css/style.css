@@ -164,7 +164,7 @@ header {
 	background-position: left calc(100% - 5px);
 }
 .tablelist .shinymark {
-	background: url("sprites/shiny.png") no-repeat right center;
+	background: url("../img/shiny.png") no-repeat right center;
 	background-size: 16px;
 }
 .tablelist td:nth-child(2) {
@@ -223,50 +223,50 @@ footer {
 }
 
 body.dark .tablelist .origin-bdsp:before {
-	background-image: url("sprites/origins/light/bdsp.png");
+	background-image: url("../img/origins/light/bdsp.png");
 }
 body.light .tablelist .origin-bdsp:before {
-	background-image: url("sprites/origins/dark/bdsp.png");
+	background-image: url("../img/origins/dark/bdsp.png");
 }
 body.dark .tablelist .origin-clover:before {
-	background-image: url("sprites/origins/light/clover.png");
+	background-image: url("../img/origins/light/clover.png");
 }
 body.light .tablelist .origin-clover:before {
-	background-image: url("sprites/origins/dark/clover.png");
+	background-image: url("../img/origins/dark/clover.png");
 }
 body.dark .tablelist .origin-galar:before {
-	background-image: url("sprites/origins/light/galar.png");
+	background-image: url("../img/origins/light/galar.png");
 }
 body.light .tablelist .origin-galar:before {
-	background-image: url("sprites/origins/dark/galar.png");
+	background-image: url("../img/origins/dark/galar.png");
 }
 body.dark .tablelist .origin-game-boy:before {
-	background-image: url("sprites/origins/light/game-boy.png");
+	background-image: url("../img/origins/light/game-boy.png");
 }
 body.light .tablelist .origin-game-boy:before {
-	background-image: url("sprites/origins/dark/game-boy.png");
+	background-image: url("../img/origins/dark/game-boy.png");
 }
 body.dark .tablelist .origin-go:before {
-	background-image: url("sprites/origins/light/go.png");
+	background-image: url("../img/origins/light/go.png");
 }
 body.light .tablelist .origin-go:before {
-	background-image: url("sprites/origins/dark/go.png");
+	background-image: url("../img/origins/dark/go.png");
 }
 body.dark .tablelist .origin-hisui:before {
-	background-image: url("sprites/origins/light/hisui.png");
+	background-image: url("../img/origins/light/hisui.png");
 }
 body.light .tablelist .origin-hisui:before {
-	background-image: url("sprites/origins/dark/hisui.png");
+	background-image: url("../img/origins/dark/hisui.png");
 }
 body.dark .tablelist .origin-lets-go:before {
-	background-image: url("sprites/origins/light/lets-go.png");
+	background-image: url("../img/origins/light/lets-go.png");
 }
 body.light .tablelist .origin-lets-go:before {
-	background-image: url("sprites/origins/dark/lets-go.png");
+	background-image: url("../img/origins/dark/lets-go.png");
 }
 body.dark .tablelist .origin-pentagon:before {
-	background-image: url("sprites/origins/light/pentagon.png");
+	background-image: url("../img/origins/light/pentagon.png");
 }
 body.light .tablelist .origin-pentagon:before {
-	background-image: url("sprites/origins/dark/pentagon.png");
+	background-image: url("../img/origins/dark/pentagon.png");
 }

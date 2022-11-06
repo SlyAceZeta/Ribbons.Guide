@@ -57,20 +57,20 @@ function switchGender(){
 		var newGender = "male";
 		if($("#add-gender").val() === "male") newGender = "female";
 		$("#add-gender").val(newGender);
-		$("#add-gender-toggle").attr("src", "sprites/gender/"+newGender+".png");
+		$("#add-gender-toggle").attr("src", "img/gender/"+newGender+".png");
 	}
 	addPreviews();
 }
 
 function lockGender(x = "unknown"){
 	$("#add-gender").val(x);
-	$("#add-gender-toggle").attr({ src: "sprites/gender/" + x + ".png", lock: x });
+	$("#add-gender-toggle").attr({ src: "img/gender/" + x + ".png", lock: x });
 }
 
 function unlockGender(){
 	if($("#add-gender").val() === "unknown"){
 		$("#add-gender").val("male");
-		$("#add-gender-toggle").attr({ src: "sprites/gender/male.png", lock: "none" });
+		$("#add-gender-toggle").attr({ src: "img/gender/male.png", lock: "none" });
 	} else {
 		$("#add-gender-toggle").attr("lock", "none");
 	}
@@ -87,7 +87,7 @@ function resetForm(){
 	$("#addnewpkmn select").each(function(){
 		if($(this).attr("id") !== "add-gender") $(this).find("option:disabled").prop("selected", "selected").change();
 	});
-	$("#add-preview, #add-preball").attr("src", "1x1.png");
+	$("#add-preview, #add-preball").attr("src", "img/1x1.png");
 	$("#add-origin").parent().attr("class", "");
 	lockGender();
 }
@@ -188,17 +188,17 @@ function addPreviews(){
 		}
 		var shinyDir = $("#add-shiny").prop("checked") ? "shiny/" : "regular/";
 		var femaleDir = (spriteF.indexOf(poke) > -1 && $("#add-gender").val() === "female") ? "female/" : "";
-		$("#add-preview").attr("src", "sprites/pkmn/" + shinyDir + femaleDir + poke + ".png");
+		$("#add-preview").attr("src", "img/pkmn/" + shinyDir + femaleDir + poke + ".png");
 	}
-	if($("#add-ball").val()) $("#add-preball").attr("src", "sprites/balls/" + $("#add-ball").val() + ".png");
+	if($("#add-ball").val()) $("#add-preball").attr("src", "img/balls/" + $("#add-ball").val() + ".png");
 	if($("#add-origin").val()) $("#add-origin").parent().attr("class", gameInfo($("#add-origin").val(), true));
 }
 
 function addRow(pkmn, i){
 	var shinyDir = pkmn.shiny ? "shiny/" : "regular/";
 	var femaleDir = (spriteF.indexOf(pkmn.dex) > -1 && pkmn.gender === "female") ? "female/" : "";
-	var shinyMark = pkmn.shiny ? "<img src='sprites/shiny.png' class='shiny'>" : "";
-	$("#addnewpkmn").before("<tr pokemon='" + i + "'><td><b>" + pkmn.name + "</b></td><td>" + shinyMark + "<img src='sprites/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' class='sprite-mon'><img src='sprites/gender/"+pkmn.gender+".png' class='gender'></td><td><img src='sprites/balls/" + pkmn.ball + ".png'></td><td>" + pkmn.ot + "</td><td>" + pkmn.id + "</td><td>" + pkmn.nature + "</td><td class='"+gameInfo(pkmn.origin, true)+"'>" + gameInfo(pkmn.origin, false) + "</td><td class='ribbons'><span class='button disabled' onclick='alert(\"Not ready yet!\")'>Edit</span> <span class='button delete' onclick='deletePkmn(this)'>Delete</span></td></tr>");
+	var shinyMark = pkmn.shiny ? "<img src='img/shiny.png' class='shiny'>" : "";
+	$("#addnewpkmn").before("<tr pokemon='" + i + "'><td><b>" + pkmn.name + "</b></td><td>" + shinyMark + "<img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' class='sprite-mon'><img src='img/gender/"+pkmn.gender+".png' class='gender'></td><td><img src='img/balls/" + pkmn.ball + ".png'></td><td>" + pkmn.ot + "</td><td>" + pkmn.id + "</td><td>" + pkmn.nature + "</td><td class='"+gameInfo(pkmn.origin, true)+"'>" + gameInfo(pkmn.origin, false) + "</td><td class='ribbons'><span class='button disabled' onclick='alert(\"Not ready yet!\")'>Edit</span> <span class='button delete' onclick='deletePkmn(this)'>Delete</span></td></tr>");
 }
 
 // On load

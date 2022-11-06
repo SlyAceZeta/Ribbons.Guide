@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<title>Ribbon Masters</title>
-		<link rel="icon" type="image/png" href="sprites/ribbons/best-friends-ribbon.png" />
+		<link rel="icon" type="image/png" href="img/ribbons/best-friends-ribbon.png" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
-		<link href="style.css" rel="stylesheet">
-		<script type="text/javascript" src="jquery-3.6.1.min.js"></script>
-		<script type="text/javascript" src="script.js"></script>
+		<link href="css/style.css" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
 	</head>
 	<body>
 		<header>Ribbon Masters</header>
@@ -35,14 +35,14 @@
 				</td>
 				<td>
 					<input form="newpkmnform" hidden type="checkbox" id="add-shiny" hidden>
-					<img id="add-shiny-toggle" src="sprites/shiny.png" onclick="toggleCheck('add-shiny')">
-					<img id="add-preview" class="sprite-mon" src="1x1.png">
+					<img id="add-shiny-toggle" src="img/shiny.png" onclick="toggleCheck('add-shiny')">
+					<img id="add-preview" class="sprite-mon" src="img/1x1.png">
 					<select form="newpkmnform" id="add-gender">
 						<option>unknown</option>
 						<option>male</option>
 						<option>female</option>
 					</select>
-					<img id="add-gender-toggle" src="sprites/gender/unknown.png" lock="unknown" onclick="switchGender()">
+					<img id="add-gender-toggle" src="img/gender/unknown.png" lock="unknown" onclick="switchGender()">
 					<select required form="newpkmnform" id="add-dex">
 						<option disabled value="">Species</option>
 						<optgroup label="Gen I">
@@ -970,7 +970,7 @@
 				</td>
 				<td>
 					<div>
-						<img id="add-preball" src="1x1.png">
+						<img id="add-preball" src="img/1x1.png">
 					</div>
 					<select required form="newpkmnform" id="add-ball">
 						<option disabled value="">Ball</option>
