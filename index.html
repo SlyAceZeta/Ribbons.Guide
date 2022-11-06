@@ -1051,6 +1051,30 @@
 						<option>Careful</option>
 						<option>Quirky</option>
 					</select>
+					<select form="newpkmnform" id="add-mint">
+						<option value="None">No Mint</option>
+						<option value="Lonely">Lonely Mint</option>
+						<option value="Adamant">Adamant Mint</option>
+						<option value="Naughty">Naughty Mint</option>
+						<option value="Brave">Brave Mint</option>
+						<option value="Bold">Bold Mint</option>
+						<option value="Impish">Impish Mint</option>
+						<option value="Lax">Lax Mint</option>
+						<option value="Relaxed">Relaxed Mint</option>
+						<option value="Modest">Modest Mint</option>
+						<option value="Mild">Mild Mint</option>
+						<option value="Rash">Rash Mint</option>
+						<option value="Quiet">Quiet Mint</option>
+						<option value="Calm">Calm Mint</option>
+						<option value="Gentle">Gentle Mint</option>
+						<option value="Careful">Careful Mint</option>
+						<option value="Sassy">Sassy Mint</option>
+						<option value="Timid">Timid Mint</option>
+						<option value="Hasty">Hasty Mint</option>
+						<option value="Jolly">Jolly Mint</option>
+						<option value="Naive">Naive Mint</option>
+						<option value="Serious">Serious Mint</option>
+					</select>
 				</td>
 				<td>
 					<select form="newpkmnform" id="add-origin" required>
@@ -1117,8 +1141,14 @@
 					</select>
 				</td>
 				<td>
-					<button form="newpkmnform" class="button add">Add</button>
-					<span class="button cancel">Cancel</span>
+					<div class="edit-btns">
+						<button form="newpkmnform" class="button finishedit">Edit</button>
+						<span class="button canceledit">Cancel</button>
+					</div>
+					<div class="add-btns">
+						<button form="newpkmnform" class="button add">Add</button>
+						<span class="button canceladd">Cancel</span>
+					</div>
 				</td>
 			</tr>
 			<tr id="addnewpkmn-button" class="protected">

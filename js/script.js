@@ -10,17 +10,21 @@ const spriteF = ["basculegion", "frillish", "hippopotas", "hippowdon", "indeedee
 
 // Functions
 function saveBackup(){
-	var data = localStorage.getItem("pokemon");
-	var blob = new Blob([data], {type: 'application/json'});
+	if($("#backup").hasClass("disabled")){
+		alert("You can't save a backup while adding or editing a Pokémon!");
+	} else {
+		var data = localStorage.getItem("pokemon");
+		var blob = new Blob([data], {type: 'application/json'});
 
-	var ele = document.createElement('a');
-	ele.href = URL.createObjectURL(blob);
-	ele.target = "_blank";
-	ele.download = "RibbonBackup.json";
+		var ele = document.createElement('a');
+		ele.href = URL.createObjectURL(blob);
+		ele.target = "_blank";
+		ele.download = "RibbonBackup.json";
 
-	document.body.appendChild(ele);
-	ele.click();
-	document.body.removeChild(ele);
+		document.body.appendChild(ele);
+		ele.click();
+		document.body.removeChild(ele);
+	}
 }
 
 function loadBackup(file, filename){
@@ -85,22 +89,60 @@ function resetForm(){
 		}
 	});
 	$("#addnewpkmn select").each(function(){
-		if($(this).attr("id") !== "add-gender") $(this).find("option:disabled").prop("selected", "selected").change();
+		if($(this).attr("id") !== "add-gender" && $(this).attr("id") !== "add-mint") $(this).find("option:disabled").prop("selected", "selected").change();
 	});
+	$("#add-mint").val("None");
 	$("#add-preview, #add-preball").attr("src", "img/1x1.png");
 	$("#add-origin").parent().attr("class", "");
 	lockGender();
+	$(".edit-btns").hide();
+	$(".add-btns").show();
+	$("#addnewpkmn .button.finishedit").removeAttr("pokemon");
+	$(".editing").removeClass("editing");
+	$("#backup, #restore").removeClass("disabled");
+	$("#restore input").removeAttr("disabled");
 }
 
-function deletePkmn(t){
-	var name = $(t).parents("tr").find("td:nth(0)").text();
-	if(confirm("Are you sure? All of " + name + "'s data will be permanently erased!")){
-		var id = $(t).parents("tr").attr("pokemon");
+function editPkmn(id){
+	if($(".ribbons .button").hasClass("disabled")){
+		alert("You can't edit a Pokémon while adding or editing another!");
+	} else {
+		$(".ribbons .button, #backup, #restore").addClass("disabled");
+		$("#restore input").attr("disabled", "disabled");
+		$(".edit-btns").show();
+		$(".add-btns").hide();
+		$("#addnewpkmn .button.finishedit").attr("pokemon", id);
+		$("tr[pokemon="+id+"]").addClass("editing");
 		allpkmn = JSON.parse(localStorage.getItem("pokemon"));
-		delete allpkmn.entries[id];
-		allpkmn.entries = allpkmn.entries.filter(Boolean);
-		localStorage.setItem("pokemon", JSON.stringify(allpkmn));
-		clearTable(allpkmn);
+		var pkmn = allpkmn.entries[id];
+		$("#add-name").val(pkmn.name);
+		$("#add-dex").val(pkmn.dex).change();
+		if(pkmn.shiny) $("#add-shiny").prop("checked", "checked").change();
+		$("#add-gender").val(pkmn.gender).change();
+		if(pkmn.gender === "female") $("#add-gender-toggle").attr("src", "img/gender/female.png");
+		$("#add-ball").val(pkmn.ball);
+		$("#add-trainer").val(pkmn.ot);
+		$("#add-id").val(pkmn.id);
+		$("#add-nature").val(pkmn.nature);
+		$("#add-mint").val((pkmn.mint || "None"));
+		$("#add-origin").val(pkmn.origin);
+		addPreviews();
+		toggleNew();
+	}
+}
+
+function deletePkmn(id){
+	if($(".ribbons .button").hasClass("disabled")){
+		alert("You can't delete a Pokémon while adding or editing one!");
+	} else {
+		var name = $("tr[pokemon="+id+"]").find("td:nth(0)").text();
+		if(confirm("Are you sure? All of " + name + "'s data will be permanently erased!")){
+			allpkmn = JSON.parse(localStorage.getItem("pokemon"));
+			delete allpkmn.entries[id];
+			allpkmn.entries = allpkmn.entries.filter(Boolean);
+			localStorage.setItem("pokemon", JSON.stringify(allpkmn));
+			clearTable(allpkmn);
+		}
 	}
 }
 
@@ -174,6 +216,33 @@ function gameInfo(s, o){
 	}
 }
 
+function mintSprite(mint){
+	const mints = {
+		"Lonely": "atk",
+		"Adamant": "atk",
+		"Naughty": "atk",
+		"Brave": "atk",
+		"Bold": "def",
+		"Impish": "def",
+		"Lax": "def",
+		"Relaxed": "def",
+		"Modest": "spa",
+		"Mild": "spa",
+		"Rash": "spa",
+		"Quiet": "spa",
+		"Calm": "spd",
+		"Gentle": "spd",
+		"Careful": "spd",
+		"Sassy": "spd",
+		"Timid": "spe",
+		"Hasty": "spe",
+		"Jolly": "spe",
+		"Naive": "spe",
+		"Serious": "neutral"
+	}
+	return mints[mint];
+}
+
 function addPreviews(){
 	var poke = $("#add-dex").val();
 	if(poke){
@@ -198,7 +267,9 @@ function addRow(pkmn, i){
 	var shinyDir = pkmn.shiny ? "shiny/" : "regular/";
 	var femaleDir = (spriteF.indexOf(pkmn.dex) > -1 && pkmn.gender === "female") ? "female/" : "";
 	var shinyMark = pkmn.shiny ? "<img src='img/shiny.png' class='shiny'>" : "";
-	$("#addnewpkmn").before("<tr pokemon='" + i + "'><td><b>" + pkmn.name + "</b></td><td>" + shinyMark + "<img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' class='sprite-mon'><img src='img/gender/"+pkmn.gender+".png' class='gender'></td><td><img src='img/balls/" + pkmn.ball + ".png'></td><td>" + pkmn.ot + "</td><td>" + pkmn.id + "</td><td>" + pkmn.nature + "</td><td class='"+gameInfo(pkmn.origin, true)+"'>" + gameInfo(pkmn.origin, false) + "</td><td class='ribbons'><span class='button disabled' onclick='alert(\"Not ready yet!\")'>Edit</span> <span class='button delete' onclick='deletePkmn(this)'>Delete</span></td></tr>");
+	var mint = pkmn.mint || "None";
+	var mintImg = (mint !== "None") ? "<div class='mint " + mintSprite(mint) + "'>" + mint + "</div>" : "";
+	$("#addnewpkmn").before("<tr pokemon='" + i + "'><td><b>" + pkmn.name + "</b></td><td>" + shinyMark + "<img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' class='sprite-mon'><img src='img/gender/"+pkmn.gender+".png' class='gender'></td><td><img src='img/balls/" + pkmn.ball + ".png'></td><td>" + pkmn.ot + "</td><td>" + pkmn.id + "</td><td>" + pkmn.nature + mintImg + "</td><td class='"+gameInfo(pkmn.origin, true)+"'>" + gameInfo(pkmn.origin, false) + "</td><td class='ribbons'><span class='button edit' onclick='editPkmn("+i+")'>Edit</span> <span class='button delete' onclick='deletePkmn("+i+")'>Delete</span></td></tr>");
 }
 
 // On load
@@ -223,9 +294,19 @@ $(function(){
 	});
 	$("#addnewpkmn-button .button").click(function(){
 		toggleNew();
+		$(".ribbons .button, #backup, #restore").addClass("disabled");
+		$("#restore input").attr("disabled", "disabled");
 	});
-	$("#addnewpkmn .button.cancel").click(function(){
+	$("#addnewpkmn .button.canceladd").click(function(){
 		if(confirm("Are you sure? All of the data you've entered will be lost!")){
+			$(".ribbons .button").removeClass("disabled");
+			toggleNew();
+			resetForm();
+		}
+	});
+	$("#addnewpkmn .button.canceledit").click(function(){
+		if(confirm("Are you sure? All of your edits will be lost!")){
+			$(".ribbons .button").removeClass("disabled");
 			toggleNew();
 			resetForm();
 		}
@@ -242,6 +323,7 @@ $(function(){
 		if(file) loadBackup(file, restoreBtn.value);
 	});
 	$("#restore").click(function(){
+		if($("#restore").hasClass("disabled")) alert("You can't restore a backup while adding or editing a Pokémon!");
 		$("#restore input").val(null);
 	});
 	$("#add-gender-toggle").click(function(){
@@ -260,15 +342,41 @@ $(function(){
 			ot: $("#add-trainer").val(),
 			id: $("#add-id").val(),
 			nature: $("#add-nature").val(),
+			mint: $("#add-mint").val(),
 			origin: $("#add-origin").val(),
 			ribbons: []
 		};
-		if(str.name && str.dex && str.ball && str.ot && !isNaN(str.id) && str.nature && str.origin){
+		if(str.name && str.dex && str.ball && str.ot && !isNaN(str.id) && str.nature && str.origin && str.id.match(/[0-9]{5,6}/)){
 			allpkmn = JSON.parse(localStorage.getItem("pokemon"));
 			var n = allpkmn.entries.length;
 			allpkmn.entries[n] = str;
 			localStorage.setItem("pokemon", JSON.stringify(allpkmn));
 			addRow(str, n);
+			$(".ribbons .button").removeClass("disabled");
+			toggleNew();
+			resetForm();
+		}
+	});
+	$("#addnewpkmn .button.finishedit").click(function(){
+		var str = {
+			name: $("#add-name").val(),
+			dex: $("#add-dex").val(),
+			shiny: $("#add-shiny").prop("checked"),
+			gender: $("#add-gender").val(),
+			ball: $("#add-ball").val(),
+			ot: $("#add-trainer").val(),
+			id: $("#add-id").val(),
+			nature: $("#add-nature").val(),
+			mint: $("#add-mint").val(),
+			origin: $("#add-origin").val(),
+			ribbons: []
+		};
+		if(str.name && str.dex && str.ball && str.ot && !isNaN(str.id) && str.nature && str.origin && str.id.match(/[0-9]{5,6}/)){
+			allpkmn = JSON.parse(localStorage.getItem("pokemon"));
+			var n = $("#addnewpkmn .button.finishedit").attr("pokemon");
+			allpkmn.entries[n] = str;
+			localStorage.setItem("pokemon", JSON.stringify(allpkmn));
+			clearTable(allpkmn);
 			toggleNew();
 			resetForm();
 		}

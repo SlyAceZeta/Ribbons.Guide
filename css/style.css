@@ -48,6 +48,10 @@ button:hover, .button:active {
 	background: #efefef;
 	border-color: #ccc;
 	color: #bbb;
+	cursor: not-allowed;
+}
+.editing td {
+	opacity: 0.25;
 }
 body.dark button, body.dark .button {
 	background: #222;
@@ -129,13 +133,36 @@ header {
 }
 .tablelist th:nth-child(7),
 .tablelist td:nth-child(7) {
-	width: 300px;
+	width: 200px;
+}
+.tablelist td:nth-child(6) {
+	position: relative;
+}
+.mint {
+	position: absolute;
+	bottom: 2px;
+	font-size: 9pt;
+	padding-left: 18px;
+}
+.mint:before {
+	content: "";
+	background: transparent no-repeat left center;
+	background-size: 16px;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 .tablelist #addnewpkmn-button td,
 .tablelist #addnewpkmn td {
 	border-bottom: none;
 	padding-bottom: 10px;
 	text-align: center;
+	vertical-align: middle;
+}
+.tablelist #addnewpkmn td:nth-child(2),
+.tablelist #addnewpkmn td:nth-child(3) {
 	vertical-align: bottom;
 }
 .tablelist #addnewpkmn-button td {
@@ -161,7 +188,7 @@ header {
 	background-size: 32px;
 }
 .tablelist #addnewpkmn td:nth-child(7):before {
-	background-position: left calc(100% - 5px);
+	background-position: left calc(50% - 5px);
 }
 .tablelist .shinymark {
 	background: url("../img/shiny.png") no-repeat right center;
@@ -196,7 +223,8 @@ footer {
 }
 #addnewpkmn,
 #add-gender,
-.subheadbtns input {
+.subheadbtns input,
+.edit-btns {
 	display: none;
 }
 .sprite-mon {
@@ -214,6 +242,11 @@ footer {
 }
 #add-gender-toggle[lock="none"] {
 	cursor: pointer;
+}
+#add-mint {
+	position: absolute;
+	bottom: 10px;
+	right: 0;
 }
 #addnewpkmn td:last-child {
 	text-align: left;
@@ -269,4 +302,22 @@ body.dark .tablelist .origin-pentagon:before {
 }
 body.light .tablelist .origin-pentagon:before {
 	background-image: url("../img/origins/dark/pentagon.png");
+}
+.mint.atk:before {
+	background-image: url("../img/mints/atk.png");
+}
+.mint.def:before {
+	background-image: url("../img/mints/def.png");
+}
+.mint.spa:before {
+	background-image: url("../img/mints/spa.png");
+}
+.mint.spd:before {
+	background-image: url("../img/mints/spd.png");
+}
+.mint.spe:before {
+	background-image: url("../img/mints/spe.png");
+}
+.mint.neutral:before {
+	background-image: url("../img/mints/neutral.png");
 }
