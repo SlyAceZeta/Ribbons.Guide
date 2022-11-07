@@ -93,10 +93,10 @@ function resetForm(){
 }
 
 function editPkmn(id){
-	if($(".ribbons .button").hasClass("disabled")){
+	if($(".edit, .delete").hasClass("disabled")){
 		alert("You can't edit a Pokémon while adding or editing another!");
 	} else {
-		$(".ribbons .button, #backup, #restore").addClass("disabled");
+		$(".edit, .delete, #backup, #restore").addClass("disabled");
 		$("#restore input").attr("disabled", "disabled");
 		$(".edit-btns").show();
 		$(".add-btns").hide();
@@ -225,19 +225,19 @@ $(function(){
 	});
 	$("#addnewpkmn-button .button").click(function(){
 		toggleNew();
-		$(".ribbons .button, #backup, #restore").addClass("disabled");
+		$(".edit, .delete, #backup, #restore").addClass("disabled");
 		$("#restore input").attr("disabled", "disabled");
 	});
 	$("#addnewpkmn .button.canceladd").click(function(){
 		if(confirm("Are you sure? All of the data you've entered will be lost!")){
-			$(".ribbons .button").removeClass("disabled");
+			$(".edit, .delete").removeClass("disabled");
 			toggleNew();
 			resetForm();
 		}
 	});
 	$("#addnewpkmn .button.canceledit").click(function(){
 		if(confirm("Are you sure? All of your edits will be lost!")){
-			$(".ribbons .button").removeClass("disabled");
+			$(".edit, .delete").removeClass("disabled");
 			toggleNew();
 			resetForm();
 		}
@@ -283,7 +283,7 @@ $(function(){
 			allpkmn.entries[n] = str;
 			localStorage.setItem("pokemon", JSON.stringify(allpkmn));
 			addRow(str, n);
-			$(".ribbons .button").removeClass("disabled");
+			$(".edit, .delete").removeClass("disabled");
 			toggleNew();
 			resetForm();
 		}
