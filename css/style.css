@@ -135,6 +135,22 @@ header {
 .tablelist td:nth-child(7) {
 	width: 200px;
 }
+.tablelist th:nth-child(9),
+.tablelist td:nth-child(9) {
+	width: 50px;
+	text-align: center;
+}
+.tablelist td:nth-child(9) .button {
+	margin: 5px auto;
+}
+.tablelist td:nth-child(9) .button + .button {
+	margin-top: 0;
+}
+.tablelist td:nth-child(9) button.button {
+	display: block;
+	width: 100%;
+	margin-bottom: 10px;
+}
 .tablelist td:nth-child(6) {
 	position: relative;
 }
@@ -166,7 +182,7 @@ header {
 	vertical-align: bottom;
 }
 .tablelist #addnewpkmn-button td {
-	padding: 34px 0 34px 10px;
+	padding: 35px 0 34px 10px;
 }
 .tablelist #addnewpkmn input,
 .tablelist #addnewpkmn select {
@@ -255,9 +271,6 @@ footer {
 #addnewpkmn td:last-child {
 	text-align: left;
 }
-#addnewpkmn td:last-child > * {
-	margin-bottom: -5px;
-}
 
 body.dark .tablelist .origin-bdsp:before {
 	background-image: url("../img/origins/light/bdsp.png");
@@ -324,4 +337,315 @@ body.light .tablelist .origin-pentagon:before {
 }
 .mint.neutral:before {
 	background-image: url("../img/mints/neutral.png");
+}
+
+.ribbons-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+.ribbons-list .country-ribbon {
+	order: -11;
+}
+.ribbons-list .world-ribbon {
+	order: -10;
+}
+.ribbons-list .classic-ribbon {
+	order: -9;
+}
+.ribbons-list .premier-ribbon {
+	order: -8;
+}
+.ribbons-list .event-ribbon {
+	order: -7;
+}
+.ribbons-list .birthday-ribbon {
+	order: -6;
+}
+.ribbons-list .special-ribbon {
+	order: -5;
+}
+.ribbons-list .souvenir-ribbon {
+	order: -4;
+}
+.ribbons-list .wishing-ribbon {
+	order: -3;
+}
+.ribbons-list .battle-champion-ribbon {
+	order: -2;
+}
+.ribbons-list .world-champion-ribbon {
+	order: -1;
+}
+.ribbons-list .national-ribbon {
+	order: 22;
+}
+.ribbons-list .earth-ribbon {
+	order: 23;
+}
+.ribbons-list .champion-ribbon {
+	order: 2;
+}
+.ribbons-list .effort-ribbon {
+	order: 8;
+}
+.ribbons-list .cool-ribbon-hoenn {
+	order: -100;
+}
+.ribbons-list .cool-ribbon-super-hoenn {
+	order: -99;
+}
+.ribbons-list .cool-ribbon-hyper-hoenn {
+	order: -98;
+}
+.ribbons-list .cool-ribbon-master-hoenn {
+	order: -97;
+}
+.ribbons-list .beauty-ribbon-hoenn {
+	order: -96;
+}
+.ribbons-list .beauty-ribbon-super-hoenn {
+	order: -95;
+}
+.ribbons-list .beauty-ribbon-hyper-hoenn {
+	order: -94;
+}
+.ribbons-list .beauty-ribbon-master-hoenn {
+	order: -93;
+}
+.ribbons-list .cute-ribbon-hoenn {
+	order: -92;
+}
+.ribbons-list .cute-ribbon-super-hoenn {
+	order: -91;
+}
+.ribbons-list .cute-ribbon-hyper-hoenn {
+	order: -90;
+}
+.ribbons-list .cute-ribbon-master-hoenn {
+	order: -89;
+}
+.ribbons-list .smart-ribbon-hoenn {
+	order: -88;
+}
+.ribbons-list .smart-ribbon-super-hoenn {
+	order: -87;
+}
+.ribbons-list .smart-ribbon-hyper-hoenn {
+	order: -86;
+}
+.ribbons-list .smart-ribbon-master-hoenn {
+	order: -85;
+}
+.ribbons-list .tough-ribbon-hoenn {
+	order: -84;
+}
+.ribbons-list .tough-ribbon-super-hoenn {
+	order: -83;
+}
+.ribbons-list .tough-ribbon-hyper-hoenn {
+	order: -82;
+}
+.ribbons-list .tough-ribbon-master-hoenn {
+	order: -81;
+}
+.ribbons-list .winning-ribbon {
+	order: -80;
+}
+.ribbons-list .victory-ribbon {
+	order: -79;
+}
+.ribbons-list .artist-ribbon {
+	order: 19;
+}
+.ribbons-list .sinnoh-champion-ribbon {
+	order: 3;
+}
+.ribbons-list .alert-ribbon {
+	order: 9;
+}
+.ribbons-list .shock-ribbon {
+	order: 10;
+}
+.ribbons-list .downcast-ribbon {
+	order: 11;
+}
+.ribbons-list .careless-ribbon {
+	order: 12;
+}
+.ribbons-list .relax-ribbon {
+	order: 13;
+}
+.ribbons-list .snooze-ribbon {
+	order: 14;
+}
+.ribbons-list .smile-ribbon {
+	order: 15;
+}
+.ribbons-list .gorgeous-ribbon {
+	order: 16;
+}
+.ribbons-list .royal-ribbon {
+	order: 17;
+}
+.ribbons-list .gorgeous-royal-ribbon {
+	order: 18;
+}
+.ribbons-list .cool-ribbon-sinnoh {
+	order: -78;
+}
+.ribbons-list .cool-ribbon-super-sinnoh {
+	order: -77;
+}
+.ribbons-list .cool-ribbon-hyper-sinnoh {
+	order: -76;
+}
+.ribbons-list .cool-ribbon-master-sinnoh {
+	order: -75;
+}
+.ribbons-list .beauty-ribbon-sinnoh {
+	order: -74;
+}
+.ribbons-list .beauty-ribbon-super-sinnoh {
+	order: -73;
+}
+.ribbons-list .beauty-ribbon-hyper-sinnoh {
+	order: -72;
+}
+.ribbons-list .beauty-ribbon-master-sinnoh {
+	order: -71;
+}
+.ribbons-list .cute-ribbon-sinnoh {
+	order: -70;
+}
+.ribbons-list .cute-ribbon-super-sinnoh {
+	order: -69;
+}
+.ribbons-list .cute-ribbon-hyper-sinnoh {
+	order: -68;
+}
+.ribbons-list .cute-ribbon-master-sinnoh {
+	order: -67;
+}
+.ribbons-list .smart-ribbon-sinnoh {
+	order: -66;
+}
+.ribbons-list .smart-ribbon-super-sinnoh {
+	order: -65;
+}
+.ribbons-list .smart-ribbon-hyper-sinnoh {
+	order: -64;
+}
+.ribbons-list .smart-ribbon-master-sinnoh {
+	order: -63;
+}
+.ribbons-list .tough-ribbon-sinnoh {
+	order: -62;
+}
+.ribbons-list .tough-ribbon-super-sinnoh {
+	order: -61;
+}
+.ribbons-list .tough-ribbon-hyper-sinnoh {
+	order: -60;
+}
+.ribbons-list .tough-ribbon-master-sinnoh {
+	order: -59;
+}
+.ribbons-list .footprint-ribbon {
+	order: 20;
+}
+.ribbons-list .legend-ribbon {
+	order: 21;
+}
+.ribbons-list .ability-ribbon {
+	order: -58;
+}
+.ribbons-list .great-ability-ribbon {
+	order: -57;
+}
+.ribbons-list .double-ability-ribbon {
+	order: -56;
+}
+.ribbons-list .multi-ability-ribbon {
+	order: -55;
+}
+.ribbons-list .pair-ability-ribbon {
+	order: -54;
+}
+.ribbons-list .world-ability-ribbon {
+	order: -53;
+}
+.ribbons-list .contest-memory-ribbon {
+	order: 24;
+}
+.ribbons-list .contest-memory-ribbon-gold {
+	order: 25;
+}
+.ribbons-list .battle-memory-ribbon {
+	order: 26;
+}
+.ribbons-list .battle-memory-ribbon-gold {
+	order: 27;
+}
+.ribbons-list .kalos-champion-ribbon {
+	order: 1;
+}
+.ribbons-list .training-ribbon {
+	order: 5;
+}
+.ribbons-list .skillful-battler-ribbon {
+	order: 6;
+}
+.ribbons-list .expert-battler-ribbon {
+	order: 7;
+}
+.ribbons-list .best-friends-ribbon {
+	order: 4;
+}
+.ribbons-list .coolness-master-ribbon {
+	order: 30;
+}
+.ribbons-list .beauty-master-ribbon {
+	order: 31;
+}
+.ribbons-list .cuteness-master-ribbon {
+	order: 32;
+}
+.ribbons-list .cleverness-master-ribbon {
+	order: 33;
+}
+.ribbons-list .toughness-master-ribbon {
+	order: 34;
+}
+.ribbons-list .contest-star-ribbon {
+	order: 29;
+}
+.ribbons-list .hoenn-champion-ribbon {
+	order: 28;
+}
+.ribbons-list .alola-champion-ribbon {
+	order: 35;
+}
+.ribbons-list .battle-royal-master-ribbon {
+	order: 36;
+}
+.ribbons-list .battle-tree-great-ribbon {
+	order: 37;
+}
+.ribbons-list .battle-tree-master-ribbon {
+	order: 38;
+}
+.ribbons-list .galar-champion-ribbon {
+	order: 39;
+}
+.ribbons-list .master-rank-ribbon {
+	order: 41;
+}
+.ribbons-list .tower-master-ribbon {
+	order: 40;
+}
+.ribbons-list .twinkling-star-ribbon {
+	order: 42;
+}
+.ribbons-list .pioneer-ribbon {
+	order: 43;
 }

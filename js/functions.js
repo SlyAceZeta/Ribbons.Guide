@@ -1,14 +1,3 @@
-// Gender restrictions
-const onlyF = ["nidoran-f", "nidorina", "nidoqueen", "illumise", "latias", "froslass", "wormadam", "vespiquen", "salazzle", "happiny", "chansey", "blissey", "kangaskhan", "smoochum", "jynx", "miltank", "cresselia", "petilil", "lilligant", "vullaby", "mandibuzz", "flabebe", "floette", "florges", "bounsweet", "steenee", "tsareena", "hatenna", "hattrem", "hatterene", "milcery", "alcremie", "enamorus"];
-
-const onlyM = ["nidoran-m", "nidorino", "nidoking", "volbeat", "latios", "gallade", "mothim", "tyrogue", "hitmonlee", "hitmonchan", "hitmontop", "tauros", "throh", "sawk", "rufflet", "braviary", "tornadus", "thundurus", "landorus", "impidimp", "morgrem", "grimmsnarl"];
-
-const onlyU = ["magnemite", "magneton", "voltorb", "electrode", "staryu", "starmie", "porygon", "porygon2", "shedinja", "lunatone", "solrock", "baltoy", "claydol", "beldum", "metang", "metagross", "bronzor", "bronzong", "magnezone", "porygon-z", "rotom", "phione", "manaphy", "klink", "klang", "klinklang", "cryogonal", "golett", "golurk", "carbink", "minior", "dhelmise", "sinistea", "polteageist", "falinks", "ditto", "articuno", "zapdos", "moltres", "mewtwo", "mew", "unown", "raikou", "entei", "suicune", "lugia", "ho-oh", "celebi", "regirock", "regice", "registeel", "kyogre", "groudon", "rayquaza", "jirachi", "deoxys", "uxie", "mesprit", "azelf", "dialga", "palkia", "regigigas", "giratina", "darkrai", "shaymin", "arceus", "victini", "cobalion", "terrakion", "virizion", "reshiram", "zekrom", "kyurem", "keldeo", "meloetta", "genesect", "xerneas", "yveltal", "zygarde", "diancie", "hoopa", "volcanion", "type-null", "silvally", "tapu-koko", "tapu-lele", "tapu-bulu", "tapu-fini", "cosmog", "cosmoem", "solgaleo", "lunala", "nihilego", "buzzwole", "pheromosa", "xurkitree", "celesteela", "kartana", "guzzlord", "necrozma", "magearna", "marshadow", "poipole", "naganadel", "stakataka", "blacephalon", "zeraora", "meltan", "melmetal", "dracozolt", "arctozolt", "dracovish", "arctovish", "zacian", "zamazenta", "eternatus", "zarude", "regieleki", "regidrago", "glastrier", "spectrier", "calyrex"];
-
-// Gender-specific sprites
-const spriteF = ["basculegion", "frillish", "hippopotas", "hippowdon", "indeedee", "jellicent", "meowstic", "pikachu", "pyroar", "unfezant", "wobbuffet"];
-
-// Functions
 function saveBackup(){
 	if($("#backup").hasClass("disabled")){
 		alert("You can't save a backup while adding or editing a Pokémon!");
@@ -160,51 +149,6 @@ function clearTable(allpkmn){
 }
 
 function gameInfo(s, o){
-	const games = {
-		"go": {"name": "GO", "mark": "go"},
-		"scar": {"name": "Scarlet", "mark": "paldea"},
-		"vio": {"name": "Violet", "mark": "paldea"},
-		"sw": {"name": "Sword", "mark": "galar"},
-		"sh": {"name": "Shield", "mark": "galar"},
-		"bd": {"name": "Brilliant Diamond", "mark": "bdsp"},
-		"sp": {"name": "Shining Pearl", "mark": "bdsp"},
-		"pla": {"name": "Legends: Arceus", "mark": "hisui"},
-		"sun": {"name": "Sun", "mark": "clover"},
-		"moon": {"name": "Moon", "mark": "clover"},
-		"usun": {"name": "Ultra Sun", "mark": "clover"},
-		"umoon": {"name": "Ultra Moon", "mark": "clover"},
-		"lgp": {"name": "Let's Go, Pikachu!", "mark": "lets-go"},
-		"lge": {"name": "Let's Go, Eevee!", "mark": "lets-go"},
-		"x": {"name": "X", "mark": "pentagon"},
-		"y": {"name": "Y", "mark": "pentagon"},
-		"or": {"name": "Omega Ruby", "mark": "pentagon"},
-		"as": {"name": "Alpha Sapphire", "mark": "pentagon"},
-		"black": {"name": "Black", "mark": null},
-		"white": {"name": "White", "mark": null},
-		"black2": {"name": "Black 2", "mark": null},
-		"white2": {"name": "White 2", "mark": null},
-		"diamond": {"name": "Diamond", "mark": null},
-		"pearl": {"name": "Pearl", "mark": null},
-		"platinum": {"name": "Platinum", "mark": null},
-		"hg": {"name": "HeartGold", "mark": null},
-		"ss": {"name": "SoulSilver", "mark": null},
-		"ruby": {"name": "Ruby", "mark": null},
-		"sapphire": {"name": "Sapphire", "mark": null},
-		"emerald": {"name": "Emerald", "mark": null},
-		"fr": {"name": "FireRed", "mark": null},
-		"lg": {"name": "LeafGreen", "mark": null},
-		"colosseum": {"name": "Colosseum", "mark": null},
-		"xd": {"name": "XD: Gale of Darkness", "mark": null},
-		"gold": {"name": "Gold", "mark": "game-boy"},
-		"silver": {"name": "Silver", "mark": "game-boy"},
-		"crystal": {"name": "Crystal", "mark": "game-boy"},
-		"red-jpn": {"name": "Red (JPN)", "mark": "game-boy"},
-		"green": {"name": "Green", "mark": "game-boy"},
-		"blue-jpn": {"name": "Blue (JPN)", "mark": "game-boy"},
-		"red-eng": {"name": "Red (ENG)", "mark": "game-boy"},
-		"blue-eng": {"name": "Blue (ENG)", "mark": "game-boy"},
-		"yellow": {"name": "Yellow", "mark": "game-boy"}
-	};
 	if(o){
 		if(games[s]["mark"]){
 			return "origin-" + games[s]["mark"];
@@ -214,33 +158,6 @@ function gameInfo(s, o){
 	} else {
 		return games[s]["name"];
 	}
-}
-
-function mintSprite(mint){
-	const mints = {
-		"Lonely": "atk",
-		"Adamant": "atk",
-		"Naughty": "atk",
-		"Brave": "atk",
-		"Bold": "def",
-		"Impish": "def",
-		"Lax": "def",
-		"Relaxed": "def",
-		"Modest": "spa",
-		"Mild": "spa",
-		"Rash": "spa",
-		"Quiet": "spa",
-		"Calm": "spd",
-		"Gentle": "spd",
-		"Careful": "spd",
-		"Sassy": "spd",
-		"Timid": "spe",
-		"Hasty": "spe",
-		"Jolly": "spe",
-		"Naive": "spe",
-		"Serious": "neutral"
-	}
-	return mints[mint];
 }
 
 function addPreviews(){
@@ -265,11 +182,25 @@ function addPreviews(){
 
 function addRow(pkmn, i){
 	var shinyDir = pkmn.shiny ? "shiny/" : "regular/";
-	var femaleDir = (spriteF.indexOf(pkmn.dex) > -1 && pkmn.gender === "female") ? "female/" : "";
 	var shinyMark = pkmn.shiny ? "<img src='img/shiny.png' class='shiny'>" : "";
+
+	var femaleDir = (spriteF.indexOf(pkmn.dex) > -1 && pkmn.gender === "female") ? "female/" : "";
+
 	var mint = pkmn.mint || "None";
-	var mintImg = (mint !== "None") ? "<div class='mint " + mintSprite(mint) + "'>" + mint + "</div>" : "";
-	$("#addnewpkmn").before("<tr pokemon='" + i + "'><td><b>" + pkmn.name + "</b></td><td>" + shinyMark + "<img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' class='sprite-mon'><img src='img/gender/"+pkmn.gender+".png' class='gender'></td><td><img src='img/balls/" + pkmn.ball + ".png'></td><td>" + pkmn.ot + "</td><td>" + pkmn.id + "</td><td>" + pkmn.nature + mintImg + "</td><td class='"+gameInfo(pkmn.origin, true)+"'>" + gameInfo(pkmn.origin, false) + "</td><td class='ribbons'><span class='button edit' onclick='editPkmn("+i+")'>Edit</span> <span class='button delete' onclick='deletePkmn("+i+")'>Delete</span></td></tr>");
+	var mintImg = (mint !== "None") ? "<div class='mint " + mints[mint] + "'>" + mint + "</div>" : "";
+
+	var ribbons = "";
+	var r;
+	for(r = 0; r < pkmn.ribbons.length; r++){
+		var rCode = pkmn.ribbons[r];
+		var rData = allRibbons[rCode];
+		var rName = rData["name"];
+		var rDesc = "";
+		if(rData["desc"]) rDesc = " - " + rData["desc"];
+		ribbons = ribbons + "<img class='" + rCode + "' src='img/ribbons/" + rCode + ".png' alt='" + rName + rDesc + "' title='" + rName + rDesc + "'>";
+	}
+
+	$("#addnewpkmn").before("<tr pokemon='" + i + "'><td><b>" + pkmn.name + "</b></td><td>" + shinyMark + "<img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' class='sprite-mon'><img src='img/gender/"+pkmn.gender+".png' class='gender'></td><td><img src='img/balls/" + pkmn.ball + ".png'></td><td>" + pkmn.ot + "</td><td>" + pkmn.id + "</td><td>" + pkmn.nature + mintImg + "</td><td class='"+gameInfo(pkmn.origin, true)+"'>" + gameInfo(pkmn.origin, false) + "</td><td class='ribbons'><div class='ribbons-list'>" + ribbons + "</div></td><td><div class='button edit' onclick='editPkmn("+i+")'>Edit</div> <div class='button delete' onclick='deletePkmn("+i+")'>Delete</div></td></tr>");
 }
 
 // On load
