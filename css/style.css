@@ -17,11 +17,13 @@ a:hover {
 body.dark a {
 	color: #81a6e9;
 }
-body.dark {
+body.dark,
+body.dark #all-ribbons {
 	background: #121212;
 	color: #fff;
 }
-body.light {
+body.light,
+body.light #all-ribbons {
 	background: #fff;
 	color: #121212;
 }
@@ -339,6 +341,54 @@ body.light .tablelist .origin-pentagon:before {
 	background-image: url("../img/mints/neutral.png");
 }
 
+.tablelist #addnewpkmn #add-ribbons {
+	padding-bottom: 0;
+	position: relative;
+}
+#all-ribbons {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 89px;
+	min-height: 89px;
+	max-height: 500px;
+	overflow-y: scroll;
+	resize: vertical;
+	border: 1px dashed grey;
+	padding: 0 5px;
+}
+#all-ribbons img {
+	filter: grayscale(100%);
+	opacity: 0.1;
+	cursor: pointer;
+}
+#all-ribbons img:hover {
+	opacity: 0.5;
+	filter: grayscale(50%);
+}
+#all-ribbons img.disabled {
+	filter: blur(5) grayscale(100%);
+	cursor: default;
+}
+#all-ribbons input:checked + img {
+	filter: none;
+	opacity: 1;
+}
+.ribbons-gen {
+	text-align: left;
+	font-weight: bold;
+	font-style: italic;
+	border-top: 1px solid grey;
+	padding: 5px 0;
+	margin-top: 10px;
+}
+.ribbons-gen:first-child {
+	margin-top: 0;
+	border-top: none;
+}
+#all-ribbons .ribbons-list:last-child {
+	padding-bottom: 10px;
+}
 .ribbons-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -493,10 +543,10 @@ body.light .tablelist .origin-pentagon:before {
 .ribbons-list .cool-ribbon-sinnoh {
 	order: -78;
 }
-.ribbons-list .cool-ribbon-super-sinnoh {
+.ribbons-list .cool-ribbon-great-sinnoh {
 	order: -77;
 }
-.ribbons-list .cool-ribbon-hyper-sinnoh {
+.ribbons-list .cool-ribbon-ultra-sinnoh {
 	order: -76;
 }
 .ribbons-list .cool-ribbon-master-sinnoh {
@@ -505,10 +555,10 @@ body.light .tablelist .origin-pentagon:before {
 .ribbons-list .beauty-ribbon-sinnoh {
 	order: -74;
 }
-.ribbons-list .beauty-ribbon-super-sinnoh {
+.ribbons-list .beauty-ribbon-great-sinnoh {
 	order: -73;
 }
-.ribbons-list .beauty-ribbon-hyper-sinnoh {
+.ribbons-list .beauty-ribbon-ultra-sinnoh {
 	order: -72;
 }
 .ribbons-list .beauty-ribbon-master-sinnoh {
@@ -517,10 +567,10 @@ body.light .tablelist .origin-pentagon:before {
 .ribbons-list .cute-ribbon-sinnoh {
 	order: -70;
 }
-.ribbons-list .cute-ribbon-super-sinnoh {
+.ribbons-list .cute-ribbon-great-sinnoh {
 	order: -69;
 }
-.ribbons-list .cute-ribbon-hyper-sinnoh {
+.ribbons-list .cute-ribbon-ultra-sinnoh {
 	order: -68;
 }
 .ribbons-list .cute-ribbon-master-sinnoh {
@@ -529,10 +579,10 @@ body.light .tablelist .origin-pentagon:before {
 .ribbons-list .smart-ribbon-sinnoh {
 	order: -66;
 }
-.ribbons-list .smart-ribbon-super-sinnoh {
+.ribbons-list .smart-ribbon-great-sinnoh {
 	order: -65;
 }
-.ribbons-list .smart-ribbon-hyper-sinnoh {
+.ribbons-list .smart-ribbon-ultra-sinnoh {
 	order: -64;
 }
 .ribbons-list .smart-ribbon-master-sinnoh {
@@ -541,10 +591,10 @@ body.light .tablelist .origin-pentagon:before {
 .ribbons-list .tough-ribbon-sinnoh {
 	order: -62;
 }
-.ribbons-list .tough-ribbon-super-sinnoh {
+.ribbons-list .tough-ribbon-great-sinnoh {
 	order: -61;
 }
-.ribbons-list .tough-ribbon-hyper-sinnoh {
+.ribbons-list .tough-ribbon-ultra-sinnoh {
 	order: -60;
 }
 .ribbons-list .tough-ribbon-master-sinnoh {
