@@ -223,6 +223,9 @@ function generateRibbons(){
 $(function(){
 	resetForm();
 	generateRibbons();
+	$("#add-dex, #add-ball, #add-nature, #add-mint, #add-origin").select2({
+		width: "calc(100% - 5px)"
+	});
 	var theme = localStorage.getItem("theme");
 	if(!theme) theme = "dark";
 	changeTheme(theme);

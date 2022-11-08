@@ -699,3 +699,8 @@ body.light .tablelist .origin-pentagon:before {
 .ribbons-list .pioneer-ribbon {
 	order: 43;
 }
+
+.select2-dropdown {
+	width: max-content!important;
+	color: #000;
+}

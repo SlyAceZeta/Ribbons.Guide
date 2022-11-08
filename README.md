@@ -6,8 +6,13 @@ This was developed as a love letter to the helpful and welcoming [r/PokémonRibb
 This project is not affiliated with Nintendo, Game Freak, or The Pokémon Company.
 
 The icons used in this app were provided by:
-- https://github.com/msikma/pokesprite - Pokémon sprites, ball sprites, shiny icon, Origin Marks, and Ribbons
-- https://github.com/PokeMiners/pogo_assets - gender icons
+- [PokéSprite](https://github.com/msikma/pokesprite)
+- [Pokémon GO Assets](https://github.com/PokeMiners/pogo_assets)
+
+This app also makes use of the following dependencies:
+- [jQuery](https://github.com/jquery/jquery)
+- [Select2](https://github.com/select2/select2)
+- [Google Fonts](https://fonts.google.com/)
 
 ### How to Use
 
