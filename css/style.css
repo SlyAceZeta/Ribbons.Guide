@@ -1,8 +1,87 @@
 body {
-	width: 95%;
 	font-family: "Nunito Sans", sans-serif;
 	font-size: 12pt;
-	margin: 20px auto 0;
+	margin-top: 20px;
+}
+#pokeform {
+	padding: 0;
+	user-select: none;
+}
+#pokeform h4 {
+	background: #222;
+	padding: 10px;
+	margin: 0;
+	border-radius: 8px 8px 0 0;
+	border-bottom: 1px solid grey;
+}
+body.light #pokeform h4 {
+	background: #efefef;
+}
+#pokeform table {
+	border-spacing: 0;
+}
+#pokeform th {
+	text-align: right;
+	border: solid grey;
+	border-width: 0 1px 1px 0;
+	vertical-align: middle;
+}
+#pokeform th label {
+	display: block;
+	padding: 10px;
+}
+#pokeform td {
+	padding: 10px;
+	text-align: left;
+	border: solid grey;
+	border-width: 0 1px 1px 0;
+	width: 100%;
+	vertical-align: middle;
+}
+#pokeform .pokeform-ribbonrow th,
+#pokeform .pokeform-ribbonrow td {
+	vertical-align: top;
+}
+#pokeform td:last-child {
+	border-width: 0 0 1px 0;
+}
+#pokeform td.ribbons {
+	padding: 0;
+}
+#pokeform #all-ribbons {
+	padding: 5px 10px;
+}
+#pokeform tr:last-child td {
+	border: none;
+	text-align: center;
+}
+.pokedropimg {
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+}
+.pokedropimg + span {
+	padding-left: 5px;
+	vertical-align: middle;
+}
+.select2-container--default .select2-results__option .select2-results__option {
+	padding-left: 6px;
+}
+.select2-dropdown {
+	background: #fff;
+}
+.select2-container--default .select2-results__option--selected {
+	background: #ddd;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+	background: #ddd;
+	color: unset;
+}
+.select2-container .select2-selection--single {
+	height: 32px;
+}
+#pokeform td > input[type="text"] {
+	padding: 5px;
 }
 * {
 	font-family: "Nunito Sans", sans-serif;
@@ -18,11 +97,13 @@ body.dark a {
 	color: #81a6e9;
 }
 body.dark,
+body.dark .modal,
 body.dark #all-ribbons {
 	background: #121212;
 	color: #fff;
 }
 body.light,
+body.light .modal,
 body.light #all-ribbons {
 	background: #fff;
 	color: #121212;
@@ -90,9 +171,9 @@ header {
 	font-size: 10pt
 }
 .tablelist {
-	width: 100%;
+	width: 96%;
 	padding: 10px 0 0;
-	margin: 20px 0;
+	margin: 20px auto;
 	border: 1px solid #aaa;
 	border-left: none;
 	border-right: none;
@@ -246,7 +327,9 @@ footer {
 #addnewpkmn,
 #add-gender,
 .subheadbtns input,
-.edit-btns {
+.edit-btns,
+#pokeform-edit,
+#pokeform-gender-unknown {
 	display: none;
 }
 .sprite-mon {
@@ -259,8 +342,60 @@ footer {
 	filter: grayscale(100%);
 	cursor: pointer;
 }
-#add-shiny:checked ~ #add-shiny-toggle {
+#pokeform-shiny-img {
+	filter: grayscale(100%);
+}
+#pokeform-shiny {
+	margin-top: 5px;
+}
+#pokeform-shiny-img,
+#pokeform-gender-unknown img {
+	height: 24px;
+	vertical-align: middle;
+}
+#add-shiny:checked ~ #add-shiny-toggle,
+#pokeform-shiny-checkbox:checked ~ label #pokeform-shiny-img {
 	filter: none;
+}
+#pokeform-shiny label {
+	cursor: pointer;
+	vertical-align: middle;
+}
+#pokeform-gender-img {
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	background: url("../img/gender/male.png") no-repeat center center;
+	background-size: contain;
+}
+#pokeform-gender-checkbox:checked ~ #pokeform-gender-img {
+	background-image: url("../img/gender/female.png");
+}
+#pokeform-gender label {
+	position: relative;
+	cursor: pointer;
+	vertical-align: middle;
+}
+#pokeform-gender-img ~ label:before {
+	content: "Male";
+}
+#pokeform-gender-checkbox:checked ~ label:before {
+	content: "Female";
+}
+#pokeform-gender-unknown span {
+	vertical-align: middle;
+}
+#pokeform-gender-checkbox[disabled] ~ #pokeform-gender-img,
+#pokeform-gender-checkbox[disabled] ~ label {
+	cursor: default;
+}
+#pokeform-gender-checkbox[disabled] ~ label:before {
+	content: "Male only";
+}
+#pokeform-gender-checkbox:checked[disabled] ~ label:before {
+	content: "Female only";
 }
 #add-gender-toggle[lock="none"] {
 	cursor: pointer;
@@ -274,52 +409,52 @@ footer {
 	text-align: left;
 }
 
-body.dark .tablelist .origin-bdsp:before {
+body.dark .origin-bdsp:before {
 	background-image: url("../img/origins/light/bdsp.png");
 }
-body.light .tablelist .origin-bdsp:before {
+body.light .origin-bdsp:before {
 	background-image: url("../img/origins/dark/bdsp.png");
 }
-body.dark .tablelist .origin-clover:before {
+body.dark .origin-clover:before {
 	background-image: url("../img/origins/light/clover.png");
 }
-body.light .tablelist .origin-clover:before {
+body.light .origin-clover:before {
 	background-image: url("../img/origins/dark/clover.png");
 }
-body.dark .tablelist .origin-galar:before {
+body.dark .origin-galar:before {
 	background-image: url("../img/origins/light/galar.png");
 }
-body.light .tablelist .origin-galar:before {
+body.light .origin-galar:before {
 	background-image: url("../img/origins/dark/galar.png");
 }
-body.dark .tablelist .origin-game-boy:before {
+body.dark .origin-game-boy:before {
 	background-image: url("../img/origins/light/game-boy.png");
 }
-body.light .tablelist .origin-game-boy:before {
+body.light .origin-game-boy:before {
 	background-image: url("../img/origins/dark/game-boy.png");
 }
-body.dark .tablelist .origin-go:before {
+body.dark .origin-go:before {
 	background-image: url("../img/origins/light/go.png");
 }
-body.light .tablelist .origin-go:before {
+body.light .origin-go:before {
 	background-image: url("../img/origins/dark/go.png");
 }
-body.dark .tablelist .origin-hisui:before {
+body.dark .origin-hisui:before {
 	background-image: url("../img/origins/light/hisui.png");
 }
-body.light .tablelist .origin-hisui:before {
+body.light .origin-hisui:before {
 	background-image: url("../img/origins/dark/hisui.png");
 }
-body.dark .tablelist .origin-lets-go:before {
+body.dark .origin-lets-go:before {
 	background-image: url("../img/origins/light/lets-go.png");
 }
-body.light .tablelist .origin-lets-go:before {
+body.light .origin-lets-go:before {
 	background-image: url("../img/origins/dark/lets-go.png");
 }
-body.dark .tablelist .origin-pentagon:before {
+body.dark .origin-pentagon:before {
 	background-image: url("../img/origins/light/pentagon.png");
 }
-body.light .tablelist .origin-pentagon:before {
+body.light .origin-pentagon:before {
 	background-image: url("../img/origins/dark/pentagon.png");
 }
 .mint.atk:before {
@@ -345,7 +480,7 @@ body.light .tablelist .origin-pentagon:before {
 	padding-bottom: 0;
 	position: relative;
 }
-#all-ribbons {
+#addnewpkmn #all-ribbons {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -701,6 +836,8 @@ body.light .tablelist .origin-pentagon:before {
 }
 
 .select2-dropdown {
-	width: max-content!important;
 	color: #000;
+}
+.tablelist .select2-dropdown {
+	width: max-content!important;
 }
