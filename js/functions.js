@@ -62,15 +62,17 @@ function resetForm(){
 	$("#pokeform select").each(function(){
 		$(this).val(null).trigger("change");
 	});
-	$("#pokeform-add").show();
+	$("#pokeform-add, #pokeform-header-add").show();
 	$("#pokeform-edit").hide().removeAttr("pokemon");
+	$("#pokeform-header-edit").hide();
 }
 
 function editPkmn(id){
 	allpkmn = JSON.parse(localStorage.getItem("pokemon"));
 	var pkmn = allpkmn.entries[id];
 	for(var r in pkmn.ribbons) $("#" + pkmn.ribbons[r]).prop("checked", "checked").change();
-	$("#pokeform-add").hide();
+	$("#pokeform-add, #pokeform-header-add").hide();
+	$("#pokeform-header-edit").show();
 	$("#pokeform-edit").show().attr("pokemon", id);
 	$("#pokeform-nickname").val(pkmn.name);
 	$("#pokeform-species").val(pkmn.dex).change();
@@ -147,15 +149,20 @@ function addRow(pkmn, i){
 function generateRibbons(){
 	$("#add-ribbons").append("<div id='all-ribbons'></div>");
 	for(var i in ribbonIDs) $("#all-ribbons").append("<div class='ribbons-gen'>" + i + "</div><div id='ribbons-list-" + ribbonIDs[i] + "' class='ribbons-list'></div>");
+	var folder = "ribbons";
 	for(let r in allRibbons){
 		var rData = allRibbons[r];
 		var rGen = "e";
+		var folder = "ribbons";
 		if(rData["available"]){
 			rGen = rData["gen"];
+		} else if(rData["mark"]){
+			rGen = "m";
+			folder = "marks";
 		}
 		var rDesc = "";
 		if(rData["desc"]) rDesc = " - " + rData["desc"];
-		$("#ribbons-list-" + rGen).append("<input id='" + r + "' type='checkbox' form='newpkmnform' hidden><img class='" + r + "' src='img/ribbons/" + r + ".png' alt=\"" + rData["name"] + rDesc + "\" title=\"" + rData["name"] + rDesc + "\" onclick='toggleCheck(\"" + r + "\");'>");
+		$("#ribbons-list-" + rGen).append("<input id='" + r + "' type='checkbox' form='newpkmnform' hidden><img class='" + r + "' src='img/" + folder + "/" + r + ".png' alt=\"" + rData["name"] + rDesc + "\" title=\"" + rData["name"] + rDesc + "\" onclick='toggleCheck(\"" + r + "\");'>");
 	}
 }
 

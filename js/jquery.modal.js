@@ -114,8 +114,7 @@
 
     block: function() {
       this.$elm.trigger($.modal.BEFORE_BLOCK, [this._ctx()]);
-      this.$body.css('overflow','hidden');
-	  this.$body.css('padding-right','17px');
+      this.$body.addClass("modalactive");
       this.$blocker = $('<div class="' + this.options.blockerClass + ' blocker current"></div>').appendTo(this.$body);
       selectCurrent();
       if(this.options.doFade) {
@@ -133,8 +132,7 @@
         this.$blocker = null;
         selectCurrent();
         if (!$.modal.isActive())
-          this.$body.css('overflow','');
-		  this.$body.css('padding-right','0px');
+          this.$body.removeClass("modalactive");
       }
     },
 

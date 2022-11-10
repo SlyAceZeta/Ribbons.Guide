@@ -3,6 +3,9 @@ body {
 	font-size: 12pt;
 	margin-top: 20px;
 }
+body.modalactive {
+	overflow: hidden;
+}
 #pokeform {
 	padding: 0;
 	user-select: none;
@@ -329,7 +332,8 @@ footer {
 .subheadbtns input,
 .edit-btns,
 #pokeform-edit,
-#pokeform-gender-unknown {
+#pokeform-gender-unknown,
+#pokeform-header-edit {
 	display: none;
 }
 .sprite-mon {

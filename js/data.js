@@ -81,7 +81,7 @@ const mints = {
 }
 
 // Ribbons
-const ribbonIDs = {"Event": "e", "Gen III": 3, "Gen IV": 4, "Gen VI": 6, "Gen VII": 7, "Gen VIII": 8};
+const ribbonIDs = {"Event": "e", "Marks": "m", "Gen III": 3, "Gen IV": 4, "Gen VI": 6, "Gen VII": 7, "Gen VIII": 8};
 const allRibbons = {
 	"champion-ribbon":				{"name": "Champion Ribbon",				"gen": 3,	"title": "the Champion",			"available": ["ruby", "sapphire", "emerald", "fr", "lg"], "desc": "A Ribbon awarded for clearing the Pokémon League and entering the Hall of Fame somewhere long ago."},
 	"sinnoh-champion-ribbon":		{"name": "Sinnoh Champion Ribbon",		"gen": 4,	"title": "the Sinnoh Champion",		"available": ["diamond", "pearl", "platinum", "bd", "sp"], "desc": "A Ribbon awarded for beating the Sinnoh Champion and entering the Sinnoh Hall of Fame."},
@@ -184,5 +184,50 @@ const allRibbons = {
 	"souvenir-ribbon":				{"name": "Souvenir Ribbon",				"gen": 5,	"title": "the Cherished",			"available": null, "desc": "A Ribbon for cherishing a special memory."},
 	"wishing-ribbon":				{"name": "Wishing Ribbon",				"gen": 5,	"title": "the Wish Granter",		"available": null, "desc": "A Ribbon said to make your wish come true."},
 	"battle-champion-ribbon":		{"name": "Battle Champion Ribbon",		"gen": 5,	"title": "the Battle Champion",		"available": null, "desc": "A Ribbon awarded to a Battle Competition Champion."},
-	"world-champion-ribbon":		{"name": "World Champion Ribbon",		"gen": 5,	"title": "the World Champion",		"available": null, "desc": "A Ribbon awarded to a World Champion in the Pokémon World Championships."}
+	"world-champion-ribbon":		{"name": "World Champion Ribbon",		"gen": 5,	"title": "the World Champion",		"available": null, "desc": "A Ribbon awarded to a World Champion in the Pokémon World Championships."},
+
+	"lunchtime-mark":				{"name": "Lunchtime Mark",				"gen": 8,	"title": "the Peckish",				"available": null, "mark": true, "desc": "A mark for a peckish Pokémon."},
+	"sleepy-time-mark":				{"name": "Sleepy-Time Mark",			"gen": 8,	"title": "the Sleepy",				"available": null, "mark": true, "desc": "A mark for a sleepy Pokémon."},
+	"dusk-mark":					{"name": "Dusk Mark",					"gen": 8,	"title": "the Dozy",				"available": null, "mark": true, "desc": "A mark for a dozy Pokémon."},
+	"dawn-mark":					{"name": "Dawn Mark",					"gen": 8,	"title": "the Early Riser",			"available": null, "mark": true, "desc": "A mark for an early-riser Pokémon."},
+	"cloudy-mark":					{"name": "Cloudy Mark",					"gen": 8,	"title": "the Cloud Watcher",		"available": null, "mark": true, "desc": "A mark for a cloud-watching Pokémon."},
+	"rainy-mark":					{"name": "Rainy Mark",					"gen": 8,	"title": "the Sodden",				"available": null, "mark": true, "desc": "A mark for a sodden Pokémon."},
+	"stormy-mark":					{"name": "Stormy Mark",					"gen": 8,	"title": "the Thunderstruck",		"available": null, "mark": true, "desc": "A mark for a thunderstruck Pokémon."},
+	"snowy-mark":					{"name": "Snowy Mark",					"gen": 8,	"title": "the Snow Frolicker",		"available": null, "mark": true, "desc": "A mark for a snow-frolicking Pokémon."},
+	"blizzard-mark":				{"name": "Blizzard Mark",				"gen": 8,	"title": "the Shivering",			"available": null, "mark": true, "desc": "A mark for a shivering Pokémon."},
+	"dry-mark":						{"name": "Dry Mark",					"gen": 8,	"title": "the Parched",				"available": null, "mark": true, "desc": "A mark for a parched Pokémon."},
+	"sandstorm-mark":				{"name": "Sandstone Mark",				"gen": 8,	"title": "the Sandswept",			"available": null, "mark": true, "desc": "A mark for a sandswept Pokémon."},
+	"misty-mark":					{"name": "Misty Mark",					"gen": 8,	"title": "the Mist Drifter",		"available": null, "mark": true, "desc": "A mark for a mist-drifter Pokémon."},
+	"fishing-mark":					{"name": "Fishing Mark",				"gen": 8,	"title": "the Catch of the Day",	"available": null, "mark": true, "desc": "A mark for a catch-of-the-day Pokémon."},
+	"curry-mark":					{"name": "Curry Mark",					"gen": 8,	"title": "the Curry Connoisseur",	"available": null, "mark": true, "desc": "A mark for a curry-connoisseur Pokémon."},
+	"uncommon-mark":				{"name": "Uncommon Mark",				"gen": 8,	"title": "the Sociable",			"available": null, "mark": true, "desc": "A mark for a sociable Pokémon."},
+	"rare-mark":					{"name": "Rare Mark",					"gen": 8,	"title": "the Recluse",				"available": null, "mark": true, "desc": "A mark for a reclusive Pokémon."},
+	"rowdy-mark":					{"name": "Rowdy Mark",					"gen": 8,	"title": "the Rowdy",				"available": null, "mark": true, "desc": "A mark for a rowdy Pokémon."},
+	"absent-minded-mark":			{"name": "Absent-Minded Mark",			"gen": 8,	"title": "the Spacey",				"available": null, "mark": true, "desc": "A mark for a spacey Pokémon."},
+	"jittery-mark":					{"name": "Jittery Mark",				"gen": 8,	"title": "the Anxious",				"available": null, "mark": true, "desc": "A mark for an anxious Pokémon."},
+	"excited-mark":					{"name": "Excited Mark",				"gen": 8,	"title": "the Giddy",				"available": null, "mark": true, "desc": "A mark for a giddy Pokémon."},
+	"charismatic-mark":				{"name": "Charismatic Mark",			"gen": 8,	"title": "the Radiant",				"available": null, "mark": true, "desc": "A mark for a radiant Pokémon."},
+	"calmness-mark":				{"name": "Calmness Mark",				"gen": 8,	"title": "the Serene",				"available": null, "mark": true, "desc": "A mark for a serene Pokémon."},
+	"intense-mark":					{"name": "Intense Mark",				"gen": 8,	"title": "the Feisty",				"available": null, "mark": true, "desc": "A mark for a feisty Pokémon."},
+	"zoned-out-mark":				{"name": "Zoned-Out Mark",				"gen": 8,	"title": "the Daydreamer",			"available": null, "mark": true, "desc": "A mark for a daydreaming Pokémon."},
+	"joyful-mark":					{"name": "Joyful Mark",					"gen": 8,	"title": "the Joyful",				"available": null, "mark": true, "desc": "A mark for a joyful Pokémon."},
+	"angry-mark":					{"name": "Angry Mark",					"gen": 8,	"title": "the Furious",				"available": null, "mark": true, "desc": "A mark for a furious Pokémon."},
+	"smiley-mark":					{"name": "Smiley Mark",					"gen": 8,	"title": "the Beaming",				"available": null, "mark": true, "desc": "A mark for a beaming Pokémon."},
+	"teary-mark":					{"name": "Teary Mark",					"gen": 8,	"title": "the Teary-Eyed",			"available": null, "mark": true, "desc": "A mark for a teary-eyed Pokémon."},
+	"upbeat-mark":					{"name": "Upbeat Mark",					"gen": 8,	"title": "the Chipper",				"available": null, "mark": true, "desc": "A mark for a chipper Pokémon."},
+	"peeved-mark":					{"name": "Peeved Mark",					"gen": 8,	"title": "the Grumpy",				"available": null, "mark": true, "desc": "A mark for a grumpy Pokémon."},
+	"intellectual-mark":			{"name": "Intellectual Mark",			"gen": 8,	"title": "the Scholar",				"available": null, "mark": true, "desc": "A mark for a scholarly Pokémon."},
+	"ferocious-mark":				{"name": "Ferocious Mark",				"gen": 8,	"title": "the Rampaging",			"available": null, "mark": true, "desc": "A mark for a rampaging Pokémon."},
+	"crafty-mark":					{"name": "Crafty Mark",					"gen": 8,	"title": "the Opportunist",			"available": null, "mark": true, "desc": "A mark for an opportunistic Pokémon."},
+	"scowling-mark":				{"name": "Scowling Mark",				"gen": 8,	"title": "the Stern",				"available": null, "mark": true, "desc": "A mark for a stern Pokémon."},
+	"kindly-mark":					{"name": "Kindly Mark",					"gen": 8,	"title": "the Kindhearted",			"available": null, "mark": true, "desc": "A mark for a kindhearted Pokémon."},
+	"flustered-mark":				{"name": "Flustered Mark",				"gen": 8,	"title": "the Easily Flustered",	"available": null, "mark": true, "desc": "A mark for an easily flustered Pokémon."},
+	"pumped-up-mark":				{"name": "Pumped-Up Mark",				"gen": 8,	"title": "the Driven",				"available": null, "mark": true, "desc": "A mark for a driven Pokémon."},
+	"zero-energy-mark":				{"name": "Zero Energy Mark",			"gen": 8,	"title": "the Apathetic",			"available": null, "mark": true, "desc": "A mark for an apathetic Pokémon."},
+	"prideful-mark":				{"name": "Prideful Mark",				"gen": 8,	"title": "the Arrogant",			"available": null, "mark": true, "desc": "A mark for an arrogant Pokémon."},
+	"unsure-mark":					{"name": "Unsure Mark",					"gen": 8,	"title": "the Reluctant",			"available": null, "mark": true, "desc": "A mark for an unsure Pokémon."},
+	"humble-mark":					{"name": "Humble Mark",					"gen": 8,	"title": "the Humble",				"available": null, "mark": true, "desc": "A mark for a humble Pokémon."},
+	"thorny-mark":					{"name": "Thorny Mark",					"gen": 8,	"title": "the Pompous",				"available": null, "mark": true, "desc": "A mark for a pompous Pokémon."},
+	"vigor-mark":					{"name": "Vigor Mark",					"gen": 8,	"title": "the Lively",				"available": null, "mark": true, "desc": "A mark for a lively Pokémon."},
+	"slump-mark":					{"name": "Slump Mark",					"gen": 8,	"title": "the Worn-Out",			"available": null, "mark": true, "desc": "A mark for a worn-out Pokémon."}
 }
