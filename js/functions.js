@@ -140,7 +140,9 @@ function addRow(pkmn, i){
 		var rName = rData["name"];
 		var rDesc = "";
 		if(rData["desc"]) rDesc = " - " + rData["desc"];
-		ribbons = ribbons + "<img class='" + rCode + "' src='img/ribbons/" + rCode + ".png' alt=\"" + rName + rDesc + "\" title=\"" + rName + rDesc + "\">";
+		var rFldr = "ribbons";
+		if(rData["mark"]) rFldr = "marks";
+		ribbons = ribbons + "<img class='" + rCode + "' src='img/" + rFldr + "/" + rCode + ".png' alt=\"" + rName + rDesc + "\" title=\"" + rName + rDesc + "\">";
 	}
 
 	$(".tablelist").append("<tr pokemon='" + i + "'><td><b>" + pkmn.name + "</b></td><td>" + shinyMark + "<img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' class='sprite-mon'><img src='img/gender/"+pkmn.gender+".png' class='gender'></td><td><img src='img/balls/" + pkmn.ball + ".png'></td><td>" + pkmn.ot + "</td><td>" + pkmn.id + "</td><td>" + pkmn.nature + mintImg + "</td><td class='"+gameInfo(pkmn.origin, true)+"'>" + gameInfo(pkmn.origin) + "</td><td class='ribbons'><div class='ribbons-list'>" + ribbons + "</div></td><td><div class='button edit' onclick='editPkmn("+i+")'>Edit</div> <div class='button delete' onclick='deletePkmn("+i+")'>Delete</div></td></tr>");
@@ -153,16 +155,16 @@ function generateRibbons(){
 	for(let r in allRibbons){
 		var rData = allRibbons[r];
 		var rGen = "e";
-		var folder = "ribbons";
+		var rFldr = "ribbons";
 		if(rData["available"]){
 			rGen = rData["gen"];
 		} else if(rData["mark"]){
 			rGen = "m";
-			folder = "marks";
+			rFldr = "marks";
 		}
 		var rDesc = "";
 		if(rData["desc"]) rDesc = " - " + rData["desc"];
-		$("#ribbons-list-" + rGen).append("<input id='" + r + "' type='checkbox' form='newpkmnform' hidden><img class='" + r + "' src='img/" + folder + "/" + r + ".png' alt=\"" + rData["name"] + rDesc + "\" title=\"" + rData["name"] + rDesc + "\" onclick='toggleCheck(\"" + r + "\");'>");
+		$("#ribbons-list-" + rGen).append("<input id='" + r + "' type='checkbox' form='newpkmnform' hidden><img class='" + r + "' src='img/" + rFldr + "/" + r + ".png' alt=\"" + rData["name"] + rDesc + "\" title=\"" + rData["name"] + rDesc + "\" onclick='toggleCheck(\"" + r + "\");'>");
 	}
 }
 

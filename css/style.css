@@ -838,6 +838,9 @@ body.light .origin-pentagon:before {
 .ribbons-list .pioneer-ribbon {
 	order: 43;
 }
+.ribbons-list img[class$="-mark"] {
+	order: 1000;
+}
 
 .select2-dropdown {
 	color: #000;
