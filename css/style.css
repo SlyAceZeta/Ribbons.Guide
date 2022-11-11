@@ -1,39 +1,45 @@
 body {
 	font-family: "Nunito Sans", sans-serif;
 	font-size: 12pt;
-	margin-top: 20px;
+	margin: 0;
 }
 body.modalactive {
 	overflow: hidden;
 }
-#pokeform {
+.modal {
+	border: 5px solid;
+	border-left: none;
+	border-right: none;
 	padding: 0;
 	user-select: none;
 }
-#pokeform h4 {
-	background: #222;
-	padding: 10px;
+.modal h4,
+.modal h5 {
+	padding: 5px 10px 10px;
 	margin: 0;
-	border-radius: 8px 8px 0 0;
-	border-bottom: 1px solid grey;
 }
-body.light #pokeform h4 {
-	background: #efefef;
+.modal h5 {
+	text-align: center;
+	padding: 5px 0 0;
+	font-weight: normal;
 }
-#pokeform table {
+.modal h5 .button {
+	display: inline-block;
+}
+.modal table {
 	border-spacing: 0;
 }
-#pokeform th {
+.modal th {
 	text-align: right;
 	border: solid grey;
 	border-width: 0 1px 1px 0;
 	vertical-align: middle;
 }
-#pokeform th label {
+.modal th label {
 	display: block;
 	padding: 10px;
 }
-#pokeform td {
+.modal td {
 	padding: 10px;
 	text-align: left;
 	border: solid grey;
@@ -41,22 +47,22 @@ body.light #pokeform h4 {
 	width: 100%;
 	vertical-align: middle;
 }
-#pokeform .pokeform-ribbonrow th,
-#pokeform .pokeform-ribbonrow td {
+.modal .pokeform-ribbonrow th,
+.modal .pokeform-ribbonrow td {
 	vertical-align: top;
 }
-#pokeform td:last-child {
+.modal td:last-child {
 	border-width: 0 0 1px 0;
 }
-#pokeform td.ribbons {
+.modal td.ribbons {
 	padding: 0;
 }
-#pokeform #all-ribbons {
+.modal #all-ribbons {
 	padding: 5px 10px;
 }
-#pokeform tr:last-child td {
-	border: none;
-	text-align: center;
+.modal tr:last-child td,
+.modal tr:last-child th {
+	border-bottom: none;
 }
 .pokedropimg {
 	width: 24px;
@@ -83,33 +89,21 @@ body.light #pokeform h4 {
 .select2-container .select2-selection--single {
 	height: 32px;
 }
-#pokeform td > input[type="text"] {
+.modal td > input[type="text"] {
 	padding: 5px;
 }
 * {
 	font-family: "Nunito Sans", sans-serif;
+	box-sizing: border-box;
 }
 a {
-	color: #38578e;
 	text-decoration: none;
 }
 a:hover {
 	text-decoration: underline;
 }
-body.dark a {
-	color: #81a6e9;
-}
-body.dark,
-body.dark .modal,
-body.dark #all-ribbons {
-	background: #121212;
-	color: #fff;
-}
-body.light,
-body.light .modal,
-body.light #all-ribbons {
-	background: #fff;
-	color: #121212;
+footer a {
+	white-space: nowrap;
 }
 button, .button {
 	padding: 5px 10px;
@@ -121,6 +115,9 @@ button, .button {
 	font-size: 12pt;
 	color: #121212;
 }
+span.button {
+	display: inline-block;
+}
 .ribbons .button {
 	display: inline-block;
 }
@@ -128,7 +125,7 @@ button:hover, .button:hover {
 	background: #ddd;
 }
 button:hover, .button:active {
-	background: #ccc;
+	background: #eee;
 }
 .button.disabled {
 	background: #efefef;
@@ -139,54 +136,69 @@ button:hover, .button:active {
 .editing td {
 	opacity: 0.25;
 }
-body.dark button, body.dark .button {
-	background: #222;
-	border-color: #888;
-	color: #fff;
-}
-body.dark button:hover, body.dark .button:hover {
-	background: #444;
-}
-body.dark button:active, body.dark .button:active {
-	background: #555;
-}
-body.dark .button.disabled {
-	background: #222;
-	border-color: #333;
-	color: #555;
-}
 header {
-	text-align: center;
-	font-size: 20pt;
+	text-align: left;
+	padding: 5px 20px;
+	text-transform: uppercase;
+	font-size: 18pt;
 	font-weight: bold;
+	width: 100%;
+	border-top: 3px solid;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
 }
-.subhead {
+#header-logo {
+	float: left;
+}
+#header-logo img {
+	width: 32px;
+	height: 32px;
+	vertical-align: middle;
+	margin-right: 5px;
+	filter: brightness(0) invert(1);
+}
+#header-logo span {
+	display: inline-block;
+	vertical-align: middle;
+}
+#header-settings {
+	float: right;
+	cursor: pointer;
+}
+footer {
 	text-align: center;
-	font-size: 14pt;
-	margin-top: 10px;
+	padding: 5px 10px;
+	font-size: 13px;
+	width: 100%;
+	border-bottom: 3px solid;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	font-weight: 600;
 }
 .subheadbtns {
 	text-align: center;
-	font-size: 10pt;
-	margin-top: 20px;
+	font-size: 16px;
+	margin-top: 65px;
 }
-.subheadbtns .button {
-	font-size: 10pt
+#settings .button {
+	font-size: 16px;
 }
 .tablelist {
 	width: 96%;
+	max-width: 96%;
 	padding: 10px 0 0;
-	margin: 20px auto;
-	border: 1px solid #aaa;
-	border-left: none;
-	border-right: none;
+	margin: 20px auto 50px;
 	border-spacing: 0;
 }
 .tablelist th,
 .tablelist td {
 	text-align: left;
 	min-height: 60px;
-	border-bottom: 1px solid #666;
+	border-bottom: 2px solid #666;
 	padding-left: 10px;
 }
 .tablelist th {
@@ -194,16 +206,16 @@ header {
 }
 .tablelist th:nth-child(1),
 .tablelist td:nth-child(1) {
-	width: 150px;
+	/*width: 150px;*/
 }
 .tablelist th:nth-child(2),
 .tablelist td:nth-child(2) {
-	width: 150px;
+	/*width: 150px;*/
 	text-align: center;
 }
 .tablelist th:nth-child(3),
 .tablelist td:nth-child(3) {
-	width: 100px;
+	/*width: 100px;*/
 	text-align: center;
 }
 .tablelist td:nth-child(3) > img {
@@ -215,24 +227,25 @@ header {
 .tablelist td:nth-child(5),
 .tablelist th:nth-child(6),
 .tablelist td:nth-child(6) {
-	width: 100px;
+	/*width: 100px;*/
 }
 .tablelist th:nth-child(7),
 .tablelist td:nth-child(7) {
-	width: 200px;
+	/*width: 200px;*/
 }
-.tablelist th:nth-child(9),
-.tablelist td:nth-child(9) {
-	width: 50px;
+.tablelist th:nth-child(8),
+.tablelist td:nth-child(8) {
+	/*width: 50px;*/
 	text-align: center;
 }
-.tablelist td:nth-child(9) .button {
+.tablelist td:nth-child(8) .button {
+	display: inline-block;
 	margin: 5px auto;
 }
-.tablelist td:nth-child(9) .button + .button {
+.tablelist td:nth-child(8) .button + .button {
 	margin-top: 0;
 }
-.tablelist td:nth-child(9) button.button {
+.tablelist td:nth-child(8) button.button {
 	display: block;
 	width: 100%;
 	margin-bottom: 10px;
@@ -256,30 +269,11 @@ header {
 	left: 0;
 	top: 0;
 }
-.tablelist #addnewpkmn-button td,
-.tablelist #addnewpkmn td {
-	border-bottom: none;
-	padding-bottom: 10px;
-	text-align: center;
-	vertical-align: middle;
-}
-.tablelist #addnewpkmn td:nth-child(2),
-.tablelist #addnewpkmn td:nth-child(3) {
-	vertical-align: bottom;
-}
-.tablelist #addnewpkmn-button td {
-	padding: 35px 0 34px 10px;
-}
-.tablelist #addnewpkmn input,
-.tablelist #addnewpkmn select {
-	margin-left: -5px;
-	width: calc(100% - 5px);
-}
 .tablelist td:nth-child(7) {
 	position: relative;
 	padding-left: 35px;
 }
-.tablelist td:nth-child(7):before {
+.originmark:nth-child(7):before {
 	content: "";
 	width: 32px;
 	height: 100%;
@@ -288,9 +282,6 @@ header {
 	left: 0;
 	background: transparent no-repeat left center;
 	background-size: 32px;
-}
-.tablelist #addnewpkmn td:nth-child(7):before {
-	background-position: left calc(50% - 5px);
 }
 .tablelist .shinymark {
 	background: url("../img/shiny.png") no-repeat right center;
@@ -315,13 +306,12 @@ header {
 	width: 16px;
 	height: 16px;
 }
-#add-shiny-toggle,
-#add-gender-toggle {
-	top: 22px;
+.tablelist tr[pokemon] td {
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
 }
-footer {
-	font-size: 9pt;
-	text-align: center;
+.ribbons {
+	padding: 10px 0;
 }
 .ribbons img {
 	width: 40px;
@@ -330,6 +320,7 @@ footer {
 #addnewpkmn,
 #add-gender,
 .subheadbtns input,
+#settings input,
 .edit-btns,
 #pokeform-edit,
 #pokeform-gender-unknown,
@@ -401,6 +392,9 @@ footer {
 #pokeform-gender-checkbox:checked[disabled] ~ label:before {
 	content: "Female only";
 }
+#pokeform-gender div {
+	min-height: 24px;
+}
 #add-gender-toggle[lock="none"] {
 	cursor: pointer;
 }
@@ -413,54 +407,6 @@ footer {
 	text-align: left;
 }
 
-body.dark .origin-bdsp:before {
-	background-image: url("../img/origins/light/bdsp.png");
-}
-body.light .origin-bdsp:before {
-	background-image: url("../img/origins/dark/bdsp.png");
-}
-body.dark .origin-clover:before {
-	background-image: url("../img/origins/light/clover.png");
-}
-body.light .origin-clover:before {
-	background-image: url("../img/origins/dark/clover.png");
-}
-body.dark .origin-galar:before {
-	background-image: url("../img/origins/light/galar.png");
-}
-body.light .origin-galar:before {
-	background-image: url("../img/origins/dark/galar.png");
-}
-body.dark .origin-game-boy:before {
-	background-image: url("../img/origins/light/game-boy.png");
-}
-body.light .origin-game-boy:before {
-	background-image: url("../img/origins/dark/game-boy.png");
-}
-body.dark .origin-go:before {
-	background-image: url("../img/origins/light/go.png");
-}
-body.light .origin-go:before {
-	background-image: url("../img/origins/dark/go.png");
-}
-body.dark .origin-hisui:before {
-	background-image: url("../img/origins/light/hisui.png");
-}
-body.light .origin-hisui:before {
-	background-image: url("../img/origins/dark/hisui.png");
-}
-body.dark .origin-lets-go:before {
-	background-image: url("../img/origins/light/lets-go.png");
-}
-body.light .origin-lets-go:before {
-	background-image: url("../img/origins/dark/lets-go.png");
-}
-body.dark .origin-pentagon:before {
-	background-image: url("../img/origins/light/pentagon.png");
-}
-body.light .origin-pentagon:before {
-	background-image: url("../img/origins/dark/pentagon.png");
-}
 .mint.atk:before {
 	background-image: url("../img/mints/atk.png");
 }

@@ -1,11 +1,7 @@
 function showModal(id = "pokeform"){
-	$("#" + id).modal({
-		fadeDuration: 250,
-		fadeDelay: 0,
-		escapeClose: false,
-		clickClose: false,
-		showClose: false
-	});
+	var click = {};
+	if(id === "pokeform") click = { clickClose: false };
+	$("#" + id).modal(click);
 }
 
 function saveBackup(){
@@ -43,7 +39,7 @@ function loadBackup(file, filename){
 
 function changeTheme(t){
 	localStorage.setItem("theme", t);
-	$("body").attr("class", t);
+	$("body").attr({ class: "theme-" + t, theme: t });
 }
 
 function toggleCheck(id){
@@ -51,20 +47,32 @@ function toggleCheck(id){
 	addPreviews();
 }
 
-function resetForm(){
-	$("#pokeform input").each(function(){
-		if($(this).attr("type") === "text"){
-			$(this).val("");
-		} else if($(this).attr("type") === "checkbox"){
-			$(this).prop("checked", false);
-		}
-	});
-	$("#pokeform select").each(function(){
-		$(this).val(null).trigger("change");
-	});
-	$("#pokeform-add, #pokeform-header-add").show();
-	$("#pokeform-edit").hide().removeAttr("pokemon");
-	$("#pokeform-header-edit").hide();
+function resetForm(c = false){
+	var reset = true;
+	if(c){
+		if(!confirm("Are you sure you wish to cancel? All of the data you've entered will be lost!"))
+			reset = false;
+	}
+	if(reset){
+		$.modal.close();
+		$("#pokeform input").each(function(){
+			if($(this).attr("type") === "text"){
+				$(this).val("");
+			} else if($(this).attr("type") === "checkbox"){
+				$(this).prop("checked", false);
+			}
+		});
+		$("#pokeform select").each(function(){
+			if($(this).attr("id") === "pokeform-mint"){
+				$(this).val("None").trigger("change");
+			} else {
+				$(this).val(null).trigger("change");
+			}
+		});
+		$("#pokeform-add, #pokeform-header-add").show();
+		$("#pokeform-edit").hide().removeAttr("pokemon");
+		$("#pokeform-header-edit").hide();
+	}
 }
 
 function editPkmn(id){
@@ -114,7 +122,7 @@ function clearTable(allpkmn){
 function gameInfo(s, o = false){
 	if(o){
 		if(games[s]["mark"]){
-			return "origin-" + games[s]["mark"];
+			return "originmark origin-" + games[s]["mark"];
 		} else {
 			return "";
 		}
@@ -145,7 +153,9 @@ function addRow(pkmn, i){
 		ribbons = ribbons + "<img class='" + rCode + "' src='img/" + rFldr + "/" + rCode + ".png' alt=\"" + rName + rDesc + "\" title=\"" + rName + rDesc + "\">";
 	}
 
-	$(".tablelist").append("<tr pokemon='" + i + "'><td><b>" + pkmn.name + "</b></td><td>" + shinyMark + "<img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' class='sprite-mon'><img src='img/gender/"+pkmn.gender+".png' class='gender'></td><td><img src='img/balls/" + pkmn.ball + ".png'></td><td>" + pkmn.ot + "</td><td>" + pkmn.id + "</td><td>" + pkmn.nature + mintImg + "</td><td class='"+gameInfo(pkmn.origin, true)+"'>" + gameInfo(pkmn.origin) + "</td><td class='ribbons'><div class='ribbons-list'>" + ribbons + "</div></td><td><div class='button edit' onclick='editPkmn("+i+")'>Edit</div> <div class='button delete' onclick='deletePkmn("+i+")'>Delete</div></td></tr>");
+	var gender = (pkmn.gender !== "unknown") ? "<img src='img/gender/"+pkmn.gender+".png' class='gender'>" : "";
+
+	$(".tablelist").append("<tr pokemon='" + i + "'><td><b>" + pkmn.name + "</b></td><td>" + shinyMark + "<img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' class='sprite-mon'>"+gender+"</td><td><img src='img/balls/" + pkmn.ball + ".png'></td><td>" + pkmn.ot + "</td><td>" + pkmn.id + "</td><td>" + pkmn.nature + mintImg + "</td><td class='"+gameInfo(pkmn.origin, true)+"'>" + gameInfo(pkmn.origin) + "</td><td><div class='button edit' onclick='editPkmn("+i+")'>Edit</div> <div class='button delete' onclick='deletePkmn("+i+")'>Delete</div></td></tr><tr><td class='ribbons' colspan='8'><div class='ribbons-list'>" + ribbons + "</div></td></tr>");
 }
 
 function generateRibbons(){
@@ -174,7 +184,7 @@ function formatDropOption(o){
 		var $ball = $("<img src='img/balls/" + o.id + ".png' class='pokedropimg'><span>" + o.text + "</span>");
 		return $ball;
 	} else if(result.indexOf("pokeform-mint") > 0){
-		if(o.id === "None") return $("<img src='img/1x1.png' class='pokedropimg'><span>None</span>");
+		if(o.id === "None") return $("<span>None</span>");
 		var $mint = $("<img src='img/mints/" + mints[o.id] + ".png' class='pokedropimg'><span>" + o.text + "</span>");
 		return $mint;
 	} else if(result.indexOf("pokeform-origin") > 0){
@@ -193,6 +203,10 @@ function formatDropOption(o){
 
 // On load
 $(function(){
+    $.modal.defaults.fadeDuration = 250;
+	$.modal.defaults.fadeDelay = 0;
+	$.modal.defaults.escapeClose = false;
+	$.modal.defaults.showClose = false;
 	resetForm();
 	generateRibbons();
 	$("#pokeform select").select2({
@@ -202,12 +216,15 @@ $(function(){
 		width: "100%",
     	placeholder: "Select an option"
 	});
+	$("#settings select").select2({
+		width: "100%"
+	});
 	$("#addnewpokemon").click(function(){
 		showModal();
 	})
-	var theme = localStorage.getItem("theme");
-	if(!theme) theme = "dark";
-	changeTheme(theme);
+	$("#header-settings").click(function(){
+		showModal("settings");
+	})
 	var allpkmn = localStorage.getItem("pokemon");
 	if(!allpkmn){
 		allpkmn = { "entries": [] };
@@ -218,10 +235,17 @@ $(function(){
 			addRow(allpkmn.entries[i], i);
 		}
 	}
-	$("#themeswitch").click(function(){
-		var current = $("body").attr("class");
-		current === "dark" ? changeTheme("light") : changeTheme("dark");
+
+	$("#settings-theme").change(function(){
+		var curTheme = $("body").attr("theme");
+		var newTheme = $(this).val();
+		if(curTheme !== newTheme){
+			changeTheme(newTheme);
+		}
 	});
+	var theme = localStorage.getItem("theme");
+	if(!theme) theme = "naranja";
+	$("#settings-theme").val(theme).change();
 	$("#backup").click(function(){
 		saveBackup();
 	});
@@ -289,7 +313,6 @@ $(function(){
 				allpkmn.entries[n] = str;
 				localStorage.setItem("pokemon", JSON.stringify(allpkmn));
 				addRow(str, n);
-				$.modal.close();
 				resetForm();
 			} else {
 				alert("The ID No. can only be five or six numbers.");
@@ -330,7 +353,6 @@ $(function(){
 				allpkmn.entries[n] = str;
 				localStorage.setItem("pokemon", JSON.stringify(allpkmn));
 				clearTable(allpkmn);
-				$.modal.close();
 				resetForm();
 			} else {
 				console.log(str.id);
@@ -341,9 +363,15 @@ $(function(){
 		}
 	});
 	$("#pokeform-cancel").click(function(){
-		if(confirm("Are you sure? All of the data you've entered will be lost!")){
-			$.modal.close();
-			resetForm();
-		}
+		resetForm(true);
+	});
+	$("#pokeform").on($.modal.BLOCK, function(event, modal){
+		$(".jquery-modal.blocker.current").click(function(e){
+			if(e.target === this)
+				resetForm(true);
+		});
+	});
+	$("#settings-close").click(function(){
+		$.modal.close();
 	});
 });

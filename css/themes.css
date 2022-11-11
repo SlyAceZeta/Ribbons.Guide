@@ -1,0 +1,166 @@
+/* Light */
+body.theme-light,
+body.theme-light .modal,
+body.theme-light #all-ribbons {
+	background: #fff;
+	color: #121212;
+}
+.theme-light .modal {
+	border-color: #333;
+}
+.theme-light .modal h4,
+.theme-light .modal h5 {
+	background: #333;
+	color: #fff;
+}
+.theme-light header,
+.theme-light footer {
+	border-color: #888;
+	background: #ddd;
+	color: #000;
+}
+.theme-light footer a,
+.theme-light footer a:active,
+.theme-light footer a:visited {
+	color:#38578e;
+}
+.theme-light #header-logo img {
+	filter: brightness(0);
+}
+
+/* Dark */
+body.theme-dark,
+body.theme-dark .modal,
+body.theme-dark #all-ribbons {
+	background: #121212;
+	color: #fff;
+}
+.theme-dark .modal {
+	border-color: #333;
+}
+.theme-dark .modal h4,
+.theme-dark .modal h5 {
+	background: #333;
+	color: #fff;
+}
+.theme-dark header,
+.theme-dark footer {
+	border-color: #222;
+	background: #333;
+	color: #fff;
+}
+.theme-dark footer a,
+.theme-dark footer a:active,
+.theme-dark footer a:visited {
+	color: #7f9ccf;
+}
+
+/* Naranja Academy */
+body.theme-naranja {
+	background: #15273f;
+	color: #fff;
+}
+body.theme-naranja .modal,
+body.theme-naranja #all-ribbons {
+	background: #2d3d47;
+	background: rgba(45, 61, 71, 0.85);
+	color: #fff;
+}
+.theme-naranja .modal {
+	border-color: #192b43;
+}
+.theme-naranja .modal h4,
+.theme-naranja .modal h5 {
+	background: #192b43;
+}
+.theme-naranja header,
+.theme-naranja footer {
+	border-color: #fccb06;
+	background: #be5615;
+	color: #fff;
+}
+.theme-naranja footer a,
+.theme-naranja footer a:active,
+.theme-naranja footer a:visited {
+	color: #000;
+}
+
+/* Uva Academy */
+body.theme-uva {
+	background: #15273f;
+	color: #fff;
+}
+body.theme-uva .modal,
+body.theme-uva #all-ribbons {
+	background: #2d3d47;
+	background: rgba(45, 61, 71, 0.85);
+	color: #fff;
+}
+.theme-uva .modal {
+	border-color: #192b43;
+}
+.theme-uva .modal h4,
+.theme-uva .modal h5 {
+	background: #192b43;
+}
+.theme-uva header,
+.theme-uva footer {
+	border-color: #b76c79;
+	background: #692a92;
+	color: #fff;
+}
+.theme-uva footer a,
+.theme-uva footer a:active,
+.theme-uva footer a:visited {
+	color: #B8B8B8;
+}
+
+/* Origin Marks */
+.originmark.origin-bdsp:before {
+	background-image: url("../img/origins/light/bdsp.png");
+}
+body.theme-light .originmark.origin-bdsp:before {
+	background-image: url("../img/origins/dark/bdsp.png");
+}
+.originmark.origin-clover:before {
+	background-image: url("../img/origins/light/clover.png");
+}
+body.theme-light .originmark.origin-clover:before {
+	background-image: url("../img/origins/dark/clover.png");
+}
+.originmark.origin-galar:before {
+	background-image: url("../img/origins/light/galar.png");
+}
+body.theme-light .originmark.origin-galar:before {
+	background-image: url("../img/origins/dark/galar.png");
+}
+.originmark.origin-game-boy:before {
+	background-image: url("../img/origins/light/game-boy.png");
+}
+body.theme-light .originmark.origin-game-boy:before {
+	background-image: url("../img/origins/dark/game-boy.png");
+}
+.originmark.origin-go:before {
+	background-image: url("../img/origins/light/go.png");
+}
+body.theme-light .originmark.origin-go:before {
+	background-image: url("../img/origins/dark/go.png");
+}
+.originmark.origin-hisui:before {
+	background-image: url("../img/origins/light/hisui.png");
+}
+body.theme-light .originmark.origin-hisui:before {
+	background-image: url("../img/origins/dark/hisui.png");
+}
+.originmark.origin-lets-go:before {
+	background-image: url("../img/origins/light/lets-go.png");
+}
+body.theme-light .originmark.origin-lets-go:before {
+	background-image: url("../img/origins/dark/lets-go.png");
+}
+.originmark.origin-pentagon:before {
+	background-image: url("../img/origins/light/pentagon.png");
+}
+body.theme-light .originmark.origin-pentagon:before {
+	background-image: url("../img/origins/dark/pentagon.png");
+}

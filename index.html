@@ -2,27 +2,31 @@
 <html>
 	<head>
 		<title>Ribbon Masters</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/png" href="img/ribbons/best-friends-ribbon.png" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 		<link href="css/select2.min.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
+		<link href="css/themes.css" rel="stylesheet">
 		<script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
 		<script type="text/javascript" src="js/select2.min.js"></script>
 		<script type="text/javascript" src="js/jquery.modal.js"></script>
 		<script type="text/javascript" src="js/data.js"></script>
 		<script type="text/javascript" src="js/functions.js"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 	</head>
 	<body>
-		<header>Ribbon Masters</header>
-		<div class="subhead">Keep track of your Ribboned Pokémon!</div>
+		<header>
+			<div id="header-logo">
+				<img src="img/ribbons/best-friends-ribbon.png" alt="Best Friends Ribbon">
+				<span>Ribbon Masters</span>
+			</div>
+			<div id="header-settings">⛭</div>
+		</header>
 		<div class="subheadbtns">
-			<span class="button" id="themeswitch">Switch Light/Dark</span>
-			<span class="button" id="backup">Backup</span>
-			<label class="button" id="restore">Restore<input type="file" id="restoreinput"></label>
-			<br><br><span class="button" id="addnewpokemon">Add New Pokémon</span>
+			<span class="button" id="addnewpokemon">Add New Pokémon</span>
 		</div>
 		<table class="tablelist">
 			<tr class="header protected">
@@ -30,15 +34,20 @@
 				<th>Sprite</th>
 				<th>Ball</th>
 				<th>OT</th>
-				<th>ID No.</th>
+				<th>ID&nbsp;No.</th>
 				<th>Nature</th>
-				<th>Origin Game</th>
-				<th>Ribbons</th>
+				<th>Origin</th>
 				<th>Actions</th>
 			</tr>
 		</table>
 		<div id="pokeform" class="modal">
-			<h4><span id="pokeform-header-add">Add New</span><span id="pokeform-header-edit">Edit</span> Pokémon</h4>
+			<h4>
+				<div>
+					<span id="pokeform-header-add">Add New</span>
+					<span id="pokeform-header-edit">Edit</span>
+					<span>Pokémon</span>
+				</div>
+			</h4>
 			<table>
 				<tr>
 					<th><label for="pokeform-nickname">Nickname</label></th>
@@ -987,7 +996,6 @@
 							<label for="pokeform-gender-checkbox"></label>
 						</div>
 						<div id="pokeform-gender-unknown">
-							<img src="img/gender/unknown.png">
 							<span>Gender unknown</span>
 						</div>
 					</td>
@@ -1085,7 +1093,7 @@
 					<th><label for="pokeform-mint">Mint</label></th>
 					<td>
 						<select id="pokeform-mint">
-							<option>None</option>
+							<option selected>None</option>
 							<option value="Lonely">Lonely Mint</option>
 							<option value="Adamant">Adamant Mint</option>
 							<option value="Naughty">Naughty Mint</option>
@@ -1181,15 +1189,45 @@
 					<th><label for="pokeform-ribbons">Ribbons</label></th>
 					<td id="add-ribbons" class="ribbons"></td>
 				</tr>
+			</table>
+			<h5>
+				<button id="pokeform-add" class="button">Add</button>
+				<button id="pokeform-edit" class="button">Save</button>
+				<span id="pokeform-cancel" class="button">Cancel</a>
+			</h5>
+		</div>
+		<div id="settings" class="modal">
+			<h4>
+				<div>Settings</div>
+			</h4>
+			<table id="settings-buttons">
 				<tr>
-					<td colspan="2">
-						<button id="pokeform-add" class="button">Add</button>
-						<button id="pokeform-edit" class="button">Save</button>
-						<span id="pokeform-cancel" class="button">Cancel</a>
+					<th><label for="settings-theme">Theme</label></th>
+					<td>
+						<select id="settings-theme">
+							<optgroup label="Dark">
+								<option value="naranja">Naranja Academy</option>
+								<option value="uva">Uva Academy</option>
+								<option value="dark">Classic Dark</option>
+							</optgroup>
+							<optgroup label="Light">
+								<option value="light">Classic Light</option>
+							</optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th><label>Data</label></th>
+					<td>
+						<span class="button" id="backup">Backup</span>
+						<label class="button" id="restore">Restore<input type="file" id="restoreinput" accept="application/json"></label>
 					</td>
 				</tr>
 			</table>
+			<h5>
+				<span id="settings-close" class="button">Close</span>
+			</h5>
 		</div>
-		<footer>This site is not affiliated with Nintendo, Game Freak, or The Pokémon Company.<br>All data is stored on your browser. Nothing is sent to any server.<br>This is an open-source project. <a href="https://github.com/Azekthi/RibbonMasters">Click here for the GitHub repo.</a></footer>
+		<footer>This open-source project is not affiliated with Nintendo, Game Freak, or The Pokémon Company. All data is stored in your browser. <a href="https://github.com/Azekthi/RibbonMasters">Click here for the source code on GitHub.</a></footer>
 	</body>
 </html>
