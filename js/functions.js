@@ -116,7 +116,7 @@ function createTable(allpkmn){
 }
 
 function clearTable(allpkmn){
-	$("#pokemon-list").empty();
+	$("#pokemon-list").html('<div id="pokemon-list-empty"><div>You have no saved Pokémon. Click or tap the + button at the bottom-right to add one! If you have a backup file, click the ⛭ button at the top-right to restore the backup.</div></div>');
 	createTable(allpkmn);
 }
 
