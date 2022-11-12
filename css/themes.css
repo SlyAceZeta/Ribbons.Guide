@@ -1,7 +1,6 @@
 /* Light */
 body.theme-light,
-body.theme-light .modal,
-body.theme-light #all-ribbons {
+body.theme-light .modal {
 	background: #fff;
 	color: #121212;
 }
@@ -13,8 +12,18 @@ body.theme-light #all-ribbons {
 	background: #333;
 	color: #fff;
 }
+.theme-light .pokemon-list-entry-header,
+.theme-light .pokemon-list-entry-footer {
+	background: #bbb;
+	color: #000;
+}
+.theme-light .pokemon-list-entry-center {
+	background: #eee;
+	color: #000;
+}
 .theme-light header,
-.theme-light footer {
+.theme-light footer,
+.theme-light #add-pokemon-button {
 	border-color: #888;
 	background: #ddd;
 	color: #000;
@@ -25,13 +34,26 @@ body.theme-light #all-ribbons {
 	color:#38578e;
 }
 .theme-light #header-logo img {
-	filter: brightness(0);
+}
+.theme-light .pokemon-list-origin {
+	filter: invert(1);
+}
+.theme-light .pokemon-list-edit,
+.theme-light .pokemon-list-delete,
+.theme-light .pokemon-list-details,
+.theme-light #add-pokemon-button img {
+	filter: none;
+}
+.theme-light .pokemon-list-entry .shiny {
+	filter: brightness(200%);
+}
+.theme-light #header-settings {
+	filter: none;
 }
 
 /* Dark */
 body.theme-dark,
-body.theme-dark .modal,
-body.theme-dark #all-ribbons {
+body.theme-dark .modal {
 	background: #121212;
 	color: #fff;
 }
@@ -39,12 +61,19 @@ body.theme-dark #all-ribbons {
 	border-color: #333;
 }
 .theme-dark .modal h4,
-.theme-dark .modal h5 {
+.theme-dark .modal h5,
+.theme-dark .pokemon-list-entry-header,
+.theme-dark .pokemon-list-entry-footer {
 	background: #333;
 	color: #fff;
 }
+.theme-dark .pokemon-list-entry-center {
+	background: #555;
+	color: #fff;
+}
 .theme-dark header,
-.theme-dark footer {
+.theme-dark footer,
+.theme-dark #add-pokemon-button {
 	border-color: #222;
 	background: #333;
 	color: #fff;
@@ -60,21 +89,26 @@ body.theme-naranja {
 	background: #15273f;
 	color: #fff;
 }
-body.theme-naranja .modal,
-body.theme-naranja #all-ribbons {
-	background: #2d3d47;
-	background: rgba(45, 61, 71, 0.85);
+body.theme-naranja .modal {
+	background: #1a2734;
+	background: rgba(49, 69, 89, 0.9);
 	color: #fff;
 }
 .theme-naranja .modal {
-	border-color: #192b43;
+	border-color: #202d44;
 }
 .theme-naranja .modal h4,
-.theme-naranja .modal h5 {
-	background: #192b43;
+.theme-naranja .modal h5,
+.theme-naranja .pokemon-list-entry-header,
+.theme-naranja .pokemon-list-entry-footer {
+	background: #202d44;
+}
+.theme-naranja .pokemon-list-entry-center {
+	background: #35404b;
 }
 .theme-naranja header,
-.theme-naranja footer {
+.theme-naranja footer,
+.theme-naranja #add-pokemon-button {
 	border-color: #fccb06;
 	background: #be5615;
 	color: #fff;
@@ -90,29 +124,34 @@ body.theme-uva {
 	background: #15273f;
 	color: #fff;
 }
-body.theme-uva .modal,
-body.theme-uva #all-ribbons {
-	background: #2d3d47;
-	background: rgba(45, 61, 71, 0.85);
+body.theme-uva .modal {
+	background: #1a2734;
+	background: rgba(49, 69, 89, 0.9);
 	color: #fff;
 }
 .theme-uva .modal {
-	border-color: #192b43;
+	border-color: #202d44;
 }
 .theme-uva .modal h4,
-.theme-uva .modal h5 {
-	background: #192b43;
+.theme-uva .modal h5,
+.theme-uva .pokemon-list-entry-header,
+.theme-uva .pokemon-list-entry-footer {
+	background: #202d44;
+}
+.theme-uva .pokemon-list-entry-center {
+	background: #35404b;
 }
 .theme-uva header,
-.theme-uva footer {
+.theme-uva footer,
+.theme-uva #add-pokemon-button {
 	border-color: #b76c79;
-	background: #692a92;
+	background: #852eb0;
 	color: #fff;
 }
 .theme-uva footer a,
 .theme-uva footer a:active,
 .theme-uva footer a:visited {
-	color: #B8B8B8;
+	color: #D1D1D1;
 }
 
 /* Origin Marks */

@@ -115,6 +115,9 @@
     block: function() {
       this.$elm.trigger($.modal.BEFORE_BLOCK, [this._ctx()]);
       this.$body.css('overflow','hidden');
+	  if($(document).height() > $(window).height() && $(document).width() > 992){
+		  this.$body.css('padding-right','17px');
+	  }
       this.$blocker = $('<div class="' + this.options.blockerClass + ' blocker current"></div>').appendTo(this.$body);
       selectCurrent();
       if(this.options.doFade) {
@@ -131,8 +134,12 @@
         this.$blocker.remove();
         this.$blocker = null;
         selectCurrent();
-        if (!$.modal.isActive())
+        if (!$.modal.isActive()){
           this.$body.css('overflow','');
+		  if($(document).height() > $(window).height() && $(document).width() > 992){
+			  this.$body.css('padding-right','');
+		  }
+	    }
       }
     },
 

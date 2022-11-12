@@ -8,6 +8,7 @@ This project is not affiliated with Nintendo, Game Freak, or The Pokémon Compan
 The icons used in this app were provided by:
 - [PokéSprite](https://github.com/msikma/pokesprite)
 - [Pokémon GO Assets](https://github.com/PokeMiners/pogo_assets)
+- [Material Symbols](https://github.com/google/material-design-icons)
 
 This app also makes use of the following dependencies:
 - [jQuery](https://github.com/jquery/jquery)
