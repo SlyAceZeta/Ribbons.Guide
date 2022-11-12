@@ -220,8 +220,8 @@ function formatDropOption(o){
 	} else if(result.indexOf("pokeform-title") > 0){
 		if(o.id === "None") return $("<span>None</span>");
 		var rDir = "ribbons";
-		if(o.text.indexOf("-mark") > 0) rDir = "marks";
-		return $("<img src='img/" + rDir + "/" + o.text + ".png' class='pokedropimg'><span>" + allRibbons[o.text]["title"] + "</span>");
+		if(o.id.indexOf("-mark") > 0) rDir = "marks";
+		return $("<img src='img/" + rDir + "/" + o.id + ".png' class='pokedropimg'><span>" + o.text + "</span>");
 	} else {
 		return o.text;
 	}
