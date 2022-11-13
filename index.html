@@ -1351,9 +1351,34 @@
 						<label class="button" id="restore">Restore<input type="file" id="restoreinput" accept="application/json"></label>
 					</td>
 				</tr>
+				<tr>
+					<th><label>Changes</label></th>
+					<td>
+						<span class="button" id="view-changelog">Changelog</span>
+						<a href="https://github.com/Azekthi/RibbonMasters/commits/main" class="button" target="_blank">Commits</a>
+					</td>
+				</tr>
 			</table>
 			<h5>
 				<span id="settings-close" class="button">Close</span>
+			</h5>
+		</div>
+		<div id="changelog" class="modal">
+			<h4>
+				<div>Changelog</div>
+			</h4>
+			<table>
+				<tr class="changelog-active">
+					<td>
+						<div class="changelog-date">13 November 2022</div>
+						<ul>
+							<li>Added a changelog! This will automatically appear when there's a new update.</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			<h5>
+				<span id="changelog-close" class="button">Close</span>
 			</h5>
 		</div>
 		<footer>This open-source project is not affiliated with Nintendo, Game Freak, or The Pokémon Company. All data is stored in your browser. <a href="https://github.com/Azekthi/RibbonMasters">View the source code on GitHub.</a></footer>

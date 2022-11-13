@@ -24,6 +24,7 @@ body {
 	display: inline-block;
 }
 .modal table {
+	width: 100%;
 	border-spacing: 0;
 }
 .modal th {
@@ -103,7 +104,7 @@ body {
 a {
 	text-decoration: none;
 }
-a:hover {
+footer a:hover {
 	text-decoration: underline;
 }
 footer a {
@@ -817,4 +818,25 @@ footer {
 #pokemon-list-empty:first-child:last-child,
 .ribbons-list-empty:first-child:last-child {
 	display: block;
+}
+#changelog tr {
+	cursor: pointer;
+}
+.changelog-date {
+	font-weight: bold;
+}
+.changelog-date + ul {
+	padding-left: 5%;
+	margin: 1% 0;
+	display: none;
+}
+.changelog-active .changelog-date + ul {
+	display: block;
+}
+.changelog-date:before {
+	content: "▼";
+	margin-right: 10px;
+}
+.changelog-active .changelog-date:before {
+	content: "▲";
 }

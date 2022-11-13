@@ -1,6 +1,10 @@
-function showModal(id = "pokeform"){
+function showModal(id = "pokeform", ontop = false){
 	var click = {};
-	if(id === "pokeform") click = { clickClose: false };
+	if(id === "pokeform"){
+		click = { clickClose: false };
+	} else if(ontop){
+		click = { closeExisting: false, fadeDuration: 0 };
+	}
 	$("#" + id).modal(click);
 }
 
@@ -245,10 +249,13 @@ $(function(){
 	});
 	$("#add-pokemon-button").click(function(){
 		showModal();
-	})
+	});
 	$("#header-settings").click(function(){
 		showModal("settings");
-	})
+	});
+	$("#view-changelog").click(function(){
+		showModal("changelog", true);
+	});
 	var allpkmn = localStorage.getItem("pokemon");
 	if(!allpkmn){
 		allpkmn = { "entries": [] };
@@ -258,6 +265,15 @@ $(function(){
 		for(let i in allpkmn.entries){
 			addRow(allpkmn.entries[i], i);
 		}
+	}
+
+	var lastChange = localStorage.getItem("changelog");
+	var numChanges = "" + $("#changelog tr").length;
+	if(lastChange && lastChange !== numChanges){
+		showModal("changelog");
+	}
+	if(!lastChange || lastChange !== numChanges){
+		localStorage.setItem("changelog", numChanges);
 	}
 
 	$("#settings-theme").change(function(){
@@ -407,7 +423,14 @@ $(function(){
 				resetForm(true);
 		});
 	});
-	$("#settings-close").click(function(){
+	$("#settings-close, #changelog-close").click(function(){
 		$.modal.close();
 	});
+	$("#changelog tr").click(function(){
+		if($(this).hasClass("changelog-active")){
+			$(this).removeClass("changelog-active");
+		} else {
+			$(this).addClass("changelog-active");
+		}
+	})
 });
