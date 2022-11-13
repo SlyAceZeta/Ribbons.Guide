@@ -5,21 +5,17 @@ function showModal(id = "pokeform"){
 }
 
 function saveBackup(){
-	if($("#backup").hasClass("disabled")){
-		alert("You can't save a backup while adding or editing a Pokémon!");
-	} else {
-		var data = localStorage.getItem("pokemon");
-		var blob = new Blob([data], {type: 'application/json'});
+	var data = localStorage.getItem("pokemon");
+	var blob = new Blob([data], {type: 'application/json'});
 
-		var ele = document.createElement('a');
-		ele.href = URL.createObjectURL(blob);
-		ele.target = "_blank";
-		ele.download = "RibbonBackup.json";
+	var ele = document.createElement('a');
+	ele.href = URL.createObjectURL(blob);
+	ele.target = "_blank";
+	ele.download = "RibbonBackup.json";
 
-		document.body.appendChild(ele);
-		ele.click();
-		document.body.removeChild(ele);
-	}
+	document.body.appendChild(ele);
+	ele.click();
+	document.body.removeChild(ele);
 }
 
 function loadBackup(file, filename){
@@ -146,12 +142,14 @@ function addRow(pkmn, i){
 	for(r = 0; r < pkmn.ribbons.length; r++){
 		var rCode = pkmn.ribbons[r];
 		var rData = allRibbons[rCode];
-		var rName = rData["name"];
-		var rDesc = "";
-		if(rData["desc"]) rDesc = " - " + rData["desc"];
-		var rFldr = "ribbons";
-		if(rData["mark"]) rFldr = "marks";
-		ribbons = ribbons + "<img class='" + rCode + "' src='img/" + rFldr + "/" + rCode + ".png' alt=\"" + rName + rDesc + "\" title=\"" + rName + rDesc + "\">";
+		if(rData){
+			var rName = rData["name"];
+			var rDesc = "";
+			if(rData["desc"]) rDesc = " - " + rData["desc"];
+			var rFldr = "ribbons";
+			if(rData["mark"]) rFldr = "marks";
+			ribbons = ribbons + "<img class='" + rCode + "' src='img/" + rFldr + "/" + rCode + ".png' alt=\"" + rName + rDesc + "\" title=\"" + rName + rDesc + "\">";
+		}
 	}
 
 	var gender = (pkmn.gender !== "unknown") ? "<img src='img/gender/"+pkmn.gender+".png' class='gender'>" : "";
@@ -281,7 +279,6 @@ $(function(){
 		if(file) loadBackup(file, restoreBtn.value);
 	});
 	$("#restore").click(function(){
-		if($("#restore").hasClass("disabled")) alert("You can't restore a backup while adding or editing a Pokémon!");
 		$("#restore input").val(null);
 	});
 	$("#pokeform-gender-img").click(function(){
@@ -335,14 +332,18 @@ $(function(){
 			origin: $("#pokeform-origin").val(),
 			ribbons: ribbons
 		};
-		if(str.name && str.dex && str.ball && str.ot && str.nature && str.origin && str.title && str.level && str.lang){
-			if(str.id.match(/^[0-9]{5,6}$/)){
-				allpkmn = JSON.parse(localStorage.getItem("pokemon"));
-				var n = allpkmn.entries.length;
-				allpkmn.entries[n] = str;
-				localStorage.setItem("pokemon", JSON.stringify(allpkmn));
-				addRow(str, n);
-				resetForm();
+		if(str.name && str.dex && str.ball && str.origin && str.title && str.level && str.lang){
+			if(!str.id || str.id.match(/^[0-9]{5,6}$/)){
+				if(str.level > 0 && str.level < 101){
+					allpkmn = JSON.parse(localStorage.getItem("pokemon"));
+					var n = allpkmn.entries.length;
+					allpkmn.entries[n] = str;
+					localStorage.setItem("pokemon", JSON.stringify(allpkmn));
+					addRow(str, n);
+					resetForm();
+				} else {
+					alert("The Pokémon's level must be a number from 1 to 100.");
+				}
 			} else {
 				alert("The ID No. can only be five or six numbers.");
 			}
@@ -378,22 +379,22 @@ $(function(){
 			origin: $("#pokeform-origin").val(),
 			ribbons: ribbons
 		};
-		if(str.name && str.dex && str.ball && str.ot && str.nature && str.origin && str.title && str.level && str.lang){
-			if(str.id.match(/^[0-9]{5,6}$/)){
-				allpkmn = JSON.parse(localStorage.getItem("pokemon"));
-				var n = $("#pokeform-edit").attr("pokemon");
-				allpkmn.entries[n] = str;
-				localStorage.setItem("pokemon", JSON.stringify(allpkmn));
-				clearTable(allpkmn);
-				resetForm();
+		if(str.name && str.dex && str.ball && str.origin && str.title && str.level && str.lang){
+			if(!str.id || str.id.match(/^[0-9]{5,6}$/)){
+				if(str.level > 0 && str.level < 101){
+					allpkmn = JSON.parse(localStorage.getItem("pokemon"));
+					var n = $("#pokeform-edit").attr("pokemon");
+					allpkmn.entries[n] = str;
+					localStorage.setItem("pokemon", JSON.stringify(allpkmn));
+					clearTable(allpkmn);
+					resetForm();
+				} else {
+					alert("The Pokémon's level must be a number from 1 to 100.");
+				}
 			} else {
-				console.log(str.id);
 				alert("The ID No. can only be five or six numbers.");
 			}
 		} else {
-			console.log(str.title);
-			console.log(str.level);
-			console.log(str.lang);
 			alert("One or more fields has not been filled.");
 		}
 	});

@@ -35,6 +35,12 @@ body {
 .modal th label {
 	display: block;
 	padding: 10px;
+	position: relative;
+}
+.modal th label .asterisk {
+	position: absolute;
+	right: 1px;
+	color: red;
 }
 .modal td {
 	padding: 10px;
@@ -672,7 +678,7 @@ footer {
 .ribbons-list .twinkling-star-ribbon {
 	order: 42;
 }
-.ribbons-list .pioneer-ribbon {
+.ribbons-list .hisui-ribbon {
 	order: 43;
 }
 .ribbons-list img[class$="-mark"] {

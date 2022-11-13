@@ -171,7 +171,7 @@ const allRibbons = {
 	"training-ribbon":				{"name": "Training Ribbon",				"gen": 6,	"title": "the Tried and True",		"available": ["x", "y", "or", "as"], "desc": "A Ribbon that can be given to a Pokémon that has overcome rigorous trials and training."},
 	"battle-royal-master-ribbon":	{"name": "Battle Royal Master Ribbon",	"gen": 7,	"title": "the Royal Master",		"available": ["sun", "moon", "usun", "umoon"], "desc": "A Ribbon that can be given to a Pokémon that has achieved victory in the Battle Royal."},
 	"master-rank-ribbon":			{"name": "Master Rank Ribbon",			"gen": 8,	"title": "the Rank Master",			"available": ["sw", "sh"], "desc": "A Ribbon awarded for winning against a Trainer in the Master Ball Tier of Ranked Battles."},
-	"pioneer-ribbon":				{"name": "Pioneer Ribbon",				"gen": 8,										"available": ["pla"]},
+	"hisui-ribbon":					{"name": "Hisui Ribbon",				"gen": 8,										"available": ["pla"], "desc": "A Ribbon awarded to a Pokémon that posed for a photograph in Hisui in the distant past."},
 	"country-ribbon":				{"name": "Country Ribbon",				"gen": 3,	"title": "the Victor",				"available": null, "desc": "A Ribbon awarded to a Pokémon League Champion."},
 	"national-ribbon":				{"name": "National Ribbon",				"gen": 3,	"title": "the Triumphant",			"available": ["colosseum", "xd"], "desc": "A Ribbon awarded for overcoming all difficult challenges."},
 	"earth-ribbon":					{"name": "Earth Ribbon",				"gen": 3,	"title": "the 100× Victorious",		"available": ["colosseum", "xd"], "desc": "A Ribbon awarded for winning one hundred battles in a row."},
