@@ -442,6 +442,9 @@ $(function(){
 				resetForm(true);
 		});
 	});
+	$("#pokeform").on($.modal.AFTER_CLOSE, function(event, modal){
+		$(".pokeform-tab1-ctrl").click();
+	});
 	$("#settings-close, #changelog-close").click(function(){
 		$.modal.close();
 	});
