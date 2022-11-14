@@ -1,0 +1,11 @@
+{
+	"name": "RibbonMasters",
+	"dependencies": {
+		"sprites": "msikma/pokesprite",
+		"pogo": "PokeMiners/pogo_assets",
+		"material": "google/material-design-icons",
+		"jquery": "jquery/jquery",
+		"select2": "select2/select2",
+		"jquery-modal": "kylefox/jquery-modal"
+	}
+}
