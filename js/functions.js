@@ -78,6 +78,7 @@ function resetForm(c = false){
 				$(this).val(null).trigger("change");
 			}
 		});
+		$("#pokeform-notes").val("");
 		$("#pokeform-add, #pokeform-header-add").show();
 		$("#pokeform-edit").hide().removeAttr("pokemon");
 		$("#pokeform-header-edit").hide();
@@ -104,6 +105,7 @@ function editPkmn(id){
 	$("#pokeform-nature").val(pkmn.nature).change();
 	$("#pokeform-mint").val(pkmn.mint).change();
 	$("#pokeform-origin").val(pkmn.origin).change();
+	$("#pokeform-notes").val(pkmn.notes);
 	showModal();
 }
 
@@ -361,7 +363,8 @@ $(function(){
 			nature: $("#pokeform-nature").val(),
 			mint: $("#pokeform-mint").val(),
 			origin: $("#pokeform-origin").val(),
-			ribbons: ribbons
+			ribbons: ribbons,
+			notes: $("#pokeform-notes").val()
 		};
 		if(str.dex && str.ball && str.origin && str.title && str.level && str.lang){
 			if(!str.id || str.id.match(/^[0-9]{5,6}$/)){
@@ -408,7 +411,8 @@ $(function(){
 			nature: $("#pokeform-nature").val(),
 			mint: $("#pokeform-mint").val(),
 			origin: $("#pokeform-origin").val(),
-			ribbons: ribbons
+			ribbons: ribbons,
+			notes: $("#pokeform-notes").val()
 		};
 		if(str.dex && str.ball && str.origin && str.title && str.level && str.lang){
 			if(!str.id || str.id.match(/^[0-9]{5,6}$/)){

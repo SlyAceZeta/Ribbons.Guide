@@ -312,6 +312,10 @@ footer {
 	bottom: 10px;
 	right: 0;
 }
+#pokeform-notes {
+	width: 100%;
+	resize: none;
+}
 #addnewpkmn td:last-child {
 	text-align: left;
 }
