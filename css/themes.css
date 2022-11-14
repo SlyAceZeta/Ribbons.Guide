@@ -39,10 +39,10 @@ body.theme-light {
 
 /* Naranja Academy */
 body.theme-naranja {
-	--header-bg: #be5615;
+	--header-bg: #b45924;
 	--header-border: #fccb06;
 	--header-link: #000;
-	--page-bg: #15273f;
+	--page-bg: #162b4a;
 	--text: #fff;
 	--pokemon: #35404b;
 
@@ -55,7 +55,7 @@ body.theme-uva {
 	--header-bg: #852eb0;
 	--header-border: #b76c79;
 	--header-link: #D1D1D1;
-	--page-bg: #15273f;
+	--page-bg: #162b4a;
 	--text: #fff;
 	--pokemon: #35404b;
 
