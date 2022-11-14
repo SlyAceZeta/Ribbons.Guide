@@ -27,7 +27,16 @@ function loadBackup(file, filename){
 	var reader = new FileReader();
 	reader.onload = function(e){
 		var contents = e.target.result;
-		if(confirm("Are you sure you want to replace all of the current data with " + filename + "? You can't reverse this decision!")){
+		var proc = false;
+		var allpkmn = JSON.parse(localStorage.getItem("pokemon"));
+		if(!allpkmn || allpkmn.entries.length === 0){
+			proc = true;
+		} else {
+			if(confirm("Are you sure you want to replace all of the current data with " + filename + "? You can't reverse this decision!")){
+				proc = true;
+			}
+		}
+		if(proc){
 			var allpkmn = JSON.parse(contents);
 			allpkmn.entries = allpkmn.entries.filter(Boolean);
 			localStorage.setItem("pokemon", JSON.stringify(allpkmn));
