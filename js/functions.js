@@ -192,7 +192,7 @@ function addRow(pkmn, i){
 	var name = pkmn.name;
 	if(name.length === 0){
 		name = $("#pokeform-species").find("option[value="+pkmn.dex+"]").text();
-		name = name.replace(/( \(.*\))?(Dada )?(Ash-)?(Heat )?(Wash )?(Frost )?(Fan )?(Mow )?/g, "");
+		name = name.replace(/( \(.*\))?/g, "");
 	}
 
 	$("#pokemon-list").append("<div class='pokemon-list-entry' pokemon='" + i + "'><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png'><span class='pokemon-list-name'>" + name + "</span>" + gender + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + "</div><div class='pokemon-list-entry-footer-right'><img class='pokemon-list-edit' src='img/ui/edit.png' onclick='editPkmn("+i+")' title='Edit " + name + "'><img class='pokemon-list-delete' src='img/ui/delete.png' onclick='deletePkmn("+i+")' title='Delete " + name + "'></div></div></div>");
