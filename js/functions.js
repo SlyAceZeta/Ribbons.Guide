@@ -187,7 +187,13 @@ function addRow(pkmn, i){
 	var level = pkmn.level;
 	if(!level) level = "???";
 
-	$("#pokemon-list").append("<div class='pokemon-list-entry' pokemon='" + i + "'><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png'><span class='pokemon-list-name'>" + pkmn.name + "</span>" + gender + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + "</div><div class='pokemon-list-entry-footer-right'><img class='pokemon-list-edit' src='img/ui/edit.png' onclick='editPkmn("+i+")' title='Edit " + pkmn.name + "'><img class='pokemon-list-delete' src='img/ui/delete.png' onclick='deletePkmn("+i+")' title='Delete " + pkmn.name + "'></div></div></div>");
+	var name = pkmn.name;
+	if(name.length === 0){
+		name = $("#pokeform-species").find("option[value="+pkmn.dex+"]").text();
+		name = name.replace(/( \(.*\))?(Dada )?(Ash-)?(Heat )?(Wash )?(Frost )?(Fan )?(Mow )?/g, "");
+	}
+
+	$("#pokemon-list").append("<div class='pokemon-list-entry' pokemon='" + i + "'><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png'><span class='pokemon-list-name'>" + name + "</span>" + gender + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + "</div><div class='pokemon-list-entry-footer-right'><img class='pokemon-list-edit' src='img/ui/edit.png' onclick='editPkmn("+i+")' title='Edit " + name + "'><img class='pokemon-list-delete' src='img/ui/delete.png' onclick='deletePkmn("+i+")' title='Delete " + name + "'></div></div></div>");
 }
 
 function generateRibbons(){
@@ -357,7 +363,7 @@ $(function(){
 			origin: $("#pokeform-origin").val(),
 			ribbons: ribbons
 		};
-		if(str.name && str.dex && str.ball && str.origin && str.title && str.level && str.lang){
+		if(str.dex && str.ball && str.origin && str.title && str.level && str.lang){
 			if(!str.id || str.id.match(/^[0-9]{5,6}$/)){
 				if(str.level > 0 && str.level < 101){
 					allpkmn = JSON.parse(localStorage.getItem("pokemon"));
@@ -404,7 +410,7 @@ $(function(){
 			origin: $("#pokeform-origin").val(),
 			ribbons: ribbons
 		};
-		if(str.name && str.dex && str.ball && str.origin && str.title && str.level && str.lang){
+		if(str.dex && str.ball && str.origin && str.title && str.level && str.lang){
 			if(!str.id || str.id.match(/^[0-9]{5,6}$/)){
 				if(str.level > 0 && str.level < 101){
 					allpkmn = JSON.parse(localStorage.getItem("pokemon"));
