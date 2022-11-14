@@ -40,11 +40,16 @@
 				</div>
 			</h4>
 			<table>
-				<tr>
+				<tr id="pokeform-tabs">
+					<th colspan="2">
+						<div><span class="pokeform-tab1-ctrl pokeform-tabs-active">Basic Info</span><span class="pokeform-tab2-ctrl">Ribbons</span></div>
+					</th>
+				</tr>
+				<tr class="pokeform-tab1">
 					<th><label for="pokeform-nickname">Nickname</label></th>
 					<td><input type="text" id="pokeform-nickname" maxlength="12"></td>
 				</tr>
-				<tr>
+				<tr class="pokeform-tab1">
 					<th><label for="pokeform-species"><span class="asterisk">*</span>Species</label></th>
 					<td>
 						<select id="pokeform-species" required>
@@ -1155,7 +1160,7 @@
 						</div>
 					</td>
 				</tr>
-				<tr id="pokeform-gender">
+				<tr id="pokeform-gender" class="pokeform-tab1">
 					<th><label for="pokeform-gender-checkbox">Gender</label></th>
 					<td>
 						<div id="pokeform-gender-known">
@@ -1168,7 +1173,7 @@
 						</div>
 					</td>
 				</tr>
-				<tr>
+				<tr class="pokeform-tab1">
 					<th><label for="pokeform-ball"><span class="asterisk">*</span>Ball</label></th>
 					<td>
 						<select id="pokeform-ball" required>
@@ -1216,7 +1221,7 @@
 						</select>
 					</td>
 				</tr>
-				<tr>
+				<tr class="pokeform-tab2">
 					<th><label for="pokeform-title">Title</label></th>
 					<td>
 						<select id="pokeform-title" required>
@@ -1332,11 +1337,11 @@
 						</select>
 					</td>
 				</tr>
-				<tr>
+				<tr class="pokeform-tab1">
 					<th><label for="pokeform-level"><span class="asterisk">*</span>Level</label></th>
 					<td><input id="pokeform-level" type="number" min="1" max="100" required></td>
 				</tr>
-				<tr>
+				<tr class="pokeform-tab1">
 					<th><label for="pokeform-lang"><span class="asterisk">*</span>Language</label></th>
 					<td>
 						<select id="pokeform-lang" required>
@@ -1353,15 +1358,15 @@
 						</select>
 					</td>
 				</tr>
-				<tr>
+				<tr class="pokeform-tab1">
 					<th><label for="pokeform-ot">OT</label></th>
 					<td><input type="text" id="pokeform-ot" maxlength="15"></td>
 				</tr>
-				<tr>
+				<tr class="pokeform-tab1">
 					<th><label for="pokeform-idno">ID No.</label></th>
 					<td><input type="text" inputmode="numeric" id="pokeform-idno" maxlength="6"></td>
 				</tr>
-				<tr>
+				<tr class="pokeform-tab1">
 					<th><label for="pokeform-nature">Nature</label></th>
 					<td>
 						<select id="pokeform-nature">
@@ -1394,7 +1399,7 @@
 						</select>
 					</td>
 				</tr>
-				<tr>
+				<tr class="pokeform-tab1">
 					<th><label for="pokeform-mint">Mint</label></th>
 					<td>
 						<select id="pokeform-mint">
@@ -1423,7 +1428,7 @@
 						</select>
 					</td>
 				</tr>
-				<tr>
+				<tr class="pokeform-tab1">
 					<th><label for="pokeform-origin"><span class="asterisk">*</span>Origin</label></th>
 					<td>
 						<select id="pokeform-origin" required>
@@ -1490,9 +1495,8 @@
 						</select>
 					</td>
 				</tr>
-				<tr class="pokeform-ribbonrow">
-					<th><label for="pokeform-ribbons">Ribbons</label></th>
-					<td id="add-ribbons" class="ribbons"></td>
+				<tr class="pokeform-ribbonrow pokeform-tab2">
+					<td id="add-ribbons" class="ribbons" colspan="2"></td>
 				</tr>
 			</table>
 			<h5>

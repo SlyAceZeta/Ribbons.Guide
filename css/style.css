@@ -30,8 +30,12 @@ body {
 .modal th {
 	text-align: right;
 	border: solid grey;
-	border-width: 0 1px 1px 0;
+	border-width: 1px 1px 0 0;
 	vertical-align: middle;
+}
+.modal #pokeform-tabs th {
+	border: none;
+	padding: 0;
 }
 .modal th label {
 	display: block;
@@ -47,7 +51,7 @@ body {
 	padding: 10px;
 	text-align: left;
 	border: solid grey;
-	border-width: 0 1px 1px 0;
+	border-width: 1px 1px 0 0;
 	width: 100%;
 	vertical-align: middle;
 }
@@ -56,7 +60,7 @@ body {
 	vertical-align: top;
 }
 .modal td:last-child {
-	border-width: 0 0 1px 0;
+	border-width: 1px 0 0 0;
 }
 .modal td.ribbons {
 	padding: 0;
@@ -64,9 +68,19 @@ body {
 .modal #all-ribbons {
 	padding: 5px 10px;
 }
-.modal tr:last-child td,
-.modal tr:last-child th {
-	border-bottom: none;
+#pokeform-tabs div {
+	display: flex;
+}
+#pokeform-tabs span {
+	cursor: pointer;
+	padding: 5px 10px;
+}
+#pokeform-tabs .pokeform-tabs-active {
+	background: grey;
+	color: #000;
+}
+#pokeform tr:not(#pokeform-tabs):not(.pokeform-tab1) {
+	display: none;
 }
 .pokedropimg {
 	width: 24px;

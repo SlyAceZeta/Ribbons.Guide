@@ -447,5 +447,14 @@ $(function(){
 		} else {
 			$(this).addClass("changelog-active");
 		}
-	})
+	});
+	$("#pokeform-tabs span").click(function(){
+		if(!$(this).hasClass("pokeform-tabs-active")){
+			var targetTab = $(this).attr("class").replace("-ctrl", "");
+			$(".pokeform-tabs-active").removeClass("pokeform-tabs-active");
+			$(this).addClass("pokeform-tabs-active");
+			$("#pokeform tr:not(#pokeform-tabs):not(." + targetTab + ")").hide();
+			$("#pokeform tr." + targetTab).show();
+		}
+	});
 });
