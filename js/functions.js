@@ -1,3 +1,16 @@
+function getData(dex, field){
+	var thisPkmn = pokemon[dex];
+	if(pokemon[dex]){
+		var data = thisPkmn[field];
+		if(data === undefined){
+			data = pokemon[thisPkmn["data-source"]][field];
+		}
+		return data;
+	} else {
+		return false;
+	}
+}
+
 function showModal(id = "pokeform", ontop = false){
 	var click = {};
 	if(id === "pokeform"){
@@ -147,7 +160,7 @@ function addRow(pkmn, i){
 	var shinyDir = pkmn.shiny ? "shiny/" : "regular/";
 	var shinyMark = pkmn.shiny ? "<img src='img/ui/shiny.png' class='shiny'>" : "";
 
-	var femaleDir = (spriteF.indexOf(pkmn.dex) > -1 && pkmn.gender === "female") ? "female/" : "";
+	var femaleDir = (getData(pkmn.dex, "femsprite") && pkmn.gender === "female") ? "female/" : "";
 
 	var mint = pkmn.mint || "None";
 	var mintImg = (mint !== "None") ? "<div class='mint " + mints[mint] + "'>" + mint + "</div>" : "";
@@ -320,16 +333,17 @@ $(function(){
 	});
 	$("#pokeform-species").change(function(){
 		var species = $("#pokeform-species").val();
-		if(onlyU.includes(species)){
+		var gender = getData(species, "gender");
+		if(gender === "unknown"){
 			$("#pokeform-gender-known").hide();
 			$("#pokeform-gender-unknown").show();
 		} else {
 			$("#pokeform-gender-known").show();
 			$("#pokeform-gender-unknown").hide();
-			if(onlyF.includes(species)){
+			if(gender === "female"){
 				$("#pokeform-gender-checkbox").attr("disabled", "disabled");
 				$("#pokeform-gender-checkbox").prop("checked", "checked");
-			} else if(onlyM.includes(species)){
+			} else if(gender === "male"){
 				$("#pokeform-gender-checkbox").attr("disabled", "disabled");
 				$("#pokeform-gender-checkbox").prop("checked", false);
 			} else {
@@ -343,10 +357,11 @@ $(function(){
 			ribbons.push($(this).attr("id"));
 		});
 		var species = $("#pokeform-species").val();
+		var genderCheck = getData(species, "gender");
 		var gender = "male";
-		if(onlyU.includes(species)){
+		if(genderCheck === "unknown"){
 			gender = "unknown";
-		} else if(onlyF.includes(species) || $("#pokeform-gender-checkbox").prop("checked")){
+		} else if(genderCheck === "female" || (genderCheck === "both" && $("#pokeform-gender-checkbox").prop("checked"))){
 			gender = "female";
 		}
 		var str = {
@@ -391,10 +406,11 @@ $(function(){
 			ribbons.push($(this).attr("id"));
 		});
 		var species = $("#pokeform-species").val();
+		var genderCheck = getData(species, "gender");
 		var gender = "male";
-		if(onlyU.includes(species)){
+		if(genderCheck === "unknown"){
 			gender = "unknown";
-		} else if(onlyF.includes(species) || $("#pokeform-gender-checkbox").prop("checked")){
+		} else if(genderCheck === "female" || (genderCheck === "both" && $("#pokeform-gender-checkbox").prop("checked"))){
 			gender = "female";
 		}
 		var str = {
