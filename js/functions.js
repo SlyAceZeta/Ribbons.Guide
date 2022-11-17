@@ -21,6 +21,60 @@ function showModal(id = "pokeform", ontop = false){
 	$("#" + id).modal(click);
 }
 
+function createPokemon(edit = false){
+	var ribbons = [];
+	$("#all-ribbons input:checked").each(function(){
+		ribbons.push($(this).attr("id"));
+	});
+	var species = $("#pokeform-species").val();
+	var genderCheck = getData(species, "gender");
+	var gender = "male";
+	if(genderCheck === "unknown"){
+		gender = "unknown";
+	} else if(genderCheck === "female" || (genderCheck === "both" && $("#pokeform-gender-checkbox").prop("checked"))){
+		gender = "female";
+	}
+	var str = {
+		name: $("#pokeform-nickname").val(),
+		dex: species,
+		shiny: $("#pokeform-shiny-checkbox").prop("checked"),
+		gender: gender,
+		ball: $("#pokeform-ball").val(),
+		title: $("#pokeform-title").val(),
+		level: $("#pokeform-level").val(),
+		lang: $("#pokeform-lang").val(),
+		ot: $("#pokeform-ot").val(),
+		id: $("#pokeform-idno").val(),
+		nature: $("#pokeform-nature").val(),
+		mint: $("#pokeform-mint").val(),
+		origin: $("#pokeform-origin").val(),
+		ribbons: ribbons,
+		notes: $("#pokeform-notes").val()
+	};
+	if(str.dex && str.ball && str.origin && str.title && str.level && str.lang){
+		if(!str.id || str.id.match(/^[0-9]{5,6}$/)){
+			if(str.level > 0 && str.level < 101){
+				allpkmn = JSON.parse(localStorage.getItem("pokemon"));
+				var n = (edit) ? $("#pokeform-edit").attr("pokemon") : allpkmn.entries.length;
+				allpkmn.entries[n] = str;
+				localStorage.setItem("pokemon", JSON.stringify(allpkmn));
+				if(edit){
+					clearTable(allpkmn);
+				} else {
+					addRow(str, n);
+				}
+				resetForm();
+			} else {
+				alert("The Pokémon's level must be a number from 1 to 100.");
+			}
+		} else {
+			alert("The ID No. can only be five or six numbers.");
+		}
+	} else {
+		alert("One or more fields has not been filled.");
+	}
+}
+
 function saveBackup(){
 	var data = localStorage.getItem("pokemon");
 	var blob = new Blob([data], {type: 'application/json'});
@@ -352,102 +406,10 @@ $(function(){
 		}
 	});
 	$("#pokeform-add").click(function(){
-		var ribbons = [];
-		$("#all-ribbons input:checked").each(function(){
-			ribbons.push($(this).attr("id"));
-		});
-		var species = $("#pokeform-species").val();
-		var genderCheck = getData(species, "gender");
-		var gender = "male";
-		if(genderCheck === "unknown"){
-			gender = "unknown";
-		} else if(genderCheck === "female" || (genderCheck === "both" && $("#pokeform-gender-checkbox").prop("checked"))){
-			gender = "female";
-		}
-		var str = {
-			name: $("#pokeform-nickname").val(),
-			dex: species,
-			shiny: $("#pokeform-shiny-checkbox").prop("checked"),
-			gender: gender,
-			ball: $("#pokeform-ball").val(),
-			title: $("#pokeform-title").val(),
-			level: $("#pokeform-level").val(),
-			lang: $("#pokeform-lang").val(),
-			ot: $("#pokeform-ot").val(),
-			id: $("#pokeform-idno").val(),
-			nature: $("#pokeform-nature").val(),
-			mint: $("#pokeform-mint").val(),
-			origin: $("#pokeform-origin").val(),
-			ribbons: ribbons,
-			notes: $("#pokeform-notes").val()
-		};
-		if(str.dex && str.ball && str.origin && str.title && str.level && str.lang){
-			if(!str.id || str.id.match(/^[0-9]{5,6}$/)){
-				if(str.level > 0 && str.level < 101){
-					allpkmn = JSON.parse(localStorage.getItem("pokemon"));
-					var n = allpkmn.entries.length;
-					allpkmn.entries[n] = str;
-					localStorage.setItem("pokemon", JSON.stringify(allpkmn));
-					addRow(str, n);
-					resetForm();
-				} else {
-					alert("The Pokémon's level must be a number from 1 to 100.");
-				}
-			} else {
-				alert("The ID No. can only be five or six numbers.");
-			}
-		} else {
-			alert("One or more fields has not been filled.");
-		}
+		createPokemon();
 	});
 	$("#pokeform-edit").click(function(){
-		var ribbons = [];
-		$("#all-ribbons input:checked").each(function(){
-			ribbons.push($(this).attr("id"));
-		});
-		var species = $("#pokeform-species").val();
-		var genderCheck = getData(species, "gender");
-		var gender = "male";
-		if(genderCheck === "unknown"){
-			gender = "unknown";
-		} else if(genderCheck === "female" || (genderCheck === "both" && $("#pokeform-gender-checkbox").prop("checked"))){
-			gender = "female";
-		}
-		var str = {
-			name: $("#pokeform-nickname").val(),
-			dex: species,
-			shiny: $("#pokeform-shiny-checkbox").prop("checked"),
-			gender: gender,
-			ball: $("#pokeform-ball").val(),
-			title: $("#pokeform-title").val(),
-			level: $("#pokeform-level").val(),
-			lang: $("#pokeform-lang").val(),
-			ot: $("#pokeform-ot").val(),
-			id: $("#pokeform-idno").val(),
-			nature: $("#pokeform-nature").val(),
-			mint: $("#pokeform-mint").val(),
-			origin: $("#pokeform-origin").val(),
-			ribbons: ribbons,
-			notes: $("#pokeform-notes").val()
-		};
-		if(str.dex && str.ball && str.origin && str.title && str.level && str.lang){
-			if(!str.id || str.id.match(/^[0-9]{5,6}$/)){
-				if(str.level > 0 && str.level < 101){
-					allpkmn = JSON.parse(localStorage.getItem("pokemon"));
-					var n = $("#pokeform-edit").attr("pokemon");
-					allpkmn.entries[n] = str;
-					localStorage.setItem("pokemon", JSON.stringify(allpkmn));
-					clearTable(allpkmn);
-					resetForm();
-				} else {
-					alert("The Pokémon's level must be a number from 1 to 100.");
-				}
-			} else {
-				alert("The ID No. can only be five or six numbers.");
-			}
-		} else {
-			alert("One or more fields has not been filled.");
-		}
+		createPokemon(true);
 	});
 	$("#pokeform-cancel").click(function(){
 		resetForm(true);
