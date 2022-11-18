@@ -14,7 +14,7 @@ const languages = {
 // Origin Marks
 const games = {
 	"go":		{"name": "GO",					"mark": "go"},
-	"home":		{"name": "HOME",				"mark": "galar"},
+	"home":		{"name": "HOME",				"mark": null},
 	"scar":		{"name": "Scarlet",				"mark": "paldea"},
 	"vio":		{"name": "Violet",				"mark": "paldea"},
 	"sw":		{"name": "Sword",				"mark": "galar"},
@@ -235,13 +235,13 @@ const allRibbons = {
 	"humble-mark":					{"name": "Humble Mark",					"gen": 8,	"title": "the Humble",				"available": null, "mark": true, "desc": "A mark for a humble Pokémon."},
 	"thorny-mark":					{"name": "Thorny Mark",					"gen": 8,	"title": "the Pompous",				"available": null, "mark": true, "desc": "A mark for a pompous Pokémon."},
 	"vigor-mark":					{"name": "Vigor Mark",					"gen": 8,	"title": "the Lively",				"available": null, "mark": true, "desc": "A mark for a lively Pokémon."},
-	"slump-mark":					{"name": "Slump Mark",					"gen": 8,	"title": "the Worn-Out",			"available": null, "mark": true, "desc": "A mark for a worn-out Pokémon."}
-	"jumbo-mark":					{"name": "Jumbo Mark",					"gen": 9,	"title": "the Great",				"available": null, "mark": true, "desc": "A mark for a Pokémon that's the largest it can be."}
-	"mini-mark":					{"name": "Mini Mark",					"gen": 9,	"title": "the Teeny",				"available": null, "mark": true, "desc": "A mark for a Pokémon that's the smallest it can be."}
-	"itemfinder-mark":				{"name": "Itemfinder Mark",				"gen": 9,	"title": "the Treasure Hunter",		"available": null, "mark": true, "desc": "A mark for a Pokémon that likes to pick things up."}
-	"partner-mark":					{"name": "Partner Mark",				"gen": 9,	"title": "the Reliable Partner",	"available": null, "mark": true, "desc": "A mark for a friendly Pokémon."}
-	"gourmand-mark":				{"name": "Gourmand Mark",				"gen": 9,	"title": "the Gourmet",				"available": null, "mark": true, "desc": "A mark for a Pokémon gourmet."}
-	"alpha-mark":					{"name": "Alpha Mark",					"gen": 9,	"title": "the Former Alpha",		"available": null, "mark": true, "desc": "A mark for a Pokémon that was an alpha."}
-	"mightiest-mark":				{"name": "Mightiest Mark",				"gen": 9,	"title": "the Unrivaled",			"available": null, "mark": true, "desc": "A mark for a Pokémon caught in a seven-star Tera Raid Battle."}
+	"slump-mark":					{"name": "Slump Mark",					"gen": 8,	"title": "the Worn-Out",			"available": null, "mark": true, "desc": "A mark for a worn-out Pokémon."},
+	"jumbo-mark":					{"name": "Jumbo Mark",					"gen": 9,	"title": "the Great",				"available": null, "mark": true, "desc": "A mark for a Pokémon that's the largest it can be."},
+	"mini-mark":					{"name": "Mini Mark",					"gen": 9,	"title": "the Teeny",				"available": null, "mark": true, "desc": "A mark for a Pokémon that's the smallest it can be."},
+	"itemfinder-mark":				{"name": "Itemfinder Mark",				"gen": 9,	"title": "the Treasure Hunter",		"available": null, "mark": true, "desc": "A mark for a Pokémon that likes to pick things up."},
+	"partner-mark":					{"name": "Partner Mark",				"gen": 9,	"title": "the Reliable Partner",	"available": null, "mark": true, "desc": "A mark for a friendly Pokémon."},
+	"gourmand-mark":				{"name": "Gourmand Mark",				"gen": 9,	"title": "the Gourmet",				"available": null, "mark": true, "desc": "A mark for a Pokémon gourmet."},
+	"alpha-mark":					{"name": "Alpha Mark",					"gen": 9,	"title": "the Former Alpha",		"available": null, "mark": true, "desc": "A mark for a Pokémon that was an alpha."},
+	"mightiest-mark":				{"name": "Mightiest Mark",				"gen": 9,	"title": "the Unrivaled",			"available": null, "mark": true, "desc": "A mark for a Pokémon caught in a seven-star Tera Raid Battle."},
 	"titan-mark":					{"name": "Titan Mark",					"gen": 9,	"title": "the Former Titan",		"available": null, "mark": true, "desc": "A mark for a Pokémon that was a titan."}
 }
