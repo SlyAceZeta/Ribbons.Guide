@@ -39,7 +39,9 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home",
+			"home"
 		]
 	},
 	"abra": {
@@ -97,7 +99,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"absol": {
@@ -146,7 +149,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"accelgor": {
@@ -181,7 +185,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"aegislash": {
@@ -212,7 +217,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"aerodactyl": {
@@ -269,7 +275,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"aggron": {
@@ -318,7 +325,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"aipom": {
@@ -369,7 +377,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"alakazam": {
@@ -427,7 +436,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"alcremie": {
@@ -450,7 +460,8 @@ const pokemon = {
 		"natdex": 869,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"alomomola": {
@@ -483,7 +494,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"altaria": {
@@ -532,7 +544,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"amaura": {
@@ -563,7 +576,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"ambipom": {
@@ -604,7 +618,8 @@ const pokemon = {
 			"umoon",
 			"pla",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"amoonguss": {
@@ -639,7 +654,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"ampharos": {
@@ -689,7 +705,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"anorith": {
@@ -738,7 +755,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"appletun": {
@@ -761,7 +779,8 @@ const pokemon = {
 		"natdex": 842,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"applin": {
@@ -784,7 +803,8 @@ const pokemon = {
 		"natdex": 840,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"araquanid": {
@@ -811,7 +831,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"arbok": {
@@ -866,14 +887,16 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"arcanine-hisui": {
 		"data-source": "arcanine",
 		"form-source": "hisui",
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"arcanine": {
@@ -930,7 +953,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"arceus": {
@@ -971,7 +995,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"archen": {
@@ -1006,7 +1031,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"archeops": {
@@ -1041,7 +1067,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"arctovish": {
@@ -1064,7 +1091,8 @@ const pokemon = {
 		"natdex": 883,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"arctozolt": {
@@ -1087,7 +1115,8 @@ const pokemon = {
 		"natdex": 881,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"ariados": {
@@ -1137,7 +1166,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"armaldo": {
@@ -1186,7 +1216,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"aromatisse": {
@@ -1217,7 +1248,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"aron": {
@@ -1266,7 +1298,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"arrokuda": {
@@ -1289,7 +1322,8 @@ const pokemon = {
 		"natdex": 846,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"articuno-galar": {
@@ -1297,7 +1331,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"articuno": {
@@ -1354,7 +1389,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"audino": {
@@ -1389,7 +1425,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"aurorus": {
@@ -1420,14 +1457,16 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"avalugg-hisui": {
 		"data-source": "avalugg",
 		"form-source": "hisui",
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"avalugg": {
@@ -1458,7 +1497,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"axew": {
@@ -1493,7 +1533,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"azelf": {
@@ -1536,7 +1577,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"azumarill": {
@@ -1588,7 +1630,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"azurill": {
@@ -1637,7 +1680,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"bagon": {
@@ -1686,7 +1730,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"baltoy": {
@@ -1735,7 +1780,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"banette": {
@@ -1782,7 +1828,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"barbaracle": {
@@ -1813,7 +1860,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"barboach": {
@@ -1863,7 +1911,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"barraskewda": {
@@ -1886,7 +1935,8 @@ const pokemon = {
 		"natdex": 847,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"basculegion": {
@@ -1907,7 +1957,8 @@ const pokemon = {
 		"mythical": false,
 		"natdex": 902,
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"basculin-blue-striped": {
@@ -1937,7 +1988,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"basculin-white-striped": {
@@ -1954,7 +2006,8 @@ const pokemon = {
 			"zh-Hans": "白条纹的样子/洗翠的样子"
 		},
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"basculin": {
@@ -2000,7 +2053,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"bastiodon": {
@@ -2041,7 +2095,8 @@ const pokemon = {
 			"moon",
 			"usun",
 			"umoon",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"bayleef": {
@@ -2091,7 +2146,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"beartic": {
@@ -2126,7 +2182,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"beautifly": {
@@ -2174,7 +2231,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"beedrill": {
@@ -2229,7 +2287,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"beheeyem": {
@@ -2264,7 +2323,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"beldum": {
@@ -2313,7 +2373,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"bellossom": {
@@ -2365,7 +2426,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"bellsprout": {
@@ -2420,7 +2482,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"bergmite": {
@@ -2452,7 +2515,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"bewear": {
@@ -2479,7 +2543,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"bibarel": {
@@ -2520,7 +2585,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"bidoof": {
@@ -2561,7 +2627,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"binacle": {
@@ -2592,7 +2659,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"bisharp": {
@@ -2627,7 +2695,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"blacephalon": {
@@ -2652,7 +2721,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"blastoise": {
@@ -2709,7 +2779,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"blaziken": {
@@ -2758,7 +2829,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"blipbug": {
@@ -2781,7 +2853,8 @@ const pokemon = {
 		"natdex": 824,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"blissey": {
@@ -2834,7 +2907,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"blitzle": {
@@ -2867,7 +2941,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"boldore": {
@@ -2902,7 +2977,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"boltund": {
@@ -2925,7 +3001,8 @@ const pokemon = {
 		"natdex": 836,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"bonsly": {
@@ -2968,7 +3045,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"bouffalant": {
@@ -3003,7 +3081,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"bounsweet": {
@@ -3030,7 +3109,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"braixen": {
@@ -3059,14 +3139,16 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"braviary-hisui": {
 		"data-source": "braviary",
 		"form-source": "hisui",
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"braviary": {
@@ -3101,7 +3183,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"breloom": {
@@ -3148,7 +3231,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"brionne": {
@@ -3175,7 +3259,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"bronzong": {
@@ -3218,7 +3303,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"bronzor": {
@@ -3261,7 +3347,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"bruxish": {
@@ -3286,7 +3373,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"budew": {
@@ -3329,7 +3417,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"buizel": {
@@ -3370,7 +3459,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"bulbasaur": {
@@ -3427,7 +3517,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"buneary": {
@@ -3470,7 +3561,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"bunnelby": {
@@ -3501,7 +3593,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"burmy-sandy": {
@@ -3581,7 +3674,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"butterfree": {
@@ -3638,7 +3732,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"buzzwole": {
@@ -3665,7 +3760,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"cacnea": {
@@ -3712,7 +3808,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"cacturne": {
@@ -3759,7 +3856,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"calyrex": {
@@ -3782,7 +3880,8 @@ const pokemon = {
 		"natdex": 898,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"camerupt": {
@@ -3829,7 +3928,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"carbink": {
@@ -3860,7 +3960,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"carkol": {
@@ -3883,7 +3984,8 @@ const pokemon = {
 		"natdex": 838,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"carnivine": {
@@ -3924,7 +4026,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"carracosta": {
@@ -3959,7 +4062,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"carvanha": {
@@ -4008,7 +4112,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"cascoon": {
@@ -4056,7 +4161,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"castform": {
@@ -4103,7 +4209,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"caterpie": {
@@ -4160,7 +4267,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"celebi": {
@@ -4212,7 +4320,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"celesteela": {
@@ -4239,7 +4348,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"centiskorch": {
@@ -4262,7 +4372,8 @@ const pokemon = {
 		"natdex": 851,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"chandelure": {
@@ -4297,7 +4408,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"chansey": {
@@ -4355,7 +4467,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"charizard": {
@@ -4412,7 +4525,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"charjabug": {
@@ -4439,7 +4553,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"charmander": {
@@ -4496,7 +4611,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"charmeleon": {
@@ -4553,7 +4669,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"chatot": {
@@ -4594,7 +4711,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"cherrim": {
@@ -4637,7 +4755,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"cherubi": {
@@ -4680,7 +4799,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"chesnaught": {
@@ -4709,7 +4829,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"chespin": {
@@ -4738,7 +4859,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"chewtle": {
@@ -4761,7 +4883,8 @@ const pokemon = {
 		"natdex": 833,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"chikorita": {
@@ -4811,7 +4934,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"chimchar": {
@@ -4852,7 +4976,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"chimecho": {
@@ -4900,7 +5025,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"chinchou": {
@@ -4952,7 +5078,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"chingling": {
@@ -4993,7 +5120,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"cinccino": {
@@ -5028,7 +5156,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"cinderace": {
@@ -5051,7 +5180,8 @@ const pokemon = {
 		"natdex": 815,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"clamperl": {
@@ -5098,7 +5228,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"clauncher": {
@@ -5129,7 +5260,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"clawitzer": {
@@ -5160,7 +5292,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"claydol": {
@@ -5209,7 +5342,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"clefable": {
@@ -5267,7 +5401,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"clefairy": {
@@ -5325,7 +5460,8 @@ const pokemon = {
 			"sw",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"cleffa": {
@@ -5378,7 +5514,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"clobbopus": {
@@ -5401,7 +5538,8 @@ const pokemon = {
 		"natdex": 852,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"cloyster": {
@@ -5458,7 +5596,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"coalossal": {
@@ -5481,7 +5620,8 @@ const pokemon = {
 		"natdex": 839,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"cobalion": {
@@ -5516,7 +5656,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"cofagrigus": {
@@ -5551,7 +5692,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"combee": {
@@ -5594,7 +5736,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"combusken": {
@@ -5643,7 +5786,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"comfey": {
@@ -5670,7 +5814,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"conkeldurr": {
@@ -5705,7 +5850,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"copperajah": {
@@ -5728,7 +5874,8 @@ const pokemon = {
 		"natdex": 879,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"corphish": {
@@ -5777,7 +5924,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"corsola-galar": {
@@ -5785,7 +5933,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"corsola": {
@@ -5837,7 +5986,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"corviknight": {
@@ -5860,7 +6010,8 @@ const pokemon = {
 		"natdex": 823,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"corvisquire": {
@@ -5883,7 +6034,8 @@ const pokemon = {
 		"natdex": 822,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"cosmoem": {
@@ -5910,7 +6062,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"cosmog": {
@@ -5937,7 +6090,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"cottonee": {
@@ -5972,7 +6126,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"crabominable": {
@@ -5997,7 +6152,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"crabrawler": {
@@ -6022,7 +6178,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"cradily": {
@@ -6071,7 +6228,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"cramorant": {
@@ -6094,7 +6252,8 @@ const pokemon = {
 		"natdex": 845,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"cranidos": {
@@ -6135,7 +6294,8 @@ const pokemon = {
 			"moon",
 			"usun",
 			"umoon",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"crawdaunt": {
@@ -6184,7 +6344,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"cresselia": {
@@ -6227,7 +6388,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"croagunk": {
@@ -6270,7 +6432,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"crobat": {
@@ -6323,7 +6486,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"croconaw": {
@@ -6373,7 +6537,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"crustle": {
@@ -6408,7 +6573,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"cryogonal": {
@@ -6443,7 +6609,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"cubchoo": {
@@ -6478,7 +6645,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"cubone": {
@@ -6535,7 +6703,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"cufant": {
@@ -6558,7 +6727,8 @@ const pokemon = {
 		"natdex": 878,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"cursola": {
@@ -6581,7 +6751,8 @@ const pokemon = {
 		"natdex": 864,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"cutiefly": {
@@ -6608,7 +6779,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"cyndaquil": {
@@ -6659,7 +6831,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"darkrai": {
@@ -6700,7 +6873,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"darmanitan-galar": {
@@ -6708,7 +6882,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"darmanitan": {
@@ -6743,7 +6918,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"dartrix": {
@@ -6771,7 +6947,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"darumaka-galar": {
@@ -6779,7 +6956,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"darumaka": {
@@ -6814,14 +6992,16 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"decidueye-hisui": {
 		"data-source": "decidueye",
 		"form-source": "hisui",
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"decidueye": {
@@ -6848,7 +7028,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"dedenne": {
@@ -6879,7 +7060,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"deerling-autumn": {
@@ -6965,7 +7147,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"deino": {
@@ -7000,7 +7183,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"delcatty": {
@@ -7047,7 +7231,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"delibird": {
@@ -7099,7 +7284,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"delphox": {
@@ -7128,7 +7314,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"deoxys-attack": {
@@ -7228,7 +7415,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"dewgong": {
@@ -7283,7 +7471,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"dewott": {
@@ -7317,7 +7506,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"dewpider": {
@@ -7344,7 +7534,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"dhelmise": {
@@ -7371,7 +7562,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"dialga": {
@@ -7414,7 +7606,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"diancie": {
@@ -7445,7 +7638,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"diggersby": {
@@ -7476,7 +7670,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"diglett-alola": {
@@ -7490,7 +7685,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"diglett": {
@@ -7547,7 +7743,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"ditto": {
@@ -7604,7 +7801,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"dodrio": {
@@ -7659,7 +7857,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"doduo": {
@@ -7714,7 +7913,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"donphan": {
@@ -7764,7 +7964,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"dottler": {
@@ -7787,7 +7988,8 @@ const pokemon = {
 		"natdex": 825,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"doublade": {
@@ -7818,7 +8020,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"dracovish": {
@@ -7841,7 +8044,8 @@ const pokemon = {
 		"natdex": 882,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"dracozolt": {
@@ -7864,7 +8068,8 @@ const pokemon = {
 		"natdex": 880,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"dragalge": {
@@ -7895,7 +8100,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"dragapult": {
@@ -7918,7 +8124,8 @@ const pokemon = {
 		"natdex": 887,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"dragonair": {
@@ -7975,7 +8182,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"dragonite": {
@@ -8032,7 +8240,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"drakloak": {
@@ -8055,7 +8264,8 @@ const pokemon = {
 		"natdex": 886,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"drampa": {
@@ -8082,7 +8292,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"drapion": {
@@ -8125,7 +8336,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"dratini": {
@@ -8182,7 +8394,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"drednaw": {
@@ -8205,7 +8418,8 @@ const pokemon = {
 		"natdex": 834,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"dreepy": {
@@ -8228,7 +8442,8 @@ const pokemon = {
 		"natdex": 885,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"drifblim": {
@@ -8271,7 +8486,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"drifloon": {
@@ -8314,7 +8530,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"drilbur": {
@@ -8349,7 +8566,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"drizzile": {
@@ -8372,7 +8590,8 @@ const pokemon = {
 		"natdex": 817,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"drowzee": {
@@ -8427,7 +8646,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"druddigon": {
@@ -8462,7 +8682,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"dubwool": {
@@ -8485,7 +8706,8 @@ const pokemon = {
 		"natdex": 832,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"ducklett": {
@@ -8518,7 +8740,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"dugtrio-alola": {
@@ -8532,7 +8755,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"dugtrio": {
@@ -8589,7 +8813,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"dunsparce": {
@@ -8641,7 +8866,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"duosion": {
@@ -8676,7 +8902,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"duraludon": {
@@ -8699,7 +8926,8 @@ const pokemon = {
 		"natdex": 884,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"durant": {
@@ -8734,7 +8962,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"dusclops": {
@@ -8784,7 +9013,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"dusknoir": {
@@ -8827,7 +9057,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"duskull": {
@@ -8877,7 +9108,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"dustox": {
@@ -8925,7 +9157,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"dwebble": {
@@ -8960,7 +9193,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"eelektrik": {
@@ -8993,7 +9227,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"eelektross": {
@@ -9026,7 +9261,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"eevee": {
@@ -9084,7 +9320,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"eiscue": {
@@ -9107,7 +9344,8 @@ const pokemon = {
 		"natdex": 875,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"ekans": {
@@ -9162,7 +9400,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"eldegoss": {
@@ -9185,7 +9424,8 @@ const pokemon = {
 		"natdex": 830,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"electabuzz": {
@@ -9243,7 +9483,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"electivire": {
@@ -9286,7 +9527,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"electrike": {
@@ -9335,14 +9577,16 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"electrode-hisui": {
 		"data-source": "electrode",
 		"form-source": "hisui",
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"electrode": {
@@ -9398,7 +9642,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"elekid": {
@@ -9451,7 +9696,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"elgyem": {
@@ -9486,7 +9732,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"emboar": {
@@ -9519,7 +9766,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"emolga": {
@@ -9554,7 +9802,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"empoleon": {
@@ -9595,7 +9844,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"enamorus-therian": {
@@ -9621,7 +9871,8 @@ const pokemon = {
 		"mythical": false,
 		"natdex": 905,
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"entei": {
@@ -9673,7 +9924,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"escavalier": {
@@ -9708,7 +9960,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"espeon": {
@@ -9761,7 +10014,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"espurr": {
@@ -9792,7 +10046,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"eternatus": {
@@ -9815,7 +10070,8 @@ const pokemon = {
 		"natdex": 890,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"excadrill": {
@@ -9850,7 +10106,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"exeggcute": {
@@ -9907,7 +10164,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"exeggutor-alola": {
@@ -9921,7 +10179,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"exeggutor": {
@@ -9978,7 +10237,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"exploud": {
@@ -10027,7 +10287,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"falinks": {
@@ -10050,7 +10311,8 @@ const pokemon = {
 		"natdex": 870,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"farfetchd-galar": {
@@ -10058,7 +10320,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"farfetchd": {
@@ -10115,7 +10378,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"fearow": {
@@ -10170,7 +10434,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"feebas": {
@@ -10219,7 +10484,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"fennekin": {
@@ -10248,7 +10514,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"feraligatr": {
@@ -10298,7 +10565,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"ferroseed": {
@@ -10333,7 +10601,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"ferrothorn": {
@@ -10368,7 +10637,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"finneon": {
@@ -10409,7 +10679,8 @@ const pokemon = {
 			"moon",
 			"usun",
 			"umoon",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"flaaffy": {
@@ -10459,7 +10730,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"flabebe-blue": {
@@ -10555,7 +10827,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"flapple": {
@@ -10578,7 +10851,8 @@ const pokemon = {
 		"natdex": 841,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"flareon": {
@@ -10636,7 +10910,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"fletchinder": {
@@ -10667,7 +10942,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"fletchling": {
@@ -10698,7 +10974,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"floatzel": {
@@ -10739,7 +11016,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"floette-blue": {
@@ -10835,7 +11113,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"florges-blue": {
@@ -10931,7 +11210,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"flygon": {
@@ -10980,7 +11260,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"fomantis": {
@@ -11007,7 +11288,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"foongus": {
@@ -11042,7 +11324,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"forretress": {
@@ -11092,7 +11375,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"fraxure": {
@@ -11127,7 +11411,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"frillish": {
@@ -11162,7 +11447,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"froakie": {
@@ -11191,7 +11477,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"frogadier": {
@@ -11220,7 +11507,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"froslass": {
@@ -11263,7 +11551,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"frosmoth": {
@@ -11286,7 +11575,8 @@ const pokemon = {
 		"natdex": 873,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"furfrou-dandy": {
@@ -11452,7 +11742,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"furret": {
@@ -11502,7 +11793,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"gabite": {
@@ -11545,7 +11837,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"gallade": {
@@ -11588,7 +11881,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"galvantula": {
@@ -11623,7 +11917,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"garbodor": {
@@ -11658,7 +11953,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"garchomp": {
@@ -11701,7 +11997,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"gardevoir": {
@@ -11751,7 +12048,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"gastly": {
@@ -11809,7 +12107,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"gastrodon-east": {
@@ -11877,7 +12176,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"genesect": {
@@ -11912,7 +12212,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"gengar": {
@@ -11970,7 +12271,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"geodude-alola": {
@@ -11982,7 +12284,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"lgp",
-			"lge"
+			"lge",
+			"home"
 		]
 	},
 	"geodude": {
@@ -12038,7 +12341,8 @@ const pokemon = {
 			"lge",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"gible": {
@@ -12081,7 +12385,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"gigalith": {
@@ -12116,7 +12421,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"girafarig": {
@@ -12166,7 +12472,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"giratina": {
@@ -12209,7 +12516,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"glaceon": {
@@ -12252,7 +12560,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"glalie": {
@@ -12302,7 +12611,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"glameow": {
@@ -12343,7 +12653,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"glastrier": {
@@ -12366,7 +12677,8 @@ const pokemon = {
 		"natdex": 896,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"gligar": {
@@ -12417,7 +12729,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"gliscor": {
@@ -12458,7 +12771,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"gloom": {
@@ -12515,7 +12829,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"gogoat": {
@@ -12544,7 +12859,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"golbat": {
@@ -12602,7 +12918,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"goldeen": {
@@ -12659,7 +12976,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"golduck": {
@@ -12717,7 +13035,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"golem-alola": {
@@ -12729,7 +13048,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"lgp",
-			"lge"
+			"lge",
+			"home"
 		]
 	},
 	"golem": {
@@ -12785,7 +13105,8 @@ const pokemon = {
 			"lge",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"golett": {
@@ -12820,7 +13141,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"golisopod": {
@@ -12847,7 +13169,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"golurk": {
@@ -12882,14 +13205,16 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"goodra-hisui": {
 		"data-source": "goodra",
 		"form-source": "hisui",
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"goodra": {
@@ -12921,7 +13246,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"goomy": {
@@ -12953,7 +13279,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"gorebyss": {
@@ -13000,7 +13327,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"gossifleur": {
@@ -13023,7 +13351,8 @@ const pokemon = {
 		"natdex": 829,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"gothita": {
@@ -13058,7 +13387,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"gothitelle": {
@@ -13093,7 +13423,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"gothorita": {
@@ -13128,7 +13459,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"gourgeist-large": {
@@ -13212,7 +13544,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"granbull": {
@@ -13262,7 +13595,8 @@ const pokemon = {
 			"moon",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"grapploct": {
@@ -13285,7 +13619,8 @@ const pokemon = {
 		"natdex": 853,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"graveler-alola": {
@@ -13297,7 +13632,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"lgp",
-			"lge"
+			"lge",
+			"home"
 		]
 	},
 	"graveler": {
@@ -13353,7 +13689,8 @@ const pokemon = {
 			"lge",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"greedent": {
@@ -13376,7 +13713,8 @@ const pokemon = {
 		"natdex": 820,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"greninja-ash": {
@@ -13397,7 +13735,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"greninja": {
@@ -13426,7 +13765,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"grimer-alola": {
@@ -13438,7 +13778,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"lgp",
-			"lge"
+			"lge",
+			"home"
 		]
 	},
 	"grimer": {
@@ -13493,7 +13834,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"grimmsnarl": {
@@ -13516,7 +13858,8 @@ const pokemon = {
 		"natdex": 861,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"grookey": {
@@ -13539,7 +13882,8 @@ const pokemon = {
 		"natdex": 810,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"grotle": {
@@ -13580,7 +13924,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"groudon": {
@@ -13629,7 +13974,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"grovyle": {
@@ -13678,14 +14024,16 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"growlithe-hisui": {
 		"data-source": "growlithe",
 		"form-source": "hisui",
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"growlithe": {
@@ -13743,7 +14091,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"grubbin": {
@@ -13770,7 +14119,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"grumpig": {
@@ -13817,7 +14167,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"gulpin": {
@@ -13864,7 +14215,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"gumshoos": {
@@ -13889,7 +14241,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"gurdurr": {
@@ -13924,7 +14277,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"guzzlord": {
@@ -13951,7 +14305,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"gyarados": {
@@ -14009,7 +14364,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"hakamo-o": {
@@ -14036,7 +14392,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"happiny": {
@@ -14079,7 +14436,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"hariyama": {
@@ -14126,7 +14484,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"hatenna": {
@@ -14149,7 +14508,8 @@ const pokemon = {
 		"natdex": 856,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"hatterene": {
@@ -14172,7 +14532,8 @@ const pokemon = {
 		"natdex": 858,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"hattrem": {
@@ -14195,7 +14556,8 @@ const pokemon = {
 		"natdex": 857,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"haunter": {
@@ -14253,7 +14615,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"hawlucha": {
@@ -14284,7 +14647,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"haxorus": {
@@ -14319,7 +14683,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"heatmor": {
@@ -14354,7 +14719,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"heatran": {
@@ -14397,7 +14763,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"heliolisk": {
@@ -14428,7 +14795,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"helioptile": {
@@ -14459,7 +14827,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"heracross": {
@@ -14512,7 +14881,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"herdier": {
@@ -14547,7 +14917,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"hippopotas": {
@@ -14590,7 +14961,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"hippowdon": {
@@ -14633,7 +15005,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"hitmonchan": {
@@ -14690,7 +15063,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"hitmonlee": {
@@ -14747,7 +15121,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"hitmontop": {
@@ -14799,7 +15174,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"ho-oh": {
@@ -14851,7 +15227,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"honchkrow": {
@@ -14892,7 +15269,8 @@ const pokemon = {
 			"moon",
 			"usun",
 			"umoon",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"honedge": {
@@ -14923,7 +15301,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"hoopa": {
@@ -14952,7 +15331,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"hoothoot": {
@@ -15004,7 +15384,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"hoppip": {
@@ -15054,7 +15435,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"horsea": {
@@ -15111,7 +15493,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"houndoom": {
@@ -15161,7 +15544,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"houndour": {
@@ -15211,7 +15595,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"huntail": {
@@ -15258,7 +15643,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"hydreigon": {
@@ -15293,7 +15679,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"hypno": {
@@ -15348,7 +15735,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"igglybuff": {
@@ -15400,7 +15788,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"illumise": {
@@ -15447,7 +15836,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"impidimp": {
@@ -15470,7 +15860,8 @@ const pokemon = {
 		"natdex": 859,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"incineroar": {
@@ -15497,7 +15888,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"indeedee": {
@@ -15520,7 +15912,8 @@ const pokemon = {
 		"natdex": 876,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"infernape": {
@@ -15561,7 +15954,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"inkay": {
@@ -15592,7 +15986,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"inteleon": {
@@ -15615,7 +16010,8 @@ const pokemon = {
 		"natdex": 818,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"ivysaur": {
@@ -15672,7 +16068,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"jangmo-o": {
@@ -15699,7 +16096,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"jellicent": {
@@ -15734,7 +16132,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"jigglypuff": {
@@ -15791,7 +16190,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"jirachi": {
@@ -15840,7 +16240,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"jolteon": {
@@ -15898,7 +16299,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"joltik": {
@@ -15933,7 +16335,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"jumpluff": {
@@ -15983,7 +16386,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"jynx": {
@@ -16040,7 +16444,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"kabuto": {
@@ -16097,7 +16502,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"kabutops": {
@@ -16154,7 +16560,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"kadabra": {
@@ -16212,7 +16619,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"kakuna": {
@@ -16267,7 +16675,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"kangaskhan": {
@@ -16324,7 +16733,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"karrablast": {
@@ -16359,7 +16769,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"kartana": {
@@ -16386,7 +16797,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"kecleon": {
@@ -16433,7 +16845,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"keldeo-resolute": {
@@ -16493,7 +16906,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"kingdra": {
@@ -16545,7 +16959,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"kingler": {
@@ -16602,7 +17017,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"kirlia": {
@@ -16652,7 +17068,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"klang": {
@@ -16687,7 +17104,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"kleavor": {
@@ -16708,7 +17126,8 @@ const pokemon = {
 		"mythical": false,
 		"natdex": 900,
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"klefki": {
@@ -16739,7 +17158,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"klink": {
@@ -16774,7 +17194,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"klinklang": {
@@ -16809,7 +17230,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"koffing": {
@@ -16866,7 +17288,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"komala": {
@@ -16891,7 +17314,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"kommo-o": {
@@ -16918,7 +17342,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"krabby": {
@@ -16975,7 +17400,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"kricketot": {
@@ -17016,7 +17442,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"kricketune": {
@@ -17057,7 +17484,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"krokorok": {
@@ -17092,7 +17520,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"krookodile": {
@@ -17127,7 +17556,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"kubfu": {
@@ -17150,7 +17580,8 @@ const pokemon = {
 		"natdex": 891,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"kyogre": {
@@ -17199,7 +17630,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"kyurem": {
@@ -17234,7 +17666,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"lairon": {
@@ -17283,7 +17716,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"lampent": {
@@ -17318,7 +17752,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"landorus-therian": {
@@ -17359,7 +17794,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"lanturn": {
@@ -17411,7 +17847,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"lapras": {
@@ -17468,7 +17905,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"larvesta": {
@@ -17503,7 +17941,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"larvitar": {
@@ -17555,7 +17994,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"latias": {
@@ -17604,7 +18044,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"latios": {
@@ -17653,7 +18094,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"leafeon": {
@@ -17696,7 +18138,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"leavanny": {
@@ -17729,7 +18172,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"ledian": {
@@ -17779,7 +18223,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"ledyba": {
@@ -17829,7 +18274,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"lickilicky": {
@@ -17872,7 +18318,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"lickitung": {
@@ -17930,7 +18377,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"liepard": {
@@ -17965,7 +18413,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"lileep": {
@@ -18014,14 +18463,16 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"lilligant-hisui": {
 		"data-source": "lilligant",
 		"form-source": "hisui",
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"lilligant": {
@@ -18057,7 +18508,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"lillipup": {
@@ -18092,7 +18544,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"linoone-galar": {
@@ -18100,7 +18553,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"linoone": {
@@ -18149,7 +18603,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"litleo": {
@@ -18178,7 +18633,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"litten": {
@@ -18205,7 +18661,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"litwick": {
@@ -18240,7 +18697,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"lombre": {
@@ -18289,7 +18747,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"lopunny": {
@@ -18332,7 +18791,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"lotad": {
@@ -18381,7 +18841,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"loudred": {
@@ -18430,7 +18891,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"lucario": {
@@ -18473,7 +18935,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"ludicolo": {
@@ -18522,7 +18985,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"lugia": {
@@ -18574,7 +19038,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"lumineon": {
@@ -18615,7 +19080,8 @@ const pokemon = {
 			"moon",
 			"usun",
 			"umoon",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"lunala": {
@@ -18642,7 +19108,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"lunatone": {
@@ -18691,7 +19158,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"lurantis": {
@@ -18718,7 +19186,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"luvdisc": {
@@ -18765,7 +19234,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"luxio": {
@@ -18808,7 +19278,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"luxray": {
@@ -18851,7 +19322,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"lycanroc-dusk": {
@@ -18917,7 +19389,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"machamp": {
@@ -18975,7 +19448,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"machoke": {
@@ -19033,7 +19507,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"machop": {
@@ -19091,7 +19566,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"magby": {
@@ -19144,7 +19620,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"magcargo": {
@@ -19194,7 +19671,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"magearna-original": {
@@ -19212,7 +19690,8 @@ const pokemon = {
 		},
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"magearna": {
@@ -19239,7 +19718,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"magikarp": {
@@ -19297,7 +19777,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"magmar": {
@@ -19355,7 +19836,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"magmortar": {
@@ -19398,7 +19880,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"magnemite": {
@@ -19456,7 +19939,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"magneton": {
@@ -19514,7 +19998,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"magnezone": {
@@ -19557,7 +20042,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"makuhita": {
@@ -19604,7 +20090,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"malamar": {
@@ -19635,7 +20122,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"mamoswine": {
@@ -19678,7 +20166,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"manaphy": {
@@ -19719,7 +20208,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"mandibuzz": {
@@ -19754,7 +20244,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"manectric": {
@@ -19803,7 +20294,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"mankey": {
@@ -19858,7 +20350,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"mantine": {
@@ -19911,7 +20404,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"mantyke": {
@@ -19954,7 +20448,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"maractus": {
@@ -19989,7 +20484,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"mareanie": {
@@ -20016,7 +20512,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"mareep": {
@@ -20066,7 +20563,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"marill": {
@@ -20118,7 +20616,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"marowak-alola": {
@@ -20132,7 +20631,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"marowak": {
@@ -20189,7 +20689,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"marshadow": {
@@ -20216,7 +20717,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"marshtomp": {
@@ -20265,7 +20767,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"masquerain": {
@@ -20312,7 +20815,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"mawile": {
@@ -20361,7 +20865,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"medicham": {
@@ -20408,7 +20913,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"meditite": {
@@ -20455,7 +20961,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"meganium": {
@@ -20505,7 +21012,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"melmetal": {
@@ -20530,7 +21038,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"meloetta": {
@@ -20563,7 +21072,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"meltan": {
@@ -20588,7 +21098,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"meowstic": {
@@ -20619,7 +21130,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"meowth-alola": {
@@ -20633,7 +21145,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"meowth-galar": {
@@ -20647,7 +21160,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"meowth": {
@@ -20704,7 +21218,8 @@ const pokemon = {
 			"lge",
 			"sw",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"mesprit": {
@@ -20747,7 +21262,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"metagross": {
@@ -20796,7 +21312,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"metang": {
@@ -20845,7 +21362,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"metapod": {
@@ -20902,7 +21420,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"mew": {
@@ -20959,7 +21478,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"mewtwo": {
@@ -21016,7 +21536,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"mienfoo": {
@@ -21051,7 +21572,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"mienshao": {
@@ -21086,7 +21608,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"mightyena": {
@@ -21133,7 +21656,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"milcery": {
@@ -21156,7 +21680,8 @@ const pokemon = {
 		"natdex": 868,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"milotic": {
@@ -21205,7 +21730,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"miltank": {
@@ -21257,7 +21783,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"mime-jr": {
@@ -21300,7 +21827,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"mimikyu": {
@@ -21327,7 +21855,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"minccino": {
@@ -21362,7 +21891,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"minior-blue": {
@@ -21482,7 +22012,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"minun": {
@@ -21529,7 +22060,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"misdreavus": {
@@ -21580,7 +22112,8 @@ const pokemon = {
 			"umoon",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"mismagius": {
@@ -21621,7 +22154,8 @@ const pokemon = {
 			"moon",
 			"usun",
 			"umoon",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"moltres-galar": {
@@ -21629,7 +22163,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"moltres": {
@@ -21686,7 +22221,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"monferno": {
@@ -21727,7 +22263,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"morelull": {
@@ -21754,7 +22291,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"morgrem": {
@@ -21777,7 +22315,8 @@ const pokemon = {
 		"natdex": 860,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"morpeko": {
@@ -21800,7 +22339,8 @@ const pokemon = {
 		"natdex": 877,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"mothim": {
@@ -21841,7 +22381,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"mr-mime-galar": {
@@ -21849,7 +22390,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"mr-mime": {
@@ -21907,7 +22449,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"mr-rime": {
@@ -21930,7 +22473,8 @@ const pokemon = {
 		"natdex": 866,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"mudbray": {
@@ -21957,7 +22501,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"mudkip": {
@@ -22006,7 +22551,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"mudsdale": {
@@ -22033,7 +22579,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"muk-alola": {
@@ -22045,7 +22592,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"lgp",
-			"lge"
+			"lge",
+			"home"
 		]
 	},
 	"muk": {
@@ -22100,7 +22648,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"munchlax": {
@@ -22143,7 +22692,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"munna": {
@@ -22178,7 +22728,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"murkrow": {
@@ -22229,7 +22780,8 @@ const pokemon = {
 			"umoon",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"musharna": {
@@ -22264,7 +22816,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"naganadel": {
@@ -22289,7 +22842,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"natu": {
@@ -22341,7 +22895,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"necrozma": {
@@ -22368,7 +22923,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"nickit": {
@@ -22391,7 +22947,8 @@ const pokemon = {
 		"natdex": 827,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"nidoking": {
@@ -22448,7 +23005,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"nidoqueen": {
@@ -22505,7 +23063,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"nidoran-f": {
@@ -22562,7 +23121,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"nidoran-m": {
@@ -22619,7 +23179,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"nidorina": {
@@ -22676,7 +23237,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"nidorino": {
@@ -22733,7 +23295,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"nihilego": {
@@ -22760,7 +23323,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"nincada": {
@@ -22809,7 +23373,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"ninetales-alola": {
@@ -22824,7 +23389,8 @@ const pokemon = {
 			"lge",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"ninetales": {
@@ -22882,7 +23448,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"ninjask": {
@@ -22931,7 +23498,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"noctowl": {
@@ -22983,7 +23551,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"noibat": {
@@ -23014,7 +23583,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"noivern": {
@@ -23045,7 +23615,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"nosepass": {
@@ -23093,7 +23664,8 @@ const pokemon = {
 			"umoon",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"numel": {
@@ -23140,7 +23712,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"nuzleaf": {
@@ -23189,7 +23762,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"obstagoon": {
@@ -23212,7 +23786,8 @@ const pokemon = {
 		"natdex": 862,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"octillery": {
@@ -23265,7 +23840,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"oddish": {
@@ -23322,7 +23898,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"omanyte": {
@@ -23379,7 +23956,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"omastar": {
@@ -23436,7 +24014,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"onix": {
@@ -23494,7 +24073,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"oranguru": {
@@ -23521,7 +24101,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"orbeetle": {
@@ -23544,7 +24125,8 @@ const pokemon = {
 		"natdex": 826,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"oricorio-pau": {
@@ -23622,7 +24204,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"oshawott": {
@@ -23656,7 +24239,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"overqwil": {
@@ -23677,7 +24261,8 @@ const pokemon = {
 		"mythical": false,
 		"natdex": 904,
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"pachirisu": {
@@ -23718,7 +24303,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"palkia": {
@@ -23761,7 +24347,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"palossand": {
@@ -23788,7 +24375,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"palpitoad": {
@@ -23823,7 +24411,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"pancham": {
@@ -23854,7 +24443,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"pangoro": {
@@ -23885,7 +24475,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"panpour": {
@@ -23918,7 +24509,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"pansage": {
@@ -23951,7 +24543,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"pansear": {
@@ -23984,7 +24577,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"paras": {
@@ -24040,7 +24634,8 @@ const pokemon = {
 			"lge",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"parasect": {
@@ -24096,7 +24691,8 @@ const pokemon = {
 			"lge",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"passimian": {
@@ -24123,7 +24719,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"patrat": {
@@ -24156,7 +24753,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"pawniard": {
@@ -24191,7 +24789,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"pelipper": {
@@ -24240,7 +24839,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"perrserker": {
@@ -24263,7 +24863,8 @@ const pokemon = {
 		"natdex": 863,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"persian-alola": {
@@ -24277,7 +24878,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"persian": {
@@ -24334,7 +24936,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"petilil": {
@@ -24370,7 +24973,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"phanpy": {
@@ -24420,7 +25024,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"phantump": {
@@ -24451,7 +25056,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"pheromosa": {
@@ -24478,7 +25084,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"phione": {
@@ -24519,7 +25126,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"pichu": {
@@ -24572,7 +25180,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"pidgeot": {
@@ -24627,7 +25236,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"pidgeotto": {
@@ -24682,7 +25292,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"pidgey": {
@@ -24737,7 +25348,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"pidove": {
@@ -24772,7 +25384,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"pignite": {
@@ -24805,7 +25418,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"pikachu-alola-cap": {
@@ -24828,7 +25442,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"pikachu-hoenn-cap": {
@@ -24851,7 +25466,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"pikachu-kalos-cap": {
@@ -24874,7 +25490,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"pikachu-original-cap": {
@@ -24897,7 +25514,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"pikachu-partner-cap": {
@@ -24920,7 +25538,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"pikachu-sinnoh-cap": {
@@ -24943,7 +25562,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"pikachu-unova-cap": {
@@ -24966,7 +25586,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"pikachu-world-cap": {
@@ -24985,7 +25606,8 @@ const pokemon = {
 		"gender": "male",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"pikachu": {
@@ -25043,7 +25665,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"pikipek": {
@@ -25068,7 +25691,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"piloswine": {
@@ -25121,7 +25745,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"pincurchin": {
@@ -25144,7 +25769,8 @@ const pokemon = {
 		"natdex": 871,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"pineco": {
@@ -25194,7 +25820,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"pinsir": {
@@ -25251,7 +25878,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"piplup": {
@@ -25292,7 +25920,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"plusle": {
@@ -25339,7 +25968,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"poipole": {
@@ -25364,7 +25994,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"politoed": {
@@ -25416,7 +26047,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"poliwag": {
@@ -25473,7 +26105,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"poliwhirl": {
@@ -25530,7 +26163,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"poliwrath": {
@@ -25587,7 +26221,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"polteageist": {
@@ -25610,7 +26245,8 @@ const pokemon = {
 		"natdex": 855,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"ponyta-galar": {
@@ -25618,7 +26254,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"ponyta": {
@@ -25676,7 +26313,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"poochyena": {
@@ -25723,7 +26361,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"popplio": {
@@ -25750,7 +26389,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"porygon-z": {
@@ -25793,7 +26433,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"porygon": {
@@ -25851,7 +26492,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"porygon2": {
@@ -25904,7 +26546,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"primarina": {
@@ -25931,7 +26574,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"primeape": {
@@ -25986,7 +26630,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"prinplup": {
@@ -26027,7 +26672,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"probopass": {
@@ -26068,7 +26714,8 @@ const pokemon = {
 			"moon",
 			"usun",
 			"umoon",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"psyduck": {
@@ -26126,7 +26773,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"pumpkaboo-large": {
@@ -26210,7 +26858,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"pupitar": {
@@ -26262,7 +26911,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"purrloin": {
@@ -26297,7 +26947,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"purugly": {
@@ -26338,7 +26989,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"pyroar": {
@@ -26367,7 +27019,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"pyukumuku": {
@@ -26394,7 +27047,8 @@ const pokemon = {
 			"moon",
 			"usun",
 			"umoon",
-			"sw"
+			"sw",
+			"home"
 		]
 	},
 	"quagsire": {
@@ -26446,7 +27100,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"quilava": {
@@ -26497,7 +27152,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"quilladin": {
@@ -26526,14 +27182,16 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"qwilfish-hisui": {
 		"data-source": "qwilfish",
 		"form-source": "hisui",
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"qwilfish": {
@@ -26586,7 +27244,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"raboot": {
@@ -26609,7 +27268,8 @@ const pokemon = {
 		"natdex": 814,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"raichu-alola": {
@@ -26623,7 +27283,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"raichu": {
@@ -26681,7 +27342,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"raikou": {
@@ -26733,7 +27395,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"ralts": {
@@ -26783,7 +27446,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"rampardos": {
@@ -26824,7 +27488,8 @@ const pokemon = {
 			"moon",
 			"usun",
 			"umoon",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"rapidash-galar": {
@@ -26832,7 +27497,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"rapidash": {
@@ -26890,7 +27556,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"raticate-alola": {
@@ -26902,7 +27569,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"lgp",
-			"lge"
+			"lge",
+			"home"
 		]
 	},
 	"raticate": {
@@ -26957,7 +27625,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"rattata-alola": {
@@ -26969,7 +27638,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"lgp",
-			"lge"
+			"lge",
+			"home"
 		]
 	},
 	"rattata": {
@@ -27024,7 +27694,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"rayquaza": {
@@ -27073,7 +27744,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"regice": {
@@ -27122,7 +27794,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"regidrago": {
@@ -27145,7 +27818,8 @@ const pokemon = {
 		"natdex": 895,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"regieleki": {
@@ -27168,7 +27842,8 @@ const pokemon = {
 		"natdex": 894,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"regigigas": {
@@ -27211,7 +27886,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"regirock": {
@@ -27260,7 +27936,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"registeel": {
@@ -27309,7 +27986,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"relicanth": {
@@ -27358,7 +28036,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"remoraid": {
@@ -27411,7 +28090,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"reshiram": {
@@ -27446,7 +28126,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"reuniclus": {
@@ -27481,7 +28162,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"rhydon": {
@@ -27539,7 +28221,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"rhyhorn": {
@@ -27597,7 +28280,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"rhyperior": {
@@ -27640,7 +28324,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"ribombee": {
@@ -27667,7 +28352,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"rillaboom": {
@@ -27690,7 +28376,8 @@ const pokemon = {
 		"natdex": 812,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"riolu": {
@@ -27733,7 +28420,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"rockruff": {
@@ -27760,7 +28448,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"roggenrola": {
@@ -27795,7 +28484,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"rolycoly": {
@@ -27818,7 +28508,8 @@ const pokemon = {
 		"natdex": 837,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"rookidee": {
@@ -27841,7 +28532,8 @@ const pokemon = {
 		"natdex": 821,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"roselia": {
@@ -27891,7 +28583,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"roserade": {
@@ -27934,7 +28627,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"rotom-fan": {
@@ -28047,7 +28741,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"rowlet": {
@@ -28075,7 +28770,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"rufflet": {
@@ -28111,7 +28807,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"runerigus": {
@@ -28134,7 +28831,8 @@ const pokemon = {
 		"natdex": 867,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"sableye": {
@@ -28183,7 +28881,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"salamence": {
@@ -28232,7 +28931,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"salandit": {
@@ -28259,7 +28959,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"salazzle": {
@@ -28286,14 +28987,16 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"samurott-hisui": {
 		"data-source": "samurott",
 		"form-source": "hisui",
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"samurott": {
@@ -28327,7 +29030,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"sandaconda": {
@@ -28350,7 +29054,8 @@ const pokemon = {
 		"natdex": 844,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"sandile": {
@@ -28385,7 +29090,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"sandshrew-alola": {
@@ -28399,7 +29105,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"sandshrew": {
@@ -28456,7 +29163,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"sandslash-alola": {
@@ -28470,7 +29178,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"sandslash": {
@@ -28527,7 +29236,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"sandygast": {
@@ -28554,7 +29264,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"sawk": {
@@ -28589,7 +29300,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"sawsbuck-autumn": {
@@ -28675,7 +29387,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"scatterbug": {
@@ -28704,7 +29417,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"sceptile": {
@@ -28753,7 +29467,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"scizor": {
@@ -28806,7 +29521,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"scolipede": {
@@ -28841,7 +29557,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"scorbunny": {
@@ -28864,7 +29581,8 @@ const pokemon = {
 		"natdex": 813,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"scrafty": {
@@ -28899,7 +29617,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"scraggy": {
@@ -28934,7 +29653,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"scyther": {
@@ -28992,7 +29712,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"seadra": {
@@ -29049,7 +29770,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"seaking": {
@@ -29106,7 +29828,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"sealeo": {
@@ -29156,7 +29879,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"seedot": {
@@ -29205,7 +29929,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"seel": {
@@ -29260,7 +29985,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"seismitoad": {
@@ -29295,7 +30021,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"sentret": {
@@ -29345,7 +30072,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"serperior": {
@@ -29378,7 +30106,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"servine": {
@@ -29411,7 +30140,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"seviper": {
@@ -29458,7 +30188,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"sewaddle": {
@@ -29491,7 +30222,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"sharpedo": {
@@ -29540,7 +30272,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"shaymin-sky": {
@@ -29606,7 +30339,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"shedinja": {
@@ -29655,7 +30389,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"shelgon": {
@@ -29704,7 +30439,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"shellder": {
@@ -29761,7 +30497,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"shellos-east": {
@@ -29829,7 +30566,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"shelmet": {
@@ -29864,7 +30602,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"shieldon": {
@@ -29905,7 +30644,8 @@ const pokemon = {
 			"moon",
 			"usun",
 			"umoon",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"shiftry": {
@@ -29954,7 +30694,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"shiinotic": {
@@ -29981,7 +30722,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"shinx": {
@@ -30024,7 +30766,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"shroomish": {
@@ -30071,7 +30814,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"shuckle": {
@@ -30123,7 +30867,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"shuppet": {
@@ -30170,7 +30915,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"sigilyph": {
@@ -30205,7 +30951,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"silcoon": {
@@ -30253,7 +31000,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"silicobra": {
@@ -30276,7 +31024,8 @@ const pokemon = {
 		"natdex": 843,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"silvally": {
@@ -30303,7 +31052,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"simipour": {
@@ -30336,7 +31086,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"simisage": {
@@ -30369,7 +31120,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"simisear": {
@@ -30402,7 +31154,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"sinistea": {
@@ -30425,7 +31178,8 @@ const pokemon = {
 		"natdex": 854,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"sirfetchd": {
@@ -30448,7 +31202,8 @@ const pokemon = {
 		"natdex": 865,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"sizzlipede": {
@@ -30471,7 +31226,8 @@ const pokemon = {
 		"natdex": 850,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"skarmory": {
@@ -30523,7 +31279,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"skiddo": {
@@ -30552,7 +31309,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"skiploom": {
@@ -30602,7 +31360,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"skitty": {
@@ -30649,7 +31408,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"skorupi": {
@@ -30692,7 +31452,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"skrelp": {
@@ -30723,7 +31484,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"skuntank": {
@@ -30766,7 +31528,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"skwovet": {
@@ -30789,7 +31552,8 @@ const pokemon = {
 		"natdex": 819,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"slaking": {
@@ -30836,7 +31600,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"slakoth": {
@@ -30883,14 +31648,16 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"sliggoo-hisui": {
 		"data-source": "sliggoo",
 		"form-source": "hisui",
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"sliggoo": {
@@ -30922,7 +31689,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"slowbro-galar": {
@@ -30930,7 +31698,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"slowbro": {
@@ -30987,7 +31756,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"slowking-galar": {
@@ -30995,7 +31765,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"slowking": {
@@ -31047,7 +31818,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"slowpoke-galar": {
@@ -31055,7 +31827,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"slowpoke": {
@@ -31112,7 +31885,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"slugma": {
@@ -31162,7 +31936,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"slurpuff": {
@@ -31193,7 +31968,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"smeargle": {
@@ -31243,7 +32019,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"smoochum": {
@@ -31295,14 +32072,16 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"sneasel-hisui": {
 		"data-source": "sneasel",
 		"form-source": "hisui",
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"sneasel": {
@@ -31355,7 +32134,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"sneasler": {
@@ -31376,7 +32156,8 @@ const pokemon = {
 		"mythical": false,
 		"natdex": 903,
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"snivy": {
@@ -31409,7 +32190,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"snom": {
@@ -31432,7 +32214,8 @@ const pokemon = {
 		"natdex": 872,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"snorlax": {
@@ -31490,7 +32273,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"snorunt": {
@@ -31540,7 +32324,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"snover": {
@@ -31583,7 +32368,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"snubbull": {
@@ -31633,7 +32419,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"sobble": {
@@ -31656,7 +32443,8 @@ const pokemon = {
 		"natdex": 816,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"solgaleo": {
@@ -31683,7 +32471,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"solosis": {
@@ -31718,7 +32507,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"solrock": {
@@ -31767,7 +32557,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"spearow": {
@@ -31822,7 +32613,8 @@ const pokemon = {
 			"lgp",
 			"lge",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"spectrier": {
@@ -31845,7 +32637,8 @@ const pokemon = {
 		"natdex": 897,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"spewpa": {
@@ -31874,7 +32667,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"spheal": {
@@ -31924,7 +32718,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"spinarak": {
@@ -31974,7 +32769,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"spinda": {
@@ -32021,7 +32817,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"spiritomb": {
@@ -32064,7 +32861,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"spoink": {
@@ -32111,7 +32909,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"spritzee": {
@@ -32142,7 +32941,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"squirtle": {
@@ -32199,7 +32999,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"stakataka": {
@@ -32224,7 +33025,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"stantler": {
@@ -32275,7 +33077,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"staraptor": {
@@ -32316,7 +33119,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"staravia": {
@@ -32357,7 +33161,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"starly": {
@@ -32398,7 +33203,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"starmie": {
@@ -32455,7 +33261,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"staryu": {
@@ -32512,7 +33319,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"steelix": {
@@ -32565,7 +33373,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"steenee": {
@@ -32592,7 +33401,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"stonjourner": {
@@ -32615,7 +33425,8 @@ const pokemon = {
 		"natdex": 874,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"stoutland": {
@@ -32650,7 +33461,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"stufful": {
@@ -32677,7 +33489,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"stunfisk-galar": {
@@ -32685,7 +33498,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"stunfisk": {
@@ -32720,7 +33534,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"stunky": {
@@ -32763,7 +33578,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"sudowoodo": {
@@ -32816,7 +33632,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"suicune": {
@@ -32868,7 +33685,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"sunflora": {
@@ -32918,7 +33736,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"sunkern": {
@@ -32968,7 +33787,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"surskit": {
@@ -33015,7 +33835,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"swablu": {
@@ -33064,7 +33885,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"swadloon": {
@@ -33097,7 +33919,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"swalot": {
@@ -33144,7 +33967,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"swampert": {
@@ -33193,7 +34017,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"swanna": {
@@ -33226,7 +34051,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"swellow": {
@@ -33273,7 +34099,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"swinub": {
@@ -33326,7 +34153,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"swirlix": {
@@ -33357,7 +34185,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"swoobat": {
@@ -33392,7 +34221,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"sylveon": {
@@ -33424,7 +34254,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"taillow": {
@@ -33471,7 +34302,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"talonflame": {
@@ -33502,7 +34334,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"tangela": {
@@ -33560,7 +34393,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"tangrowth": {
@@ -33603,7 +34437,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"tapu-bulu": {
@@ -33630,7 +34465,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"tapu-fini": {
@@ -33657,7 +34493,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"tapu-koko": {
@@ -33684,7 +34521,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"tapu-lele": {
@@ -33711,7 +34549,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"tauros": {
@@ -33768,7 +34607,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"teddiursa": {
@@ -33819,7 +34659,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"tentacool": {
@@ -33877,7 +34718,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"tentacruel": {
@@ -33935,7 +34777,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"tepig": {
@@ -33968,7 +34811,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"terrakion": {
@@ -34003,7 +34847,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"thievul": {
@@ -34026,7 +34871,8 @@ const pokemon = {
 		"natdex": 828,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"throh": {
@@ -34061,7 +34907,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"thundurus-therian": {
@@ -34102,7 +34949,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"thwackey": {
@@ -34125,7 +34973,8 @@ const pokemon = {
 		"natdex": 811,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"timburr": {
@@ -34160,7 +35009,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"tirtouga": {
@@ -34195,7 +35045,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"togedemaru": {
@@ -34222,7 +35073,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"togekiss": {
@@ -34265,7 +35117,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"togepi": {
@@ -34318,7 +35171,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"togetic": {
@@ -34371,7 +35225,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"torchic": {
@@ -34420,7 +35275,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"torkoal": {
@@ -34469,7 +35325,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"tornadus-therian": {
@@ -34510,7 +35367,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"torracat": {
@@ -34537,7 +35395,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"torterra": {
@@ -34578,7 +35437,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"totodile": {
@@ -34628,7 +35488,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"toucannon": {
@@ -34653,7 +35514,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"toxapex": {
@@ -34680,7 +35542,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"toxel": {
@@ -34703,7 +35566,8 @@ const pokemon = {
 		"natdex": 848,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"toxicroak": {
@@ -34746,7 +35610,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"toxtricity-low-key": {
@@ -34794,7 +35659,8 @@ const pokemon = {
 		"natdex": 849,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"tranquill": {
@@ -34829,7 +35695,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"trapinch": {
@@ -34878,7 +35745,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"treecko": {
@@ -34927,7 +35795,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"trevenant": {
@@ -34958,7 +35827,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"tropius": {
@@ -35005,7 +35875,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"trubbish": {
@@ -35040,7 +35911,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"trumbeak": {
@@ -35065,7 +35937,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"tsareena": {
@@ -35092,7 +35965,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"turtonator": {
@@ -35119,7 +35993,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"turtwig": {
@@ -35160,7 +36035,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"tympole": {
@@ -35195,7 +36071,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"tynamo": {
@@ -35228,7 +36105,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"type-null": {
@@ -35255,14 +36133,16 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"typhlosion-hisui": {
 		"data-source": "typhlosion",
 		"form-source": "hisui",
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"typhlosion": {
@@ -35313,7 +36193,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"tyranitar": {
@@ -35365,7 +36246,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"tyrantrum": {
@@ -35396,7 +36278,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"tyrogue": {
@@ -35448,7 +36331,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"tyrunt": {
@@ -35479,7 +36363,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"umbreon": {
@@ -35532,7 +36417,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"unfezant": {
@@ -35567,7 +36453,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"unown-b": {
@@ -35616,7 +36503,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"unown-f": {
@@ -35697,7 +36585,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"unown-r": {
@@ -35785,7 +36674,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"ursaluna": {
@@ -35806,7 +36696,8 @@ const pokemon = {
 		"mythical": false,
 		"natdex": 901,
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"ursaring": {
@@ -35857,7 +36748,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"urshifu": {
@@ -35880,7 +36772,8 @@ const pokemon = {
 		"natdex": 892,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"uxie": {
@@ -35923,7 +36816,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"vanillish": {
@@ -35958,7 +36852,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"vanillite": {
@@ -35993,7 +36888,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"vanilluxe": {
@@ -36028,7 +36924,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"vaporeon": {
@@ -36086,7 +36983,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"venipede": {
@@ -36121,7 +37019,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"venomoth": {
@@ -36176,7 +37075,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"venonat": {
@@ -36231,7 +37131,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"venusaur": {
@@ -36288,7 +37189,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"vespiquen": {
@@ -36331,7 +37233,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"vibrava": {
@@ -36380,7 +37283,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"victini": {
@@ -36415,7 +37319,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"victreebel": {
@@ -36470,7 +37375,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"vigoroth": {
@@ -36517,7 +37423,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"vikavolt": {
@@ -36544,7 +37451,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"vileplume": {
@@ -36601,7 +37509,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"virizion": {
@@ -36636,7 +37545,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"vivillon-archipelago": {
@@ -36942,7 +37852,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"volbeat": {
@@ -36989,7 +37900,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"volcanion": {
@@ -37020,7 +37932,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"volcarona": {
@@ -37055,14 +37968,16 @@ const pokemon = {
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"voltorb-hisui": {
 		"data-source": "voltorb",
 		"form-source": "hisui",
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"voltorb": {
@@ -37118,7 +38033,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"vullaby": {
@@ -37153,7 +38069,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"vulpix-alola": {
@@ -37168,7 +38085,8 @@ const pokemon = {
 			"lge",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"vulpix": {
@@ -37226,7 +38144,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"wailmer": {
@@ -37275,7 +38194,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"wailord": {
@@ -37324,7 +38244,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"walrein": {
@@ -37374,7 +38295,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"wartortle": {
@@ -37431,7 +38353,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"watchog": {
@@ -37464,7 +38387,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"weavile": {
@@ -37507,7 +38431,8 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"weedle": {
@@ -37562,7 +38487,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"weepinbell": {
@@ -37617,7 +38543,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"weezing-galar": {
@@ -37625,7 +38552,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"weezing": {
@@ -37682,7 +38610,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"whimsicott": {
@@ -37717,7 +38646,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"whirlipede": {
@@ -37752,7 +38682,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"whiscash": {
@@ -37802,7 +38733,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"whismur": {
@@ -37851,7 +38783,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"wigglytuff": {
@@ -37908,7 +38841,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"wimpod": {
@@ -37935,7 +38869,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"wingull": {
@@ -37984,7 +38919,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"wishiwashi": {
@@ -38011,7 +38947,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"wobbuffet": {
@@ -38063,7 +39000,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"woobat": {
@@ -38098,7 +39036,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"wooloo": {
@@ -38121,7 +39060,8 @@ const pokemon = {
 		"natdex": 831,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"wooper": {
@@ -38173,7 +39113,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"wormadam-sandy": {
@@ -38252,7 +39193,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"wurmple": {
@@ -38300,7 +39242,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"wynaut": {
@@ -38349,7 +39292,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"wyrdeer": {
@@ -38370,7 +39314,8 @@ const pokemon = {
 		"mythical": false,
 		"natdex": 899,
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"xatu": {
@@ -38422,7 +39367,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"xerneas": {
@@ -38453,7 +39399,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"xurkitree": {
@@ -38480,7 +39427,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"yamask-galar": {
@@ -38488,7 +39436,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"yamask": {
@@ -38523,7 +39472,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"yamper": {
@@ -38546,7 +39496,8 @@ const pokemon = {
 		"natdex": 835,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"yanma": {
@@ -38597,7 +39548,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"yanmega": {
@@ -38638,7 +39590,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"yungoos": {
@@ -38663,7 +39616,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"yveltal": {
@@ -38694,7 +39648,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"zacian": {
@@ -38717,7 +39672,8 @@ const pokemon = {
 		"natdex": 888,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"zamazenta": {
@@ -38740,7 +39696,8 @@ const pokemon = {
 		"natdex": 889,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"zangoose": {
@@ -38787,7 +39744,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"zapdos-galar": {
@@ -38795,7 +39753,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"zapdos": {
@@ -38852,7 +39811,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"zarude-dada": {
@@ -38889,7 +39849,8 @@ const pokemon = {
 		"natdex": 893,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"zebstrika": {
@@ -38922,7 +39883,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"zekrom": {
@@ -38957,7 +39919,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"zeraora": {
@@ -38982,7 +39945,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"zigzagoon-galar": {
@@ -38990,7 +39954,8 @@ const pokemon = {
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	},
 	"zigzagoon": {
@@ -39039,14 +40004,16 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"zoroark-hisui": {
 		"data-source": "zoroark",
 		"form-source": "hisui",
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"zoroark": {
@@ -39082,14 +40049,16 @@ const pokemon = {
 			"sh",
 			"pla",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"zorua-hisui": {
 		"data-source": "zorua",
 		"form-source": "hisui",
 		"games": [
-			"pla"
+			"pla",
+			"home"
 		]
 	},
 	"zorua": {
@@ -39125,7 +40094,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"sun",
-			"moon"
+			"moon",
+			"home"
 		]
 	},
 	"zubat": {
@@ -39183,7 +40153,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"home"
 		]
 	},
 	"zweilous": {
@@ -39218,7 +40189,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"home"
 		]
 	},
 	"zygarde": {
@@ -39249,7 +40221,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"home"
 		]
 	}
 }
