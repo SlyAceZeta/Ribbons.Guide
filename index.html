@@ -1431,15 +1431,10 @@
 					</td>
 				</tr>
 				<tr class="pokeform-tab1">
-					<th><label for="pokeform-origin"><span class="asterisk">*</span>Origin</label></th>
+					<th><label for="pokeform-origin"><span class="asterisk">*</span>Origin Game</label></th>
 					<td>
 						<select id="pokeform-origin" required>
 							<option></option>
-							<optgroup label="Non-Mainline">
-								<option value="go">GO</option>
-								<option value="colosseum">Colosseum</option>
-								<option value="xd">XD: Gale of Darkness</option>
-							</optgroup>
 							<optgroup label="Gen VIII">
 								<option value="sw">Sword</option>
 								<option value="sh">Shield</option>
@@ -1448,6 +1443,7 @@
 								<option value="pla">Legends: Arceus</option>
 							</optgroup>
 							<optgroup label="Gen VII">
+								<option value="go">GO</option>
 								<option value="sun">Sun</option>
 								<option value="moon">Moon</option>
 								<option value="usun">Ultra Sun</option>
@@ -1480,6 +1476,73 @@
 								<option value="emerald">Emerald</option>
 								<option value="fr">FireRed</option>
 								<option value="lg">LeafGreen</option>
+								<option value="colosseum">Colosseum</option>
+								<option value="xd">XD: Gale of Darkness</option>
+							</optgroup>
+							<optgroup label="Gen II Virtual Console">
+								<option value="gold">Gold</option>
+								<option value="silver">Silver</option>
+								<option value="crystal">Crystal</option>
+							</optgroup>
+							<optgroup label="Gen I Virtual Console">
+								<option value="red-jpn">Red (JPN)</option>
+								<option value="green">Green</option>
+								<option value="blue-jpn">Blue (JPN)</option>
+								<option value="red-eng">Red (ENG)</option>
+								<option value="blue-eng">Blue (ENG)</option>
+								<option value="yellow">Yellow</option>
+							</optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr class="pokeform-tab1">
+					<th><label for="pokeform-currentgame">Current Game</label></th>
+					<td>
+						<select id="pokeform-currentgame">
+							<option></option>
+							<optgroup label="Gen VIII">
+								<option value="sw">Sword</option>
+								<option value="sh">Shield</option>
+								<option value="bd">Brilliant Diamond</option>
+								<option value="sp">Shining Pearl</option>
+								<option value="pla">Legends: Arceus</option>
+							</optgroup>
+							<optgroup label="Gen VII">
+								<option value="go">GO</option>
+								<option value="sun">Sun</option>
+								<option value="moon">Moon</option>
+								<option value="usun">Ultra Sun</option>
+								<option value="umoon">Ultra Moon</option>
+								<option value="lgp">Let's Go, Pikachu!</option>
+								<option value="lge">Let's Go, Eevee!</option>
+							</optgroup>
+							<optgroup label="Gen VI">
+								<option value="x">X</option>
+								<option value="y">Y</option>
+								<option value="or">Omega Ruby</option>
+								<option value="as">Alpha Sapphire</option>
+							</optgroup>
+							<optgroup label="Gen V">
+								<option value="black">Black</option>
+								<option value="white">White</option>
+								<option value="black2">Black 2</option>
+								<option value="white2">White 2</option>
+							</optgroup>
+							<optgroup label="Gen IV">
+								<option value="diamond">Diamond</option>
+								<option value="pearl">Pearl</option>
+								<option value="platinum">Platinum</option>
+								<option value="hg">HeartGold</option>
+								<option value="ss">SoulSilver</option>
+							</optgroup>
+							<optgroup label="Gen III">
+								<option value="ruby">Ruby</option>
+								<option value="sapphire">Sapphire</option>
+								<option value="emerald">Emerald</option>
+								<option value="fr">FireRed</option>
+								<option value="lg">LeafGreen</option>
+								<option value="colosseum">Colosseum</option>
+								<option value="xd">XD: Gale of Darkness</option>
 							</optgroup>
 							<optgroup label="Gen II Virtual Console">
 								<option value="gold">Gold</option>
@@ -1502,6 +1565,364 @@
 				</tr>
 				<tr class="pokeform-ribbonrow pokeform-tab5">
 					<td colspan="2"><textarea id="pokeform-notes" maxlength="50000" rows="10"></textarea></td>
+				</tr>
+				<tr class="pokeform-tab3">
+					<th><label for="pokeform-metlevel">Met Level</label></th>
+					<td><input id="pokeform-metlevel" type="number" min="1" max="100"></td>
+				</tr>
+				<tr class="pokeform-tab3">
+					<th><label for="pokeform-metdate">Met Date</label></th>
+					<td><input id="pokeform-metdate" type="date"></td>
+				</tr>
+				<tr class="pokeform-tab3">
+					<th><label for="pokeform-characteristic">Characteristic</label></th>
+					<td>
+						<select id="pokeform-characteristic">
+							<option></option>
+							<option>Loves to eat</option>
+							<option value="Takes plenty of siestas">Takes plenty of siestas *</option>
+							<option value="Nods off a lot">Nods off a lot *</option>
+							<option>Scatters things often</option>
+							<option>Likes to relax</option>
+							<option>Proud of its power</option>
+							<option>Likes to thrash about</option>
+							<option>A little quick tempered</option>
+							<option>Likes to fight</option>
+							<option>Quick tempered</option>
+							<option>Sturdy body</option>
+							<option>Capable of taking hits</option>
+							<option>Highly persistent</option>
+							<option>Good endurance</option>
+							<option>Good perseverance</option>
+							<option>Highly curious</option>
+							<option>Mischievous</option>
+							<option>Thoroughly cunning</option>
+							<option>Often lost in thought</option>
+							<option>Very finicky</option>
+							<option>Strong willed</option>
+							<option>Somewhat vain</option>
+							<option>Strongly defiant</option>
+							<option>Hates to lose</option>
+							<option>Somewhat stubborn</option>
+							<option>Likes to run</option>
+							<option>Alert to sounds</option>
+							<option>Impetuous and silly</option>
+							<option>Somewhat of a clown</option>
+							<option>Quick to flee</option>
+						</select>
+					</td>
+				</tr>
+				<tr class="pokeform-tab3">
+					<td colspan="2">* For Pokémon in Gen IV or Gen V games:
+						<ul>
+							<li>"Takes plenty of siestas" = "Often dozes off"</li>
+							<li>"Nods off a lot" = "Often scatters things"</li>
+						</ul>
+					</td>
+				</tr>
+				<tr class="pokeform-tab2">
+					<th><label>IVs</label></th>
+					<td>
+						<div class="pokeform-stats">
+							<div>HP<br><input type="number" id="pokeform-iv-hp" min="0" max="31"></div>
+							<div>Atk<br><input type="number" id="pokeform-iv-atk" min="0" max="31"></div>
+							<div>Def<br><input type="number" id="pokeform-iv-def" min="0" max="31"></div>
+							<div>SpA<br><input type="number" id="pokeform-iv-spa" min="0" max="31"></div>
+							<div>SpD<br><input type="number" id="pokeform-iv-spd" min="0" max="31"></div>
+							<div>Spe<br><input type="number" id="pokeform-iv-spe" min="0" max="31"></div>
+						</div>
+					</td>
+				</tr>
+				<tr class="pokeform-tab2">
+					<th><label>EVs</label></th>
+					<td>
+						<div class="pokeform-stats">
+							<div>HP<br><input type="number" id="pokeform-ev-hp" min="0" max="255"></div>
+							<div>Atk<br><input type="number" id="pokeform-ev-atk" min="0" max="255"></div>
+							<div>Def<br><input type="number" id="pokeform-ev-def" min="0" max="255"></div>
+							<div>SpA<br><input type="number" id="pokeform-ev-spa" min="0" max="255"></div>
+							<div>SpD<br><input type="number" id="pokeform-ev-spd" min="0" max="255"></div>
+							<div>Spe<br><input type="number" id="pokeform-ev-spe" min="0" max="255"></div>
+						</div>
+					</td>
+				</tr>
+				<tr class="pokeform-tab2">
+					<th><label for="pokeform-ability">Ability</label></th>
+					<td>
+						<select id="pokeform-ability">
+							<option></option>
+							<option>Adaptability</option>
+							<option>Aerilate</option>
+							<option>Aftermath</option>
+							<option>Air Lock</option>
+							<option>Analytic</option>
+							<option>Anger Point</option>
+							<option>Anticipation</option>
+							<option>Arena Trap</option>
+							<option>Aroma Veil</option>
+							<option>As One (Ice Rider)</option>
+							<option>As One (Shadow Rider)</option>
+							<option>Aura Break</option>
+							<option>Bad Dreams</option>
+							<option>Ball Fetch</option>
+							<option>Battery</option>
+							<option>Battle Armor</option>
+							<option>Battle Bond</option>
+							<option>Beast Boost</option>
+							<option>Berserk</option>
+							<option>Big Pecks</option>
+							<option>Blaze</option>
+							<option>Bulletproof</option>
+							<option>Cheek Pouch</option>
+							<option>Chilling Neigh</option>
+							<option>Chlorophyll</option>
+							<option>Clear Body</option>
+							<option>Cloud Nine</option>
+							<option>Color Change</option>
+							<option>Comatose</option>
+							<option>Competitive</option>
+							<option>Compound Eyes</option>
+							<option>Contrary</option>
+							<option>Corrosion</option>
+							<option>Cotton Down</option>
+							<option>Curious Medicine</option>
+							<option>Cursed Body</option>
+							<option>Cute Charm</option>
+							<option>Damp</option>
+							<option>Dancer</option>
+							<option>Dark Aura</option>
+							<option>Dauntless Shield</option>
+							<option>Dazzling</option>
+							<option>Defeatist</option>
+							<option>Defiant</option>
+							<option>Delta Stream</option>
+							<option>Desolate Land</option>
+							<option>Disguise</option>
+							<option>Download</option>
+							<option>Dragon’s Maw</option>
+							<option>Drizzle</option>
+							<option>Drought</option>
+							<option>Dry Skin</option>
+							<option>Early Bird</option>
+							<option>Effect Spore</option>
+							<option>Electric Surge</option>
+							<option>Emergency Exit</option>
+							<option>Fairy Aura</option>
+							<option>Filter</option>
+							<option>Flame Body</option>
+							<option>Flare Boost</option>
+							<option>Flash Fire</option>
+							<option>Flower Gift</option>
+							<option>Flower Veil</option>
+							<option>Fluffy</option>
+							<option>Forecast</option>
+							<option>Forewarn</option>
+							<option>Friend Guard</option>
+							<option>Frisk</option>
+							<option>Full Metal Body</option>
+							<option>Fur Coat</option>
+							<option>Gale Wings</option>
+							<option>Galvanize</option>
+							<option>Gluttony</option>
+							<option>Gooey</option>
+							<option>Gorilla Tactics</option>
+							<option>Grass Pelt</option>
+							<option>Grassy Surge</option>
+							<option>Grim Neigh</option>
+							<option>Gulp Missile</option>
+							<option>Guts</option>
+							<option>Harvest</option>
+							<option>Healer</option>
+							<option>Heatproof</option>
+							<option>Heavy Metal</option>
+							<option>Honey Gather</option>
+							<option>Huge Power</option>
+							<option>Hunger Switch</option>
+							<option>Hustle</option>
+							<option>Hydration</option>
+							<option>Hyper Cutter</option>
+							<option>Ice Body</option>
+							<option>Ice Face</option>
+							<option>Ice Scales</option>
+							<option>Illuminate</option>
+							<option>Illusion</option>
+							<option>Immunity</option>
+							<option>Imposter</option>
+							<option>Infiltrator</option>
+							<option>Innards Out</option>
+							<option>Inner Focus</option>
+							<option>Insomnia</option>
+							<option>Intimidate</option>
+							<option>Intrepid Sword</option>
+							<option>Iron Barbs</option>
+							<option>Iron Fist</option>
+							<option>Justified</option>
+							<option>Keen Eye</option>
+							<option>Klutz</option>
+							<option>Leaf Guard</option>
+							<option>Levitate</option>
+							<option>Libero</option>
+							<option>Light Metal</option>
+							<option>Lightning Rod</option>
+							<option>Limber</option>
+							<option>Liquid Ooze</option>
+							<option>Liquid Voice</option>
+							<option>Long Reach</option>
+							<option>Magic Bounce</option>
+							<option>Magic Guard</option>
+							<option>Magician</option>
+							<option>Magma Armor</option>
+							<option>Magnet Pull</option>
+							<option>Marvel Scale</option>
+							<option>Mega Launcher</option>
+							<option>Merciless</option>
+							<option>Mimicry</option>
+							<option>Minus</option>
+							<option>Mirror Armor</option>
+							<option>Misty Surge</option>
+							<option>Mold Breaker</option>
+							<option>Moody</option>
+							<option>Motor Drive</option>
+							<option>Moxie</option>
+							<option>Multiscale</option>
+							<option>Multitype</option>
+							<option>Mummy</option>
+							<option>Natural Cure</option>
+							<option>Neuroforce</option>
+							<option>Neutralizing Gas</option>
+							<option>No Guard</option>
+							<option>Normalize</option>
+							<option>Oblivious</option>
+							<option>Overcoat</option>
+							<option>Overgrow</option>
+							<option>Own Tempo</option>
+							<option>Parental Bond</option>
+							<option>Pastel Veil</option>
+							<option>Perish Body</option>
+							<option>Pickpocket</option>
+							<option>Pickup</option>
+							<option>Pixilate</option>
+							<option>Plus</option>
+							<option>Poison Heal</option>
+							<option>Poison Point</option>
+							<option>Poison Touch</option>
+							<option>Power Construct</option>
+							<option>Power of Alchemy</option>
+							<option>Power Spot</option>
+							<option>Prankster</option>
+							<option>Pressure</option>
+							<option>Primordial Sea</option>
+							<option>Prism Armor</option>
+							<option>Propeller Tail</option>
+							<option>Protean</option>
+							<option>Psychic Surge</option>
+							<option>Punk Rock</option>
+							<option>Pure Power</option>
+							<option>Queenly Majesty</option>
+							<option>Quick Draw</option>
+							<option>Quick Feet</option>
+							<option>Rain Dish</option>
+							<option>Rattled</option>
+							<option>Receiver</option>
+							<option>Reckless</option>
+							<option>Refrigerate</option>
+							<option>Regenerator</option>
+							<option>Ripen</option>
+							<option>Rivalry</option>
+							<option>RKS System</option>
+							<option>Rock Head</option>
+							<option>Rough Skin</option>
+							<option>Run Away</option>
+							<option>Sand Force</option>
+							<option>Sand Rush</option>
+							<option>Sand Spit</option>
+							<option>Sand Stream</option>
+							<option>Sand Veil</option>
+							<option>Sap Sipper</option>
+							<option>Schooling</option>
+							<option>Scrappy</option>
+							<option>Screen Cleaner</option>
+							<option>Serene Grace</option>
+							<option>Shadow Shield</option>
+							<option>Shadow Tag</option>
+							<option>Shed Skin</option>
+							<option>Sheer Force</option>
+							<option>Shell Armor</option>
+							<option>Shield Dust</option>
+							<option>Shields Down</option>
+							<option>Simple</option>
+							<option>Skill Link</option>
+							<option>Slow Start</option>
+							<option>Slush Rush</option>
+							<option>Sniper</option>
+							<option>Snow Cloak</option>
+							<option>Snow Warning</option>
+							<option>Solar Power</option>
+							<option>Solid Rock</option>
+							<option>Soul-Heart</option>
+							<option>Soundproof</option>
+							<option>Speed Boost</option>
+							<option>Stakeout</option>
+							<option>Stall</option>
+							<option>Stalwart</option>
+							<option>Stamina</option>
+							<option>Stance Change</option>
+							<option>Static</option>
+							<option>Steadfast</option>
+							<option>Steam Engine</option>
+							<option>Steelworker</option>
+							<option>Steely Spirit</option>
+							<option>Stench</option>
+							<option>Sticky Hold</option>
+							<option>Storm Drain</option>
+							<option>Strong Jaw</option>
+							<option>Sturdy</option>
+							<option>Suction Cups</option>
+							<option>Super Luck</option>
+							<option>Surge Surfer</option>
+							<option>Swarm</option>
+							<option>Sweet Veil</option>
+							<option>Swift Swim</option>
+							<option>Symbiosis</option>
+							<option>Synchronize</option>
+							<option>Tangled Feet</option>
+							<option>Tangling Hair</option>
+							<option>Technician</option>
+							<option>Telepathy</option>
+							<option>Teravolt</option>
+							<option>Thick Fat</option>
+							<option>Tinted Lens</option>
+							<option>Torrent</option>
+							<option>Tough Claws</option>
+							<option>Toxic Boost</option>
+							<option>Trace</option>
+							<option>Transistor</option>
+							<option>Triage</option>
+							<option>Truant</option>
+							<option>Turboblaze</option>
+							<option>Unaware</option>
+							<option>Unburden</option>
+							<option>Unnerve</option>
+							<option>Unseen Fist</option>
+							<option>Victory Star</option>
+							<option>Vital Spirit</option>
+							<option>Volt Absorb</option>
+							<option>Wandering Spirit</option>
+							<option>Water Absorb</option>
+							<option>Water Bubble</option>
+							<option>Water Compaction</option>
+							<option>Water Veil</option>
+							<option>Weak Armor</option>
+							<option>White Smoke</option>
+							<option>Wimp Out</option>
+							<option>Wonder Guard</option>
+							<option>Wonder Skin</option>
+							<option>Zen Mode</option>
+						</select>
+					</td>
+				</tr>
+				<tr class="pokeform-tab2">
+					<td colspan="2">All Stats fields are optional for your own record-keeping. Stats info will not affect the site's Ribbon guidance for your Pokémon.</td>
 				</tr>
 			</table>
 			<h5>

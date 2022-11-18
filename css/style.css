@@ -858,3 +858,12 @@ footer {
 .changelog-active .changelog-date:before {
 	content: "▲";
 }
+.pokeform-stats {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: center;
+}
+.pokeform-stats input {
+	width: 60px;
+}

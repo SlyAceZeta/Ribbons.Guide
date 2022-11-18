@@ -34,6 +34,22 @@ function createPokemon(edit = false){
 	} else if(genderCheck === "female" || (genderCheck === "both" && $("#pokeform-gender-checkbox").prop("checked"))){
 		gender = "female";
 	}
+	var iv = {
+		hp: $("#pokeform-iv-hp").val(),
+		atk: $("#pokeform-iv-atk").val(),
+		def: $("#pokeform-iv-def").val(),
+		spa: $("#pokeform-iv-spa").val(),
+		spd: $("#pokeform-iv-spd").val(),
+		spe: $("#pokeform-iv-spe").val()
+	}
+	var ev = {
+		hp: $("#pokeform-ev-hp").val(),
+		atk: $("#pokeform-ev-atk").val(),
+		def: $("#pokeform-ev-def").val(),
+		spa: $("#pokeform-ev-spa").val(),
+		spd: $("#pokeform-ev-spd").val(),
+		spe: $("#pokeform-ev-spe").val()
+	}
 	var str = {
 		name: $("#pokeform-nickname").val(),
 		dex: species,
@@ -42,28 +58,39 @@ function createPokemon(edit = false){
 		ball: $("#pokeform-ball").val(),
 		title: $("#pokeform-title").val(),
 		level: $("#pokeform-level").val(),
+		metlevel: $("#pokeform-metlevel").val(),
+		metdate: $("#pokeform-metdate").val(),
+		characteristic: $("#pokeform-characteristic").val(),
 		lang: $("#pokeform-lang").val(),
 		ot: $("#pokeform-ot").val(),
 		id: $("#pokeform-idno").val(),
 		nature: $("#pokeform-nature").val(),
 		mint: $("#pokeform-mint").val(),
+		iv: iv,
+		ev: ev,
+		ability: $("#pokeform-ability").val(),
 		origin: $("#pokeform-origin").val(),
+		currentgame: $("#pokeform-currentgame").val(),
 		ribbons: ribbons,
 		notes: $("#pokeform-notes").val()
 	};
 	if(str.dex && str.ball && str.origin && str.title && str.level && str.lang){
 		if(!str.id || str.id.match(/^[0-9]{5,6}$/)){
 			if(str.level > 0 && str.level < 101){
-				allpkmn = JSON.parse(localStorage.getItem("pokemon"));
-				var n = (edit) ? $("#pokeform-edit").attr("pokemon") : allpkmn.entries.length;
-				allpkmn.entries[n] = str;
-				localStorage.setItem("pokemon", JSON.stringify(allpkmn));
-				if(edit){
-					clearTable(allpkmn);
+				if(!str.metlevel || str.metlevel <= str.level){
+					allpkmn = JSON.parse(localStorage.getItem("pokemon"));
+					var n = (edit) ? $("#pokeform-edit").attr("pokemon") : allpkmn.entries.length;
+					allpkmn.entries[n] = str;
+					localStorage.setItem("pokemon", JSON.stringify(allpkmn));
+					if(edit){
+						clearTable(allpkmn);
+					} else {
+						addRow(str, n);
+					}
+					resetForm();
 				} else {
-					addRow(str, n);
+					alert("The Pokémon's current level cannot be lower than the level you met it.");
 				}
-				resetForm();
 			} else {
 				alert("The Pokémon's level must be a number from 1 to 100.");
 			}
@@ -71,7 +98,7 @@ function createPokemon(edit = false){
 			alert("The ID No. can only be five or six numbers.");
 		}
 	} else {
-		alert("One or more fields has not been filled.");
+		alert("One or more required fields in the Summary tab has not been filled.");
 	}
 }
 
@@ -120,7 +147,6 @@ function changeTheme(t){
 
 function toggleCheck(id){
 	$("#" + id).prop("checked", !$("#" + id).prop("checked"));
-	addPreviews();
 }
 
 function resetForm(c = false){
@@ -165,13 +191,28 @@ function editPkmn(id){
 	if(pkmn.gender === "female") $("#pokeform-gender-checkbox").prop("checked", "checked").change();
 	$("#pokeform-ball").val(pkmn.ball).change();
 	if(pkmn.title) $("#pokeform-title").val(pkmn.title).change();
+	if(pkmn.ability) $("#pokeform-ability").val(pkmn.ability).change();
 	if(pkmn.level) $("#pokeform-level").val(pkmn.level);
+	if(pkmn.metlevel) $("#pokeform-metlevel").val(pkmn.metlevel);
+	if(pkmn.metdate) $("#pokeform-metdate").val(pkmn.metdate);
+	if(pkmn.characteristic) $("#pokeform-characteristic").val(pkmn.characteristic).change();
 	if(pkmn.lang) $("#pokeform-lang").val(pkmn.lang).change();
 	$("#pokeform-ot").val(pkmn.ot);
 	$("#pokeform-idno").val(pkmn.id);
 	$("#pokeform-nature").val(pkmn.nature).change();
 	$("#pokeform-mint").val(pkmn.mint).change();
+	if(pkmn.iv){
+		for(var s in pkmn.iv){
+			$("#pokeform-iv-" + s).val(pkmn.iv[s]);
+		}
+	}
+	if(pkmn.ev){
+		for(var s in pkmn.ev){
+			$("#pokeform-ev-" + s).val(pkmn.ev[s]);
+		}
+	}
 	$("#pokeform-origin").val(pkmn.origin).change();
+	if(pkmn.currentgame) $("#pokeform-currentgame").val(pkmn.currentgame).change();
 	$("#pokeform-notes").val(pkmn.notes);
 	showModal();
 }
