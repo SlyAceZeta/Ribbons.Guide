@@ -76,8 +76,8 @@ function createPokemon(edit = false){
 	};
 	if(str.dex && str.ball && str.origin && str.title && str.level && str.lang){
 		if(!str.id || str.id.match(/^[0-9]{5,6}$/)){
-			if(str.level > 0 && str.level < 101){
-				if(!str.metlevel || str.metlevel <= str.level){
+			if(parseInt(str.level) > 0 && parseInt(str.level) < 101){
+				if(!str.metlevel || parseInt(str.metlevel) <= parseInt(str.level)){
 					allpkmn = JSON.parse(localStorage.getItem("pokemon"));
 					var n = (edit) ? $("#pokeform-edit").attr("pokemon") : allpkmn.entries.length;
 					allpkmn.entries[n] = str;
