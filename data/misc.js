@@ -14,6 +14,7 @@ const languages = {
 // Origin Marks
 const games = {
 	"go":		{"name": "GO",					"mark": "go"},
+	"home":		{"name": "HOME",				"mark": "galar"},
 	"scar":		{"name": "Scarlet",				"mark": "paldea"},
 	"vio":		{"name": "Violet",				"mark": "paldea"},
 	"sw":		{"name": "Sword",				"mark": "galar"},
@@ -84,7 +85,7 @@ const mints = {
 }
 
 // Ribbons
-const ribbonIDs = {"Event": "e", "Marks": "m", "Gen III": 3, "Gen IV": 4, "Gen VI": 6, "Gen VII": 7, "Gen VIII": 8};
+const ribbonIDs = {"Event": "e", "Marks": "m", "Gen III": 3, "Gen IV": 4, "Gen VI": 6, "Gen VII": 7, "Gen VIII": 8, "Gen IX": 9};
 const allRibbons = {
 	"champion-ribbon":				{"name": "Champion Ribbon",				"gen": 3,	"title": "the Champion",			"available": ["ruby", "sapphire", "emerald", "fr", "lg"], "desc": "A Ribbon awarded for clearing the Pokémon League and entering the Hall of Fame somewhere long ago."},
 	"sinnoh-champion-ribbon":		{"name": "Sinnoh Champion Ribbon",		"gen": 4,	"title": "the Sinnoh Champion",		"available": ["diamond", "pearl", "platinum", "bd", "sp"], "desc": "A Ribbon awarded for beating the Sinnoh Champion and entering the Sinnoh Hall of Fame."},
@@ -92,6 +93,7 @@ const allRibbons = {
 	"hoenn-champion-ribbon":		{"name": "Hoenn Champion Ribbon",		"gen": 6,	"title": "the Hoenn Champion",		"available": ["or", "as"], "desc": "A Ribbon awarded for beating the Hoenn Champion and entering the Hoenn Hall of Fame."},
 	"alola-champion-ribbon":		{"name": "Alola Champion Ribbon",		"gen": 7,	"title": "the Alola Champion",		"available": ["sun", "moon", "usun", "umoon"], "desc": "A Ribbon awarded for becoming the Alola Champion and entering the Alola Hall of Fame."},
 	"galar-champion-ribbon":		{"name": "Galar Champion Ribbon",		"gen": 8,	"title": "the Galar Champion",		"available": ["sw", "sh"], "desc": "A Ribbon awarded for becoming the Galar Champion and entering the Galar Hall of Fame."},
+	"paldea-champion-ribbon":		{"name": "Paldea Champion Ribbon",		"gen": 9,	"title": "the Paldea Champion",		"available": ["scar", "vio"], "desc": "A Ribbon awarded for becoming a Paldea Champion and entering the Paldea Hall of Fame."},
 	"cool-ribbon-hoenn":			{"name": "Cool Ribbon",					"gen": 3,										"available": ["ruby", "sapphire", "emerald"], "desc": "Hoenn Cool Contest Normal Rank winner!"},
 	"cool-ribbon-super-hoenn":		{"name": "Cool Ribbon Super",			"gen": 3,										"available": ["ruby", "sapphire", "emerald"], "desc": "Hoenn Cool Contest Super Rank winner!"},
 	"cool-ribbon-hyper-hoenn":		{"name": "Cool Ribbon Hyper",			"gen": 3,										"available": ["ruby", "sapphire", "emerald"], "desc": "Hoenn Cool Contest Hyper Rank winner!"},
@@ -174,7 +176,8 @@ const allRibbons = {
 	"training-ribbon":				{"name": "Training Ribbon",				"gen": 6,	"title": "the Tried and True",		"available": ["x", "y", "or", "as"], "desc": "A Ribbon that can be given to a Pokémon that has overcome rigorous trials and training."},
 	"battle-royal-master-ribbon":	{"name": "Battle Royal Master Ribbon",	"gen": 7,	"title": "the Royal Master",		"available": ["sun", "moon", "usun", "umoon"], "desc": "A Ribbon that can be given to a Pokémon that has achieved victory in the Battle Royal."},
 	"master-rank-ribbon":			{"name": "Master Rank Ribbon",			"gen": 8,	"title": "the Rank Master",			"available": ["sw", "sh"], "desc": "A Ribbon awarded for winning against a Trainer in the Master Ball Tier of Ranked Battles."},
-	"hisui-ribbon":					{"name": "Hisui Ribbon",				"gen": 8,										"available": ["pla"], "desc": "A Ribbon awarded to a Pokémon that posed for a photograph in Hisui in the distant past."},
+	"hisui-ribbon":					{"name": "Hisui Ribbon",				"gen": 8,	"title": "of the Distant Past",		"available": ["pla"], "desc": "A Ribbon awarded to a Pokémon that posed for a photograph in Hisui in the distant past."},
+	"once-in-a-lifetime-ribbon":	{"name": "Once-in-a-Lifetime Ribbon",	"gen": 9,	"title": "the One-in-a-Million",	"available": ["scar", "vio"], "desc": "A rare Ribbon found extremely infrequently on Pokémon obtained in a Surprise Trade."},
 	"country-ribbon":				{"name": "Country Ribbon",				"gen": 3,	"title": "the Victor",				"available": null, "desc": "A Ribbon awarded to a Pokémon League Champion."},
 	"national-ribbon":				{"name": "National Ribbon",				"gen": 3,	"title": "the Triumphant",			"available": ["colosseum", "xd"], "desc": "A Ribbon awarded for overcoming all difficult challenges."},
 	"earth-ribbon":					{"name": "Earth Ribbon",				"gen": 3,	"title": "the 100× Victorious",		"available": ["colosseum", "xd"], "desc": "A Ribbon awarded for winning one hundred battles in a row."},
@@ -233,4 +236,12 @@ const allRibbons = {
 	"thorny-mark":					{"name": "Thorny Mark",					"gen": 8,	"title": "the Pompous",				"available": null, "mark": true, "desc": "A mark for a pompous Pokémon."},
 	"vigor-mark":					{"name": "Vigor Mark",					"gen": 8,	"title": "the Lively",				"available": null, "mark": true, "desc": "A mark for a lively Pokémon."},
 	"slump-mark":					{"name": "Slump Mark",					"gen": 8,	"title": "the Worn-Out",			"available": null, "mark": true, "desc": "A mark for a worn-out Pokémon."}
+	"jumbo-mark":					{"name": "Jumbo Mark",					"gen": 9,	"title": "the Great",				"available": null, "mark": true, "desc": "A mark for a Pokémon that's the largest it can be."}
+	"mini-mark":					{"name": "Mini Mark",					"gen": 9,	"title": "the Teeny",				"available": null, "mark": true, "desc": "A mark for a Pokémon that's the smallest it can be."}
+	"itemfinder-mark":				{"name": "Itemfinder Mark",				"gen": 9,	"title": "the Treasure Hunter",		"available": null, "mark": true, "desc": "A mark for a Pokémon that likes to pick things up."}
+	"partner-mark":					{"name": "Partner Mark",				"gen": 9,	"title": "the Reliable Partner",	"available": null, "mark": true, "desc": "A mark for a friendly Pokémon."}
+	"gourmand-mark":				{"name": "Gourmand Mark",				"gen": 9,	"title": "the Gourmet",				"available": null, "mark": true, "desc": "A mark for a Pokémon gourmet."}
+	"alpha-mark":					{"name": "Alpha Mark",					"gen": 9,	"title": "the Former Alpha",		"available": null, "mark": true, "desc": "A mark for a Pokémon that was an alpha."}
+	"mightiest-mark":				{"name": "Mightiest Mark",				"gen": 9,	"title": "the Unrivaled",			"available": null, "mark": true, "desc": "A mark for a Pokémon caught in a seven-star Tera Raid Battle."}
+	"titan-mark":					{"name": "Titan Mark",					"gen": 9,	"title": "the Former Titan",		"available": null, "mark": true, "desc": "A mark for a Pokémon that was a titan."}
 }
