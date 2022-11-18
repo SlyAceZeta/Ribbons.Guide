@@ -70,6 +70,7 @@ body {
 }
 #pokeform-tabs div {
 	display: flex;
+	flex-wrap: wrap;
 }
 #pokeform-tabs span {
 	cursor: pointer;
@@ -861,7 +862,7 @@ footer {
 .pokeform-stats {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	text-align: center;
 }
 .pokeform-stats input {
