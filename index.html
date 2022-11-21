@@ -1180,46 +1180,8 @@
 					<td>
 						<select id="pokeform-ball" required>
 							<option></option>
-							<optgroup label="Standard">
-								<option value="poke">Poké Ball</option>
-								<option value="great">Great Ball</option>
-								<option value="ultra">Ultra Ball</option>
-								<option value="master">Master Ball</option>
-								<option value="safari">Safari Ball</option>
-								<option value="fast">Fast Ball</option>
-								<option value="level">Level Ball</option>
-								<option value="lure">Lure Ball</option>
-								<option value="heavy">Heavy Ball</option>
-								<option value="love">Love Ball</option>
-								<option value="friend">Friend Ball</option>
-								<option value="moon">Moon Ball</option>
-								<option value="sport">Sport Ball</option>
-								<option value="net">Net Ball</option>
-								<option value="dive">Dive Ball</option>
-								<option value="nest">Nest Ball</option>
-								<option value="repeat">Repeat Ball</option>
-								<option value="timer">Timer Ball</option>
-								<option value="luxury">Luxury Ball</option>
-								<option value="premier">Premier Ball</option>
-								<option value="dusk">Dusk Ball</option>
-								<option value="heal">Heal Ball</option>
-								<option value="quick">Quick Ball</option>
-								<option value="cherish">Cherish Ball</option>
-								<option value="dream">Dream Ball</option>
-								<option value="beast">Beast Ball</option>
-							</optgroup>
-							<optgroup label="Hisui">
-								<option value="hisuian-poke">Hisuian Poké Ball</option>
-								<option value="hisuian-great">Hisuian Great Ball</option>
-								<option value="hisuian-ultra">Hisuian Ultra Ball</option>
-								<option value="hisuian-heavy">Hisuian Heavy Ball</option>
-								<option value="leaden">Leaden Ball</option>
-								<option value="gigaton">Gigaton Ball</option>
-								<option value="feather">Feather Ball</option>
-								<option value="wing">Wing Ball</option>
-								<option value="jet">Jet Ball</option>
-								<option value="origin">Origin Ball</option>
-							</optgroup>
+							<optgroup id="pokeform-ball-standard" label="Standard"></optgroup>
+							<optgroup id="pokeform-ball-hisui" label="Hisui"></optgroup>
 						</select>
 					</td>
 				</tr>
@@ -1228,114 +1190,6 @@
 					<td>
 						<select id="pokeform-title" required>
 							<option selected>None</option>
-							<optgroup label="League Ribbons">
-								<option value="champion-ribbon">the Champion</option>
-								<option value="sinnoh-champion-ribbon">the Sinnoh Champion</option>
-								<option value="kalos-champion-ribbon">the Kalos Champion</option>
-								<option value="hoenn-champion-ribbon">the Hoenn Champion</option>
-								<option value="alola-champion-ribbon">the Alola Champion</option>
-								<option value="galar-champion-ribbon">the Galar Champion</option>
-							</optgroup>
-							<optgroup label="Contest Ribbons">
-								<option value="coolness-master-ribbon">the Former Star</option>
-								<option value="beauty-master-ribbon">the Vintage Beauty</option>
-								<option value="cuteness-master-ribbon">the Former Idol</option>
-								<option value="cleverness-master-ribbon">the Historic Genius</option>
-								<option value="toughness-master-ribbon">the Formerly Buff</option>
-								<option value="contest-star-ribbon">the Shining Star</option>
-								<option value="contest-memory-ribbon">the Treasured Memory</option>
-								<option value="contest-memory-ribbon-gold">the Treasured Memory</option>
-							</optgroup>
-							<optgroup label="Tower Ribbons">
-								<option value="battle-memory-ribbon">the Exciting Memory</option>
-								<option value="battle-memory-ribbon-gold">the Exciting Memory</option>
-								<option value="skillful-battler-ribbon">the Veteran</option>
-								<option value="expert-battler-ribbon">the Master</option>
-								<option value="battle-tree-great-ribbon">the Tree Victor</option>
-								<option value="battle-tree-master-ribbon">the Tree Master</option>
-								<option value="tower-master-ribbon">the Tower Master</option>
-							</optgroup>
-							<optgroup label="Memorial Ribbons">
-								<option value="artist-ribbon">the Model for Paintings</option>
-								<option value="effort-ribbon">the Once Well-Trained</option>
-								<option value="alert-ribbon">the Once Vigilant</option>
-								<option value="shock-ribbon">the Once Cowardly</option>
-								<option value="downcast-ribbon">the Once Shaken</option>
-								<option value="careless-ribbon">the Once Imperfect</option>
-								<option value="relax-ribbon">the Once Well-Rested</option>
-								<option value="snooze-ribbon">the Once Sleepy</option>
-								<option value="smile-ribbon">the Once Cheery</option>
-								<option value="gorgeous-ribbon">the Gorgeous</option>
-								<option value="royal-ribbon">the Royal</option>
-								<option value="gorgeous-royal-ribbon">the Gorgeous Royal</option>
-								<option value="footprint-ribbon">the Strutter</option>
-								<option value="legend-ribbon">the Living Legend</option>
-								<option value="best-friends-ribbon">the Great Friend</option>
-								<option value="training-ribbon">the Tried and True</option>
-								<option value="battle-royal-master-ribbon">the Royal Master</option>
-								<option value="master-rank-ribbon">the Rank Master</option>
-							</optgroup>
-							<optgroup label="Gift Ribbons">
-								<option value="country-ribbon">the Victor</option>
-								<option value="national-ribbon">the Triumphant</option>
-								<option value="earth-ribbon">the 100× Victorious</option>
-								<option value="world-ribbon">the World Conqueror</option>
-								<option value="classic-ribbon">the Pokémon Fan</option>
-								<option value="premier-ribbon">the Celebratory</option>
-								<option value="event-ribbon">the Festive</option>
-								<option value="birthday-ribbon">the Best Buddy</option>
-								<option value="special-ribbon">the Premium</option>
-								<option value="souvenir-ribbon">the Cherished</option>
-								<option value="wishing-ribbon">the Wish Granter</option>
-								<option value="battle-champion-ribbon">the Battle Champion</option>
-								<option value="world-champion-ribbon">the World Champion</option>
-							</optgroup>
-							<optgroup label="Marks">
-								<option value="lunchtime-mark">the Peckish</option>
-								<option value="sleepy-time-mark">the Sleepy</option>
-								<option value="dusk-mark">the Dozy</option>
-								<option value="dawn-mark">the Early Riser</option>
-								<option value="cloudy-mark">the Cloud Watcher</option>
-								<option value="rainy-mark">the Sodden</option>
-								<option value="stormy-mark">the Thunderstruck</option>
-								<option value="snowy-mark">the Snow Frolicker</option>
-								<option value="blizzard-mark">the Shivering</option>
-								<option value="dry-mark">the Parched</option>
-								<option value="sandstorm-mark">the Sandswept</option>
-								<option value="misty-mark">the Mist Drifter</option>
-								<option value="fishing-mark">the Catch of the Day</option>
-								<option value="curry-mark">the Curry Connoisseur</option>
-								<option value="uncommon-mark">the Sociable</option>
-								<option value="rare-mark">the Recluse</option>
-								<option value="rowdy-mark">the Rowdy</option>
-								<option value="absent-minded-mark">the Spacey</option>
-								<option value="jittery-mark">the Anxious</option>
-								<option value="excited-mark">the Giddy</option>
-								<option value="charismatic-mark">the Radiant</option>
-								<option value="calmness-mark">the Serene</option>
-								<option value="intense-mark">the Feisty</option>
-								<option value="zoned-out-mark">the Daydreamer</option>
-								<option value="joyful-mark">the Joyful</option>
-								<option value="angry-mark">the Furious</option>
-								<option value="smiley-mark">the Beaming</option>
-								<option value="teary-mark">the Teary-Eyed</option>
-								<option value="upbeat-mark">the Chipper</option>
-								<option value="peeved-mark">the Grumpy</option>
-								<option value="intellectual-mark">the Scholar</option>
-								<option value="ferocious-mark">the Rampaging</option>
-								<option value="crafty-mark">the Opportunist</option>
-								<option value="scowling-mark">the Stern</option>
-								<option value="kindly-mark">the Kindhearted</option>
-								<option value="flustered-mark">the Easily Flustered</option>
-								<option value="pumped-up-mark">the Driven</option>
-								<option value="zero-energy-mark">the Apathetic</option>
-								<option value="prideful-mark">the Arrogant</option>
-								<option value="unsure-mark">the Reluctant</option>
-								<option value="humble-mark">the Humble</option>
-								<option value="thorny-mark">the Pompous</option>
-								<option value="vigor-mark">the Lively</option>
-								<option value="slump-mark">the Worn-Out</option>
-							</optgroup>
 						</select>
 					</td>
 				</tr>
@@ -1344,15 +1198,6 @@
 					<td>
 						<select id="pokeform-lang" required>
 							<option></option>
-							<option>ENG</option>
-							<option>FRE</option>
-							<option>GER</option>
-							<option>ITA</option>
-							<option>SPA</option>
-							<option>CHS</option>
-							<option>CHT</option>
-							<option>JPN</option>
-							<option>KOR</option>
 						</select>
 					</td>
 				</tr>
@@ -1406,27 +1251,6 @@
 					<td>
 						<select id="pokeform-mint">
 							<option selected>None</option>
-							<option value="Lonely">Lonely Mint</option>
-							<option value="Adamant">Adamant Mint</option>
-							<option value="Naughty">Naughty Mint</option>
-							<option value="Brave">Brave Mint</option>
-							<option value="Bold">Bold Mint</option>
-							<option value="Impish">Impish Mint</option>
-							<option value="Lax">Lax Mint</option>
-							<option value="Relaxed">Relaxed Mint</option>
-							<option value="Modest">Modest Mint</option>
-							<option value="Mild">Mild Mint</option>
-							<option value="Rash">Rash Mint</option>
-							<option value="Quiet">Quiet Mint</option>
-							<option value="Calm">Calm Mint</option>
-							<option value="Gentle">Gentle Mint</option>
-							<option value="Careful">Careful Mint</option>
-							<option value="Sassy">Sassy Mint</option>
-							<option value="Timid">Timid Mint</option>
-							<option value="Hasty">Hasty Mint</option>
-							<option value="Jolly">Jolly Mint</option>
-							<option value="Naive">Naive Mint</option>
-							<option value="Serious">Serious Mint</option>
 						</select>
 					</td>
 				</tr>
@@ -1435,63 +1259,15 @@
 					<td>
 						<select id="pokeform-origin" required>
 							<option></option>
-							<optgroup label="Gen VIII">
-								<option value="sw">Sword</option>
-								<option value="sh">Shield</option>
-								<option value="bd">Brilliant Diamond</option>
-								<option value="sp">Shining Pearl</option>
-								<option value="pla">Legends: Arceus</option>
-							</optgroup>
-							<optgroup label="Gen VII">
-								<option value="go">GO</option>
-								<option value="sun">Sun</option>
-								<option value="moon">Moon</option>
-								<option value="usun">Ultra Sun</option>
-								<option value="umoon">Ultra Moon</option>
-								<option value="lgp">Let's Go, Pikachu!</option>
-								<option value="lge">Let's Go, Eevee!</option>
-							</optgroup>
-							<optgroup label="Gen VI">
-								<option value="x">X</option>
-								<option value="y">Y</option>
-								<option value="or">Omega Ruby</option>
-								<option value="as">Alpha Sapphire</option>
-							</optgroup>
-							<optgroup label="Gen V">
-								<option value="black">Black</option>
-								<option value="white">White</option>
-								<option value="black2">Black 2</option>
-								<option value="white2">White 2</option>
-							</optgroup>
-							<optgroup label="Gen IV">
-								<option value="diamond">Diamond</option>
-								<option value="pearl">Pearl</option>
-								<option value="platinum">Platinum</option>
-								<option value="hg">HeartGold</option>
-								<option value="ss">SoulSilver</option>
-							</optgroup>
-							<optgroup label="Gen III">
-								<option value="ruby">Ruby</option>
-								<option value="sapphire">Sapphire</option>
-								<option value="emerald">Emerald</option>
-								<option value="fr">FireRed</option>
-								<option value="lg">LeafGreen</option>
-								<option value="colosseum">Colosseum</option>
-								<option value="xd">XD: Gale of Darkness</option>
-							</optgroup>
-							<optgroup label="Gen II Virtual Console">
-								<option value="gold">Gold</option>
-								<option value="silver">Silver</option>
-								<option value="crystal">Crystal</option>
-							</optgroup>
-							<optgroup label="Gen I Virtual Console">
-								<option value="red-jpn">Red (JPN)</option>
-								<option value="green">Green</option>
-								<option value="blue-jpn">Blue (JPN)</option>
-								<option value="red-eng">Red (ENG)</option>
-								<option value="blue-eng">Blue (ENG)</option>
-								<option value="yellow">Yellow</option>
-							</optgroup>
+							<optgroup id="pokeform-origin-9" label="Gen IX"></optgroup>
+							<optgroup id="pokeform-origin-8" label="Gen VIII"></optgroup>
+							<optgroup id="pokeform-origin-7" label="Gen VII"></optgroup>
+							<optgroup id="pokeform-origin-6" label="Gen VI"></optgroup>
+							<optgroup id="pokeform-origin-5" label="Gen V"></optgroup>
+							<optgroup id="pokeform-origin-4" label="Gen IV"></optgroup>
+							<optgroup id="pokeform-origin-3" label="Gen III"></optgroup>
+							<optgroup id="pokeform-origin-2" label="Gen II Virtual Console"></optgroup>
+							<optgroup id="pokeform-origin-1" label="Gen I Virtual Console"></optgroup>
 						</select>
 					</td>
 				</tr>
@@ -1500,63 +1276,16 @@
 					<td>
 						<select id="pokeform-currentgame">
 							<option></option>
-							<optgroup label="Gen VIII">
-								<option value="sw">Sword</option>
-								<option value="sh">Shield</option>
-								<option value="bd">Brilliant Diamond</option>
-								<option value="sp">Shining Pearl</option>
-								<option value="pla">Legends: Arceus</option>
-							</optgroup>
-							<optgroup label="Gen VII">
-								<option value="go">GO</option>
-								<option value="sun">Sun</option>
-								<option value="moon">Moon</option>
-								<option value="usun">Ultra Sun</option>
-								<option value="umoon">Ultra Moon</option>
-								<option value="lgp">Let's Go, Pikachu!</option>
-								<option value="lge">Let's Go, Eevee!</option>
-							</optgroup>
-							<optgroup label="Gen VI">
-								<option value="x">X</option>
-								<option value="y">Y</option>
-								<option value="or">Omega Ruby</option>
-								<option value="as">Alpha Sapphire</option>
-							</optgroup>
-							<optgroup label="Gen V">
-								<option value="black">Black</option>
-								<option value="white">White</option>
-								<option value="black2">Black 2</option>
-								<option value="white2">White 2</option>
-							</optgroup>
-							<optgroup label="Gen IV">
-								<option value="diamond">Diamond</option>
-								<option value="pearl">Pearl</option>
-								<option value="platinum">Platinum</option>
-								<option value="hg">HeartGold</option>
-								<option value="ss">SoulSilver</option>
-							</optgroup>
-							<optgroup label="Gen III">
-								<option value="ruby">Ruby</option>
-								<option value="sapphire">Sapphire</option>
-								<option value="emerald">Emerald</option>
-								<option value="fr">FireRed</option>
-								<option value="lg">LeafGreen</option>
-								<option value="colosseum">Colosseum</option>
-								<option value="xd">XD: Gale of Darkness</option>
-							</optgroup>
-							<optgroup label="Gen II Virtual Console">
-								<option value="gold">Gold</option>
-								<option value="silver">Silver</option>
-								<option value="crystal">Crystal</option>
-							</optgroup>
-							<optgroup label="Gen I Virtual Console">
-								<option value="red-jpn">Red (JPN)</option>
-								<option value="green">Green</option>
-								<option value="blue-jpn">Blue (JPN)</option>
-								<option value="red-eng">Red (ENG)</option>
-								<option value="blue-eng">Blue (ENG)</option>
-								<option value="yellow">Yellow</option>
-							</optgroup>
+							<optgroup id="pokeform-currentgame-storage" label="Storage"></optgroup>
+							<optgroup id="pokeform-currentgame-9" label="Gen IX"></optgroup>
+							<optgroup id="pokeform-currentgame-8" label="Gen VIII"></optgroup>
+							<optgroup id="pokeform-currentgame-7" label="Gen VII"></optgroup>
+							<optgroup id="pokeform-currentgame-6" label="Gen VI"></optgroup>
+							<optgroup id="pokeform-currentgame-5" label="Gen V"></optgroup>
+							<optgroup id="pokeform-currentgame-4" label="Gen IV"></optgroup>
+							<optgroup id="pokeform-currentgame-3" label="Gen III"></optgroup>
+							<optgroup id="pokeform-currentgame-2" label="Gen II Virtual Console"></optgroup>
+							<optgroup id="pokeform-currentgame-1" label="Gen I Virtual Console"></optgroup>
 						</select>
 					</td>
 				</tr>
@@ -1949,6 +1678,12 @@
 								<option value="light">Classic Light</option>
 							</optgroup>
 						</select>
+					</td>
+				</tr>
+				<tr style="display:none;">
+					<th><label for="settings-language">Language</label></th>
+					<td>
+						<select id="settings-language"></select>
 					</td>
 				</tr>
 				<tr>

@@ -145,6 +145,11 @@ function changeTheme(t){
 	$("body").attr({ class: "theme-" + t, theme: t });
 }
 
+function changeLang(l){
+	localStorage.setItem("language", l);
+	$("body").attr("lang", l);
+}
+
 function toggleCheck(id){
 	$("#" + id).prop("checked", !$("#" + id).prop("checked"));
 }
@@ -308,7 +313,10 @@ function addRow(pkmn, i){
 
 function generateRibbons(){
 	$("#add-ribbons").append("<div id='all-ribbons'></div>");
-	for(var i in ribbonIDs) $("#all-ribbons").append("<div class='ribbons-gen'>" + i + "</div><div id='ribbons-list-" + ribbonIDs[i] + "' class='ribbons-list'></div>");
+	for(var i in ribbonIDs){
+		$("#all-ribbons").append("<div class='ribbons-gen'>" + i + "</div><div id='ribbons-list-" + ribbonIDs[i] + "' class='ribbons-list'></div>");
+		$("#pokeform-title").append("<optgroup id='pokeform-title-" + ribbonIDs[i] + "' label='" + i + "'></optgroup>");
+	}
 	var folder = "ribbons";
 	for(let r in allRibbons){
 		var rData = allRibbons[r];
@@ -323,6 +331,7 @@ function generateRibbons(){
 		var rDesc = "";
 		if(rData["desc"]) rDesc = " - " + rData["desc"];
 		$("#ribbons-list-" + rGen).append("<input id='" + r + "' type='checkbox' form='newpkmnform' hidden><img class='" + r + "' src='img/" + rFldr + "/" + r + ".png' alt=\"" + rData["name"] + rDesc + "\" title=\"" + rData["name"] + rDesc + "\" onclick='toggleCheck(\"" + r + "\");'>");
+		if(rData["title"]) $("#pokeform-title-" + rGen).append(new Option(rData["title"], r));
 	}
 }
 
@@ -361,7 +370,6 @@ $(function(){
 	$.modal.defaults.escapeClose = false;
 	$.modal.defaults.showClose = false;
 	resetForm();
-	generateRibbons();
 	$("#pokeform select").select2({
 		templateSelection: formatDropOption,
 		templateResult: formatDropOption,
@@ -372,6 +380,44 @@ $(function(){
 	$("#settings select").select2({
 		width: "100%"
 	});
+	for(var m in mints){
+		$("#pokeform-mint").append(new Option(m + " Mint", m));
+	}
+	for(var g in games){
+		var newGame = new Option(games[g]["name"], g);
+		if(games[g]["gen"]){
+			$("#pokeform-origin-" + games[g]["gen"] + ", #pokeform-currentgame-" + games[g]["gen"]).append(newGame);
+		} else {
+			$("#pokeform-currentgame-storage").append(newGame);
+		}
+	}
+	var setlang = localStorage.getItem("language");
+	if(!setlang){
+		setlang = "eng";
+		//changeLang("eng");
+		//showModal("settings");
+	}
+	$("body").attr("lang", setlang);
+	$("#settings-language").change(function(){
+		var curLang = $("body").attr("lang");
+		var newLang = $(this).val();
+		if(curLang !== newLang){
+			changeLang(newLang);
+		}
+	});
+	for(var l in languages){
+		var lcap = l.toUpperCase();
+		var curlang = (l == setlang) ? true : false;
+		$("#pokeform-lang").append(new Option(lcap + " - " + languages[l], lcap));
+		$("#settings-language").append(new Option(lcap + " - " + languages[l], l, curlang, curlang));
+	}
+	for(var b in balls){
+		$("#pokeform-ball-standard").append(new Option(balls[b]["eng"], b));
+	}
+	for(var hb in hisuiballs){
+		$("#pokeform-ball-hisui").append(new Option(hisuiballs[hb]["eng"], hb));
+	}
+	generateRibbons();
 	$("#add-pokemon-button").click(function(){
 		showModal();
 	});
