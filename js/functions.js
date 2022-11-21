@@ -438,13 +438,13 @@ $(function(){
 		}
 	}
 
-	var lastChange = localStorage.getItem("changelog");
-	var numChanges = "" + $("#changelog tr").length;
-	if(lastChange && lastChange !== numChanges){
+	var saveChange = localStorage.getItem("changelog");
+	var lastChange = $("#changelog tr:first-child .changelog-date").text();
+	if(saveChange && saveChange !== lastChange){
 		showModal("changelog");
 	}
-	if(!lastChange || lastChange !== numChanges){
-		localStorage.setItem("changelog", numChanges);
+	if(!saveChange || saveChange !== lastChange){
+		localStorage.setItem("changelog", lastChange);
 	}
 
 	$("#settings-theme").change(function(){
@@ -513,7 +513,7 @@ $(function(){
 	$("#settings-close, #changelog-close").click(function(){
 		$.modal.close();
 	});
-	$("#changelog tr").click(function(){
+	$("#changelog tr:not(:last-child)").click(function(){
 		if($(this).hasClass("changelog-active")){
 			$(this).removeClass("changelog-active");
 		} else {

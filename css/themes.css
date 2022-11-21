@@ -19,6 +19,7 @@ body.theme-light {
 
 	--modal-bg: #333;
 	--modal-text: #fff;
+	--modal-link: #38578e;
 	--pokemon-header: #bbb;
 }
 .theme-light .pokemon-list-origin {
@@ -74,9 +75,12 @@ footer,
 	background: var(--header-bg);
 	border-color: var(--header-border);
 }
-header a,
-footer a {
+header a:not(.button),
+footer a:not(.button) {
 	color: var(--header-link);
+}
+.modal a:not(.button) {
+	color: var(--modal-link, #add8e6);
 }
 .modal {
 	background: var(--modal-center-bg, var(--page-bg));

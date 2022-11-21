@@ -119,7 +119,7 @@ body {
 a {
 	text-decoration: none;
 }
-footer a:hover {
+a:not(.button):hover {
 	text-decoration: underline;
 }
 footer a {
@@ -838,7 +838,7 @@ footer {
 .ribbons-list-empty:first-child:last-child {
 	display: block;
 }
-#changelog tr {
+#changelog tr:not(:last-child) {
 	cursor: pointer;
 }
 .changelog-date {
