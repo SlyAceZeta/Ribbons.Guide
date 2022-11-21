@@ -271,9 +271,9 @@ function addRow(pkmn, i){
 		var rCode = pkmn.ribbons[r];
 		var rData = allRibbons[rCode];
 		if(rData){
-			var rName = rData["name"];
+			var rName = rData["names"]["eng"];
 			var rDesc = "";
-			if(rData["desc"]) rDesc = " - " + rData["desc"];
+			if(rData["descs"]) rDesc = " - " + rData["descs"]["eng"];
 			var rFldr = "ribbons";
 			if(rData["mark"]) rFldr = "marks";
 			ribbons = ribbons + "<img class='" + rCode + "' src='img/" + rFldr + "/" + rCode + ".png' alt=\"" + rName + rDesc + "\" title=\"" + rName + rDesc + "\">";
@@ -294,7 +294,7 @@ function addRow(pkmn, i){
 	var title = "";
 	if(titleBon !== "None"){
 		if(titleBon.indexOf("-mark") > 0) titleDir = "marks";
-		title = "<img src='img/" + titleDir + "/" + titleBon + ".png'><span>" + allRibbons[titleBon]["title"] + "</span>";
+		title = "<img src='img/" + titleDir + "/" + titleBon + ".png'><span>" + allRibbons[titleBon]["titles"]["eng"] + "</span>";
 	}
 
 	var lang = pkmn.lang;
@@ -329,9 +329,9 @@ function generateRibbons(){
 			rFldr = "marks";
 		}
 		var rDesc = "";
-		if(rData["desc"]) rDesc = " - " + rData["desc"];
-		$("#ribbons-list-" + rGen).append("<input id='" + r + "' type='checkbox' form='newpkmnform' hidden><img class='" + r + "' src='img/" + rFldr + "/" + r + ".png' alt=\"" + rData["name"] + rDesc + "\" title=\"" + rData["name"] + rDesc + "\" onclick='toggleCheck(\"" + r + "\");'>");
-		if(rData["title"]) $("#pokeform-title-" + rGen).append(new Option(rData["title"], r));
+		if(rData["descs"]) rDesc = " - " + rData["descs"]["eng"];
+		$("#ribbons-list-" + rGen).append("<input id='" + r + "' type='checkbox' form='newpkmnform' hidden><img class='" + r + "' src='img/" + rFldr + "/" + r + ".png' alt=\"" + rData["names"]["eng"] + rDesc + "\" title=\"" + rData["names"]["eng"] + rDesc + "\" onclick='toggleCheck(\"" + r + "\");'>");
+		if(rData["titles"]) $("#pokeform-title-" + rGen).append(new Option(rData["titles"]["eng"], r));
 	}
 }
 
