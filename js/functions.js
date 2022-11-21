@@ -163,7 +163,7 @@ function resetForm(c = false){
 	if(reset){
 		$.modal.close();
 		$("#pokeform input").each(function(){
-			if($(this).attr("type") === "text" || $(this).attr("type") === "number"){
+			if($(this).attr("type") === "text" || $(this).attr("type") === "number" || $(this).attr("type") === "date"){
 				$(this).val("");
 			} else if($(this).attr("type") === "checkbox"){
 				$(this).prop("checked", false);
