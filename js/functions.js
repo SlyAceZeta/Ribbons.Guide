@@ -471,13 +471,11 @@ $(function(){
 			$("#pokeform-gender-known").show();
 			$("#pokeform-gender-unknown").hide();
 			if(gender === "female"){
-				$("#pokeform-gender-checkbox").attr("disabled", "disabled");
-				$("#pokeform-gender-checkbox").prop("checked", "checked");
+				$("#pokeform-gender-checkbox").prop({ disabled: true, checked: true });
 			} else if(gender === "male"){
-				$("#pokeform-gender-checkbox").attr("disabled", "disabled");
-				$("#pokeform-gender-checkbox").prop("checked", false);
+				$("#pokeform-gender-checkbox").prop({ disabled: true, checked: false });
 			} else {
-				$("#pokeform-gender-checkbox").removeAttr("disabled");
+				$("#pokeform-gender-checkbox").prop("disabled", false);
 			}
 		}
 	});
