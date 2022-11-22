@@ -87,7 +87,7 @@ function createPokemon(edit = false){
 					} else {
 						addRow(str, n);
 					}
-					resetForm();
+					$.modal.close();
 				} else {
 					alert("The Pokémon's current level cannot be lower than the level you met it.");
 				}
@@ -150,33 +150,30 @@ function changeLang(l){
 	$("body").attr("lang", l);
 }
 
-function resetForm(c = false){
-	var reset = true;
-	if(c){
-		if(!confirm("Are you sure you wish to cancel? All of the data you've entered will be lost!"))
-			reset = false;
-	}
-	if(reset){
-		$.modal.close();
-		$("#pokeform input").each(function(){
-			if($(this).attr("type") === "text" || $(this).attr("type") === "number" || $(this).attr("type") === "date"){
-				$(this).val("");
-			} else if($(this).attr("type") === "checkbox"){
-				$(this).prop("checked", false);
-			}
-		});
-		$("#pokeform select").each(function(){
-			if($(this).attr("id") === "pokeform-mint" || $(this).attr("id") === "pokeform-title"){
-				$(this).val("None").trigger("change");
-			} else {
-				$(this).val(null).trigger("change");
-			}
-		});
-		$("#pokeform-notes").val("");
-		$("#pokeform-add, #pokeform-header-add").show();
-		$("#pokeform-edit").hide().removeAttr("pokemon");
-		$("#pokeform-header-edit").hide();
-	}
+function resetForm(){
+	$(".pokeform-tab1-ctrl").click();
+	$("#pokeform input").each(function(){
+		if($(this).attr("type") === "text" || $(this).attr("type") === "number" || $(this).attr("type") === "date"){
+			$(this).val("");
+		} else if($(this).attr("type") === "checkbox"){
+			$(this).prop("checked", false);
+		}
+	});
+	$("#pokeform select").each(function(){
+		if($(this).attr("id") === "pokeform-mint" || $(this).attr("id") === "pokeform-title"){
+			$(this).val("None").trigger("change");
+		} else {
+			$(this).val(null).trigger("change");
+		}
+	});
+	$("#pokeform-notes").val("");
+	$("#pokeform-add, #pokeform-header-add").show();
+	$("#pokeform-edit").hide().removeAttr("pokemon");
+	$("#pokeform-header-edit").hide();
+}
+
+function confirmFormClose(){
+	if(confirm("Are you sure you wish to cancel? All of the data you've entered will be lost!")) $.modal.close();
 }
 
 function editPkmn(id){
@@ -491,16 +488,16 @@ $(function(){
 		createPokemon(true);
 	});
 	$("#pokeform-cancel").click(function(){
-		resetForm(true);
+		confirmFormClose();
 	});
 	$("#pokeform").on($.modal.BLOCK, function(event, modal){
 		$(".jquery-modal.blocker.current").click(function(e){
 			if(e.target === this)
-				resetForm(true);
+				confirmFormClose();
 		});
 	});
 	$("#pokeform").on($.modal.AFTER_CLOSE, function(event, modal){
-		$(".pokeform-tab1-ctrl").click();
+		resetForm();
 	});
 	$("#settings-close, #changelog-close").click(function(){
 		$.modal.close();
