@@ -150,10 +150,6 @@ function changeLang(l){
 	$("body").attr("lang", l);
 }
 
-function toggleCheck(id){
-	$("#" + id).prop("checked", !$("#" + id).prop("checked"));
-}
-
 function resetForm(c = false){
 	var reset = true;
 	if(c){
@@ -330,7 +326,7 @@ function generateRibbons(){
 		}
 		var rDesc = "";
 		if(rData["descs"]) rDesc = " - " + rData["descs"]["eng"];
-		$("#ribbons-list-" + rGen).append("<input id='" + r + "' type='checkbox' form='newpkmnform' hidden><img class='" + r + "' src='img/" + rFldr + "/" + r + ".png' alt=\"" + rData["names"]["eng"] + rDesc + "\" title=\"" + rData["names"]["eng"] + rDesc + "\" onclick='toggleCheck(\"" + r + "\");'>");
+		$("#ribbons-list-" + rGen).append("<input id='" + r + "' type='checkbox' form='newpkmnform' hidden><label for='"+r+"'><img class='" + r + "' src='img/" + rFldr + "/" + r + ".png' alt=\"" + rData["names"]["eng"] + rDesc + "\" title=\"" + rData["names"]["eng"] + rDesc + "\"></label>");
 		if(rData["titles"]) $("#pokeform-title-" + rGen).append(new Option(rData["titles"]["eng"], r));
 	}
 }
@@ -467,10 +463,6 @@ $(function(){
 	});
 	$("#restore").click(function(){
 		$("#restore input").val(null);
-	});
-	$("#pokeform-gender-img").click(function(){
-		if($("#pokeform-gender-checkbox").attr("disabled") !== "disabled")
-			toggleCheck("pokeform-gender-checkbox");
 	});
 	$("#pokeform-species").change(function(){
 		var species = $("#pokeform-species").val();

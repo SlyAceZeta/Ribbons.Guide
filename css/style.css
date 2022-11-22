@@ -147,15 +147,6 @@ button:hover, .button:hover {
 button:hover, .button:active {
 	background: #eee;
 }
-.button.disabled {
-	background: #efefef;
-	border-color: #ccc;
-	color: #bbb;
-	cursor: not-allowed;
-}
-.editing td {
-	opacity: 0.25;
-}
 header {
 	text-align: left;
 	padding: 5px 20px;
@@ -205,22 +196,6 @@ footer {
 #settings .button {
 	font-size: 16px;
 }
-.mint {
-	position: absolute;
-	top: calc(50% + 11px);
-	font-size: 9pt;
-	padding-left: 18px;
-}
-.mint:before {
-	content: "";
-	background: transparent no-repeat left center;
-	background-size: 16px;
-	width: 16px;
-	height: 16px;
-	position: absolute;
-	left: 0;
-	top: 0;
-}
 .ribbons {
 	padding: 10px 0;
 }
@@ -228,10 +203,7 @@ footer {
 	width: 40px;
 	margin-right: 5px;
 }
-#addnewpkmn,
-#add-gender,
 #settings input,
-.edit-btns,
 #pokeform-edit,
 #pokeform-gender-unknown,
 #pokeform-header-edit {
@@ -240,25 +212,16 @@ footer {
 .sprite-mon {
 	height: 50px;
 }
-#add-preview {
-	height: 50px;
-}
-#add-shiny-toggle {
-	filter: grayscale(100%);
-	cursor: pointer;
-}
 #pokeform-shiny-img {
 	filter: grayscale(100%);
 }
 #pokeform-shiny {
 	margin-top: 5px;
 }
-#pokeform-shiny-img,
-#pokeform-gender-unknown img {
+#pokeform-shiny-img {
 	height: 24px;
 	vertical-align: middle;
 }
-#add-shiny:checked ~ #add-shiny-toggle,
 #pokeform-shiny-checkbox:checked ~ label #pokeform-shiny-img {
 	filter: none;
 }
@@ -271,54 +234,41 @@ footer {
 	height: 24px;
 	display: inline-block;
 	vertical-align: middle;
-	cursor: pointer;
 	background: url("../img/gender/male.png") no-repeat center center;
 	background-size: contain;
 }
-#pokeform-gender-checkbox:checked ~ #pokeform-gender-img {
+#pokeform-gender-checkbox:checked ~ label #pokeform-gender-img {
 	background-image: url("../img/gender/female.png");
 }
 #pokeform-gender label {
 	position: relative;
 	cursor: pointer;
-	vertical-align: middle;
 }
-#pokeform-gender-img ~ label:before {
-	content: "Male";
-}
-#pokeform-gender-checkbox:checked ~ label:before {
-	content: "Female";
-}
+#pokeform-gender label + label,
 #pokeform-gender-unknown span {
 	vertical-align: middle;
 }
-#pokeform-gender-checkbox[disabled] ~ #pokeform-gender-img,
+#pokeform-gender-checkbox ~ label + label:before {
+	content: "Male";
+}
+#pokeform-gender-checkbox:checked ~ label + label:before {
+	content: "Female";
+}
 #pokeform-gender-checkbox[disabled] ~ label {
 	cursor: default;
 }
-#pokeform-gender-checkbox[disabled] ~ label:before {
+#pokeform-gender-checkbox[disabled] ~ label + label:before {
 	content: "Male only";
 }
-#pokeform-gender-checkbox:checked[disabled] ~ label:before {
+#pokeform-gender-checkbox:checked[disabled] ~ label + label:before {
 	content: "Female only";
 }
 #pokeform-gender div {
 	min-height: 24px;
 }
-#add-gender-toggle[lock="none"] {
-	cursor: pointer;
-}
-#add-mint {
-	position: absolute;
-	bottom: 10px;
-	right: 0;
-}
 #pokeform-notes {
 	width: 100%;
 	resize: none;
-}
-#addnewpkmn td:last-child {
-	text-align: left;
 }
 
 .mint.atk:before {
@@ -340,18 +290,6 @@ footer {
 	background-image: url("../img/mints/neutral.png");
 }
 
-#addnewpkmn #all-ribbons {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 89px;
-	min-height: 89px;
-	max-height: 500px;
-	overflow-y: scroll;
-	resize: vertical;
-	border: 1px dashed grey;
-	padding: 0 5px;
-}
 #all-ribbons img {
 	filter: grayscale(100%);
 	opacity: 0.1;
@@ -365,7 +303,7 @@ footer {
 	filter: blur(5) grayscale(100%);
 	cursor: default;
 }
-#all-ribbons input:checked + img {
+#all-ribbons input:checked + label img {
 	filter: none;
 	opacity: 1;
 }
@@ -805,8 +743,13 @@ footer {
 	font-size: 20px;
 	padding: 0 5px;
 }
+.pokemon-list-level {
+	width: 73px;
+}
 .pokemon-list-lang {
-	padding: 0 10px;
+	display: inline-block;
+	width: 50px;
+	text-align: center;
 	background: #efefef;
 	border-radius: 10px;
 	font-weight: bold;
