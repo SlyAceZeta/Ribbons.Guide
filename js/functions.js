@@ -298,8 +298,14 @@ function addRow(pkmn, i){
 
 	var name = pkmn.name;
 	if(name.length === 0){
-		name = $("#pokeform-species").find("option[value="+pkmn.dex+"]").text();
-		name = name.replace(/( \(.*\))?/g, "");
+		var namelang = pkmn.lang;
+		if(!namelang) namelang = "ENG";
+		namelang = namelang.toLowerCase();
+		if(pokemon[pkmn.dex]["names"]){
+			name = pokemon[pkmn.dex]["names"][namelang];
+		} else {
+			name = pokmon[pokemon[pkmn.dex]["data-source"]]["names"][namelang];
+		}
 	}
 
 	$("#pokemon-list").append("<div class='pokemon-list-entry' pokemon='" + i + "'><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png'><span class='pokemon-list-name'>" + name + "</span>" + gender + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + "</div><div class='pokemon-list-entry-footer-right'><img class='pokemon-list-edit' src='img/ui/edit.png' onclick='editPkmn("+i+")' title='Edit " + name + "'><img class='pokemon-list-delete' src='img/ui/delete.png' onclick='deletePkmn("+i+")' title='Delete " + name + "'></div></div></div>");
@@ -410,6 +416,73 @@ $(function(){
 	}
 	for(var hb in hisuiballs){
 		$("#pokeform-ball-hisui").append(new Option(hisuiballs[hb]["eng"], hb));
+	}
+	var pl = 0;
+	var plmax = Object.keys(pokemon).length;
+	for(var p in pokemon){
+		pl++;
+		var natdex = pokemon[p]["natdex"];
+		if(!natdex){
+			natdex = pokemon[pokemon[p]["data-source"]]["natdex"];
+		}
+		var natgen = "IX";
+		if(natdex < 152){
+			natgen = "I";
+		} else if(natdex < 252){
+			natgen = "II";
+		} else if(natdex < 387){
+			natgen = "III";
+		} else if(natdex < 494){
+			natgen = "IV";
+		} else if(natdex < 650){
+			natgen = "V";
+		} else if(natdex < 722){
+			natgen = "VI";
+		} else if(natdex < 810){
+			natgen = "VII";
+		} else if(natdex < 906){
+			natgen = "VIII";
+		}
+		var names = "";
+		if(pokemon[p]["names"]){
+			names = pokemon[p]["names"]["eng"];
+		} else {
+			names = pokemon[pokemon[p]["data-source"]]["names"]["eng"];
+		}
+		var forms = "";
+		if(pokemon[p]["forms"]){
+			forms = pokemon[p]["forms"]["eng"];
+		} else if(pokemon[p]["form-source"]){
+			forms = commonforms[pokemon[p]["form-source"]]["eng"];
+		} else if(pokemon[p]["forms-all"]){
+			forms = pokemon[p]["forms-all"];
+		}
+		if(forms.length) forms = " (" + forms + ")";
+		var sort = "";
+		if(pokemon[p]["sort"]){
+			sort = " sort='" + pokemon[p]["sort"] + "''";
+		}
+		$("#pokeform-species-" + natgen).append("<option value='" + p + "' natdex='" + natdex + "'" + sort + ">" + names + forms + "</option>");
+		if(pl === plmax){
+			var dexSort = function(a, b){
+				if(a.getAttribute("natdex") === b.getAttribute("natdex")){
+					if(a.getAttribute("sort") && b.getAttribute("sort")){
+						return a.getAttribute("sort") - b.getAttribute("sort");
+					} else {
+						return a.innerHTML.toLowerCase().localeCompare(b.innerHTML.toLowerCase());
+					}
+				} else {
+					return a.getAttribute("natdex") - b.getAttribute("natdex");
+				}
+			}
+			$("#pokeform-species optgroup").each(function(){
+				var genpkmn = $(this).find("option").get();
+				genpkmn.sort(dexSort);
+				for(var z = 0; z < genpkmn.length; z++){
+					genpkmn[z].parentNode.appendChild(genpkmn[z]);
+				}
+			});
+		}
 	}
 	generateRibbons();
 	$("#add-pokemon-button").click(function(){

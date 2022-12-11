@@ -6895,7 +6895,8 @@ const pokemon = {
 			"kor": "가을의 모습",
 			"cht": "秋天的樣子",
 			"chs": "秋天的样子"
-		}
+		},
+		"sort": 3
 	},
 	"deerling-summer": {
 		"data-source": "deerling",
@@ -6909,7 +6910,8 @@ const pokemon = {
 			"kor": "여름의 모습",
 			"cht": "夏天的樣子",
 			"chs": "夏天的样子"
-		}
+		},
+		"sort": 2
 	},
 	"deerling-winter": {
 		"data-source": "deerling",
@@ -6923,7 +6925,8 @@ const pokemon = {
 			"kor": "겨울의 모습",
 			"cht": "冬天的樣子",
 			"chs": "冬天的样子"
-		}
+		},
+		"sort": 4
 	},
 	"deerling": {
 		"names": {
@@ -6954,6 +6957,7 @@ const pokemon = {
 		"legendary": false,
 		"mythical": false,
 		"natdex": 585,
+		"sort": 1,
 		"games": [
 			"black",
 			"white",
@@ -13145,7 +13149,8 @@ const pokemon = {
 			"kor": "큰 사이즈",
 			"cht": "大尺寸",
 			"chs": "大尺寸"
-		}
+		},
+		"sort": 3
 	},
 	"gourgeist-small": {
 		"data-source": "gourgeist",
@@ -13159,7 +13164,8 @@ const pokemon = {
 			"kor": "작은 사이즈",
 			"cht": "小尺寸",
 			"chs": "小尺寸"
-		}
+		},
+		"sort": 1
 	},
 	"gourgeist-super": {
 		"data-source": "gourgeist",
@@ -13173,7 +13179,8 @@ const pokemon = {
 			"kor": "특대 사이즈",
 			"cht": "特大尺寸",
 			"chs": "特大尺寸"
-		}
+		},
+		"sort": 4
 	},
 	"gourgeist": {
 		"names": {
@@ -13204,6 +13211,7 @@ const pokemon = {
 		"legendary": false,
 		"mythical": false,
 		"natdex": 711,
+		"sort": 2,
 		"games": [
 			"x",
 			"y",
@@ -26145,7 +26153,8 @@ const pokemon = {
 			"kor": "큰 사이즈",
 			"cht": "大尺寸",
 			"chs": "大尺寸"
-		}
+		},
+		"sort": 3
 	},
 	"pumpkaboo-small": {
 		"data-source": "pumpkaboo",
@@ -26159,7 +26168,8 @@ const pokemon = {
 			"kor": "작은 사이즈",
 			"cht": "小尺寸",
 			"chs": "小尺寸"
-		}
+		},
+		"sort": 1
 	},
 	"pumpkaboo-super": {
 		"data-source": "pumpkaboo",
@@ -26173,7 +26183,8 @@ const pokemon = {
 			"kor": "특대 사이즈",
 			"cht": "特大尺寸",
 			"chs": "特大尺寸"
-		}
+		},
+		"sort": 4
 	},
 	"pumpkaboo": {
 		"names": {
@@ -26204,6 +26215,7 @@ const pokemon = {
 		"legendary": false,
 		"mythical": false,
 		"natdex": 710,
+		"sort": 2,
 		"games": [
 			"x",
 			"y",
@@ -28608,7 +28620,8 @@ const pokemon = {
 			"kor": "가을의 모습",
 			"cht": "秋天的樣子",
 			"chs": "秋天的样子"
-		}
+		},
+		"sort": 3
 	},
 	"sawsbuck-summer": {
 		"data-source": "sawsbuck",
@@ -28622,7 +28635,8 @@ const pokemon = {
 			"kor": "여름의 모습",
 			"cht": "夏天的樣子",
 			"chs": "夏天的样子"
-		}
+		},
+		"sort": 2
 	},
 	"sawsbuck-winter": {
 		"data-source": "sawsbuck",
@@ -28636,7 +28650,8 @@ const pokemon = {
 			"kor": "겨울의 모습",
 			"cht": "冬天的樣子",
 			"chs": "冬天的样子"
-		}
+		},
+		"sort": 4
 	},
 	"sawsbuck": {
 		"names": {
@@ -28667,6 +28682,7 @@ const pokemon = {
 		"legendary": false,
 		"mythical": false,
 		"natdex": 586,
+		"sort": 1,
 		"games": [
 			"black",
 			"white",
@@ -35631,23 +35647,28 @@ const pokemon = {
 	},
 	"unown-b": {
 		"data-source": "unown",
-		"forms-all": "B"
+		"forms-all": "B",
+		"sort": 2
 	},
 	"unown-c": {
 		"data-source": "unown",
-		"forms-all": "C"
+		"forms-all": "C",
+		"sort": 3
 	},
 	"unown-d": {
 		"data-source": "unown",
-		"forms-all": "D"
+		"forms-all": "D",
+		"sort": 4
 	},
 	"unown-e": {
 		"data-source": "unown",
-		"forms-all": "E"
+		"forms-all": "E",
+		"sort": 5
 	},
 	"unown-exclamation": {
 		"data-source": "unown",
 		"forms-all": "!",
+		"sort": 28,
 		"games": [
 			"ruby",
 			"sapphire",
@@ -35680,55 +35701,68 @@ const pokemon = {
 	},
 	"unown-f": {
 		"data-source": "unown",
-		"forms-all": "F"
+		"forms-all": "F",
+		"sort": 6
 	},
 	"unown-g": {
 		"data-source": "unown",
-		"forms-all": "G"
+		"forms-all": "G",
+		"sort": 7
 	},
 	"unown-h": {
 		"data-source": "unown",
-		"forms-all": "H"
+		"forms-all": "H",
+		"sort": 8
 	},
 	"unown-i": {
 		"data-source": "unown",
-		"forms-all": "I"
+		"forms-all": "I",
+		"sort": 9
 	},
 	"unown-j": {
 		"data-source": "unown",
-		"forms-all": "J"
+		"forms-all": "J",
+		"sort": 10
 	},
 	"unown-k": {
 		"data-source": "unown",
-		"forms-all": "K"
+		"forms-all": "K",
+		"sort": 11
 	},
 	"unown-l": {
 		"data-source": "unown",
-		"forms-all": "L"
+		"forms-all": "L",
+		"sort": 12
 	},
 	"unown-m": {
 		"data-source": "unown",
-		"forms-all": "M"
+		"forms-all": "M",
+		"sort": 13
 	},
 	"unown-n": {
 		"data-source": "unown",
-		"forms-all": "N"
+		"forms-all": "N",
+		"sort": 14
 	},
 	"unown-o": {
 		"data-source": "unown",
-		"forms-all": "O"
+		"forms-all": "O",
+		"sort": 15
 	},
 	"unown-p": {
 		"data-source": "unown",
-		"forms-all": "P"
+		"forms-all": "P",
+		"sort": 16
 	},
 	"unown-q": {
 		"data-source": "unown",
-		"forms-all": "Q"
+		"forms-all": "Q",
+		"sort": 17
 	},
 	"unown-question": {
 		"data-source": "unown",
 		"forms-all": "?",
+		"sort": 27,
 		"games": [
 			"ruby",
 			"sapphire",
@@ -35761,39 +35795,48 @@ const pokemon = {
 	},
 	"unown-r": {
 		"data-source": "unown",
-		"forms-all": "R"
+		"forms-all": "R",
+		"sort": 18
 	},
 	"unown-s": {
 		"data-source": "unown",
-		"forms-all": "S"
+		"forms-all": "S",
+		"sort": 19
 	},
 	"unown-t": {
 		"data-source": "unown",
-		"forms-all": "T"
+		"forms-all": "T",
+		"sort": 20
 	},
 	"unown-u": {
 		"data-source": "unown",
-		"forms-all": "U"
+		"forms-all": "U",
+		"sort": 21
 	},
 	"unown-v": {
 		"data-source": "unown",
-		"forms-all": "V"
+		"forms-all": "V",
+		"sort": 22
 	},
 	"unown-w": {
 		"data-source": "unown",
-		"forms-all": "W"
+		"forms-all": "W",
+		"sort": 23
 	},
 	"unown-x": {
 		"data-source": "unown",
-		"forms-all": "X"
+		"forms-all": "X",
+		"sort": 24
 	},
 	"unown-y": {
 		"data-source": "unown",
-		"forms-all": "Y"
+		"forms-all": "Y",
+		"sort": 25
 	},
 	"unown-z": {
 		"data-source": "unown",
-		"forms-all": "Z"
+		"forms-all": "Z",
+		"sort": 26
 	},
 	"unown": {
 		"names": {
@@ -35814,6 +35857,7 @@ const pokemon = {
 		"legendary": false,
 		"mythical": false,
 		"natdex": 201,
+		"sort": 1,
 		"games": [
 			"gold",
 			"silver",
