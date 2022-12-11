@@ -1944,15 +1944,15 @@ const pokemon = {
 	"basculin-white-striped": {
 		"data-source": "basculin",
 		"forms": {
-			"ger": "Weißlinige Form/Hisui-Form",
-			"eng": "White-Striped Form/Hisuian Form",
-			"spa": "Forma Raya Blanca/Forma de Hisui",
-			"fre": "Motif Blanc/Forme de Hisui",
-			"ita": "Forma Lineabianca/Forma di Hisui",
-			"jpn": "しろすじのすがた/ヒスイのすがた",
-			"kor": "백색근의 모습/히스이의 모습",
-			"cht": "白条纹的樣子/洗翠的樣子",
-			"chs": "白条纹的样子/洗翠的样子"
+			"ger": "Weißlinige Form",
+			"eng": "White-Striped Form",
+			"spa": "Forma Raya Blanca",
+			"fre": "Motif Blanc",
+			"ita": "Forma Lineabianca",
+			"jpn": "しろすじのすがた",
+			"kor": "백색근의 모습",
+			"cht": "白条纹的樣子",
+			"chs": "白条纹的样子"
 		},
 		"games": [
 			"pla"
@@ -33719,6 +33719,60 @@ const pokemon = {
 			"sh"
 		]
 	},
+	"tauros-aqua": {
+		"data-source": "tauros",
+		"forms": {
+			"ger": "Flutenvariante",
+			"eng": "Aqua Breed",
+			"spa": "Variedad Acuática",
+			"fre": "Race Aquatique",
+			"ita": "Varietà Acquatica",
+			"jpn": "ウォーター種",
+			"kor": "워터종",
+			"cht": "水瀾種",
+			"chs": "水澜种"
+		},
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"tauros-blaze": {
+		"data-source": "tauros",
+		"forms": {
+			"ger": "Flammenvariante",
+			"eng": "Blaze Breed",
+			"spa": "Variedad Ardiente",
+			"fre": "Race Flamboyante",
+			"ita": "Varietà Infuocata",
+			"jpn": "ブレイズ種",
+			"kor": "블레이즈종",
+			"cht": "火熾種",
+			"chs": "火炽种"
+		},
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"tauros-combat": {
+		"data-source": "tauros",
+		"forms": {
+			"ger": "Gefechtvariante",
+			"eng": "Combat Breed",
+			"spa": "Variedad Combatiente",
+			"fre": "Race Combative",
+			"ita": "Varietà Combattiva",
+			"jpn": "コンバット種",
+			"kor": "컴뱃종",
+			"cht": "鬥戰種",
+			"chs": "斗战种"
+		},
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
 	"tauros": {
 		"names": {
 			"ger": "Tauros",
@@ -38128,6 +38182,14 @@ const pokemon = {
 		"games": [
 			"sw",
 			"sh"
+		]
+	},
+	"wooper-paldea": {
+		"data-source": "wooper",
+		"form-source": "paldea",
+		"games": [
+			"scar",
+			"vio"
 		]
 	},
 	"wooper": {

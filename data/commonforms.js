@@ -32,6 +32,17 @@ const commonforms = {
 		"cht": "洗翠的樣子",
 		"chs": "洗翠的样子"
 	},
+	"paldea": {
+		"ger": "Paldea-Form",
+		"eng": "Paldean Form",
+		"spa": "Forma de Paldea",
+		"fre": "Forme de Paldea",
+		"ita": "Forma di Paldea",
+		"jpn": "パルデアのすがた",
+		"kor": "팔데아 모습",
+		"cht": "帕底亞的樣子",
+		"chs": "帕底亚的样子"
+	},
 	"incarnate": {
 		"ger": "Inkarnationsform",
 		"eng": "Incarnate Form",
