@@ -88,6 +88,9 @@ body {
 	height: 24px;
 	vertical-align: middle;
 }
+.pokedropimg.origininvert {
+	filter: invert(0.6);
+}
 .pokedropimg + span {
 	padding-left: 5px;
 	vertical-align: middle;
@@ -748,7 +751,7 @@ footer {
 }
 .pokemon-list-lang {
 	display: inline-block;
-	width: 50px;
+	width: 60px;
 	text-align: center;
 	background: #efefef;
 	border-radius: 10px;

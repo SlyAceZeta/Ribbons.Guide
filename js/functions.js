@@ -277,7 +277,7 @@ function addRow(pkmn, i){
 
 	var origin = games[pkmn.origin]["mark"];
 	if(origin){
-		origin = "<img src='img/origins/light/" + origin + ".png' class='pokemon-list-origin' title='" + games[pkmn.origin]["name"] + "'>";
+		origin = "<img src='img/origins/" + origin + ".png' class='pokemon-list-origin' title='" + games[pkmn.origin]["name"] + "'>";
 	} else {
 		origin = "";
 	}
@@ -292,6 +292,7 @@ function addRow(pkmn, i){
 
 	var lang = pkmn.lang;
 	if(!lang) lang = "???";
+	if(lang === "SPA") lang = "SP-EU";
 	var level = pkmn.level;
 	if(!level) level = "???";
 
@@ -341,7 +342,7 @@ function formatDropOption(o){
 		var mark = games[o.id]["mark"];
 		var $origin;
 		if(mark){
-			$origin = $("<img src='img/origins/dark/" + mark + ".png' class='pokedropimg'><span>" + o.text + "</span>");
+			$origin = $("<img src='img/origins/" + mark + ".png' class='pokedropimg origininvert'><span>" + o.text + "</span>");
 		} else {
 			$origin = $("<img src='img/ui/1x1.png' class='pokedropimg'><span>" + o.text + "</span>");
 		}
@@ -401,8 +402,8 @@ $(function(){
 	for(var l in languages){
 		var lcap = l.toUpperCase();
 		var curlang = (l == setlang) ? true : false;
-		$("#pokeform-lang").append(new Option(lcap + " - " + languages[l], lcap));
-		$("#settings-language").append(new Option(lcap + " - " + languages[l], l, curlang, curlang));
+		$("#pokeform-lang").append(new Option((lcap === "SPA" ? "SP-EU" : lcap) + " - " + languages[l], lcap));
+		$("#settings-language").append(new Option((lcap === "SPA" ? "SP-EU" : lcap) + " - " + languages[l], l, curlang, curlang));
 	}
 	for(var b in balls){
 		$("#pokeform-ball-standard").append(new Option(balls[b]["eng"], b));

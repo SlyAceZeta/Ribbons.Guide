@@ -1,22 +1,22 @@
 // Languages
 const languages = {
-	"ger": "Deutsch",		// German
-	"eng": "English",		// English
-	"spa": "Español",		// Spanish
-	"fre": "Français",		// French
-	"ita": "Italiano",		// Italian
-	"jpn": "日本語",		// Japanese
-	"kor": "한국어",		// Korean
-	"cht": "正體字",		// Traditional Chinese (Cantonese)
-	"chs": "简化字"		// Simplified Chinese (Mandarin)
+	"ger": "Deutsch",			// German
+	"eng": "English",			// English
+	"spa": "Español (España)",	// Spanish
+	"fre": "Français",			// French
+	"ita": "Italiano",			// Italian
+	"jpn": "日本語",			// Japanese
+	"kor": "한국어",			// Korean
+	"cht": "正體字",			// Traditional Chinese (Cantonese)
+	"chs": "简化字"			// Simplified Chinese (Mandarin)
 }
 
 // Origin Marks
 const games = {
 	"home":		{"name": "HOME",				"gen": null,	"mark": null},
 	"bank":		{"name": "Bank",				"gen": null,	"mark": null},
-	"scar":		{"name": "Scarlet",				"gen": 9,		"mark": null},
-	"vio":		{"name": "Violet",				"gen": 9,		"mark": null},
+	"scar":		{"name": "Scarlet",				"gen": 9,		"mark": "paldea"},
+	"vio":		{"name": "Violet",				"gen": 9,		"mark": "paldea"},
 	"sw":		{"name": "Sword",				"gen": 8,		"mark": "galar"},
 	"sh":		{"name": "Shield",				"gen": 8,		"mark": "galar"},
 	"bd":		{"name": "Brilliant Diamond",	"gen": 8,		"mark": "bdsp"},
