@@ -35840,15 +35840,15 @@ const pokemon = {
 	},
 	"sprigatito": {
 		"names": {
-			"ger": "",
+			"ger": "Felori",
 			"eng": "Sprigatito",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Sprigatito",
+			"fre": "Poussacha",
+			"ita": "Sprigatito",
+			"jpn": "ニャオハ",
+			"kor": "나오하",
+			"cht": "新葉喵",
+			"chs": "新叶喵"
 		},
 		"gender": "both",
 		"natdex": 906,
@@ -35859,15 +35859,15 @@ const pokemon = {
 	},
 	"floragato": {
 		"names": {
-			"ger": "",
+			"ger": "Feliospa",
 			"eng": "Floragato",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Floragato",
+			"fre": "Matourgeon",
+			"ita": "Floragato",
+			"jpn": "ニャローテ",
+			"kor": "나로테",
+			"cht": "蒂蕾喵",
+			"chs": "蒂蕾喵"
 		},
 		"gender": "both",
 		"natdex": 907,
@@ -35878,15 +35878,15 @@ const pokemon = {
 	},
 	"meowscarada": {
 		"names": {
-			"ger": "",
+			"ger": "Maskagato",
 			"eng": "Meowscarada",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Meowscarada",
+			"fre": "Miascarade",
+			"ita": "Meowscarada",
+			"jpn": "マスカーニャ",
+			"kor": "마스카나",
+			"cht": "魔幻假面喵",
+			"chs": "魔幻假面喵"
 		},
 		"gender": "both",
 		"natdex": 908,
@@ -35897,15 +35897,15 @@ const pokemon = {
 	},
 	"fuecoco": {
 		"names": {
-			"ger": "",
+			"ger": "Krokel",
 			"eng": "Fuecoco",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Fuecoco",
+			"fre": "Chochodile",
+			"ita": "Fuecoco",
+			"jpn": "ホゲータ",
+			"kor": "뜨아거",
+			"cht": "呆火鱷",
+			"chs": "呆火鳄"
 		},
 		"gender": "both",
 		"natdex": 909,
@@ -35916,15 +35916,15 @@ const pokemon = {
 	},
 	"crocalor": {
 		"names": {
-			"ger": "",
+			"ger": "Lokroko",
 			"eng": "Crocalor",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Crocalor",
+			"fre": "Crocogril",
+			"ita": "Crocalor",
+			"jpn": "アチゲータ",
+			"kor": "악뜨거",
+			"cht": "炙燙鱷",
+			"chs": "炙烫鳄"
 		},
 		"gender": "both",
 		"natdex": 910,
@@ -35935,15 +35935,15 @@ const pokemon = {
 	},
 	"skeledirge": {
 		"names": {
-			"ger": "",
+			"ger": "Skelokrok",
 			"eng": "Skeledirge",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Skeledirge",
+			"fre": "Flâmigator",
+			"ita": "Skeledirge",
+			"jpn": "ラウドボーン",
+			"kor": "라우드본",
+			"cht": "骨紋驚聲鱷",
+			"chs": "骨纹惊声鳄"
 		},
 		"gender": "both",
 		"natdex": 911,
@@ -35954,15 +35954,15 @@ const pokemon = {
 	},
 	"quaxly": {
 		"names": {
-			"ger": "",
+			"ger": "Kwaks",
 			"eng": "Quaxly",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Quaxly",
+			"fre": "Coiffeton",
+			"ita": "Quaxly",
+			"jpn": "クワッス",
+			"kor": "꾸왁스",
+			"cht": "潤水鴨",
+			"chs": "润水鸭"
 		},
 		"gender": "both",
 		"natdex": 912,
@@ -35973,15 +35973,15 @@ const pokemon = {
 	},
 	"quaxwell": {
 		"names": {
-			"ger": "",
+			"ger": "Fuentente",
 			"eng": "Quaxwell",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Quaxwell",
+			"fre": "Canarbello",
+			"ita": "Quaxwell",
+			"jpn": "ウェルカモ",
+			"kor": "아꾸왁",
+			"cht": "湧躍鴨",
+			"chs": "涌跃鸭"
 		},
 		"gender": "both",
 		"natdex": 913,
@@ -35992,15 +35992,15 @@ const pokemon = {
 	},
 	"quaquaval": {
 		"names": {
-			"ger": "",
+			"ger": "Bailonda",
 			"eng": "Quaquaval",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Quaquaval",
+			"fre": "Palmaval",
+			"ita": "Quaquaval",
+			"jpn": "ウェーニバル",
+			"kor": "웨이니발",
+			"cht": "狂歡浪舞鴨",
+			"chs": "狂欢浪舞鸭"
 		},
 		"gender": "both",
 		"natdex": 914,
@@ -36011,15 +36011,15 @@ const pokemon = {
 	},
 	"lechonk": {
 		"names": {
-			"ger": "",
+			"ger": "Ferkuli",
 			"eng": "Lechonk",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Lechonk",
+			"fre": "Gourmelet",
+			"ita": "Lechonk",
+			"jpn": "グルトン",
+			"kor": "맛보돈",
+			"cht": "愛吃豚",
+			"chs": "爱吃豚"
 		},
 		"gender": "both",
 		"natdex": 915,
@@ -36030,15 +36030,15 @@ const pokemon = {
 	},
 	"oinkologne": {
 		"names": {
-			"ger": "",
+			"ger": "Fragrunz",
 			"eng": "Oinkologne",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Oinkologne",
+			"fre": "Fragroin",
+			"ita": "Oinkologne",
+			"jpn": "パフュートン",
+			"kor": "퍼퓨돈",
+			"cht": "飄香豚",
+			"chs": "飘香豚"
 		},
 		"gender": "both",
 		"femsprite": true,
@@ -36050,15 +36050,15 @@ const pokemon = {
 	},
 	"tarountula": {
 		"names": {
-			"ger": "",
+			"ger": "Tarundel",
 			"eng": "Taoruntula",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Tarountula",
+			"fre": "Tissenboule",
+			"ita": "Tarountula",
+			"jpn": "タマンチュラ",
+			"kor": "타랜툴라",
+			"cht": "團珠蛛",
+			"chs": "团珠蛛"
 		},
 		"gender": "both",
 		"natdex": 917,
@@ -36069,15 +36069,15 @@ const pokemon = {
 	},
 	"spidops": {
 		"names": {
-			"ger": "",
+			"ger": "Spinsidias",
 			"eng": "Spidops",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Spidops",
+			"fre": "Filentrappe",
+			"ita": "Spidops",
+			"jpn": "ワナイダー",
+			"kor": "트래피더",
+			"cht": "操陷蛛",
+			"chs": "操陷蛛"
 		},
 		"gender": "both",
 		"natdex": 918,
@@ -36088,15 +36088,15 @@ const pokemon = {
 	},
 	"nymble": {
 		"names": {
-			"ger": "",
+			"ger": "Micrick",
 			"eng": "Nymble",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Nymble",
+			"fre": "Lilliterelle",
+			"ita": "Nymble",
+			"jpn": "マメバッタ",
+			"kor": "콩알뚜기",
+			"cht": "豆蟋蟀",
+			"chs": "豆蟋蟀"
 		},
 		"gender": "both",
 		"natdex": 919,
@@ -36107,15 +36107,15 @@ const pokemon = {
 	},
 	"lokix": {
 		"names": {
-			"ger": "",
+			"ger": "Lextremo",
 			"eng": "Lokix",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Lokix",
+			"fre": "Gambex",
+			"ita": "Lokix",
+			"jpn": "エクスレッグ",
+			"kor": "엑스레그",
+			"cht": "烈腿蝗",
+			"chs": "烈腿蝗"
 		},
 		"gender": "both",
 		"natdex": 920,
@@ -36126,15 +36126,15 @@ const pokemon = {
 	},
 	"pawmi": {
 		"names": {
-			"ger": "",
+			"ger": "Pamo",
 			"eng": "Pawmi",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Pawmi",
+			"fre": "Pohm",
+			"ita": "Pawmi",
+			"jpn": "パモ",
+			"kor": "빠모",
+			"cht": "布撥",
+			"chs": "布拨"
 		},
 		"gender": "both",
 		"natdex": 921,
@@ -36145,15 +36145,15 @@ const pokemon = {
 	},
 	"pawmo": {
 		"names": {
-			"ger": "",
+			"ger": "Pamamo",
 			"eng": "Pawmo",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Pawmo",
+			"fre": "Pohmotte",
+			"ita": "Pawmo",
+			"jpn": "パモット",
+			"kor": "빠모트",
+			"cht": "布土撥",
+			"chs": "布土拨"
 		},
 		"gender": "both",
 		"natdex": 922,
@@ -36164,15 +36164,15 @@ const pokemon = {
 	},
 	"pawmot": {
 		"names": {
-			"ger": "",
+			"ger": "Pamomamo",
 			"eng": "Pawmot",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Pawmot",
+			"fre": "Pohmarmotte",
+			"ita": "Pawmot",
+			"jpn": "パーモット",
+			"kor": "빠르모트",
+			"cht": "巴布土撥",
+			"chs": "巴布土拨"
 		},
 		"gender": "both",
 		"natdex": 923,
@@ -36183,15 +36183,15 @@ const pokemon = {
 	},
 	"tandemaus": {
 		"names": {
-			"ger": "",
+			"ger": "Zwieps",
 			"eng": "Tandemaus",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Tandemaus",
+			"fre": "Compagnol",
+			"ita": "Tandemaus",
+			"jpn": "ワッカネズミ",
+			"kor": "두리",
+			"cht": "一對鼠",
+			"chs": "一对鼠"
 		},
 		"gender": "unknown",
 		"natdex": 924,
@@ -36203,15 +36203,15 @@ const pokemon = {
 	"maushold-three": {
 		"data-source": "maushold",
 		"forms": {
-			"ger": "",
+			"ger": "Dreierfamilie",
 			"eng": "Family of Three",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Familia de Tres",
+			"fre": "Famille de Trois",
+			"ita": "Trifamiglia",
+			"jpn": "３びきかぞく",
+			"kor": "세 식구",
+			"cht": "三隻家庭",
+			"chs": "三只家庭"
 		},
 		"sort": 1,
 		"games": [
@@ -36221,26 +36221,26 @@ const pokemon = {
 	},
 	"maushold": {
 		"names": {
-			"ger": "",
+			"ger": "Famieps",
 			"eng": "Maushold",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Maushold",
+			"fre": "Famignol",
+			"ita": "Maushold",
+			"jpn": "イッカネズミ",
+			"kor": "파밀리쥐",
+			"cht": "一家鼠",
+			"chs": "一家鼠"
 		},
 		"forms": {
-			"ger": "",
+			"ger": "Viererfamilie",
 			"eng": "Family of Four",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Familia de Cuatro",
+			"fre": "Famille de Quatre",
+			"ita": "Quadrifamiglia",
+			"jpn": "４ひきかぞく",
+			"kor": "네 식구",
+			"cht": "四隻家庭",
+			"chs": "四只家庭"
 		},
 		"gender": "unknown",
 		"natdex": 925,
@@ -36252,15 +36252,15 @@ const pokemon = {
 	},
 	"fidough": {
 		"names": {
-			"ger": "",
+			"ger": "Hefel",
 			"eng": "Fidough",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Fidough",
+			"fre": "Pâtachiot",
+			"ita": "Fidough",
+			"jpn": "パピモッチ",
+			"kor": "쫀도기",
+			"cht": "狗仔包",
+			"chs": "狗仔包"
 		},
 		"gender": "both",
 		"natdex": 926,
@@ -36271,15 +36271,15 @@ const pokemon = {
 	},
 	"dachsbun": {
 		"names": {
-			"ger": "",
+			"ger": "Backel",
 			"eng": "Dachsbun",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Dachsbun",
+			"fre": "Briochien",
+			"ita": "Dachsbun",
+			"jpn": "バウッツェル",
+			"kor": "바우첼",
+			"cht": "麻花犬",
+			"chs": "麻花犬"
 		},
 		"gender": "both",
 		"natdex": 927,
@@ -36290,15 +36290,15 @@ const pokemon = {
 	},
 	"smoliv": {
 		"names": {
-			"ger": "",
+			"ger": "Olini",
 			"eng": "Smoliv",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Smoliv",
+			"fre": "Olivini",
+			"ita": "Smoliv",
+			"jpn": "ミニーブ",
+			"kor": "미니브",
+			"cht": "迷你芙",
+			"chs": "迷你芙"
 		},
 		"gender": "both",
 		"natdex": 928,
@@ -36309,15 +36309,15 @@ const pokemon = {
 	},
 	"dolliv": {
 		"names": {
-			"ger": "",
+			"ger": "Olivinio",
 			"eng": "Dolliv",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Dolliv",
+			"fre": "Olivado",
+			"ita": "Dolliv",
+			"jpn": "オリーニョ",
+			"kor": "올리뇨",
+			"cht": "奧利紐",
+			"chs": "奥利纽"
 		},
 		"gender": "both",
 		"natdex": 929,
@@ -36328,15 +36328,15 @@ const pokemon = {
 	},
 	"arboliva": {
 		"names": {
-			"ger": "",
+			"ger": "Olithena",
 			"eng": "Arboliva",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Arboliva",
+			"fre": "Arboliva",
+			"ita": "Arboliva",
+			"jpn": "オリーヴァ",
+			"kor": "올리르바",
+			"cht": "奧利瓦",
+			"chs": "奥利瓦"
 		},
 		"gender": "both",
 		"natdex": 930,
@@ -36345,17 +36345,82 @@ const pokemon = {
 			"vio"
 		]
 	},
+	"squawkabilly-blue": {
+		"data-source": "squawkabilly",
+		"forms": {
+			"ger": "Blaugefiedert",
+			"eng": "Blue Plumage",
+			"spa": "Plumaje Azul",
+			"fre": "Plumage Bleu",
+			"ita": "Piume Azzurre",
+			"jpn": "ブルーフェザー",
+			"kor": "블루 페더",
+			"cht": "藍羽毛",
+			"chs": "蓝羽毛"
+		},
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"squawkabilly-yellow": {
+		"data-source": "squawkabilly",
+		"forms": {
+			"ger": "Gelbgefiedert",
+			"eng": "Yellow Plumage",
+			"spa": "Plumaje Amarillo",
+			"fre": "Plumage Jaune",
+			"ita": "Piume Gialle",
+			"jpn": "イエローフェザー",
+			"kor": "옐로 페더",
+			"cht": "黃羽毛",
+			"chs": "黄羽毛"
+		},
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"squawkabilly-white": {
+		"data-source": "squawkabilly",
+		"forms": {
+			"ger": "Weißgefiedert",
+			"eng": "White Plumage",
+			"spa": "Plumaje Blanco",
+			"fre": "Plumage Blanc",
+			"ita": "Piume Bianche",
+			"jpn": "ホワイトフェザー",
+			"kor": "화이트 페더",
+			"cht": "白羽毛",
+			"chs": "白羽毛"
+		},
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
 	"squawkabilly": {
 		"names": {
-			"ger": "",
+			"ger": "Krawalloro",
 			"eng": "Squawkabilly",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Squawkabilly",
+			"fre": "Tapatoès",
+			"ita": "Squawkabilly",
+			"jpn": "イキリンコ",
+			"kor": "시비꼬",
+			"cht": "怒鸚哥",
+			"chs": "怒鹦哥"
+		},
+		"forms": {
+			"ger": "Grüngefiedert",
+			"eng": "Green Plumage",
+			"spa": "Plumaje Verde",
+			"fre": "Plumage Vert",
+			"ita": "Piume Verdi",
+			"jpn": "グリーンフェザー",
+			"kor": "그린 페더",
+			"cht": "綠羽毛",
+			"chs": "绿羽毛"
 		},
 		"gender": "both",
 		"natdex": 931,
@@ -36366,15 +36431,15 @@ const pokemon = {
 	},
 	"nacli": {
 		"names": {
-			"ger": "",
+			"ger": "Geosali",
 			"eng": "Nacli",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Nacli",
+			"fre": "Selutin",
+			"ita": "Nacli",
+			"jpn": "コジオ",
+			"kor": "베베솔트",
+			"cht": "鹽石寶",
+			"chs": "盐石宝"
 		},
 		"gender": "both",
 		"natdex": 932,
@@ -36385,15 +36450,15 @@ const pokemon = {
 	},
 	"naclstack": {
 		"names": {
-			"ger": "",
+			"ger": "Sedisal",
 			"eng": "Naclstack",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Naclstack",
+			"fre": "Amassel",
+			"ita": "Naclstack",
+			"jpn": "ジオヅム",
+			"kor": "스태솔트",
+			"cht": "鹽石壘",
+			"chs": "盐石垒"
 		},
 		"gender": "both",
 		"natdex": 933,
@@ -36404,15 +36469,15 @@ const pokemon = {
 	},
 	"garganacl": {
 		"names": {
-			"ger": "",
+			"ger": "Saltigant",
 			"eng": "Garganacl",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Garganacl",
+			"fre": "Gigansel",
+			"ita": "Garganacl",
+			"jpn": "キョジオーン",
+			"kor": "콜로솔트",
+			"cht": "鹽石巨靈",
+			"chs": "盐石巨灵"
 		},
 		"gender": "both",
 		"natdex": 934,
@@ -36423,15 +36488,15 @@ const pokemon = {
 	},
 	"charcadet": {
 		"names": {
-			"ger": "",
+			"ger": "Knarbon",
 			"eng": "Charcadet",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Charcadet",
+			"fre": "Charbambin",
+			"ita": "Charcadet",
+			"jpn": "カルボウ",
+			"kor": "카르본",
+			"cht": "炭小侍",
+			"chs": "炭小侍"
 		},
 		"gender": "both",
 		"natdex": 935,
@@ -36442,15 +36507,15 @@ const pokemon = {
 	},
 	"armarouge": {
 		"names": {
-			"ger": "",
+			"ger": "Crimanzo",
 			"eng": "Armarouge",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Armarouge",
+			"fre": "Carmadura",
+			"ita": "Armarouge",
+			"jpn": "グレンアルマ",
+			"kor": "카디나르마",
+			"cht": "紅蓮鎧騎",
+			"chs": "红莲铠骑"
 		},
 		"gender": "both",
 		"natdex": 936,
@@ -36461,15 +36526,15 @@ const pokemon = {
 	},
 	"ceruledge": {
 		"names": {
-			"ger": "",
+			"ger": "Azugladis",
 			"eng": "Ceruledge",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Ceruledge",
+			"fre": "Malvalame",
+			"ita": "Ceruledge",
+			"jpn": "ソウブレイズ",
+			"kor": "파라블레이즈",
+			"cht": "蒼炎刃鬼",
+			"chs": "苍炎刃鬼"
 		},
 		"gender": "both",
 		"natdex": 937,
@@ -36480,15 +36545,15 @@ const pokemon = {
 	},
 	"tadbulb": {
 		"names": {
-			"ger": "",
+			"ger": "Blipp",
 			"eng": "Tadbulb",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Tadbulb",
+			"fre": "Têtampoule",
+			"ita": "Tadbulb",
+			"jpn": "ズピカ",
+			"kor": "빈나두",
+			"cht": "光蚪仔",
+			"chs": "光蚪仔"
 		},
 		"gender": "both",
 		"natdex": 938,
@@ -36499,15 +36564,15 @@ const pokemon = {
 	},
 	"bellibolt": {
 		"names": {
-			"ger": "",
+			"ger": "Wampitz",
 			"eng": "Bellibolt",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Bellibolt",
+			"fre": "Ampibidou",
+			"ita": "Bellibolt",
+			"jpn": "ハラバリー",
+			"kor": "찌리배리",
+			"cht": "電肚蛙",
+			"chs": "电肚蛙"
 		},
 		"gender": "both",
 		"natdex": 939,
@@ -36518,15 +36583,15 @@ const pokemon = {
 	},
 	"wattrel": {
 		"names": {
-			"ger": "",
+			"ger": "Voltrel",
 			"eng": "Wattrel",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Wattrel",
+			"fre": "Zapétrel",
+			"ita": "Wattrel",
+			"jpn": "カイデン",
+			"kor": "찌리비",
+			"cht": "電海燕",
+			"chs": "电海燕"
 		},
 		"gender": "both",
 		"natdex": 940,
@@ -36537,15 +36602,15 @@ const pokemon = {
 	},
 	"kilowattrel": {
 		"names": {
-			"ger": "",
+			"ger": "Voltrean",
 			"eng": "Kilowattrel",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Kilowattrel",
+			"fre": "Fulgulairo",
+			"ita": "Kilowattrel",
+			"jpn": "タイカイデン",
+			"kor": "찌리비크",
+			"cht": "大電海燕",
+			"chs": "大电海燕"
 		},
 		"gender": "both",
 		"natdex": 941,
@@ -36556,15 +36621,15 @@ const pokemon = {
 	},
 	"maschiff": {
 		"names": {
-			"ger": "",
+			"ger": "Mobtiff",
 			"eng": "Maschiff",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Maschiff",
+			"fre": "Grondogue",
+			"ita": "Maschiff",
+			"jpn": "オラチフ",
+			"kor": "오라티프",
+			"cht": "偶叫獒",
+			"chs": "偶叫獒"
 		},
 		"gender": "both",
 		"natdex": 942,
@@ -36575,15 +36640,15 @@ const pokemon = {
 	},
 	"mabosstiff": {
 		"names": {
-			"ger": "",
+			"ger": "Mastifioso",
 			"eng": "Mabosstiff",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Mabosstiff",
+			"fre": "Dogrino",
+			"ita": "Mabosstiff",
+			"jpn": "マフィティフ",
+			"kor": "마피티프",
+			"cht": "獒教父",
+			"chs": "獒教父"
 		},
 		"gender": "both",
 		"natdex": 943,
@@ -36594,15 +36659,15 @@ const pokemon = {
 	},
 	"shroodle": {
 		"names": {
-			"ger": "",
+			"ger": "Sproxi",
 			"eng": "Shroodle",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Shroodle",
+			"fre": "Gribouraigne",
+			"ita": "Shroodle",
+			"jpn": "シルシュルー",
+			"kor": "땃쭈르",
+			"cht": "滋汁鼴",
+			"chs": "滋汁鼹"
 		},
 		"gender": "both",
 		"natdex": 944,
@@ -36613,15 +36678,15 @@ const pokemon = {
 	},
 	"grafaiai": {
 		"names": {
-			"ger": "",
+			"ger": "Affiti",
 			"eng": "Grafaiai",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Grafaiai",
+			"fre": "Tag-Tag",
+			"ita": "Grafaiai",
+			"jpn": "タギングル",
+			"kor": "태깅구르",
+			"cht": "塗標客",
+			"chs": "涂标客"
 		},
 		"gender": "both",
 		"natdex": 945,
@@ -36632,15 +36697,15 @@ const pokemon = {
 	},
 	"bramblin": {
 		"names": {
-			"ger": "",
+			"ger": "Weherba",
 			"eng": "Bramblin",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Bramblin",
+			"fre": "Virovent",
+			"ita": "Bramblin",
+			"jpn": "アノクサ",
+			"kor": "그푸리",
+			"cht": "納噬草",
+			"chs": "纳噬草"
 		},
 		"gender": "both",
 		"natdex": 946,
@@ -36651,15 +36716,15 @@ const pokemon = {
 	},
 	"brambleghast": {
 		"names": {
-			"ger": "",
+			"ger": "Horrerba",
 			"eng": "Brambleghast",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Brambleghast",
+			"fre": "Virevorreur",
+			"ita": "Brambleghast",
+			"jpn": "アノホラグサ",
+			"kor": "공푸리",
+			"cht": "怖納噬草",
+			"chs": "怖纳噬草"
 		},
 		"gender": "both",
 		"natdex": 947,
@@ -36670,15 +36735,15 @@ const pokemon = {
 	},
 	"toedscool": {
 		"names": {
-			"ger": "",
+			"ger": "Tentagra",
 			"eng": "Toedscool",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Toedscool",
+			"fre": "Terracool",
+			"ita": "Toedscool",
+			"jpn": "ノノクラゲ",
+			"kor": "들눈해",
+			"cht": "原野水母",
+			"chs": "原野水母"
 		},
 		"gender": "both",
 		"natdex": 948,
@@ -36689,15 +36754,15 @@ const pokemon = {
 	},
 	"toedscruel": {
 		"names": {
-			"ger": "",
+			"ger": "Tenterra",
 			"eng": "Toedscruel",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Toedscruel",
+			"fre": "Terracruel",
+			"ita": "Toedscruel",
+			"jpn": "リククラゲ",
+			"kor": "육파리",
+			"cht": "陸地水母",
+			"chs": "陸地水母"
 		},
 		"gender": "both",
 		"natdex": 949,
@@ -36708,15 +36773,15 @@ const pokemon = {
 	},
 	"klawf": {
 		"names": {
-			"ger": "",
+			"ger": "Klibbe",
 			"eng": "Klawf",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Klawf",
+			"fre": "Craparoi",
+			"ita": "Klawf",
+			"jpn": "ガケガニ",
+			"kor": "절벼게",
+			"cht": "毛崖蟹",
+			"chs": "毛崖蟹"
 		},
 		"gender": "both",
 		"natdex": 950,
@@ -36727,15 +36792,15 @@ const pokemon = {
 	},
 	"capsakid": {
 		"names": {
-			"ger": "",
+			"ger": "Chilingel",
 			"eng": "Capsakid",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Capsakid",
+			"fre": "Pimito",
+			"ita": "Capsakid",
+			"jpn": "カプサイジ",
+			"kor": "캡싸이",
+			"cht": "熱辣娃",
+			"chs": "热辣娃"
 		},
 		"gender": "both",
 		"natdex": 951,
@@ -36746,15 +36811,15 @@ const pokemon = {
 	},
 	"scovillain": {
 		"names": {
-			"ger": "",
+			"ger": "Halupenjo",
 			"eng": "Scovillain",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Scovillain",
+			"fre": "Scovilain",
+			"ita": "Scovillain",
+			"jpn": "スコヴィラン",
+			"kor": "스코빌런",
+			"cht": "狠辣椒",
+			"chs": "狠辣椒"
 		},
 		"gender": "both",
 		"natdex": 952,
@@ -36765,15 +36830,15 @@ const pokemon = {
 	},
 	"rellor": {
 		"names": {
-			"ger": "",
+			"ger": "Relluk",
 			"eng": "Rellor",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Rellor",
+			"fre": "Léboulérou",
+			"ita": "Rellor",
+			"jpn": "シガロコ",
+			"kor": "구르데",
+			"cht": "蟲滾泥",
+			"chs": "虫滚泥"
 		},
 		"gender": "both",
 		"natdex": 953,
@@ -36784,15 +36849,15 @@ const pokemon = {
 	},
 	"rabsca": {
 		"names": {
-			"ger": "",
+			"ger": "Skarabaks",
 			"eng": "Rabsca",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Rabsca",
+			"fre": "Bérasca",
+			"ita": "Rabsca",
+			"jpn": "ベラカス",
+			"kor": "베라카스",
+			"cht": "蟲甲聖",
+			"chs": "虫甲圣"
 		},
 		"gender": "both",
 		"natdex": 954,
@@ -36803,15 +36868,15 @@ const pokemon = {
 	},
 	"flittle": {
 		"names": {
-			"ger": "",
+			"ger": "Flattutu",
 			"eng": "Flittle",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Flittle",
+			"fre": "Flotillon",
+			"ita": "Flittle",
+			"jpn": "ヒラヒナ",
+			"kor": "하느라기",
+			"cht": "飄飄雛",
+			"chs": "飘飘雏"
 		},
 		"gender": "both",
 		"natdex": 955,
@@ -36822,15 +36887,15 @@ const pokemon = {
 	},
 	"espathra": {
 		"names": {
-			"ger": "",
+			"ger": "Psiopatra",
 			"eng": "Espathra",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Espathra",
+			"fre": "Cléopsytra",
+			"ita": "Espathra",
+			"jpn": "クエスパトラ",
+			"kor": "클레스퍼트라",
+			"cht": "超能豔鴕",
+			"chs": "超能艳鸵"
 		},
 		"gender": "both",
 		"natdex": 956,
@@ -36841,15 +36906,15 @@ const pokemon = {
 	},
 	"tinkatink": {
 		"names": {
-			"ger": "",
+			"ger": "Forgita",
 			"eng": "Tinkatink",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Tinkatink",
+			"fre": "Forgerette",
+			"ita": "Tinkatink",
+			"jpn": "カヌチャン",
+			"kor": "어리짱",
+			"cht": "小鍛匠",
+			"chs": "小锻匠"
 		},
 		"gender": "female",
 		"natdex": 957,
@@ -36860,15 +36925,15 @@ const pokemon = {
 	},
 	"tinkatuff": {
 		"names": {
-			"ger": "",
+			"ger": "Tafforgita",
 			"eng": "Tinkatuff",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Tinkatuff",
+			"fre": "Forgella",
+			"ita": "Tinkatuff",
+			"jpn": "ナカヌチャン",
+			"kor": "벼리짱",
+			"cht": "巧鍛匠",
+			"chs": "巧锻匠"
 		},
 		"gender": "female",
 		"natdex": 958,
@@ -36879,15 +36944,15 @@ const pokemon = {
 	},
 	"tinkaton": {
 		"names": {
-			"ger": "",
+			"ger": "Granforgita",
 			"eng": "Tinkaton",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Tinkaton",
+			"fre": "Forgelina",
+			"ita": "Tinkaton",
+			"jpn": "デカヌチャン",
+			"kor": "두드리짱",
+			"cht": "巨鍛匠",
+			"chs": "巨锻匠"
 		},
 		"gender": "female",
 		"natdex": 959,
@@ -36898,15 +36963,15 @@ const pokemon = {
 	},
 	"wiglett": {
 		"names": {
-			"ger": "",
+			"ger": "Schligda",
 			"eng": "Wiglett",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Wiglett",
+			"fre": "Taupikeau",
+			"ita": "Wiglett",
+			"jpn": "ウミディグダ",
+			"kor": "바다그다",
+			"cht": "海地鼠",
+			"chs": "海地鼠"
 		},
 		"gender": "both",
 		"natdex": 960,
@@ -36917,15 +36982,15 @@ const pokemon = {
 	},
 	"wugtrio": {
 		"names": {
-			"ger": "",
+			"ger": "Schligdri",
 			"eng": "Wugtrio",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Wugtrio",
+			"fre": "Triopikeau",
+			"ita": "Wugtrio",
+			"jpn": "ウミトリオ",
+			"kor": "바닥트리오",
+			"cht": "三海地鼠",
+			"chs": "三海地鼠"
 		},
 		"gender": "both",
 		"natdex": 961,
@@ -36936,15 +37001,15 @@ const pokemon = {
 	},
 	"bombirdier": {
 		"names": {
-			"ger": "",
+			"ger": "Adebom",
 			"eng": "Bombirdier",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Bombirdier",
+			"fre": "Lestombaile",
+			"ita": "Bombirdier",
+			"jpn": "オトシドリ",
+			"kor": "떨구새",
+			"cht": "下石鳥",
+			"chs": "下石鸟"
 		},
 		"gender": "both",
 		"natdex": 962,
@@ -36955,15 +37020,15 @@ const pokemon = {
 	},
 	"finizen": {
 		"names": {
-			"ger": "",
+			"ger": "Normifin",
 			"eng": "Finizen",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Finizen",
+			"fre": "Dofin",
+			"ita": "Finizen",
+			"jpn": "ナミイルカ",
+			"kor": "맨돌핀",
+			"cht": "波普海豚",
+			"chs": "波普海豚"
 		},
 		"gender": "both",
 		"natdex": 963,
@@ -36974,15 +37039,15 @@ const pokemon = {
 	},
 	"palafin": {
 		"names": {
-			"ger": "",
+			"ger": "Delfinator",
 			"eng": "Palafin",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Palafin",
+			"fre": "Superdofin",
+			"ita": "Palafin",
+			"jpn": "イルカマン",
+			"kor": "돌핀맨",
+			"cht": "海豚俠",
+			"chs": "海豚侠"
 		},
 		"gender": "both",
 		"natdex": 964,
@@ -36993,15 +37058,15 @@ const pokemon = {
 	},
 	"varoom": {
 		"names": {
-			"ger": "",
+			"ger": "Knattox",
 			"eng": "Varoom",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Varoom",
+			"fre": "Vrombi",
+			"ita": "Varoom",
+			"jpn": "ブロロン",
+			"kor": "부르롱",
+			"cht": "噗隆隆",
+			"chs": "噗隆隆"
 		},
 		"gender": "both",
 		"natdex": 965,
@@ -37012,15 +37077,15 @@ const pokemon = {
 	},
 	"revavroom": {
 		"names": {
-			"ger": "",
+			"ger": "Knattatox",
 			"eng": "Revavroom",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Revavroom",
+			"fre": "Vrombotor",
+			"ita": "Revavroom",
+			"jpn": "ブロロローム",
+			"kor": "부르르룸",
+			"cht": "普隆隆姆",
+			"chs": "普隆隆姆"
 		},
 		"gender": "both",
 		"natdex": 966,
@@ -37031,15 +37096,15 @@ const pokemon = {
 	},
 	"cyclizar": {
 		"names": {
-			"ger": "",
+			"ger": "Mopex",
 			"eng": "Cyclizar",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Cyclizar",
+			"fre": "Motorizard",
+			"ita": "Cyclizar",
+			"jpn": "モトトカゲ",
+			"kor": "모토마",
+			"cht": "摩托蜥",
+			"chs": "摩托蜥"
 		},
 		"gender": "both",
 		"natdex": 967,
@@ -37050,15 +37115,15 @@ const pokemon = {
 	},
 	"orthworm": {
 		"names": {
-			"ger": "",
+			"ger": "Schlurm",
 			"eng": "Orthworm",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Orthworm",
+			"fre": "Ferdeter",
+			"ita": "Orthworm",
+			"jpn": "ミミズズ",
+			"kor": "꿈트렁",
+			"cht": "拖拖蚓",
+			"chs": "拖拖蚓"
 		},
 		"gender": "both",
 		"natdex": 968,
@@ -37069,15 +37134,15 @@ const pokemon = {
 	},
 	"glimmet": {
 		"names": {
-			"ger": "",
+			"ger": "Lumispross",
 			"eng": "Glimmet",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Glimmet",
+			"fre": "Germéclat",
+			"ita": "Glimmet",
+			"jpn": "キラーメ",
+			"kor": "초롱순",
+			"cht": "晶光芽",
+			"chs": "晶光芽"
 		},
 		"gender": "both",
 		"natdex": 969,
@@ -37088,15 +37153,15 @@ const pokemon = {
 	},
 	"glimmora": {
 		"names": {
-			"ger": "",
+			"ger": "Lumiflora",
 			"eng": "Glimmora",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Glimmora",
+			"fre": "Floréclat",
+			"ita": "Glimmora",
+			"jpn": "キラフロル",
+			"kor": "킬라플로르",
+			"cht": "晶光花",
+			"chs": "晶光花"
 		},
 		"gender": "both",
 		"natdex": 970,
@@ -37107,15 +37172,15 @@ const pokemon = {
 	},
 	"greavard": {
 		"names": {
-			"ger": "",
+			"ger": "Gruff",
 			"eng": "Greavard",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Greavard",
+			"fre": "Toutombe",
+			"ita": "Greavard",
+			"jpn": "ボチ",
+			"kor": "망망이",
+			"cht": "墓仔狗",
+			"chs": "墓仔狗"
 		},
 		"gender": "both",
 		"natdex": 971,
@@ -37126,15 +37191,15 @@ const pokemon = {
 	},
 	"houndstone": {
 		"names": {
-			"ger": "",
+			"ger": "Friedwuff",
 			"eng": "Houndstone",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Houndstone",
+			"fre": "Tomberro",
+			"ita": "Houndstone",
+			"jpn": "ハカドッグ",
+			"kor": "묘두기",
+			"cht": "墓揚犬",
+			"chs": "墓扬犬"
 		},
 		"gender": "both",
 		"natdex": 972,
@@ -37145,15 +37210,15 @@ const pokemon = {
 	},
 	"flamigo": {
 		"names": {
-			"ger": "",
+			"ger": "Flaminkno",
 			"eng": "Flamigo",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Flamigo",
+			"fre": "Flamenroule",
+			"ita": "Flamigo",
+			"jpn": "カラミンゴ",
+			"kor": "꼬이밍고",
+			"cht": "纏紅鶴",
+			"chs": "缠红鹤"
 		},
 		"gender": "both",
 		"natdex": 973,
@@ -37164,15 +37229,15 @@ const pokemon = {
 	},
 	"cetoddle": {
 		"names": {
-			"ger": "",
+			"ger": "Flaniwal",
 			"eng": "Cetoddle",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Cetoddle",
+			"fre": "Piétacé",
+			"ita": "Cetoddle",
+			"jpn": "アルクジラ",
+			"kor": "터벅고래",
+			"cht": "走鯨",
+			"chs": "走鲸"
 		},
 		"gender": "both",
 		"natdex": 974,
@@ -37183,15 +37248,15 @@ const pokemon = {
 	},
 	"cetitan": {
 		"names": {
-			"ger": "",
+			"ger": "Kolowal",
 			"eng": "Cetitan",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Cetitan",
+			"fre": "Balbalèze",
+			"ita": "Cetitan",
+			"jpn": "ハルクジラ",
+			"kor": "우락고래",
+			"cht": "浩大鯨",
+			"chs": "浩大鲸"
 		},
 		"gender": "both",
 		"natdex": 975,
@@ -37202,15 +37267,15 @@ const pokemon = {
 	},
 	"veluza": {
 		"names": {
-			"ger": "",
+			"ger": "Agiluza",
 			"eng": "Veluza",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Veluza",
+			"fre": "Délestin",
+			"ita": "Veluza",
+			"jpn": "ミガルーサ",
+			"kor": "가비루사",
+			"cht": "輕身鱈",
+			"chs": "轻身鳕"
 		},
 		"gender": "both",
 		"natdex": 976,
@@ -37221,15 +37286,15 @@ const pokemon = {
 	},
 	"dondozo": {
 		"names": {
-			"ger": "",
+			"ger": "Heerashai",
 			"eng": "Dondozo",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Dondozo",
+			"fre": "Oyacata",
+			"ita": "Dondozo",
+			"jpn": "ヘイラッシャ",
+			"kor": "어써러셔",
+			"cht": "吃吼霸",
+			"chs": "吃吼霸"
 		},
 		"gender": "both",
 		"natdex": 977,
@@ -37241,15 +37306,15 @@ const pokemon = {
 	"tatsugiri-droopy": {
 		"data-source": "tatsugiri",
 		"forms": {
-			"ger": "",
+			"ger": "Hängende Form",
 			"eng": "Droopy Form",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Forma Lánguida",
+			"fre": "Forme Affalée",
+			"ita": "Forma Adagiata",
+			"jpn": "たれたすがた",
+			"kor": "늘어진 모습",
+			"cht": "下垂姿勢",
+			"chs": "下垂姿势"
 		},
 		"games": [
 			"scar",
@@ -37259,15 +37324,15 @@ const pokemon = {
 	"tatsugiri-stretchy": {
 		"data-source": "tatsugiri",
 		"forms": {
-			"ger": "",
+			"ger": "Gestreckte Form",
 			"eng": "Stretchy Form",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Forma Recta",
+			"fre": "Forme Raide",
+			"ita": "Forma Tesa",
+			"jpn": "のびたすがた",
+			"kor": "뻗은 모습",
+			"cht": "平挺姿勢",
+			"chs": "平挺姿势"
 		},
 		"games": [
 			"scar",
@@ -37276,26 +37341,26 @@ const pokemon = {
 	},
 	"tatsugiri": {
 		"names": {
-			"ger": "",
+			"ger": "Nigiragi",
 			"eng": "Tatsugiri",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Tatsugiri",
+			"fre": "Nigirigon",
+			"ita": "Tatsugiri",
+			"jpn": "シャリタツ",
+			"kor": "싸리용",
+			"cht": "米立龍",
+			"chs": "米立龙"
 		},
 		"forms": {
-			"ger": "",
+			"ger": "Gebogene Form",
 			"eng": "Curly Form",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Forma Curvada",
+			"fre": "Forme Courbée",
+			"ita": "Forma Arcuata",
+			"jpn": "そったすがた",
+			"kor": "젖힌 모습",
+			"cht": "上弓姿勢",
+			"chs": "上弓姿势"
 		},
 		"gender": "both",
 		"natdex": 978,
@@ -37306,15 +37371,15 @@ const pokemon = {
 	},
 	"annihilape": {
 		"names": {
-			"ger": "",
+			"ger": "Epitaff",
 			"eng": "Annihilape",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Annihilape",
+			"fre": "Courrousinge",
+			"ita": "Annihilape",
+			"jpn": "コノヨザル",
+			"kor": "저승갓숭",
+			"cht": "棄世猴",
+			"chs": "弃世猴"
 		},
 		"gender": "both",
 		"natdex": 979,
@@ -37325,15 +37390,15 @@ const pokemon = {
 	},
 	"clodsire": {
 		"names": {
-			"ger": "",
+			"ger": "Suelord",
 			"eng": "Clodsire",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Clodsire",
+			"fre": "Terraiste",
+			"ita": "Clodsire",
+			"jpn": "ドオー",
+			"kor": "토오",
+			"cht": "土王",
+			"chs": "土王"
 		},
 		"gender": "both",
 		"natdex": 980,
@@ -37344,15 +37409,15 @@ const pokemon = {
 	},
 	"farigiraf": {
 		"names": {
-			"ger": "",
+			"ger": "Farigiraf",
 			"eng": "Farigiraf",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Farigiraf",
+			"fre": "Farigiraf",
+			"ita": "Farigiraf",
+			"jpn": "リキキリン",
+			"kor": "키키링",
+			"cht": "奇麒麟",
+			"chs": "奇麒麟"
 		},
 		"gender": "both",
 		"natdex": 981,
@@ -37364,15 +37429,15 @@ const pokemon = {
 	"dudunsparce-three-segment": {
 		"data-source": "dudunsparce",
 		"forms": {
-			"ger": "",
+			"ger": "Dreisegmentform",
 			"eng": "Three-Segment Form",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Forma Trinodular",
+			"fre": "Forme Triple",
+			"ita": "Forma Trimetamero",
+			"jpn": "みつふしフォルム",
+			"kor": "세 마디폼",
+			"cht": "三節形態",
+			"chs": "三节形态"
 		},
 		"sort": 2,
 		"games": [
@@ -37382,26 +37447,26 @@ const pokemon = {
 	},
 	"dudunsparce": {
 		"names": {
-			"ger": "",
+			"ger": "Dummimisel",
 			"eng": "Dudunsparce",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Dudunsparce",
+			"fre": "Deusolourdo",
+			"ita": "Dudunsparce",
+			"jpn": "ノココッチ",
+			"kor": "노고고치",
+			"cht": "土龍節節",
+			"chs": "土龙节节"
 		},
 		"forms": {
-			"ger": "",
+			"ger": "Zweisegmentform",
 			"eng": "Two-Segment Form",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Forma Binodular",
+			"fre": "Forme Double",
+			"ita": "Forma Bimetamero",
+			"jpn": "ふたふしフォルム",
+			"kor": "두 마디폼",
+			"cht": "二節形態",
+			"chs": "二节形态"
 		},
 		"gender": "both",
 		"natdex": 982,
@@ -37413,15 +37478,15 @@ const pokemon = {
 	},
 	"kingambit": {
 		"names": {
-			"ger": "",
+			"ger": "Gladimperio",
 			"eng": "Kingambit",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Kingambit",
+			"fre": "Scalpereur",
+			"ita": "Kingambit",
+			"jpn": "ドドゲザン",
+			"kor": "대도각참",
+			"cht": "仆斬將軍",
+			"chs": "仆刀将军"
 		},
 		"gender": "both",
 		"natdex": 983,
@@ -37432,15 +37497,15 @@ const pokemon = {
 	},
 	"great-tusk": {
 		"names": {
-			"ger": "",
+			"ger": "Riesenzahn",
 			"eng": "Great Tusk",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Colmilargo",
+			"fre": "Fort-Ivoire",
+			"ita": "Grandizanne",
+			"jpn": "イダイナキバ",
+			"kor": "위대한엄니",
+			"cht": "雄偉牙",
+			"chs": "雄伟牙"
 		},
 		"gender": "unknown",
 		"natdex": 984,
@@ -37451,15 +37516,15 @@ const pokemon = {
 	},
 	"scream-tail": {
 		"names": {
-			"ger": "",
+			"ger": "Brüllschweif",
 			"eng": "Scream Tail",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Colagrito",
+			"fre": "Hurle-Queue",
+			"ita": "Codaurlante",
+			"jpn": "サケブシッポ",
+			"kor": "우렁찬꼬리",
+			"cht": "吼叫尾",
+			"chs": "吼叫尾"
 		},
 		"gender": "unknown",
 		"natdex": 985,
@@ -37470,15 +37535,15 @@ const pokemon = {
 	},
 	"brute-bonnet": {
 		"names": {
-			"ger": "",
+			"ger": "Wutpilz",
 			"eng": "Brute Bonnet",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Furioseta",
+			"fre": "Fongus-Furie",
+			"ita": "Fungofurioso",
+			"jpn": "アラブルタケ",
+			"kor": "사나운버섯",
+			"cht": "猛惡菇",
+			"chs": "猛恶菇"
 		},
 		"gender": "unknown",
 		"natdex": 986,
@@ -37489,15 +37554,15 @@ const pokemon = {
 	},
 	"flutter-mane": {
 		"names": {
-			"ger": "",
+			"ger": "Flatterhaar",
 			"eng": "Flutter Mane",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Melenaleteo",
+			"fre": "Flotte-Mèche",
+			"ita": "Crinealato",
+			"jpn": "ハバタクカミ",
+			"kor": "날개치는머리",
+			"cht": "振翼髮",
+			"chs": "振翼发"
 		},
 		"gender": "unknown",
 		"natdex": 987,
@@ -37508,15 +37573,15 @@ const pokemon = {
 	},
 	"slither-wing": {
 		"names": {
-			"ger": "",
+			"ger": "Kriechflügel",
 			"eng": "Slither Wing",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Reptalada",
+			"fre": "Rampe-Ailes",
+			"ita": "Alirasenti",
+			"jpn": "チヲハウハネ",
+			"kor": "땅을기는날개",
+			"cht": "爬地翅",
+			"chs": "爬地翅"
 		},
 		"gender": "unknown",
 		"natdex": 988,
@@ -37527,15 +37592,15 @@ const pokemon = {
 	},
 	"sandy-shocks": {
 		"names": {
-			"ger": "",
+			"ger": "Sandfell",
 			"eng": "Sandy Shocks",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Pelarena",
+			"fre": "Pelage-Sablé",
+			"ita": "Peldisabbia",
+			"jpn": "スナノケガワ",
+			"kor": "모래털가죽",
+			"cht": "沙鐵皮",
+			"chs": "沙铁皮"
 		},
 		"gender": "unknown",
 		"natdex": 989,
@@ -37546,15 +37611,15 @@ const pokemon = {
 	},
 	"iron-treads": {
 		"names": {
-			"ger": "",
+			"ger": "Eisenrad",
 			"eng": "Iron Treads",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Ferrodada",
+			"fre": "Roue-de-Fer",
+			"ita": "Solcoferreo",
+			"jpn": "テツノワダチ",
+			"kor": "무쇠바퀴",
+			"cht": "鐵轍跡",
+			"chs": "铁辙迹"
 		},
 		"gender": "unknown",
 		"natdex": 990,
@@ -37565,15 +37630,15 @@ const pokemon = {
 	},
 	"iron-bundle": {
 		"names": {
-			"ger": "",
+			"ger": "Eisenbündel",
 			"eng": "Iron Bundle",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Ferrosaco",
+			"fre": "Hotte-de-Fer",
+			"ita": "Saccoferreo",
+			"jpn": "テツノツツミ",
+			"kor": "무쇠보따리",
+			"cht": "鐵包袱",
+			"chs": "铁包袱"
 		},
 		"gender": "unknown",
 		"natdex": 991,
@@ -37584,15 +37649,15 @@ const pokemon = {
 	},
 	"iron-hands": {
 		"names": {
-			"ger": "",
+			"ger": "Eisenhand",
 			"eng": "Iron Hands",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Ferropalmas",
+			"fre": "Paume-de-Fer",
+			"ita": "Manoferrea",
+			"jpn": "テツノカイナ",
+			"kor": "무쇠손",
+			"cht": "鐵臂膀",
+			"chs": "铁臂膀"
 		},
 		"gender": "",
 		"natdex": 992,
@@ -37603,15 +37668,15 @@ const pokemon = {
 	},
 	"iron-jugulis": {
 		"names": {
-			"ger": "",
+			"ger": "Eisenhals",
 			"eng": "Iron Jugulis",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Ferrocuello",
+			"fre": "Têtes-de-Fer",
+			"ita": "Colloferreo",
+			"jpn": "テツノコウベ",
+			"kor": "무쇠머리",
+			"cht": "鐵脖頸",
+			"chs": "铁脖颈"
 		},
 		"gender": "unknown",
 		"natdex": 993,
@@ -37622,15 +37687,15 @@ const pokemon = {
 	},
 	"iron-moth": {
 		"names": {
-			"ger": "",
+			"ger": "Eisenfalter",
 			"eng": "Iron Moth",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Ferropolilla",
+			"fre": "Mite-de-Fer",
+			"ita": "Falenaferrea",
+			"jpn": "テツノドクガ",
+			"kor": "무쇠독나방",
+			"cht": "鐵毒蛾",
+			"chs": "铁毒蛾"
 		},
 		"gender": "unknown",
 		"natdex": 994,
@@ -37641,15 +37706,15 @@ const pokemon = {
 	},
 	"iron-thorns": {
 		"names": {
-			"ger": "",
+			"ger": "Eisendorn",
 			"eng": "Iron Thorns",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Ferropúas",
+			"fre": "Épine-de-Fer",
+			"ita": "Spineferree",
+			"jpn": "テツノイバ",
+			"kor": "무쇠가시",
+			"cht": "鐵荊棘",
+			"chs": "铁荆棘"
 		},
 		"gender": "unknown",
 		"natdex": 995,
@@ -37660,15 +37725,15 @@ const pokemon = {
 	},
 	"frigibax": {
 		"names": {
-			"ger": "",
+			"ger": "Frospino",
 			"eng": "Frigibax",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Frigibax",
+			"fre": "Frigodo",
+			"ita": "Frigibax",
+			"jpn": "セビエ",
+			"kor": "드니차",
+			"cht": "涼脊龍",
+			"chs": "凉脊龙"
 		},
 		"gender": "both",
 		"natdex": 996,
@@ -37679,15 +37744,15 @@ const pokemon = {
 	},
 	"arctibax": {
 		"names": {
-			"ger": "",
+			"ger": "Cryospino",
 			"eng": "Arctibax",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Arctibax",
+			"fre": "Cryodo",
+			"ita": "Arctibax",
+			"jpn": "セゴール",
+			"kor": "드니꽁",
+			"cht": "凍脊龍",
+			"chs": "冻脊龙"
 		},
 		"gender": "both",
 		"natdex": 997,
@@ -37698,15 +37763,15 @@ const pokemon = {
 	},
 	"baxcalibur": {
 		"names": {
-			"ger": "",
+			"ger": "Espinodon",
 			"eng": "Baxcalibur",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Baxcalibur",
+			"fre": "Glaivodo",
+			"ita": "Baxcalibur",
+			"jpn": "セグレイブ",
+			"kor": "드닐레이브",
+			"cht": "戟脊龍",
+			"chs": "戟脊龙"
 		},
 		"gender": "both",
 		"natdex": 998,
@@ -37718,15 +37783,15 @@ const pokemon = {
 	"gimmighoul-roaming": {
 		"data-source": "gimmighoul",
 		"forms": {
-			"ger": "",
+			"ger": "Wanderform",
 			"eng": "Roaming Form",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Forma Andante",
+			"fre": "Forme Marche",
+			"ita": "Forma Ambulante",
+			"jpn": "とほフォルム",
+			"kor": "도보폼",
+			"cht": "徒步形態",
+			"chs": "徒步形态"
 		},
 		"games": [
 			"scar",
@@ -37735,26 +37800,26 @@ const pokemon = {
 	},
 	"gimmighoul": {
 		"names": {
-			"ger": "",
+			"ger": "Gierspenst",
 			"eng": "Gimmighoul",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Gimmighoul",
+			"fre": "Mordudor",
+			"ita": "Gimmighoul",
+			"jpn": "コレクレー",
+			"kor": "모으령",
+			"cht": "索財靈",
+			"chs": "索财灵"
 		},
 		"forms": {
-			"ger": "",
+			"ger": "Truhenform",
 			"eng": "Chest Form",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Forma Cofre",
+			"fre": "Forme Coffre",
+			"ita": "Forma Scrigno",
+			"jpn": "はこフォルム",
+			"kor": "상자폼",
+			"cht": "寶箱形態",
+			"chs": "宝箱形态"
 		},
 		"gender": "unknown",
 		"natdex": 999,
@@ -37765,15 +37830,15 @@ const pokemon = {
 	},
 	"gholdengo": {
 		"names": {
-			"ger": "",
+			"ger": "Monetigo",
 			"eng": "Gholdengo",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Gholdengo",
+			"fre": "Gromago",
+			"ita": "Gholdengo",
+			"jpn": "サーフゴー",
+			"kor": "타부자고",
+			"cht": "賽富豪",
+			"chs": "赛富豪"
 		},
 		"gender": "unknown",
 		"natdex": 1000,
@@ -37784,15 +37849,15 @@ const pokemon = {
 	},
 	"wo-chien": {
 		"names": {
-			"ger": "",
+			"ger": "Chongjian",
 			"eng": "Wo-Chien",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Wo-Chien",
+			"fre": "Chongjian",
+			"ita": "Wo-Chien",
+			"jpn": "チオンジェン",
+			"kor": "총지엔",
+			"cht": "古簡蝸",
+			"chs": "古简蜗"
 		},
 		"gender": "unknown",
 		"natdex": 1001,
@@ -37803,15 +37868,15 @@ const pokemon = {
 	},
 	"chien-pao": {
 		"names": {
-			"ger": "",
+			"ger": "Baojian",
 			"eng": "Chien-Pao",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Chien-Pao",
+			"fre": "Baojian",
+			"ita": "Chien-Pao",
+			"jpn": "パオジアン",
+			"kor": "파오젠",
+			"cht": "古劍豹",
+			"chs": "古剑豹"
 		},
 		"gender": "unknown",
 		"natdex": 1002,
@@ -37822,15 +37887,15 @@ const pokemon = {
 	},
 	"ting-lu": {
 		"names": {
-			"ger": "",
+			"ger": "Dinglu",
 			"eng": "Ting-Lu",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Ting-Lu",
+			"fre": "Dinglu",
+			"ita": "Ting-Lu",
+			"jpn": "ディンルー",
+			"kor": "딩루",
+			"cht": "古鼎鹿",
+			"chs": "古鼎鹿"
 		},
 		"gender": "unknown",
 		"natdex": 1003,
@@ -37841,15 +37906,15 @@ const pokemon = {
 	},
 	"chi-yu": {
 		"names": {
-			"ger": "",
+			"ger": "Yuyu",
 			"eng": "Chi-Yu",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Chi-Yu",
+			"fre": "Yuyu",
+			"ita": "Chi-Yu",
+			"jpn": "イーユイ",
+			"kor": "위유이",
+			"cht": "古玉魚",
+			"chs": "古玉鱼"
 		},
 		"gender": "unknown",
 		"natdex": 1004,
@@ -37860,15 +37925,15 @@ const pokemon = {
 	},
 	"roaring-moon": {
 		"names": {
-			"ger": "",
+			"ger": "Donnersichel",
 			"eng": "Roaring Moon",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Bramaluna",
+			"fre": "Rugit-Lune",
+			"ita": "Lunaruggente",
+			"jpn": "トドロクツキ",
+			"kor": "고동치는달",
+			"cht": "轟鳴月",
+			"chs": "轰鸣月"
 		},
 		"gender": "unknown",
 		"natdex": 1005,
@@ -37879,15 +37944,15 @@ const pokemon = {
 	},
 	"iron-valiant": {
 		"names": {
-			"ger": "",
+			"ger": "Eisenkrieger",
 			"eng": "Iron Valiant",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Ferropaladín",
+			"fre": "Garde-de-Fer",
+			"ita": "Eroeferreo",
+			"jpn": "テツノブジン",
+			"kor": "무쇠무인",
+			"cht": "鐵武者",
+			"chs": "铁武者"
 		},
 		"gender": "unknown",
 		"natdex": 1006,
@@ -37898,15 +37963,15 @@ const pokemon = {
 	},
 	"koraidon": {
 		"names": {
-			"ger": "",
+			"ger": "Koraidon",
 			"eng": "Koraidon",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Koraidon",
+			"fre": "Koraidon",
+			"ita": "Koraidon",
+			"jpn": "コライドン",
+			"kor": "코라이돈",
+			"cht": "故勒頓",
+			"chs": "故勒顿"
 		},
 		"gender": "unknown",
 		"natdex": 1007,
@@ -37917,15 +37982,15 @@ const pokemon = {
 	},
 	"miraidon": {
 		"names": {
-			"ger": "",
+			"ger": "Miraidon",
 			"eng": "Miraidon",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Miraidon",
+			"fre": "Miraidon",
+			"ita": "Miraidon",
+			"jpn": "ミライドン",
+			"kor": "미라이돈",
+			"cht": "密勒頓",
+			"chs": "密勒顿"
 		},
 		"gender": "unknown",
 		"natdex": 1008,
