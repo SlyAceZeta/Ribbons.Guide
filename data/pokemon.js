@@ -37659,7 +37659,7 @@ const pokemon = {
 			"cht": "鐵臂膀",
 			"chs": "铁臂膀"
 		},
-		"gender": "",
+		"gender": "unknown",
 		"natdex": 992,
 		"games": [
 			"scar",
