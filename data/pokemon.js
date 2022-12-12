@@ -12,9 +12,6 @@ const pokemon = {
 			"chs": "暴雪王"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 460,
 		"games": [
 			"diamond",
@@ -54,9 +51,6 @@ const pokemon = {
 			"chs": "凯西"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 63,
 		"games": [
 			"red",
@@ -111,9 +105,6 @@ const pokemon = {
 			"chs": "阿勃梭鲁"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 359,
 		"games": [
 			"ruby",
@@ -159,9 +150,6 @@ const pokemon = {
 			"chs": "敏捷虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 617,
 		"games": [
 			"black",
@@ -193,9 +181,6 @@ const pokemon = {
 			"chs": "坚盾剑怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 681,
 		"games": [
 			"x",
@@ -223,9 +208,6 @@ const pokemon = {
 			"chs": "化石翼龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 142,
 		"games": [
 			"black",
@@ -279,9 +261,6 @@ const pokemon = {
 			"chs": "波士可多拉"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 306,
 		"games": [
 			"ruby",
@@ -327,9 +306,6 @@ const pokemon = {
 			"chs": "长尾怪手"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 190,
 		"games": [
 			"gold",
@@ -377,9 +353,6 @@ const pokemon = {
 			"chs": "胡地"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 65,
 		"games": [
 			"red",
@@ -434,9 +407,6 @@ const pokemon = {
 			"chs": "霜奶仙"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 869,
 		"games": [
 			"sw",
@@ -456,9 +426,6 @@ const pokemon = {
 			"chs": "保姆曼波"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 594,
 		"games": [
 			"black",
@@ -488,9 +455,6 @@ const pokemon = {
 			"chs": "七夕青鸟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 334,
 		"games": [
 			"ruby",
@@ -536,9 +500,6 @@ const pokemon = {
 			"chs": "冰雪龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 698,
 		"games": [
 			"x",
@@ -566,9 +527,6 @@ const pokemon = {
 			"chs": "双尾怪手"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 424,
 		"games": [
 			"diamond",
@@ -606,9 +564,6 @@ const pokemon = {
 			"chs": "败露球菇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 591,
 		"games": [
 			"black",
@@ -640,9 +595,6 @@ const pokemon = {
 			"chs": "电龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 181,
 		"games": [
 			"gold",
@@ -689,9 +641,6 @@ const pokemon = {
 			"chs": "太古羽虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 347,
 		"games": [
 			"ruby",
@@ -737,9 +686,6 @@ const pokemon = {
 			"chs": "丰蜜龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 842,
 		"games": [
 			"sw",
@@ -759,9 +705,6 @@ const pokemon = {
 			"chs": "啃果虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 840,
 		"games": [
 			"sw",
@@ -781,9 +724,6 @@ const pokemon = {
 			"chs": "滴蛛霸"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 752,
 		"games": [
 			"sun",
@@ -807,9 +747,6 @@ const pokemon = {
 			"chs": "阿柏怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 24,
 		"games": [
 			"red",
@@ -868,9 +805,6 @@ const pokemon = {
 			"chs": "风速狗"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 59,
 		"games": [
 			"red",
@@ -924,8 +858,6 @@ const pokemon = {
 			"chs": "阿尔宙斯"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 493,
 		"games": [
@@ -964,9 +896,6 @@ const pokemon = {
 			"chs": "始祖小鸟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 566,
 		"games": [
 			"black",
@@ -998,9 +927,6 @@ const pokemon = {
 			"chs": "始祖大鸟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 567,
 		"games": [
 			"black",
@@ -1032,9 +958,6 @@ const pokemon = {
 			"chs": "鳃鱼海兽"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 883,
 		"games": [
 			"sw",
@@ -1054,9 +977,6 @@ const pokemon = {
 			"chs": "雷鸟海兽"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 881,
 		"games": [
 			"sw",
@@ -1076,9 +996,6 @@ const pokemon = {
 			"chs": "阿利多斯"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 168,
 		"games": [
 			"gold",
@@ -1125,9 +1042,6 @@ const pokemon = {
 			"chs": "太古盔甲"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 348,
 		"games": [
 			"ruby",
@@ -1173,9 +1087,6 @@ const pokemon = {
 			"chs": "芳香精"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 683,
 		"games": [
 			"x",
@@ -1203,9 +1114,6 @@ const pokemon = {
 			"chs": "可可多拉"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 304,
 		"games": [
 			"ruby",
@@ -1251,9 +1159,6 @@ const pokemon = {
 			"chs": "刺梭鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 846,
 		"games": [
 			"sw",
@@ -1281,9 +1186,7 @@ const pokemon = {
 			"chs": "急冻鸟"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 144,
 		"games": [
 			"red",
@@ -1337,9 +1240,6 @@ const pokemon = {
 			"chs": "差不多娃娃"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 531,
 		"games": [
 			"black",
@@ -1371,9 +1271,6 @@ const pokemon = {
 			"chs": "冰雪巨龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 699,
 		"games": [
 			"x",
@@ -1408,9 +1305,6 @@ const pokemon = {
 			"chs": "冰岩怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 713,
 		"games": [
 			"x",
@@ -1438,9 +1332,6 @@ const pokemon = {
 			"chs": "牙牙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 610,
 		"games": [
 			"black",
@@ -1472,9 +1363,7 @@ const pokemon = {
 			"chs": "亚克诺姆"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 482,
 		"games": [
 			"diamond",
@@ -1514,9 +1403,6 @@ const pokemon = {
 			"chs": "玛力露丽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 184,
 		"games": [
 			"emerald",
@@ -1565,9 +1451,6 @@ const pokemon = {
 			"chs": "露力丽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 298,
 		"games": [
 			"diamond",
@@ -1613,9 +1496,6 @@ const pokemon = {
 			"chs": "宝贝龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 371,
 		"games": [
 			"y",
@@ -1661,9 +1541,6 @@ const pokemon = {
 			"chs": "天秤偶"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 343,
 		"games": [
 			"ruby",
@@ -1709,9 +1586,6 @@ const pokemon = {
 			"chs": "诅咒娃娃"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 354,
 		"games": [
 			"ruby",
@@ -1755,9 +1629,6 @@ const pokemon = {
 			"chs": "龟足巨铠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 689,
 		"games": [
 			"x",
@@ -1785,9 +1656,6 @@ const pokemon = {
 			"chs": "泥泥鳅"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 339,
 		"games": [
 			"ruby",
@@ -1834,9 +1702,6 @@ const pokemon = {
 			"chs": "戽斗尖梭"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 847,
 		"games": [
 			"sw",
@@ -1857,8 +1722,6 @@ const pokemon = {
 		},
 		"gender": "both",
 		"femsprite": true,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 902,
 		"games": [
 			"pla"
@@ -1935,9 +1798,6 @@ const pokemon = {
 			"chs": "红条纹的样子"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 550,
 		"games": [
 			"black",
@@ -1969,9 +1829,6 @@ const pokemon = {
 			"chs": "护城龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 411,
 		"games": [
 			"diamond",
@@ -2009,9 +1866,6 @@ const pokemon = {
 			"chs": "月桂叶"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 153,
 		"games": [
 			"gold",
@@ -2058,9 +1912,6 @@ const pokemon = {
 			"chs": "冻原熊"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 614,
 		"games": [
 			"black",
@@ -2092,9 +1943,6 @@ const pokemon = {
 			"chs": "狩猎凤蝶"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 267,
 		"games": [
 			"ruby",
@@ -2139,9 +1987,6 @@ const pokemon = {
 			"chs": "大针蜂"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 15,
 		"games": [
 			"x",
@@ -2193,9 +2038,6 @@ const pokemon = {
 			"chs": "大宇怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 606,
 		"games": [
 			"black",
@@ -2227,9 +2069,6 @@ const pokemon = {
 			"chs": "铁哑铃"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 374,
 		"games": [
 			"ruby",
@@ -2275,9 +2114,6 @@ const pokemon = {
 			"chs": "美丽花"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 182,
 		"games": [
 			"ss",
@@ -2326,9 +2162,6 @@ const pokemon = {
 			"chs": "喇叭芽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 69,
 		"games": [
 			"red",
@@ -2380,9 +2213,6 @@ const pokemon = {
 			"chs": "冰宝"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 712,
 		"games": [
 			"x",
@@ -2411,9 +2241,6 @@ const pokemon = {
 			"chs": "穿着熊"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 760,
 		"games": [
 			"sun",
@@ -2437,9 +2264,6 @@ const pokemon = {
 			"chs": "大尾狸"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 400,
 		"games": [
 			"diamond",
@@ -2477,9 +2301,6 @@ const pokemon = {
 			"chs": "大牙狸"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 399,
 		"games": [
 			"diamond",
@@ -2517,9 +2338,6 @@ const pokemon = {
 			"chs": "龟脚脚"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 688,
 		"games": [
 			"x",
@@ -2547,9 +2365,6 @@ const pokemon = {
 			"chs": "劈斩司令"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 625,
 		"games": [
 			"black",
@@ -2581,9 +2396,6 @@ const pokemon = {
 			"chs": "砰头小丑"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 806,
 		"games": [
 			"usun",
@@ -2605,9 +2417,6 @@ const pokemon = {
 			"chs": "水箭龟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 9,
 		"games": [
 			"red",
@@ -2661,9 +2470,6 @@ const pokemon = {
 			"chs": "火焰鸡"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 257,
 		"games": [
 			"ruby",
@@ -2709,9 +2515,6 @@ const pokemon = {
 			"chs": "索侦虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 824,
 		"games": [
 			"sw",
@@ -2731,9 +2534,6 @@ const pokemon = {
 			"chs": "幸福蛋"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 242,
 		"games": [
 			"gold",
@@ -2783,9 +2583,6 @@ const pokemon = {
 			"chs": "斑斑马"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 522,
 		"games": [
 			"x",
@@ -2815,9 +2612,6 @@ const pokemon = {
 			"chs": "地幔岩"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 525,
 		"games": [
 			"black",
@@ -2849,9 +2643,6 @@ const pokemon = {
 			"chs": "逐电犬"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 836,
 		"games": [
 			"sw",
@@ -2871,9 +2662,6 @@ const pokemon = {
 			"chs": "盆才怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 438,
 		"games": [
 			"diamond",
@@ -2913,9 +2701,6 @@ const pokemon = {
 			"chs": "爆炸头水牛"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 626,
 		"games": [
 			"black",
@@ -2947,9 +2732,6 @@ const pokemon = {
 			"chs": "甜竹竹"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 761,
 		"games": [
 			"sun",
@@ -2973,9 +2755,6 @@ const pokemon = {
 			"chs": "长尾火狐"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 654,
 		"games": [
 			"x",
@@ -3008,9 +2787,6 @@ const pokemon = {
 			"chs": "勇士雄鹰"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 628,
 		"games": [
 			"black",
@@ -3042,9 +2818,6 @@ const pokemon = {
 			"chs": "斗笠菇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 286,
 		"games": [
 			"ruby",
@@ -3088,9 +2861,6 @@ const pokemon = {
 			"chs": "花漾海狮"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 729,
 		"games": [
 			"sun",
@@ -3114,9 +2884,6 @@ const pokemon = {
 			"chs": "青铜钟"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 437,
 		"games": [
 			"diamond",
@@ -3156,9 +2923,6 @@ const pokemon = {
 			"chs": "铜镜怪"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 436,
 		"games": [
 			"diamond",
@@ -3198,9 +2962,6 @@ const pokemon = {
 			"chs": "磨牙彩皮鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 779,
 		"games": [
 			"sun",
@@ -3222,9 +2983,6 @@ const pokemon = {
 			"chs": "含羞苞"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 406,
 		"games": [
 			"diamond",
@@ -3264,9 +3022,6 @@ const pokemon = {
 			"chs": "泳圈鼬"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 418,
 		"games": [
 			"diamond",
@@ -3304,9 +3059,6 @@ const pokemon = {
 			"chs": "妙蛙种子"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 1,
 		"games": [
 			"red",
@@ -3360,9 +3112,6 @@ const pokemon = {
 			"chs": "卷卷耳"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 427,
 		"games": [
 			"diamond",
@@ -3402,9 +3151,6 @@ const pokemon = {
 			"chs": "掘掘兔"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 659,
 		"games": [
 			"x",
@@ -3471,9 +3217,6 @@ const pokemon = {
 			"chs": "草木蓑衣"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 412,
 		"games": [
 			"diamond",
@@ -3511,9 +3254,6 @@ const pokemon = {
 			"chs": "巴大蝶"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 12,
 		"games": [
 			"red",
@@ -3567,9 +3307,6 @@ const pokemon = {
 			"chs": "爆肌蚊"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 794,
 		"games": [
 			"sun",
@@ -3593,9 +3330,6 @@ const pokemon = {
 			"chs": "刺球仙人掌"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 331,
 		"games": [
 			"ruby",
@@ -3639,9 +3373,6 @@ const pokemon = {
 			"chs": "梦歌仙人掌"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 332,
 		"games": [
 			"ruby",
@@ -3685,9 +3416,7 @@ const pokemon = {
 			"chs": "蕾冠王"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 898,
 		"games": [
 			"sw",
@@ -3707,9 +3436,6 @@ const pokemon = {
 			"chs": "喷火驼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 323,
 		"games": [
 			"ruby",
@@ -3753,9 +3479,6 @@ const pokemon = {
 			"chs": "小碎钻"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 703,
 		"games": [
 			"x",
@@ -3783,9 +3506,6 @@ const pokemon = {
 			"chs": "大炭车"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 838,
 		"games": [
 			"sw",
@@ -3805,9 +3525,6 @@ const pokemon = {
 			"chs": "尖牙笼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 455,
 		"games": [
 			"diamond",
@@ -3845,9 +3562,6 @@ const pokemon = {
 			"chs": "肋骨海龟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 565,
 		"games": [
 			"black",
@@ -3879,9 +3593,6 @@ const pokemon = {
 			"chs": "利牙鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 318,
 		"games": [
 			"ruby",
@@ -3927,9 +3638,6 @@ const pokemon = {
 			"chs": "盾甲茧"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 268,
 		"games": [
 			"ruby",
@@ -3974,9 +3682,6 @@ const pokemon = {
 			"chs": "飘浮泡泡"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 351,
 		"games": [
 			"ruby",
@@ -4020,9 +3725,6 @@ const pokemon = {
 			"chs": "绿毛虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 10,
 		"games": [
 			"lg",
@@ -4076,8 +3778,6 @@ const pokemon = {
 			"chs": "时拉比"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 251,
 		"games": [
@@ -4127,9 +3827,6 @@ const pokemon = {
 			"chs": "铁火辉夜"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 797,
 		"games": [
 			"sun",
@@ -4153,9 +3850,6 @@ const pokemon = {
 			"chs": "焚焰蚣"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 851,
 		"games": [
 			"sw",
@@ -4175,9 +3869,6 @@ const pokemon = {
 			"chs": "水晶灯火灵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 609,
 		"games": [
 			"black",
@@ -4209,9 +3900,6 @@ const pokemon = {
 			"chs": "吉利蛋"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 113,
 		"games": [
 			"red",
@@ -4266,9 +3954,6 @@ const pokemon = {
 			"chs": "喷火龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 6,
 		"games": [
 			"red",
@@ -4322,9 +4007,6 @@ const pokemon = {
 			"chs": "虫电宝"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 737,
 		"games": [
 			"sun",
@@ -4348,9 +4030,6 @@ const pokemon = {
 			"chs": "小火龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 4,
 		"games": [
 			"red",
@@ -4404,9 +4083,6 @@ const pokemon = {
 			"chs": "火恐龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 5,
 		"games": [
 			"red",
@@ -4460,9 +4136,6 @@ const pokemon = {
 			"chs": "聒噪鸟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 441,
 		"games": [
 			"diamond",
@@ -4500,9 +4173,6 @@ const pokemon = {
 			"chs": "樱花儿"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 421,
 		"games": [
 			"diamond",
@@ -4542,9 +4212,6 @@ const pokemon = {
 			"chs": "樱花宝"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 420,
 		"games": [
 			"diamond",
@@ -4584,9 +4251,6 @@ const pokemon = {
 			"chs": "布里卡隆"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 652,
 		"games": [
 			"x",
@@ -4612,9 +4276,6 @@ const pokemon = {
 			"chs": "哈力栗"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 650,
 		"games": [
 			"x",
@@ -4640,9 +4301,6 @@ const pokemon = {
 			"chs": "咬咬龟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 833,
 		"games": [
 			"sw",
@@ -4662,9 +4320,6 @@ const pokemon = {
 			"chs": "菊草叶"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 152,
 		"games": [
 			"gold",
@@ -4711,9 +4366,6 @@ const pokemon = {
 			"chs": "小火焰猴"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 390,
 		"games": [
 			"diamond",
@@ -4751,9 +4403,6 @@ const pokemon = {
 			"chs": "风铃铃"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 358,
 		"games": [
 			"ruby",
@@ -4798,9 +4447,6 @@ const pokemon = {
 			"chs": "灯笼鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 170,
 		"games": [
 			"umoon",
@@ -4849,9 +4495,6 @@ const pokemon = {
 			"chs": "铃铛响"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 433,
 		"games": [
 			"diamond",
@@ -4889,9 +4532,6 @@ const pokemon = {
 			"chs": "奇诺栗鼠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 573,
 		"games": [
 			"black",
@@ -4923,9 +4563,6 @@ const pokemon = {
 			"chs": "闪焰王牌"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 815,
 		"games": [
 			"sw",
@@ -4945,9 +4582,6 @@ const pokemon = {
 			"chs": "珍珠贝"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 366,
 		"games": [
 			"ruby",
@@ -4991,9 +4625,6 @@ const pokemon = {
 			"chs": "铁臂枪虾"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 692,
 		"games": [
 			"x",
@@ -5021,9 +4652,6 @@ const pokemon = {
 			"chs": "钢炮臂虾"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 693,
 		"games": [
 			"x",
@@ -5051,9 +4679,6 @@ const pokemon = {
 			"chs": "念力土偶"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 344,
 		"games": [
 			"ruby",
@@ -5099,9 +4724,6 @@ const pokemon = {
 			"chs": "皮可西"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 36,
 		"games": [
 			"red",
@@ -5156,9 +4778,6 @@ const pokemon = {
 			"chs": "皮皮"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 35,
 		"games": [
 			"red",
@@ -5213,9 +4832,6 @@ const pokemon = {
 			"chs": "皮宝宝"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 173,
 		"games": [
 			"gold",
@@ -5265,9 +4881,6 @@ const pokemon = {
 			"chs": "拳拳蛸"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 852,
 		"games": [
 			"sw",
@@ -5287,9 +4900,6 @@ const pokemon = {
 			"chs": "刺甲贝"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 91,
 		"games": [
 			"red",
@@ -5343,9 +4953,6 @@ const pokemon = {
 			"chs": "巨炭山"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 839,
 		"games": [
 			"sw",
@@ -5365,9 +4972,7 @@ const pokemon = {
 			"chs": "勾帕路翁"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 638,
 		"games": [
 			"black",
@@ -5399,9 +5004,6 @@ const pokemon = {
 			"chs": "迭失棺"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 563,
 		"games": [
 			"black",
@@ -5433,9 +5035,6 @@ const pokemon = {
 			"chs": "三蜜蜂"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 415,
 		"games": [
 			"diamond",
@@ -5475,9 +5074,6 @@ const pokemon = {
 			"chs": "力壮鸡"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 256,
 		"games": [
 			"ruby",
@@ -5523,9 +5119,6 @@ const pokemon = {
 			"chs": "花疗环环"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 764,
 		"games": [
 			"sun",
@@ -5549,9 +5142,6 @@ const pokemon = {
 			"chs": "修建老匠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 534,
 		"games": [
 			"black",
@@ -5583,9 +5173,6 @@ const pokemon = {
 			"chs": "大王铜象"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 879,
 		"games": [
 			"sw",
@@ -5605,9 +5192,6 @@ const pokemon = {
 			"chs": "龙虾小兵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 341,
 		"games": [
 			"pearl",
@@ -5661,9 +5245,6 @@ const pokemon = {
 			"chs": "太阳珊瑚"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 222,
 		"games": [
 			"gold",
@@ -5712,9 +5293,6 @@ const pokemon = {
 			"chs": "钢铠鸦"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 823,
 		"games": [
 			"sw",
@@ -5734,9 +5312,6 @@ const pokemon = {
 			"chs": "蓝鸦"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 822,
 		"games": [
 			"sw",
@@ -5756,9 +5331,7 @@ const pokemon = {
 			"chs": "科斯莫姆"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 790,
 		"games": [
 			"sun",
@@ -5782,9 +5355,7 @@ const pokemon = {
 			"chs": "科斯莫古"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 789,
 		"games": [
 			"sun",
@@ -5808,9 +5379,6 @@ const pokemon = {
 			"chs": "木棉球"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 546,
 		"games": [
 			"black",
@@ -5842,9 +5410,6 @@ const pokemon = {
 			"chs": "好胜毛蟹"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 740,
 		"games": [
 			"sun",
@@ -5866,9 +5431,6 @@ const pokemon = {
 			"chs": "好胜蟹"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 739,
 		"games": [
 			"sun",
@@ -5890,9 +5452,6 @@ const pokemon = {
 			"chs": "摇篮百合"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 346,
 		"games": [
 			"ruby",
@@ -5938,9 +5497,6 @@ const pokemon = {
 			"chs": "古月鸟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 845,
 		"games": [
 			"sw",
@@ -5960,9 +5516,6 @@ const pokemon = {
 			"chs": "头盖龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 408,
 		"games": [
 			"diamond",
@@ -6000,9 +5553,6 @@ const pokemon = {
 			"chs": "铁螯龙虾"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 342,
 		"games": [
 			"ruby",
@@ -6048,9 +5598,7 @@ const pokemon = {
 			"chs": "克雷色利亚"
 		},
 		"gender": "female",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 488,
 		"games": [
 			"diamond",
@@ -6090,9 +5638,6 @@ const pokemon = {
 			"chs": "不良蛙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 453,
 		"games": [
 			"diamond",
@@ -6132,9 +5677,6 @@ const pokemon = {
 			"chs": "叉字蝠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 169,
 		"games": [
 			"gold",
@@ -6184,9 +5726,6 @@ const pokemon = {
 			"chs": "蓝鳄"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 159,
 		"games": [
 			"gold",
@@ -6233,9 +5772,6 @@ const pokemon = {
 			"chs": "岩殿居蟹"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 558,
 		"games": [
 			"black",
@@ -6267,9 +5803,6 @@ const pokemon = {
 			"chs": "几何雪花"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 615,
 		"games": [
 			"black",
@@ -6301,9 +5834,6 @@ const pokemon = {
 			"chs": "喷嚏熊"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 613,
 		"games": [
 			"black",
@@ -6335,9 +5865,6 @@ const pokemon = {
 			"chs": "卡拉卡拉"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 104,
 		"games": [
 			"red",
@@ -6391,9 +5918,6 @@ const pokemon = {
 			"chs": "铜象"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 878,
 		"games": [
 			"sw",
@@ -6413,9 +5937,6 @@ const pokemon = {
 			"chs": "魔灵珊瑚"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 864,
 		"games": [
 			"sw",
@@ -6435,9 +5956,6 @@ const pokemon = {
 			"chs": "萌虻"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 742,
 		"games": [
 			"sun",
@@ -6461,9 +5979,6 @@ const pokemon = {
 			"chs": "火球鼠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 155,
 		"games": [
 			"y",
@@ -6511,8 +6026,6 @@ const pokemon = {
 			"chs": "达克莱伊"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 491,
 		"games": [
@@ -6559,9 +6072,6 @@ const pokemon = {
 			"chs": "达摩狒狒"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 555,
 		"games": [
 			"black",
@@ -6593,9 +6103,6 @@ const pokemon = {
 			"chs": "投羽枭"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 723,
 		"games": [
 			"sun",
@@ -6628,9 +6135,6 @@ const pokemon = {
 			"chs": "火红不倒翁"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 554,
 		"games": [
 			"black",
@@ -6669,9 +6173,6 @@ const pokemon = {
 			"chs": "狙射树枭"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 724,
 		"games": [
 			"sun",
@@ -6695,9 +6196,6 @@ const pokemon = {
 			"chs": "咚咚鼠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 702,
 		"games": [
 			"x",
@@ -6781,9 +6279,6 @@ const pokemon = {
 			"chs": "春天的样子"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 585,
 		"sort": 1,
 		"games": [
@@ -6814,9 +6309,6 @@ const pokemon = {
 			"chs": "单首龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 633,
 		"games": [
 			"black",
@@ -6848,9 +6340,6 @@ const pokemon = {
 			"chs": "优雅猫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 301,
 		"games": [
 			"ruby",
@@ -6894,9 +6383,6 @@ const pokemon = {
 			"chs": "信使鸟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 225,
 		"games": [
 			"gold",
@@ -6945,9 +6431,6 @@ const pokemon = {
 			"chs": "妖火红狐"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 655,
 		"games": [
 			"x",
@@ -7026,8 +6509,6 @@ const pokemon = {
 			"chs": "普通形态"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 386,
 		"games": [
@@ -7072,9 +6553,6 @@ const pokemon = {
 			"chs": "白海狮"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 87,
 		"games": [
 			"red",
@@ -7126,9 +6604,6 @@ const pokemon = {
 			"chs": "双刃丸"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 502,
 		"games": [
 			"black",
@@ -7159,9 +6634,6 @@ const pokemon = {
 			"chs": "滴蛛"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 751,
 		"games": [
 			"sun",
@@ -7185,9 +6657,6 @@ const pokemon = {
 			"chs": "破破舵轮"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 781,
 		"games": [
 			"sun",
@@ -7211,9 +6680,7 @@ const pokemon = {
 			"chs": "帝牙卢卡"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 483,
 		"games": [
 			"diamond",
@@ -7253,8 +6720,6 @@ const pokemon = {
 			"chs": "蒂安希"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 719,
 		"games": [
@@ -7283,9 +6748,6 @@ const pokemon = {
 			"chs": "掘地兔"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 660,
 		"games": [
 			"x",
@@ -7327,9 +6789,6 @@ const pokemon = {
 			"chs": "地鼠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 50,
 		"games": [
 			"red",
@@ -7383,9 +6842,6 @@ const pokemon = {
 			"chs": "百变怪"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 132,
 		"games": [
 			"red",
@@ -7439,9 +6895,6 @@ const pokemon = {
 			"chs": "嘟嘟利"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 85,
 		"games": [
 			"red",
@@ -7493,9 +6946,6 @@ const pokemon = {
 			"chs": "嘟嘟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 84,
 		"games": [
 			"red",
@@ -7547,9 +6997,6 @@ const pokemon = {
 			"chs": "顿甲"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 232,
 		"games": [
 			"gold",
@@ -7596,9 +7043,6 @@ const pokemon = {
 			"chs": "天罩虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 825,
 		"games": [
 			"sw",
@@ -7618,9 +7062,6 @@ const pokemon = {
 			"chs": "双剑鞘"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 680,
 		"games": [
 			"x",
@@ -7648,9 +7089,6 @@ const pokemon = {
 			"chs": "鳃鱼龙"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 882,
 		"games": [
 			"sw",
@@ -7670,9 +7108,6 @@ const pokemon = {
 			"chs": "雷鸟龙"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 880,
 		"games": [
 			"sw",
@@ -7692,9 +7127,6 @@ const pokemon = {
 			"chs": "毒藻龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 691,
 		"games": [
 			"x",
@@ -7722,9 +7154,6 @@ const pokemon = {
 			"chs": "多龙巴鲁托"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 887,
 		"games": [
 			"sw",
@@ -7744,9 +7173,6 @@ const pokemon = {
 			"chs": "哈克龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 148,
 		"games": [
 			"red",
@@ -7800,9 +7226,6 @@ const pokemon = {
 			"chs": "快龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 149,
 		"games": [
 			"red",
@@ -7856,9 +7279,6 @@ const pokemon = {
 			"chs": "多龙奇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 886,
 		"games": [
 			"sw",
@@ -7878,9 +7298,6 @@ const pokemon = {
 			"chs": "老翁龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 780,
 		"games": [
 			"sun",
@@ -7904,9 +7321,6 @@ const pokemon = {
 			"chs": "龙王蝎"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 452,
 		"games": [
 			"diamond",
@@ -7946,9 +7360,6 @@ const pokemon = {
 			"chs": "迷你龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 147,
 		"games": [
 			"red",
@@ -8002,9 +7413,6 @@ const pokemon = {
 			"chs": "暴噬龟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 834,
 		"games": [
 			"sw",
@@ -8024,9 +7432,6 @@ const pokemon = {
 			"chs": "多龙梅西亚"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 885,
 		"games": [
 			"sw",
@@ -8046,9 +7451,6 @@ const pokemon = {
 			"chs": "随风球"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 426,
 		"games": [
 			"black",
@@ -8088,9 +7490,6 @@ const pokemon = {
 			"chs": "飘飘球"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 425,
 		"games": [
 			"diamond",
@@ -8130,9 +7529,6 @@ const pokemon = {
 			"chs": "螺钉地鼠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 529,
 		"games": [
 			"black",
@@ -8164,9 +7560,6 @@ const pokemon = {
 			"chs": "变涩蜥"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 817,
 		"games": [
 			"sw",
@@ -8186,9 +7579,6 @@ const pokemon = {
 			"chs": "催眠貘"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 96,
 		"games": [
 			"red",
@@ -8240,9 +7630,6 @@ const pokemon = {
 			"chs": "赤面龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 621,
 		"games": [
 			"black",
@@ -8274,9 +7661,6 @@ const pokemon = {
 			"chs": "毛毛角羊"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 832,
 		"games": [
 			"sw",
@@ -8296,9 +7680,6 @@ const pokemon = {
 			"chs": "鸭宝宝"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 580,
 		"games": [
 			"black",
@@ -8342,9 +7723,6 @@ const pokemon = {
 			"chs": "三地鼠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 51,
 		"games": [
 			"red",
@@ -8398,9 +7776,6 @@ const pokemon = {
 			"chs": "土龙弟弟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 206,
 		"games": [
 			"gold",
@@ -8449,9 +7824,6 @@ const pokemon = {
 			"chs": "双卵细胞球"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 578,
 		"games": [
 			"black",
@@ -8483,9 +7855,6 @@ const pokemon = {
 			"chs": "铝钢龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 884,
 		"games": [
 			"sw",
@@ -8505,9 +7874,6 @@ const pokemon = {
 			"chs": "铁蚁"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 632,
 		"games": [
 			"black",
@@ -8539,9 +7905,6 @@ const pokemon = {
 			"chs": "彷徨夜灵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 356,
 		"games": [
 			"ruby",
@@ -8588,9 +7951,6 @@ const pokemon = {
 			"chs": "黑夜魔灵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 477,
 		"games": [
 			"diamond",
@@ -8630,9 +7990,6 @@ const pokemon = {
 			"chs": "夜巡灵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 355,
 		"games": [
 			"ruby",
@@ -8679,9 +8036,6 @@ const pokemon = {
 			"chs": "毒粉蛾"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 269,
 		"games": [
 			"ruby",
@@ -8726,9 +8080,6 @@ const pokemon = {
 			"chs": "石居蟹"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 557,
 		"games": [
 			"black",
@@ -8760,9 +8111,6 @@ const pokemon = {
 			"chs": "麻麻鳗"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 603,
 		"games": [
 			"black",
@@ -8792,9 +8140,6 @@ const pokemon = {
 			"chs": "麻麻鳗鱼王"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 604,
 		"games": [
 			"black",
@@ -8824,9 +8169,6 @@ const pokemon = {
 			"chs": "伊布"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 133,
 		"games": [
 			"red",
@@ -8881,9 +8223,6 @@ const pokemon = {
 			"chs": "冰砌鹅"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 875,
 		"games": [
 			"sw",
@@ -8903,9 +8242,6 @@ const pokemon = {
 			"chs": "阿柏蛇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 23,
 		"games": [
 			"red",
@@ -8957,9 +8293,6 @@ const pokemon = {
 			"chs": "白蓬蓬"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 830,
 		"games": [
 			"sw",
@@ -8979,9 +8312,6 @@ const pokemon = {
 			"chs": "电击兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 125,
 		"games": [
 			"red",
@@ -9036,9 +8366,6 @@ const pokemon = {
 			"chs": "电击魔兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 466,
 		"games": [
 			"hg",
@@ -9078,9 +8405,6 @@ const pokemon = {
 			"chs": "落雷兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 309,
 		"games": [
 			"ruby",
@@ -9133,9 +8457,6 @@ const pokemon = {
 			"chs": "顽皮雷弹"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 101,
 		"games": [
 			"red",
@@ -9188,9 +8509,6 @@ const pokemon = {
 			"chs": "电击怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 239,
 		"games": [
 			"gold",
@@ -9240,9 +8558,6 @@ const pokemon = {
 			"chs": "小灰怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 605,
 		"games": [
 			"black",
@@ -9274,9 +8589,6 @@ const pokemon = {
 			"chs": "炎武王"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 500,
 		"games": [
 			"black",
@@ -9306,9 +8618,6 @@ const pokemon = {
 			"chs": "电飞鼠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 587,
 		"games": [
 			"black",
@@ -9340,9 +8649,6 @@ const pokemon = {
 			"chs": "帝王拿波"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 395,
 		"games": [
 			"diamond",
@@ -9385,9 +8691,7 @@ const pokemon = {
 		},
 		"form-source": "incarnate",
 		"gender": "female",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 905,
 		"games": [
 			"pla"
@@ -9406,9 +8710,7 @@ const pokemon = {
 			"chs": "炎帝"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 244,
 		"games": [
 			"gold",
@@ -9457,9 +8759,6 @@ const pokemon = {
 			"chs": "骑士蜗牛"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 589,
 		"games": [
 			"black",
@@ -9491,9 +8790,6 @@ const pokemon = {
 			"chs": "太阳伊布"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 196,
 		"games": [
 			"gold",
@@ -9543,9 +8839,6 @@ const pokemon = {
 			"chs": "妙喵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 677,
 		"games": [
 			"x",
@@ -9573,9 +8866,7 @@ const pokemon = {
 			"chs": "无极汰那"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 890,
 		"games": [
 			"sw",
@@ -9595,9 +8886,6 @@ const pokemon = {
 			"chs": "龙头地鼠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 530,
 		"games": [
 			"black",
@@ -9629,9 +8917,6 @@ const pokemon = {
 			"chs": "蛋蛋"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 102,
 		"games": [
 			"red",
@@ -9699,9 +8984,6 @@ const pokemon = {
 			"chs": "椰蛋树"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 103,
 		"games": [
 			"red",
@@ -9755,9 +9037,6 @@ const pokemon = {
 			"chs": "爆音怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 295,
 		"games": [
 			"ruby",
@@ -9803,9 +9082,6 @@ const pokemon = {
 			"chs": "列阵兵"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 870,
 		"games": [
 			"sw",
@@ -9833,9 +9109,6 @@ const pokemon = {
 			"chs": "大葱鸭"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 83,
 		"games": [
 			"red",
@@ -9889,9 +9162,6 @@ const pokemon = {
 			"chs": "大嘴雀"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 22,
 		"games": [
 			"red",
@@ -9943,9 +9213,6 @@ const pokemon = {
 			"chs": "丑丑鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 349,
 		"games": [
 			"ruby",
@@ -9991,9 +9258,6 @@ const pokemon = {
 			"chs": "火狐狸"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 653,
 		"games": [
 			"x",
@@ -10019,9 +9283,6 @@ const pokemon = {
 			"chs": "大力鳄"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 160,
 		"games": [
 			"gold",
@@ -10068,9 +9329,6 @@ const pokemon = {
 			"chs": "种子铁球"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 597,
 		"games": [
 			"black",
@@ -10102,9 +9360,6 @@ const pokemon = {
 			"chs": "坚果哑铃"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 598,
 		"games": [
 			"black",
@@ -10136,9 +9391,6 @@ const pokemon = {
 			"chs": "荧光鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 456,
 		"games": [
 			"diamond",
@@ -10176,9 +9428,6 @@ const pokemon = {
 			"chs": "茸茸羊"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 180,
 		"games": [
 			"gold",
@@ -10292,9 +9541,6 @@ const pokemon = {
 			"chs": "红花"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 669,
 		"games": [
 			"x",
@@ -10320,9 +9566,6 @@ const pokemon = {
 			"chs": "苹裹龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 841,
 		"games": [
 			"sw",
@@ -10342,9 +9585,6 @@ const pokemon = {
 			"chs": "火伊布"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 136,
 		"games": [
 			"red",
@@ -10399,9 +9639,6 @@ const pokemon = {
 			"chs": "火箭雀"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 662,
 		"games": [
 			"x",
@@ -10429,9 +9666,6 @@ const pokemon = {
 			"chs": "小箭雀"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 661,
 		"games": [
 			"x",
@@ -10459,9 +9693,6 @@ const pokemon = {
 			"chs": "浮潜鼬"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 419,
 		"games": [
 			"diamond",
@@ -10566,9 +9797,6 @@ const pokemon = {
 			"chs": "红花"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 670,
 		"games": [
 			"x",
@@ -10661,9 +9889,6 @@ const pokemon = {
 			"chs": "红花"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 671,
 		"games": [
 			"x",
@@ -10689,9 +9914,6 @@ const pokemon = {
 			"chs": "沙漠蜻蜓"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 330,
 		"games": [
 			"ruby",
@@ -10737,9 +9959,6 @@ const pokemon = {
 			"chs": "伪螳草"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 753,
 		"games": [
 			"sun",
@@ -10763,9 +9982,6 @@ const pokemon = {
 			"chs": "哎呀球菇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 590,
 		"games": [
 			"black",
@@ -10797,9 +10013,6 @@ const pokemon = {
 			"chs": "佛烈托斯"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 205,
 		"games": [
 			"gold",
@@ -10846,9 +10059,6 @@ const pokemon = {
 			"chs": "斧牙龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 611,
 		"games": [
 			"black",
@@ -10881,8 +10091,6 @@ const pokemon = {
 		},
 		"gender": "both",
 		"femsprite": true,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 592,
 		"games": [
 			"black",
@@ -10914,9 +10122,6 @@ const pokemon = {
 			"chs": "呱呱泡蛙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 656,
 		"games": [
 			"x",
@@ -10942,9 +10147,6 @@ const pokemon = {
 			"chs": "呱头蛙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 657,
 		"games": [
 			"x",
@@ -10970,9 +10172,6 @@ const pokemon = {
 			"chs": "雪妖女"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 478,
 		"games": [
 			"diamond",
@@ -11012,9 +10211,6 @@ const pokemon = {
 			"chs": "雪绒蛾"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 873,
 		"games": [
 			"sw",
@@ -11171,9 +10367,6 @@ const pokemon = {
 			"chs": "野生的样子"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 676,
 		"games": [
 			"x",
@@ -11199,9 +10392,6 @@ const pokemon = {
 			"chs": "大尾立"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 162,
 		"games": [
 			"gold",
@@ -11248,9 +10438,6 @@ const pokemon = {
 			"chs": "尖牙陆鲨"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 444,
 		"games": [
 			"diamond",
@@ -11290,9 +10477,6 @@ const pokemon = {
 			"chs": "艾路雷朵"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 475,
 		"games": [
 			"diamond",
@@ -11332,9 +10516,6 @@ const pokemon = {
 			"chs": "电蜘蛛"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 596,
 		"games": [
 			"black",
@@ -11366,9 +10547,6 @@ const pokemon = {
 			"chs": "灰尘山"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 569,
 		"games": [
 			"black",
@@ -11400,9 +10578,6 @@ const pokemon = {
 			"chs": "烈咬陆鲨"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 445,
 		"games": [
 			"diamond",
@@ -11442,9 +10617,6 @@ const pokemon = {
 			"chs": "沙奈朵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 282,
 		"games": [
 			"ruby",
@@ -11491,9 +10663,6 @@ const pokemon = {
 			"chs": "鬼斯"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 92,
 		"games": [
 			"red",
@@ -11573,9 +10742,6 @@ const pokemon = {
 			"chs": "西海"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 423,
 		"games": [
 			"diamond",
@@ -11615,8 +10781,6 @@ const pokemon = {
 			"chs": "盖诺赛克特"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 649,
 		"games": [
@@ -11649,9 +10813,6 @@ const pokemon = {
 			"chs": "耿鬼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 94,
 		"games": [
 			"red",
@@ -11718,9 +10879,6 @@ const pokemon = {
 			"chs": "小拳石"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 74,
 		"games": [
 			"red",
@@ -11773,9 +10931,6 @@ const pokemon = {
 			"chs": "圆陆鲨"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 443,
 		"games": [
 			"diamond",
@@ -11815,9 +10970,6 @@ const pokemon = {
 			"chs": "庞岩怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 526,
 		"games": [
 			"black",
@@ -11849,9 +11001,6 @@ const pokemon = {
 			"chs": "麒麟奇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 203,
 		"games": [
 			"gold",
@@ -11898,9 +11047,7 @@ const pokemon = {
 			"chs": "骑拉帝纳"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 487,
 		"games": [
 			"diamond",
@@ -11940,9 +11087,6 @@ const pokemon = {
 			"chs": "冰伊布"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 471,
 		"games": [
 			"diamond",
@@ -11982,9 +11126,6 @@ const pokemon = {
 			"chs": "冰鬼护"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 362,
 		"games": [
 			"ruby",
@@ -12031,9 +11172,6 @@ const pokemon = {
 			"chs": "魅力喵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 431,
 		"games": [
 			"diamond",
@@ -12071,9 +11209,7 @@ const pokemon = {
 			"chs": "雪暴马"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 896,
 		"games": [
 			"sw",
@@ -12093,9 +11229,6 @@ const pokemon = {
 			"chs": "天蝎"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 207,
 		"games": [
 			"gold",
@@ -12143,9 +11276,6 @@ const pokemon = {
 			"chs": "天蝎王"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 472,
 		"games": [
 			"diamond",
@@ -12183,9 +11313,6 @@ const pokemon = {
 			"chs": "臭臭花"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 44,
 		"games": [
 			"red",
@@ -12239,9 +11366,6 @@ const pokemon = {
 			"chs": "坐骑山羊"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 673,
 		"games": [
 			"x",
@@ -12267,9 +11391,6 @@ const pokemon = {
 			"chs": "大嘴蝠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 42,
 		"games": [
 			"red",
@@ -12324,9 +11445,6 @@ const pokemon = {
 			"chs": "角金鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 118,
 		"games": [
 			"red",
@@ -12380,9 +11498,6 @@ const pokemon = {
 			"chs": "哥达鸭"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 55,
 		"games": [
 			"red",
@@ -12449,9 +11564,6 @@ const pokemon = {
 			"chs": "隆隆岩"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 76,
 		"games": [
 			"red",
@@ -12504,9 +11616,6 @@ const pokemon = {
 			"chs": "泥偶小人"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 622,
 		"games": [
 			"black",
@@ -12538,9 +11647,6 @@ const pokemon = {
 			"chs": "具甲武者"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 768,
 		"games": [
 			"sun",
@@ -12564,9 +11670,6 @@ const pokemon = {
 			"chs": "泥偶巨人"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 623,
 		"games": [
 			"black",
@@ -12605,9 +11708,6 @@ const pokemon = {
 			"chs": "黏美龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 706,
 		"games": [
 			"x",
@@ -12636,9 +11736,6 @@ const pokemon = {
 			"chs": "黏黏宝"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 704,
 		"games": [
 			"x",
@@ -12667,9 +11764,6 @@ const pokemon = {
 			"chs": "樱花鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 368,
 		"games": [
 			"ruby",
@@ -12713,9 +11807,6 @@ const pokemon = {
 			"chs": "幼棉棉"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 829,
 		"games": [
 			"sw",
@@ -12735,9 +11826,6 @@ const pokemon = {
 			"chs": "哥德宝宝"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 574,
 		"games": [
 			"black",
@@ -12769,9 +11857,6 @@ const pokemon = {
 			"chs": "哥德小姐"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 576,
 		"games": [
 			"black",
@@ -12803,9 +11888,6 @@ const pokemon = {
 			"chs": "哥德小童"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 575,
 		"games": [
 			"black",
@@ -12893,9 +11975,6 @@ const pokemon = {
 			"chs": "普通尺寸"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 711,
 		"sort": 2,
 		"games": [
@@ -12924,9 +12003,6 @@ const pokemon = {
 			"chs": "布鲁皇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 210,
 		"games": [
 			"gold",
@@ -12973,9 +12049,6 @@ const pokemon = {
 			"chs": "八爪武师"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 853,
 		"games": [
 			"sw",
@@ -13007,9 +12080,6 @@ const pokemon = {
 			"chs": "隆隆石"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 75,
 		"games": [
 			"red",
@@ -13062,9 +12132,6 @@ const pokemon = {
 			"chs": "藏饱栗鼠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 820,
 		"games": [
 			"sw",
@@ -13105,9 +12172,6 @@ const pokemon = {
 			"chs": "甲贺忍蛙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 658,
 		"games": [
 			"x",
@@ -13145,9 +12209,6 @@ const pokemon = {
 			"chs": "臭泥"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 88,
 		"games": [
 			"red",
@@ -13199,9 +12260,6 @@ const pokemon = {
 			"chs": "长毛巨魔"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 861,
 		"games": [
 			"sw",
@@ -13221,9 +12279,6 @@ const pokemon = {
 			"chs": "敲音猴"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 810,
 		"games": [
 			"sw",
@@ -13243,9 +12298,6 @@ const pokemon = {
 			"chs": "树林龟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 388,
 		"games": [
 			"black",
@@ -13283,9 +12335,7 @@ const pokemon = {
 			"chs": "固拉多"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 383,
 		"games": [
 			"ruby",
@@ -13331,9 +12381,6 @@ const pokemon = {
 			"chs": "森林蜥蜴"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 253,
 		"games": [
 			"ruby",
@@ -13386,9 +12433,6 @@ const pokemon = {
 			"chs": "卡蒂狗"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 58,
 		"games": [
 			"red",
@@ -13443,9 +12487,6 @@ const pokemon = {
 			"chs": "强颚鸡母虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 736,
 		"games": [
 			"sun",
@@ -13469,9 +12510,6 @@ const pokemon = {
 			"chs": "噗噗猪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 326,
 		"games": [
 			"ruby",
@@ -13515,9 +12553,6 @@ const pokemon = {
 			"chs": "溶食兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 316,
 		"games": [
 			"ruby",
@@ -13561,9 +12596,6 @@ const pokemon = {
 			"chs": "猫鼬探长"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 735,
 		"games": [
 			"sun",
@@ -13585,9 +12617,6 @@ const pokemon = {
 			"chs": "铁骨土人"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 533,
 		"games": [
 			"black",
@@ -13619,9 +12648,6 @@ const pokemon = {
 			"chs": "恶食大王"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 799,
 		"games": [
 			"sun",
@@ -13645,9 +12671,6 @@ const pokemon = {
 			"chs": "暴鲤龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 130,
 		"games": [
 			"platinum",
@@ -13702,9 +12725,6 @@ const pokemon = {
 			"chs": "鳞甲龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 783,
 		"games": [
 			"sun",
@@ -13728,9 +12748,6 @@ const pokemon = {
 			"chs": "小福蛋"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 440,
 		"games": [
 			"diamond",
@@ -13770,9 +12787,6 @@ const pokemon = {
 			"chs": "铁掌力士"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 297,
 		"games": [
 			"emerald",
@@ -13816,9 +12830,6 @@ const pokemon = {
 			"chs": "迷布莉姆"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 856,
 		"games": [
 			"sw",
@@ -13838,9 +12849,6 @@ const pokemon = {
 			"chs": "布莉姆温"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 858,
 		"games": [
 			"sw",
@@ -13860,9 +12868,6 @@ const pokemon = {
 			"chs": "提布莉姆"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 857,
 		"games": [
 			"sw",
@@ -13882,9 +12887,6 @@ const pokemon = {
 			"chs": "鬼斯通"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 93,
 		"games": [
 			"red",
@@ -13939,9 +12941,6 @@ const pokemon = {
 			"chs": "摔角鹰人"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 701,
 		"games": [
 			"x",
@@ -13969,9 +12968,6 @@ const pokemon = {
 			"chs": "双斧战龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 612,
 		"games": [
 			"black",
@@ -14003,9 +12999,6 @@ const pokemon = {
 			"chs": "熔蚁兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 631,
 		"games": [
 			"black",
@@ -14037,9 +13030,7 @@ const pokemon = {
 			"chs": "席多蓝恩"
 		},
 		"gender": "both",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 485,
 		"games": [
 			"diamond",
@@ -14079,9 +13070,6 @@ const pokemon = {
 			"chs": "光电伞蜥"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 695,
 		"games": [
 			"x",
@@ -14109,9 +13097,6 @@ const pokemon = {
 			"chs": "伞电蜥"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 694,
 		"games": [
 			"x",
@@ -14139,9 +13124,6 @@ const pokemon = {
 			"chs": "赫拉克罗斯"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 214,
 		"games": [
 			"ss",
@@ -14191,9 +13173,6 @@ const pokemon = {
 			"chs": "哈约克"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 507,
 		"games": [
 			"black",
@@ -14226,8 +13205,6 @@ const pokemon = {
 		},
 		"gender": "both",
 		"femsprite": true,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 449,
 		"games": [
 			"diamond",
@@ -14268,8 +13245,6 @@ const pokemon = {
 		},
 		"gender": "both",
 		"femsprite": true,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 450,
 		"games": [
 			"diamond",
@@ -14309,9 +13284,6 @@ const pokemon = {
 			"chs": "快拳郎"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 107,
 		"games": [
 			"red",
@@ -14365,9 +13337,6 @@ const pokemon = {
 			"chs": "飞腿郎"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 106,
 		"games": [
 			"red",
@@ -14421,9 +13390,6 @@ const pokemon = {
 			"chs": "战舞郎"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 237,
 		"games": [
 			"gold",
@@ -14472,9 +13438,7 @@ const pokemon = {
 			"chs": "凤王"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 250,
 		"games": [
 			"gold",
@@ -14523,9 +13487,6 @@ const pokemon = {
 			"chs": "乌鸦头头"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 430,
 		"games": [
 			"diamond",
@@ -14563,9 +13524,6 @@ const pokemon = {
 			"chs": "独剑鞘"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 679,
 		"games": [
 			"x",
@@ -14593,8 +13551,6 @@ const pokemon = {
 			"chs": "胡帕"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 720,
 		"games": [
@@ -14621,9 +13577,6 @@ const pokemon = {
 			"chs": "咕咕"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 163,
 		"games": [
 			"gold",
@@ -14672,9 +13625,6 @@ const pokemon = {
 			"chs": "毽子草"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 187,
 		"games": [
 			"gold",
@@ -14721,9 +13671,6 @@ const pokemon = {
 			"chs": "墨海马"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 116,
 		"games": [
 			"red",
@@ -14777,9 +13724,6 @@ const pokemon = {
 			"chs": "黑鲁加"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 229,
 		"games": [
 			"gold",
@@ -14826,9 +13770,6 @@ const pokemon = {
 			"chs": "戴鲁比"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 228,
 		"games": [
 			"gold",
@@ -14875,9 +13816,6 @@ const pokemon = {
 			"chs": "猎斑鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 367,
 		"games": [
 			"ruby",
@@ -14921,9 +13859,6 @@ const pokemon = {
 			"chs": "三首恶龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 635,
 		"games": [
 			"black",
@@ -14955,9 +13890,6 @@ const pokemon = {
 			"chs": "引梦貘人"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 97,
 		"games": [
 			"red",
@@ -15009,9 +13941,6 @@ const pokemon = {
 			"chs": "宝宝丁"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 174,
 		"games": [
 			"gold",
@@ -15060,9 +13989,6 @@ const pokemon = {
 			"chs": "甜甜萤"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 314,
 		"games": [
 			"black",
@@ -15106,9 +14032,6 @@ const pokemon = {
 			"chs": "捣蛋小妖"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 859,
 		"games": [
 			"sw",
@@ -15128,9 +14051,6 @@ const pokemon = {
 			"chs": "炽焰咆哮虎"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 727,
 		"games": [
 			"sun",
@@ -15155,8 +14075,6 @@ const pokemon = {
 		},
 		"gender": "both",
 		"femsprite": true,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 876,
 		"games": [
 			"sw",
@@ -15176,9 +14094,6 @@ const pokemon = {
 			"chs": "烈焰猴"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 392,
 		"games": [
 			"diamond",
@@ -15216,9 +14131,6 @@ const pokemon = {
 			"chs": "好啦鱿"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 686,
 		"games": [
 			"x",
@@ -15246,9 +14158,6 @@ const pokemon = {
 			"chs": "千面避役"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 818,
 		"games": [
 			"sw",
@@ -15268,9 +14177,6 @@ const pokemon = {
 			"chs": "妙蛙草"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 2,
 		"games": [
 			"red",
@@ -15324,9 +14230,6 @@ const pokemon = {
 			"chs": "心鳞宝"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 782,
 		"games": [
 			"sun",
@@ -15351,8 +14254,6 @@ const pokemon = {
 		},
 		"gender": "both",
 		"femsprite": true,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 593,
 		"games": [
 			"black",
@@ -15384,9 +14285,6 @@ const pokemon = {
 			"chs": "胖丁"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 39,
 		"games": [
 			"red",
@@ -15440,8 +14338,6 @@ const pokemon = {
 			"chs": "基拉祈"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 385,
 		"games": [
@@ -15488,9 +14384,6 @@ const pokemon = {
 			"chs": "雷伊布"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 135,
 		"games": [
 			"red",
@@ -15545,9 +14438,6 @@ const pokemon = {
 			"chs": "电电虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 595,
 		"games": [
 			"black",
@@ -15579,9 +14469,6 @@ const pokemon = {
 			"chs": "毽子棉"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 189,
 		"games": [
 			"gold",
@@ -15628,9 +14515,6 @@ const pokemon = {
 			"chs": "迷唇姐"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 124,
 		"games": [
 			"red",
@@ -15684,9 +14568,6 @@ const pokemon = {
 			"chs": "化石盔"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 140,
 		"games": [
 			"red",
@@ -15740,9 +14621,6 @@ const pokemon = {
 			"chs": "镰刀盔"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 141,
 		"games": [
 			"red",
@@ -15796,9 +14674,6 @@ const pokemon = {
 			"chs": "勇基拉"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 64,
 		"games": [
 			"red",
@@ -15853,9 +14728,6 @@ const pokemon = {
 			"chs": "铁壳蛹"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 14,
 		"games": [
 			"red",
@@ -15907,9 +14779,6 @@ const pokemon = {
 			"chs": "袋兽"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 115,
 		"games": [
 			"red",
@@ -15963,9 +14832,6 @@ const pokemon = {
 			"chs": "盖盖虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 588,
 		"games": [
 			"black",
@@ -15997,9 +14863,6 @@ const pokemon = {
 			"chs": "纸御剑"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 798,
 		"games": [
 			"sun",
@@ -16023,9 +14886,6 @@ const pokemon = {
 			"chs": "变隐龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 352,
 		"games": [
 			"lg",
@@ -16094,8 +14954,6 @@ const pokemon = {
 			"chs": "平常的样子"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 647,
 		"games": [
@@ -16128,9 +14986,6 @@ const pokemon = {
 			"chs": "刺龙王"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 230,
 		"games": [
 			"gold",
@@ -16179,9 +15034,6 @@ const pokemon = {
 			"chs": "巨钳蟹"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 99,
 		"games": [
 			"red",
@@ -16235,9 +15087,6 @@ const pokemon = {
 			"chs": "奇鲁莉安"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 281,
 		"games": [
 			"ruby",
@@ -16284,9 +15133,6 @@ const pokemon = {
 			"chs": "齿轮组"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 600,
 		"games": [
 			"black",
@@ -16318,9 +15164,6 @@ const pokemon = {
 			"chs": "劈斧螳螂"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 900,
 		"games": [
 			"pla"
@@ -16339,9 +15182,6 @@ const pokemon = {
 			"chs": "钥圈儿"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 707,
 		"games": [
 			"x",
@@ -16369,9 +15209,6 @@ const pokemon = {
 			"chs": "齿轮儿"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 599,
 		"games": [
 			"black",
@@ -16403,9 +15240,6 @@ const pokemon = {
 			"chs": "齿轮怪"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 601,
 		"games": [
 			"white",
@@ -16437,9 +15271,6 @@ const pokemon = {
 			"chs": "瓦斯弹"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 109,
 		"games": [
 			"red",
@@ -16493,9 +15324,6 @@ const pokemon = {
 			"chs": "树枕尾熊"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 775,
 		"games": [
 			"sun",
@@ -16517,9 +15345,6 @@ const pokemon = {
 			"chs": "杖尾鳞甲龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 784,
 		"games": [
 			"sun",
@@ -16543,9 +15368,6 @@ const pokemon = {
 			"chs": "大钳蟹"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 98,
 		"games": [
 			"red",
@@ -16599,9 +15421,6 @@ const pokemon = {
 			"chs": "圆法师"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 401,
 		"games": [
 			"diamond",
@@ -16639,9 +15458,6 @@ const pokemon = {
 			"chs": "音箱蟀"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 402,
 		"games": [
 			"diamond",
@@ -16679,9 +15495,6 @@ const pokemon = {
 			"chs": "混混鳄"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 552,
 		"games": [
 			"black",
@@ -16713,9 +15526,6 @@ const pokemon = {
 			"chs": "流氓鳄"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 553,
 		"games": [
 			"black",
@@ -16747,9 +15557,7 @@ const pokemon = {
 			"chs": "熊徒弟"
 		},
 		"gender": "both",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 891,
 		"games": [
 			"sw",
@@ -16769,9 +15577,7 @@ const pokemon = {
 			"chs": "盖欧卡"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 382,
 		"games": [
 			"ruby",
@@ -16817,9 +15623,7 @@ const pokemon = {
 			"chs": "酋雷姆"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 646,
 		"games": [
 			"black",
@@ -16851,9 +15655,6 @@ const pokemon = {
 			"chs": "可多拉"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 305,
 		"games": [
 			"ruby",
@@ -16899,9 +15700,6 @@ const pokemon = {
 			"chs": "灯火幽灵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 608,
 		"games": [
 			"black",
@@ -16938,9 +15736,7 @@ const pokemon = {
 		},
 		"form-source": "incarnate",
 		"gender": "male",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 645,
 		"games": [
 			"black",
@@ -16973,9 +15769,6 @@ const pokemon = {
 			"chs": "电灯怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 171,
 		"games": [
 			"gold",
@@ -17024,9 +15817,6 @@ const pokemon = {
 			"chs": "拉普拉斯"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 131,
 		"games": [
 			"red",
@@ -17080,9 +15870,6 @@ const pokemon = {
 			"chs": "燃烧虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 636,
 		"games": [
 			"black",
@@ -17114,9 +15901,6 @@ const pokemon = {
 			"chs": "幼基拉斯"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 246,
 		"games": [
 			"gold",
@@ -17165,9 +15949,7 @@ const pokemon = {
 			"chs": "拉帝亚斯"
 		},
 		"gender": "female",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 380,
 		"games": [
 			"ruby",
@@ -17213,9 +15995,7 @@ const pokemon = {
 			"chs": "拉帝欧斯"
 		},
 		"gender": "male",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 381,
 		"games": [
 			"ruby",
@@ -17261,9 +16041,6 @@ const pokemon = {
 			"chs": "叶伊布"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 470,
 		"games": [
 			"diamond",
@@ -17303,9 +16080,6 @@ const pokemon = {
 			"chs": "保姆虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 542,
 		"games": [
 			"black",
@@ -17335,9 +16109,6 @@ const pokemon = {
 			"chs": "安瓢虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 166,
 		"games": [
 			"gold",
@@ -17384,9 +16155,6 @@ const pokemon = {
 			"chs": "芭瓢虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 165,
 		"games": [
 			"gold",
@@ -17433,9 +16201,6 @@ const pokemon = {
 			"chs": "大舌舔"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 463,
 		"games": [
 			"diamond",
@@ -17475,9 +16240,6 @@ const pokemon = {
 			"chs": "大舌头"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 108,
 		"games": [
 			"red",
@@ -17532,9 +16294,6 @@ const pokemon = {
 			"chs": "酷豹"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 510,
 		"games": [
 			"black",
@@ -17566,9 +16325,6 @@ const pokemon = {
 			"chs": "触手百合"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 345,
 		"games": [
 			"ruby",
@@ -17621,9 +16377,6 @@ const pokemon = {
 			"chs": "裙儿小姐"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 549,
 		"games": [
 			"black",
@@ -17656,9 +16409,6 @@ const pokemon = {
 			"chs": "小约克"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 506,
 		"games": [
 			"black",
@@ -17698,9 +16448,6 @@ const pokemon = {
 			"chs": "直冲熊"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 264,
 		"games": [
 			"ruby",
@@ -17746,9 +16493,6 @@ const pokemon = {
 			"chs": "小狮狮"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 667,
 		"games": [
 			"x",
@@ -17774,9 +16518,6 @@ const pokemon = {
 			"chs": "火斑喵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 725,
 		"games": [
 			"sun",
@@ -17800,9 +16541,6 @@ const pokemon = {
 			"chs": "烛光灵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 607,
 		"games": [
 			"black",
@@ -17834,9 +16572,6 @@ const pokemon = {
 			"chs": "莲帽小童"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 271,
 		"games": [
 			"lg",
@@ -17882,9 +16617,6 @@ const pokemon = {
 			"chs": "长耳兔"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 428,
 		"games": [
 			"diamond",
@@ -17924,9 +16656,6 @@ const pokemon = {
 			"chs": "莲叶童子"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 270,
 		"games": [
 			"y",
@@ -17972,9 +16701,6 @@ const pokemon = {
 			"chs": "吼爆弹"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 294,
 		"games": [
 			"ruby",
@@ -18020,9 +16746,6 @@ const pokemon = {
 			"chs": "路卡利欧"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 448,
 		"games": [
 			"diamond",
@@ -18062,9 +16785,6 @@ const pokemon = {
 			"chs": "乐天河童"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 272,
 		"games": [
 			"ruby",
@@ -18110,9 +16830,7 @@ const pokemon = {
 			"chs": "洛奇亚"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 249,
 		"games": [
 			"gold",
@@ -18161,9 +16879,6 @@ const pokemon = {
 			"chs": "霓虹鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 457,
 		"games": [
 			"diamond",
@@ -18201,9 +16916,7 @@ const pokemon = {
 			"chs": "露奈雅拉"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 792,
 		"games": [
 			"sun",
@@ -18227,9 +16940,6 @@ const pokemon = {
 			"chs": "月石"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 337,
 		"games": [
 			"ruby",
@@ -18275,9 +16985,6 @@ const pokemon = {
 			"chs": "兰螳花"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 754,
 		"games": [
 			"sun",
@@ -18301,9 +17008,6 @@ const pokemon = {
 			"chs": "爱心鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 370,
 		"games": [
 			"ruby",
@@ -18347,9 +17051,6 @@ const pokemon = {
 			"chs": "勒克猫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 404,
 		"games": [
 			"diamond",
@@ -18389,9 +17090,6 @@ const pokemon = {
 			"chs": "伦琴猫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 405,
 		"games": [
 			"diamond",
@@ -18470,9 +17168,6 @@ const pokemon = {
 			"chs": "白昼的样子"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 745,
 		"games": [
 			"sun",
@@ -18496,9 +17191,6 @@ const pokemon = {
 			"chs": "怪力"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 68,
 		"games": [
 			"red",
@@ -18553,9 +17245,6 @@ const pokemon = {
 			"chs": "豪力"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 67,
 		"games": [
 			"red",
@@ -18610,9 +17299,6 @@ const pokemon = {
 			"chs": "腕力"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 66,
 		"games": [
 			"red",
@@ -18667,9 +17353,6 @@ const pokemon = {
 			"chs": "鸭嘴宝宝"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 240,
 		"games": [
 			"gold",
@@ -18719,9 +17402,6 @@ const pokemon = {
 			"chs": "熔岩蜗牛"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 219,
 		"games": [
 			"gold",
@@ -18786,8 +17466,6 @@ const pokemon = {
 			"chs": "玛机雅娜"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 801,
 		"games": [
@@ -18812,9 +17490,6 @@ const pokemon = {
 			"chs": "鲤鱼王"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 129,
 		"games": [
 			"red",
@@ -18869,9 +17544,6 @@ const pokemon = {
 			"chs": "鸭嘴火兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 126,
 		"games": [
 			"red",
@@ -18926,9 +17598,6 @@ const pokemon = {
 			"chs": "鸭嘴炎兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 467,
 		"games": [
 			"diamond",
@@ -18968,9 +17637,6 @@ const pokemon = {
 			"chs": "小磁怪"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 81,
 		"games": [
 			"red",
@@ -19025,9 +17691,6 @@ const pokemon = {
 			"chs": "三合一磁怪"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 82,
 		"games": [
 			"red",
@@ -19082,9 +17745,6 @@ const pokemon = {
 			"chs": "自爆磁怪"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 462,
 		"games": [
 			"diamond",
@@ -19124,9 +17784,6 @@ const pokemon = {
 			"chs": "幕下力士"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 296,
 		"games": [
 			"ruby",
@@ -19170,9 +17827,6 @@ const pokemon = {
 			"chs": "乌贼王"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 687,
 		"games": [
 			"x",
@@ -19200,9 +17854,6 @@ const pokemon = {
 			"chs": "象牙猪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 473,
 		"games": [
 			"diamond",
@@ -19242,8 +17893,6 @@ const pokemon = {
 			"chs": "玛纳霏"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 490,
 		"games": [
@@ -19282,9 +17931,6 @@ const pokemon = {
 			"chs": "秃鹰娜"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 630,
 		"games": [
 			"black",
@@ -19316,9 +17962,6 @@ const pokemon = {
 			"chs": "雷电兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 310,
 		"games": [
 			"ruby",
@@ -19364,9 +18007,6 @@ const pokemon = {
 			"chs": "猴怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 56,
 		"games": [
 			"red",
@@ -19418,9 +18058,6 @@ const pokemon = {
 			"chs": "巨翅飞鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 226,
 		"games": [
 			"gold",
@@ -19470,9 +18107,6 @@ const pokemon = {
 			"chs": "小球飞鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 458,
 		"games": [
 			"diamond",
@@ -19512,9 +18146,6 @@ const pokemon = {
 			"chs": "沙铃仙人掌"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 556,
 		"games": [
 			"black",
@@ -19546,9 +18177,6 @@ const pokemon = {
 			"chs": "好坏星"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 747,
 		"games": [
 			"sun",
@@ -19572,9 +18200,6 @@ const pokemon = {
 			"chs": "咩利羊"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 179,
 		"games": [
 			"gold",
@@ -19621,9 +18246,6 @@ const pokemon = {
 			"chs": "玛力露"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 183,
 		"games": [
 			"gold",
@@ -19686,9 +18308,6 @@ const pokemon = {
 			"chs": "嘎啦嘎啦"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 105,
 		"games": [
 			"red",
@@ -19742,8 +18361,6 @@ const pokemon = {
 			"chs": "玛夏多"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 802,
 		"games": [
@@ -19768,9 +18385,6 @@ const pokemon = {
 			"chs": "沼跃鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 259,
 		"games": [
 			"ruby",
@@ -19816,9 +18430,6 @@ const pokemon = {
 			"chs": "雨翅蛾"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 284,
 		"games": [
 			"ruby",
@@ -19862,9 +18473,6 @@ const pokemon = {
 			"chs": "大嘴娃"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 303,
 		"games": [
 			"ruby",
@@ -19910,9 +18518,6 @@ const pokemon = {
 			"chs": "恰雷姆"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 308,
 		"games": [
 			"ruby",
@@ -19956,9 +18561,6 @@ const pokemon = {
 			"chs": "玛沙那"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 307,
 		"games": [
 			"ruby",
@@ -20002,9 +18604,6 @@ const pokemon = {
 			"chs": "大竺葵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 154,
 		"games": [
 			"gold",
@@ -20051,8 +18650,6 @@ const pokemon = {
 			"chs": "美录梅塔"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 809,
 		"games": [
@@ -20075,8 +18672,6 @@ const pokemon = {
 			"chs": "美洛耶塔"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 648,
 		"games": [
@@ -20107,8 +18702,6 @@ const pokemon = {
 			"chs": "美录坦"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 808,
 		"games": [
@@ -20132,8 +18725,6 @@ const pokemon = {
 		},
 		"gender": "both",
 		"femsprite": true,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 678,
 		"games": [
 			"x",
@@ -20189,9 +18780,6 @@ const pokemon = {
 			"chs": "喵喵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 52,
 		"games": [
 			"sh",
@@ -20245,9 +18833,7 @@ const pokemon = {
 			"chs": "艾姆利多"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 481,
 		"games": [
 			"diamond",
@@ -20287,9 +18873,6 @@ const pokemon = {
 			"chs": "巨金怪"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 376,
 		"games": [
 			"ruby",
@@ -20335,9 +18918,6 @@ const pokemon = {
 			"chs": "金属怪"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 375,
 		"games": [
 			"ruby",
@@ -20383,9 +18963,6 @@ const pokemon = {
 			"chs": "铁甲蛹"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 11,
 		"games": [
 			"red",
@@ -20439,8 +19016,6 @@ const pokemon = {
 			"chs": "梦幻"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 151,
 		"games": [
@@ -20495,9 +19070,7 @@ const pokemon = {
 			"chs": "超梦"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 150,
 		"games": [
 			"red",
@@ -20551,9 +19124,6 @@ const pokemon = {
 			"chs": "功夫鼬"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 619,
 		"games": [
 			"black",
@@ -20585,9 +19155,6 @@ const pokemon = {
 			"chs": "师父鼬"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 620,
 		"games": [
 			"black",
@@ -20619,9 +19186,6 @@ const pokemon = {
 			"chs": "大狼犬"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 262,
 		"games": [
 			"ruby",
@@ -20665,9 +19229,6 @@ const pokemon = {
 			"chs": "小仙奶"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 868,
 		"games": [
 			"sw",
@@ -20687,9 +19248,6 @@ const pokemon = {
 			"chs": "美纳斯"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 350,
 		"games": [
 			"black",
@@ -20735,9 +19293,6 @@ const pokemon = {
 			"chs": "大奶罐"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 241,
 		"games": [
 			"gold",
@@ -20786,9 +19341,6 @@ const pokemon = {
 			"chs": "魔尼尼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 439,
 		"games": [
 			"diamond",
@@ -20828,9 +19380,6 @@ const pokemon = {
 			"chs": "谜拟丘"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 778,
 		"games": [
 			"sun",
@@ -20854,9 +19403,6 @@ const pokemon = {
 			"chs": "泡沫栗鼠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 572,
 		"games": [
 			"black",
@@ -20983,9 +19529,6 @@ const pokemon = {
 			"chs": "红色核心"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 774,
 		"games": [
 			"sun",
@@ -21007,9 +19550,6 @@ const pokemon = {
 			"chs": "負电拍拍"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 312,
 		"games": [
 			"ruby",
@@ -21053,9 +19593,6 @@ const pokemon = {
 			"chs": "梦妖"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 200,
 		"games": [
 			"gold",
@@ -21103,9 +19640,6 @@ const pokemon = {
 			"chs": "梦妖魔"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 429,
 		"games": [
 			"diamond",
@@ -21151,9 +19685,7 @@ const pokemon = {
 			"chs": "火焰鸟"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 146,
 		"games": [
 			"red",
@@ -21207,9 +19739,6 @@ const pokemon = {
 			"chs": "猛火猴"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 391,
 		"games": [
 			"diamond",
@@ -21247,9 +19776,6 @@ const pokemon = {
 			"chs": "睡睡菇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 755,
 		"games": [
 			"sun",
@@ -21273,9 +19799,6 @@ const pokemon = {
 			"chs": "诈唬魔"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 860,
 		"games": [
 			"sw",
@@ -21295,9 +19818,6 @@ const pokemon = {
 			"chs": "莫鲁贝可"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 877,
 		"games": [
 			"sw",
@@ -21317,9 +19837,6 @@ const pokemon = {
 			"chs": "绅士蛾"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 414,
 		"games": [
 			"diamond",
@@ -21365,9 +19882,6 @@ const pokemon = {
 			"chs": "魔墙人偶"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 122,
 		"games": [
 			"red",
@@ -21422,9 +19936,6 @@ const pokemon = {
 			"chs": "踏冰人偶"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 866,
 		"games": [
 			"sw",
@@ -21444,9 +19955,6 @@ const pokemon = {
 			"chs": "泥驴仔"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 749,
 		"games": [
 			"sun",
@@ -21470,9 +19978,6 @@ const pokemon = {
 			"chs": "水跃鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 258,
 		"games": [
 			"ruby",
@@ -21518,9 +20023,6 @@ const pokemon = {
 			"chs": "重泥挽马"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 750,
 		"games": [
 			"sun",
@@ -21556,9 +20058,6 @@ const pokemon = {
 			"chs": "臭臭泥"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 89,
 		"games": [
 			"red",
@@ -21610,9 +20109,6 @@ const pokemon = {
 			"chs": "小卡比兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 446,
 		"games": [
 			"diamond",
@@ -21652,9 +20148,6 @@ const pokemon = {
 			"chs": "食梦梦"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 517,
 		"games": [
 			"black",
@@ -21686,9 +20179,6 @@ const pokemon = {
 			"chs": "黑暗鸦"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 198,
 		"games": [
 			"gold",
@@ -21736,9 +20226,6 @@ const pokemon = {
 			"chs": "梦梦蚀"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 518,
 		"games": [
 			"black",
@@ -21770,9 +20257,6 @@ const pokemon = {
 			"chs": "四颚针龙"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 804,
 		"games": [
 			"usun",
@@ -21794,9 +20278,6 @@ const pokemon = {
 			"chs": "天然雀"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 177,
 		"games": [
 			"gold",
@@ -21845,9 +20326,7 @@ const pokemon = {
 			"chs": "奈克洛兹玛"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 800,
 		"games": [
 			"sun",
@@ -21871,9 +20350,6 @@ const pokemon = {
 			"chs": "狡小狐"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 827,
 		"games": [
 			"sw",
@@ -21893,9 +20369,6 @@ const pokemon = {
 			"chs": "尼多王"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 34,
 		"games": [
 			"red",
@@ -21949,9 +20422,6 @@ const pokemon = {
 			"chs": "尼多后"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 31,
 		"games": [
 			"red",
@@ -22005,9 +20475,6 @@ const pokemon = {
 			"chs": "尼多兰"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 29,
 		"games": [
 			"red",
@@ -22061,9 +20528,6 @@ const pokemon = {
 			"chs": "尼多朗"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 32,
 		"games": [
 			"red",
@@ -22117,9 +20581,6 @@ const pokemon = {
 			"chs": "尼多娜"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 30,
 		"games": [
 			"red",
@@ -22173,9 +20634,6 @@ const pokemon = {
 			"chs": "尼多力诺"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 33,
 		"games": [
 			"red",
@@ -22229,9 +20687,6 @@ const pokemon = {
 			"chs": "虚吾伊德"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 793,
 		"games": [
 			"sun",
@@ -22255,9 +20710,6 @@ const pokemon = {
 			"chs": "土居忍士"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 290,
 		"games": [
 			"ruby",
@@ -22318,9 +20770,6 @@ const pokemon = {
 			"chs": "九尾"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 38,
 		"games": [
 			"red",
@@ -22375,9 +20824,6 @@ const pokemon = {
 			"chs": "铁面忍者"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 291,
 		"games": [
 			"ruby",
@@ -22423,9 +20869,6 @@ const pokemon = {
 			"chs": "猫头夜鹰"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 164,
 		"games": [
 			"gold",
@@ -22474,9 +20917,6 @@ const pokemon = {
 			"chs": "嗡蝠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 714,
 		"games": [
 			"x",
@@ -22504,9 +20944,6 @@ const pokemon = {
 			"chs": "音波龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 715,
 		"games": [
 			"x",
@@ -22534,9 +20971,6 @@ const pokemon = {
 			"chs": "朝北鼻"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 299,
 		"games": [
 			"ruby",
@@ -22581,9 +21015,6 @@ const pokemon = {
 			"chs": "呆火驼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 322,
 		"games": [
 			"ruby",
@@ -22627,9 +21058,6 @@ const pokemon = {
 			"chs": "长鼻叶"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 274,
 		"games": [
 			"ruby",
@@ -22675,9 +21103,6 @@ const pokemon = {
 			"chs": "堵拦熊"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 862,
 		"games": [
 			"sw",
@@ -22697,9 +21122,6 @@ const pokemon = {
 			"chs": "章鱼桶"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 224,
 		"games": [
 			"gold",
@@ -22749,9 +21171,6 @@ const pokemon = {
 			"chs": "走路草"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 43,
 		"games": [
 			"red",
@@ -22805,9 +21224,6 @@ const pokemon = {
 			"chs": "菊石兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 138,
 		"games": [
 			"red",
@@ -22861,9 +21277,6 @@ const pokemon = {
 			"chs": "多刺菊石兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 139,
 		"games": [
 			"red",
@@ -22917,9 +21330,6 @@ const pokemon = {
 			"chs": "大岩蛇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 95,
 		"games": [
 			"red",
@@ -22974,9 +21384,6 @@ const pokemon = {
 			"chs": "智挥猩"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 765,
 		"games": [
 			"sun",
@@ -23000,9 +21407,6 @@ const pokemon = {
 			"chs": "以欧路普"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 826,
 		"games": [
 			"sw",
@@ -23075,9 +21479,6 @@ const pokemon = {
 			"chs": "热辣热辣风格"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 741,
 		"games": [
 			"sun",
@@ -23099,9 +21500,6 @@ const pokemon = {
 			"chs": "水水獭"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 501,
 		"games": [
 			"black",
@@ -23132,9 +21530,6 @@ const pokemon = {
 			"chs": "万针鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 904,
 		"games": [
 			"pla"
@@ -23153,9 +21548,6 @@ const pokemon = {
 			"chs": "帕奇利兹"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 417,
 		"games": [
 			"diamond",
@@ -23193,9 +21585,7 @@ const pokemon = {
 			"chs": "帕路奇亚"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 484,
 		"games": [
 			"diamond",
@@ -23235,9 +21625,6 @@ const pokemon = {
 			"chs": "噬沙堡爷"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 770,
 		"games": [
 			"sun",
@@ -23261,9 +21648,6 @@ const pokemon = {
 			"chs": "蓝蟾蜍"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 536,
 		"games": [
 			"black",
@@ -23295,9 +21679,6 @@ const pokemon = {
 			"chs": "顽皮熊猫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 674,
 		"games": [
 			"x",
@@ -23325,9 +21706,6 @@ const pokemon = {
 			"chs": "霸道熊猫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 675,
 		"games": [
 			"x",
@@ -23355,9 +21733,6 @@ const pokemon = {
 			"chs": "冷水猴"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 515,
 		"games": [
 			"black",
@@ -23387,9 +21762,6 @@ const pokemon = {
 			"chs": "花椰猴"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 511,
 		"games": [
 			"black",
@@ -23419,9 +21791,6 @@ const pokemon = {
 			"chs": "爆香猴"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 513,
 		"games": [
 			"black",
@@ -23451,9 +21820,6 @@ const pokemon = {
 			"chs": "派拉斯"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 46,
 		"games": [
 			"red",
@@ -23506,9 +21872,6 @@ const pokemon = {
 			"chs": "派拉斯特"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 47,
 		"games": [
 			"red",
@@ -23561,9 +21924,6 @@ const pokemon = {
 			"chs": "投掷猴"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 766,
 		"games": [
 			"sun",
@@ -23587,9 +21947,6 @@ const pokemon = {
 			"chs": "探探鼠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 504,
 		"games": [
 			"black",
@@ -23619,9 +21976,6 @@ const pokemon = {
 			"chs": "驹刀小兵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 624,
 		"games": [
 			"black",
@@ -23653,9 +22007,6 @@ const pokemon = {
 			"chs": "大嘴鸥"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 279,
 		"games": [
 			"black",
@@ -23701,9 +22052,6 @@ const pokemon = {
 			"chs": "喵头目"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 863,
 		"games": [
 			"sw",
@@ -23737,9 +22085,6 @@ const pokemon = {
 			"chs": "猫老大"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 53,
 		"games": [
 			"red",
@@ -23793,9 +22138,6 @@ const pokemon = {
 			"chs": "百合根娃娃"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 548,
 		"games": [
 			"black",
@@ -23828,9 +22170,6 @@ const pokemon = {
 			"chs": "小小象"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 231,
 		"games": [
 			"gold",
@@ -23877,9 +22216,6 @@ const pokemon = {
 			"chs": "小木灵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 708,
 		"games": [
 			"x",
@@ -23907,9 +22243,6 @@ const pokemon = {
 			"chs": "费洛美螂"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 795,
 		"games": [
 			"sun",
@@ -23933,8 +22266,6 @@ const pokemon = {
 			"chs": "霏欧纳"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 489,
 		"games": [
@@ -23973,9 +22304,6 @@ const pokemon = {
 			"chs": "皮丘"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 172,
 		"games": [
 			"gold",
@@ -24025,9 +22353,6 @@ const pokemon = {
 			"chs": "大比鸟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 18,
 		"games": [
 			"red",
@@ -24079,9 +22404,6 @@ const pokemon = {
 			"chs": "比比鸟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 17,
 		"games": [
 			"red",
@@ -24133,9 +22455,6 @@ const pokemon = {
 			"chs": "波波"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 16,
 		"games": [
 			"red",
@@ -24187,9 +22506,6 @@ const pokemon = {
 			"chs": "豆豆鸽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 519,
 		"games": [
 			"black",
@@ -24221,9 +22537,6 @@ const pokemon = {
 			"chs": "炒炒猪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 499,
 		"games": [
 			"black",
@@ -24434,8 +22747,6 @@ const pokemon = {
 		},
 		"gender": "both",
 		"femsprite": true,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 25,
 		"games": [
 			"red",
@@ -24490,9 +22801,6 @@ const pokemon = {
 			"chs": "小笃儿"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 731,
 		"games": [
 			"sun",
@@ -24514,9 +22822,6 @@ const pokemon = {
 			"chs": "长毛猪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 221,
 		"games": [
 			"gold",
@@ -24566,9 +22871,6 @@ const pokemon = {
 			"chs": "啪嚓海胆"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 871,
 		"games": [
 			"sw",
@@ -24588,9 +22890,6 @@ const pokemon = {
 			"chs": "榛果球"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 204,
 		"games": [
 			"gold",
@@ -24637,9 +22936,6 @@ const pokemon = {
 			"chs": "凯罗斯"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 127,
 		"games": [
 			"red",
@@ -24693,9 +22989,6 @@ const pokemon = {
 			"chs": "波加曼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 393,
 		"games": [
 			"diamond",
@@ -24733,9 +23026,6 @@ const pokemon = {
 			"chs": "正电拍拍"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 311,
 		"games": [
 			"ruby",
@@ -24779,9 +23069,6 @@ const pokemon = {
 			"chs": "毒贝比"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 803,
 		"games": [
 			"usun",
@@ -24803,9 +23090,6 @@ const pokemon = {
 			"chs": "蚊香蛙皇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 186,
 		"games": [
 			"gold",
@@ -24854,9 +23138,6 @@ const pokemon = {
 			"chs": "蚊香蝌蚪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 60,
 		"games": [
 			"red",
@@ -24910,9 +23191,6 @@ const pokemon = {
 			"chs": "蚊香君"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 61,
 		"games": [
 			"red",
@@ -24966,9 +23244,6 @@ const pokemon = {
 			"chs": "蚊香泳士"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 62,
 		"games": [
 			"red",
@@ -25022,9 +23297,6 @@ const pokemon = {
 			"chs": "怖思壶"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 855,
 		"games": [
 			"sw",
@@ -25052,9 +23324,6 @@ const pokemon = {
 			"chs": "小火马"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 77,
 		"games": [
 			"red",
@@ -25109,9 +23378,6 @@ const pokemon = {
 			"chs": "土狼犬"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 261,
 		"games": [
 			"ruby",
@@ -25155,9 +23421,6 @@ const pokemon = {
 			"chs": "球球海狮"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 728,
 		"games": [
 			"sun",
@@ -25181,9 +23444,6 @@ const pokemon = {
 			"chs": "多边兽乙型"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 474,
 		"games": [
 			"diamond",
@@ -25223,9 +23483,6 @@ const pokemon = {
 			"chs": "多边兽"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 137,
 		"games": [
 			"red",
@@ -25280,9 +23537,6 @@ const pokemon = {
 			"chs": "多边兽２型"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 233,
 		"games": [
 			"gold",
@@ -25332,9 +23586,6 @@ const pokemon = {
 			"chs": "西狮海壬"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 730,
 		"games": [
 			"sun",
@@ -25358,9 +23609,6 @@ const pokemon = {
 			"chs": "火暴猴"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 57,
 		"games": [
 			"red",
@@ -25412,9 +23660,6 @@ const pokemon = {
 			"chs": "波皇子"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 394,
 		"games": [
 			"diamond",
@@ -25452,9 +23697,6 @@ const pokemon = {
 			"chs": "大朝北鼻"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 476,
 		"games": [
 			"platinum",
@@ -25492,9 +23734,6 @@ const pokemon = {
 			"chs": "可达鸭"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 54,
 		"games": [
 			"red",
@@ -25605,9 +23844,6 @@ const pokemon = {
 			"chs": "普通尺寸"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 710,
 		"sort": 2,
 		"games": [
@@ -25636,9 +23872,6 @@ const pokemon = {
 			"chs": "沙基拉斯"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 247,
 		"games": [
 			"gold",
@@ -25687,9 +23920,6 @@ const pokemon = {
 			"chs": "扒手猫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 509,
 		"games": [
 			"black",
@@ -25721,9 +23951,6 @@ const pokemon = {
 			"chs": "东施喵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 432,
 		"games": [
 			"diamond",
@@ -25762,8 +23989,6 @@ const pokemon = {
 		},
 		"gender": "both",
 		"femsprite": true,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 668,
 		"games": [
 			"x",
@@ -25789,9 +24014,6 @@ const pokemon = {
 			"chs": "拳海参"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 771,
 		"games": [
 			"sh",
@@ -25815,9 +24037,6 @@ const pokemon = {
 			"chs": "沼王"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 195,
 		"games": [
 			"gold",
@@ -25866,9 +24085,6 @@ const pokemon = {
 			"chs": "火岩鼠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 156,
 		"games": [
 			"gold",
@@ -25916,9 +24132,6 @@ const pokemon = {
 			"chs": "胖胖哈力"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 651,
 		"games": [
 			"x",
@@ -25951,9 +24164,6 @@ const pokemon = {
 			"chs": "千针鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 211,
 		"games": [
 			"gold",
@@ -26003,9 +24213,6 @@ const pokemon = {
 			"chs": "腾蹴小将"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 814,
 		"games": [
 			"sw",
@@ -26039,9 +24246,6 @@ const pokemon = {
 			"chs": "雷丘"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 26,
 		"games": [
 			"sw",
@@ -26096,9 +24300,7 @@ const pokemon = {
 			"chs": "雷公"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 243,
 		"games": [
 			"gold",
@@ -26147,9 +24349,6 @@ const pokemon = {
 			"chs": "拉鲁拉丝"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 280,
 		"games": [
 			"ruby",
@@ -26196,9 +24395,6 @@ const pokemon = {
 			"chs": "战槌龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 409,
 		"games": [
 			"diamond",
@@ -26244,9 +24440,6 @@ const pokemon = {
 			"chs": "烈焰马"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 78,
 		"games": [
 			"red",
@@ -26313,9 +24506,6 @@ const pokemon = {
 			"chs": "拉达"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 20,
 		"games": [
 			"red",
@@ -26379,9 +24569,6 @@ const pokemon = {
 			"chs": "小拉达"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 19,
 		"games": [
 			"red",
@@ -26433,9 +24620,7 @@ const pokemon = {
 			"chs": "烈空坐"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 384,
 		"games": [
 			"ruby",
@@ -26481,9 +24666,7 @@ const pokemon = {
 			"chs": "雷吉艾斯"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 378,
 		"games": [
 			"ruby",
@@ -26529,9 +24712,7 @@ const pokemon = {
 			"chs": "雷吉铎拉戈"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 895,
 		"games": [
 			"sw",
@@ -26551,9 +24732,7 @@ const pokemon = {
 			"chs": "雷吉艾勒奇"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 894,
 		"games": [
 			"sw",
@@ -26573,9 +24752,7 @@ const pokemon = {
 			"chs": "雷吉奇卡斯"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 486,
 		"games": [
 			"diamond",
@@ -26615,9 +24792,7 @@ const pokemon = {
 			"chs": "雷吉洛克"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 377,
 		"games": [
 			"black2",
@@ -26663,9 +24838,7 @@ const pokemon = {
 			"chs": "雷吉斯奇鲁"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 379,
 		"games": [
 			"ruby",
@@ -26711,9 +24884,6 @@ const pokemon = {
 			"chs": "古空棘鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 369,
 		"games": [
 			"ruby",
@@ -26759,9 +24929,6 @@ const pokemon = {
 			"chs": "铁炮鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 223,
 		"games": [
 			"gold",
@@ -26811,9 +24978,7 @@ const pokemon = {
 			"chs": "莱希拉姆"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 643,
 		"games": [
 			"black",
@@ -26845,9 +25010,6 @@ const pokemon = {
 			"chs": "人造细胞卵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 579,
 		"games": [
 			"black",
@@ -26879,9 +25041,6 @@ const pokemon = {
 			"chs": "钻角犀兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 112,
 		"games": [
 			"red",
@@ -26936,9 +25095,6 @@ const pokemon = {
 			"chs": "独角犀牛"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 111,
 		"games": [
 			"yellow",
@@ -26993,9 +25149,6 @@ const pokemon = {
 			"chs": "超甲狂犀"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 464,
 		"games": [
 			"diamond",
@@ -27035,9 +25188,6 @@ const pokemon = {
 			"chs": "蝶结萌虻"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 743,
 		"games": [
 			"sun",
@@ -27061,9 +25211,6 @@ const pokemon = {
 			"chs": "轰擂金刚猩"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 812,
 		"games": [
 			"sw",
@@ -27083,9 +25230,6 @@ const pokemon = {
 			"chs": "利欧路"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 447,
 		"games": [
 			"diamond",
@@ -27125,9 +25269,6 @@ const pokemon = {
 			"chs": "岩狗狗"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 744,
 		"games": [
 			"sun",
@@ -27151,9 +25292,6 @@ const pokemon = {
 			"chs": "石丸子"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 524,
 		"games": [
 			"black",
@@ -27185,9 +25323,6 @@ const pokemon = {
 			"chs": "小炭仔"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 837,
 		"games": [
 			"sw",
@@ -27207,9 +25342,6 @@ const pokemon = {
 			"chs": "稚山雀"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 821,
 		"games": [
 			"sw",
@@ -27229,9 +25361,6 @@ const pokemon = {
 			"chs": "毒蔷薇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 315,
 		"games": [
 			"ruby",
@@ -27278,9 +25407,6 @@ const pokemon = {
 			"chs": "罗丝雷朵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 407,
 		"games": [
 			"diamond",
@@ -27390,9 +25516,6 @@ const pokemon = {
 			"chs": "洛托姆"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 479,
 		"games": [
 			"diamond",
@@ -27432,9 +25555,6 @@ const pokemon = {
 			"chs": "木木枭"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 722,
 		"games": [
 			"sun",
@@ -27459,9 +25579,6 @@ const pokemon = {
 			"chs": "毛头小鹰"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 627,
 		"games": [
 			"or",
@@ -27494,9 +25611,6 @@ const pokemon = {
 			"chs": "迭失板"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 867,
 		"games": [
 			"sw",
@@ -27516,9 +25630,6 @@ const pokemon = {
 			"chs": "勾魂眼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 302,
 		"games": [
 			"ruby",
@@ -27564,9 +25675,6 @@ const pokemon = {
 			"chs": "暴飞龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 373,
 		"games": [
 			"ruby",
@@ -27612,9 +25720,6 @@ const pokemon = {
 			"chs": "夜盗火蜥"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 757,
 		"games": [
 			"sun",
@@ -27638,9 +25743,6 @@ const pokemon = {
 			"chs": "焰后蜥"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 758,
 		"games": [
 			"sun",
@@ -27671,9 +25773,6 @@ const pokemon = {
 			"chs": "大剑鬼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 503,
 		"games": [
 			"black",
@@ -27704,9 +25803,6 @@ const pokemon = {
 			"chs": "沙螺蟒"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 844,
 		"games": [
 			"sw",
@@ -27726,9 +25822,6 @@ const pokemon = {
 			"chs": "黑眼鳄"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 551,
 		"games": [
 			"black",
@@ -27774,9 +25867,6 @@ const pokemon = {
 			"chs": "穿山鼠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 27,
 		"games": [
 			"red",
@@ -27844,9 +25934,6 @@ const pokemon = {
 			"chs": "穿山王"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 28,
 		"games": [
 			"red",
@@ -27900,9 +25987,6 @@ const pokemon = {
 			"chs": "沙丘娃"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 769,
 		"games": [
 			"sun",
@@ -27926,9 +26010,6 @@ const pokemon = {
 			"chs": "打击鬼"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 539,
 		"games": [
 			"black",
@@ -28016,9 +26097,6 @@ const pokemon = {
 			"chs": "春天的样子"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 586,
 		"sort": 1,
 		"games": [
@@ -28049,9 +26127,6 @@ const pokemon = {
 			"chs": "粉蝶虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 664,
 		"games": [
 			"x",
@@ -28077,9 +26152,6 @@ const pokemon = {
 			"chs": "蜥蜴王"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 254,
 		"games": [
 			"ruby",
@@ -28125,9 +26197,6 @@ const pokemon = {
 			"chs": "巨钳螳螂"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 212,
 		"games": [
 			"pearl",
@@ -28177,9 +26246,6 @@ const pokemon = {
 			"chs": "蜈蚣王"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 545,
 		"games": [
 			"black",
@@ -28211,9 +26277,6 @@ const pokemon = {
 			"chs": "炎兔儿"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 813,
 		"games": [
 			"sw",
@@ -28233,9 +26296,6 @@ const pokemon = {
 			"chs": "头巾混混"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 560,
 		"games": [
 			"black",
@@ -28267,9 +26327,6 @@ const pokemon = {
 			"chs": "滑滑小子"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 559,
 		"games": [
 			"black",
@@ -28301,9 +26358,6 @@ const pokemon = {
 			"chs": "飞天螳螂"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 123,
 		"games": [
 			"red",
@@ -28358,9 +26412,6 @@ const pokemon = {
 			"chs": "海刺龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 117,
 		"games": [
 			"red",
@@ -28414,9 +26465,6 @@ const pokemon = {
 			"chs": "金鱼王"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 119,
 		"games": [
 			"lg",
@@ -28470,9 +26518,6 @@ const pokemon = {
 			"chs": "海魔狮"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 364,
 		"games": [
 			"ruby",
@@ -28519,9 +26564,6 @@ const pokemon = {
 			"chs": "橡实果"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 273,
 		"games": [
 			"ruby",
@@ -28567,9 +26609,6 @@ const pokemon = {
 			"chs": "小海狮"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 86,
 		"games": [
 			"red",
@@ -28621,9 +26660,6 @@ const pokemon = {
 			"chs": "蟾蜍王"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 537,
 		"games": [
 			"black",
@@ -28655,9 +26691,6 @@ const pokemon = {
 			"chs": "尾立"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 161,
 		"games": [
 			"gold",
@@ -28704,9 +26737,6 @@ const pokemon = {
 			"chs": "君主蛇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 497,
 		"games": [
 			"black",
@@ -28736,9 +26766,6 @@ const pokemon = {
 			"chs": "青藤蛇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 496,
 		"games": [
 			"black",
@@ -28768,9 +26795,6 @@ const pokemon = {
 			"chs": "饭匙蛇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 336,
 		"games": [
 			"ruby",
@@ -28814,9 +26838,6 @@ const pokemon = {
 			"chs": "虫宝包"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 540,
 		"games": [
 			"black",
@@ -28846,9 +26867,6 @@ const pokemon = {
 			"chs": "巨牙鲨"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 319,
 		"games": [
 			"ruby",
@@ -28919,8 +26937,6 @@ const pokemon = {
 			"chs": "陆上形态"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 492,
 		"games": [
@@ -28959,9 +26975,6 @@ const pokemon = {
 			"chs": "脱壳忍者"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 292,
 		"games": [
 			"ruby",
@@ -29007,9 +27020,6 @@ const pokemon = {
 			"chs": "甲壳龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 372,
 		"games": [
 			"ruby",
@@ -29055,9 +27065,6 @@ const pokemon = {
 			"chs": "大舌贝"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 90,
 		"games": [
 			"red",
@@ -29136,9 +27143,6 @@ const pokemon = {
 			"chs": "西海"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 422,
 		"games": [
 			"diamond",
@@ -29178,9 +27182,6 @@ const pokemon = {
 			"chs": "小嘴蜗"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 616,
 		"games": [
 			"black",
@@ -29212,9 +27213,6 @@ const pokemon = {
 			"chs": "盾甲龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 410,
 		"games": [
 			"diamond",
@@ -29252,9 +27250,6 @@ const pokemon = {
 			"chs": "狡猾天狗"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 275,
 		"games": [
 			"ss",
@@ -29300,9 +27295,6 @@ const pokemon = {
 			"chs": "灯罩夜菇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 756,
 		"games": [
 			"sun",
@@ -29326,9 +27318,6 @@ const pokemon = {
 			"chs": "小猫怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 403,
 		"games": [
 			"diamond",
@@ -29368,9 +27357,6 @@ const pokemon = {
 			"chs": "蘑蘑菇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 285,
 		"games": [
 			"ruby",
@@ -29414,9 +27400,6 @@ const pokemon = {
 			"chs": "壶壶"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 213,
 		"games": [
 			"gold",
@@ -29465,9 +27448,6 @@ const pokemon = {
 			"chs": "怨影娃娃"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 353,
 		"games": [
 			"ruby",
@@ -29511,9 +27491,6 @@ const pokemon = {
 			"chs": "象征鸟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 561,
 		"games": [
 			"black",
@@ -29545,9 +27522,6 @@ const pokemon = {
 			"chs": "甲壳茧"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 266,
 		"games": [
 			"ruby",
@@ -29592,9 +27566,6 @@ const pokemon = {
 			"chs": "沙包蛇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 843,
 		"games": [
 			"sw",
@@ -29614,9 +27585,7 @@ const pokemon = {
 			"chs": "银伴战兽"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 773,
 		"games": [
 			"sun",
@@ -29640,9 +27609,6 @@ const pokemon = {
 			"chs": "冷水猿"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 516,
 		"games": [
 			"black",
@@ -29672,9 +27638,6 @@ const pokemon = {
 			"chs": "花椰猿"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 512,
 		"games": [
 			"black",
@@ -29704,9 +27667,6 @@ const pokemon = {
 			"chs": "爆香猿"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 514,
 		"games": [
 			"black",
@@ -29736,9 +27696,6 @@ const pokemon = {
 			"chs": "来悲茶"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 854,
 		"games": [
 			"sw",
@@ -29758,9 +27715,6 @@ const pokemon = {
 			"chs": "葱游兵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 865,
 		"games": [
 			"sw",
@@ -29780,9 +27734,6 @@ const pokemon = {
 			"chs": "烧火蚣"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 850,
 		"games": [
 			"sw",
@@ -29802,9 +27753,6 @@ const pokemon = {
 			"chs": "盔甲鸟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 227,
 		"games": [
 			"gold",
@@ -29853,9 +27801,6 @@ const pokemon = {
 			"chs": "坐骑小羊"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 672,
 		"games": [
 			"x",
@@ -29881,9 +27826,6 @@ const pokemon = {
 			"chs": "毽子花"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 188,
 		"games": [
 			"gold",
@@ -29930,9 +27872,6 @@ const pokemon = {
 			"chs": "向尾喵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 300,
 		"games": [
 			"ruby",
@@ -29976,9 +27915,6 @@ const pokemon = {
 			"chs": "钳尾蝎"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 451,
 		"games": [
 			"diamond",
@@ -30018,9 +27954,6 @@ const pokemon = {
 			"chs": "垃垃藻"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 690,
 		"games": [
 			"x",
@@ -30048,9 +27981,6 @@ const pokemon = {
 			"chs": "坦克臭鼬"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 435,
 		"games": [
 			"diamond",
@@ -30090,9 +28020,6 @@ const pokemon = {
 			"chs": "贪心栗鼠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 819,
 		"games": [
 			"sw",
@@ -30112,9 +28039,6 @@ const pokemon = {
 			"chs": "请假王"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 289,
 		"games": [
 			"ruby",
@@ -30158,9 +28082,6 @@ const pokemon = {
 			"chs": "懒人獭"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 287,
 		"games": [
 			"ruby",
@@ -30211,9 +28132,6 @@ const pokemon = {
 			"chs": "黏美儿"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 705,
 		"games": [
 			"x",
@@ -30250,9 +28168,6 @@ const pokemon = {
 			"chs": "呆壳兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 80,
 		"games": [
 			"red",
@@ -30314,9 +28229,6 @@ const pokemon = {
 			"chs": "呆呆王"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 199,
 		"games": [
 			"gold",
@@ -30373,9 +28285,6 @@ const pokemon = {
 			"chs": "呆呆兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 79,
 		"games": [
 			"red",
@@ -30429,9 +28338,6 @@ const pokemon = {
 			"chs": "熔岩虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 218,
 		"games": [
 			"gold",
@@ -30478,9 +28384,6 @@ const pokemon = {
 			"chs": "胖甜妮"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 685,
 		"games": [
 			"x",
@@ -30508,9 +28411,6 @@ const pokemon = {
 			"chs": "图图犬"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 235,
 		"games": [
 			"gold",
@@ -30557,9 +28457,6 @@ const pokemon = {
 			"chs": "迷唇娃"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 238,
 		"games": [
 			"gold",
@@ -30615,9 +28512,6 @@ const pokemon = {
 			"chs": "狃拉"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 215,
 		"games": [
 			"gold",
@@ -30667,9 +28561,6 @@ const pokemon = {
 			"chs": "大狃拉"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 903,
 		"games": [
 			"pla"
@@ -30688,9 +28579,6 @@ const pokemon = {
 			"chs": "藤藤蛇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 495,
 		"games": [
 			"black",
@@ -30720,9 +28608,6 @@ const pokemon = {
 			"chs": "雪吞虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 872,
 		"games": [
 			"sw",
@@ -30742,9 +28627,6 @@ const pokemon = {
 			"chs": "卡比兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 143,
 		"games": [
 			"red",
@@ -30799,9 +28681,6 @@ const pokemon = {
 			"chs": "雪童子"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 361,
 		"games": [
 			"ruby",
@@ -30848,9 +28727,6 @@ const pokemon = {
 			"chs": "雪笠怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 459,
 		"games": [
 			"diamond",
@@ -30890,9 +28766,6 @@ const pokemon = {
 			"chs": "布鲁"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 209,
 		"games": [
 			"gold",
@@ -30939,9 +28812,6 @@ const pokemon = {
 			"chs": "泪眼蜥"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 816,
 		"games": [
 			"sw",
@@ -30961,9 +28831,7 @@ const pokemon = {
 			"chs": "索尔迦雷欧"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 791,
 		"games": [
 			"sun",
@@ -30987,9 +28855,6 @@ const pokemon = {
 			"chs": "单卵细胞球"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 577,
 		"games": [
 			"black",
@@ -31021,9 +28886,6 @@ const pokemon = {
 			"chs": "太阳岩"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 338,
 		"games": [
 			"white2",
@@ -31069,9 +28931,6 @@ const pokemon = {
 			"chs": "烈雀"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 21,
 		"games": [
 			"platinum",
@@ -31123,9 +28982,7 @@ const pokemon = {
 			"chs": "灵幽马"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 897,
 		"games": [
 			"sw",
@@ -31145,9 +29002,6 @@ const pokemon = {
 			"chs": "粉蝶蛹"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 665,
 		"games": [
 			"x",
@@ -31173,9 +29027,6 @@ const pokemon = {
 			"chs": "海豹球"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 363,
 		"games": [
 			"ruby",
@@ -31222,9 +29073,6 @@ const pokemon = {
 			"chs": "圆丝蛛"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 167,
 		"games": [
 			"gold",
@@ -31271,9 +29119,6 @@ const pokemon = {
 			"chs": "晃晃斑"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 327,
 		"games": [
 			"black",
@@ -31317,9 +29162,6 @@ const pokemon = {
 			"chs": "花岩怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 442,
 		"games": [
 			"diamond",
@@ -31359,9 +29201,6 @@ const pokemon = {
 			"chs": "跳跳猪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 325,
 		"games": [
 			"ruby",
@@ -31405,9 +29244,6 @@ const pokemon = {
 			"chs": "粉香香"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 682,
 		"games": [
 			"x",
@@ -31435,9 +29271,6 @@ const pokemon = {
 			"chs": "杰尼龟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 7,
 		"games": [
 			"red",
@@ -31491,9 +29324,6 @@ const pokemon = {
 			"chs": "垒磊石"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 805,
 		"games": [
 			"usun",
@@ -31515,9 +29345,6 @@ const pokemon = {
 			"chs": "惊角鹿"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 234,
 		"games": [
 			"gold",
@@ -31565,9 +29392,6 @@ const pokemon = {
 			"chs": "姆克鹰"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 398,
 		"games": [
 			"diamond",
@@ -31605,9 +29429,6 @@ const pokemon = {
 			"chs": "姆克鸟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 397,
 		"games": [
 			"diamond",
@@ -31645,9 +29466,6 @@ const pokemon = {
 			"chs": "姆克儿"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 396,
 		"games": [
 			"diamond",
@@ -31685,9 +29503,6 @@ const pokemon = {
 			"chs": "宝石海星"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 121,
 		"games": [
 			"red",
@@ -31741,9 +29556,6 @@ const pokemon = {
 			"chs": "海星星"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 120,
 		"games": [
 			"black",
@@ -31797,9 +29609,6 @@ const pokemon = {
 			"chs": "大钢蛇"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 208,
 		"games": [
 			"black",
@@ -31849,9 +29658,6 @@ const pokemon = {
 			"chs": "甜舞妮"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 762,
 		"games": [
 			"sun",
@@ -31875,9 +29681,6 @@ const pokemon = {
 			"chs": "巨石丁"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 874,
 		"games": [
 			"sw",
@@ -31897,9 +29700,6 @@ const pokemon = {
 			"chs": "长毛狗"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 508,
 		"games": [
 			"black",
@@ -31931,9 +29731,6 @@ const pokemon = {
 			"chs": "童偶熊"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 759,
 		"games": [
 			"sun",
@@ -31965,9 +29762,6 @@ const pokemon = {
 			"chs": "泥巴鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 618,
 		"games": [
 			"black",
@@ -31999,9 +29793,6 @@ const pokemon = {
 			"chs": "臭鼬噗"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 434,
 		"games": [
 			"diamond",
@@ -32041,9 +29832,6 @@ const pokemon = {
 			"chs": "树才怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 185,
 		"games": [
 			"gold",
@@ -32093,9 +29881,7 @@ const pokemon = {
 			"chs": "水君"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 245,
 		"games": [
 			"black2",
@@ -32144,9 +29930,6 @@ const pokemon = {
 			"chs": "向日花怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 192,
 		"games": [
 			"gold",
@@ -32193,9 +29976,6 @@ const pokemon = {
 			"chs": "向日种子"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 191,
 		"games": [
 			"gold",
@@ -32242,9 +30022,6 @@ const pokemon = {
 			"chs": "溜溜糖球"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 283,
 		"games": [
 			"ruby",
@@ -32288,9 +30065,6 @@ const pokemon = {
 			"chs": "青绵鸟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 333,
 		"games": [
 			"ruby",
@@ -32336,9 +30110,6 @@ const pokemon = {
 			"chs": "宝包茧"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 541,
 		"games": [
 			"black",
@@ -32368,9 +30139,6 @@ const pokemon = {
 			"chs": "吞食兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 317,
 		"games": [
 			"ruby",
@@ -32414,9 +30182,6 @@ const pokemon = {
 			"chs": "巨沼怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 260,
 		"games": [
 			"ruby",
@@ -32462,9 +30227,6 @@ const pokemon = {
 			"chs": "舞天鹅"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 581,
 		"games": [
 			"black",
@@ -32494,9 +30256,6 @@ const pokemon = {
 			"chs": "大王燕"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 277,
 		"games": [
 			"ruby",
@@ -32540,9 +30299,6 @@ const pokemon = {
 			"chs": "小山猪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 220,
 		"games": [
 			"gold",
@@ -32592,9 +30348,6 @@ const pokemon = {
 			"chs": "绵绵泡芙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 684,
 		"games": [
 			"x",
@@ -32622,9 +30375,6 @@ const pokemon = {
 			"chs": "心蝙蝠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 528,
 		"games": [
 			"black",
@@ -32656,9 +30406,6 @@ const pokemon = {
 			"chs": "仙子伊布"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 700,
 		"games": [
 			"x",
@@ -32687,9 +30434,6 @@ const pokemon = {
 			"chs": "傲骨燕"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 276,
 		"games": [
 			"ruby",
@@ -32733,9 +30477,6 @@ const pokemon = {
 			"chs": "烈箭鹰"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 663,
 		"games": [
 			"x",
@@ -32763,9 +30504,6 @@ const pokemon = {
 			"chs": "蔓藤怪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 114,
 		"games": [
 			"red",
@@ -32820,9 +30558,6 @@ const pokemon = {
 			"chs": "巨蔓藤"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 465,
 		"games": [
 			"diamond",
@@ -32862,9 +30597,7 @@ const pokemon = {
 			"chs": "卡璞・哞哞"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 787,
 		"games": [
 			"sun",
@@ -32888,9 +30621,7 @@ const pokemon = {
 			"chs": "卡璞・鳍鳍"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 788,
 		"games": [
 			"sun",
@@ -32914,9 +30645,7 @@ const pokemon = {
 			"chs": "卡璞・鸣鸣"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 785,
 		"games": [
 			"sun",
@@ -32940,9 +30669,7 @@ const pokemon = {
 			"chs": "卡璞・蝶蝶"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 786,
 		"games": [
 			"sun",
@@ -33020,9 +30747,6 @@ const pokemon = {
 			"chs": "肯泰罗"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 128,
 		"games": [
 			"red",
@@ -33076,9 +30800,6 @@ const pokemon = {
 			"chs": "熊宝宝"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 216,
 		"games": [
 			"gold",
@@ -33126,9 +30847,6 @@ const pokemon = {
 			"chs": "玛瑙水母"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 72,
 		"games": [
 			"red",
@@ -33183,9 +30901,6 @@ const pokemon = {
 			"chs": "毒刺水母"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 73,
 		"games": [
 			"red",
@@ -33240,9 +30955,6 @@ const pokemon = {
 			"chs": "暖暖猪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 498,
 		"games": [
 			"black",
@@ -33272,9 +30984,7 @@ const pokemon = {
 			"chs": "代拉基翁"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 639,
 		"games": [
 			"black",
@@ -33306,9 +31016,6 @@ const pokemon = {
 			"chs": "猾大狐"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 828,
 		"games": [
 			"sw",
@@ -33328,9 +31035,6 @@ const pokemon = {
 			"chs": "投摔鬼"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 538,
 		"games": [
 			"black",
@@ -33367,9 +31071,7 @@ const pokemon = {
 		},
 		"form-source": "incarnate",
 		"gender": "male",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 642,
 		"games": [
 			"black",
@@ -33402,9 +31104,6 @@ const pokemon = {
 			"chs": "啪咚猴"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 811,
 		"games": [
 			"sw",
@@ -33424,9 +31123,6 @@ const pokemon = {
 			"chs": "搬运小匠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 532,
 		"games": [
 			"black",
@@ -33458,9 +31154,6 @@ const pokemon = {
 			"chs": "原盖海龟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 564,
 		"games": [
 			"black",
@@ -33492,9 +31185,6 @@ const pokemon = {
 			"chs": "托戈德玛尔"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 777,
 		"games": [
 			"sun",
@@ -33518,9 +31208,6 @@ const pokemon = {
 			"chs": "波克基斯"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 468,
 		"games": [
 			"diamond",
@@ -33560,9 +31247,6 @@ const pokemon = {
 			"chs": "波克比"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 175,
 		"games": [
 			"gold",
@@ -33612,9 +31296,6 @@ const pokemon = {
 			"chs": "波克基古"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 176,
 		"games": [
 			"gold",
@@ -33664,9 +31345,6 @@ const pokemon = {
 			"chs": "火稚鸡"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 255,
 		"games": [
 			"ruby",
@@ -33712,9 +31390,6 @@ const pokemon = {
 			"chs": "煤炭龟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 324,
 		"games": [
 			"usun",
@@ -33765,9 +31440,7 @@ const pokemon = {
 		},
 		"form-source": "incarnate",
 		"gender": "male",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 641,
 		"games": [
 			"black",
@@ -33800,9 +31473,6 @@ const pokemon = {
 			"chs": "炎热喵"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 726,
 		"games": [
 			"sun",
@@ -33826,9 +31496,6 @@ const pokemon = {
 			"chs": "土台龟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 389,
 		"games": [
 			"diamond",
@@ -33866,9 +31533,6 @@ const pokemon = {
 			"chs": "小锯鳄"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 158,
 		"games": [
 			"gold",
@@ -33915,9 +31579,6 @@ const pokemon = {
 			"chs": "铳嘴大鸟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 733,
 		"games": [
 			"sun",
@@ -33939,9 +31600,6 @@ const pokemon = {
 			"chs": "超坏星"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 748,
 		"games": [
 			"sun",
@@ -33965,9 +31623,6 @@ const pokemon = {
 			"chs": "电音婴"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 848,
 		"games": [
 			"sw",
@@ -33987,9 +31642,6 @@ const pokemon = {
 			"chs": "毒骷蛙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 454,
 		"games": [
 			"diamond",
@@ -34054,9 +31706,6 @@ const pokemon = {
 			"chs": "高调的样子"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 849,
 		"games": [
 			"sw",
@@ -34076,9 +31725,6 @@ const pokemon = {
 			"chs": "咕咕鸽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 520,
 		"games": [
 			"black",
@@ -34110,9 +31756,6 @@ const pokemon = {
 			"chs": "大颚蚁"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 328,
 		"games": [
 			"ruby",
@@ -34158,9 +31801,6 @@ const pokemon = {
 			"chs": "木守宫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 252,
 		"games": [
 			"ruby",
@@ -34206,9 +31846,6 @@ const pokemon = {
 			"chs": "朽木妖"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 709,
 		"games": [
 			"x",
@@ -34236,9 +31873,6 @@ const pokemon = {
 			"chs": "热带龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 357,
 		"games": [
 			"ruby",
@@ -34282,9 +31916,6 @@ const pokemon = {
 			"chs": "破破袋"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 568,
 		"games": [
 			"black",
@@ -34316,9 +31947,6 @@ const pokemon = {
 			"chs": "喇叭啄鸟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 732,
 		"games": [
 			"sun",
@@ -34340,9 +31968,6 @@ const pokemon = {
 			"chs": "甜冷美后"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 763,
 		"games": [
 			"sun",
@@ -34366,9 +31991,6 @@ const pokemon = {
 			"chs": "爆焰龟兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 776,
 		"games": [
 			"sun",
@@ -34392,9 +32014,6 @@ const pokemon = {
 			"chs": "草苗龟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 387,
 		"games": [
 			"diamond",
@@ -34432,9 +32051,6 @@ const pokemon = {
 			"chs": "圆蝌蚪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 535,
 		"games": [
 			"black",
@@ -34466,9 +32082,6 @@ const pokemon = {
 			"chs": "麻麻小鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 602,
 		"games": [
 			"black",
@@ -34498,9 +32111,7 @@ const pokemon = {
 			"chs": "属性：空"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 772,
 		"games": [
 			"sun",
@@ -34531,9 +32142,6 @@ const pokemon = {
 			"chs": "火暴兽"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 157,
 		"games": [
 			"gold",
@@ -34581,9 +32189,6 @@ const pokemon = {
 			"chs": "班基拉斯"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 248,
 		"games": [
 			"gold",
@@ -34632,9 +32237,6 @@ const pokemon = {
 			"chs": "怪颚龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 697,
 		"games": [
 			"x",
@@ -34662,9 +32264,6 @@ const pokemon = {
 			"chs": "无畏小子"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 236,
 		"games": [
 			"gold",
@@ -34713,9 +32312,6 @@ const pokemon = {
 			"chs": "宝宝暴龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 696,
 		"games": [
 			"x",
@@ -34743,9 +32339,6 @@ const pokemon = {
 			"chs": "月亮伊布"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 197,
 		"games": [
 			"gold",
@@ -34796,8 +32389,6 @@ const pokemon = {
 		},
 		"gender": "both",
 		"femsprite": true,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 521,
 		"games": [
 			"black",
@@ -35023,9 +32614,6 @@ const pokemon = {
 		},
 		"forms-all": "A",
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 201,
 		"sort": 1,
 		"games": [
@@ -35074,9 +32662,6 @@ const pokemon = {
 			"chs": "月月熊"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 901,
 		"games": [
 			"pla"
@@ -35095,9 +32680,6 @@ const pokemon = {
 			"chs": "圈圈熊"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 217,
 		"games": [
 			"gold",
@@ -35145,9 +32727,7 @@ const pokemon = {
 			"chs": "武道熊师"
 		},
 		"gender": "both",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 892,
 		"games": [
 			"sw",
@@ -35167,9 +32747,7 @@ const pokemon = {
 			"chs": "由克希"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 480,
 		"games": [
 			"diamond",
@@ -35209,9 +32787,6 @@ const pokemon = {
 			"chs": "多多冰"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 583,
 		"games": [
 			"black",
@@ -35243,9 +32818,6 @@ const pokemon = {
 			"chs": "迷你冰"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 582,
 		"games": [
 			"black",
@@ -35277,9 +32849,6 @@ const pokemon = {
 			"chs": "双倍多多冰"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 584,
 		"games": [
 			"black",
@@ -35311,9 +32880,6 @@ const pokemon = {
 			"chs": "水伊布"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 134,
 		"games": [
 			"red",
@@ -35368,9 +32934,6 @@ const pokemon = {
 			"chs": "百足蜈蚣"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 543,
 		"games": [
 			"black",
@@ -35402,9 +32965,6 @@ const pokemon = {
 			"chs": "摩鲁蛾"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 49,
 		"games": [
 			"lg",
@@ -35456,9 +33016,6 @@ const pokemon = {
 			"chs": "毛球"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 48,
 		"games": [
 			"red",
@@ -35510,9 +33067,6 @@ const pokemon = {
 			"chs": "妙蛙花"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 3,
 		"games": [
 			"red",
@@ -35566,9 +33120,6 @@ const pokemon = {
 			"chs": "蜂女王"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 416,
 		"games": [
 			"diamond",
@@ -35608,9 +33159,6 @@ const pokemon = {
 			"chs": "超音波幼虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 329,
 		"games": [
 			"ruby",
@@ -35656,8 +33204,6 @@ const pokemon = {
 			"chs": "比克提尼"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 494,
 		"games": [
@@ -35690,9 +33236,6 @@ const pokemon = {
 			"chs": "大食花"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 71,
 		"games": [
 			"red",
@@ -35744,9 +33287,6 @@ const pokemon = {
 			"chs": "过动猿"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 288,
 		"games": [
 			"ruby",
@@ -35790,9 +33330,6 @@ const pokemon = {
 			"chs": "锹农炮虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 738,
 		"games": [
 			"sun",
@@ -35816,9 +33353,6 @@ const pokemon = {
 			"chs": "霸王花"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 45,
 		"games": [
 			"sw",
@@ -35872,9 +33406,7 @@ const pokemon = {
 			"chs": "毕力吉翁"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 640,
 		"games": [
 			"black",
@@ -36183,9 +33715,6 @@ const pokemon = {
 			"chs": "花園花紋"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 666,
 		"games": [
 			"x",
@@ -36211,9 +33740,6 @@ const pokemon = {
 			"chs": "电萤虫"
 		},
 		"gender": "male",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 313,
 		"games": [
 			"ruby",
@@ -36257,8 +33783,6 @@ const pokemon = {
 			"chs": "波尔凯尼恩"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 721,
 		"games": [
@@ -36287,9 +33811,6 @@ const pokemon = {
 			"chs": "火神蛾"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 637,
 		"games": [
 			"black",
@@ -36328,9 +33849,6 @@ const pokemon = {
 			"chs": "霹雳电球"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 100,
 		"games": [
 			"red",
@@ -36383,9 +33901,6 @@ const pokemon = {
 			"chs": "秃鹰丫头"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 629,
 		"games": [
 			"y",
@@ -36432,9 +33947,6 @@ const pokemon = {
 			"chs": "六尾"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 37,
 		"games": [
 			"red",
@@ -36489,9 +34001,6 @@ const pokemon = {
 			"chs": "吼吼鲸"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 320,
 		"games": [
 			"ruby",
@@ -36537,9 +34046,6 @@ const pokemon = {
 			"chs": "吼鲸王"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 321,
 		"games": [
 			"ruby",
@@ -36585,9 +34091,6 @@ const pokemon = {
 			"chs": "帝牙海狮"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 365,
 		"games": [
 			"lg",
@@ -36634,9 +34137,6 @@ const pokemon = {
 			"chs": "卡咪龟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 8,
 		"games": [
 			"red",
@@ -36690,9 +34190,6 @@ const pokemon = {
 			"chs": "步哨鼠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 505,
 		"games": [
 			"black",
@@ -36722,9 +34219,6 @@ const pokemon = {
 			"chs": "玛狃拉"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 461,
 		"games": [
 			"diamond",
@@ -36764,9 +34258,6 @@ const pokemon = {
 			"chs": "独角虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 13,
 		"games": [
 			"red",
@@ -36818,9 +34309,6 @@ const pokemon = {
 			"chs": "口呆花"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 70,
 		"games": [
 			"red",
@@ -36880,9 +34368,6 @@ const pokemon = {
 			"chs": "双弹瓦斯"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 110,
 		"games": [
 			"red",
@@ -36936,9 +34421,6 @@ const pokemon = {
 			"chs": "风妖精"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 547,
 		"games": [
 			"black",
@@ -36970,9 +34452,6 @@ const pokemon = {
 			"chs": "车轮球"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 544,
 		"games": [
 			"black",
@@ -37004,9 +34483,6 @@ const pokemon = {
 			"chs": "鲶鱼王"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 340,
 		"games": [
 			"ruby",
@@ -37053,9 +34529,6 @@ const pokemon = {
 			"chs": "咕妞妞"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 293,
 		"games": [
 			"ruby",
@@ -37101,9 +34574,6 @@ const pokemon = {
 			"chs": "胖可丁"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 40,
 		"games": [
 			"red",
@@ -37157,9 +34627,6 @@ const pokemon = {
 			"chs": "胆小虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 767,
 		"games": [
 			"sun",
@@ -37183,9 +34650,6 @@ const pokemon = {
 			"chs": "长翅鸥"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 278,
 		"games": [
 			"ruby",
@@ -37231,9 +34695,6 @@ const pokemon = {
 			"chs": "弱丁鱼"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 746,
 		"games": [
 			"sun",
@@ -37258,8 +34719,6 @@ const pokemon = {
 		},
 		"gender": "both",
 		"femsprite": true,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 202,
 		"games": [
 			"gold",
@@ -37308,9 +34767,6 @@ const pokemon = {
 			"chs": "滚滚蝙蝠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 527,
 		"games": [
 			"black",
@@ -37342,9 +34798,6 @@ const pokemon = {
 			"chs": "毛辫羊"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 831,
 		"games": [
 			"sw",
@@ -37372,9 +34825,6 @@ const pokemon = {
 			"chs": "乌波"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 194,
 		"games": [
 			"gold",
@@ -37462,9 +34912,6 @@ const pokemon = {
 			"chs": "草木蓑衣"
 		},
 		"gender": "female",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 413,
 		"games": [
 			"diamond",
@@ -37501,9 +34948,6 @@ const pokemon = {
 			"chs": "刺尾虫"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 265,
 		"games": [
 			"ruby",
@@ -37548,9 +34992,6 @@ const pokemon = {
 			"chs": "小果然"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 360,
 		"games": [
 			"ruby",
@@ -37596,9 +35037,6 @@ const pokemon = {
 			"chs": "诡角鹿"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 899,
 		"games": [
 			"pla"
@@ -37617,9 +35055,6 @@ const pokemon = {
 			"chs": "天然鸟"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 178,
 		"games": [
 			"gold",
@@ -37668,9 +35103,7 @@ const pokemon = {
 			"chs": "哲尔尼亚斯"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 716,
 		"games": [
 			"x",
@@ -37698,9 +35131,6 @@ const pokemon = {
 			"chs": "电束木"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 796,
 		"games": [
 			"sun",
@@ -37732,9 +35162,6 @@ const pokemon = {
 			"chs": "哭哭面具"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 562,
 		"games": [
 			"black",
@@ -37766,9 +35193,6 @@ const pokemon = {
 			"chs": "来电汪"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 835,
 		"games": [
 			"sw",
@@ -37788,9 +35212,6 @@ const pokemon = {
 			"chs": "蜻蜻蜓"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 193,
 		"games": [
 			"gold",
@@ -37838,9 +35259,6 @@ const pokemon = {
 			"chs": "远古巨蜓"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 469,
 		"games": [
 			"diamond",
@@ -37878,9 +35296,6 @@ const pokemon = {
 			"chs": "猫鼬少"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 734,
 		"games": [
 			"sun",
@@ -37902,9 +35317,7 @@ const pokemon = {
 			"chs": "伊裴尔塔尔"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 717,
 		"games": [
 			"x",
@@ -37932,9 +35345,7 @@ const pokemon = {
 			"chs": "苍响"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 888,
 		"games": [
 			"sw",
@@ -37954,9 +35365,7 @@ const pokemon = {
 			"chs": "藏玛然特"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 889,
 		"games": [
 			"sw",
@@ -37976,9 +35385,6 @@ const pokemon = {
 			"chs": "猫鼬斩"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 335,
 		"games": [
 			"ruby",
@@ -38030,9 +35436,7 @@ const pokemon = {
 			"chs": "闪电鸟"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 145,
 		"games": [
 			"red",
@@ -38100,8 +35504,6 @@ const pokemon = {
 			"chs": "萨戮德"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 893,
 		"games": [
@@ -38122,9 +35524,6 @@ const pokemon = {
 			"chs": "雷电斑马"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 523,
 		"games": [
 			"black",
@@ -38154,9 +35553,7 @@ const pokemon = {
 			"chs": "捷克罗姆"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 644,
 		"games": [
 			"black",
@@ -38188,8 +35585,6 @@ const pokemon = {
 			"chs": "捷拉奥拉"
 		},
 		"gender": "unknown",
-		"femsprite": false,
-		"legendary": false,
 		"mythical": true,
 		"natdex": 807,
 		"games": [
@@ -38220,9 +35615,6 @@ const pokemon = {
 			"chs": "蛇纹熊"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 263,
 		"games": [
 			"ruby",
@@ -38275,9 +35667,6 @@ const pokemon = {
 			"chs": "索罗亚克"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 571,
 		"games": [
 			"black",
@@ -38317,9 +35706,6 @@ const pokemon = {
 			"chs": "索罗亚"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 570,
 		"games": [
 			"black",
@@ -38352,9 +35738,6 @@ const pokemon = {
 			"chs": "超音蝠"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 41,
 		"games": [
 			"red",
@@ -38409,9 +35792,6 @@ const pokemon = {
 			"chs": "双首暴龙"
 		},
 		"gender": "both",
-		"femsprite": false,
-		"legendary": false,
-		"mythical": false,
 		"natdex": 634,
 		"games": [
 			"as",
@@ -38443,9 +35823,7 @@ const pokemon = {
 			"chs": "基格尔德"
 		},
 		"gender": "unknown",
-		"femsprite": false,
 		"legendary": true,
-		"mythical": false,
 		"natdex": 718,
 		"games": [
 			"x",
@@ -38458,6 +35836,2102 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh"
+		]
+	},
+	"sprigatito": {
+		"names": {
+			"ger": "",
+			"eng": "Sprigatito",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 906,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"floragato": {
+		"names": {
+			"ger": "",
+			"eng": "Floragato",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 907,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"meowscarada": {
+		"names": {
+			"ger": "",
+			"eng": "Meowscarada",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 908,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"fuecoco": {
+		"names": {
+			"ger": "",
+			"eng": "Fuecoco",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 909,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"crocalor": {
+		"names": {
+			"ger": "",
+			"eng": "Crocalor",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 910,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"skeledirge": {
+		"names": {
+			"ger": "",
+			"eng": "Skeledirge",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 911,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"quaxly": {
+		"names": {
+			"ger": "",
+			"eng": "Quaxly",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 912,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"quaxwell": {
+		"names": {
+			"ger": "",
+			"eng": "Quaxwell",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 913,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"quaquaval": {
+		"names": {
+			"ger": "",
+			"eng": "Quaquaval",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 914,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"lechonk": {
+		"names": {
+			"ger": "",
+			"eng": "Lechonk",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 915,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"oinkologne": {
+		"names": {
+			"ger": "",
+			"eng": "Oinkologne",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"femsprite": true,
+		"natdex": 916,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"tarountula": {
+		"names": {
+			"ger": "",
+			"eng": "Taoruntula",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 917,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"spidops": {
+		"names": {
+			"ger": "",
+			"eng": "Spidops",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 918,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"nymble": {
+		"names": {
+			"ger": "",
+			"eng": "Nymble",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 919,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"lokix": {
+		"names": {
+			"ger": "",
+			"eng": "Lokix",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 920,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"pawmi": {
+		"names": {
+			"ger": "",
+			"eng": "Pawmi",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 921,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"pawmo": {
+		"names": {
+			"ger": "",
+			"eng": "Pawmo",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 922,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"pawmot": {
+		"names": {
+			"ger": "",
+			"eng": "Pawmot",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 923,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"tandemaus": {
+		"names": {
+			"ger": "",
+			"eng": "Tandemaus",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 924,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"maushold-three": {
+		"data-source": "maushold",
+		"forms": {
+			"ger": "",
+			"eng": "Family of Three",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"sort": 1,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"maushold": {
+		"names": {
+			"ger": "",
+			"eng": "Maushold",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"forms": {
+			"ger": "",
+			"eng": "Family of Four",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 925,
+		"sort": 2,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"fidough": {
+		"names": {
+			"ger": "",
+			"eng": "Fidough",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 926,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"dachsbun": {
+		"names": {
+			"ger": "",
+			"eng": "Dachsbun",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 927,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"smoliv": {
+		"names": {
+			"ger": "",
+			"eng": "Smoliv",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 928,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"dolliv": {
+		"names": {
+			"ger": "",
+			"eng": "Dolliv",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 929,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"arboliva": {
+		"names": {
+			"ger": "",
+			"eng": "Arboliva",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 930,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"squawkabilly": {
+		"names": {
+			"ger": "",
+			"eng": "Squawkabilly",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 931,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"nacli": {
+		"names": {
+			"ger": "",
+			"eng": "Nacli",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 932,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"naclstack": {
+		"names": {
+			"ger": "",
+			"eng": "Naclstack",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 933,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"garganacl": {
+		"names": {
+			"ger": "",
+			"eng": "Garganacl",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 934,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"charcadet": {
+		"names": {
+			"ger": "",
+			"eng": "Charcadet",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 935,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"armarouge": {
+		"names": {
+			"ger": "",
+			"eng": "Armarouge",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 936,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"ceruledge": {
+		"names": {
+			"ger": "",
+			"eng": "Ceruledge",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 937,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"tadbulb": {
+		"names": {
+			"ger": "",
+			"eng": "Tadbulb",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 938,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"bellibolt": {
+		"names": {
+			"ger": "",
+			"eng": "Bellibolt",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 939,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"wattrel": {
+		"names": {
+			"ger": "",
+			"eng": "Wattrel",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 940,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"kilowattrel": {
+		"names": {
+			"ger": "",
+			"eng": "Kilowattrel",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 941,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"maschiff": {
+		"names": {
+			"ger": "",
+			"eng": "Maschiff",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 942,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"mabosstiff": {
+		"names": {
+			"ger": "",
+			"eng": "Mabosstiff",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 943,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"shroodle": {
+		"names": {
+			"ger": "",
+			"eng": "Shroodle",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 944,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"grafaiai": {
+		"names": {
+			"ger": "",
+			"eng": "Grafaiai",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 945,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"bramblin": {
+		"names": {
+			"ger": "",
+			"eng": "Bramblin",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 946,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"brambleghast": {
+		"names": {
+			"ger": "",
+			"eng": "Brambleghast",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 947,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"toedscool": {
+		"names": {
+			"ger": "",
+			"eng": "Toedscool",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 948,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"toedscruel": {
+		"names": {
+			"ger": "",
+			"eng": "Toedscruel",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 949,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"klawf": {
+		"names": {
+			"ger": "",
+			"eng": "Klawf",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 950,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"capsakid": {
+		"names": {
+			"ger": "",
+			"eng": "Capsakid",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 951,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"scovillain": {
+		"names": {
+			"ger": "",
+			"eng": "Scovillain",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 952,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"rellor": {
+		"names": {
+			"ger": "",
+			"eng": "Rellor",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 953,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"rabsca": {
+		"names": {
+			"ger": "",
+			"eng": "Rabsca",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 954,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"flittle": {
+		"names": {
+			"ger": "",
+			"eng": "Flittle",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 955,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"espathra": {
+		"names": {
+			"ger": "",
+			"eng": "Espathra",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 956,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"tinkatink": {
+		"names": {
+			"ger": "",
+			"eng": "Tinkatink",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "female",
+		"natdex": 957,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"tinkatuff": {
+		"names": {
+			"ger": "",
+			"eng": "Tinkatuff",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "female",
+		"natdex": 958,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"tinkaton": {
+		"names": {
+			"ger": "",
+			"eng": "Tinkaton",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "female",
+		"natdex": 959,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"wiglett": {
+		"names": {
+			"ger": "",
+			"eng": "Wiglett",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 960,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"wugtrio": {
+		"names": {
+			"ger": "",
+			"eng": "Wugtrio",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 961,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"bombirdier": {
+		"names": {
+			"ger": "",
+			"eng": "Bombirdier",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 962,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"finizen": {
+		"names": {
+			"ger": "",
+			"eng": "Finizen",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 963,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"palafin": {
+		"names": {
+			"ger": "",
+			"eng": "Palafin",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 964,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"varoom": {
+		"names": {
+			"ger": "",
+			"eng": "Varoom",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 965,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"revavroom": {
+		"names": {
+			"ger": "",
+			"eng": "Revavroom",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 966,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"cyclizar": {
+		"names": {
+			"ger": "",
+			"eng": "Cyclizar",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 967,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"orthworm": {
+		"names": {
+			"ger": "",
+			"eng": "Orthworm",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 968,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"glimmet": {
+		"names": {
+			"ger": "",
+			"eng": "Glimmet",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 969,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"glimmora": {
+		"names": {
+			"ger": "",
+			"eng": "Glimmora",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 970,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"greavard": {
+		"names": {
+			"ger": "",
+			"eng": "Greavard",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 971,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"houndstone": {
+		"names": {
+			"ger": "",
+			"eng": "Houndstone",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 972,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"flamigo": {
+		"names": {
+			"ger": "",
+			"eng": "Flamigo",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 973,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"cetoddle": {
+		"names": {
+			"ger": "",
+			"eng": "Cetoddle",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 974,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"cetitan": {
+		"names": {
+			"ger": "",
+			"eng": "Cetitan",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 975,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"veluza": {
+		"names": {
+			"ger": "",
+			"eng": "Veluza",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 976,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"dondozo": {
+		"names": {
+			"ger": "",
+			"eng": "Dondozo",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 977,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"tatsugiri-droopy": {
+		"data-source": "tatsugiri",
+		"forms": {
+			"ger": "",
+			"eng": "Droopy Form",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"tatsugiri-stretchy": {
+		"data-source": "tatsugiri",
+		"forms": {
+			"ger": "",
+			"eng": "Stretchy Form",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"tatsugiri": {
+		"names": {
+			"ger": "",
+			"eng": "Tatsugiri",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"forms": {
+			"ger": "",
+			"eng": "Curly Form",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 978,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"annihilape": {
+		"names": {
+			"ger": "",
+			"eng": "Annihilape",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 979,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"clodsire": {
+		"names": {
+			"ger": "",
+			"eng": "Clodsire",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 980,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"farigiraf": {
+		"names": {
+			"ger": "",
+			"eng": "Farigiraf",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 981,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"dudunsparce-three-segment": {
+		"data-source": "dudunsparce",
+		"forms": {
+			"ger": "",
+			"eng": "Three-Segment Form",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"sort": 2,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"dudunsparce": {
+		"names": {
+			"ger": "",
+			"eng": "Dudunsparce",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"forms": {
+			"ger": "",
+			"eng": "Two-Segment Form",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 982,
+		"sort": 1,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"kingambit": {
+		"names": {
+			"ger": "",
+			"eng": "Kingambit",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 983,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"great-tusk": {
+		"names": {
+			"ger": "",
+			"eng": "Great Tusk",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 984,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"scream-tail": {
+		"names": {
+			"ger": "",
+			"eng": "Scream Tail",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 985,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"brute-bonnet": {
+		"names": {
+			"ger": "",
+			"eng": "Brute Bonnet",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 986,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"flutter-mane": {
+		"names": {
+			"ger": "",
+			"eng": "Flutter Mane",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 987,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"slither-wing": {
+		"names": {
+			"ger": "",
+			"eng": "Slither Wing",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 988,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"sandy-shocks": {
+		"names": {
+			"ger": "",
+			"eng": "Sandy Shocks",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 989,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"iron-treads": {
+		"names": {
+			"ger": "",
+			"eng": "Iron Treads",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 990,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"iron-bundle": {
+		"names": {
+			"ger": "",
+			"eng": "Iron Bundle",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 991,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"iron-hands": {
+		"names": {
+			"ger": "",
+			"eng": "Iron Hands",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "",
+		"natdex": 992,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"iron-jugulis": {
+		"names": {
+			"ger": "",
+			"eng": "Iron Jugulis",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 993,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"iron-moth": {
+		"names": {
+			"ger": "",
+			"eng": "Iron Moth",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 994,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"iron-thorns": {
+		"names": {
+			"ger": "",
+			"eng": "Iron Thorns",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 995,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"frigibax": {
+		"names": {
+			"ger": "",
+			"eng": "Frigibax",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 996,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"arctibax": {
+		"names": {
+			"ger": "",
+			"eng": "Arctibax",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 997,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"baxcalibur": {
+		"names": {
+			"ger": "",
+			"eng": "Baxcalibur",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "both",
+		"natdex": 998,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"gimmighoul-roaming": {
+		"data-source": "gimmighoul",
+		"forms": {
+			"ger": "",
+			"eng": "Roaming Form",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"gimmighoul": {
+		"names": {
+			"ger": "",
+			"eng": "Gimmighoul",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"forms": {
+			"ger": "",
+			"eng": "Chest Form",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 999,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"gholdengo": {
+		"names": {
+			"ger": "",
+			"eng": "Gholdengo",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 1000,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"wo-chien": {
+		"names": {
+			"ger": "",
+			"eng": "Wo-Chien",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 1001,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"chien-pao": {
+		"names": {
+			"ger": "",
+			"eng": "Chien-Pao",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 1002,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"ting-lu": {
+		"names": {
+			"ger": "",
+			"eng": "Ting-Lu",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 1003,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"chi-yu": {
+		"names": {
+			"ger": "",
+			"eng": "Chi-Yu",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 1004,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"roaring-moon": {
+		"names": {
+			"ger": "",
+			"eng": "Roaring Moon",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 1005,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"iron-valiant": {
+		"names": {
+			"ger": "",
+			"eng": "Iron Valiant",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 1006,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"koraidon": {
+		"names": {
+			"ger": "",
+			"eng": "Koraidon",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 1007,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"miraidon": {
+		"names": {
+			"ger": "",
+			"eng": "Miraidon",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"gender": "unknown",
+		"natdex": 1008,
+		"games": [
+			"scar",
+			"vio"
 		]
 	}
 }

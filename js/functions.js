@@ -1,9 +1,14 @@
-function getData(dex, field){
+function getData(dex, field, search = false){
 	var thisPkmn = pokemon[dex];
 	if(pokemon[dex]){
 		var data = thisPkmn[field];
-		if(data === undefined){
-			data = pokemon[thisPkmn["data-source"]][field];
+		if(typeof data === "undefined"){
+			if(!search && thisPkmn["data-source"]){
+				thisPkmn = pokemon[thisPkmn["data-source"]];
+				data = thisPkmn[field];
+			} else {
+				data = false;
+			}
 		}
 		return data;
 	} else {
@@ -301,11 +306,7 @@ function addRow(pkmn, i){
 		var namelang = pkmn.lang;
 		if(!namelang) namelang = "ENG";
 		namelang = namelang.toLowerCase();
-		if(pokemon[pkmn.dex]["names"]){
-			name = pokemon[pkmn.dex]["names"][namelang];
-		} else {
-			name = pokmon[pokemon[pkmn.dex]["data-source"]]["names"][namelang];
-		}
+		name = getData(pkmn.dex, "names")[namelang];
 	}
 
 	$("#pokemon-list").append("<div class='pokemon-list-entry' pokemon='" + i + "'><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png'><span class='pokemon-list-name'>" + name + "</span>" + gender + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + "</div><div class='pokemon-list-entry-footer-right'><img class='pokemon-list-edit' src='img/ui/edit.png' onclick='editPkmn("+i+")' title='Edit " + name + "'><img class='pokemon-list-delete' src='img/ui/delete.png' onclick='deletePkmn("+i+")' title='Delete " + name + "'></div></div></div>");
@@ -421,10 +422,7 @@ $(function(){
 	var plmax = Object.keys(pokemon).length;
 	for(var p in pokemon){
 		pl++;
-		var natdex = pokemon[p]["natdex"];
-		if(!natdex){
-			natdex = pokemon[pokemon[p]["data-source"]]["natdex"];
-		}
+		var natdex = getData(p, "natdex");
 		var natgen = "IX";
 		if(natdex < 152){
 			natgen = "I";
@@ -443,26 +441,27 @@ $(function(){
 		} else if(natdex < 906){
 			natgen = "VIII";
 		}
-		var names = "";
-		if(pokemon[p]["names"]){
-			names = pokemon[p]["names"]["eng"];
+		var names = getData(p, "names");
+		var forms = getData(p, "forms");
+		if(!forms){
+			forms = getData(p, "forms-all");
+			if(!forms){
+				var formsrc = getData(p, "form-source");
+				if(formsrc){
+					forms = commonforms[formsrc];
+				}
+			}
+		}
+		if(forms){
+			forms = " (" + forms["eng"] + ")";
 		} else {
-			names = pokemon[pokemon[p]["data-source"]]["names"]["eng"];
+			forms = "";
 		}
-		var forms = "";
-		if(pokemon[p]["forms"]){
-			forms = pokemon[p]["forms"]["eng"];
-		} else if(pokemon[p]["form-source"]){
-			forms = commonforms[pokemon[p]["form-source"]]["eng"];
-		} else if(pokemon[p]["forms-all"]){
-			forms = pokemon[p]["forms-all"];
+		var sort = getData(p, "sort", true);
+		if(sort){
+			sort = " sort='" + sort + "''";
 		}
-		if(forms.length) forms = " (" + forms + ")";
-		var sort = "";
-		if(pokemon[p]["sort"]){
-			sort = " sort='" + pokemon[p]["sort"] + "''";
-		}
-		$("#pokeform-species-" + natgen).append("<option value='" + p + "' natdex='" + natdex + "'" + sort + ">" + names + forms + "</option>");
+		$("#pokeform-species-" + natgen).append("<option value='" + p + "' natdex='" + natdex + "'" + sort + ">" + names["eng"] + forms + "</option>");
 		if(pl === plmax){
 			var dexSort = function(a, b){
 				if(a.getAttribute("natdex") === b.getAttribute("natdex")){
