@@ -580,7 +580,7 @@ $(function(){
 			$(this).addClass("changelog-active");
 		}
 	});
-	$("#pokeform-tabs span").click(function(){
+	$("#pokeform-tabs img").click(function(){
 		if(!$(this).hasClass("pokeform-tabs-active")){
 			var targetTab = $(this).attr("class").replace("-ctrl", "");
 			$(".pokeform-tabs-active").removeClass("pokeform-tabs-active");

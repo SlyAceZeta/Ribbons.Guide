@@ -71,14 +71,22 @@ body {
 #pokeform-tabs div {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
-#pokeform-tabs span {
+#pokeform-tabs img {
 	cursor: pointer;
-	padding: 5px 10px;
+	margin: 5px;
+	filter: grayscale(1) brightness(1);
+	width: 40px;
+	height: 40px;
+}
+#pokeform-tabs img[src*=".svg"] {
+	width: 35px;
+	height: 35px;
 }
 #pokeform-tabs .pokeform-tabs-active {
-	background: grey;
-	color: #000;
+	filter: none;
 }
 #pokeform tr:not(#pokeform-tabs):not(.pokeform-tab1) {
 	display: none;
