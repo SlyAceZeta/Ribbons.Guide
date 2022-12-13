@@ -336,6 +336,35 @@ function generateRibbons(){
 	}
 }
 
+function customMatcher(params, data){
+	// fallback
+	if($.trim(params.term) === ""){
+		return data;
+	}
+    if(typeof data.text === "undefined"){
+		return null;
+    }
+
+	// actual code
+	var filteredChildren = [];
+	$.each(data.children, function(idx, child){
+		for(var ced in child.element.dataset){
+			if(child.element.dataset[ced].toUpperCase().indexOf(params.term.toUpperCase()) > -1){
+				filteredChildren.push(child);
+				break;
+			}
+		}
+	});
+	if(filteredChildren.length){
+		var modifiedData = $.extend({}, data, true);
+		modifiedData.children = filteredChildren;
+		return modifiedData;
+	}
+
+	// fallback
+	return null;
+}
+
 function formatDropOption(o){
 	var result = o._resultId || o.text;
 	if(result.indexOf("pokeform-ball") > 0){
@@ -359,6 +388,23 @@ function formatDropOption(o){
 		var rDir = "ribbons";
 		if(o.id.indexOf("-mark") > 0) rDir = "marks";
 		return $("<img src='img/" + rDir + "/" + o.id + ".png' class='pokedropimg'><span>" + o.text + "</span>");
+	} else if(result.indexOf("pokeform-species") > 0){
+		if(o.id){
+			var names = "", lang = "";
+			for(var oed in o.element.dataset){
+				if(oed.indexOf("name") == 0){
+					lang = oed.substring(4);
+					var form = "";
+					if(o.element.dataset["form" + lang]){
+						form = " (" + o.element.dataset["form" + lang] + ")";
+					}
+					names = names + "<span class='lang " + lang.toLowerCase() + "'>" + o.element.dataset["name" + lang] + form + "</span>";
+				}
+			}
+			return $("" + names);
+		} else {
+			return o.text;
+		}
 	} else {
 		return o.text;
 	}
@@ -371,7 +417,17 @@ $(function(){
 	$.modal.defaults.escapeClose = false;
 	$.modal.defaults.showClose = false;
 	resetForm();
-	$("#pokeform select").select2({
+	// TODO language support
+	$("#pokeform-ball, #pokeform-origin, #pokeform-currentgame, #pokeform-mint, #pokeform-ability, #pokeform-nature, #pokeform-characteristic, #pokeform-title").select2({
+		templateSelection: formatDropOption,
+		templateResult: formatDropOption,
+		dropdownParent: $("#pokeform"),
+		width: "100%",
+    	placeholder: "Select an option"
+	});
+	// DONE language support
+	$("#pokeform-species").select2({
+		matcher: customMatcher,
 		templateSelection: formatDropOption,
 		templateResult: formatDropOption,
 		dropdownParent: $("#pokeform"),
@@ -442,7 +498,13 @@ $(function(){
 			natgen = "VIII";
 		}
 		var names = getData(p, "names");
+		var namedata = "";
+		for(var pn in names){
+			namedata = namedata + " data-name-" + pn + "='" + names[pn] + "'";
+		}
 		var forms = getData(p, "forms");
+		var formdata = "";
+		var formdisp = "";
 		if(!forms){
 			forms = getData(p, "forms-all");
 			if(!forms){
@@ -453,25 +515,28 @@ $(function(){
 			}
 		}
 		if(forms){
-			forms = " (" + forms["eng"] + ")";
-		} else {
-			forms = "";
+			for(var pf in forms){
+				formdata = formdata + " data-form-" + pf + "='" + forms[pf] + "'";
+			}
+			formdisp = " (" + forms["eng"] + ")";
 		}
 		var sort = getData(p, "sort", true);
 		if(sort){
-			sort = " sort='" + sort + "''";
+			sort = " data-sort='" + sort + "'";
+		} else {
+			sort = "";
 		}
-		$("#pokeform-species-" + natgen).append("<option value='" + p + "' natdex='" + natdex + "'" + sort + ">" + names["eng"] + forms + "</option>");
+		$("#pokeform-species-" + natgen).append("<option value='" + p + "' data-natdex='" + natdex + "'" + sort + namedata + formdata + ">" + names["eng"] + formdisp + "</option>");
 		if(pl === plmax){
 			var dexSort = function(a, b){
-				if(a.getAttribute("natdex") === b.getAttribute("natdex")){
-					if(a.getAttribute("sort") && b.getAttribute("sort")){
-						return a.getAttribute("sort") - b.getAttribute("sort");
+				if(a.dataset.natdex === b.dataset.natdex){
+					if(a.dataset.sort && b.dataset.sort){
+						return a.dataset.sort - b.dataset.sort;
 					} else {
 						return a.innerHTML.toLowerCase().localeCompare(b.innerHTML.toLowerCase());
 					}
 				} else {
-					return a.getAttribute("natdex") - b.getAttribute("natdex");
+					return a.dataset.natdex - b.dataset.natdex;
 				}
 			}
 			$("#pokeform-species optgroup").each(function(){

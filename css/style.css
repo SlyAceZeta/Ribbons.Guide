@@ -819,3 +819,34 @@ footer {
 .pokeform-stats input {
 	width: 60px;
 }
+
+.lang {
+	display: none;
+}
+body[lang="ger"] .lang.ger {
+	display: block;
+}
+body[lang="eng"] .lang.eng {
+	display: block;
+}
+body[lang="spa"] .lang.spa {
+	display: block;
+}
+body[lang="fre"] .lang.fre {
+	display: block;
+}
+body[lang="ita"] .lang.ita {
+	display: block;
+}
+body[lang="jpn"] .lang.jpn {
+	display: block;
+}
+body[lang="kor"] .lang.kor {
+	display: block;
+}
+body[lang="cht"] .lang.cht {
+	display: block;
+}
+body[lang="chs"] .lang.chs {
+	display: block;
+}
