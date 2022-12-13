@@ -180,7 +180,6 @@ header {
 	vertical-align: middle;
 }
 #header-settings {
-	filter: invert(1);
 	height: 32px;
 	cursor: pointer;
 }
@@ -677,7 +676,6 @@ footer {
 }
 #add-pokemon-button img {
 	width: 32px;
-	filter: invert(1);
 }
 @media only screen and (min-width: 768px) {
 	.pokemon-list-entry {
@@ -685,7 +683,7 @@ footer {
 		margin: 10px 1% 10px 0;
 	}
 	#add-pokemon-button {
-		bottom: 60px;
+		bottom: 50px;
 	}
 	#pokemon-list {
 		margin-bottom: 110px;
@@ -738,7 +736,6 @@ footer {
 .pokemon-list-details {
 	margin-left: 10px;
 	vertical-align: middle;
-	filter: invert(1);
 	cursor: pointer;
 }
 .pokemon-list-name {

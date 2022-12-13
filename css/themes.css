@@ -22,20 +22,16 @@ body.theme-light {
 	--modal-link: #38578e;
 	--pokemon-header: #bbb;
 }
-.theme-light .pokemon-list-origin {
-	filter: invert(1);
-}
 .theme-light .pokemon-list-entry .shiny {
 	filter: brightness(200%);
 }
 .theme-light .pokemon-list-edit,
 .theme-light .pokemon-list-delete,
 .theme-light .pokemon-list-details,
+.theme-light #header-settings,
+.theme-light .pokemon-list-origin,
 .theme-light #add-pokemon-button img {
-	filter: none;
-}
-.theme-light #header-settings {
-	filter: none;
+	filter: invert(1);
 }
 
 /* Naranja Academy */

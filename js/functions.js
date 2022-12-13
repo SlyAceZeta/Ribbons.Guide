@@ -309,7 +309,7 @@ function addRow(pkmn, i){
 		name = getData(pkmn.dex, "names")[namelang];
 	}
 
-	$("#pokemon-list").append("<div class='pokemon-list-entry' pokemon='" + i + "'><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png'><span class='pokemon-list-name'>" + name + "</span>" + gender + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + "</div><div class='pokemon-list-entry-footer-right'><img class='pokemon-list-edit' src='img/ui/edit.png' onclick='editPkmn("+i+")' title='Edit " + name + "'><img class='pokemon-list-delete' src='img/ui/delete.png' onclick='deletePkmn("+i+")' title='Delete " + name + "'></div></div></div>");
+	$("#pokemon-list").append("<div class='pokemon-list-entry' pokemon='" + i + "'><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png'><span class='pokemon-list-name'>" + name + "</span>" + gender + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + "</div><div class='pokemon-list-entry-footer-right'><img class='pokemon-list-edit' src='img/ui/edit.svg' onclick='editPkmn("+i+")' title='Edit " + name + "'><img class='pokemon-list-delete' src='img/ui/delete.svg' onclick='deletePkmn("+i+")' title='Delete " + name + "'></div></div></div>");
 }
 
 function generateRibbons(){
@@ -351,7 +351,7 @@ function formatDropOption(o){
 		if(mark){
 			$origin = $("<img src='img/origins/" + mark + ".png' class='pokedropimg origininvert'><span>" + o.text + "</span>");
 		} else {
-			$origin = $("<img src='img/ui/1x1.png' class='pokedropimg'><span>" + o.text + "</span>");
+			$origin = $("<img src='img/ui/1x1.svg' class='pokedropimg'><span>" + o.text + "</span>");
 		}
 		return $origin;
 	} else if(result.indexOf("pokeform-title") > 0){
