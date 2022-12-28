@@ -1,3 +1,6 @@
+html {
+	min-height: 100%;
+}
 body {
 	font-family: "Nunito Sans", sans-serif;
 	font-size: 12pt;
@@ -99,7 +102,7 @@ body {
 .pokedropimg.origininvert {
 	filter: invert(0.6);
 }
-.pokedropimg + span {
+.pokedropimg ~ span {
 	padding-left: 5px;
 	vertical-align: middle;
 }
@@ -820,33 +823,33 @@ footer {
 	width: 60px;
 }
 
-.lang {
+span.lang {
 	display: none;
 }
-body[lang="ger"] .lang.ger {
-	display: block;
+body[lang="ger"] span.lang.ger {
+	display: inline-block;
 }
-body[lang="eng"] .lang.eng {
-	display: block;
+body[lang="eng"] span.lang.eng {
+	display: inline-block;
 }
-body[lang="spa"] .lang.spa {
-	display: block;
+body[lang="spa"] span.lang.spa {
+	display: inline-block;
 }
-body[lang="fre"] .lang.fre {
-	display: block;
+body[lang="fre"] span.lang.fre {
+	display: inline-block;
 }
-body[lang="ita"] .lang.ita {
-	display: block;
+body[lang="ita"] span.lang.ita {
+	display: inline-block;
 }
-body[lang="jpn"] .lang.jpn {
-	display: block;
+body[lang="jpn"] span.lang.jpn {
+	display: inline-block;
 }
-body[lang="kor"] .lang.kor {
-	display: block;
+body[lang="kor"] span.lang.kor {
+	display: inline-block;
 }
-body[lang="cht"] .lang.cht {
-	display: block;
+body[lang="cht"] span.lang.cht {
+	display: inline-block;
 }
-body[lang="chs"] .lang.chs {
-	display: block;
+body[lang="chs"] span.lang.chs {
+	display: inline-block;
 }

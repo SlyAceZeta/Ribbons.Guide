@@ -11,6 +11,32 @@ const languages = {
 	"chs": "简化字"			// Simplified Chinese (Mandarin)
 }
 
+// General terms
+const terms = {
+	"mint": {
+		"ger": "Minze",
+		"eng": "Mint",
+		"spa": "Menta",
+		"fre": "Aromate",
+		"ita": "Menta",
+		"jpn": "ミント",
+		"kor": "민트",
+		"cht": "薄荷",
+		"chs": "薄荷"
+	},
+	"none": {
+		"ger": "Keiner",
+		"eng": "None",
+		"spa": "Ninguna",
+		"fre": "Aucune",
+		"ita": "Nessuno",
+		"jpn": "なし",
+		"kor": "없음",
+		"cht": "沒有任何",
+		"chs": "没有任何"
+	}
+}
+
 // Origin Marks
 const games = {
 	"home":		{"name": "HOME",				"gen": null,	"mark": null},
@@ -60,31 +86,36 @@ const games = {
 	"yellow":	{"name": "Yellow",				"gen": 1,		"mark": "game-boy"}
 };
 
-// Mint sprites
-const mints = {
-	"Lonely":	"atk",
-	"Adamant":	"atk",
-	"Naughty":	"atk",
-	"Brave":	"atk",
-	"Bold":		"def",
-	"Impish":	"def",
-	"Lax":		"def",
-	"Relaxed":	"def",
-	"Modest":	"spa",
-	"Mild": 	"spa",
-	"Rash":		"spa",
-	"Quiet":	"spa",
-	"Calm":		"spd",
-	"Gentle":	"spd",
-	"Careful":	"spd",
-	"Sassy":	"spd",
-	"Timid":	"spe",
-	"Hasty":	"spe",
-	"Jolly":	"spe",
-	"Naive":	"spe",
-	"Serious":	"neutral"
+// Natures
+const natures = {
+	"Lonely": {		"index":  1, "img": "atk",	"names": { "ger": "Solo",		"eng": "Lonely",	"spa": "Huraña",	"fre": "Solo",		"ita": "Schiva",	"jpn": "さみしがり", "kor": "외로움", "cht": "怕寂寞", "chs": "怕寂寞"}},
+	"Adamant": {	"index":  3, "img": "atk",	"names": { "ger": "Hart",		"eng": "Adamant",	"spa": "Firme",		"fre": "Rigide",	"ita": "Decisa",	"jpn": "いじっぱり", "kor": "고집", "cht": "固執", "chs": "固执"}},
+	"Naughty": {	"index":  4, "img": "atk",	"names": { "ger": "Frech",		"eng": "Naughty",	"spa": "Pícara",	"fre": "Mauvais",	"ita": "Birbona",	"jpn": "やんちゃ", "kor": "개구쟁이", "cht": "頑皮", "chs": "顽皮"}},
+	"Brave": {		"index":  2, "img": "atk",	"names": { "ger": "Mutig",		"eng": "Brave",		"spa": "Audaz",		"fre": "Brave",		"ita": "Audace",	"jpn": "ゆうかん", "kor": "용감", "cht": "勇敢", "chs": "勇敢"}},
+	"Bold": {		"index":  5, "img": "def",	"names": { "ger": "Kühn",		"eng": "Bold",		"spa": "Osada",		"fre": "Assuré",	"ita": "Sicura",	"jpn": "ずぶとい", "kor": "대담", "cht": "大膽", "chs": "大胆"}},
+	"Impish": {		"index":  8, "img": "def",	"names": { "ger": "Pfiffig",	"eng": "Impish",	"spa": "Agitada",	"fre": "Malin",		"ita": "Scaltra",	"jpn": "わんぱく", "kor": "장난꾸러기", "cht": "淘氣", "chs": "淘气"}},
+	"Lax": {		"index":  9, "img": "def",	"names": { "ger": "Lasch",		"eng": "Lax",		"spa": "Floja",		"fre": "Lâche",		"ita": "Fiacca",	"jpn": "のうてんき", "kor": "촐랑", "cht": "樂天", "chs": "乐天"}},
+	"Relaxed": {	"index":  7, "img": "def",	"names": { "ger": "Locker",		"eng": "Relaxed",	"spa": "Plácida",	"fre": "Relax",		"ita": "Placida",	"jpn": "のんき", "kor": "무사태평", "cht": "悠閒", "chs": "悠闲"}},
+	"Modest": {		"index": 15, "img": "spa",	"names": { "ger": "Mäßig",		"eng": "Modest",	"spa": "Modesta",	"fre": "Modeste",	"ita": "Modesta",	"jpn": "ひかえめ", "kor": "조심", "cht": "內斂", "chs": "内敛"}},
+	"Mild": {		"index": 16, "img": "spa",	"names": { "ger": "Mild",		"eng": "Mild",		"spa": "Afable",	"fre": "Doux",		"ita": "Mite",		"jpn": "おっとり", "kor": "의젓", "cht": "慢吞吞", "chs": "慢吞吞"}},
+	"Rash": {		"index": 19, "img": "spa",	"names": { "ger": "Hitzig",		"eng": "Rash",		"spa": "Alocada",	"fre": "Foufou",	"ita": "Ardente",	"jpn": "うっかりや", "kor": "덜렁", "cht": "馬虎", "chs": "马虎"}},
+	"Quiet": {		"index": 17, "img": "spa",	"names": { "ger": "Ruhig",		"eng": "Quiet",		"spa": "Mansa",		"fre": "Discret",	"ita": "Quieta",	"jpn": "れいせい", "kor": "냉정", "cht": "冷靜", "chs": "冷静"}},
+	"Calm": {		"index": 20, "img": "spd",	"names": { "ger": "Still",		"eng": "Calm",		"spa": "Serena",	"fre": "Calme",		"ita": "Calma",		"jpn": "おだやか", "kor": "차분", "cht": "溫和", "chs": "温和"}},
+	"Gentle": {		"index": 21, "img": "spd",	"names": { "ger": "Zart",		"eng": "Gentle",	"spa": "Amable",	"fre": "Gentil",	"ita": "Gentile",	"jpn": "おとなしい", "kor": "얌전", "cht": "溫順", "chs": "温顺"}},
+	"Careful": {	"index": 23, "img": "spd",	"names": { "ger": "Sacht",		"eng": "Careful",	"spa": "Cauta",		"fre": "Prudent",	"ita": "Cauta",		"jpn": "しんちょう", "kor": "신중", "cht": "慎重", "chs": "慎重"}},
+	"Sassy": {		"index": 22, "img": "spd",	"names": { "ger": "Forsch",		"eng": "Sassy",		"spa": "Grosera",	"fre": "Malpoli",	"ita": "Vivace",	"jpn": "なまいき", "kor": "건방", "cht": "自大", "chs": "自大"}},
+	"Timid": {		"index": 10, "img": "spe",	"names": { "ger": "Scheu",		"eng": "Timid",		"spa": "Miedosa",	"fre": "Timide",	"ita": "Timida",	"jpn": "おくびょう", "kor": "겁쟁이", "cht": "膽小", "chs": "胆小"}},
+	"Hasty": {		"index": 11, "img": "spe",	"names": { "ger": "Hastig",		"eng": "Hasty",		"spa": "Activa",	"fre": "Pressé",	"ita": "Lesta",		"jpn": "せっかち", "kor": "성급", "cht": "急躁", "chs": "急躁"}},
+	"Jolly": {		"index": 13, "img": "spe",	"names": { "ger": "Froh",		"eng": "Jolly",		"spa": "Alegre",	"fre": "Jovial",	"ita": "Allegra",	"jpn": "ようき", "kor": "명랑", "cht": "爽朗", "chs": "爽朗"}},
+	"Naive": {		"index": 14, "img": "spe",	"names": { "ger": "Naiv",		"eng": "Naive",		"spa": "Ingenua",	"fre": "Naïf",		"ita": "Ingenua",	"jpn": "むじゃき", "kor": "천진난만", "cht": "天真", "chs": "天真"}},
+	"Serious": {	"index": 12, "img": "neu",	"names": { "ger": "Ernst",		"eng": "Serious",	"spa": "Seria",		"fre": "Sérieux",	"ita": "Seria",		"jpn": "まじめ", "kor": "성실", "cht": "認真", "chs": "认真"}},
+	"Hardy": {		"index":  0,				"names": { "ger": "Robust",		"eng": "Hardy",		"spa": "Fuerte",	"fre": "Hardi",		"ita": "Ardita",	"jpn": "がんばりや", "kor": "노력", "cht": "勤奮", "chs": "勤奋"}},
+	"Docile": {		"index":  6,				"names": { "ger": "Sanft",		"eng": "Docile",	"spa": "Dócil",		"fre": "Docile",	"ita": "Docile",	"jpn": "すなお", "kor": "온순", "cht": "坦率", "chs": "坦率"}},
+	"Bashful": {	"index": 18,				"names": { "ger": "Zaghaft",	"eng": "Bashful",	"spa": "Tímida",	"fre": "Pudique",	"ita": "Ritrosa",	"jpn": "てれや", "kor": "수줍음", "cht": "害羞", "chs": "害羞"}},
+	"Quirky": {		"index": 24,				"names": { "ger": "Kauzig",		"eng": "Quirky",	"spa": "Rara",		"fre": "Bizarre",	"ita": "Furba",		"jpn": "きまぐれ", "kor": "변덕", "cht": "浮躁", "chs": "浮躁"}}
 }
 
+// Poké Balls
 const balls = {
 	"poke": {	"ger": "Pokéball",		"eng": "Poké Ball",		"spa": "Poké Ball",		"fre": "Poké Ball",		"ita": "Poké Ball",		"jpn": "モンスターボール", "kor": "몬스터볼", "cht": "精靈球", "chs": "精灵球"},
 	"great": {	"ger": "Superball",		"eng": "Great Ball",	"spa": "Superball",		"fre": "Super Ball",	"ita": "Mega Ball",		"jpn": "スーパーボール", "kor": "수퍼볼", "cht": "超級球", "chs": "超级球"},
