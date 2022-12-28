@@ -175,6 +175,7 @@ function resetForm(){
 	$("#pokeform-add, #pokeform-header-add").show();
 	$("#pokeform-edit").hide().removeAttr("pokemon");
 	$("#pokeform-header-edit").hide();
+	$("#pokeform-preview img").attr("src", "img/ui/1x1.svg");
 }
 
 function confirmFormClose(){
@@ -421,6 +422,15 @@ function formatDropOption(o){
 	}
 }
 
+function showPreview(){
+	if($("#pokeform-species").val()){
+		var poke = $("#pokeform-species").val();
+		var shinyDir = $("#pokeform-shiny-checkbox").prop("checked") ? "shiny/" : "regular/";
+		var femaleDir = (getData(poke, "femsprite") && $("#pokeform-gender-checkbox").prop("checked")) ? "female/" : "";
+		$("#pokeform-preview img").attr("src", "img/pkmn/" + shinyDir + femaleDir + poke + ".png");
+	}
+}
+
 // On load
 $(function(){
 	// Set modal defaults
@@ -622,6 +632,7 @@ $(function(){
 				$("#pokeform-gender-checkbox").prop("disabled", false);
 			}
 		}
+		showPreview();
 	});
 
 	// Display all Pokémon
@@ -694,6 +705,9 @@ $(function(){
 	$("#pokeform-cancel").click(function(){
 		confirmFormClose();
 	});
+	$("#pokeform-shiny-checkbox, #pokeform-gender-checkbox").change(function(){
+		showPreview();
+	})
 	$("#settings-close, #changelog-close").click(function(){
 		$.modal.close();
 	});

@@ -50,7 +50,8 @@ body {
 	right: 1px;
 	color: red;
 }
-.modal td {
+.modal td,
+.modal #pokeform-gender td:last-child {
 	padding: 10px;
 	text-align: left;
 	border: solid grey;
@@ -778,6 +779,13 @@ footer {
 .pokemon-list-entry-center > img {
 	height: 100px;
 	width: auto;
+}
+#pokeform-preview {
+	width: 88px;
+}
+#pokeform-preview img {
+	width: 68px;
+	height: auto;
 }
 #pokemon-list-empty,
 .ribbons-list-empty {
