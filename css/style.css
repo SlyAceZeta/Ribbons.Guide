@@ -70,6 +70,9 @@ body {
 }
 .modal #all-ribbons {
 	padding: 5px 10px;
+	min-height: 150px;
+	max-height: 50vh;
+	overflow-y: auto;
 }
 #pokeform-tabs div {
 	display: flex;
@@ -284,41 +287,33 @@ footer {
 	resize: none;
 }
 
-.mint.atk:before {
-	background-image: url("../img/mints/atk.png");
-}
-.mint.def:before {
-	background-image: url("../img/mints/def.png");
-}
-.mint.spa:before {
-	background-image: url("../img/mints/spa.png");
-}
-.mint.spd:before {
-	background-image: url("../img/mints/spd.png");
-}
-.mint.spe:before {
-	background-image: url("../img/mints/spe.png");
-}
-.mint.neutral:before {
-	background-image: url("../img/mints/neutral.png");
-}
-
 #all-ribbons img {
-	filter: grayscale(100%);
-	opacity: 0.1;
 	cursor: pointer;
 }
-#all-ribbons img:hover {
-	opacity: 0.5;
-	filter: grayscale(50%);
-}
 #all-ribbons img.disabled {
-	filter: blur(5) grayscale(100%);
+	filter: blur(5px) grayscale(100%);
 	cursor: default;
 }
 #all-ribbons input:checked + label img {
-	filter: none;
-	opacity: 1;
+	opacity: 0;
+}
+#all-ribbons input + label {
+	position: relative;
+}
+#all-ribbons input:checked + label:after {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	width: 44px;
+	height: 44px;
+	background: url("../img/ui/check.svg") center center no-repeat;
+	background-size: cover;
+	cursor: pointer;
+}
+#all-ribbons input:checked + label:hover img,
+#all-ribbons input:checked + label:hover:after {
+	opacity: 0.5;
 }
 .ribbons-gen {
 	text-align: left;

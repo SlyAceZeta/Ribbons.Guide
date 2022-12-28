@@ -655,7 +655,13 @@ $(function(){
 		}
 	});
 	var theme = localStorage.getItem("theme");
-	if(!theme) theme = "start";
+	if(!theme){
+		if(window.matchMedia("(prefers-color-scheme: light)").matches){
+			theme = "light";
+		} else {
+			theme = "start";
+		}
+	}
 	$("#settings-theme").val(theme).change();
 
 	// Form events
