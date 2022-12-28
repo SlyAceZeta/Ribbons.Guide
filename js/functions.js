@@ -655,7 +655,7 @@ $(function(){
 		}
 	});
 	var theme = localStorage.getItem("theme");
-	if(!theme) theme = "naranja";
+	if(!theme) theme = "start";
 	$("#settings-theme").val(theme).change();
 
 	// Form events

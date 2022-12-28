@@ -671,6 +671,8 @@ footer {
 	border-radius: 5px;
 	width: 100%;
 	margin: 10px auto;
+	box-shadow: none;
+	transition: all 0.33s;
 }
 #add-pokemon-button {
 	position: fixed;
@@ -775,7 +777,7 @@ footer {
 }
 .pokemon-list-entry-center {
 	display: flex;
-	height: calc(100% - 72px);
+	height: calc(100% - 68px);
 	align-items: center;
 }
 .pokemon-list-entry-center > img {

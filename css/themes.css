@@ -1,11 +1,48 @@
-/* Classic Dark by default */
+/* Start Menu by default */
 :root {
+	--header-bg: #112028;
+	--header-border: #f7cd12;
+	--header-link: #91AAD6;
+	--page-bg: linear-gradient(#111e34, #243a5b);
+	--modal-center-bg: #1f2f45;
+	--text: #fff;
+	--pokemon: #1f2f45;
+}
+
+/* Classic Dark */
+body.theme-dark {
 	--header-bg: #333;
 	--header-border: #222;
-	--header-link: #7f9ccf;
+	--header-link: #96ADD7;
 	--page-bg: #121212;
+	--modal-center-bg: #121212;
 	--text: #fff;
 	--pokemon: #555;
+}
+
+/* Naranja/Uva Academy */
+body.theme-naranja,
+body.theme-uva {
+	--header-border: #f7cd12;
+	--header-link: #fff;
+	--page-bg: linear-gradient(225deg, #001e4f, #0058ba);
+	--text: #fff;
+	--pokemon: #002c67;
+	--pokemon-header: #081d3c;
+
+	--modal-bg: #081d3c;
+	--modal-center-bg: #002c67;
+	--label-text: #fcd821;
+}
+
+/* Naranja Academy */
+body.theme-naranja {
+	--header-bg: #b65726;
+}
+
+/* Uva Academy */
+body.theme-uva {
+	--header-bg: #852eb0;
 }
 
 /* Classic Light */
@@ -18,6 +55,7 @@ body.theme-light {
 	--pokemon: #eee;
 
 	--modal-bg: #333;
+	--modal-center-bg: #fff;
 	--modal-text: #fff;
 	--modal-link: #38578e;
 	--pokemon-header: #bbb;
@@ -33,31 +71,8 @@ body.theme-light {
 .theme-light #add-pokemon-button img {
 	filter: invert(1);
 }
-
-/* Naranja Academy */
-body.theme-naranja {
-	--header-bg: #b45924;
-	--header-border: #fccb06;
-	--header-link: #000;
-	--page-bg: #162b4a;
-	--text: #fff;
-	--pokemon: #35404b;
-
-	--modal-bg: #202d44;
-	--modal-center-bg: #2d3f52;
-}
-
-/* Uva Academy */
-body.theme-uva {
-	--header-bg: #852eb0;
-	--header-border: #b76c79;
-	--header-link: #D1D1D1;
-	--page-bg: #162b4a;
-	--text: #fff;
-	--pokemon: #35404b;
-
-	--modal-bg: #202d44;
-	--modal-center-bg: #2d3f52;
+.theme-light #pokeform-tabs .pokeform-tabs-active {
+	filter: brightness(0);
 }
 
 /* Main Event */
@@ -86,6 +101,12 @@ footer a:not(.button) {
 .modal h5 {
 	background: var(--modal-bg, var(--header-bg));
 	color: var(--modal-text, var(--text));
+}
+.modal th label {
+	color: var(--label-text, var(--text));
+}
+.pokemon-list-entry:hover {
+	box-shadow: 0 0 10px -5px var(--text);
 }
 .pokemon-list-entry-header,
 .pokemon-list-entry-footer {
