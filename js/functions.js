@@ -257,7 +257,7 @@ function gameInfo(s, o = false){
 
 function addRow(pkmn, i){
 	var shinyDir = pkmn.shiny ? "shiny/" : "regular/";
-	var shinyMark = pkmn.shiny ? "<img src='img/ui/shiny.png' class='shiny'>" : "";
+	var shinyMark = pkmn.shiny ? "<img src='img/ui/shiny.png' class='shiny' alt='Shiny' title='Shiny'>" : "";
 
 	var femaleDir = (getData(pkmn.dex, "femsprite") && pkmn.gender === "female") ? "female/" : "";
 
@@ -275,11 +275,15 @@ function addRow(pkmn, i){
 			if(rData["descs"]) rDesc = " - " + rData["descs"]["eng"];
 			var rFldr = "ribbons";
 			if(rData["mark"]) rFldr = "marks";
-			ribbons = ribbons + "<img class='" + rCode + "' src='img/" + rFldr + "/" + rCode + ".png' alt=\"" + rName + rDesc + "\" title=\"" + rName + rDesc + "\">";
+			ribbons = ribbons + "<img class='" + rCode + "' src='img/" + rFldr + "/" + rCode + ".png' alt=\"" + rName + "\" title=\"" + rName + rDesc + "\">";
 		}
 	}
 
-	var gender = (pkmn.gender !== "unknown") ? "<img src='img/gender/"+pkmn.gender+".png' class='gender'>" : "";
+	var gender = pkmn.gender, genderimg = "";
+	if(gender !== "unknown"){
+		gender = pkmn.gender.charAt(0).toUpperCase() + pkmn.gender.slice(1);
+		genderimg = "<img src='img/gender/" + pkmn.gender + ".png' class='gender' alt='" + gender + "' title='" + gender + "'>";
+	}
 
 	var origin = games[pkmn.origin]["mark"];
 	if(origin){
@@ -293,7 +297,7 @@ function addRow(pkmn, i){
 	var title = "";
 	if(titleBon !== "None"){
 		if(titleBon.indexOf("-mark") > 0) titleDir = "marks";
-		title = "<img src='img/" + titleDir + "/" + titleBon + ".png'><span>" + allRibbons[titleBon]["titles"]["eng"] + "</span>";
+		title = "<img src='img/" + titleDir + "/" + titleBon + ".png' alt='"+allRibbons[titleBon]["names"]["eng"]+"'><span>" + allRibbons[titleBon]["titles"]["eng"] + "</span>";
 	}
 
 	var lang = pkmn.lang;
@@ -309,8 +313,13 @@ function addRow(pkmn, i){
 		namelang = namelang.toLowerCase();
 		name = getData(pkmn.dex, "names")[namelang];
 	}
-
-	$("#pokemon-list").append("<div class='pokemon-list-entry' pokemon='" + i + "'><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png'><span class='pokemon-list-name'>" + name + "</span>" + gender + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + "</div><div class='pokemon-list-entry-footer-right'><img class='pokemon-list-edit' src='img/ui/edit.svg' onclick='editPkmn("+i+")' title='Edit " + name + "'><img class='pokemon-list-delete' src='img/ui/delete.svg' onclick='deletePkmn("+i+")' title='Delete " + name + "'></div></div></div>");
+	var ballName = balls[pkmn.ball];
+	if(ballName){
+		ballName = ballName["eng"];
+	} else {
+		ballName = hisuiballs[pkmn.ball]["eng"];
+	}
+	$("#pokemon-list").append("<div class='pokemon-list-entry' pokemon='" + i + "'><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png' alt='" + ballName + "' title='" + ballName + "'><span class='pokemon-list-name'>" + name + "</span>" + genderimg + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' alt='" + name + "'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + "</div><div class='pokemon-list-entry-footer-right'><img class='pokemon-list-edit' src='img/ui/edit.svg' onclick='editPkmn("+i+")' alt='Edit " + name + "' title='Edit " + name + "'><img class='pokemon-list-delete' src='img/ui/delete.svg' onclick='deletePkmn("+i+")' alt='Delete " + name + "' title='Delete " + name + "'></div></div></div>");
 }
 
 function generateRibbons(){
@@ -332,7 +341,7 @@ function generateRibbons(){
 		}
 		var rDesc = "";
 		if(rData["descs"]) rDesc = " - " + rData["descs"]["eng"];
-		$("#ribbons-list-" + rGen).append("<input id='" + r + "' type='checkbox' form='newpkmnform' hidden><label for='"+r+"'><img class='" + r + "' src='img/" + rFldr + "/" + r + ".png' alt=\"" + rData["names"]["eng"] + rDesc + "\" title=\"" + rData["names"]["eng"] + rDesc + "\"></label>");
+		$("#ribbons-list-" + rGen).append("<input id='" + r + "' type='checkbox' form='newpkmnform' hidden><label for='"+r+"'><img class='" + r + "' src='img/" + rFldr + "/" + r + ".png' alt=\"" + rData["names"]["eng"] + "\" title=\"" + rData["names"]["eng"] + rDesc + "\"></label>");
 		if(rData["titles"]) $("#pokeform-title-" + rGen).append(new Option(rData["titles"]["eng"], r));
 	}
 }

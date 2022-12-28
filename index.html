@@ -20,7 +20,7 @@
 	<body>
 		<header>
 			<div id="header-logo">
-				<img src="img/ribbons/best-friends-ribbon.png" alt="Best Friends Ribbon">
+				<img src="img/ribbons/best-friends-ribbon.png" alt="Logo">
 				<span>Ribbon Masters</span>
 			</div>
 			<img src="img/ui/gear.svg" id="header-settings" alt="Settings" title="Settings">
@@ -30,7 +30,7 @@
 				<div>You have no saved Pokémon. Click or tap the + button at the bottom-right to add one! If you have a backup file, click the ⛭ button at the top-right to restore the backup.</div>
 			</div>
 		</div>
-		<div id="add-pokemon-button"><img src='img/ui/add.svg'></div>
+		<div id="add-pokemon-button" aria-label="Add New Pokémon"><img src="img/ui/add.svg" alt="Add" title="Add New Pokémon"></div>
 		<div id="pokeform" class="modal">
 			<h4>
 				<div>
@@ -72,18 +72,18 @@
 						</select>
 						<div id="pokeform-shiny">
 							<input type="checkbox" id="pokeform-shiny-checkbox" hidden>
-							<label for="pokeform-shiny-checkbox"><img id="pokeform-shiny-img" src="img/ui/shiny.png"></label>
+							<label for="pokeform-shiny-checkbox"><img id="pokeform-shiny-img" src="img/ui/shiny.png" alt="Shiny icon"></label>
 							<label for="pokeform-shiny-checkbox">Shiny?</label>
 						</div>
 					</td>
-					<td rowspan="2" id="pokeform-preview"><img src="img/ui/1x1.svg"></td>
+					<td rowspan="2" id="pokeform-preview"><img src="img/ui/1x1.svg" alt="Pokémon preview"></td>
 				</tr>
 				<tr id="pokeform-gender" class="pokeform-tab1">
 					<th><label for="pokeform-gender-checkbox">Gender</label></th>
 					<td>
 						<div id="pokeform-gender-known">
 							<input type="checkbox" id="pokeform-gender-checkbox" hidden>
-							<label for="pokeform-gender-checkbox"><span id="pokeform-gender-img"></span></label>
+							<label for="pokeform-gender-checkbox"><span id="pokeform-gender-img" alt="Gender icon"></span></label>
 							<label for="pokeform-gender-checkbox"></label>
 						</div>
 						<div id="pokeform-gender-unknown">
