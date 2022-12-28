@@ -347,19 +347,29 @@ function customMatcher(params, data){
     }
 
 	// actual code
-	var filteredChildren = [];
-	$.each(data.children, function(idx, child){
-		for(var ced in child.element.dataset){
-			if(child.element.dataset[ced].toUpperCase().indexOf(params.term.toUpperCase()) > -1){
-				filteredChildren.push(child);
-				break;
+	var sID = data.element.parentNode.id;
+	if(sID.indexOf("-mint") > 0 || sID.indexOf("-ability") > 0 || sID.indexOf("-nature") > 0 || sID.indexOf("-characteristic") > 0){
+		for(var ded in data.element.dataset){
+			if(data.element.dataset[ded].toUpperCase().indexOf(params.term.toUpperCase()) > -1){
+				var modifiedData = $.extend({}, data, true);
+				return modifiedData;
 			}
 		}
-	});
-	if(filteredChildren.length){
-		var modifiedData = $.extend({}, data, true);
-		modifiedData.children = filteredChildren;
-		return modifiedData;
+	} else {
+		var filteredChildren = [];
+		$.each(data.children, function(idx, child){
+			for(var ced in child.element.dataset){
+				if(child.element.dataset[ced].toUpperCase().indexOf(params.term.toUpperCase()) > -1){
+					filteredChildren.push(child);
+					break;
+				}
+			}
+		});
+		if(filteredChildren.length){
+			var modifiedData = $.extend({}, data, true);
+			modifiedData.children = filteredChildren;
+			return modifiedData;
+		}
 	}
 
 	// fallback
