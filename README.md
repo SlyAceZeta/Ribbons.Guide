@@ -12,6 +12,7 @@ The icons used in this app were provided by:
 
 This app also makes use of the following dependencies:
 - [jQuery](https://github.com/jquery/jquery)
+- [jQuery UI](https://github.com/jquery/jquery-ui)
 - [Select2](https://github.com/select2/select2)
 - [jQuery Modal](https://github.com/kylefox/jquery-modal)
 - [Google Fonts](https://fonts.google.com/)

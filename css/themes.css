@@ -105,11 +105,14 @@ footer a:not(.button) {
 .modal th label {
 	color: var(--label-text, var(--text));
 }
-.pokemon-list-entry:hover {
+.pokemon-list-entry:hover,
+#filters-boxes button:hover,
+#filters-boxes button:focus {
 	box-shadow: 0 0 10px -5px var(--text);
 }
 .pokemon-list-entry-header,
-.pokemon-list-entry-footer {
+.pokemon-list-entry-footer,
+#filters-boxes button {
 	background: var(--pokemon-header, var(--modal-bg, var(--header-bg)));
 }
 .pokemon-list-entry-center {

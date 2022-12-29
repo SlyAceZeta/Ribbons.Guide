@@ -13,6 +13,7 @@
 		<script src="data/ribbons.js"></script>
 		<script src="data/misc.js"></script>
 		<script src="js/jquery-3.6.1.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
 		<script src="js/select2.min.js"></script>
 		<script src="js/jquery.modal.js"></script>
 		<script src="js/functions.js"></script>
@@ -25,6 +26,27 @@
 			</div>
 			<img src="img/ui/gear.svg" id="header-settings" alt="Settings" title="Settings">
 		</header>
+		<div id="filters">
+			<div id="filters-boxes" style="display:none;">
+				<button class="box selected" data-boxnum="-1" onclick="switchBox()"><img src="img/ui/box-ball.png" alt="Box"><span>All Pokémon</span></button>
+				<button id="box-list-add"><img src="img/ui/add.svg" alt="Add"><span>New Box</span></button>
+			</div>
+		</div>
+		<div id="boxform" class="modal">
+			<h4>
+				<div>Add New Box</div>
+			</h4>
+			<table>
+				<tr>
+					<th><label for="boxform-name">Name</label></th>
+					<td><input type="text" id="boxform-name" maxlength="12"></td>
+				</tr>
+			</table>
+			<h5>
+				<button id="boxform-add" class="button">Add</button>
+				<button id="boxform-cancel" class="button">Cancel</button>
+			</h5>
+		</div>
 		<div id="pokemon-list">
 			<div id="pokemon-list-empty">
 				<div>You have no saved Pokémon. Click or tap the + button at the bottom-right to add one! If you have a backup file, click the ⛭ button at the top-right to restore the backup.</div>
