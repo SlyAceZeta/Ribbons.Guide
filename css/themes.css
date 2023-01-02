@@ -7,6 +7,12 @@
 	--modal-center-bg: #1f2f45;
 	--text: #fff;
 	--pokemon: #1f2f45;
+	--asterisk: #FFA2A2;
+}
+
+/* Start Menu-specific */
+body.theme-start {
+	--modal-bg: #152731;
 }
 
 /* Classic Dark */
@@ -59,20 +65,24 @@ body.theme-light {
 	--modal-text: #fff;
 	--modal-link: #38578e;
 	--pokemon-header: #bbb;
+	--asterisk: #a00;
 }
 .theme-light .pokemon-list-entry .shiny {
 	filter: brightness(200%);
 }
-.theme-light .pokemon-list-edit,
-.theme-light .pokemon-list-delete,
-.theme-light .pokemon-list-details,
 .theme-light #header-settings,
 .theme-light .pokemon-list-origin,
-.theme-light #add-pokemon-button img {
+.theme-light .pokemon-list-entry-footer-right,
+.theme-light #add-pokemon-button img,
+.theme-light #filters-boxes-list ~ button img {
 	filter: invert(1);
 }
 .theme-light #pokeform-tabs .pokeform-tabs-active {
 	filter: brightness(0);
+}
+.theme-light #boxsort-boxes > div {
+	background-color: #333;
+	color: #fff;
 }
 
 /* Main Event */
@@ -112,9 +122,13 @@ footer a:not(.button) {
 }
 .pokemon-list-entry-header,
 .pokemon-list-entry-footer,
-#filters-boxes button {
-	background: var(--pokemon-header, var(--modal-bg, var(--header-bg)));
+#filters-boxes button,
+#boxsort-boxes > div {
+	background-color: var(--pokemon-header, var(--modal-bg, var(--header-bg)));
 }
 .pokemon-list-entry-center {
 	background: var(--pokemon);
+}
+.modal th label .asterisk {
+	color: var(--asterisk);
 }

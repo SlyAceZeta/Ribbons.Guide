@@ -27,9 +27,12 @@
 			<img src="img/ui/gear.svg" id="header-settings" alt="Settings" title="Settings">
 		</header>
 		<div id="filters">
-			<div id="filters-boxes" style="display:none;">
-				<button class="box selected" data-boxnum="-1" onclick="switchBox()"><img src="img/ui/box-ball.png" alt="Box"><span>All Pokémon</span></button>
-				<button id="box-list-add"><img src="img/ui/add.svg" alt="Add"><span>New Box</span></button>
+			<div id="filters-boxes">
+				<button class="box selected" data-boxnum="-2" onclick="switchBox(-2)"><img src="img/ui/box-full.png" alt="Box"><span>All Pokémon</span></button>
+				<button class="box" data-boxnum="-1" onclick="switchBox()"><img src="img/ui/box-ball.png" alt="Box"><span>Unsorted</span></button>
+				<div id="filters-boxes-list"></div>
+				<button id="box-list-add"><img src="img/ui/add.svg" alt="Add"></button>
+				<button id="box-list-edit"><img src="img/ui/edit.svg" alt="Edit"></button>
 			</div>
 		</div>
 		<div id="boxform" class="modal">
@@ -38,7 +41,7 @@
 			</h4>
 			<table>
 				<tr>
-					<th><label for="boxform-name">Name</label></th>
+					<th><label for="boxform-name"><span class="asterisk">*</span>Name</label></th>
 					<td><input type="text" id="boxform-name" maxlength="12"></td>
 				</tr>
 			</table>
@@ -47,7 +50,23 @@
 				<button id="boxform-cancel" class="button">Cancel</button>
 			</h5>
 		</div>
+		<div id="boxsort" class="modal">
+			<h4>
+				<div>Edit Boxes</div>
+			</h4>
+			<table>
+				<tr>
+					<td id="boxsort-boxes"></td>
+				</tr>
+			</table>
+			<h5>
+				<button id="boxsort-close" class="button">Close</button>
+			</h5>
+		</div>
 		<div id="pokemon-list">
+			<div id="pokemon-list-emptybox">
+				<div>You have no Pokémon in this box. Click or tap "All Pokémon" to see all of your Pokémon.</div>
+			</div>
 			<div id="pokemon-list-empty">
 				<div>You have no saved Pokémon. Click or tap the + button at the bottom-right to add one! If you have a backup file, click the ⛭ button at the top-right to restore the backup.</div>
 			</div>
@@ -197,6 +216,14 @@
 							<optgroup id="pokeform-currentgame-3" label="Gen III"></optgroup>
 							<optgroup id="pokeform-currentgame-2" label="Gen II Virtual Console"></optgroup>
 							<optgroup id="pokeform-currentgame-1" label="Gen I Virtual Console"></optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr class="pokeform-tab1">
+					<th><label for="pokeform-box">Box</label></th>
+					<td colspan="2">
+						<select id="pokeform-box">
+							<option selected>None</option>
 						</select>
 					</td>
 				</tr>

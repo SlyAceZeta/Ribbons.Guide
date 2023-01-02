@@ -70,7 +70,6 @@ body {
 .modal th label .asterisk {
 	position: absolute;
 	right: 1px;
-	color: red;
 }
 .modal td,
 .modal #pokeform-gender td:last-child {
@@ -699,6 +698,9 @@ footer {
 	justify-content: stretch;
 	user-select: none;
 }
+#filters-boxes-list {
+	display: contents;
+}
 #filters-boxes button {
 	padding: 5px 15px 5px 10px;
 	margin-bottom: 5px;
@@ -721,14 +723,40 @@ footer {
 	height: auto;
 	margin-right: 5px;
 }
-#filters-boxes button + button {
+#filters-boxes #filters-boxes-list ~ button {
+	padding: 5px 10px;
+}
+#filters-boxes #filters-boxes-list ~ button img {
+	margin-right: 0;
+}
+#box-list-edit img {
+	width: 19px;
+	padding: 3px;
+}
+#filters-boxes button {
 	margin-left: 5px;
 }
-#filters-boxes > button:first-child {
-	margin-right: 5px;
+#filters-boxes button[data-boxnum="-2"] {
+	margin-left: 0;
 }
-#filters-boxes > button:last-child {
-	margin-left: 5px;
+#boxsort-boxes > div {
+	padding: 5px 5px 5px 30px;
+	cursor: grab;
+	background-image: url("../img/ui/drag.svg");
+	background-repeat: no-repeat;
+	background-size: 20px;
+	background-position: 5px center;
+	border-radius: 5px;
+}
+#boxsort-boxes button {
+	cursor: pointer;
+	float: right;
+}
+#boxsort-boxes img {
+	width: 20px;
+}
+#boxsort-boxes > div + div {
+	margin-top: 5px;
 }
 .pokemon-list-entry {
 	border-radius: 5px;
@@ -883,13 +911,15 @@ footer {
 	width: 68px;
 	height: auto;
 }
+#pokemon-list-emptybox,
 #pokemon-list-empty,
 .ribbons-list-empty {
+	width: 100%;
 	text-align: center;
 	margin: 20px auto;
 	display: none;
 }
-#pokemon-list-empty:first-child:last-child,
+#pokemon-list-empty:last-child,
 .ribbons-list-empty:first-child:last-child {
 	display: block;
 }
