@@ -833,11 +833,12 @@ $(function(){
 	});
 	var theme = localStorage.getItem("theme");
 	if(!theme){
-		if(window.matchMedia("(prefers-color-scheme: light)").matches){
+		// TODO: better light theme
+		/*if(window.matchMedia("(prefers-color-scheme: light)").matches){
 			theme = "light";
-		} else {
+		} else {*/
 			theme = "start";
-		}
+		//}
 	}
 	$("#settings-theme").val(theme).change();
 
