@@ -111,13 +111,21 @@
 							<optgroup id="pokeform-species-VIII" label="Gen VIII"></optgroup>
 							<optgroup id="pokeform-species-IX" label="Gen IX"></optgroup>
 						</select>
-						<div id="pokeform-shiny">
-							<input type="checkbox" id="pokeform-shiny-checkbox" hidden>
-							<label for="pokeform-shiny-checkbox"><img id="pokeform-shiny-img" src="img/ui/shiny.png" alt="Shiny icon"></label>
-							<label for="pokeform-shiny-checkbox">Shiny?</label>
+					</td>
+					<td rowspan="3" id="pokeform-preview"><img src="img/ui/1x1.svg" alt="Pokémon preview"></td>
+				</tr>
+				<tr id="pokeform-shiny-row" class="pokeform-tab1">
+					<th><label>Shiny</label></th>
+					<td>
+						<div id="pokeform-shiny-toggle">
+							<input type="radio" id="pokeform-shiny-none" name="pokeform-shiny" value="" checked="checked" />
+							<label for="pokeform-shiny-none"><span>Normal</span></label>
+							<input type="radio" id="pokeform-shiny-star" name="pokeform-shiny" value="star" />
+							<label for="pokeform-shiny-star"><img src="img/ui/shiny-star.png" alt="Star shiny icon"><span>Star</span></label>
+							<input type="radio" id="pokeform-shiny-square" name="pokeform-shiny" value="square" />
+							<label for="pokeform-shiny-square"><img src="img/ui/shiny-square.svg" alt="Square shiny icon"><span>Square</span></label>
 						</div>
 					</td>
-					<td rowspan="2" id="pokeform-preview"><img src="img/ui/1x1.svg" alt="Pokémon preview"></td>
 				</tr>
 				<tr id="pokeform-gender" class="pokeform-tab1">
 					<th><label for="pokeform-gender-checkbox">Gender</label></th>

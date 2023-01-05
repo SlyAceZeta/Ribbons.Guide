@@ -62,7 +62,7 @@ function createPokemon(edit = false){
 	var str = {
 		name: $("#pokeform-nickname").val(),
 		dex: species,
-		shiny: $("#pokeform-shiny-checkbox").prop("checked"),
+		shiny: $("input[name='pokeform-shiny']:checked").val(),
 		gender: gender,
 		ball: $("#pokeform-ball").val(),
 		title: $("#pokeform-title").val(),
@@ -201,6 +201,7 @@ function resetForm(){
 			$(this).val(null).trigger("change");
 		}
 	});
+	$("#pokeform-shiny-none").prop("checked", true);
 	$("#pokeform-notes").val("");
 	$("#pokeform-add, #pokeform-header-add").show();
 	$("#pokeform-edit").hide().removeAttr("data-editing");
@@ -221,7 +222,10 @@ function editPkmn(id){
 	$("#pokeform-edit").show().attr("data-editing", id);
 	$("#pokeform-nickname").val(pkmn.name);
 	$("#pokeform-species").val(pkmn.dex).change();
-	if(pkmn.shiny) $("#pokeform-shiny-checkbox").prop("checked", "checked").change();
+	if(pkmn.shiny){
+		var shinyType = (pkmn.shiny === "square") ? "square" : "star";
+		$("#pokeform-shiny-" + shinyType).prop("checked", true).change();
+	}
 	if(pkmn.gender === "female") $("#pokeform-gender-checkbox").prop("checked", "checked").change();
 	$("#pokeform-ball").val(pkmn.ball).change();
 	if(pkmn.title) $("#pokeform-title").val(pkmn.title).change();
@@ -348,7 +352,11 @@ function gameInfo(s, o = false){
 
 function addRow(pkmn, i){
 	var shinyDir = pkmn.shiny ? "shiny/" : "regular/";
-	var shinyMark = pkmn.shiny ? "<img src='img/ui/shiny.png' class='shiny' alt='Shiny' title='Shiny'>" : "";
+	var shinyMark = "";
+	if(pkmn.shiny){
+		var shinyType = (pkmn.shiny === "square") ? "square.svg" : "star.png";
+		shinyMark = "<img src='img/ui/shiny-"+shinyType+"' class='shiny' alt='Shiny' title='Shiny'>";
+	}
 
 	var femaleDir = (getData(pkmn.dex, "femsprite") && pkmn.gender === "female") ? "female/" : "";
 
@@ -559,7 +567,7 @@ function formatDropOption(o){
 function showPreview(){
 	if($("#pokeform-species").val()){
 		var poke = $("#pokeform-species").val();
-		var shinyDir = $("#pokeform-shiny-checkbox").prop("checked") ? "shiny/" : "regular/";
+		var shinyDir = $("input[name='pokeform-shiny']:checked").val() ? "shiny/" : "regular/";
 		var femaleDir = (getData(poke, "femsprite") && $("#pokeform-gender-checkbox").prop("checked")) ? "female/" : "";
 		$("#pokeform-preview img").attr("src", "img/pkmn/" + shinyDir + femaleDir + poke + ".png");
 	}
@@ -882,7 +890,7 @@ $(function(){
 	$("#pokeform-cancel").click(function(){
 		confirmFormClose();
 	});
-	$("#pokeform-shiny-checkbox, #pokeform-gender-checkbox").change(function(){
+	$("input[name='pokeform-shiny'], #pokeform-gender-checkbox").change(function(){
 		showPreview();
 	})
 	$("#settings-close, #changelog-close, #boxform-cancel, #boxsort-close").click(function(){

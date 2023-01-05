@@ -72,7 +72,8 @@ body {
 	right: 1px;
 }
 .modal td,
-.modal #pokeform-gender td:last-child {
+.modal #pokeform-gender td:last-child,
+.modal #pokeform-shiny-row td:last-child {
 	padding: 10px;
 	text-align: left;
 	border: solid grey;
@@ -249,22 +250,59 @@ footer {
 .sprite-mon {
 	height: 50px;
 }
-#pokeform-shiny-img {
-	filter: grayscale(100%);
+#pokeform-shiny-row input {
+	width: 0;
+	height: 0;
+	position: absolute;
+	left: -9999px;
 }
-#pokeform-shiny {
-	margin-top: 5px;
+#pokeform-shiny-toggle {
+	display: flex;
 }
-#pokeform-shiny-img {
-	height: 24px;
-	vertical-align: middle;
-}
-#pokeform-shiny-checkbox:checked ~ label #pokeform-shiny-img {
-	filter: none;
-}
-#pokeform-shiny label {
+#pokeform-shiny-toggle label {
+	border: solid grey;
+	opacity: 0.5;
+	flex-basis: 100%;
+	text-align: center;
+	line-height: 24px;
+	transition: background 0.25s, color 0.25s;
 	cursor: pointer;
+}
+#pokeform-shiny-toggle img {
+	width: 16px;
 	vertical-align: middle;
+	margin-right: 5px;
+	transition: filter 0.25s;
+}
+#pokeform-shiny-toggle span {
+	vertical-align: middle;
+}
+#pokeform-shiny-toggle label:first-of-type {
+	border-radius: 10px 0 0 10px;
+	border-width: 1px 0 1px 1px;
+}
+#pokeform-shiny-toggle label:nth-of-type(2) {
+	border-width: 1px 0;
+}
+#pokeform-shiny-toggle label:last-of-type {
+	border-radius: 0 10px 10px 0;
+	border-width: 1px 1px 1px 0;
+}
+#pokeform-shiny-toggle label:hover {
+	opacity: 1;
+}
+#pokeform-shiny-toggle input:checked + label,
+#pokeform-shiny-toggle input:checked + label:hover {
+	background: #ebbe0b;
+	color: black;
+	opacity: 1;
+}
+#pokeform-shiny-toggle input:checked + label img {
+	filter: brightness(0);
+}
+#pokeform-shiny-toggle input:focus + label {
+	outline: 1px solid var(--text);
+	outline-offset: 1px;
 }
 #pokeform-gender-img {
 	width: 24px;

@@ -67,14 +67,13 @@ body.theme-light {
 	--pokemon-header: #bbb;
 	--asterisk: #a00;
 }
-.theme-light .pokemon-list-entry .shiny {
-	filter: brightness(200%);
-}
 .theme-light #header-settings,
 .theme-light .pokemon-list-origin,
 .theme-light .pokemon-list-entry-footer-right,
 .theme-light #add-pokemon-button img,
-.theme-light #filters-boxes-list ~ button img {
+.theme-light #filters-boxes-list ~ button img,
+.theme-light #pokeform-shiny-toggle img,
+.theme-light .pokemon-list-entry .shiny {
 	filter: invert(1);
 }
 .theme-light #pokeform-tabs .pokeform-tabs-active {
