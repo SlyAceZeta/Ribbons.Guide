@@ -72,7 +72,7 @@ body {
 	right: 1px;
 }
 .modal td,
-.modal #pokeform-gender td:last-child,
+.modal #pokeform-gender-row td:last-child,
 .modal #pokeform-shiny-row td:last-child {
 	padding: 10px;
 	text-align: left;
@@ -250,45 +250,53 @@ footer {
 .sprite-mon {
 	height: 50px;
 }
-#pokeform-shiny-row input {
+#pokeform-shiny-row input,
+#pokeform-gender-row input {
 	width: 0;
 	height: 0;
 	position: absolute;
 	left: -9999px;
 }
-#pokeform-shiny-toggle {
+#pokeform-shiny-toggle,
+#pokeform-gender-toggle {
 	display: flex;
 }
-#pokeform-shiny-toggle label {
+#pokeform-shiny-toggle label,
+#pokeform-gender-toggle label,
+#pokeform-gender-unknown {
 	border: solid grey;
+	border-width: 1px 0;
 	opacity: 0.5;
 	flex-basis: 100%;
 	text-align: center;
-	line-height: 24px;
+	height: 26px;
+	padding-top: 1px;
 	transition: background 0.25s, color 0.25s;
 	cursor: pointer;
 }
-#pokeform-shiny-toggle img {
+#pokeform-shiny-toggle img,
+#pokeform-gender-row img {
 	width: 16px;
 	vertical-align: middle;
 	margin-right: 5px;
 	transition: filter 0.25s;
 }
-#pokeform-shiny-toggle span {
+#pokeform-shiny-toggle span,
+#pokeform-gender-toggle span {
 	vertical-align: middle;
 }
-#pokeform-shiny-toggle label:first-of-type {
+#pokeform-shiny-toggle label:first-of-type,
+#pokeform-gender-toggle label:first-of-type {
 	border-radius: 10px 0 0 10px;
 	border-width: 1px 0 1px 1px;
 }
-#pokeform-shiny-toggle label:nth-of-type(2) {
-	border-width: 1px 0;
-}
-#pokeform-shiny-toggle label:last-of-type {
+#pokeform-shiny-toggle label:last-of-type,
+#pokeform-gender-toggle label:last-of-type {
 	border-radius: 0 10px 10px 0;
 	border-width: 1px 1px 1px 0;
 }
-#pokeform-shiny-toggle label:hover {
+#pokeform-shiny-toggle label:hover,
+#pokeform-gender-toggle label:hover {
 	opacity: 1;
 }
 #pokeform-shiny-toggle input:checked + label,
@@ -297,49 +305,38 @@ footer {
 	color: black;
 	opacity: 1;
 }
+#pokeform-gender-male:checked + label {
+	background: #315B8B;
+	color: #fff;
+	opacity: 1;
+}
+#pokeform-gender-female:checked + label {
+	background: #B60102;
+	color: #fff;
+	opacity: 1;
+}
 #pokeform-shiny-toggle input:checked + label img {
 	filter: brightness(0);
 }
-#pokeform-shiny-toggle input:focus + label {
+#pokeform-shiny-toggle input:focus + label,
+#pokeform-gender-toggle input:focus + label {
 	outline: 1px solid var(--text);
 	outline-offset: 1px;
 }
-#pokeform-gender-img {
-	width: 24px;
-	height: 24px;
-	display: inline-block;
-	vertical-align: middle;
-	background: url("../img/gender/male.png") no-repeat center center;
-	background-size: contain;
+#pokeform-gender-toggle input:disabled + label {
+	display: none;
 }
-#pokeform-gender-checkbox:checked ~ label #pokeform-gender-img {
-	background-image: url("../img/gender/female.png");
+#pokeform-gender-toggle input:disabled:checked + label {
+	display: block;
+	border-radius: 10px;
 }
-#pokeform-gender label {
-	position: relative;
-	cursor: pointer;
+#pokeform-gender-toggle input:disabled:checked + label span:after {
+	content: " only";
 }
-#pokeform-gender label + label,
-#pokeform-gender-unknown span {
-	vertical-align: middle;
-}
-#pokeform-gender-checkbox ~ label + label:before {
-	content: "Male";
-}
-#pokeform-gender-checkbox:checked ~ label + label:before {
-	content: "Female";
-}
-#pokeform-gender-checkbox[disabled] ~ label {
-	cursor: default;
-}
-#pokeform-gender-checkbox[disabled] ~ label + label:before {
-	content: "Male only";
-}
-#pokeform-gender-checkbox:checked[disabled] ~ label + label:before {
-	content: "Female only";
-}
-#pokeform-gender div {
-	min-height: 24px;
+#pokeform-gender-unknown {
+	border-width: 1px;
+	border-radius: 10px;
+	opacity: 1;
 }
 #pokeform-notes {
 	width: 100%;

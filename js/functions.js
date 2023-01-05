@@ -36,7 +36,7 @@ function createPokemon(edit = false){
 	var gender = "male";
 	if(genderCheck === "unknown"){
 		gender = "unknown";
-	} else if(genderCheck === "female" || (genderCheck === "both" && $("#pokeform-gender-checkbox").prop("checked"))){
+	} else if(genderCheck === "female" || (genderCheck === "both" && $("#pokeform-gender-female").prop("checked"))){
 		gender = "female";
 	}
 	var box = $("#pokeform-box").val();
@@ -201,7 +201,8 @@ function resetForm(){
 			$(this).val(null).trigger("change");
 		}
 	});
-	$("#pokeform-shiny-none").prop("checked", true);
+	$("#pokeform-shiny-none").prop("checked", true).change();
+	$("#pokeform-gender-male").prop("checked", true).change();
 	$("#pokeform-notes").val("");
 	$("#pokeform-add, #pokeform-header-add").show();
 	$("#pokeform-edit").hide().removeAttr("data-editing");
@@ -226,7 +227,7 @@ function editPkmn(id){
 		var shinyType = (pkmn.shiny === "square") ? "square" : "star";
 		$("#pokeform-shiny-" + shinyType).prop("checked", true).change();
 	}
-	if(pkmn.gender === "female") $("#pokeform-gender-checkbox").prop("checked", "checked").change();
+	if(pkmn.gender === "female") $("#pokeform-gender-female").prop("checked", true).change();
 	$("#pokeform-ball").val(pkmn.ball).change();
 	if(pkmn.title) $("#pokeform-title").val(pkmn.title).change();
 	if(pkmn.ability) $("#pokeform-ability").val(pkmn.ability).change();
@@ -568,7 +569,7 @@ function showPreview(){
 	if($("#pokeform-species").val()){
 		var poke = $("#pokeform-species").val();
 		var shinyDir = $("input[name='pokeform-shiny']:checked").val() ? "shiny/" : "regular/";
-		var femaleDir = (getData(poke, "femsprite") && $("#pokeform-gender-checkbox").prop("checked")) ? "female/" : "";
+		var femaleDir = (getData(poke, "femsprite") && $("#pokeform-gender-female").prop("checked")) ? "female/" : "";
 		$("#pokeform-preview img").attr("src", "img/pkmn/" + shinyDir + femaleDir + poke + ".png");
 	}
 }
@@ -787,17 +788,19 @@ $(function(){
 		var species = $("#pokeform-species").val();
 		var gender = getData(species, "gender");
 		if(gender === "unknown"){
-			$("#pokeform-gender-known").hide();
+			$("#pokeform-gender-toggle").hide();
 			$("#pokeform-gender-unknown").show();
 		} else {
-			$("#pokeform-gender-known").show();
+			$("#pokeform-gender-toggle").show();
 			$("#pokeform-gender-unknown").hide();
 			if(gender === "female"){
-				$("#pokeform-gender-checkbox").prop({ disabled: true, checked: true });
+				$("#pokeform-gender-toggle input").prop("disabled", true);
+				$("#pokeform-gender-female").prop("checked", true).change();
 			} else if(gender === "male"){
-				$("#pokeform-gender-checkbox").prop({ disabled: true, checked: false });
+				$("#pokeform-gender-toggle input").prop("disabled", true);
+				$("#pokeform-gender-male").prop("checked", true).change();
 			} else {
-				$("#pokeform-gender-checkbox").prop("disabled", false);
+				$("#pokeform-gender-toggle input").prop("disabled", false);
 			}
 		}
 		showPreview();
@@ -890,7 +893,7 @@ $(function(){
 	$("#pokeform-cancel").click(function(){
 		confirmFormClose();
 	});
-	$("input[name='pokeform-shiny'], #pokeform-gender-checkbox").change(function(){
+	$("input[name='pokeform-shiny'], input[name='pokeform-gender']").change(function(){
 		showPreview();
 	})
 	$("#settings-close, #changelog-close, #boxform-cancel, #boxsort-close").click(function(){
