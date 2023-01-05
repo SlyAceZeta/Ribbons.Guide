@@ -438,7 +438,9 @@ function addBox(box, i){
 function generateRibbons(){
 	$("#add-ribbons").append("<div id='all-ribbons'></div>");
 	for(var i in ribbonIDs){
-		$("#all-ribbons").append("<div class='ribbons-gen'>" + i + "</div><div id='ribbons-list-" + ribbonIDs[i] + "' class='ribbons-list'></div>");
+		var showDefault = "";
+		if(parseInt(ribbonIDs[i])) showDefault = " rg-active";
+		$("#all-ribbons").append("<div class='ribbons-gen"+showDefault+"'><span>" + i + "</span></div><div id='ribbons-list-" + ribbonIDs[i] + "' class='ribbons-list'></div>");
 		$("#pokeform-title").append("<optgroup id='pokeform-title-" + ribbonIDs[i] + "' label='" + i + "'></optgroup>");
 	}
 	var folder = "ribbons";
@@ -895,11 +897,10 @@ $(function(){
 		boxSortDialog(true);
 	});
 	$("#changelog tr:not(:last-child)").click(function(){
-		if($(this).hasClass("changelog-active")){
-			$(this).removeClass("changelog-active");
-		} else {
-			$(this).addClass("changelog-active");
-		}
+		$(this).toggleClass("changelog-active");
+	});
+	$(".ribbons-gen").click(function(){
+		$(this).toggleClass("rg-active");
 	});
 	$("#pokeform-tabs img").click(function(){
 		if(!$(this).hasClass("pokeform-tabs-active")){

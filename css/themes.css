@@ -112,8 +112,13 @@ footer a:not(.button) {
 	background: var(--modal-bg, var(--header-bg));
 	color: var(--modal-text, var(--text));
 }
-.modal th label {
+.modal th label,
+.ribbons-gen,
+.changelog-date {
 	color: var(--label-text, var(--text));
+}
+.modal th label .asterisk {
+	color: var(--asterisk);
 }
 .pokemon-list-entry:hover,
 #filters-boxes button:hover,
@@ -128,7 +133,4 @@ footer a:not(.button) {
 }
 .pokemon-list-entry-center {
 	background: var(--pokemon);
-}
-.modal th label .asterisk {
-	color: var(--asterisk);
 }

@@ -91,7 +91,6 @@ body {
 	padding: 0;
 }
 .modal #all-ribbons {
-	padding: 5px 10px;
 	min-height: 150px;
 	max-height: 50vh;
 	overflow-y: auto;
@@ -340,13 +339,10 @@ footer {
 .ribbons-gen {
 	text-align: left;
 	font-weight: bold;
-	font-style: italic;
 	border-top: 1px solid grey;
-	padding: 5px 0;
-	margin-top: 10px;
+	padding: 10px;
 }
 .ribbons-gen:first-child {
-	margin-top: 0;
 	border-top: none;
 }
 #all-ribbons .ribbons-list:last-child {
@@ -356,6 +352,10 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	align-content: space-evenly;
+}
+.modal .ribbons-list {
+	display: none;
+	padding: 0 10px 10px;
 }
 .pokemon-list-entry .ribbons-list {
 	padding: 5px 0;
@@ -923,7 +923,8 @@ footer {
 .ribbons-list-empty:first-child:last-child {
 	display: block;
 }
-#changelog tr:not(:last-child) {
+#changelog tr:not(:last-child),
+.ribbons-gen {
 	cursor: pointer;
 }
 .changelog-date {
@@ -934,14 +935,25 @@ footer {
 	margin: 1% 0;
 	display: none;
 }
+.ribbons-gen.rg-active + .ribbons-list {
+	display: flex;
+}
 .changelog-active .changelog-date + ul {
 	display: block;
 }
-.changelog-date:before {
+.changelog-date:before,
+.ribbons-gen:before {
 	content: "▼";
-	margin-right: 10px;
+	margin-right: 5px;
+	font-size: 12px;
+	vertical-align: middle;
 }
-.changelog-active .changelog-date:before {
+.changelog-date span,
+.ribbons-gen span {
+	vertical-align: middle;
+}
+.changelog-active .changelog-date:before,
+.ribbons-gen.rg-active:before {
 	content: "▲";
 }
 .pokeform-stats {
