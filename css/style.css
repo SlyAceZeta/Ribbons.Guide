@@ -841,10 +841,13 @@ footer {
 		padding-top: 0;
 	}
 	.select2-container {
-		max-width: 50vw;
+		max-width: 53vw;
+	}
+	.pokeform-tab3 .select2-container {
+		max-width: 46vw;
 	}
 	#pokeform-species + .select2-container {
-		max-width: 38vw;
+		max-width: 36vw;
 	}
 	.pokeform-stats div {
 		width: 33%;
@@ -1031,29 +1034,29 @@ span.lang {
 	display: none;
 }
 body[lang="ger"] span.lang.ger {
-	display: inline-block;
+	display: inline;
 }
 body[lang="eng"] span.lang.eng {
-	display: inline-block;
+	display: inline;
 }
 body[lang="spa"] span.lang.spa {
-	display: inline-block;
+	display: inline;
 }
 body[lang="fre"] span.lang.fre {
-	display: inline-block;
+	display: inline;
 }
 body[lang="ita"] span.lang.ita {
-	display: inline-block;
+	display: inline;
 }
 body[lang="jpn"] span.lang.jpn {
-	display: inline-block;
+	display: inline;
 }
 body[lang="kor"] span.lang.kor {
-	display: inline-block;
+	display: inline;
 }
 body[lang="cht"] span.lang.cht {
-	display: inline-block;
+	display: inline;
 }
 body[lang="chs"] span.lang.chs {
-	display: inline-block;
+	display: inline;
 }
