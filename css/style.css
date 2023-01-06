@@ -71,9 +71,7 @@ body {
 	position: absolute;
 	right: 1px;
 }
-.modal td,
-.modal #pokeform-gender-row td:last-child,
-.modal #pokeform-shiny-row td:last-child {
+.modal td {
 	padding: 10px;
 	text-align: left;
 	border: solid grey;
@@ -147,6 +145,9 @@ body {
 }
 .select2-container .select2-selection--single {
 	height: 32px;
+}
+.select2-selection__clear {
+	color: #444;
 }
 .modal td > input[type="text"] {
 	padding: 5px;
@@ -250,16 +251,17 @@ footer {
 .sprite-mon {
 	height: 50px;
 }
-#pokeform-shiny-row input,
-#pokeform-gender-row input {
+#pokeform-shiny-toggle,
+#pokeform-gender-toggle {
+	margin-top: 5px;
+	display: flex;
+}
+#pokeform-shiny-toggle input,
+#pokeform-gender-toggle input {
 	width: 0;
 	height: 0;
 	position: absolute;
 	left: -9999px;
-}
-#pokeform-shiny-toggle,
-#pokeform-gender-toggle {
-	display: flex;
 }
 #pokeform-shiny-toggle label,
 #pokeform-gender-toggle label,
@@ -275,7 +277,7 @@ footer {
 	cursor: pointer;
 }
 #pokeform-shiny-toggle img,
-#pokeform-gender-row img {
+#pokeform-gender-toggle img {
 	width: 16px;
 	vertical-align: middle;
 	margin-right: 5px;
@@ -334,6 +336,7 @@ footer {
 	content: " only";
 }
 #pokeform-gender-unknown {
+	margin-top: 5px;
 	border-width: 1px;
 	border-radius: 10px;
 	opacity: 1;
@@ -816,25 +819,35 @@ footer {
 #add-pokemon-button img {
 	width: 32px;
 }
+.pokeform-stats {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	text-align: center;
+}
+.pokeform-stats input {
+	width: 60px;
+}
 @media only screen and (max-width: 600px){
-	#pokeform-shiny-toggle {
-		flex-wrap: wrap;
-	}
-	#pokeform-shiny-toggle label,
-	#pokeform-shiny-toggle label:first-of-type,
-	#pokeform-shiny-toggle label:last-of-type {
-		width: 100%;
-		border-width: 1px;
-		border-radius: 10px;
-	}
-	#pokeform-shiny-toggle label ~ label{
-		margin-top: 5px;
-	}
+	#pokeform-shiny-toggle span,
 	#pokeform-gender-toggle span {
 		display: none;
 	}
+	#pokeform-shiny-toggle img,
+	#pokeform-gender-toggle img {
+		margin-right: 0;
+	}
 	#pokeform-gender-toggle label {
 		padding-top: 0;
+	}
+	.select2-container {
+		max-width: 50vw;
+	}
+	#pokeform-species + .select2-container {
+		max-width: 38vw;
+	}
+	.pokeform-stats div {
+		width: 33%;
 	}
 }
 @media only screen and (min-width: 768px) {
@@ -961,6 +974,7 @@ footer {
 	width: auto;
 }
 #pokeform-preview {
+	padding: 0;
 	width: 88px;
 }
 #pokeform-preview img {
@@ -1011,15 +1025,6 @@ footer {
 .changelog-active .changelog-date:before,
 .ribbons-gen.rg-active:before {
 	content: "▲";
-}
-.pokeform-stats {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	text-align: center;
-}
-.pokeform-stats input {
-	width: 60px;
 }
 
 span.lang {

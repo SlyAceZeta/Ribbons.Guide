@@ -862,6 +862,9 @@ $(function(){
 				confirmFormClose();
 		});
 	});
+	$("#boxform").on($.modal.OPEN, function(event, modal){
+		$("#boxform-name").focus();
+	});
 	$("#pokeform, #boxform").on($.modal.AFTER_CLOSE, function(event, modal){
 		resetForm();
 	});

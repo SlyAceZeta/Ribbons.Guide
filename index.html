@@ -112,25 +112,14 @@
 							<optgroup id="pokeform-species-VIII" label="Gen VIII"></optgroup>
 							<optgroup id="pokeform-species-IX" label="Gen IX"></optgroup>
 						</select>
-					</td>
-					<td rowspan="3" id="pokeform-preview"><img src="img/ui/1x1.svg" alt="Pokémon preview"></td>
-				</tr>
-				<tr id="pokeform-shiny-row" class="pokeform-tab1">
-					<th><label>Shiny</label></th>
-					<td>
 						<div id="pokeform-shiny-toggle">
 							<input type="radio" id="pokeform-shiny-none" name="pokeform-shiny" value="" checked="checked" />
-							<label for="pokeform-shiny-none"><span>Normal</span></label>
+							<label for="pokeform-shiny-none"><img src="img/ui/pokeball.png" alt="Normal icon"><span>Normal</span></label>
 							<input type="radio" id="pokeform-shiny-star" name="pokeform-shiny" value="star" />
 							<label for="pokeform-shiny-star"><img src="img/ui/shiny-star.png" alt="Star shiny icon"><span>Star</span></label>
 							<input type="radio" id="pokeform-shiny-square" name="pokeform-shiny" value="square" />
 							<label for="pokeform-shiny-square"><img src="img/ui/shiny-square.svg" alt="Square shiny icon"><span>Square</span></label>
 						</div>
-					</td>
-				</tr>
-				<tr id="pokeform-gender-row" class="pokeform-tab1">
-					<th><label>Gender</label></th>
-					<td>
 						<div id="pokeform-gender-toggle">
 							<input type="radio" id="pokeform-gender-male" name="pokeform-gender" value="male" checked="checked" />
 							<label for="pokeform-gender-male"><img src="img/gender/male.png" alt="Male icon"><span>Male</span></label>
@@ -139,6 +128,7 @@
 						</div>
 						<div id="pokeform-gender-unknown">Gender unknown</div>
 					</td>
+					<td id="pokeform-preview"><img src="img/ui/1x1.svg" alt="Pokémon preview"></td>
 				</tr>
 				<tr class="pokeform-tab1">
 					<th><label for="pokeform-ball"><span class="asterisk">*</span>Ball</label></th>
@@ -300,11 +290,11 @@
 					<td>
 						<div class="pokeform-stats">
 							<div>HP<br><input type="number" id="pokeform-iv-hp" min="0" max="31"></div>
-							<div>Atk<br><input type="number" id="pokeform-iv-atk" min="0" max="31"></div>
-							<div>Def<br><input type="number" id="pokeform-iv-def" min="0" max="31"></div>
-							<div>SpA<br><input type="number" id="pokeform-iv-spa" min="0" max="31"></div>
-							<div>SpD<br><input type="number" id="pokeform-iv-spd" min="0" max="31"></div>
-							<div>Spe<br><input type="number" id="pokeform-iv-spe" min="0" max="31"></div>
+							<div>Attack<br><input type="number" id="pokeform-iv-atk" min="0" max="31"></div>
+							<div>Defense<br><input type="number" id="pokeform-iv-def" min="0" max="31"></div>
+							<div>Sp.Atk<br><input type="number" id="pokeform-iv-spa" min="0" max="31"></div>
+							<div>Sp.Def<br><input type="number" id="pokeform-iv-spd" min="0" max="31"></div>
+							<div>Speed<br><input type="number" id="pokeform-iv-spe" min="0" max="31"></div>
 						</div>
 					</td>
 				</tr>
@@ -313,11 +303,11 @@
 					<td>
 						<div class="pokeform-stats">
 							<div>HP<br><input type="number" id="pokeform-ev-hp" min="0" max="255"></div>
-							<div>Atk<br><input type="number" id="pokeform-ev-atk" min="0" max="255"></div>
-							<div>Def<br><input type="number" id="pokeform-ev-def" min="0" max="255"></div>
-							<div>SpA<br><input type="number" id="pokeform-ev-spa" min="0" max="255"></div>
-							<div>SpD<br><input type="number" id="pokeform-ev-spd" min="0" max="255"></div>
-							<div>Spe<br><input type="number" id="pokeform-ev-spe" min="0" max="255"></div>
+							<div>Attack<br><input type="number" id="pokeform-ev-atk" min="0" max="255"></div>
+							<div>Defense<br><input type="number" id="pokeform-ev-def" min="0" max="255"></div>
+							<div>Sp.Atk<br><input type="number" id="pokeform-ev-spa" min="0" max="255"></div>
+							<div>Sp.Def<br><input type="number" id="pokeform-ev-spd" min="0" max="255"></div>
+							<div>Speed<br><input type="number" id="pokeform-ev-spe" min="0" max="255"></div>
 						</div>
 					</td>
 				</tr>
@@ -690,6 +680,17 @@
 			<table>
 				<tr class="changelog-active">
 					<td>
+						<div class="changelog-date"><span>6 January 2023</span></div>
+						<ul>
+							<li>Added support for Square shinies</li>
+							<li>Updated gender toggle similar to new shiny toggle</li>
+							<li>Ribbon categories can now be collapsed in the form (Event and Marks are collapsed by default)</li>
+							<li>Fixed various mobile issues; Pokémon can now be dragged and re-ordered on mobile, and certain Pokémon will no longer overflow the add/edit form</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
 						<div class="changelog-date"><span>2 January 2023</span></div>
 						<ul>
 							<li>Added Boxes to group your Pokémon</li>
@@ -713,36 +714,6 @@
 						<ul>
 							<li>Added Scarlet/Violet Pokémon, forms, and origin mark</li>
 							<li>Updated SPA language tag to SP-EU as per Scarlet/Violet</li>
-						</ul>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="changelog-date"><span>21 November 2022</span></div>
-						<ul>
-							<li>Added Scarlet/Violet Ribbons, Marks, and Games (thanks SadisticMystic!)</li>
-							<li>Added HOME and Bank as Current Game options</li>
-							<li>Updated Timer Ball sprite</li>
-						</ul>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="changelog-date"><span>17 November 2022</span></div>
-						<ul>
-							<li>Add/edit form now supports Current Game, IVs, EVs, Ability, Met Level, Met Date, and Characteristic</li>
-							<li>Updated ball and mint sprites to match their HOME/PLA sprites</li>
-						</ul>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="changelog-date"><span>14 November 2022</span></div>
-						<ul>
-							<li>Added all forms to the species selection</li>
-							<li>Nickname field can now be left empty; species name will be used in these cases</li>
-							<li>Add/edit form now has tabs! They don't look the best for now, but they work!</li>
-							<li>You can now add notes to each Pokémon</li>
 						</ul>
 					</td>
 				</tr>
