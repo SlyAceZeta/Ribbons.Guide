@@ -123,6 +123,7 @@ const allRibbons = {
 	},
 	"cool-ribbon-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -137,6 +138,7 @@ const allRibbons = {
 	},
 	"cool-ribbon-super-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -151,6 +153,7 @@ const allRibbons = {
 	},
 	"cool-ribbon-hyper-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -165,6 +168,7 @@ const allRibbons = {
 	},
 	"cool-ribbon-master-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -179,6 +183,7 @@ const allRibbons = {
 	},
 	"beauty-ribbon-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -193,6 +198,7 @@ const allRibbons = {
 	},
 	"beauty-ribbon-super-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -207,6 +213,7 @@ const allRibbons = {
 	},
 	"beauty-ribbon-hyper-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -221,6 +228,7 @@ const allRibbons = {
 	},
 	"beauty-ribbon-master-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -235,6 +243,7 @@ const allRibbons = {
 	},
 	"cute-ribbon-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -249,6 +258,7 @@ const allRibbons = {
 	},
 	"cute-ribbon-super-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -263,6 +273,7 @@ const allRibbons = {
 	},
 	"cute-ribbon-hyper-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -277,6 +288,7 @@ const allRibbons = {
 	},
 	"cute-ribbon-master-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -291,6 +303,7 @@ const allRibbons = {
 	},
 	"smart-ribbon-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -305,6 +318,7 @@ const allRibbons = {
 	},
 	"smart-ribbon-super-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -319,6 +333,7 @@ const allRibbons = {
 	},
 	"smart-ribbon-hyper-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -333,6 +348,7 @@ const allRibbons = {
 	},
 	"smart-ribbon-master-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -347,6 +363,7 @@ const allRibbons = {
 	},
 	"tough-ribbon-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -361,6 +378,7 @@ const allRibbons = {
 	},
 	"tough-ribbon-super-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -375,6 +393,7 @@ const allRibbons = {
 	},
 	"tough-ribbon-hyper-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -389,6 +408,7 @@ const allRibbons = {
 	},
 	"tough-ribbon-master-hoenn": {
 		"gen": 3,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -403,6 +423,7 @@ const allRibbons = {
 	},
 	"cool-ribbon-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -417,6 +438,7 @@ const allRibbons = {
 	},
 	"cool-ribbon-great-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -431,6 +453,7 @@ const allRibbons = {
 	},
 	"cool-ribbon-ultra-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -445,6 +468,7 @@ const allRibbons = {
 	},
 	"cool-ribbon-master-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -459,6 +483,7 @@ const allRibbons = {
 	},
 	"beauty-ribbon-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -473,6 +498,7 @@ const allRibbons = {
 	},
 	"beauty-ribbon-great-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -487,6 +513,7 @@ const allRibbons = {
 	},
 	"beauty-ribbon-ultra-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -501,6 +528,7 @@ const allRibbons = {
 	},
 	"beauty-ribbon-master-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -515,6 +543,7 @@ const allRibbons = {
 	},
 	"cute-ribbon-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -529,6 +558,7 @@ const allRibbons = {
 	},
 	"cute-ribbon-great-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -543,6 +573,7 @@ const allRibbons = {
 	},
 	"cute-ribbon-ultra-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -557,6 +588,7 @@ const allRibbons = {
 	},
 	"cute-ribbon-master-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -571,6 +603,7 @@ const allRibbons = {
 	},
 	"smart-ribbon-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -585,6 +618,7 @@ const allRibbons = {
 	},
 	"smart-ribbon-great-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -599,6 +633,7 @@ const allRibbons = {
 	},
 	"smart-ribbon-ultra-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -613,6 +648,7 @@ const allRibbons = {
 	},
 	"smart-ribbon-master-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -627,6 +663,7 @@ const allRibbons = {
 	},
 	"tough-ribbon-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -641,6 +678,7 @@ const allRibbons = {
 	},
 	"tough-ribbon-great-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -655,6 +693,7 @@ const allRibbons = {
 	},
 	"tough-ribbon-ultra-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -669,6 +708,7 @@ const allRibbons = {
 	},
 	"tough-ribbon-master-sinnoh": {
 		"gen": 4,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -804,6 +844,7 @@ const allRibbons = {
 	},
 	"contest-memory-ribbon": {
 		"gen": 6,
+		"optional": true,
 		"available": [
 			"x",
 			"y",
@@ -822,6 +863,7 @@ const allRibbons = {
 	},
 	"contest-memory-ribbon-gold": {
 		"gen": 6,
+		"optional": true,
 		"available": [
 			"x",
 			"y",
@@ -840,6 +882,9 @@ const allRibbons = {
 	},
 	"winning-ribbon": {
 		"gen": 3,
+		"nolegendary": true,
+		"nomythical": true,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -854,6 +899,9 @@ const allRibbons = {
 	},
 	"victory-ribbon": {
 		"gen": 3,
+		"nolegendary": true,
+		"nomythical": true,
+		"hide": true,
 		"available": [
 			"ruby",
 			"sapphire",
@@ -868,6 +916,9 @@ const allRibbons = {
 	},
 	"ability-ribbon": {
 		"gen": 4,
+		"nolegendary": true,
+		"nomythical": true,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -884,6 +935,9 @@ const allRibbons = {
 	},
 	"great-ability-ribbon": {
 		"gen": 4,
+		"nolegendary": true,
+		"nomythical": true,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -900,6 +954,9 @@ const allRibbons = {
 	},
 	"double-ability-ribbon": {
 		"gen": 4,
+		"nolegendary": true,
+		"nomythical": true,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -916,6 +973,9 @@ const allRibbons = {
 	},
 	"multi-ability-ribbon": {
 		"gen": 4,
+		"nolegendary": true,
+		"nomythical": true,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -932,6 +992,9 @@ const allRibbons = {
 	},
 	"pair-ability-ribbon": {
 		"gen": 4,
+		"nolegendary": true,
+		"nomythical": true,
+		"hide": true,
 		"available": [
 			"diamond",
 			"pearl",
@@ -947,6 +1010,10 @@ const allRibbons = {
 		}
 	},
 	"world-ability-ribbon": {
+		"excluded": true,
+		"nolegendary": true,
+		"nomythical": true,
+		"hide": true,
 		"gen": 4,
 		"available": [
 			"diamond",
@@ -964,6 +1031,9 @@ const allRibbons = {
 	},
 	"battle-memory-ribbon": {
 		"gen": 6,
+		"nolegendary": true,
+		"nomythical": true,
+		"optional": true,
 		"available": [
 			"x",
 			"y",
@@ -982,6 +1052,9 @@ const allRibbons = {
 	},
 	"battle-memory-ribbon-gold": {
 		"gen": 6,
+		"nolegendary": true,
+		"nomythical": true,
+		"optional": true,
 		"available": [
 			"x",
 			"y",
@@ -1000,6 +1073,8 @@ const allRibbons = {
 	},
 	"skillful-battler-ribbon": {
 		"gen": 6,
+		"nolegendary": true,
+		"nomythical": true,
 		"available": [
 			"x",
 			"y",
@@ -1018,6 +1093,8 @@ const allRibbons = {
 	},
 	"expert-battler-ribbon": {
 		"gen": 6,
+		"nolegendary": true,
+		"nomythical": true,
 		"available": [
 			"x",
 			"y",
@@ -1054,6 +1131,8 @@ const allRibbons = {
 	},
 	"battle-tree-master-ribbon": {
 		"gen": 7,
+		"nolegendary": true,
+		"nomythical": true,
 		"available": [
 			"sun",
 			"moon",
@@ -1127,7 +1206,9 @@ const allRibbons = {
 			"sw",
 			"sh",
 			"bd",
-			"sp"
+			"sp",
+			"scar",
+			"vio"
 		],
 		"names": {
 			"eng": "Effort Ribbon",
@@ -1434,7 +1515,9 @@ const allRibbons = {
 			"sw",
 			"sh",
 			"bd",
-			"sp"
+			"sp",
+			"scar",
+			"vio"
 		],
 		"names": {
 			"eng": "Best Friends Ribbon",
@@ -1466,6 +1549,8 @@ const allRibbons = {
 	},
 	"battle-royal-master-ribbon": {
 		"gen": 7,
+		"nolegendary": true,
+		"nomythical": true,
 		"available": [
 			"sun",
 			"moon",
@@ -1484,9 +1569,12 @@ const allRibbons = {
 	},
 	"master-rank-ribbon": {
 		"gen": 8,
+		"nomythical": true,
 		"available": [
 			"sw",
-			"sh"
+			"sh",
+			"scar",
+			"vio"
 		],
 		"names": {
 			"eng": "Master Rank Ribbon",
@@ -1514,6 +1602,7 @@ const allRibbons = {
 		}
 	},
 	"once-in-a-lifetime-ribbon": {
+		"excluded": true,
 		"gen": 9,
 		"available": [
 			"scar",
@@ -1543,6 +1632,7 @@ const allRibbons = {
 		}
 	},
 	"national-ribbon": {
+		"optional": true,
 		"gen": 3,
 		"available": [
 			"colosseum",
@@ -2380,8 +2470,12 @@ const allRibbons = {
 		}
 	},
 	"jumbo-mark": {
+		"optional": true,
 		"gen": 9,
-		"available": null,
+		"available": [
+			"scar",
+			"vio"
+		],
 		"mark": true,
 		"names": {
 			"eng": "Jumbo Mark",
@@ -2394,8 +2488,12 @@ const allRibbons = {
 		}
 	},
 	"mini-mark": {
+		"optional": true,
 		"gen": 9,
-		"available": null,
+		"available": [
+			"scar",
+			"vio"
+		],
 		"mark": true,
 		"names": {
 			"eng": "Mini Mark",
@@ -2423,7 +2521,10 @@ const allRibbons = {
 	},
 	"partner-mark": {
 		"gen": 9,
-		"available": null,
+		"available": [
+			"scar",
+			"vio"
+		],
 		"mark": true,
 		"names": {
 			"eng": "Partner Mark",
@@ -2437,7 +2538,10 @@ const allRibbons = {
 	},
 	"gourmand-mark": {
 		"gen": 9,
-		"available": null,
+		"available": [
+			"scar",
+			"vio"
+		],
 		"mark": true,
 		"names": {
 			"eng": "Gourmand Mark",

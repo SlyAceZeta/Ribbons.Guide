@@ -314,6 +314,182 @@ function deleteBox(id){
 	}
 }
 
+function ribbonGuide(id){
+	allpkmn = JSON.parse(localStorage.getItem("pokemon"));
+	var pkmn = allpkmn.entries[id];
+	var name = $(".pokemon-list-entry[data-pokemon="+id+"] .pokemon-list-name").text();
+	var title = $(".pokemon-list-entry[data-pokemon="+id+"] .pokemon-list-entry-header-right").text();
+	if(pkmn.currentgame){
+		if(pkmn.level && pkmn.metlevel){
+			// info header
+			var img = $(".pokemon-list-entry[data-pokemon="+id+"] .pokemon-list-entry-center img").attr("src");
+			$("#ribbonguide-info img").attr("src", img);
+			$("#ribbonguide .name").text(name);
+			$("#ribbonguide-info .name").text(name + " " + title);
+			$("#ribbonguide .level").text(pkmn.level);
+			$("#ribbonguide .metlevel").text(" (met at "+pkmn.metlevel+")");
+			$("#ribbonguide .game").text(games[pkmn.currentgame].name);
+			$("#ribbonguide .metgame").text(" (met in "+games[pkmn.origin].name+")");
+
+			// hide gens earlier than current
+			var curGen = parseInt(games[pkmn.currentgame].gen);
+			if(pkmn.currentgame == "go") curGen = 8;
+			for(var i = 3; i < curGen; i++){
+				$("#ribbonguide-transfer-" + i).hide();
+			}
+
+			// get current and future gens
+			var gensLeft = [];
+			for(let g in terms.gens){
+				var gen = parseInt(g);
+				if(gen){
+					if(gen >= curGen){
+						gensLeft.push(gen);
+					}
+				}
+			}
+			// get compatible games and more info
+			var pkmnGames = getData(pkmn.dex, "games");
+			var isLegendary = getData(pkmn.dex, "legendary");
+			var isMythical = getData(pkmn.dex, "mythical");
+			var evoWarnMon = getData(pkmn.dex, "evowarnmon", true);
+			var evoWarnGen = getData(pkmn.dex, "evowarngen", true);
+			var noRibbons = true;
+
+			for(var ribbon in allRibbons){
+				if(pkmn.ribbons.indexOf(ribbon) == -1){
+					// Ribbon not earned
+					// check for Legendary and Mythical restrictions
+					if(!(allRibbons[ribbon].nolegendary && isLegendary) && !(allRibbons[ribbon].nomythical && isMythical)){
+						// prepare to add to guide
+						var ribbonAddToGens = [];
+
+						// check for per-game availability
+						for(var ribbonGameKey in allRibbons[ribbon].available){
+							var ribbonGame = allRibbons[ribbon].available[ribbonGameKey];
+							var gameGen = parseInt(games[ribbonGame]["gen"]);
+							if(gameGen && ribbonAddToGens.indexOf(gameGen) == -1 && gensLeft.indexOf(gameGen) > -1){
+								// Ribbon has not been added to this gen yet
+								// and Pokemon is in this game's gen or will be later
+								// check if Pokemon can be sent to this game
+								if(pkmnGames.indexOf(ribbonGame) > -1){
+									// now check for special Ribbon restrictions
+									var specialEarn = false;
+									if(ribbon == "national-ribbon"){
+										if(pkmn.origin == "colosseum" || pkmn.origin == "xd"){
+											specialEarn = true;
+										}
+									} else if(ribbon == "footprint-ribbon"){
+										if(gameGen == 4){
+											specialEarn = true;
+											if(!getData(pkmn.dex, "voiceless")){
+												if(parseInt(pkmn.level) < 71){
+													$("#ribbonguide-warning").append("<span><span>WARNING:</span> Leveling " + name + " to Lv.71 or above and leaving Gen&nbsp;IV will cause the Footprint Ribbon to become unavailable!</span>");
+												} else {
+													$("#ribbonguide-warning").append("<span><span>WARNING:</span> Leaving Gen&nbsp;IV will cause the Footprint Ribbon to become unavailable!</span>");
+												}
+											}
+										} else if(parseInt(pkmn.metlevel) < 71){
+											if(parseInt(pkmn.level) < 71){
+												specialEarn = true;
+											}
+										} else {
+											if(ribbonGame == "bd" || ribbonGame == "sp"){
+												if(getData(pkmn.dex, "voiceless")){
+													specialEarn = true;
+												}
+											}
+										}
+									} else if(ribbon == "tower-master-ribbon"){
+										if(isLegendary || isMythical){
+											if(ribbonGame == "sw" || ribbonGame == "sh"){
+												specialEarn = true;
+											}
+										} else {
+											specialEarn = true;
+										}
+									} else if(ribbon == "jumbo-mark"){
+										if(pkmn.ribbons.indexOf("mini-mark") == -1){
+											specialEarn = true;
+										}
+									} else if(ribbon == "mini-mark"){
+										if(pkmn.ribbons.indexOf("jumbo-mark") == -1){
+											specialEarn = true;
+										}
+									} else {
+										specialEarn = true;
+									}
+									if(specialEarn){
+										// all checks complete, add Ribbon to gen
+										ribbonAddToGens.push(gameGen);
+									}
+								}
+							}
+						}
+						if(ribbonAddToGens.length){
+							noRibbons = false;
+							// get remaining Ribbon data
+							var rData = allRibbons[ribbon];
+							var rFldr = "ribbons";
+							if(rData["mark"]) rFldr = "marks";
+							var rDesc = "";
+							if(rData.descs) rDesc = rData.descs.eng;
+							var optClass = "";
+							if(allRibbons[ribbon].optional){
+								optClass = " ribbon-optional";
+							}
+							var rImage = "<span class='"+optClass+"'><img class='" + ribbon + "' src='img/" + rFldr + "/" + ribbon + ".png' alt=\"" + rData.names.eng + "\" title=\"" + rData.names.eng + " - " + rDesc + "\"></span>";
+							// add Ribbon to each gen
+							for(var i = 0; i < ribbonAddToGens.length; i++){
+								var eleGen = "#ribbonguide-transfer-" + ribbonAddToGens[i];
+								if(allRibbons[ribbon].optional) $(eleGen + " .ribbonguide-transfer-footer").addClass("ribbonguide-transfer-unsure");
+								if(allRibbons[ribbon].excluded){
+									$(eleGen + " .ribbonguide-transfer-excluded").show().append(rImage);
+								} else if(i == (ribbonAddToGens.length-1)){
+									$(eleGen + " .ribbonguide-transfer-exclusive").show().append(rImage);
+									if(!allRibbons[ribbon].optional) $(eleGen + " .ribbonguide-transfer-footer").addClass("ribbonguide-transfer-notready");
+								} else {
+									$(eleGen + " .ribbonguide-transfer-later").show().append(rImage);
+								}
+							}
+						}
+					}
+				}
+			}
+			if(evoWarnMon && evoWarnGen){
+				var testGen = curGen;
+				if(pkmn.currentgame == "go") testGen = 7;
+				if(testGen <= parseInt(evoWarnGen)){
+					var evoWarnNames = getData(evoWarnMon, "names");
+					var evoWarnName = evoWarnNames.eng;
+					var evoWarnForms = getData(evoWarnMon, "forms");
+					if(!evoWarnForms){
+						evoWarnForms = getData(evoWarnMon, "forms-all");
+						if(!evoWarnForms){
+							var formsrc = getData(evoWarnMon, "form-source");
+							if(formsrc){
+								evoWarnForms = commonforms[formsrc];
+							}
+						}
+					}
+					if(evoWarnForms){
+						evoWarnName = evoWarnName + " (" + evoWarnForms.eng + ")";
+					}
+					$("#ribbonguide-warning").append("<span><span>WARNING:</span> Evolving " + name + " into " + evoWarnName + " may change the availability of certain Ribbons!</span>");
+				}
+			}
+			if(noRibbons){
+				$("#ribbonguide-transfer").html("<div class='ribbonguide-transfer-master'>" + name + " cannot earn any more Ribbons!</div>");
+			}
+			showModal("ribbonguide");
+		} else {
+			alert("You need to set " + name + "'s current level and met level to get Ribbon Master guidance!");
+		}
+	} else {
+		alert("You need to set " + name + "'s current game to get Ribbon Master guidance!");
+	}
+}
+
 function createTable(allpkmn){
 	for(let i in allpkmn.entries){
 		addRow(allpkmn.entries[i], i);
@@ -352,6 +528,8 @@ function gameInfo(s, o = false){
 }
 
 function addRow(pkmn, i){
+	var pkmnGen = parseInt(games[pkmn.currentgame].gen);
+
 	var shinyDir = pkmn.shiny ? "shiny/" : "regular/";
 	var shinyMark = "";
 	if(pkmn.shiny){
@@ -370,12 +548,28 @@ function addRow(pkmn, i){
 		var rCode = pkmn.ribbons[r];
 		var rData = allRibbons[rCode];
 		if(rData){
-			var rName = rData["names"]["eng"];
-			var rDesc = "";
-			if(rData["descs"]) rDesc = " - " + rData["descs"]["eng"];
-			var rFldr = "ribbons";
-			if(rData["mark"]) rFldr = "marks";
-			ribbons = ribbons + "<img class='" + rCode + "' src='img/" + rFldr + "/" + rCode + ".png' alt=\"" + rName + "\" title=\"" + rName + rDesc + "\">";
+			if(!rData.hide || pkmnGen < 5){
+				var proceed = false;
+				if(rCode == "battle-memory-ribbon"){
+					if(pkmn.ribbons.indexOf("battle-memory-ribbon-gold") == -1){
+						proceed = true;
+					}
+				} else if(rCode == "contest-memory-ribbon"){
+					if(pkmn.ribbons.indexOf("contest-memory-ribbon-gold") == -1){
+						proceed = true;
+					}
+				} else {
+					proceed = true;
+				}
+				if(proceed){
+					var rName = rData["names"]["eng"];
+					var rDesc = "";
+					if(rData["descs"]) rDesc = " - " + rData["descs"]["eng"];
+					var rFldr = "ribbons";
+					if(rData["mark"]) rFldr = "marks";
+					ribbons = ribbons + "<img class='" + rCode + "' src='img/" + rFldr + "/" + rCode + ".png' alt=\"" + rName + "\" title=\"" + rName + rDesc + "\">";
+				}
+			}
 		}
 	}
 
@@ -436,7 +630,7 @@ function addRow(pkmn, i){
 		boxID = " data-box='-1'";
 	}
 
-	$("#pokemon-list").append("<div class='pokemon-list-entry' data-pokemon='" + i + "'" + boxID + "><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png' alt='" + ballName + "' title='" + ballName + "'><span class='pokemon-list-name'>" + name + "</span>" + genderimg + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' alt='" + name + "'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span class='pokemon-list-lang-wrapper'><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + boxLabel + "</div><div class='pokemon-list-entry-footer-right'><button class='pokemon-list-move'><img src='img/ui/move.svg' alt='Reorder " + name + "' title='Reorder " + name + "'></button><button class='pokemon-list-edit' onclick='editPkmn("+i+")'><img src='img/ui/edit.svg' alt='Edit " + name + "' title='Edit " + name + "'></button><button class='pokemon-list-delete' onclick='deletePkmn("+i+")'><img src='img/ui/delete.svg' alt='Delete " + name + "' title='Delete " + name + "'></button></div></div></div>");
+	$("#pokemon-list").append("<div class='pokemon-list-entry' data-pokemon='" + i + "'" + boxID + "><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png' alt='" + ballName + "' title='" + ballName + "'><span class='pokemon-list-name'>" + name + "</span>" + genderimg + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' alt='" + name + "'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span class='pokemon-list-lang-wrapper'><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + boxLabel + "</div><div class='pokemon-list-entry-footer-right'><button class='pokemon-list-move'><img src='img/ui/move.svg' alt='Reorder " + name + "' title='Reorder " + name + "'></button><button class='pokemon-list-guide' onclick='ribbonGuide("+i+")'><img src='img/ui/clipboard.png' alt='Ribbons' title='" + name + "&#39;s Ribbon Master Guide'></button><button class='pokemon-list-edit' onclick='editPkmn("+i+")'><img src='img/ui/edit.svg' alt='Edit " + name + "' title='Edit " + name + "'></button><button class='pokemon-list-delete' onclick='deletePkmn("+i+")'><img src='img/ui/delete.svg' alt='Delete " + name + "' title='Delete " + name + "'></button></div></div></div>");
 }
 
 function addBox(box, i){
@@ -452,21 +646,30 @@ function generateRibbons(){
 		$("#all-ribbons").append("<div class='ribbons-gen"+showDefault+"'><span>" + i + "</span></div><div id='ribbons-list-" + ribbonIDs[i] + "' class='ribbons-list'></div>");
 		$("#pokeform-title").append("<optgroup id='pokeform-title-" + ribbonIDs[i] + "' label='" + i + "'></optgroup>");
 	}
-	var folder = "ribbons";
 	for(let r in allRibbons){
 		var rData = allRibbons[r];
 		var rGen = "e";
 		var rFldr = "ribbons";
-		if(rData["available"]){
-			rGen = rData["gen"];
-		} else if(rData["mark"]){
+		if(rData["mark"]){
 			rGen = "m";
 			rFldr = "marks";
+		} else if(rData["available"]){
+			rGen = rData["gen"];
 		}
 		var rDesc = "";
 		if(rData["descs"]) rDesc = " - " + rData["descs"]["eng"];
 		$("#ribbons-list-" + rGen).append("<input id='" + r + "' type='checkbox' form='newpkmnform' hidden><label for='"+r+"'><img class='" + r + "' src='img/" + rFldr + "/" + r + ".png' alt=\"" + rData["names"]["eng"] + "\" title=\"" + rData["names"]["eng"] + rDesc + "\"></label>");
 		if(rData["titles"]) $("#pokeform-title-" + rGen).append(new Option(rData["titles"]["eng"], r));
+	}
+	resetRibbonGuide();
+}
+
+function resetRibbonGuide(){
+	$("#ribbonguide-transfer, #ribbonguide-warning").empty();
+	for(var i in ribbonIDs){
+		if(parseInt(ribbonIDs[i])){
+			$("#ribbonguide-transfer").append("<div id='ribbonguide-transfer-"+ribbonIDs[i]+"'><div class='ribbonguide-transfer-exclusive' style='display:none'><div>Last chance in "+i+"</div></div><div class='ribbonguide-transfer-later' style='display:none'><div>Available later</div></div><div class='ribbonguide-transfer-excluded' style='display:none'><div>Optional</div></div><div class='ribbonguide-transfer-footer'><span class='name'></span> is<span class='notready'> not</span> ready to leave "+i+"<span class='unsure'> after verifying special cases</span>.</div></div>");
+		}
 	}
 }
 
@@ -613,7 +816,7 @@ $(function(){
 
 	// Initialize select dropdowns
 	// TODO language support
-	$("#pokeform-ball, #pokeform-origin, #pokeform-currentgame, #pokeform-ability, #pokeform-characteristic, #pokeform-title, #pokeform-box").select2({
+	$("#pokeform-ball, #pokeform-origin, #pokeform-currentgame, #pokeform-ability, #pokeform-characteristic, #pokeform-title").select2({
 		templateSelection: formatDropOption,
 		templateResult: formatDropOption,
 		dropdownParent: $("#pokeform"),
@@ -629,7 +832,7 @@ $(function(){
 		width: "100%",
     	placeholder: "Select an option"
 	});
-	$("#settings select").select2({
+	$("#settings select, #pokeform-box").select2({
 		width: "100%"
 	});
 
@@ -689,10 +892,10 @@ $(function(){
 	// Load form data: games
 	for(var g in games){
 		var newGame = new Option(games[g]["name"], g);
-		if(games[g]["gen"]){
-			$("#pokeform-origin-" + games[g]["gen"] + ", #pokeform-currentgame-" + games[g]["gen"]).append(newGame);
-		} else {
+		if(g == "home" || g == "bank" || g == "bank7"){
 			$("#pokeform-currentgame-storage").append(newGame);
+		} else {
+			$("#pokeform-origin-" + games[g]["gen"] + ", #pokeform-currentgame-" + games[g]["gen"]).append(newGame);
 		}
 	}
 
@@ -868,6 +1071,9 @@ $(function(){
 	$("#pokeform, #boxform").on($.modal.AFTER_CLOSE, function(event, modal){
 		resetForm();
 	});
+	$("#ribbonguide").on($.modal.AFTER_CLOSE, function(event, modal){
+		resetRibbonGuide();
+	});
 
 	// Button click events
 	$("#add-pokemon-button").click(function(){
@@ -899,7 +1105,7 @@ $(function(){
 	$("input[name='pokeform-shiny'], input[name='pokeform-gender']").change(function(){
 		showPreview();
 	})
-	$("#settings-close, #changelog-close, #boxform-cancel, #boxsort-close").click(function(){
+	$("#settings-close, #changelog-close, #boxform-cancel, #boxsort-close, #ribbonguide-close").click(function(){
 		$.modal.close();
 	});
 	$("#box-list-add").click(function(){

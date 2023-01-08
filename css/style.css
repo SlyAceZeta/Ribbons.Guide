@@ -89,7 +89,8 @@ body {
 .modal td.ribbons {
 	padding: 0;
 }
-.modal #all-ribbons {
+.modal #all-ribbons,
+#ribbonguide-transfer {
 	min-height: 150px;
 	max-height: 50vh;
 	overflow-y: auto;
@@ -240,7 +241,6 @@ footer {
 }
 .ribbons img {
 	width: 40px;
-	margin-right: 5px;
 }
 #settings input,
 #pokeform-edit,
@@ -353,26 +353,33 @@ footer {
 	filter: blur(5px) grayscale(100%);
 	cursor: default;
 }
-#all-ribbons input:checked + label img {
-	opacity: 0;
-}
 #all-ribbons input + label {
 	position: relative;
+	height: 40px;
+	margin-right: 5px;
 }
-#all-ribbons input:checked + label:after {
+#ribbonguide .ribbon-optional {
+	display: inline-block;
+	position: relative;
+}
+#all-ribbons input:checked + label:after,
+#ribbonguide .ribbon-optional:after {
 	content: "";
 	position: absolute;
 	top: -2px;
-	left: -2px;
-	width: 44px;
-	height: 44px;
+	right: 0;
+	width: 25px;
+	height: 25px;
 	background: url("../img/ui/check.svg") center center no-repeat;
 	background-size: cover;
 	cursor: pointer;
 }
-#all-ribbons input:checked + label:hover img,
+#ribbonguide .ribbon-optional:after {
+	cursor: default;
+	background-image: url("../img/ui/question.svg");
+}
 #all-ribbons input:checked + label:hover:after {
-	opacity: 0.5;
+	opacity: 0.75;
 }
 .ribbons-gen {
 	text-align: left;
@@ -828,6 +835,102 @@ footer {
 .pokeform-stats input {
 	width: 60px;
 }
+#ribbonguide-info {
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid grey;
+}
+#ribbonguide-info img {
+	width: 120px;
+	margin-right: 10px;
+}
+#ribbonguide-info div div {
+	margin: 5px 0;
+	padding: 0 10px;
+}
+#ribbonguide-info div:first-child {
+	width: 100%;
+	font-size: 20px;
+}
+#ribbonguide-info span:first-child,
+#ribbonguide-transfer > div > div > div:first-child {
+	font-weight: bold;
+}
+#ribbonguide-transfer > div > div > div:first-child {
+	padding-bottom: 5px;
+}
+#ribbonguide-info span {
+	white-space: nowrap;
+}
+#ribbonguide-transfer img {
+	width: 40px;
+	height: 40px;
+}
+#ribbonguide-transfer > div {
+	padding: 10px;
+	border-bottom: 2px solid grey;
+}
+.ribbonguide-transfer-exclusive,
+.ribbonguide-transfer-later,
+.ribbonguide-transfer-excluded {
+	padding: 0 5px;
+}
+.ribbonguide-transfer-excluded {
+	margin-bottom: 5px;
+}
+#ribbonguide-transfer > div:last-child {
+	border-bottom: none;
+}
+#ribbonguide-transfer > div:last-child .ribbonguide-transfer-later,
+#ribbonguide-transfer > div:last-child .ribbonguide-transfer-footer {
+	display: none;
+}
+#ribbonguide-transfer > div:last-child .ribbonguide-transfer-excluded {
+	margin-bottom: 0;
+	border-bottom: none;
+}
+.ribbonguide-transfer-footer {
+	background: url("../img/ui/check.svg") left center no-repeat;
+	background-size: 25px;
+	line-height: 25px;
+	padding-left: 30px;
+	font-weight: bold;
+	font-size: 16px;
+	text-shadow: 0 0 5px #0f0;
+}
+.ribbonguide-transfer-footer .notready,
+.ribbonguide-transfer-footer .unsure {
+	display: none;
+}
+.ribbonguide-transfer-unsure {
+	background-image: url("../img/ui/question.svg");
+	text-shadow: 0 0 5px #ff0;
+}
+.ribbonguide-transfer-unsure:not(.ribbonguide-transfer-notready) .unsure {
+	display: inline;
+}
+.ribbonguide-transfer-notready {
+	background-image: url("../img/ui/cross.svg");
+	text-shadow: 0 0 5px #f00;
+}
+.ribbonguide-transfer-notready .notready {
+	display: inline;
+}
+.ribbonguide-transfer-master {
+	font-size: 18px;
+	text-align: center;
+	margin: 40px 0;
+}
+#ribbonguide-warning > span {
+	display: block;
+	padding: 10px;
+	background: #881430;
+	color: #fff;
+	border-bottom: 2px solid grey;
+}
+#ribbonguide-warning span span {
+	font-weight: bold;
+}
 @media only screen and (max-width: 600px){
 	#pokeform-shiny-toggle span,
 	#pokeform-gender-toggle span {
@@ -922,7 +1025,7 @@ footer {
 }
 .pokemon-list-edit,
 .pokemon-list-delete,
-.pokemon-list-details,
+.pokemon-list-guide,
 .pokemon-list-move {
 	margin-left: 10px;
 	vertical-align: middle;

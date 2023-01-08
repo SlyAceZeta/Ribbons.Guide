@@ -640,6 +640,7 @@ const pokemon = {
 			"cht": "太古羽蟲",
 			"chs": "太古羽虫"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 347,
 		"games": [
@@ -1540,6 +1541,7 @@ const pokemon = {
 			"cht": "天秤偶",
 			"chs": "天秤偶"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"natdex": 343,
 		"games": [
@@ -2068,6 +2070,7 @@ const pokemon = {
 			"cht": "鐵啞鈴",
 			"chs": "铁哑铃"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"natdex": 374,
 		"games": [
@@ -2213,6 +2216,8 @@ const pokemon = {
 			"chs": "冰宝"
 		},
 		"gender": "both",
+		"evowarnmon": "avalugg",
+		"evowarngen": 8,
 		"natdex": 712,
 		"games": [
 			"x",
@@ -2883,6 +2888,7 @@ const pokemon = {
 			"cht": "青銅鐘",
 			"chs": "青铜钟"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"natdex": 437,
 		"games": [
@@ -2922,6 +2928,7 @@ const pokemon = {
 			"cht": "銅鏡怪",
 			"chs": "铜镜怪"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"natdex": 436,
 		"games": [
@@ -3637,6 +3644,7 @@ const pokemon = {
 			"cht": "盾甲繭",
 			"chs": "盾甲茧"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 268,
 		"games": [
@@ -4678,6 +4686,7 @@ const pokemon = {
 			"cht": "念力土偶",
 			"chs": "念力土偶"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"natdex": 344,
 		"games": [
@@ -5451,6 +5460,7 @@ const pokemon = {
 			"cht": "搖籃百合",
 			"chs": "摇篮百合"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 346,
 		"games": [
@@ -5865,6 +5875,8 @@ const pokemon = {
 			"chs": "卡拉卡拉"
 		},
 		"gender": "both",
+		"evowarnmon": "marowak-alola",
+		"evowarngen": 7,
 		"natdex": 104,
 		"games": [
 			"red",
@@ -6103,6 +6115,8 @@ const pokemon = {
 			"chs": "投羽枭"
 		},
 		"gender": "both",
+		"evowarnmon": "decidueye",
+		"evowarngen": 8,
 		"natdex": 723,
 		"games": [
 			"sun",
@@ -6604,6 +6618,8 @@ const pokemon = {
 			"chs": "双刃丸"
 		},
 		"gender": "both",
+		"evowarnmon": "samurott",
+		"evowarngen": 8,
 		"natdex": 502,
 		"games": [
 			"black",
@@ -8917,6 +8933,8 @@ const pokemon = {
 			"chs": "蛋蛋"
 		},
 		"gender": "both",
+		"evowarnmon": "exeggutor-alola",
+		"evowarngen": 7,
 		"natdex": 102,
 		"games": [
 			"red",
@@ -10012,6 +10030,7 @@ const pokemon = {
 			"cht": "佛烈托斯",
 			"chs": "佛烈托斯"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 205,
 		"games": [
@@ -11736,6 +11755,8 @@ const pokemon = {
 			"chs": "黏黏宝"
 		},
 		"gender": "both",
+		"evowarnmon": "sliggoo",
+		"evowarngen": 8,
 		"natdex": 704,
 		"games": [
 			"x",
@@ -14567,6 +14588,7 @@ const pokemon = {
 			"cht": "化石盔",
 			"chs": "化石盔"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 140,
 		"games": [
@@ -14727,6 +14749,7 @@ const pokemon = {
 			"cht": "鐵殼蛹",
 			"chs": "铁壳蛹"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 14,
 		"games": [
@@ -15271,6 +15294,8 @@ const pokemon = {
 			"chs": "瓦斯弹"
 		},
 		"gender": "both",
+		"evowarnmon": "weezing-galar",
+		"evowarngen": 8,
 		"natdex": 109,
 		"games": [
 			"red",
@@ -16324,6 +16349,7 @@ const pokemon = {
 			"cht": "觸手百合",
 			"chs": "触手百合"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 345,
 		"games": [
@@ -16939,6 +16965,7 @@ const pokemon = {
 			"cht": "月石",
 			"chs": "月石"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"natdex": 337,
 		"games": [
@@ -17636,6 +17663,7 @@ const pokemon = {
 			"cht": "小磁怪",
 			"chs": "小磁怪"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"natdex": 81,
 		"games": [
@@ -17690,6 +17718,7 @@ const pokemon = {
 			"cht": "三合一磁怪",
 			"chs": "三合一磁怪"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"natdex": 82,
 		"games": [
@@ -17744,6 +17773,7 @@ const pokemon = {
 			"cht": "自爆磁怪",
 			"chs": "自爆磁怪"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"natdex": 462,
 		"games": [
@@ -18917,6 +18947,7 @@ const pokemon = {
 			"cht": "金屬怪",
 			"chs": "金属怪"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"natdex": 375,
 		"games": [
@@ -18962,6 +18993,7 @@ const pokemon = {
 			"cht": "鐵甲蛹",
 			"chs": "铁甲蛹"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 11,
 		"games": [
@@ -19341,6 +19373,8 @@ const pokemon = {
 			"chs": "魔尼尼"
 		},
 		"gender": "both",
+		"evowarnmon": "mr-mime-galar",
+		"evowarngen": 8,
 		"natdex": 439,
 		"games": [
 			"diamond",
@@ -20709,6 +20743,7 @@ const pokemon = {
 			"cht": "土居忍士",
 			"chs": "土居忍士"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 290,
 		"games": [
@@ -20970,6 +21005,7 @@ const pokemon = {
 			"cht": "朝北鼻",
 			"chs": "朝北鼻"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 299,
 		"games": [
@@ -21819,6 +21855,7 @@ const pokemon = {
 			"cht": "派拉斯",
 			"chs": "派拉斯"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 46,
 		"games": [
@@ -21871,6 +21908,7 @@ const pokemon = {
 			"cht": "派拉斯特",
 			"chs": "派拉斯特"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 47,
 		"games": [
@@ -22138,6 +22176,8 @@ const pokemon = {
 			"chs": "百合根娃娃"
 		},
 		"gender": "female",
+		"evowarnmon": "lilligant",
+		"evowarngen": 8,
 		"natdex": 548,
 		"games": [
 			"black",
@@ -22746,6 +22786,8 @@ const pokemon = {
 			"chs": "皮卡丘"
 		},
 		"gender": "both",
+		"evowarnmon": "raichu-alola",
+		"evowarngen": 7,
 		"femsprite": true,
 		"natdex": 25,
 		"games": [
@@ -22889,6 +22931,7 @@ const pokemon = {
 			"cht": "榛果球",
 			"chs": "榛果球"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 204,
 		"games": [
@@ -23443,6 +23486,7 @@ const pokemon = {
 			"cht": "多邊獸Ｚ",
 			"chs": "多边兽乙型"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"natdex": 474,
 		"games": [
@@ -23482,6 +23526,7 @@ const pokemon = {
 			"cht": "多邊獸",
 			"chs": "多边兽"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"natdex": 137,
 		"games": [
@@ -23536,6 +23581,7 @@ const pokemon = {
 			"cht": "多邊獸Ⅱ",
 			"chs": "多边兽２型"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"natdex": 233,
 		"games": [
@@ -23696,6 +23742,7 @@ const pokemon = {
 			"cht": "大朝北鼻",
 			"chs": "大朝北鼻"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 476,
 		"games": [
@@ -23871,6 +23918,7 @@ const pokemon = {
 			"cht": "沙基拉斯",
 			"chs": "沙基拉斯"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 247,
 		"games": [
@@ -24085,6 +24133,8 @@ const pokemon = {
 			"chs": "火岩鼠"
 		},
 		"gender": "both",
+		"evowarnmon": "typhlosion",
+		"evowarngen": 8,
 		"natdex": 156,
 		"games": [
 			"gold",
@@ -24665,6 +24715,7 @@ const pokemon = {
 			"cht": "雷吉艾斯",
 			"chs": "雷吉艾斯"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"legendary": true,
 		"natdex": 378,
@@ -24751,6 +24802,7 @@ const pokemon = {
 			"cht": "雷吉奇卡斯",
 			"chs": "雷吉奇卡斯"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"legendary": true,
 		"natdex": 486,
@@ -24791,6 +24843,7 @@ const pokemon = {
 			"cht": "雷吉洛克",
 			"chs": "雷吉洛克"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"legendary": true,
 		"natdex": 377,
@@ -24837,6 +24890,7 @@ const pokemon = {
 			"cht": "雷吉斯奇魯",
 			"chs": "雷吉斯奇鲁"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"legendary": true,
 		"natdex": 379,
@@ -24928,6 +24982,7 @@ const pokemon = {
 			"cht": "鐵炮魚",
 			"chs": "铁炮鱼"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 223,
 		"games": [
@@ -25579,6 +25634,8 @@ const pokemon = {
 			"chs": "毛头小鹰"
 		},
 		"gender": "male",
+		"evowarnmon": "braviary",
+		"evowarngen": 8,
 		"natdex": 627,
 		"games": [
 			"or",
@@ -26358,6 +26415,8 @@ const pokemon = {
 			"chs": "飞天螳螂"
 		},
 		"gender": "both",
+		"evowarnmon": "kleavor",
+		"evowarngen": 8,
 		"natdex": 123,
 		"games": [
 			"red",
@@ -26563,6 +26622,7 @@ const pokemon = {
 			"cht": "橡實果",
 			"chs": "橡实果"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 273,
 		"games": [
@@ -27019,6 +27079,7 @@ const pokemon = {
 			"cht": "甲殼龍",
 			"chs": "甲壳龙"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 372,
 		"games": [
@@ -27521,6 +27582,7 @@ const pokemon = {
 			"cht": "甲殼繭",
 			"chs": "甲壳茧"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 266,
 		"games": [
@@ -28885,6 +28947,7 @@ const pokemon = {
 			"cht": "太陽岩",
 			"chs": "太阳岩"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"natdex": 338,
 		"games": [
@@ -29345,6 +29408,8 @@ const pokemon = {
 			"chs": "惊角鹿"
 		},
 		"gender": "both",
+		"evowarnmon": "wyrdeer",
+		"evowarngen": 8,
 		"natdex": 234,
 		"games": [
 			"gold",
@@ -29502,6 +29567,7 @@ const pokemon = {
 			"cht": "寶石海星",
 			"chs": "宝石海星"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"natdex": 121,
 		"games": [
@@ -29555,6 +29621,7 @@ const pokemon = {
 			"cht": "海星星",
 			"chs": "海星星"
 		},
+		"voiceless": true,
 		"gender": "unknown",
 		"natdex": 120,
 		"games": [
@@ -32613,6 +32680,7 @@ const pokemon = {
 			"chs": "未知图腾"
 		},
 		"forms-all": "A",
+		"voiceless": true,
 		"gender": "unknown",
 		"natdex": 201,
 		"sort": 1,
@@ -32680,6 +32748,8 @@ const pokemon = {
 			"chs": "圈圈熊"
 		},
 		"gender": "both",
+		"evowarnmon": "ursaluna",
+		"evowarngen": 8,
 		"natdex": 217,
 		"games": [
 			"gold",
@@ -32964,6 +33034,7 @@ const pokemon = {
 			"cht": "摩魯蛾",
 			"chs": "摩鲁蛾"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 49,
 		"games": [
@@ -35054,6 +35125,7 @@ const pokemon = {
 			"cht": "天然鳥",
 			"chs": "天然鸟"
 		},
+		"voiceless": true,
 		"gender": "both",
 		"natdex": 178,
 		"games": [

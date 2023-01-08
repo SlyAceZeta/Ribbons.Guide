@@ -113,7 +113,9 @@ footer a:not(.button) {
 }
 .modal th label,
 .ribbons-gen,
-.changelog-date {
+.changelog-date,
+.ribbonguide-label,
+#ribbonguide-transfer > div > div > div:first-child {
 	color: var(--label-text, var(--text));
 }
 .modal th label .asterisk {
