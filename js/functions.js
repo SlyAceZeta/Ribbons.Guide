@@ -320,14 +320,14 @@ function ribbonGuide(id){
 	var name = $(".pokemon-list-entry[data-pokemon="+id+"] .pokemon-list-name").text();
 	var title = $(".pokemon-list-entry[data-pokemon="+id+"] .pokemon-list-entry-header-right").text();
 	if(pkmn.currentgame){
-		if(pkmn.level && pkmn.metlevel){
+		if(pkmn.level){
 			// info header
 			var img = $(".pokemon-list-entry[data-pokemon="+id+"] .pokemon-list-entry-center img").attr("src");
 			$("#ribbonguide-info img").attr("src", img);
 			$("#ribbonguide .name").text(name);
 			$("#ribbonguide-info .name").text(name + " " + title);
 			$("#ribbonguide .level").text(pkmn.level);
-			$("#ribbonguide .metlevel").text(" (met at "+pkmn.metlevel+")");
+			if(pkmn.metlevel) $("#ribbonguide .metlevel").text(" (met at "+pkmn.metlevel+")");
 			$("#ribbonguide .game").text(games[pkmn.currentgame].name);
 			$("#ribbonguide .metgame").text(" (met in "+games[pkmn.origin].name+")");
 
@@ -380,23 +380,35 @@ function ribbonGuide(id){
 											specialEarn = true;
 										}
 									} else if(ribbon == "footprint-ribbon"){
+										var metLevel = 0;
+										if(pkmn.metlevel) metLevel = parseInt(pkmn.metlevel);
+										var metNote = false;
 										if(gameGen == 4){
+											// all Gen IV Pokemon can earn this through friendship
 											specialEarn = true;
-											if(!getData(pkmn.dex, "voiceless")){
-												if(parseInt(pkmn.level) < 71){
-													$("#ribbonguide-warning").append("<span><span>WARNING:</span> Leveling " + name + " to Lv.71 or above and leaving Gen&nbsp;IV will cause the Footprint Ribbon to become unavailable!</span>");
-												} else {
-													$("#ribbonguide-warning").append("<span><span>WARNING:</span> Leaving Gen&nbsp;IV will cause the Footprint Ribbon to become unavailable!</span>");
-												}
+											// if this block is running, this Pokemon is either in or before Gen IV
+											// so check the later two conditions for potential failure
+											if(!getData(pkmn.dex, "voiceless") && parseInt(pkmn.level) < 71){
+												// add preliminary warning about leveling up and leaving Gen IV
+												$("#ribbonguide-warning").append("<span><span>WARNING:</span> Leveling " + name + " to Lv.71 or above will make the Footprint Ribbon exclusive to "+terms.gens[4]+"!</span>");
 											}
-										} else if(parseInt(pkmn.metlevel) < 71){
-											if(parseInt(pkmn.level) < 71){
-												specialEarn = true;
-											}
+										} else if(getData(pkmn.dex, "voiceless") && gameGen == 8){
+											// voiceless Pokemon can still earn this in BDSP
+											specialEarn = true;
 										} else {
-											if(ribbonGame == "bd" || ribbonGame == "sp"){
-												if(getData(pkmn.dex, "voiceless")){
+											// voiced Pokemon can earn this in all other games with a met level below 71
+											// however, met level changes if transferred to Gen V
+											if(curGen < 5){
+												if(parseInt(pkmn.level) < 71){
 													specialEarn = true;
+												} // else it will appear exclusive to Gen IV as per above
+											} else {
+												// we're not in Gen IV anymore, Toto
+												// met level has changed (or Pokemon was caught in Gen V+), so let's check it
+												if(metLevel > 0 && metLevel < 71){
+													specialEarn = true;
+												} else if(metLevel == 0){
+													$("#ribbonguide-notice").html("<span><span>NOTE:</span> " + name + "'s Met Level has not been set. The availability of the Footprint Ribbon after "+terms.gens[4]+" cannot be determined.");
 												}
 											}
 										}
@@ -479,11 +491,11 @@ function ribbonGuide(id){
 				}
 			}
 			if(noRibbons){
-				$("#ribbonguide-transfer").html("<div class='ribbonguide-transfer-master'>" + name + " cannot earn any more Ribbons!</div>");
+				$("#ribbonguide-transfer").html("<div class='ribbonguide-transfer-master'>There are no more Ribbons for " + name + " to earn!</div>");
 			}
 			showModal("ribbonguide");
 		} else {
-			alert("You need to set " + name + "'s current level and met level to get Ribbon Master guidance!");
+			alert("You need to set " + name + "'s current level to get Ribbon Master guidance!");
 		}
 	} else {
 		alert("You need to set " + name + "'s current game to get Ribbon Master guidance!");
@@ -665,7 +677,7 @@ function generateRibbons(){
 }
 
 function resetRibbonGuide(){
-	$("#ribbonguide-transfer, #ribbonguide-warning").empty();
+	$("#ribbonguide-transfer, #ribbonguide-warning, #ribbonguide-notice, #ribbonguide-info .metlevel").empty();
 	for(var i in ribbonIDs){
 		if(parseInt(ribbonIDs[i])){
 			$("#ribbonguide-transfer").append("<div id='ribbonguide-transfer-"+ribbonIDs[i]+"'><div class='ribbonguide-transfer-exclusive' style='display:none'><div>Last chance in "+i+"</div></div><div class='ribbonguide-transfer-later' style='display:none'><div>Available later</div></div><div class='ribbonguide-transfer-excluded' style='display:none'><div>Optional</div></div><div class='ribbonguide-transfer-footer'><span class='name'></span> is<span class='notready'> not</span> ready to leave "+i+"<span class='unsure'> after verifying special cases</span>.</div></div>");
