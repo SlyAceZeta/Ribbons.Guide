@@ -273,7 +273,7 @@ function boxSortDialog(a = false){
 	if(allboxes.entries.length){
 		var html = "";
 		for(let i in allboxes.entries){
-			html = html + "<div data-sortnum='"+i+"'>" + allboxes.entries[i] + "<button onclick='deleteBox("+i+")'><img src='img/ui/delete.svg' alt='Delete'></button></div>";
+			html = html + "<div data-sortnum='"+i+"'><span>" + allboxes.entries[i] + "</span><button onclick='deleteBox("+i+")'><img src='img/ui/delete.svg' alt='Delete'></button></div>";
 		}
 		$("#boxsort-boxes").html(html);
 		if(a) showModal("boxsort");

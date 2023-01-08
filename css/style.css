@@ -793,15 +793,31 @@ footer {
 	background-position: 5px center;
 	border-radius: 5px;
 }
+#boxsort-boxes span {
+	display: inline-block;
+	max-width: 250px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+}
 #boxsort-boxes button {
 	cursor: pointer;
 	float: right;
 }
 #boxsort-boxes img {
+	vertical-align: middle;
 	width: 20px;
 }
 #boxsort-boxes > div + div {
 	margin-top: 5px;
+}
+#select2-pokeform-box-container {
+	max-width: 350px;
+}
+#select2-pokeform-box-results li {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .pokemon-list-entry {
 	border-radius: 5px;
@@ -931,6 +947,13 @@ footer {
 #ribbonguide-warning span span {
 	font-weight: bold;
 }
+#filters-boxes-list .box span {
+	max-width: 10vw;
+	display: inline-block;
+}
+.pokemon-list-box-name {
+	max-width: 15vw;
+}
 @media only screen and (max-width: 600px){
 	#pokeform-shiny-toggle span,
 	#pokeform-gender-toggle span {
@@ -968,7 +991,12 @@ footer {
 		margin-bottom: 110px;
 	}
 	.pokemon-list-box-name {
-		max-width: 11vw;
+		max-width: 3vw;
+	}
+}
+@media only screen and (min-width: 900px) {
+	.pokemon-list-box-name {
+		max-width: 9vw;
 	}
 }
 @media only screen and (min-width: 1200px) {
@@ -983,12 +1011,22 @@ footer {
 		margin-bottom: 85px;
 	}
 	.pokemon-list-box-name {
-		max-width: 7vw;
+		max-width: 2vw;
+	}
+}
+@media only screen and (min-width: 1400px) {
+	.pokemon-list-box-name {
+		max-width: 6vw;
 	}
 }
 @media only screen and (min-width: 1600px) {
 	.pokemon-list-box-name {
-		max-width: unset;
+		max-width: 9vw;
+	}
+}
+@media only screen and (min-width: 1800px) {
+	.pokemon-list-box-name {
+		max-width: 12vw;
 	}
 }
 .pokemon-list-entry-header,
@@ -1052,6 +1090,7 @@ footer {
 .pokemon-list-box-icon {
 	margin-right: 5px;
 }
+#filters-boxes-list .box span,
 .pokemon-list-box-name {
 	white-space: nowrap;
 	overflow: hidden;
