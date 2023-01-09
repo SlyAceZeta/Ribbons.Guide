@@ -395,6 +395,11 @@ function ribbonGuide(id){
 												specialEarn = true;
 											}
 										}
+									} else if(ribbon == "winning-ribbon"){
+										if(parseInt(pkmn.level) < 51){
+											specialEarn = true;
+											$("#ribbonguide-winning").html("<span><span>WARNING:</span> Leveling " + name + " above Lv.50 will make the Winning Ribbon unavailable!</span>");
+										}
 									} else if(ribbon == "national-ribbon"){
 										if(pkmn.origin == "colosseum" || pkmn.origin == "xd"){
 											specialEarn = true;
@@ -410,7 +415,7 @@ function ribbonGuide(id){
 											// so check the later two conditions for potential failure
 											if(!getData(pkmn.dex, "voiceless") && parseInt(pkmn.level) < 71){
 												// add preliminary warning about leveling up and leaving Gen IV
-												$("#ribbonguide-footprint").html("<span><span>WARNING:</span> Leveling " + name + " to Lv.71 or above will make the Footprint Ribbon exclusive to "+terms.gens[4]+"!</span>");
+												$("#ribbonguide-footprint").html("<span><span>WARNING:</span> Leveling " + name + " above Lv.70 will make the Footprint Ribbon exclusive to "+terms.gens[4]+"!</span>");
 											}
 										} else if(getData(pkmn.dex, "voiceless") && gameGen == 8){
 											// voiceless Pokemon can still earn this in BDSP
@@ -431,7 +436,7 @@ function ribbonGuide(id){
 													// Met Level also changes if transferred out of Virtual Console
 													// if it's a voiced Pokemon, warn the user like above
 													specialEarn = true;
-													$("#ribbonguide-footprint").html("<span><span>WARNING:</span> Leveling " + name + " to Lv.71 or above will make the Footprint Ribbon unavailable!</span>");
+													$("#ribbonguide-footprint").html("<span><span>WARNING:</span> Leveling " + name + " above Lv.70 will make the Footprint Ribbon unavailable!</span>");
 												} else if(metLevel == 0){
 													$("#ribbonguide-notice").html("<span><span>NOTE:</span> " + name + "'s Met Level has not been set. The availability of the Footprint Ribbon after "+terms.gens[4]+" cannot be determined.");
 												}
