@@ -381,7 +381,21 @@ function ribbonGuide(id){
 								if(pkmnGames.indexOf(ribbonGame) > -1){
 									// now check for special Ribbon restrictions
 									var specialEarn = false;
-									if(ribbon == "national-ribbon"){
+									if(ribbon.indexOf("contest-memory-ribbon") == 0 || ribbon.indexOf("battle-memory-ribbon") == 0){
+										// Pokemon originating in Gen VI cannot have these Ribbons
+										if(games[pkmn.origin].gen < 6){
+											// only show blue if gold is not obtained, and vice versa
+											if(ribbon == "contest-memory-ribbon" && pkmn.ribbons.indexOf("contest-memory-ribbon-gold") == -1){
+												specialEarn = true;
+											} else if(ribbon == "contest-memory-ribbon-gold" && pkmn.ribbons.indexOf("contest-memory-ribbon") == -1){
+												specialEarn = true;
+											} else if(ribbon == "battle-memory-ribbon" && pkmn.ribbons.indexOf("battle-memory-ribbon-gold") == -1){
+												specialEarn = true;
+											} else if(ribbon == "battle-memory-ribbon-gold" && pkmn.ribbons.indexOf("battle-memory-ribbon") == -1){
+												specialEarn = true;
+											}
+										}
+									} else if(ribbon == "national-ribbon"){
 										if(pkmn.origin == "colosseum" || pkmn.origin == "xd"){
 											specialEarn = true;
 										}
