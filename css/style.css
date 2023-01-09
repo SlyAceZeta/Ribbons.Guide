@@ -937,8 +937,7 @@ footer {
 	text-align: center;
 	margin: 40px 0;
 }
-#ribbonguide-notice > span,
-#ribbonguide-warning > span {
+.ribbonguide-warning > span {
 	display: block;
 	padding: 10px;
 	background: #881430;
@@ -949,8 +948,7 @@ footer {
 	background: #ebbe0b;
 	color: #000;
 }
-#ribbonguide-notice span span,
-#ribbonguide-warning span span {
+.ribbonguide-warning span span {
 	font-weight: bold;
 }
 #filters-boxes-list .box span {

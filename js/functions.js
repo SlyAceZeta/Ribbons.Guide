@@ -333,7 +333,13 @@ function ribbonGuide(id){
 
 			// hide gens earlier than current
 			var curGen = parseInt(games[pkmn.currentgame].gen);
-			if(pkmn.currentgame == "go") curGen = 8;
+			var virtualConsole = false;
+			if(curGen < 3){
+				virtualConsole = true;
+				curGen = 7;
+			} else if(pkmn.currentgame == "go"){
+				curGen = 8;
+			}
 			for(var i = 3; i < curGen; i++){
 				$("#ribbonguide-transfer-" + i).hide();
 			}
@@ -390,7 +396,7 @@ function ribbonGuide(id){
 											// so check the later two conditions for potential failure
 											if(!getData(pkmn.dex, "voiceless") && parseInt(pkmn.level) < 71){
 												// add preliminary warning about leveling up and leaving Gen IV
-												$("#ribbonguide-warning").append("<span><span>WARNING:</span> Leveling " + name + " to Lv.71 or above will make the Footprint Ribbon exclusive to "+terms.gens[4]+"!</span>");
+												$("#ribbonguide-footprint").html("<span><span>WARNING:</span> Leveling " + name + " to Lv.71 or above will make the Footprint Ribbon exclusive to "+terms.gens[4]+"!</span>");
 											}
 										} else if(getData(pkmn.dex, "voiceless") && gameGen == 8){
 											// voiceless Pokemon can still earn this in BDSP
@@ -404,9 +410,14 @@ function ribbonGuide(id){
 												} // else it will appear exclusive to Gen IV as per above
 											} else {
 												// we're not in Gen IV anymore, Toto
-												// met level has changed (or Pokemon was caught in Gen V+), so let's check it
 												if(metLevel > 0 && metLevel < 71){
+													// met level has changed (or Pokemon was caught in Gen V+), so let's check it
 													specialEarn = true;
+												} else if(virtualConsole && !getData(pkmn.dex, "voiceless")){
+													// Met Level also changes if transferred out of Virtual Console
+													// if it's a voiced Pokemon, warn the user like above
+													specialEarn = true;
+													$("#ribbonguide-footprint").html("<span><span>WARNING:</span> Leveling " + name + " to Lv.71 or above will make the Footprint Ribbon unavailable!</span>");
 												} else if(metLevel == 0){
 													$("#ribbonguide-notice").html("<span><span>NOTE:</span> " + name + "'s Met Level has not been set. The availability of the Footprint Ribbon after "+terms.gens[4]+" cannot be determined.");
 												}
@@ -487,7 +498,7 @@ function ribbonGuide(id){
 					if(evoWarnForms){
 						evoWarnName = evoWarnName + " (" + evoWarnForms.eng + ")";
 					}
-					$("#ribbonguide-warning").append("<span><span>WARNING:</span> Evolving " + name + " into " + evoWarnName + " may change the availability of certain Ribbons!</span>");
+					$("#ribbonguide-evolution").append("<span><span>WARNING:</span> Evolving " + name + " into " + evoWarnName + " may change the availability of certain Ribbons!</span>");
 				}
 			}
 			if(noRibbons){
@@ -540,7 +551,10 @@ function gameInfo(s, o = false){
 }
 
 function addRow(pkmn, i){
-	var pkmnGen = parseInt(games[pkmn.currentgame].gen);
+	var pkmnGen = 100;
+	if(pkmn.currentgame){
+		pkmnGen = parseInt(games[pkmn.currentgame].gen);
+	}
 
 	var shinyDir = pkmn.shiny ? "shiny/" : "regular/";
 	var shinyMark = "";
@@ -677,10 +691,10 @@ function generateRibbons(){
 }
 
 function resetRibbonGuide(){
-	$("#ribbonguide-transfer, #ribbonguide-warning, #ribbonguide-notice, #ribbonguide-info .metlevel").empty();
+	$("#ribbonguide-transfer, .ribbonguide-warning, #ribbonguide-info .metlevel").empty();
 	for(var i in ribbonIDs){
 		if(parseInt(ribbonIDs[i])){
-			$("#ribbonguide-transfer").append("<div id='ribbonguide-transfer-"+ribbonIDs[i]+"'><div class='ribbonguide-transfer-exclusive' style='display:none'><div>Last chance in "+i+"</div></div><div class='ribbonguide-transfer-later' style='display:none'><div>Available later</div></div><div class='ribbonguide-transfer-excluded' style='display:none'><div>Optional</div></div><div class='ribbonguide-transfer-footer'><span class='name'></span> is<span class='notready'> not</span> ready to leave "+i+"<span class='unsure'> after verifying special cases</span>.</div></div>");
+			$("#ribbonguide-transfer").append("<div id='ribbonguide-transfer-"+ribbonIDs[i]+"'><div class='ribbonguide-transfer-exclusive' style='display:none'><div>Last chance in "+i+"</div></div><div class='ribbonguide-transfer-later' style='display:none'><div>Available later</div></div><div class='ribbonguide-transfer-excluded' style='display:none'><div>Not required to be a Ribbon Master</div></div><div class='ribbonguide-transfer-footer'><span class='name'></span> is<span class='notready'> not</span> ready to leave "+i+"<span class='unsure'> after verifying special cases</span>.</div></div>");
 		}
 	}
 }
