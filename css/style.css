@@ -244,8 +244,10 @@ footer {
 }
 #settings input,
 #pokeform-edit,
+#boxform-edit,
 #pokeform-gender-unknown,
-#pokeform-header-edit {
+#pokeform-header-edit,
+#boxform-header-edit {
 	display: none;
 }
 .sprite-mon {
@@ -785,6 +787,9 @@ footer {
 	margin-left: 0;
 }
 #boxsort-boxes > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	padding: 5px 5px 5px 30px;
 	cursor: grab;
 	background-image: url("../img/ui/drag.svg");
@@ -795,14 +800,15 @@ footer {
 }
 #boxsort-boxes span {
 	display: inline-block;
+}
+#boxsort-boxes span:first-child {
 	max-width: 250px;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	vertical-align: middle;
 }
 #boxsort-boxes button {
 	cursor: pointer;
-	float: right;
+	margin-left: 5px;
 }
 #boxsort-boxes img {
 	vertical-align: middle;

@@ -112,14 +112,19 @@ function createPokemon(edit = false){
 	}
 }
 
-function createBox(){
+function createBox(edit = false){
 	var name = $("#boxform-name").val().trim();
 	if(name){
 		var allboxes = JSON.parse(localStorage.getItem("boxes"));
-		var n = allboxes.entries.length;
+		var n = (edit) ? $("#boxform-edit").attr("data-editing") : allboxes.entries.length;
 		allboxes.entries[n] = name;
 		localStorage.setItem("boxes", JSON.stringify(allboxes));
-		addBox(name, n);
+		if(edit){
+			clearBoxes(allboxes);
+			boxSortDialog();
+		} else {
+			addBox(name, n);
+		}
 		$.modal.close();
 	} else {
 		alert("A name is required.");
@@ -204,9 +209,9 @@ function resetForm(){
 	$("#pokeform-shiny-none").prop("checked", true).change();
 	$("#pokeform-gender-male").prop("checked", true).change();
 	$("#pokeform-notes").val("");
-	$("#pokeform-add, #pokeform-header-add").show();
-	$("#pokeform-edit").hide().removeAttr("data-editing");
-	$("#pokeform-header-edit").hide();
+	$("#pokeform-add, #pokeform-header-add, #boxform-add, #boxform-header-add").show();
+	$("#pokeform-edit, #boxform-edit").hide().removeAttr("data-editing");
+	$("#pokeform-header-edit, #boxform-header-edit").hide();
 	$("#pokeform-preview img").attr("src", "img/ui/1x1.svg");
 }
 
@@ -273,7 +278,7 @@ function boxSortDialog(a = false){
 	if(allboxes.entries.length){
 		var html = "";
 		for(let i in allboxes.entries){
-			html = html + "<div data-sortnum='"+i+"'><span>" + allboxes.entries[i] + "</span><button onclick='deleteBox("+i+")'><img src='img/ui/delete.svg' alt='Delete'></button></div>";
+			html = html + "<div data-sortnum='"+i+"'><span>" + allboxes.entries[i] + "</span><span><button onclick='editBox("+i+")'><img src='img/ui/edit.svg' alt='Edit'></button><button onclick='deleteBox("+i+")'><img src='img/ui/delete.svg' alt='Delete'></button></span></div>";
 		}
 		$("#boxsort-boxes").html(html);
 		if(a) showModal("boxsort");
@@ -681,6 +686,16 @@ function addRow(pkmn, i){
 function addBox(box, i){
 	$("#filters-boxes-list").append("<button class='box' data-boxnum='"+i+"' onclick='switchBox("+i+")'><img src='img/ui/box-closed.png' alt='Box'><span>"+box+"</span></button>");
 	$("#pokeform-box").append(new Option(box, i));
+}
+
+function editBox(id){
+	var allboxes = JSON.parse(localStorage.getItem("boxes"));
+	var box = allboxes.entries[id];
+	$("#boxform-name").val(box);
+	$("#boxform-add, #boxform-header-add").hide();
+	$("#boxform-header-edit").show();
+	$("#boxform-edit").show().attr("data-editing", id);
+	showModal("boxform", true);
 }
 
 function generateRibbons(){
@@ -1132,11 +1147,18 @@ $(function(){
 	});
 	$("#boxform-name").on("keydown", function(e){
 		if(e.key === "Enter"){
-			createBox();
+			if($("#boxform-edit")[0].hasAttribute("data-editing")){
+				createBox(true);
+			} else {
+				createBox();
+			}
 		}
 	});
 	$("#boxform-add").click(function(){
 		createBox();
+	});
+	$("#boxform-edit").click(function(){
+		createBox(true);
 	});
 	$("#pokeform-add").click(function(){
 		createPokemon();
