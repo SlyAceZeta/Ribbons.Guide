@@ -443,7 +443,13 @@ function ribbonGuide(id){
 													specialEarn = true;
 													$("#ribbonguide-footprint").html("<span><span>WARNING:</span> Leveling " + name + " above Lv.70 will make the Footprint Ribbon unavailable!</span>");
 												} else if(metLevel == 0){
-													$("#ribbonguide-notice").html("<span><span>NOTE:</span> " + name + "'s Met Level has not been set. The availability of the Footprint Ribbon after "+terms.gens[4]+" cannot be determined.");
+													// if the Pokemon is Lv70 or below in Gen V+, outside of Virtual Console, then its Met Level must be Lv70 or below
+													if(parseInt(pkmn.level) < 71){
+														specialEarn = true;
+													} else {
+														// otherwise, warn the user
+														$("#ribbonguide-notice").html("<span><span>NOTE:</span> " + name + "'s Met Level has not been set. The availability of the Footprint Ribbon after "+terms.gens[4]+" cannot be determined.");
+													}
 												}
 											}
 										}
