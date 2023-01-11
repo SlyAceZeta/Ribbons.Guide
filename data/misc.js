@@ -129,6 +129,40 @@ const natures = {
 	"Quirky": {		"index": 24,				"names": { "ger": "Kauzig",		"eng": "Quirky",	"spa": "Rara",		"fre": "Bizarre",	"ita": "Furba",		"jpn": "きまぐれ", "kor": "변덕", "cht": "浮躁", "chs": "浮躁"}}
 }
 
+// Characteristics
+const characteristics = {
+	"hp0": { "ger": "Liebt es zu essen.",	"eng": "It loves to eat!",	"spa": "Le encanta comer.",	"fre": "Il adore manger.",	"ita": "Adora mangiare.",	"jpn": "食べるのが　大好き。",	"kor": "먹는 것을 제일 좋아함.",	"cht": "非常喜歡吃東西。",	"chs": "非常喜欢吃东西。"},
+	"hp1": { "ger": "Nickt oft ein.",	"eng": "It takes plenty of siestas!",	"spa": "A menudo se duerme.",	"fre": "Il s’assoupit souvent.",	"ita": "Si addormenta spesso.",	"jpn": "昼寝を　よくする。",	"kor": "낮잠을 잘 잠.",	"cht": "經常睡午覺。",	"chs": "经常睡午觉。"},
+	"hp2": { "ger": "Schläft gern.",	"eng": "It nods off a lot!",	"spa": "Duerme mucho.",	"fre": "Il dort beaucoup.",	"ita": "Dorme a lungo.",	"jpn": "居眠りが　多い。",	"kor": "말뚝잠이 많음.",	"cht": "常常打瞌睡。",	"chs": "常常打瞌睡。"},
+	"hp3": { "ger": "Macht oft Unordnung.",	"eng": "It scatters things often!",	"spa": "Suele desordenar cosas.",	"fre": "Il éparpille souvent les choses.",	"ita": "Lascia cose in giro.",	"jpn": "ものを　よく　散らかす。",	"kor": "물건을 잘 어지름.",	"cht": "經常亂扔東西。",	"chs": "经常乱扔东西。"},
+	"hp4": { "ger": "Mag es, sich zu entspannen.",	"eng": "It likes to relax!",	"spa": "Le gusta relajarse.",	"fre": "Il aime se détendre.",	"ita": "Adora rilassarsi.",	"jpn": "のんびりするのが　好き。",	"kor": "유유자적함을 좋아함.",	"cht": "喜歡悠然自在。",	"chs": "喜欢悠然自在。"},
+	"atk0": { "ger": "Ist stolz auf seine Stärke.",	"eng": "It’s proud of its power!",	"spa": "Se enorgullece de su fuerza.",	"fre": "Il est fier de sa puissance.",	"ita": "La forza è il suo vanto.",	"jpn": "力が　自慢。",	"kor": "힘자랑이 특기임.",	"cht": "以力氣大為傲。",	"chs": "以力气大为傲。"},
+	"atk1": { "ger": "Prügelt sich gern.",	"eng": "It likes to thrash about!",	"spa": "Le gusta revolverse.",	"fre": "Il aime se démener.",	"ita": "Adora dimenarsi.",	"jpn": "暴れることが　好き。",	"kor": "난동부리기를 좋아함.",	"cht": "喜歡胡鬧。",	"chs": "喜欢胡闹。"},
+	"atk2": { "ger": "Besitzt Temperament.",	"eng": "It’s a little quick tempered!",	"spa": "A veces se enfada.",	"fre": "Il est un peu coléreux.",	"ita": "Si arrabbia facilmente.",	"jpn": "ちょっと　怒りっぽい。",	"kor": "약간 화를 잘 내는 성미임.",	"cht": "有點容易生氣。",	"chs": "有点容易生气。"},
+	"atk3": { "ger": "Liebt Kämpfe.",	"eng": "It likes to fight!",	"spa": "Le gusta luchar.",	"fre": "Il aime combattre.",	"ita": "Adora lottare.",	"jpn": "ケンカを　するのが　好き。",	"kor": "싸움을 좋아함.",	"cht": "喜歡打架。",	"chs": "喜欢打架。"},
+	"atk4": { "ger": "Ist impulsiv.",	"eng": "It’s quick tempered!",	"spa": "Tiene mal genio.",	"fre": "Il s’emporte facilement.",	"ita": "È facilmente irritabile.",	"jpn": "血の気が　多い。",	"kor": "혈기가 왕성함.",	"cht": "血氣方剛。",	"chs": "血气方刚。"},
+	"def0": { "ger": "Hat einen robusten Körper.",	"eng": "It has a sturdy body!",	"spa": "Se caracteriza por su cuerpo resistente.",	"fre": "Il a un corps robuste.",	"ita": "Ha un corpo robusto.",	"jpn": "体が　丈夫。",	"kor": "몸이 튼튼함.",	"cht": "身體強壯。",	"chs": "身体强壮。"},
+	"def1": { "ger": "Kann Treffer gut verkraften.",	"eng": "It’s capable of taking hits!",	"spa": "Encaja bien los ataques.",	"fre": "Il sait encaisser les coups.",	"ita": "Incassa bene i colpi.",	"jpn": "打たれ強い。",	"kor": "맷집이 강함.",	"cht": "抗打能力強。",	"chs": "抗打能力强。"},
+	"def2": { "ger": "Ist äußerst zäh.",	"eng": "It’s highly persistent!",	"spa": "Es muy persistente.",	"fre": "Il est très obstiné.",	"ita": "È molto ostinato.",	"jpn": "粘り強い。",	"kor": "끈질김.",	"cht": "頑強不屈。",	"chs": "顽强不屈。"},
+	"def3": { "ger": "Hat eine gute Ausdauer.",	"eng": "It has good endurance!",	"spa": "Se caracteriza por ser muy resistente.",	"fre": "Il a une bonne endurance.",	"ita": "È molto paziente.",	"jpn": "辛抱強い。",	"kor": "인내심이 강함.",	"cht": "能吃苦耐勞。",	"chs": "能吃苦耐劳。"},
+	"def4": { "ger": "Ist beharrlich.",	"eng": "It has good perseverance!",	"spa": "Es muy perseverante.",	"fre": "Il est persévérant.",	"ita": "È molto tenace.",	"jpn": "我慢強い。",	"kor": "잘 참음.",	"cht": "善於忍耐。",	"chs": "善于忍耐。"},
+	"spe0": { "ger": "Ist gerne schnell unterwegs.",	"eng": "It likes to run!",	"spa": "Le gusta ir muy rápido.",	"fre": "Il aime la vitesse.",	"ita": "Adora andare veloce.",	"jpn": "駆けっこが　好き。",	"kor": "달리기를 좋아함.",	"cht": "喜歡比誰跑得快。",	"chs": "喜欢比谁跑得快。"},
+	"spe1": { "ger": "Achtet auf Geräusche.",	"eng": "It’s alert to sounds!",	"spa": "Siempre tiene el oído alerta.",	"fre": "Il est attentif aux sons.",	"ita": "Fa attenzione ai suoni.",	"jpn": "物音に　敏感。",	"kor": "주위 소리에 민감함.",	"cht": "對聲音敏感。",	"chs": "对声音敏感。"},
+	"spe2": { "ger": "Ist ungestüm und einfältig.",	"eng": "It’s impetuous and silly!",	"spa": "Es de carácter simple e impetuoso.",	"fre": "Il est bête et impulsif.",	"ita": "È irruente e semplice.",	"jpn": "おっちょこちょい。",	"kor": "촐랑대는 성격임.",	"cht": "冒冒失失。",	"chs": "冒冒失失。"},
+	"spe3": { "ger": "Ist ein bisschen albern.",	"eng": "It’s somewhat of a clown!",	"spa": "Le encanta hacer payasadas.",	"fre": "Il aime faire le pitre.",	"ita": "È una specie di buffone.",	"jpn": "すこし　お調子者。",	"kor": "약간 우쭐쟁이임.",	"cht": "有點容易得意忘形。",	"chs": "有点容易得意忘形。"},
+	"spe4": { "ger": "Flüchtet schnell.",	"eng": "It’s quick to flee!",	"spa": "Huye rápido.",	"fre": "Il fuit rapidement.",	"ita": "Sa fuggire velocemente.",	"jpn": "逃げるのが　はやい。",	"kor": "도망에는 선수임.",	"cht": "逃得快。",	"chs": "逃得快。"},
+	"spa0": { "ger": "Ist sehr neugierig.",	"eng": "It’s highly curious!",	"spa": "Siente mucha curiosidad por todo.",	"fre": "Il est extrêmement curieux.",	"ita": "È un grande ficcanaso.",	"jpn": "好奇心が　強い。",	"kor": "호기심이 강함.",	"cht": "好奇心強。",	"chs": "好奇心强。"},
+	"spa1": { "ger": "Ist hinterhältig.",	"eng": "It’s mischievous!",	"spa": "Le gusta hacer travesuras.",	"fre": "Il est coquin.",	"ita": "È alquanto vivace.",	"jpn": "イタズラが　好き。",	"kor": "장난을 좋아함.",	"cht": "喜歡惡作劇。",	"chs": "喜欢恶作剧。"},
+	"spa2": { "ger": "Ist äußerst gerissen.",	"eng": "It’s thoroughly cunning!",	"spa": "Es muy sagaz.",	"fre": "Il est très astucieux.",	"ita": "È estremamente sagace.",	"jpn": "抜け目が　ない。",	"kor": "빈틈이 없음.",	"cht": "做事萬無一失。",	"chs": "做事万无一失。"},
+	"spa3": { "ger": "Ist oft in Gedanken.",	"eng": "It’s often lost in thought!",	"spa": "A menudo está en Babia.",	"fre": "Il est souvent dans la lune.",	"ita": "Si perde nel suo mondo.",	"jpn": "考え事が　多い。",	"kor": "걱정거리가 많음.",	"cht": "經常思考。",	"chs": "经常思考。"},
+	"spa4": { "ger": "Ist sehr pedantisch.",	"eng": "It’s very finicky!",	"spa": "Es muy tiquismiquis.",	"fre": "Il est très particulier.",	"ita": "È molto esigente.",	"jpn": "とても　きちょうめん。",	"kor": "매우 꼼꼼함.",	"cht": "一絲不苟。",	"chs": "一丝不苟。"},
+	"spd0": { "ger": "Besitzt einen starken Willen.",	"eng": "It’s strong willed!",	"spa": "Se distingue por su gran fuerza de voluntad.",	"fre": "Il est très volontaire.",	"ita": "Sa il fatto suo.",	"jpn": "気が　強い。",	"kor": "기가 센 성격임.",	"cht": "性格強勢。",	"chs": "性格强势。"},
+	"spd1": { "ger": "Ist etwas eitel.",	"eng": "It’s somewhat vain!",	"spa": "Es un poco petulante.",	"fre": "Il est un peu vaniteux.",	"ita": "È abbastanza superficiale.",	"jpn": "ちょっぴり　みえっぱり。",	"kor": "조금 겉치레를 좋아함.",	"cht": "有一點點愛慕虛榮。",	"chs": "有一点点爱慕虚荣。"},
+	"spd2": { "ger": "Ist sehr aufsässig.",	"eng": "It’s strongly defiant!",	"spa": "Es muy insolente.",	"fre": "Il a l’esprit rebelle.",	"ita": "È molto insolente.",	"jpn": "負けん気が　強い。",	"kor": "오기가 센 성격임.",	"cht": "爭強好勝。",	"chs": "争强好胜。"},
+	"spd3": { "ger": "Hasst Niederlagen.",	"eng": "It hates to lose!",	"spa": "Odia perder.",	"fre": "Il a horreur de perdre.",	"ita": "Non sopporta perdere.",	"jpn": "負けず嫌い。",	"kor": "지기 싫어함.",	"cht": "不服輸。",	"chs": "不服输。"},
+	"spd4": { "ger": "Ist dickköpfig.",	"eng": "It’s somewhat stubborn!",	"spa": "Es un poco cabezota.",	"fre": "Il est assez entêté.",	"ita": "È un po’ testardo.",	"jpn": "ちょっぴり　強情。",	"kor": "조금 고집통이임.",	"cht": "有一點點固執。",	"chs": "有一点点固执。"}
+}
+
 // Poké Balls
 const balls = {
 	"poke": {	"ger": "Pokéball",		"eng": "Poké Ball",		"spa": "Poké Ball",		"fre": "Poké Ball",		"ita": "Poké Ball",		"jpn": "モンスターボール", "kor": "몬스터볼", "cht": "精靈球", "chs": "精灵球"},
