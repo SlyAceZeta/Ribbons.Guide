@@ -1289,7 +1289,7 @@ const allRibbons = {
 			"cht": "贈予在超級華麗大賽中有著最耀眼表現的 寶可夢的紀念獎章。",
 			"chs": "赠予在超级华丽大赛中有着最耀眼表现的 宝可梦的纪念奖章。"
 		},
-		"titles: {
+		"titles": {
 			"ger": "Glitzerstern",
 			"eng": "the Twinkling Star",
 			"spa": "el Rutilante",
@@ -3064,7 +3064,7 @@ const allRibbons = {
 			"cht": "保持紀錄的",
 			"chs": "保持纪录的"
 		}
-	}
+	},
 	"event-ribbon": {
 		"gen": 5,
 		"available": null,
