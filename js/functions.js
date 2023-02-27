@@ -382,8 +382,8 @@ function ribbonGuide(id){
 							if(gameGen && ribbonAddToGens.indexOf(gameGen) == -1 && gensLeft.indexOf(gameGen) > -1){
 								// Ribbon has not been added to this gen yet
 								// and Pokemon is in this game's gen or will be later
-								// check if Pokemon can be sent to this game
-								if(pkmnGames.indexOf(ribbonGame) > -1){
+								// check if Pokemon can be sent to this game, or if Pokemon is currently in Scarlet or Violet to temporarily handle SV before HOME compatibility
+								if(pkmnGames.indexOf(ribbonGame) > -1 || ((ribbonGame == "scar" || ribbonGame == "vio") && (pkmn.currentgame == "scar" || ribbonGame == "vio")){
 									// now check for special Ribbon restrictions
 									var specialEarn = false;
 									if(ribbon.indexOf("contest-memory-ribbon") == 0 || ribbon.indexOf("battle-memory-ribbon") == 0){
