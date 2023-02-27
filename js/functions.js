@@ -604,7 +604,7 @@ function addRow(pkmn, i){
 		var rCode = pkmn.ribbons[r];
 		var rData = allRibbons[rCode];
 		if(rData){
-			if(!rData.merge || pkmnGen < 5){
+			if(!rData.merge || pkmnGen < 6){
 				var proceed = false;
 				if(rCode == "battle-memory-ribbon"){
 					if(pkmn.ribbons.indexOf("battle-memory-ribbon-gold") == -1){
