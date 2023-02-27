@@ -3028,43 +3028,6 @@ const allRibbons = {
 			"chs": "度过了纪念日的"
 		}
 	},
-	"record-ribbon": {
-		"gen": 4,
-		"available": null,
-		"names": {
-			"ger": "Rekordband",
-			"eng": "Record Ribbon",
-			"spa": "Cinta Récord",
-			"fre": "Ruban Record",
-			"ita": "Fiocco Record",
-			"jpn": "レコードリボン",
-			"kor": "레코드리본",
-			"cht": "紀錄獎章",
-			"chs": "纪录奖章"
-		},
-		"descs": {
-			"ger": "Band für das Aufstellen eines unglaublichen Rekords.",
-			"eng": "A Ribbon awarded for setting an incredible record.",
-			"spa": "Cinta obtenida por establecer un récord increíble.",
-			"fre": "Ruban récompensant un record incroyable.",
-			"ita": "Fiocco conferito per aver stabilito un record straordinario.",
-			"jpn": "ものすごい　記録を　残した 記念の　リボン",
-			"kor": "대단한 기록을 남긴 기념리본",
-			"cht": "為紀念留下了驚人紀錄的獎章。",
-			"chs": "为纪念留下了惊人纪录的奖章。"
-		},
-		"titles": {
-			"ger": "Rekordhalter",
-			"eng": "the Record Holder",
-			"spa": "el Plusmarquista",
-			"fre": "le Recordman",
-			"ita": "da record",
-			"jpn": "きろくをもつ",
-			"kor": "기록을 보유한",
-			"cht": "保持紀錄的",
-			"chs": "保持纪录的"
-		}
-	},
 	"event-ribbon": {
 		"gen": 5,
 		"available": null,
@@ -3285,80 +3248,6 @@ const allRibbons = {
 			"kor": "배틀 챔피언",
 			"cht": "對戰冠軍",
 			"chs": "对战冠军"
-		}
-	},
-	"regional-champion-ribbon": {
-		"gen": 5,
-		"available": null,
-		"names": {
-			"ger": "Regionalmeisterband",
-			"eng": "Regional Champion Ribbon",
-			"spa": "Cinta Campeón de Área",
-			"fre": "Ruban Champion Régional",
-			"ita": "Fiocco Campione Locale",
-			"jpn": "エリアチャンプリボン",
-			"kor": "에리어챔피언리본",
-			"cht": "地區冠軍獎章",
-			"chs": "地区冠军奖章"
-		},
-		"descs": {
-			"ger": "Siegerband für die Regionalmeisterschaft der Pokémon World Championships.",
-			"eng": "A Ribbon awarded to a Regional Champion in the Pokémon World Championships.",
-			"spa": "Cinta de campeón de área del Pokémon World Championships.",
-			"fre": "Ruban récompensant la victoire au Championnat Régional.",
-			"ita": "Fiocco conferito per aver vinto il titolo di Campione Locale al Pokémon World Championships.",
-			"jpn": "ポケモンワールドチャンピオンシップス エリア大会　優勝記念リボン",
-			"kor": "포켓몬 월드 챔피언십 에리어 대회 우승 기념리본",
-			"cht": "Pokémon World Championships（寶可夢世界錦標賽） 地區大賽冠軍紀念獎章。",
-			"chs": "Pokémon World Championships（宝可梦世界锦标赛） 地区大赛冠军纪念奖章。"
-		},
-		"titles": {
-			"ger": "Regionalmeister",
-			"eng": "the Regional Champion",
-			"spa": "el Campeón de Área",
-			"fre": "le Champion Régional",
-			"ita": "Campione Locale",
-			"jpn": "エリアチャンピオン",
-			"kor": "에리어 챔피언",
-			"cht": "地區冠軍",
-			"chs": "地区冠军"
-		}
-	},
-	"national-champion-ribbon": {
-		"gen": 5,
-		"available": null,
-		"names": {
-			"ger": "Nationalmeisterband",
-			"eng": "National Champion Ribbon",
-			"spa": "Cinta Campeón Nacional",
-			"fre": "Ruban Champion National",
-			"ita": "Fiocco Campione Nazionale",
-			"jpn": "ナショナルチャンプリボン",
-			"kor": "내셔널챔피언리본",
-			"cht": "國家冠軍獎章",
-			"chs": "国家冠军奖章"
-		},
-		"descs": {
-			"ger": "Siegerband für die Nationalmeisterschaft der Pokémon World Championships.",
-			"eng": "A Ribbon awarded to a National Champion in the Pokémon World Championships.",
-			"spa": "Cinta de campeón nacional del Pokémon World Championships.",
-			"fre": "Ruban récompensant la victoire au Championnat National.",
-			"ita": "Fiocco conferito per aver vinto il titolo di Campione Nazionale al Pokémon World Championships.",
-			"jpn": "ポケモンワールドチャンピオンシップス 国内大会　優勝記念リボン",
-			"kor": "포켓몬 월드 챔피언십 국내 대회 우승 기념리본",
-			"cht": "Pokémon World Championships（寶可夢世界錦標賽） 國內大賽冠軍紀念獎章。",
-			"chs": "Pokémon World Championships（宝可梦世界锦标赛） 国内大赛冠军纪念奖章。"
-		},
-		"titles": {
-			"ger": "Nationalmeister",
-			"eng": "the National Champion",
-			"spa": "el Campeón Nacional",
-			"fre": "le Champion National",
-			"ita": "Campione Nazionale",
-			"jpn": "ナショナルチャンピオン",
-			"kor": "내셔널 챔피언",
-			"cht": "國家冠軍",
-			"chs": "国家冠军"
 		}
 	},
 	"world-champion-ribbon": {
