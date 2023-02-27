@@ -291,7 +291,6 @@ const allRibbons = {
 	},
 	"cool-ribbon-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -309,7 +308,6 @@ const allRibbons = {
 	},
 	"cool-ribbon-super-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -327,7 +325,6 @@ const allRibbons = {
 	},
 	"cool-ribbon-hyper-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -345,7 +342,6 @@ const allRibbons = {
 	},
 	"cool-ribbon-master-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -363,7 +359,6 @@ const allRibbons = {
 	},
 	"beauty-ribbon-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -381,7 +376,6 @@ const allRibbons = {
 	},
 	"beauty-ribbon-super-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -399,7 +393,6 @@ const allRibbons = {
 	},
 	"beauty-ribbon-hyper-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -417,7 +410,6 @@ const allRibbons = {
 	},
 	"beauty-ribbon-master-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -435,7 +427,6 @@ const allRibbons = {
 	},
 	"cute-ribbon-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -453,7 +444,6 @@ const allRibbons = {
 	},
 	"cute-ribbon-super-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -471,7 +461,6 @@ const allRibbons = {
 	},
 	"cute-ribbon-hyper-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -489,7 +478,6 @@ const allRibbons = {
 	},
 	"cute-ribbon-master-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -507,7 +495,6 @@ const allRibbons = {
 	},
 	"smart-ribbon-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -525,7 +512,6 @@ const allRibbons = {
 	},
 	"smart-ribbon-super-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -543,7 +529,6 @@ const allRibbons = {
 	},
 	"smart-ribbon-hyper-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -561,7 +546,6 @@ const allRibbons = {
 	},
 	"smart-ribbon-master-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -579,7 +563,6 @@ const allRibbons = {
 	},
 	"tough-ribbon-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -597,7 +580,6 @@ const allRibbons = {
 	},
 	"tough-ribbon-super-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -615,7 +597,6 @@ const allRibbons = {
 	},
 	"tough-ribbon-hyper-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -633,7 +614,6 @@ const allRibbons = {
 	},
 	"tough-ribbon-master-hoenn": {
 		"gen": 3,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -651,7 +631,6 @@ const allRibbons = {
 	},
 	"cool-ribbon-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -669,7 +648,6 @@ const allRibbons = {
 	},
 	"cool-ribbon-great-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -687,7 +665,6 @@ const allRibbons = {
 	},
 	"cool-ribbon-ultra-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -705,7 +682,6 @@ const allRibbons = {
 	},
 	"cool-ribbon-master-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -723,7 +699,6 @@ const allRibbons = {
 	},
 	"beauty-ribbon-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -741,7 +716,6 @@ const allRibbons = {
 	},
 	"beauty-ribbon-great-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -759,7 +733,6 @@ const allRibbons = {
 	},
 	"beauty-ribbon-ultra-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -777,7 +750,6 @@ const allRibbons = {
 	},
 	"beauty-ribbon-master-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -795,7 +767,6 @@ const allRibbons = {
 	},
 	"cute-ribbon-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -813,7 +784,6 @@ const allRibbons = {
 	},
 	"cute-ribbon-great-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -831,7 +801,6 @@ const allRibbons = {
 	},
 	"cute-ribbon-ultra-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -849,7 +818,6 @@ const allRibbons = {
 	},
 	"cute-ribbon-master-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -867,7 +835,6 @@ const allRibbons = {
 	},
 	"smart-ribbon-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -885,7 +852,6 @@ const allRibbons = {
 	},
 	"smart-ribbon-great-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -903,7 +869,6 @@ const allRibbons = {
 	},
 	"smart-ribbon-ultra-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -921,7 +886,6 @@ const allRibbons = {
 	},
 	"smart-ribbon-master-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -939,7 +903,6 @@ const allRibbons = {
 	},
 	"tough-ribbon-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -957,7 +920,6 @@ const allRibbons = {
 	},
 	"tough-ribbon-great-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -975,7 +937,6 @@ const allRibbons = {
 	},
 	"tough-ribbon-ultra-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -993,7 +954,6 @@ const allRibbons = {
 	},
 	"tough-ribbon-master-sinnoh": {
 		"gen": 4,
-		"hide": true,
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -1391,7 +1351,6 @@ const allRibbons = {
 		"gen": 3,
 		"nolegendary": true,
 		"nomythical": true,
-		"hide": true,
 		"merge": "battle",
 		"available": [
 			"ruby",
@@ -1411,7 +1370,6 @@ const allRibbons = {
 		"gen": 3,
 		"nolegendary": true,
 		"nomythical": true,
-		"hide": true,
 		"merge": "battle",
 		"available": [
 			"ruby",
@@ -1431,7 +1389,6 @@ const allRibbons = {
 		"gen": 4,
 		"nolegendary": true,
 		"nomythical": true,
-		"hide": true,
 		"merge": "battle",
 		"available": [
 			"diamond",
@@ -1453,7 +1410,6 @@ const allRibbons = {
 		"gen": 4,
 		"nolegendary": true,
 		"nomythical": true,
-		"hide": true,
 		"merge": "battle",
 		"available": [
 			"diamond",
@@ -1475,7 +1431,6 @@ const allRibbons = {
 		"gen": 4,
 		"nolegendary": true,
 		"nomythical": true,
-		"hide": true,
 		"merge": "battle",
 		"available": [
 			"diamond",
@@ -1497,7 +1452,6 @@ const allRibbons = {
 		"gen": 4,
 		"nolegendary": true,
 		"nomythical": true,
-		"hide": true,
 		"merge": "battle",
 		"available": [
 			"diamond",
@@ -1519,7 +1473,6 @@ const allRibbons = {
 		"gen": 4,
 		"nolegendary": true,
 		"nomythical": true,
-		"hide": true,
 		"merge": "battle",
 		"available": [
 			"diamond",
@@ -1541,7 +1494,6 @@ const allRibbons = {
 		"excluded": true,
 		"nolegendary": true,
 		"nomythical": true,
-		"hide": true,
 		"merge": "battle",
 		"gen": 4,
 		"available": [
