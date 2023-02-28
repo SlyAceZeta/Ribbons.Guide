@@ -38070,5 +38070,45 @@ const pokemon = {
 			"scar",
 			"vio"
 		]
+	},
+	"walking-wake": {
+		"names": {
+			"ger": "Windewoge",
+			"eng": "Walking Wake",
+			"spa": "Ondulagua",
+			"fre": "Serpente-Eau",
+			"ita": "Acquecrespe",
+			"jpn": "ウネルミナモ",
+			"kor": "굽이치는물결",
+			"cht": "Walking Wake",
+			"chs": "Walking Wake"
+		},
+		"gender": "unknown",
+		"legendary": true,
+		"natdex": 1009,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"iron-leaves": {
+		"names": {
+			"ger": "Eisenblatt",
+			"eng": "Iron Leaves",
+			"spa": "Ferroverdor",
+			"fre": "Vert-de-Fer",
+			"ita": "Fogliaferrea",
+			"jpn": "テツノイサハ",
+			"kor": "무쇠잎새",
+			"cht": "Iron Leaves",
+			"chs": "Iron Leaves"
+		},
+		"gender": "unknown",
+		"legendary": true,
+		"natdex": 1010,
+		"games": [
+			"scar",
+			"vio"
+		]
 	}
 }
