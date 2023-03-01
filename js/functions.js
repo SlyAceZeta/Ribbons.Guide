@@ -1095,9 +1095,27 @@ $(function(){
 		createTable(allpkmn);
 	}
 
+	// Populate changelog
+	var changeDates = Object.keys(changelog);
+	var lastChange = "";
+	for(let cd = 0; cd < changeDates.length; cd++){
+		var date = changeDates[cd];
+		var current = "";
+		if(cd == 0){
+			current = " class='changelog-active'";
+			lastChange = date;
+		}
+		var changeOut = "<tr"+current+"><td><div class='changelog-date'><span>" + date + "</span></div><ul>";
+		for(var cl = 0; cl < changelog[date].length; cl++){
+			changeOut = changeOut + "<li>" + changelog[date][cl] + "</li>";
+		}
+		changeOut = changeOut + "</ul></td></tr>";
+		$("#changelog tr:last-child").before(changeOut);
+		if(cd == 4) break;
+	}
+
 	// Display changelog
 	var saveChange = localStorage.getItem("changelog");
-	var lastChange = $("#changelog tr:first-child .changelog-date").text();
 	if(saveChange && saveChange !== lastChange){
 		showModal("changelog");
 	}
