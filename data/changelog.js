@@ -1,7 +1,9 @@
 const changelog = {
 	"1 March 2023": [
+		"We've moved to ribbons.guide! Name is updated everywhere",
 		"Added Chinese names for Walking Wake and Iron Leaves",
 		"Added new themes \"Intrepid Sword\" and \"Dauntless Shield\"",
+		"Devices on light mode will default to \"Intrepid Sword\" theme if no theme had already been selected",
 		"GitHub readme now lists the open-source license, data version, and status of online version",
 		"The online version now minifies the code, providing a small boost to page speed; further optimization work is still to come"
 	],

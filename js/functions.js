@@ -1133,12 +1133,11 @@ $(function(){
 	});
 	var theme = localStorage.getItem("theme");
 	if(!theme){
-		// TODO: better light theme
-		/*if(window.matchMedia("(prefers-color-scheme: light)").matches){
-			theme = "light";
-		} else {*/
+		if(window.matchMedia("(prefers-color-scheme: light)").matches){
+			theme = "sword";
+		} else {
 			theme = "start";
-		//}
+		}
 	}
 	$("#settings-theme").val(theme).change();
 
