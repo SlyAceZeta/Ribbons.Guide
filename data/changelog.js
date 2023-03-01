@@ -1,4 +1,10 @@
 const changelog = {
+	"1 March 2023": [
+		"Added Chinese names for Walking Wake and Iron Leaves",
+		"Added new themes \"Intrepid Sword\" and \"Dauntless Shield\"",
+		"GitHub readme now lists the open-source license, data version, and status of online version",
+		"The online version now minifies the code, providing a small boost to page speed; further optimization work is still to come"
+	],
 	"27 February 2023": [
 		"Happy Pokémon Day! Added Walking Wake and Iron Leaves (sprites and Chinese names to be updated)",
 		"Removed unavailable Ribbons that were inadvertendly added in a prior update",

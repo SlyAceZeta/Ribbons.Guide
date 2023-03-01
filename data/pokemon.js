@@ -38080,8 +38080,8 @@ const pokemon = {
 			"ita": "Acquecrespe",
 			"jpn": "ウネルミナモ",
 			"kor": "굽이치는물결",
-			"cht": "Walking Wake",
-			"chs": "Walking Wake"
+			"cht": "波盪水",
+			"chs": "波荡水"
 		},
 		"gender": "unknown",
 		"legendary": true,
@@ -38100,8 +38100,8 @@ const pokemon = {
 			"ita": "Fogliaferrea",
 			"jpn": "テツノイサハ",
 			"kor": "무쇠잎새",
-			"cht": "Iron Leaves",
-			"chs": "Iron Leaves"
+			"cht": "鐵斑葉",
+			"chs": "铁斑叶"
 		},
 		"gender": "unknown",
 		"legendary": true,
