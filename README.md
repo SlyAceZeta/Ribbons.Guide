@@ -1,3 +1,5 @@
+![GitHub](https://img.shields.io/github/license/azekthi/RibbonMasters) ![Current Data](https://img.shields.io/badge/data-Scarlet%20%26%20Violet%20v1.2.0-69183D) ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/azekthi/RibbonMasters/deploy.yml?label=pages)
+
 # RibbonMasters
 
 RibbonMasters is a web app that allows you to keep track of your Pokémon and their Ribbons!\
