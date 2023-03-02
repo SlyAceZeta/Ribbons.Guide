@@ -1083,6 +1083,13 @@ footer {
 .pokemon-list-move {
 	cursor: grab;
 }
+#pokemon-list.ui-sortable-disabled .pokemon-list-entry-header {
+	cursor: default;
+}
+#pokemon-list.ui-sortable-disabled .pokemon-list-move {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
 .pokemon-list-name {
 	font-weight: bold;
 	font-size: 20px;
