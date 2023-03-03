@@ -88,6 +88,10 @@ body.theme-sword {
 .theme-sword .modal th {
 	background: #dbdbd9;
 }
+.theme-sword #pokemon-list-nomatch,
+.theme-sword #pokemon-list-empty {
+	text-shadow: 0 0 5px #fff;
+}
 
 /* Dauntless Shield */
 body.theme-shield {
@@ -125,6 +129,10 @@ body.theme-shield {
 }
 .theme-shield .modal th {
 	background: #dbdbd9;
+}
+.theme-shield #pokemon-list-nomatch,
+.theme-shield #pokemon-list-empty {
+	text-shadow: 0 0 5px #fff;
 }
 
 /* Classic Light */
