@@ -70,7 +70,7 @@ body.theme-sword {
 }
 .theme-sword .pokemon-list-origin,
 .theme-sword .pokemon-list-entry-footer-right,
-.theme-sword #filters-boxes-list ~ button img,
+.theme-sword #menu button img,
 .theme-sword #pokeform-shiny-toggle img,
 .theme-sword .pokemon-list-entry .shiny {
 	filter: invert(1);
@@ -108,7 +108,7 @@ body.theme-shield {
 }
 .theme-shield .pokemon-list-origin,
 .theme-shield .pokemon-list-entry-footer-right,
-.theme-shield #filters-boxes-list ~ button img,
+.theme-sword #menu button img,
 .theme-shield #pokeform-shiny-toggle img,
 .theme-shield .pokemon-list-entry .shiny {
 	filter: invert(1);
@@ -147,7 +147,7 @@ body.theme-light {
 .theme-light .pokemon-list-origin,
 .theme-light .pokemon-list-entry-footer-right,
 .theme-light #add-pokemon-button img,
-.theme-light #filters-boxes-list ~ button img,
+.theme-sword #menu button img,
 .theme-light #pokeform-shiny-toggle img,
 .theme-light .pokemon-list-entry .shiny {
 	filter: invert(1);
@@ -200,13 +200,13 @@ footer a:not(.button) {
 	color: var(--asterisk);
 }
 .pokemon-list-entry:hover,
-#filters-boxes button:hover,
-#filters-boxes button:focus {
+#menu button:hover,
+#menu button:focus {
 	box-shadow: 0 0 10px -5px var(--text);
 }
 .pokemon-list-entry-header,
 .pokemon-list-entry-footer,
-#filters-boxes button,
+#menu button,
 #boxsort-boxes > div {
 	background-color: var(--pokemon-header, var(--modal-bg, var(--header-bg)));
 }

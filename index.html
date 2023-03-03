@@ -29,14 +29,49 @@
 			</div>
 			<img src="img/ui/gear.svg" id="header-settings" alt="Settings" title="Settings">
 		</header>
-		<div id="filters">
-			<div id="filters-boxes">
-				<button class="box selected" data-boxnum="-2" onclick="switchBox(-2)"><img src="img/ui/box-full.png" alt="Box"><span>All Pokémon</span></button>
-				<button class="box" data-boxnum="-1" onclick="switchBox()"><img src="img/ui/box-ball.png" alt="Box"><span>Unsorted</span></button>
-				<div id="filters-boxes-list"></div>
-				<button id="box-list-add"><img src="img/ui/add.svg" alt="Add"></button>
-				<button id="box-list-edit"><img src="img/ui/edit.svg" alt="Edit"></button>
-			</div>
+		<div id="menu">
+			<button id="menu-boxes" title="Boxes"><img src="img/ui/box-closed.png" alt="Boxes"></button>
+			<button id="menu-filter" title="Filter"><img src="img/ui/filter.svg" alt="Filter"></button>
+			<button id="menu-sort" title="Sort"><img src="img/ui/sort.svg" alt="Sort"></button>
+		</div>
+		<div id="filterform" class="modal">
+			<h4>
+				<div>Filter Pokémon</div>
+			</h4>
+			<table>
+				<tr>
+					<th><label for="filterform-boxes">Box</label></th>
+					<td>
+						<select id="filterform-boxes">
+							<option></option>
+							<option value="-1">None</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="filterform-games">Games it can<br> travel to</label></th>
+					<td>
+						<select id="filterform-games" multiple>
+							<optgroup id="filterform-games-9" label="Gen IX"><option disabled>Traveling to Gen IX requires a HOME update.</option></optgroup>
+							<optgroup id="filterform-games-8" label="Gen VIII"></optgroup>
+							<optgroup id="filterform-games-7" label="Gen VII"></optgroup>
+							<optgroup id="filterform-games-6" label="Gen VI"></optgroup>
+							<optgroup id="filterform-games-5" label="Gen V"></optgroup>
+							<optgroup id="filterform-games-4" label="Gen IV"></optgroup>
+							<optgroup id="filterform-games-3" label="Gen III"></optgroup>
+							<optgroup id="filterform-games-2" label="Gen II Virtual Console"></optgroup>
+							<optgroup id="filterform-games-1" label="Gen I Virtual Console"></optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">Pokémon will only be shown if they fulfill all conditions, including being able to travel to all of the selected games (which requires setting their current game).<br><br>Pokémon stored in HOME are not considered able to travel to <em>Let's&nbsp;Go, Pikachu!</em> or <em>Let's&nbsp;Go, Eevee!</em>.</td>
+				</tr>
+			</table>
+			<h5>
+				<button id="filterform-apply" class="button">Apply</button>
+				<button class="button close">Close</button>
+			</h5>
 		</div>
 		<div id="boxform" class="modal">
 			<h4>
@@ -55,7 +90,7 @@
 			<h5>
 				<button id="boxform-add" class="button">Add</button>
 				<button id="boxform-edit" class="button">Save</button>
-				<button id="boxform-cancel" class="button">Cancel</button>
+				<button class="button close">Cancel</button>
 			</h5>
 		</div>
 		<div id="boxsort" class="modal">
@@ -68,7 +103,8 @@
 				</tr>
 			</table>
 			<h5>
-				<button id="boxsort-close" class="button">Close</button>
+				<button id="boxsort-add" class="button">New Box</button>
+				<button class="button close">Close</button>
 			</h5>
 		</div>
 		<div id="pokemon-list">
@@ -652,7 +688,7 @@
 			<div id="ribbonguide-evolution" class="ribbonguide-warning"></div>
 			<div id="ribbonguide-transfer"></div>
 			<h5>
-				<span id="ribbonguide-close" class="button">Close</span>
+				<span class="button close">Close</span>
 			</h5>
 		</div>
 		<div id="settings" class="modal">
@@ -700,7 +736,7 @@
 				</tr>
 			</table>
 			<h5>
-				<span id="settings-close" class="button">Close</span>
+				<span class="button close">Close</span>
 			</h5>
 		</div>
 		<div id="changelog" class="modal">
@@ -713,7 +749,7 @@
 				</tr>
 			</table>
 			<h5>
-				<span id="changelog-close" class="button">Close</span>
+				<span class="button close">Close</span>
 			</h5>
 		</div>
 		<footer>This open-source project is not affiliated with Nintendo, Game Freak, or The Pokémon Company. All data is stored in your browser. <a href="https://github.com/Azekthi/Ribbons.Guide">View the source code on GitHub.</a></footer>
