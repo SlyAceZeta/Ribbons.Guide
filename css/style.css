@@ -768,6 +768,20 @@ footer {
 	width: 25px;
 	height: auto;
 }
+#menu-filter {
+	position: relative;
+}
+#menu-filter-count {
+	display: none;
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	border-radius: 10px;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	font-size: 11pt;
+}
 #filterform .select2-search.select2-search--inline {
 	display: inline-block;
 	padding: 2px;
@@ -1135,7 +1149,7 @@ footer {
 	width: 68px;
 	height: auto;
 }
-#pokemon-list-emptybox,
+#pokemon-list-nomatch,
 #pokemon-list-empty,
 .ribbons-list-empty {
 	width: 100%;

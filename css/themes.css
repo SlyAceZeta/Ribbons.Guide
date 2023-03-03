@@ -168,7 +168,8 @@ body {
 }
 header,
 footer,
-#add-pokemon-button {
+#add-pokemon-button,
+#menu-filter-count {
 	background: var(--header-bg);
 	border-color: var(--header-border);
 	color: var(--header-text, var(--text));

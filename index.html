@@ -31,7 +31,7 @@
 		</header>
 		<div id="menu">
 			<button id="menu-boxes" title="Boxes"><img src="img/ui/box-closed.png" alt="Boxes"></button>
-			<button id="menu-filter" title="Filter"><img src="img/ui/filter.svg" alt="Filter"></button>
+			<button id="menu-filter" title="Filter"><img src="img/ui/filter.svg" alt="Filter"><span id="menu-filter-count">0</span></button>
 			<button id="menu-sort" title="Sort"><img src="img/ui/sort.svg" alt="Sort"></button>
 		</div>
 		<div id="filterform" class="modal">
@@ -40,10 +40,10 @@
 			</h4>
 			<table>
 				<tr>
-					<th><label for="filterform-boxes">Box</label></th>
+					<th><label for="filterform-box">Current Box</label></th>
 					<td>
-						<select id="filterform-boxes">
-							<option></option>
+						<select id="filterform-box">
+							<option value="-2">Any</option>
 							<option value="-1">None</option>
 						</select>
 					</td>
@@ -69,7 +69,6 @@
 				</tr>
 			</table>
 			<h5>
-				<button id="filterform-apply" class="button">Apply</button>
 				<button class="button close">Close</button>
 			</h5>
 		</div>
@@ -108,8 +107,8 @@
 			</h5>
 		</div>
 		<div id="pokemon-list">
-			<div id="pokemon-list-emptybox">
-				<div>You have no Pokémon in this box. Click or tap "All Pokémon" to see all of your Pokémon.</div>
+			<div id="pokemon-list-nomatch">
+				<div>You have no Pokémon that match your current filters.</div>
 			</div>
 			<div id="pokemon-list-empty">
 				<div>You have no saved Pokémon. Click or tap the + button at the bottom-right to add one! If you have a backup file, click the ⛭ button at the top-right to restore the backup.</div>
@@ -264,7 +263,7 @@
 					<th><label for="pokeform-box">Box</label></th>
 					<td colspan="2">
 						<select id="pokeform-box">
-							<option selected>None</option>
+							<option selected value="-1">None</option>
 						</select>
 					</td>
 				</tr>

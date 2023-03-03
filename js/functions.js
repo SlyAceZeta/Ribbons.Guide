@@ -1,3 +1,5 @@
+var filterInReset = false;
+
 function getData(dex, field, search = false){
 	var thisPkmn = pokemon[dex];
 	if(pokemon[dex]){
@@ -40,7 +42,7 @@ function createPokemon(edit = false){
 		gender = "female";
 	}
 	var box = $("#pokeform-box").val();
-	if(box == "None"){
+	if(box == -1){
 		box = null;
 	}
 	var iv = {
@@ -201,8 +203,10 @@ function resetForm(){
 		}
 	});
 	$("#pokeform select").each(function(){
-		if($(this).attr("id") == "pokeform-box" || $(this).attr("id") === "pokeform-mint" || $(this).attr("id") === "pokeform-title"){
+		if($(this).attr("id") === "pokeform-mint" || $(this).attr("id") === "pokeform-title"){
 			$(this).val("None").trigger("change");
+		} else if($(this).attr("id") == "pokeform-box"){
+			$(this).val(-1).trigger("change");
 		} else {
 			$(this).val(null).trigger("change");
 		}
@@ -289,9 +293,9 @@ function boxSortDialog(popup = false){
 }
 
 function deleteBox(id){
-	var name = $(".box[data-boxnum="+id+"] span").text();
+	var allboxes = JSON.parse(localStorage.getItem("boxes"));
+	var name = allboxes.entries[id];
 	if(confirm("Are you sure? All of the Pokémon in " + name + " will become unsorted.")){
-		var allboxes = JSON.parse(localStorage.getItem("boxes"));
 		delete allboxes.entries[id];
 		allboxes.entries = allboxes.entries.filter(Boolean);
 		localStorage.setItem("boxes", JSON.stringify(allboxes));
@@ -547,10 +551,9 @@ function createTable(allpkmn){
 }
 
 function clearTable(allpkmn){
-	$("#pokemon-list").html('<div id="pokemon-list-empty"><div>You have no saved Pokémon. Click or tap the + button at the bottom-right to add one! If you have a backup file, click the ⛭ button at the top-right to restore the backup.</div></div>');
+	$(".pokemon-list-entry").remove();
 	createTable(allpkmn);
-	//TODO: reset filters?
-	//switchBoxDisplay($(".box.selected")[0].dataset.boxnum);
+	filterReset();
 }
 
 function createBoxes(allboxes){
@@ -560,10 +563,9 @@ function createBoxes(allboxes){
 }
 
 function clearBoxes(allboxes){
-	//TODO: reset filters?
-	//$("#filters-boxes-list").empty();
-	//$(".box[data-boxnum=-2]").click();
-	$("#pokeform-box").empty().append(new Option("None", "None", true, true));
+	$("#pokeform-box").empty().append(new Option("None", -1, true, true));
+	$("#filterform-box").empty().append(new Option("Any", -2, true, true)).append(new Option("None", -1));
+	filterReset();
 	createBoxes(allboxes);
 }
 
@@ -713,20 +715,56 @@ function addRow(pkmn, i){
 
 function filterPkmn(filters){
 	var filterTypes = Object.keys(filters), filterType = "", filterVal = 0;
+	var toShow = $(".pokemon-list-entry");
+	var filterNum = 0;
 	for(let ft = 0; ft < filterTypes.length; ft++){
 		filterType = filterTypes[ft];
 		filterVal = filters[filterType];
-		if(filterType == "reset"){
-			$(".pokemon-list-entry").show();
-			break;
-		} else if(filterType == "box"){
-			if(!$(".box[data-boxnum="+filterVal+"].selected").length){
-				$(".box.selected").removeClass("selected");
-				$(".box[data-boxnum="+filterVal+"]").addClass("selected").blur();
-				switchBoxDisplay(filterVal);
+		if(filterVal) {
+			if(filterType == "box" && filterVal != -2){
+				filterNum++;
+				toShow = toShow.filter(function(i, e){
+					return e.dataset.box == filterVal;
+				});
+			} else if(filterType == "games" && filterVal.length){
+				filterNum++;
+				var compatgames = [];
+				toShow = toShow.filter(function(i, e){
+					var compatible = true;
+					compatgames = e.dataset.compatgames.split(" ");
+					for(let fg = 0; fg < filterVal.length; fg++){
+						if(compatgames.indexOf(filterVal[fg]) == -1){
+							compatible = false;
+							break;
+						}
+					}
+					return compatible;
+				});
 			}
 		}
 	}
+	if(filterNum){
+		$("#menu-filter-count").text(filterNum).show();
+	} else {
+		$("#menu-filter-count").hide();
+	}
+	if(toShow.length){
+		$("#pokemon-list-nomatch, .pokemon-list-entry").hide();
+		toShow.show();
+	} else {
+		if($(".pokemon-list-entry").length){
+			$(".pokemon-list-entry").hide();
+			$("#pokemon-list-nomatch").show();
+		}
+	}
+}
+
+function filterReset(){
+	filterInReset = true;
+	$("#filterform-games").val("").change();
+	$("#filterform-box").val(-2).change();
+	filterPkmn({});
+	filterInReset = false;
 }
 
 function sortPkmn(type){
@@ -753,7 +791,7 @@ function sortPkmn(type){
 }
 
 function addBox(box, i){
-	$("#pokeform-box, #filterform-boxes").append(new Option(box, i));
+	$("#pokeform-box, #filterform-box").append(new Option(box, i));
 }
 
 function editBox(id){
@@ -905,24 +943,6 @@ function showPreview(){
 	}
 }
 
-function switchBoxDisplay(b){
-	if(b == "-2"){
-		$("#pokemon-list-emptybox").hide();
-		$(".pokemon-list-entry").show();
-	} else {
-		$(".pokemon-list-entry:not([data-box="+b+"])").hide();
-		var toShow = $(".pokemon-list-entry[data-box="+b+"]");
-		if(toShow.length){
-			$("#pokemon-list-emptybox").hide();
-			toShow.show();
-		} else {
-			if($("#pokemon-list > div").length > 2){
-				$("#pokemon-list-emptybox").show();
-			}
-		}
-	}
-}
-
 // On load
 $(function(){
 	// Set modal defaults
@@ -952,10 +972,10 @@ $(function(){
 		width: "100%",
     	placeholder: "Select an option"
 	});
-	$("#settings select, #pokeform-box").select2({
+	$("#settings select, #pokeform-box, #filterform-box").select2({
 		width: "100%"
 	});
-	$("#filterform-boxes, #filterform-games").select2({
+	$("#filterform-games").select2({
 		allowClear: true,
 		placeholder: "Any",
 		templateSelection: formatDropOption,
@@ -1275,6 +1295,16 @@ $(function(){
 	$("#menu-filter").click(function(){
 		this.blur();
 		showModal("filterform");
+	});
+	$("#filterform select").change(function(){
+		if(filterInReset) return;
+		var allFilters = {};
+		$("#filterform select").each(function(){
+			var filterType = $(this).attr("id").replace("filterform-","");
+			var filterVal = $(this).val();
+			allFilters[filterType] = filterVal;
+		});
+		filterPkmn(allFilters);
 	});
 	$("#changelog tr:not(:last-child)").click(function(){
 		$(this).toggleClass("changelog-active");
