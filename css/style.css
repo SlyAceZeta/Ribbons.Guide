@@ -67,6 +67,9 @@ body {
 	padding: 10px;
 	position: relative;
 }
+#filterform label {
+	width: 120px;
+}
 .modal th label .asterisk {
 	position: absolute;
 	right: 1px;
@@ -137,7 +140,8 @@ body {
 	top: -5px;
 	background: #fff;
 }
-.select2-container--default .select2-results__option--selected {
+.select2-container--default .select2-results__option--selected,
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
 	background: #ddd;
 }
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
@@ -147,7 +151,8 @@ body {
 .select2-container .select2-selection--single {
 	height: 32px;
 }
-.select2-selection__clear {
+.select2-selection__clear,
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
 	color: #444;
 }
 .modal td > input[type="text"] {
@@ -725,7 +730,7 @@ footer {
 }
 
 #pokemon-list,
-#filters {
+#menu {
 	width: 95%;
 	margin: 60px auto 125px;
 	display: flex;
@@ -735,56 +740,55 @@ footer {
 #pokemon-list {
 	margin-top: 0;
 }
-#filters {
-	margin-bottom: 5px;
-	flex-wrap: nowrap;
-}
-#filters-boxes {
+#menu {
+	margin-bottom: 0;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: stretch;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
 	user-select: none;
 }
-#filters-boxes-list {
-	display: contents;
-}
-#filters-boxes button {
-	padding: 5px 15px 5px 10px;
-	margin-bottom: 5px;
+#menu button {
+	padding: 5px 10px;
+	margin: 0 0 0 5px;
 	border-radius: 20px;
 	box-shadow: none;
 	transition: box-shadow 0.33s;
 	cursor: pointer;
 }
-#filters-boxes button.selected,
-#filters-boxes button.selected:hover,
-#filters-boxes button.selected:focus {
+#menu button.selected,
+#menu button.selected:hover,
+#menu button.selected:focus {
 	box-shadow: 0 0 5px 0 var(--text);
 }
-#filters-boxes button img,
-#filters-boxes button span {
+#menu button img,
+#menu button span {
 	vertical-align: middle;
 }
-#filters-boxes button img {
+#menu button img {
 	width: 25px;
 	height: auto;
-	margin-right: 5px;
 }
-#filters-boxes #filters-boxes-list ~ button {
-	padding: 5px 10px;
+#menu-filter {
+	position: relative;
 }
-#filters-boxes #filters-boxes-list ~ button img {
-	margin-right: 0;
+#menu-filter-count {
+	position: absolute;
+	top: -5px;
+	right: -10px;
+	border-radius: 10px;
+	width: 30px;
+	text-align: center;
+	font-size: 11pt;
+	font-weight: 600;
 }
-#box-list-edit img {
-	width: 19px;
-	padding: 3px;
+#filterform .select2-search.select2-search--inline {
+	display: inline-block;
+	padding: 2px;
 }
-#filters-boxes button {
-	margin-left: 5px;
-}
-#filters-boxes button[data-boxnum="-2"] {
-	margin-left: 0;
+#boxsort-boxes {
+	display: block;
+	max-height: 300px;
+	overflow-y: auto;
 }
 #boxsort-boxes > div {
 	display: flex;
@@ -828,7 +832,7 @@ footer {
 .pokemon-list-entry {
 	border-radius: 5px;
 	width: 100%;
-	margin: 10px auto;
+	margin: 10px auto 0;
 	box-shadow: none;
 	transition: box-shadow 0.33s;
 }
@@ -957,10 +961,6 @@ footer {
 .ribbonguide-warning span span {
 	font-weight: bold;
 }
-#filters-boxes-list .box span {
-	max-width: 10vw;
-	display: inline-block;
-}
 .pokemon-list-box-name {
 	max-width: 15vw;
 }
@@ -992,7 +992,10 @@ footer {
 @media only screen and (min-width: 768px) {
 	.pokemon-list-entry {
 		width: 49%;
-		margin: 10px 1% 10px 0;
+		margin: 10px 1% 0 0;
+	}
+	#menu button:last-child {
+		margin-right: 1%;
 	}
 	#add-pokemon-button {
 		bottom: 50px;
@@ -1011,8 +1014,11 @@ footer {
 }
 @media only screen and (min-width: 1200px) {
 	.pokemon-list-entry {
-		width: 32%;
-		margin: 10px 1% 10px 0;
+		width: 32.5%;
+		margin: 10px 0.5% 0 0;
+	}
+	#menu button:last-child {
+		margin-right: 1.5%;
 	}
 	#add-pokemon-button {
 		bottom: 40px;
@@ -1083,6 +1089,13 @@ footer {
 .pokemon-list-move {
 	cursor: grab;
 }
+#pokemon-list.ui-sortable-disabled .pokemon-list-entry-header {
+	cursor: default;
+}
+#pokemon-list.ui-sortable-disabled .pokemon-list-move {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
 .pokemon-list-name {
 	font-weight: bold;
 	font-size: 20px;
@@ -1100,7 +1113,6 @@ footer {
 .pokemon-list-box-icon {
 	margin-right: 5px;
 }
-#filters-boxes-list .box span,
 .pokemon-list-box-name {
 	white-space: nowrap;
 	overflow: hidden;
@@ -1136,7 +1148,7 @@ footer {
 	width: 68px;
 	height: auto;
 }
-#pokemon-list-emptybox,
+#pokemon-list-nomatch,
 #pokemon-list-empty,
 .ribbons-list-empty {
 	width: 100%;

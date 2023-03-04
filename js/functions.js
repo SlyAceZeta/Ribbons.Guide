@@ -1,3 +1,5 @@
+var filterInReset = false;
+
 function getData(dex, field, search = false){
 	var thisPkmn = pokemon[dex];
 	if(pokemon[dex]){
@@ -40,7 +42,7 @@ function createPokemon(edit = false){
 		gender = "female";
 	}
 	var box = $("#pokeform-box").val();
-	if(box == "None"){
+	if(box == -1){
 		box = null;
 	}
 	var iv = {
@@ -124,6 +126,7 @@ function createBox(edit = false){
 			boxSortDialog();
 		} else {
 			addBox(name, n);
+			boxSortDialog();
 		}
 		$.modal.close();
 	} else {
@@ -200,8 +203,10 @@ function resetForm(){
 		}
 	});
 	$("#pokeform select").each(function(){
-		if($(this).attr("id") == "pokeform-box" || $(this).attr("id") === "pokeform-mint" || $(this).attr("id") === "pokeform-title"){
+		if($(this).attr("id") === "pokeform-mint" || $(this).attr("id") === "pokeform-title"){
 			$(this).val("None").trigger("change");
+		} else if($(this).attr("id") == "pokeform-box"){
+			$(this).val(-1).trigger("change");
 		} else {
 			$(this).val(null).trigger("change");
 		}
@@ -273,7 +278,7 @@ function deletePkmn(id){
 	}
 }
 
-function boxSortDialog(a = false){
+function boxSortDialog(popup = false){
 	var allboxes = JSON.parse(localStorage.getItem("boxes"));
 	if(allboxes.entries.length){
 		var html = "";
@@ -281,20 +286,16 @@ function boxSortDialog(a = false){
 			html = html + "<div data-sortnum='"+i+"'><span>" + allboxes.entries[i] + "</span><span><button onclick='editBox("+i+")'><img src='img/ui/edit.svg' alt='Edit'></button><button onclick='deleteBox("+i+")'><img src='img/ui/delete.svg' alt='Delete'></button></span></div>";
 		}
 		$("#boxsort-boxes").html(html);
-		if(a) showModal("boxsort");
 	} else {
-		if(a){
-			alert("You don't have any boxes to edit!");
-		} else {
-			$.modal.close();
-		}
+		$("#boxsort-boxes").html("You don't have any boxes!");
 	}
+	if(popup) showModal("boxsort");
 }
 
 function deleteBox(id){
-	var name = $(".box[data-boxnum="+id+"] span").text();
+	var allboxes = JSON.parse(localStorage.getItem("boxes"));
+	var name = allboxes.entries[id];
 	if(confirm("Are you sure? All of the Pokémon in " + name + " will become unsorted.")){
-		var allboxes = JSON.parse(localStorage.getItem("boxes"));
 		delete allboxes.entries[id];
 		allboxes.entries = allboxes.entries.filter(Boolean);
 		localStorage.setItem("boxes", JSON.stringify(allboxes));
@@ -550,9 +551,9 @@ function createTable(allpkmn){
 }
 
 function clearTable(allpkmn){
-	$("#pokemon-list").html('<div id="pokemon-list-empty"><div>You have no saved Pokémon. Click or tap the + button at the bottom-right to add one! If you have a backup file, click the ⛭ button at the top-right to restore the backup.</div></div>');
+	$(".pokemon-list-entry").remove();
 	createTable(allpkmn);
-	switchBoxDisplay($(".box.selected")[0].dataset.boxnum);
+	filterReset();
 }
 
 function createBoxes(allboxes){
@@ -562,9 +563,9 @@ function createBoxes(allboxes){
 }
 
 function clearBoxes(allboxes){
-	$("#filters-boxes-list").empty();
-	$(".box[data-boxnum=-2]").click();
-	$("#pokeform-box").empty().append(new Option("None", "None", true, true));
+	$("#pokeform-box").empty().append(new Option("None", -1, true, true));
+	$("#filterform-box").empty().append(new Option("Any", -2, true, true)).append(new Option("None", -1));
+	filterReset();
 	createBoxes(allboxes);
 }
 
@@ -584,6 +585,29 @@ function addRow(pkmn, i){
 	var pkmnGen = 100;
 	if(pkmn.currentgame){
 		pkmnGen = parseInt(games[pkmn.currentgame].gen);
+	}
+	if(pkmnGen < 3){
+		pkmnGen = 7;
+	} else if(pkmn.currentgame == "go"){
+		pkmnGen = 8;
+	}
+	var compatGames = getData(pkmn.dex, "games");
+	var stillCompat = [];
+	if(pkmnGen < 100){
+		for(var cg = 0; cg < compatGames.length; cg++){
+			if(games[compatGames[cg]]){
+				if(compatGames[cg] == "lgp" || compatGames[cg] == "lge"){
+					if(pkmn.currentgame == "lgp" || pkmn.currentgame == "lge" || pkmn.currentgame == "go"){
+						stillCompat.push(compatGames[cg]);
+					}
+				} else {
+					var compatGen = parseInt(games[compatGames[cg]].gen);
+					if(compatGen >= pkmnGen || (pkmnGen == 2 && compatGen == 1)){
+						stillCompat.push(compatGames[cg]);
+					}
+				}
+			}
+		}
 	}
 
 	var shinyDir = pkmn.shiny ? "shiny/" : "regular/";
@@ -686,12 +710,113 @@ function addRow(pkmn, i){
 		boxID = " data-box='-1'";
 	}
 
-	$("#pokemon-list").append("<div class='pokemon-list-entry' data-pokemon='" + i + "'" + boxID + "><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png' alt='" + ballName + "' title='" + ballName + "'><span class='pokemon-list-name'>" + name + "</span>" + genderimg + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' alt='" + name + "'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span class='pokemon-list-lang-wrapper'><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + boxLabel + "</div><div class='pokemon-list-entry-footer-right'><button class='pokemon-list-move'><img src='img/ui/move.svg' alt='Reorder " + name + "' title='Reorder " + name + "'></button><button class='pokemon-list-guide' onclick='ribbonGuide("+i+")'><img src='img/ui/clipboard.png' alt='Ribbons' title='" + name + "&#39;s Ribbon Guide'></button><button class='pokemon-list-edit' onclick='editPkmn("+i+")'><img src='img/ui/edit.svg' alt='Edit " + name + "' title='Edit " + name + "'></button><button class='pokemon-list-delete' onclick='deletePkmn("+i+")'><img src='img/ui/delete.svg' alt='Delete " + name + "' title='Delete " + name + "'></button></div></div></div>");
+	$("#pokemon-list").append("<div class='pokemon-list-entry' data-natdex='" + getData(pkmn.dex, "natdex") + "' data-name='" + name + "' data-level='" + level + "' data-compatgames='" + stillCompat.join(" ") + "' data-pokemon='" + i + "'" + boxID + "><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png' alt='" + ballName + "' title='" + ballName + "'><span class='pokemon-list-name'>" + name + "</span>" + genderimg + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' alt='" + name + "'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span class='pokemon-list-lang-wrapper'><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + boxLabel + "</div><div class='pokemon-list-entry-footer-right'><button class='pokemon-list-move'><img src='img/ui/move.svg' alt='Reorder " + name + "' title='Reorder " + name + "'></button><button class='pokemon-list-guide' onclick='ribbonGuide("+i+")'><img src='img/ui/clipboard.png' alt='Ribbons' title='" + name + "&#39;s Ribbon Guide'></button><button class='pokemon-list-edit' onclick='editPkmn("+i+")'><img src='img/ui/edit.svg' alt='Edit " + name + "' title='Edit " + name + "'></button><button class='pokemon-list-delete' onclick='deletePkmn("+i+")'><img src='img/ui/delete.svg' alt='Delete " + name + "' title='Delete " + name + "'></button></div></div></div>");
+}
+
+function filterPkmn(filters){
+	var filterTypes = Object.keys(filters), filterType = "", filterVal = 0;
+	var toShow = $(".pokemon-list-entry");
+	var filterNum = 0;
+	for(let ft = 0; ft < filterTypes.length; ft++){
+		filterType = filterTypes[ft];
+		filterVal = filters[filterType];
+		if(filterVal) {
+			if(filterType == "box" && filterVal != -2){
+				filterNum++;
+				toShow = toShow.filter(function(i, e){
+					return e.dataset.box == filterVal;
+				});
+			} else if(filterType == "games" && filterVal.length){
+				filterNum++;
+				var compatgames = [];
+				toShow = toShow.filter(function(i, e){
+					var compatible = true;
+					compatgames = e.dataset.compatgames.split(" ");
+					for(let fg = 0; fg < filterVal.length; fg++){
+						if(compatgames.indexOf(filterVal[fg]) == -1){
+							compatible = false;
+							break;
+						}
+					}
+					return compatible;
+				});
+			}
+		}
+	}
+	filterBubble(filterNum);
+	if(toShow.length){
+		$("#pokemon-list-nomatch, .pokemon-list-entry").hide();
+		toShow.show();
+	} else {
+		if($(".pokemon-list-entry").length){
+			$(".pokemon-list-entry").hide();
+			$("#pokemon-list-nomatch").show();
+		}
+	}
+}
+
+function filterReset(){
+	filterInReset = true;
+	$("#filterform-games").val("").change();
+	$("#filterform-box").val(-2).change();
+	if($("#filterform-sort").val() != "default"){
+		$("#filterform-sort").val("default").change();
+	}
+	filterPkmn({});
+	filterInReset = false;
+}
+
+function sortPkmn(type){
+	if(type == "default"){
+		$("#pokemon-list").sortable("enable");
+		var allpkmn = JSON.parse(localStorage.getItem("pokemon"));
+		clearTable(allpkmn);
+	} else {
+		$("#pokemon-list").sortable("disable");
+		var pkmnlist = Array.from($(".pokemon-list-entry"));
+		var comparison;
+		if(type == "levelasc"){
+			comparison = function(a, b){
+				return a.dataset.level - b.dataset.level;
+			}
+		} else if(type == "leveldesc"){
+			comparison = function(a, b){
+				return b.dataset.level - a.dataset.level;
+			}
+		} else if(type == "nameasc"){
+			comparison = function(a, b){
+				return a.dataset.name.toLowerCase().localeCompare(b.dataset.name.toLowerCase());
+			}
+		} else if(type == "namedesc"){
+			comparison = function(a, b){
+				return b.dataset.name.toLowerCase().localeCompare(a.dataset.name.toLowerCase());
+			}
+		} else if(type == "dexasc"){
+			comparison = function(a, b){
+				return a.dataset.natdex - b.dataset.natdex;
+			}
+		} else if(type == "dexdesc"){
+			comparison = function(a, b){
+				return b.dataset.natdex - a.dataset.natdex;
+			}
+		}
+		var sortedPkmn = pkmnlist.sort(comparison);
+		sortedPkmn.forEach(e => $("#pokemon-list").append(e));
+	}
+	filterBubble($("#menu-filter-count").attr("data-filters"));
+}
+
+function filterBubble(n = ""){
+	if(n == 0) n = "";
+	var t = n;
+	if($("#filterform-sort").val() != "default"){
+		t = n + "⮃";
+	}
+	$("#menu-filter-count").text(t).attr("data-filters", n);
 }
 
 function addBox(box, i){
-	$("#filters-boxes-list").append("<button class='box' data-boxnum='"+i+"' onclick='switchBox("+i+")'><img src='img/ui/box-closed.png' alt='Box'><span>"+box+"</span></button>");
-	$("#pokeform-box").append(new Option(box, i));
+	$("#pokeform-box, #filterform-box").append(new Option(box, i));
 }
 
 function editBox(id){
@@ -843,32 +968,6 @@ function showPreview(){
 	}
 }
 
-function switchBox(b = -1){
-	if(!$(".box[data-boxnum="+b+"].selected").length){
-		$(".box.selected").removeClass("selected");
-		$(".box[data-boxnum="+b+"]").addClass("selected").blur();
-		switchBoxDisplay(b);
-	}
-}
-
-function switchBoxDisplay(b){
-	if(b == "-2"){
-		$("#pokemon-list-emptybox").hide();
-		$(".pokemon-list-entry").show();
-	} else {
-		$(".pokemon-list-entry:not([data-box="+b+"])").hide();
-		var toShow = $(".pokemon-list-entry[data-box="+b+"]");
-		if(toShow.length){
-			$("#pokemon-list-emptybox").hide();
-			toShow.show();
-		} else {
-			if($("#pokemon-list > div").length > 2){
-				$("#pokemon-list-emptybox").show();
-			}
-		}
-	}
-}
-
 // On load
 $(function(){
 	// Set modal defaults
@@ -898,7 +997,14 @@ $(function(){
 		width: "100%",
     	placeholder: "Select an option"
 	});
-	$("#settings select, #pokeform-box").select2({
+	$("#settings select, #pokeform-box, #filterform-box, #filterform-sort").select2({
+		width: "100%"
+	});
+	$("#filterform-games").select2({
+		allowClear: true,
+		placeholder: "Any",
+		templateSelection: formatDropOption,
+		templateResult: formatDropOption,
 		width: "100%"
 	});
 
@@ -961,7 +1067,13 @@ $(function(){
 		if(g == "home" || g == "bank" || g == "bank7"){
 			$("#pokeform-currentgame-storage").append(newGame);
 		} else {
-			$("#pokeform-origin-" + games[g]["gen"] + ", #pokeform-currentgame-" + games[g]["gen"]).append(newGame);
+			// Scarlet & Violet: pending HOME compatibility
+			// GO: Pokemon cannot move there
+			if(g == "scar" || g == "vio" || g == "go"){
+				$("#pokeform-origin-" + games[g]["gen"] + ", #pokeform-currentgame-" + games[g]["gen"]).append(newGame);
+			} else {
+				$("#pokeform-origin-" + games[g]["gen"] + ", #pokeform-currentgame-" + games[g]["gen"] + ", #filterform-games-" + games[g]["gen"]).append(newGame);
+			}
 		}
 	}
 
@@ -1094,6 +1206,7 @@ $(function(){
 		allpkmn = JSON.parse(allpkmn);
 		createTable(allpkmn);
 	}
+	filterReset();
 
 	// Populate changelog
 	var changeDates = Object.keys(changelog);
@@ -1195,16 +1308,35 @@ $(function(){
 	$("input[name='pokeform-shiny'], input[name='pokeform-gender']").change(function(){
 		showPreview();
 	})
-	$("#settings-close, #changelog-close, #boxform-cancel, #boxsort-close, #ribbonguide-close").click(function(){
+	$(".button.close").click(function(){
 		$.modal.close();
 	});
-	$("#box-list-add").click(function(){
-		this.blur();
-		showModal("boxform");
+	$("#boxsort-add").click(function(){
+		showModal("boxform", true);
 	});
-	$("#box-list-edit").click(function(){
+	$("#menu-boxes").click(function(){
 		this.blur();
 		boxSortDialog(true);
+	});
+	$("#menu-filter").click(function(){
+		this.blur();
+		showModal("filterform");
+	});
+	$("#filterform select").change(function(){
+		if(filterInReset) return;
+		if($(this).attr("id") == "filterform-sort"){
+			sortPkmn($(this).val());
+		} else {
+			var allFilters = {};
+			$("#filterform select").each(function(){
+				var filterType = $(this).attr("id").replace("filterform-","");
+				var filterVal = $(this).val();
+				if(filterType != "sort"){
+					allFilters[filterType] = filterVal;
+				}
+			});
+			filterPkmn(allFilters);
+		}
 	});
 	$("#changelog tr:not(:last-child)").click(function(){
 		$(this).toggleClass("changelog-active");
