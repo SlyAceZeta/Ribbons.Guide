@@ -743,11 +743,7 @@ function filterPkmn(filters){
 			}
 		}
 	}
-	if(filterNum){
-		$("#menu-filter-count").text(filterNum).show();
-	} else {
-		$("#menu-filter-count").hide();
-	}
+	filterBubble(filterNum);
 	if(toShow.length){
 		$("#pokemon-list-nomatch, .pokemon-list-entry").hide();
 		toShow.show();
@@ -763,6 +759,9 @@ function filterReset(){
 	filterInReset = true;
 	$("#filterform-games").val("").change();
 	$("#filterform-box").val(-2).change();
+	if($("#filterform-sort").val() != "default"){
+		$("#filterform-sort").val("default").change();
+	}
 	filterPkmn({});
 	filterInReset = false;
 }
@@ -788,6 +787,16 @@ function sortPkmn(type){
 		var sortedPkmn = pkmnlist.sort(comparison);
 		sortedPkmn.forEach(e => $("#pokemon-list").append(e));
 	}
+	filterBubble($("#menu-filter-count").attr("data-filters"));
+}
+
+function filterBubble(n = ""){
+	if(n == 0) n = "";
+	var t = n;
+	if($("#filterform-sort").val() != "default"){
+		t = n + "⮃";
+	}
+	$("#menu-filter-count").text(t).attr("data-filters", n);
 }
 
 function addBox(box, i){
@@ -972,7 +981,7 @@ $(function(){
 		width: "100%",
     	placeholder: "Select an option"
 	});
-	$("#settings select, #pokeform-box, #filterform-box").select2({
+	$("#settings select, #pokeform-box, #filterform-box, #filterform-sort").select2({
 		width: "100%"
 	});
 	$("#filterform-games").select2({
@@ -1181,6 +1190,7 @@ $(function(){
 		allpkmn = JSON.parse(allpkmn);
 		createTable(allpkmn);
 	}
+	filterReset();
 
 	// Populate changelog
 	var changeDates = Object.keys(changelog);
@@ -1298,13 +1308,19 @@ $(function(){
 	});
 	$("#filterform select").change(function(){
 		if(filterInReset) return;
-		var allFilters = {};
-		$("#filterform select").each(function(){
-			var filterType = $(this).attr("id").replace("filterform-","");
-			var filterVal = $(this).val();
-			allFilters[filterType] = filterVal;
-		});
-		filterPkmn(allFilters);
+		if($(this).attr("id") == "filterform-sort"){
+			sortPkmn($(this).val());
+		} else {
+			var allFilters = {};
+			$("#filterform select").each(function(){
+				var filterType = $(this).attr("id").replace("filterform-","");
+				var filterVal = $(this).val();
+				if(filterType != "sort"){
+					allFilters[filterType] = filterVal;
+				}
+			});
+			filterPkmn(allFilters);
+		}
 	});
 	$("#changelog tr:not(:last-child)").click(function(){
 		$(this).toggleClass("changelog-active");

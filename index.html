@@ -31,14 +31,23 @@
 		</header>
 		<div id="menu">
 			<button id="menu-boxes" title="Boxes"><img src="img/ui/box-closed.png" alt="Boxes"></button>
-			<button id="menu-filter" title="Filter"><img src="img/ui/filter.svg" alt="Filter"><span id="menu-filter-count">0</span></button>
-			<button id="menu-sort" title="Sort"><img src="img/ui/sort.svg" alt="Sort"></button>
+			<button id="menu-filter" title="Filter"><img src="img/ui/filter.svg" alt="Filter"><span id="menu-filter-count" data-filters=""></span></button>
 		</div>
 		<div id="filterform" class="modal">
 			<h4>
-				<div>Filter Pokémon</div>
+				<div>Filter/Sort Pokémon</div>
 			</h4>
 			<table>
+				<tr>
+					<th><label for="filterform-sort">Sort</label></th>
+					<td>
+						<select id="filterform-sort">
+							<option value="default">Default</option>
+							<option value="levelasc">Level ⯅</option>
+							<option value="leveldesc">Level ⯆</option>
+						</select>
+					</td>
+				</tr>
 				<tr>
 					<th><label for="filterform-box">Current Box</label></th>
 					<td>

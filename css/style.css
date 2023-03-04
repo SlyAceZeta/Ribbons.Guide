@@ -772,15 +772,14 @@ footer {
 	position: relative;
 }
 #menu-filter-count {
-	display: none;
 	position: absolute;
 	top: -5px;
-	right: -5px;
+	right: -10px;
 	border-radius: 10px;
-	width: 20px;
-	height: 20px;
+	width: 30px;
 	text-align: center;
 	font-size: 11pt;
+	font-weight: 600;
 }
 #filterform .select2-search.select2-search--inline {
 	display: inline-block;
@@ -995,7 +994,7 @@ footer {
 		width: 49%;
 		margin: 10px 1% 0 0;
 	}
-	#menu #menu-sort {
+	#menu button:last-child {
 		margin-right: 1%;
 	}
 	#add-pokemon-button {
@@ -1018,7 +1017,7 @@ footer {
 		width: 32.5%;
 		margin: 10px 0.5% 0 0;
 	}
-	#menu #menu-sort {
+	#menu button:last-child {
 		margin-right: 1.5%;
 	}
 	#add-pokemon-button {
