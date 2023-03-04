@@ -70,7 +70,7 @@ body.theme-sword {
 }
 .theme-sword .pokemon-list-origin,
 .theme-sword .pokemon-list-entry-footer-right,
-.theme-sword #filters-boxes-list ~ button img,
+.theme-sword #menu button:not(#menu-boxes) img,
 .theme-sword #pokeform-shiny-toggle img,
 .theme-sword .pokemon-list-entry .shiny {
 	filter: invert(1);
@@ -87,6 +87,10 @@ body.theme-sword {
 }
 .theme-sword .modal th {
 	background: #dbdbd9;
+}
+.theme-sword #pokemon-list-nomatch,
+.theme-sword #pokemon-list-empty {
+	text-shadow: 0 0 5px #fff;
 }
 
 /* Dauntless Shield */
@@ -108,7 +112,7 @@ body.theme-shield {
 }
 .theme-shield .pokemon-list-origin,
 .theme-shield .pokemon-list-entry-footer-right,
-.theme-shield #filters-boxes-list ~ button img,
+.theme-shield #menu button:not(#menu-boxes) img,
 .theme-shield #pokeform-shiny-toggle img,
 .theme-shield .pokemon-list-entry .shiny {
 	filter: invert(1);
@@ -125,6 +129,10 @@ body.theme-shield {
 }
 .theme-shield .modal th {
 	background: #dbdbd9;
+}
+.theme-shield #pokemon-list-nomatch,
+.theme-shield #pokemon-list-empty {
+	text-shadow: 0 0 5px #fff;
 }
 
 /* Classic Light */
@@ -147,7 +155,7 @@ body.theme-light {
 .theme-light .pokemon-list-origin,
 .theme-light .pokemon-list-entry-footer-right,
 .theme-light #add-pokemon-button img,
-.theme-light #filters-boxes-list ~ button img,
+.theme-light #menu button:not(#menu-boxes) img,
 .theme-light #pokeform-shiny-toggle img,
 .theme-light .pokemon-list-entry .shiny {
 	filter: invert(1);
@@ -168,7 +176,8 @@ body {
 }
 header,
 footer,
-#add-pokemon-button {
+#add-pokemon-button,
+#menu-filter-count {
 	background: var(--header-bg);
 	border-color: var(--header-border);
 	color: var(--header-text, var(--text));
@@ -200,13 +209,13 @@ footer a:not(.button) {
 	color: var(--asterisk);
 }
 .pokemon-list-entry:hover,
-#filters-boxes button:hover,
-#filters-boxes button:focus {
+#menu button:hover,
+#menu button:focus {
 	box-shadow: 0 0 10px -5px var(--text);
 }
 .pokemon-list-entry-header,
 .pokemon-list-entry-footer,
-#filters-boxes button,
+#menu button,
 #boxsort-boxes > div {
 	background-color: var(--pokemon-header, var(--modal-bg, var(--header-bg)));
 }
