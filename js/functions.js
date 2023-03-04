@@ -1366,8 +1366,8 @@ $(function(){
 	$("#pokemon-list").sortable({
 		containment: "document",
 		opacity: 0.75,
-		cancel: "#pokemon-list-empty",
-		handle: ".pokemon-list-move, .pokemon-list-entry-header",
+		cancel: "#pokemon-list-empty, #pokemon-list-nomatch",
+		handle: ".pokemon-list-move",
 		cursor: "grabbing",
 		stop: function(e, ui){
 			var elem = ui.item[0];
