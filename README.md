@@ -32,6 +32,6 @@ Ribbons.Guide also makes use of the following dependencies:
 
 ### License
 
-Pokémon, data, and images © Nintendo/Creatures Inc./GAME FREAK Inc. This project is not affiliated with Nintendo, Game Freak, or The Pokémon Company.
+Pokémon, data, and images © Nintendo/Creatures Inc./Game Freak. This project is not affiliated with Nintendo, Creatures Inc., Game Freak, or The Pokémon Company.
 
 All original content and code is governed by the [GPL-3.0 license](https://opensource.org/license/gpl-3-0/).
