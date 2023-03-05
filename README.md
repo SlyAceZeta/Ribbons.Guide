@@ -1,9 +1,9 @@
-![GitHub](https://img.shields.io/github/license/azekthi/Ribbons.Guide) ![Current Data](https://img.shields.io/badge/data-Scarlet%20%26%20Violet%20v1.2.0-69183D) ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/azekthi/Ribbons.Guide/deploy.yml?label=pages)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/azekthi/Ribbons.Guide/deploy.yml?logo=pwa) ![GitHub Repo stars](https://img.shields.io/github/stars/Azekthi/Ribbons.Guide?style=social)\
+![GitHub](https://img.shields.io/github/license/azekthi/Ribbons.Guide) ![Current Data](https://img.shields.io/badge/data-Scarlet%20%26%20Violet%20v1.2.0-69183D)
 
 # Ribbons.Guide
 
-Ribbons.Guide is a web app that allows you to keep track of your Pokémon and their Ribbons!\
-This was developed as a love letter to the helpful and welcoming [r/PokémonRibbons](https://www.reddit.com/r/pokemonribbons/) community.
+Ribbons.Guide is a [progressive web app](https://en.wikipedia.org/wiki/Progressive_web_app) that allows you to keep track of your Pokémon and their Ribbons! This was developed as a love letter to the helpful and welcoming [r/PokémonRibbons](https://www.reddit.com/r/pokemonribbons/) community. Ribbons.Guide doesn't store or send any data anywhere—it's all saved on your device!
 
 This project is not affiliated with Nintendo, Game Freak, or The Pokémon Company.
 
@@ -18,24 +18,15 @@ This app also makes use of the following dependencies:
 - [jQuery](https://github.com/jquery/jquery)
 - [jQuery UI](https://github.com/jquery/jquery-ui)
 - [jQuery UI Touch Punch](https://github.com/RWAP/jquery-ui-touch-punch)
-- [Select2](https://github.com/select2/select2)
 - [jQuery Modal](https://github.com/kylefox/jquery-modal)
+- [Select2](https://github.com/select2/select2)
+- [UpUp](https://github.com/TalAter/UpUp)
 - [Google Fonts](https://fonts.google.com/)
 
 ### How to Use
 
-There are two ways to use Ribbons.Guide: online, through this repo's attached GitHub Pages, or offline, locally on your computer. All data is stored in your browser's local storage, so both versions function similarly; the only difference is that the online version is automatically updated, whereas local copies need to be updated manually. With the data backup/restore functionality, you can easily switch between the online and offline versions!
+Regardless of how you use Ribbons.Guide, all data is stored in your browser's local storage. A backup and restore option is available in the Settings menu, allowing you to transfer your data between browsers or apps.
 
-#### GitHub Pages
-
-Simply go to https://ribbons.guide and get started! This page will always have the app's latest updates.
-
-#### Locally
-
-Follow the instructions below to use Ribbons.Guide locally.
-
-1. Download the latest ZIP archive of the project by clicking here: https://github.com/Azekthi/Ribbons.Guide/zipball/main/
-2. Extract the ZIP archive to a folder on your computer.
-3. Open `index.html` to get started!
-4. **Keep in mind that you'll need to update your local copy manually; it will not automatically update.**\
-To update, simply click the link above to download the latest ZIP archive again. Extract the new archive to the same folder you extracted the old archive and replace all files when prompted.
+- Ribbons.Guide is available online through this repository's attached GitHub Pages deployment. Simply visit https://ribbons.guide to get started! This is always kept the most up-to-date.
+- Ribbons.Guide can be installed as an app, which also works offline! Visit https://ribbons.guide in a [supported browser](https://en.wikipedia.org/wiki/Progressive_web_app) and use the browser's menu to install the app onto your device, then open the app to get started! The app will automatically update itself when you open it while your device is online.
+- If you choose, you can download the repository and run it all locally from your device. [Download the latest ZIP archive of the project](https://github.com/Azekthi/Ribbons.Guide/zipball/main/), extract all contents to one folder, and open `index.html` to get started! **Keep in mind that you'll need to update your local copy manually; it will not automatically update.** Follow the same steps to update the app, replacing all files when prompted.

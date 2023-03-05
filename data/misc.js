@@ -1,14 +1,14 @@
 // Languages
 const languages = {
-	"ger": "Deutsch",			// German
-	"eng": "English",			// English
-	"spa": "Español (España)",	// Spanish
-	"fre": "Français",			// French
-	"ita": "Italiano",			// Italian
-	"jpn": "日本語",			// Japanese
-	"kor": "한국어",			// Korean
-	"cht": "正體字",			// Traditional Chinese (Cantonese)
-	"chs": "简化字"			// Simplified Chinese (Mandarin)
+	"ger": { "iso": "de", "name": "Deutsch" },			// German
+	"eng": { "iso": "en", "name": "English" },			// English
+	"spa": { "iso": "es", "name": "Español (España)" },	// Spanish
+	"fre": { "iso": "fr", "name": "Français" },			// French
+	"ita": { "iso": "it", "name": "Italiano" },			// Italian
+	"jpn": { "iso": "ja", "name": "日本語" },			// Japanese
+	"kor": { "iso": "ko", "name": "한국어" },			// Korean
+	"cht": { "iso": "zh", "name": "正體字" },			// Traditional Chinese (Cantonese)
+	"chs": { "iso": "zh", "name": "简化字" }			// Simplified Chinese (Mandarin)
 }
 
 // General terms

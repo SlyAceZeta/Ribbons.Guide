@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ribbons.Guide</title>
+		<title>Ribbon Tracking and Guidance</title>
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" type="image/png" href="img/ribbons/best-friends-ribbon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#112028">
+        <link rel="shortcut icon" href="favicon.ico">
+        <meta name="msapplication-TileColor" content="#112028">
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <meta name="theme-color" content="#112028">
 		<link href="css/jquery.modal.min.css" rel="stylesheet">
 		<link href="css/select2.min.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
@@ -20,6 +29,17 @@
 		<script src="js/select2.min.js"></script>
 		<script src="js/jquery.modal.js"></script>
 		<script src="js/functions.js"></script>
+		<script src="js/upup.min.js"></script>
+        <script>
+            UpUp.start({
+                'content-url': 'index.html',
+                'assets': [
+                    'css/jquery.modal.min.css', 'css/select2.min.css', 'css/style.css', 'css/themes.css',
+                    'data/commonforms.js', 'data/pokemon.js', 'data/abilities.js', 'data/ribbons.js', 'data/misc.js', 'data/changelog.js',
+                    'js/jquery-3.6.1.min.js', 'js/jquery-ui.min.js', 'js/jquery-ui.touch-punch.min.js', 'js/select2.min.js', 'js/jquery.modal.js', 'js/functions.js'
+                ]
+            });
+        </script>
 	</head>
 	<body>
 		<header>

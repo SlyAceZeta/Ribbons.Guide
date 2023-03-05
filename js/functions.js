@@ -188,9 +188,9 @@ function changeTheme(t){
 	$("body").attr({ class: "theme-" + t, theme: t });
 }
 
-function changeLang(l){
-	localStorage.setItem("language", l);
-	$("body").attr("lang", l);
+function changeLang(l, set = true){
+	if(set) localStorage.setItem("language", l);
+	$("html, body").attr("lang", languages[l].iso);
 }
 
 function resetForm(){
@@ -1012,22 +1012,21 @@ $(function(){
 	var setlang = localStorage.getItem("language");
 	if(!setlang){
 		setlang = "eng";
-		//changeLang("eng");
 		//showModal("settings");
 	}
-	$("body").attr("lang", setlang);
+	changeLang(setlang, false);
 	$("#settings-language").change(function(){
 		var curLang = $("body").attr("lang");
 		var newLang = $(this).val();
-		if(curLang !== newLang){
+		if(curLang !== languages[newLang].iso){
 			changeLang(newLang);
 		}
 	});
 	for(var l in languages){
 		var lcap = l.toUpperCase();
 		var curlang = (l == setlang) ? true : false;
-		$("#pokeform-lang").append(new Option((lcap === "SPA" ? "SP-EU" : lcap) + " - " + languages[l], lcap));
-		$("#settings-language").append(new Option((lcap === "SPA" ? "SP-EU" : lcap) + " - " + languages[l], l, curlang, curlang));
+		$("#pokeform-lang").append(new Option((lcap === "SPA" ? "SP-EU" : lcap) + " - " + languages[l].name, lcap));
+		$("#settings-language").append(new Option((lcap === "SPA" ? "SP-EU" : lcap) + " - " + languages[l].name, l, curlang, curlang));
 	}
 
 	// Load form data: mints and natures
@@ -1367,8 +1366,8 @@ $(function(){
 	$("#pokemon-list").sortable({
 		containment: "document",
 		opacity: 0.75,
-		cancel: "#pokemon-list-empty",
-		handle: ".pokemon-list-move, .pokemon-list-entry-header",
+		cancel: "#pokemon-list-empty, #pokemon-list-nomatch",
+		handle: ".pokemon-list-move",
 		cursor: "grabbing",
 		stop: function(e, ui){
 			var elem = ui.item[0];
