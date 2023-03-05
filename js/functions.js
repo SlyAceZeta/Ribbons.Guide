@@ -710,7 +710,7 @@ function addRow(pkmn, i){
 		boxID = " data-box='-1'";
 	}
 
-	$("#pokemon-list").append("<div class='pokemon-list-entry' data-natdex='" + getData(pkmn.dex, "natdex") + "' data-name='" + name + "' data-level='" + level + "' data-compatgames='" + stillCompat.join(" ") + "' data-pokemon='" + i + "'" + boxID + "><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png' alt='" + ballName + "' title='" + ballName + "'><span class='pokemon-list-name'>" + name + "</span>" + genderimg + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' alt='" + name + "'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span class='pokemon-list-lang-wrapper'><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + boxLabel + "</div><div class='pokemon-list-entry-footer-right'><button class='pokemon-list-move'><img src='img/ui/move.svg' alt='Reorder " + name + "' title='Reorder " + name + "'></button><button class='pokemon-list-guide' onclick='ribbonGuide("+i+")'><img src='img/ui/clipboard.png' alt='Ribbons' title='" + name + "&#39;s Ribbon Guide'></button><button class='pokemon-list-edit' onclick='editPkmn("+i+")'><img src='img/ui/edit.svg' alt='Edit " + name + "' title='Edit " + name + "'></button><button class='pokemon-list-delete' onclick='deletePkmn("+i+")'><img src='img/ui/delete.svg' alt='Delete " + name + "' title='Delete " + name + "'></button></div></div></div>");
+	$("#pokemon-list").append("<div class='pokemon-list-entry' data-natdex='" + getData(pkmn.dex, "natdex") + "' data-ball='" + pkmn.ball + "' data-name='" + name + "' data-gender='" + gender + "' data-level='" + level + "' data-compatgames='" + stillCompat.join(" ") + "' data-pokemon='" + i + "'" + boxID + "><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png' alt='" + ballName + "' title='" + ballName + "'><span class='pokemon-list-name'>" + name + "</span>" + genderimg + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' alt='" + name + "'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span class='pokemon-list-lang-wrapper'><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + boxLabel + "</div><div class='pokemon-list-entry-footer-right'><button class='pokemon-list-move'><img src='img/ui/move.svg' alt='Reorder " + name + "' title='Reorder " + name + "'></button><button class='pokemon-list-guide' onclick='ribbonGuide("+i+")'><img src='img/ui/clipboard.png' alt='Ribbons' title='" + name + "&#39;s Ribbon Guide'></button><button class='pokemon-list-edit' onclick='editPkmn("+i+")'><img src='img/ui/edit.svg' alt='Edit " + name + "' title='Edit " + name + "'></button><button class='pokemon-list-delete' onclick='deletePkmn("+i+")'><img src='img/ui/delete.svg' alt='Delete " + name + "' title='Delete " + name + "'></button></div></div></div>");
 }
 
 function filterPkmn(filters){
@@ -720,11 +720,21 @@ function filterPkmn(filters){
 	for(let ft = 0; ft < filterTypes.length; ft++){
 		filterType = filterTypes[ft];
 		filterVal = filters[filterType];
-		if(filterVal) {
-			if(filterType == "box" && filterVal != -2){
+		if(filterVal && filterVal !== "-2"){
+			if(filterType == "box"){
 				filterNum++;
 				toShow = toShow.filter(function(i, e){
 					return e.dataset.box == filterVal;
+				});
+			} else if(filterType == "gender"){
+				filterNum++;
+				toShow = toShow.filter(function(i, e){
+					return e.dataset.gender == filterVal;
+				});
+			} else if(filterType == "ball"){
+				filterNum++;
+				toShow = toShow.filter(function(i, e){
+					return e.dataset.ball == filterVal;
 				});
 			} else if(filterType == "games" && filterVal.length){
 				filterNum++;
@@ -758,7 +768,7 @@ function filterPkmn(filters){
 function filterReset(){
 	filterInReset = true;
 	$("#filterform-games").val("").change();
-	$("#filterform-box").val(-2).change();
+	$("#filterform-box, #filterform-ball, #filterform-gender").val(-2).change();
 	if($("#filterform-sort").val() != "default"){
 		$("#filterform-sort").val("default").change();
 	}
@@ -905,9 +915,20 @@ function customMatcher(params, data){
 
 function formatDropOption(o){
 	var result = o._resultId || o.text;
-	if(result.indexOf("pokeform-ball") > 0){
+	if(result.indexOf("pokeform-ball") > 0 || (result.indexOf("filterform-ball") > 0 && o.id != -2)){
 		var $ball = $("<img src='img/balls/" + o.id + ".png' class='pokedropimg'><span>" + o.text + "</span>");
 		return $ball;
+	} else if(result.indexOf("pokeform-box") > 0 || result.indexOf("filterform-box") > 0){
+		var boxstate = "closed";
+		if(o.id == -2) boxstate = "full";
+		if(o.id == -1) boxstate = "ball";
+		var $box = $("<img src='img/ui/box-" + boxstate + ".png' class='pokedropimg'><span>" + o.text + "</span>");
+		return $box;
+	} else if(result.indexOf("filterform-gender") > 0 && o.id != -2 && o.id != "unknown"){
+		var genderimg = "female";
+		if(o.id == "Male") genderimg = "male";
+		var $gender = $("<img src='img/gender/" + genderimg + ".png' class='pokedropimg'><span>" + o.text + "</span>");
+		return $gender;
 	} else if(result.indexOf("pokeform-mint") > 0 || result.indexOf("pokeform-nature") > 0){
 		var isMint = (o.id !== "None" && result.indexOf("pokeform-mint") > 0) ? true : false;
 		var names = "", lang = "", mint = "";
@@ -981,7 +1002,7 @@ $(function(){
 
 	// Initialize select dropdowns
 	// TODO language support
-	$("#pokeform-ball, #pokeform-origin, #pokeform-currentgame, #pokeform-ability, #pokeform-characteristic, #pokeform-title").select2({
+	$("#pokeform-ball, #pokeform-origin, #pokeform-currentgame, #pokeform-ability, #pokeform-characteristic, #pokeform-title, #pokeform-box").select2({
 		templateSelection: formatDropOption,
 		templateResult: formatDropOption,
 		dropdownParent: $("#pokeform"),
@@ -997,12 +1018,17 @@ $(function(){
 		width: "100%",
     	placeholder: "Select an option"
 	});
-	$("#settings select, #pokeform-box, #filterform-box, #filterform-sort").select2({
+	$("#settings select, #filterform-sort").select2({
 		width: "100%"
 	});
 	$("#filterform-games").select2({
 		allowClear: true,
 		placeholder: "Any",
+		templateSelection: formatDropOption,
+		templateResult: formatDropOption,
+		width: "100%"
+	});
+	$("#filterform-ball, #filterform-box, #filterform-gender").select2({
 		templateSelection: formatDropOption,
 		templateResult: formatDropOption,
 		width: "100%"
@@ -1078,10 +1104,10 @@ $(function(){
 
 	// Load form data: Poké Balls
 	for(var b in balls){
-		$("#pokeform-ball-standard").append(new Option(balls[b]["eng"], b));
+		$("#pokeform-ball-standard, #filterform-ball-standard").append(new Option(balls[b]["eng"], b));
 	}
 	for(var hb in hisuiballs){
-		$("#pokeform-ball-hisui").append(new Option(hisuiballs[hb]["eng"], hb));
+		$("#pokeform-ball-hisui, #filterform-ball-hisui").append(new Option(hisuiballs[hb]["eng"], hb));
 	}
 
 	// Load form data: Pokémon
@@ -1336,6 +1362,11 @@ $(function(){
 			});
 			filterPkmn(allFilters);
 		}
+	});
+	$("#filterform-reset").click(function(){
+		filterReset();
+		// also force default sort, filterReset() when called by this button doesn't seem to reset the sort
+		sortPkmn("default");
 	});
 	$("#changelog tr:not(:last-child)").click(function(){
 		$(this).toggleClass("changelog-active");

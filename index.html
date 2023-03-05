@@ -2,8 +2,10 @@
 <html>
 	<head>
 		<title>Ribbon Tracking and Guidance</title>
+		<!--compatibility-->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--PWA-->
         <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
@@ -13,16 +15,19 @@
         <meta name="msapplication-TileColor" content="#112028">
         <meta name="msapplication-config" content="browserconfig.xml">
         <meta name="theme-color" content="#112028">
+		<!--CSS-->
 		<link href="css/jquery.modal.min.css" rel="stylesheet">
 		<link href="css/select2.min.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<link href="css/themes.css" rel="stylesheet">
+		<!--Data-->
 		<script src="data/commonforms.js"></script>
 		<script src="data/pokemon.js"></script>
 		<script src="data/abilities.js"></script>
 		<script src="data/ribbons.js"></script>
 		<script src="data/misc.js"></script>
 		<script src="data/changelog.js"></script>
+		<!--JS-->
 		<script src="js/jquery-3.6.1.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
 		<script src="js/jquery-ui.touch-punch.min.js"></script>
@@ -82,6 +87,27 @@
 					</td>
 				</tr>
 				<tr>
+					<th><label for="filterform-ball">Ball</label></th>
+					<td>
+						<select id="filterform-ball">
+							<option value="-2">Any</option>
+							<optgroup id="filterform-ball-standard" label="Standard"></optgroup>
+							<optgroup id="filterform-ball-hisui" label="Hisui"></optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="filterform-gender">Gender</label></th>
+					<td>
+						<select id="filterform-gender">
+							<option value="-2">Any</option>
+							<option>Male</option>
+							<option>Female</option>
+							<option value="unknown">Gender unknown</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
 					<th><label for="filterform-games">Games it can<br> travel to</label></th>
 					<td>
 						<select id="filterform-games" multiple>
@@ -102,6 +128,7 @@
 				</tr>
 			</table>
 			<h5>
+				<button id="filterform-reset" class="button">Reset</button>
 				<button class="button close">Close</button>
 			</h5>
 		</div>
