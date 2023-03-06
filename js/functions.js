@@ -879,7 +879,7 @@ function filterBubble(n = ""){
 	if(n == 0) n = "";
 	var t = n;
 	if($("#filterform-sort").val() != "default"){
-		t = n + "⮃";
+		t = n + "⇵";
 	}
 	$("#menu-filter-count").text(t).attr("data-filters", n);
 }

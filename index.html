@@ -50,6 +50,7 @@
 		<script src="upup.min.js"></script>
         <script>
             UpUp.start({
+				'cache-version': '2',
                 'content-url': 'index.html',
                 'assets': [
                     'css/jquery.modal.min.css', 'css/select2.min.css', 'css/style.css', 'css/themes.css',
@@ -77,14 +78,14 @@
 			</h4>
 			<table>
 				<tr>
-					<th><label for="filterform-sort">⮃ Sort</label></th>
+					<th><label for="filterform-sort">⇵ Sort</label></th>
 					<td>
 						<select id="filterform-sort">
 							<option value="default">Default</option>
-							<option value="dexasc">National Pokédex ⯅</option>
-							<option value="dexdesc">National Pokédex ⯆</option>
-							<option value="levelasc">Current Level ⯅</option>
-							<option value="leveldesc">Current Level ⯆</option>
+							<option value="dexasc">National Pokédex ▲</option>
+							<option value="dexdesc">National Pokédex ▼</option>
+							<option value="levelasc">Current Level ▲</option>
+							<option value="leveldesc">Current Level ▼</option>
 							<option value="nameasc">Name (A-Z)</option>
 							<option value="namedesc">Name (Z-A)</option>
 						</select>
