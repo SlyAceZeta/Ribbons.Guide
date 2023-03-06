@@ -1,4 +1,12 @@
 const changelog = {
+	"6 March 2023": [
+		"Ribbons.Guide is now a progressive web app! Visit the site using a <a href='https://en.wikipedia.org/wiki/Progressive_web_app' target='_blank'>supported browser</a> to install it directly to your device!",
+		"Your list of Pokémon can now be filtered by the games they can travel to, their Poké Ball, and more",
+		"Your list of Pokémon can now be sorted by their National Pokédex number, their current level, and their (nick)name",
+		"The tooltips for the Battle and Contest Memory Ribbons now include how many Ribbons were merged into them",
+		"The World Ability and Once-in-a-Lifetime Ribbons are now displayed like other special-case Ribbons in the Ribbon Guide",
+		"The footer can now be collapsed"
+	],
 	"1 March 2023": [
 		"We've moved to ribbons.guide! Name is updated everywhere",
 		"Added Chinese names for Walking Wake and Iron Leaves",
