@@ -624,31 +624,46 @@ function addRow(pkmn, i){
 
 	var ribbons = "<div class='ribbons-list-empty'>This Pokémon has no ribbons.</div>";
 	var r;
+	var mergeBattle = 0;
+	var mergeContest = 0;
 	for(r = 0; r < pkmn.ribbons.length; r++){
 		var rCode = pkmn.ribbons[r];
 		var rData = allRibbons[rCode];
+		var rDesc = "";
 		if(rData){
-			if(!rData.merge || pkmnGen < 6){
-				var proceed = false;
+			var proceed = false;
+			if(pkmnGen > 5 && !rData.merge){
 				if(rCode == "battle-memory-ribbon"){
 					if(pkmn.ribbons.indexOf("battle-memory-ribbon-gold") == -1){
 						proceed = true;
+						rDesc = " (" + mergeBattle + ")";
 					}
+				} else if(rCode == "battle-memory-ribbon-gold"){
+					proceed = true;
+					rDesc = " (" + mergeBattle + ")";
 				} else if(rCode == "contest-memory-ribbon"){
 					if(pkmn.ribbons.indexOf("contest-memory-ribbon-gold") == -1){
 						proceed = true;
+						rDesc = " (" + mergeContest + ")";
 					}
+				} else if(rCode == "contest-memory-ribbon-gold"){
+					proceed = true;
+					rDesc = " (" + mergeContest + ")";
 				} else {
 					proceed = true;
 				}
-				if(proceed){
-					var rName = rData["names"]["eng"];
-					var rDesc = "";
-					if(rData["descs"]) rDesc = " - " + rData["descs"]["eng"];
-					var rFldr = "ribbons";
-					if(rData["mark"]) rFldr = "marks";
-					ribbons = ribbons + "<img class='" + rCode + "' src='img/" + rFldr + "/" + rCode + ".png' alt=\"" + rName + "\" title=\"" + rName + rDesc + "\">";
-				}
+			} else if(pkmnGen > 5 && rData.merge){
+				if(rData.merge == "battle") mergeBattle++;
+				if(rData.merge == "contest") mergeContest++;
+			} else {
+				proceed = true;
+			}
+			if(proceed){
+				var rName = rData["names"]["eng"];
+				if(rData["descs"]) rDesc = rDesc + " - " + rData["descs"]["eng"];
+				var rFldr = "ribbons";
+				if(rData["mark"]) rFldr = "marks";
+				ribbons = ribbons + "<img class='" + rCode + "' src='img/" + rFldr + "/" + rCode + ".png' alt=\"" + rName + "\" title=\"" + rName + rDesc + "\">";
 			}
 		}
 	}
