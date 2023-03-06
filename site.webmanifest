@@ -17,5 +17,6 @@
     "theme_color": "#112028",
     "background_color": "#112028",
     "start_url": "https://ribbons.guide",
+	"scope": "/",
     "display": "standalone"
 }
