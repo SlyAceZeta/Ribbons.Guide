@@ -952,7 +952,7 @@ footer {
 .ribbonguide-transfer-notready .notready {
 	display: inline;
 }
-.ribbonguide-transfer-master {
+.ribbonguide-transfer-noneleft {
 	font-size: 18px;
 	text-align: center;
 	margin: 40px 0;

@@ -388,8 +388,8 @@ function ribbonGuide(id){
 									// now check for special Ribbon restrictions
 									var specialEarn = false;
 									if(ribbon.indexOf("contest-memory-ribbon") == 0 || ribbon.indexOf("battle-memory-ribbon") == 0){
-										// Pokemon originating in Gen VI cannot have these Ribbons
-										if(games[pkmn.origin].gen < 6){
+										// Pokemon originating in Gen VI or Virtual Console cannot have these Ribbons
+										if(games[pkmn.origin].gen < 6 && games[pkmn.origin].gen > 2){
 											// only show blue if gold is not obtained, and vice versa
 											if(ribbon == "contest-memory-ribbon" && pkmn.ribbons.indexOf("contest-memory-ribbon-gold") == -1){
 												specialEarn = true;
@@ -497,9 +497,7 @@ function ribbonGuide(id){
 							for(var i = 0; i < ribbonAddToGens.length; i++){
 								var eleGen = "#ribbonguide-transfer-" + ribbonAddToGens[i];
 								if(allRibbons[ribbon].optional) $(eleGen + " .ribbonguide-transfer-footer").addClass("ribbonguide-transfer-unsure");
-								if(allRibbons[ribbon].excluded){
-									$(eleGen + " .ribbonguide-transfer-excluded").show().append(rImage);
-								} else if(i == (ribbonAddToGens.length-1)){
+								if(i == (ribbonAddToGens.length-1)){
 									$(eleGen + " .ribbonguide-transfer-exclusive").show().append(rImage);
 									if(!allRibbons[ribbon].optional) $(eleGen + " .ribbonguide-transfer-footer").addClass("ribbonguide-transfer-notready");
 								} else {
@@ -533,7 +531,7 @@ function ribbonGuide(id){
 				}
 			}
 			if(noRibbons){
-				$("#ribbonguide-transfer").html("<div class='ribbonguide-transfer-master'>There are no more Ribbons for " + name + " to earn!</div>");
+				$("#ribbonguide-transfer").html("<div class='ribbonguide-transfer-noneleft'>There are no more Ribbons for " + name + " to earn!</div>");
 			}
 			showModal("ribbonguide");
 		} else {
@@ -930,7 +928,7 @@ function resetRibbonGuide(){
 	$("#ribbonguide-transfer, .ribbonguide-warning, #ribbonguide-info .metlevel").empty();
 	for(var i in ribbonIDs){
 		if(parseInt(ribbonIDs[i])){
-			$("#ribbonguide-transfer").append("<div id='ribbonguide-transfer-"+ribbonIDs[i]+"'><div class='ribbonguide-transfer-exclusive' style='display:none'><div>Last chance in "+i+"</div></div><div class='ribbonguide-transfer-later' style='display:none'><div>Available later</div></div><div class='ribbonguide-transfer-excluded' style='display:none'><div>Not required to be a Ribbon Master</div></div><div class='ribbonguide-transfer-footer'><span class='name'></span> is<span class='notready'> not</span> ready to leave "+i+"<span class='unsure'> after verifying special cases</span>.</div></div>");
+			$("#ribbonguide-transfer").append("<div id='ribbonguide-transfer-"+ribbonIDs[i]+"'><div class='ribbonguide-transfer-exclusive' style='display:none'><div>Last chance in "+i+"</div></div><div class='ribbonguide-transfer-later' style='display:none'><div>Available later</div></div><div class='ribbonguide-transfer-footer'><span class='name'></span> is<span class='notready'> not</span> ready to leave "+i+"<span class='unsure'> after verifying special cases</span>.</div></div>");
 		}
 	}
 }

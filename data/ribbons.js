@@ -1491,7 +1491,7 @@ const allRibbons = {
 		}
 	},
 	"world-ability-ribbon": {
-		"excluded": true,
+		"optional": true,
 		"nolegendary": true,
 		"nomythical": true,
 		"merge": "battle",
@@ -2710,7 +2710,7 @@ const allRibbons = {
 		}
 	},
 	"once-in-a-lifetime-ribbon": {
-		"excluded": true,
+		"optional": true,
 		"gen": 9,
 		"available": [
 			"scar",
