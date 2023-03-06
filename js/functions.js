@@ -1121,6 +1121,12 @@ $(function(){
 		$("#settings-language").append(new Option((lcap === "SPA" ? "SP-EU" : lcap) + " - " + languages[l].name, l, curlang, curlang));
 	}
 
+	// Set footer state
+	var footerState = localStorage.getItem("footerState");
+	if(!footerState || footerState == "expanded"){
+		$("footer").removeClass("collapsed");
+	}
+
 	// Load form data: mints and natures
 	var noneNames = terms["none"];
 	var noneData = "";
@@ -1473,6 +1479,15 @@ $(function(){
 	});
 	$(".ribbons-gen").click(function(){
 		$(this).toggleClass("rg-active");
+	});
+	$("#footer-icon").click(function(){
+		var footerState = localStorage.getItem("footerState");
+		if(!footerState || footerState == "expanded"){
+			localStorage.setItem("footerState", "collapsed");
+		} else {
+			localStorage.setItem("footerState", "expanded");
+		}
+		$("footer").toggleClass("collapsed");
 	});
 	$("#pokeform-tabs img").click(function(){
 		if(!$(this).hasClass("pokeform-tabs-active")){

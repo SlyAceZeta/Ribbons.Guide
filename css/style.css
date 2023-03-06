@@ -244,9 +244,34 @@ footer {
 	border-bottom: 3px solid;
 	position: fixed;
 	bottom: 0;
-	left: 0;
+	right: 0;
 	z-index: 1;
 	font-weight: 600;
+}
+#footer-icon {
+	font-family: Arial, sans-serif;
+	font-size: 28px;
+	font-weight: bold;
+	transform: rotate(-90deg);
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width: 28px;
+	height: 28px;
+	line-height: 22px;
+	cursor: pointer;
+}
+footer.collapsed {
+	width: 28px;
+	height: 30px;
+	border-top-left-radius: 2px;
+}
+footer.collapsed #footer-text {
+	display: none;
+}
+footer.collapsed #footer-icon {
+	transform: rotate(90deg);
 }
 #settings .button {
 	font-size: 16px;
