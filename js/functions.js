@@ -1094,7 +1094,14 @@ $(function(){
 		templateResult: formatDropOption,
 		width: "100%"
 	});
-	$("#filterform-ball, #filterform-box, #filterform-gender, #filterform-lang, #filterform-shiny, #filterform-origin, #filterform-currentgame").select2({
+	$("#filterform-gender, #filterform-shiny").select2({
+		templateSelection: formatDropOption,
+		templateResult: formatDropOption,
+		minimumResultsForSearch: Infinity,
+		dropdownCssClass: "search-hidden",
+		width: "100%"
+	});
+	$("#filterform-ball, #filterform-box, #filterform-lang, #filterform-origin, #filterform-currentgame").select2({
 		templateSelection: formatDropOption,
 		templateResult: formatDropOption,
 		width: "100%"
@@ -1431,19 +1438,15 @@ $(function(){
 			if(curMin > 100){
 				curMin = 100;
 				$("#filterform-level-min").val(100);
-			} else if(curMin < 1 && curMin != 0){
-				curMin = 1;
-				$("#filterform-level-min").val(1);
-			} else if($("#filterform-level-min").val() == "0"){
+			} else if((curMin <= 1 && curMin != 0) || $("#filterform-level-min").val() == "0"){ // avoid messing with the field every time other filters are changed
+				curMin = 0;
 				$("#filterform-level-min").val("");
 			}
-			if(curMax > 100){
-				curMax = 100;
-				$("#filterform-level-max").val(100);
-			} else if(curMax < 1 && curMax != 0){
+			if(curMax < 1 && curMax != 0){ // avoid messing with the field every time other filters are changed
 				curMax = 1;
 				$("#filterform-level-max").val(1);
-			} else if($("#filterform-level-max").val() == "0"){
+			} else if(curMax >= 100 || $("#ffilterform-level-max").val() == "0"){
+				curMax = 0;
 				$("#filterform-level-max").val("");
 			}
 			if(curMin && curMax && curMin > curMax){

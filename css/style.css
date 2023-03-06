@@ -66,9 +66,10 @@ body {
 	display: block;
 	padding: 10px;
 	position: relative;
+	line-height: 1.2;
 }
 #filterform label {
-	width: 120px;
+	width: 125px;
 }
 #filterform td:first-child:last-child {
 	font-size: 9pt;
@@ -76,6 +77,9 @@ body {
 #filterform-level-min,
 #filterform-level-max {
 	width: 60px;
+	height: 32px;
+	padding: 2px;
+	font-size: 12pt;
 }
 #filterform-level-divider {
 	margin: 0 5px;
@@ -149,6 +153,9 @@ body {
 .select2-dropdown {
 	top: -5px;
 	background: #fff;
+}
+.select2-dropdown.search-hidden {
+	top: 0;
 }
 .select2-container--default .select2-results__option--selected,
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
@@ -252,14 +259,15 @@ footer {
 	font-family: Arial, sans-serif;
 	font-size: 28px;
 	font-weight: bold;
-	transform: rotate(-90deg);
+	transform-origin: 50% 54%;
+	transition: transform 0.2s;
 	display: inline-block;
 	position: absolute;
 	right: 0px;
 	bottom: 0px;
 	width: 28px;
 	height: 28px;
-	line-height: 22px;
+	line-height: 25px;
 	cursor: pointer;
 }
 footer.collapsed {
@@ -271,7 +279,7 @@ footer.collapsed #footer-text {
 	display: none;
 }
 footer.collapsed #footer-icon {
-	transform: rotate(90deg);
+	transform: rotate(-180deg);
 }
 #settings .button {
 	font-size: 16px;
@@ -783,6 +791,8 @@ footer.collapsed #footer-icon {
 	user-select: none;
 }
 #menu button {
+	width: 25px;
+	text-align: center;
 	padding: 5px 10px;
 	margin: 0 0 0 5px;
 	border-radius: 20px;
