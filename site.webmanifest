@@ -1,22 +1,29 @@
 {
-    "name": "Ribbon Tracking and Guidance",
-    "short_name": "Ribbons.Guide",
-    "icons": [
-        {
-            "src": "img/icons/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "img/icons/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any maskable"
-        }
-    ],
-    "theme_color": "#112028",
-    "background_color": "#112028",
-    "start_url": "https://ribbons.guide",
+	"name": "Ribbon Tracking and Guidance",
+	"short_name": "Ribbons.Guide",
+	"icons": [
+		{
+			"src": "img/icons/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "img/icons/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "maskable"
+		}
+	],
+	"theme_color": "#112028",
+	"background_color": "#112028",
+	"start_url": "https://ribbons.guide",
 	"scope": "/",
-    "display": "standalone"
+	"display": "standalone",
+	"dir": "ltr",
+	"lang": "en",
+	"description": "Keep track of your Pokémon and their Ribbons using Ribbons.Guide!",
+	"categories": [
+		"utilities"
+	]
 }

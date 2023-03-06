@@ -1241,30 +1241,30 @@ footer.collapsed #footer-icon {
 span.lang {
 	display: none;
 }
-body[lang="ger"] span.lang.ger {
+body[lang="de"] span.lang.ger {
 	display: inline;
 }
-body[lang="eng"] span.lang.eng {
+body[lang="en"] span.lang.eng {
 	display: inline;
 }
-body[lang="spa"] span.lang.spa {
+body[lang="es"] span.lang.spa {
 	display: inline;
 }
-body[lang="fre"] span.lang.fre {
+body[lang="fr"] span.lang.fre {
 	display: inline;
 }
-body[lang="ita"] span.lang.ita {
+body[lang="it"] span.lang.ita {
 	display: inline;
 }
-body[lang="jpn"] span.lang.jpn {
+body[lang="ja"] span.lang.jpn {
 	display: inline;
 }
-body[lang="kor"] span.lang.kor {
+body[lang="ko"] span.lang.kor {
 	display: inline;
 }
-body[lang="cht"] span.lang.cht {
+body[lang="zh-Hant"] span.lang.cht {
 	display: inline;
 }
-body[lang="chs"] span.lang.chs {
+body[lang="zh-Hans"] span.lang.chs {
 	display: inline;
 }

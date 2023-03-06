@@ -7,8 +7,8 @@ const languages = {
 	"ita": { "iso": "it", "name": "Italiano" },			// Italian
 	"jpn": { "iso": "ja", "name": "日本語" },			// Japanese
 	"kor": { "iso": "ko", "name": "한국어" },			// Korean
-	"cht": { "iso": "zh", "name": "正體字" },			// Traditional Chinese (Cantonese)
-	"chs": { "iso": "zh", "name": "简化字" }			// Simplified Chinese (Mandarin)
+	"cht": { "iso": "zh-Hant", "name": "正體字" },		// Traditional Chinese (Cantonese)
+	"chs": { "iso": "zh-Hans", "name": "简化字" }		// Simplified Chinese (Mandarin)
 }
 
 // General terms
