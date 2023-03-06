@@ -564,7 +564,7 @@ function createBoxes(allboxes){
 
 function clearBoxes(allboxes){
 	$("#pokeform-box").empty().append(new Option("None", -1, true, true));
-	$("#filterform-box").empty().append(new Option("Any", -2, true, true)).append(new Option("None", -1));
+	$("#filterform-box").empty().append(new Option("—", -2, true, true)).append(new Option("None", -1));
 	filterReset();
 	createBoxes(allboxes);
 }
@@ -710,13 +710,14 @@ function addRow(pkmn, i){
 		boxID = " data-box='-1'";
 	}
 
-	$("#pokemon-list").append("<div class='pokemon-list-entry' data-natdex='" + getData(pkmn.dex, "natdex") + "' data-ball='" + pkmn.ball + "' data-name='" + name + "' data-gender='" + gender + "' data-level='" + level + "' data-compatgames='" + stillCompat.join(" ") + "' data-pokemon='" + i + "'" + boxID + "><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png' alt='" + ballName + "' title='" + ballName + "'><span class='pokemon-list-name'>" + name + "</span>" + genderimg + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' alt='" + name + "'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span class='pokemon-list-lang-wrapper'><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + boxLabel + "</div><div class='pokemon-list-entry-footer-right'><button class='pokemon-list-move'><img src='img/ui/move.svg' alt='Reorder " + name + "' title='Reorder " + name + "'></button><button class='pokemon-list-guide' onclick='ribbonGuide("+i+")'><img src='img/ui/clipboard.png' alt='Ribbons' title='" + name + "&#39;s Ribbon Guide'></button><button class='pokemon-list-edit' onclick='editPkmn("+i+")'><img src='img/ui/edit.svg' alt='Edit " + name + "' title='Edit " + name + "'></button><button class='pokemon-list-delete' onclick='deletePkmn("+i+")'><img src='img/ui/delete.svg' alt='Delete " + name + "' title='Delete " + name + "'></button></div></div></div>");
+	$("#pokemon-list").append("<div class='pokemon-list-entry' data-natdex='" + getData(pkmn.dex, "natdex") + "' data-ball='" + pkmn.ball + "' data-name='" + name + "' data-gender='" + gender + "' data-level='" + level + "' data-shiny='" + pkmn.shiny + "' data-lang='" + lang + "' data-origin='" + pkmn.origin + "' data-currentgame='" + pkmn.currentgame + "' data-compatgames='" + stillCompat.join(" ") + "' data-pokemon='" + i + "'" + boxID + "><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png' alt='" + ballName + "' title='" + ballName + "'><span class='pokemon-list-name'>" + name + "</span>" + genderimg + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' alt='" + name + "'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span class='pokemon-list-lang-wrapper'><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + boxLabel + "</div><div class='pokemon-list-entry-footer-right'><button class='pokemon-list-move'><img src='img/ui/move.svg' alt='Reorder " + name + "' title='Reorder " + name + "'></button><button class='pokemon-list-guide' onclick='ribbonGuide("+i+")'><img src='img/ui/clipboard.png' alt='Ribbons' title='" + name + "&#39;s Ribbon Guide'></button><button class='pokemon-list-edit' onclick='editPkmn("+i+")'><img src='img/ui/edit.svg' alt='Edit " + name + "' title='Edit " + name + "'></button><button class='pokemon-list-delete' onclick='deletePkmn("+i+")'><img src='img/ui/delete.svg' alt='Delete " + name + "' title='Delete " + name + "'></button></div></div></div>");
 }
 
 function filterPkmn(filters){
 	var filterTypes = Object.keys(filters), filterType = "", filterVal = 0;
 	var toShow = $(".pokemon-list-entry");
 	var filterNum = 0;
+	var filterLevel = false;
 	for(let ft = 0; ft < filterTypes.length; ft++){
 		filterType = filterTypes[ft];
 		filterVal = filters[filterType];
@@ -735,6 +736,51 @@ function filterPkmn(filters){
 				filterNum++;
 				toShow = toShow.filter(function(i, e){
 					return e.dataset.ball == filterVal;
+				});
+			} else if(filterType == "lang"){
+				filterNum++;
+				toShow = toShow.filter(function(i, e){
+					return e.dataset.lang == filterVal;
+				});
+			} else if(filterType == "origin"){
+				filterNum++;
+				toShow = toShow.filter(function(i, e){
+					return e.dataset.origin == filterVal;
+				});
+			} else if(filterType == "currentgame"){
+				filterNum++;
+				toShow = toShow.filter(function(i, e){
+					return e.dataset.currentgame == filterVal;
+				});
+			} else if(filterType == "level-min"){
+				if(!filterLevel){
+					filterLevel = true;
+					filterNum++;
+				}
+				toShow = toShow.filter(function(i, e){
+					return Number(e.dataset.level) >= Number(filterVal);
+				});
+			} else if(filterType == "level-max"){
+				if(!filterLevel){
+					filterLevel = true;
+					filterNum++;
+				}
+				toShow = toShow.filter(function(i, e){
+					return Number(e.dataset.level) <= Number(filterVal);
+				});
+			} else if(filterType == "shiny"){
+				filterNum++;
+				toShow = toShow.filter(function(i, e){
+					// backwards compatibility with old data where shiny="true" not "star"
+					if(filterVal == "Star" && e.dataset.shiny.length && e.dataset.shiny !== "square"){
+						return true;
+					} else if(filterVal == "Square" && e.dataset.shiny == "square"){
+						return true;
+					} else if(filterVal == "Normal" && e.dataset.shiny == ""){
+						return true;
+					} else {
+						return false;
+					}
 				});
 			} else if(filterType == "games" && filterVal.length){
 				filterNum++;
@@ -767,8 +813,8 @@ function filterPkmn(filters){
 
 function filterReset(){
 	filterInReset = true;
-	$("#filterform-games").val("").change();
-	$("#filterform-box, #filterform-ball, #filterform-gender").val(-2).change();
+	$("#filterform select[id!='filterform-games'][id!='filterform-sort']").val(-2).change();
+	$("#filterform-games, #filterform-level-min, #filterform-level-max").val("").change();
 	if($("#filterform-sort").val() != "default"){
 		$("#filterform-sort").val("default").change();
 	}
@@ -929,6 +975,12 @@ function formatDropOption(o){
 		if(o.id == "Male") genderimg = "male";
 		var $gender = $("<img src='img/gender/" + genderimg + ".png' class='pokedropimg'><span>" + o.text + "</span>");
 		return $gender;
+	} else if(result.indexOf("filterform-shiny") > 0 && o.id != -2){
+		var shinyimg = "pokeball.png";
+		if(o.id == "Star") shinyimg = "shiny-star.png";
+		if(o.id == "Square") shinyimg = "shiny-square.svg";
+		var $shiny = $("<img src='img/ui/" + shinyimg + "' class='pokedropimg origininvert'><span>" + o.text + "</span>");
+		return $shiny;
 	} else if(result.indexOf("pokeform-mint") > 0 || result.indexOf("pokeform-nature") > 0){
 		var isMint = (o.id !== "None" && result.indexOf("pokeform-mint") > 0) ? true : false;
 		var names = "", lang = "", mint = "";
@@ -944,7 +996,8 @@ function formatDropOption(o){
 		var img = "";
 		if(isMint) img = "<img src='img/mints/" + natures[o.id]["img"] + ".png' class='pokedropimg'>";
 		return $(img + names);
-	} else if(result.indexOf("pokeform-origin") > 0){
+	} else if(result.indexOf("pokeform-origin") > 0 || (result.indexOf("filterform-origin") > 0 && o.id != -2)){
+		console.log(o.id);
 		var mark = games[o.id]["mark"];
 		var $origin;
 		if(mark){
@@ -1023,12 +1076,12 @@ $(function(){
 	});
 	$("#filterform-games").select2({
 		allowClear: true,
-		placeholder: "Any",
+		placeholder: "—",
 		templateSelection: formatDropOption,
 		templateResult: formatDropOption,
 		width: "100%"
 	});
-	$("#filterform-ball, #filterform-box, #filterform-gender").select2({
+	$("#filterform-ball, #filterform-box, #filterform-gender, #filterform-lang, #filterform-shiny, #filterform-origin, #filterform-currentgame").select2({
 		templateSelection: formatDropOption,
 		templateResult: formatDropOption,
 		width: "100%"
@@ -1051,7 +1104,7 @@ $(function(){
 	for(var l in languages){
 		var lcap = l.toUpperCase();
 		var curlang = (l == setlang) ? true : false;
-		$("#pokeform-lang").append(new Option((lcap === "SPA" ? "SP-EU" : lcap) + " - " + languages[l].name, lcap));
+		$("#pokeform-lang, #filterform-lang").append(new Option((lcap === "SPA" ? "SP-EU" : lcap) + " - " + languages[l].name, lcap));
 		$("#settings-language").append(new Option((lcap === "SPA" ? "SP-EU" : lcap) + " - " + languages[l].name, l, curlang, curlang));
 	}
 
@@ -1090,15 +1143,16 @@ $(function(){
 	for(var g in games){
 		var newGame = new Option(games[g]["name"], g);
 		if(g == "home" || g == "bank" || g == "bank7"){
-			$("#pokeform-currentgame-storage").append(newGame);
+			$("#pokeform-currentgame-storage, #filterform-currentgame-storage").append(newGame);
 		} else {
+			var gGen = games[g]["gen"];
 			// Scarlet & Violet: pending HOME compatibility
 			// GO: Pokemon cannot move there
+			var destination = ", #filterform-games-" + gGen;
 			if(g == "scar" || g == "vio" || g == "go"){
-				$("#pokeform-origin-" + games[g]["gen"] + ", #pokeform-currentgame-" + games[g]["gen"]).append(newGame);
-			} else {
-				$("#pokeform-origin-" + games[g]["gen"] + ", #pokeform-currentgame-" + games[g]["gen"] + ", #filterform-games-" + games[g]["gen"]).append(newGame);
+				destination = "";
 			}
+			$("#pokeform-origin-" + gGen + ", #pokeform-currentgame-" + gGen + ", #filterform-origin-" + gGen + ", #filterform-currentgame-" + gGen + destination).append(newGame);
 		}
 	}
 
@@ -1347,12 +1401,45 @@ $(function(){
 		this.blur();
 		showModal("filterform");
 	});
-	$("#filterform select").change(function(){
+	$("#filterform select, #filterform input").change(function(){
 		if(filterInReset) return;
 		if($(this).attr("id") == "filterform-sort"){
 			sortPkmn($(this).val());
 		} else {
 			var allFilters = {};
+			var curMin = Number($("#filterform-level-min").val());
+			var curMax = Number($("#filterform-level-max").val());
+			if(curMin > 100){
+				curMin = 100;
+				$("#filterform-level-min").val(100);
+			} else if(curMin < 1 && curMin != 0){
+				curMin = 1;
+				$("#filterform-level-min").val(1);
+			} else if($("#filterform-level-min").val() == "0"){
+				$("#filterform-level-min").val("");
+			}
+			if(curMax > 100){
+				curMax = 100;
+				$("#filterform-level-max").val(100);
+			} else if(curMax < 1 && curMax != 0){
+				curMax = 1;
+				$("#filterform-level-max").val(1);
+			} else if($("#filterform-level-max").val() == "0"){
+				$("#filterform-level-max").val("");
+			}
+			if(curMin && curMax && curMin > curMax){
+				if($(this).attr("id") == "filterform-level-min"){
+					$("#filterform-level-max").val(curMin);
+				} else if($(this).attr("id") == "filterform-level-max"){
+					$("#filterform-level-min").val(curMax);
+				}
+			}
+			if(curMin){
+				allFilters["level-min"] = curMin;
+			}
+			if(curMax){
+				allFilters["level-max"] = curMax;
+			}
 			$("#filterform select").each(function(){
 				var filterType = $(this).attr("id").replace("filterform-","");
 				var filterVal = $(this).val();

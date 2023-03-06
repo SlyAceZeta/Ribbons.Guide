@@ -70,6 +70,16 @@ body {
 #filterform label {
 	width: 120px;
 }
+#filterform td:first-child:last-child {
+	font-size: 9pt;
+}
+#filterform-level-min,
+#filterform-level-max {
+	width: 60px;
+}
+#filterform-level-divider {
+	margin: 0 5px;
+}
 .modal th label .asterisk {
 	position: absolute;
 	right: 1px;

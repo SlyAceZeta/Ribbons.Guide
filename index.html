@@ -64,7 +64,7 @@
 			</h4>
 			<table>
 				<tr>
-					<th><label for="filterform-sort">Sort</label></th>
+					<th><label for="filterform-sort">⮃ Sort</label></th>
 					<td>
 						<select id="filterform-sort">
 							<option value="default">Default</option>
@@ -81,18 +81,8 @@
 					<th><label for="filterform-box">Current Box</label></th>
 					<td>
 						<select id="filterform-box">
-							<option value="-2">Any</option>
+							<option value="-2">—</option>
 							<option value="-1">None</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<th><label for="filterform-ball">Ball</label></th>
-					<td>
-						<select id="filterform-ball">
-							<option value="-2">Any</option>
-							<optgroup id="filterform-ball-standard" label="Standard"></optgroup>
-							<optgroup id="filterform-ball-hisui" label="Hisui"></optgroup>
 						</select>
 					</td>
 				</tr>
@@ -100,10 +90,62 @@
 					<th><label for="filterform-gender">Gender</label></th>
 					<td>
 						<select id="filterform-gender">
-							<option value="-2">Any</option>
+							<option value="-2">—</option>
 							<option>Male</option>
 							<option>Female</option>
 							<option value="unknown">Gender unknown</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="filterform-shiny">Shiny</label></th>
+					<td>
+						<select id="filterform-shiny">
+							<option value="-2">—</option>
+							<option>Normal</option>
+							<option>Star</option>
+							<option>Square</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th><label>Level</label></th>
+					<td>
+						<input id="filterform-level-min" type="number" placeholder="1" min="1" max="100"><span id="filterform-level-divider">–</span><input id="filterform-level-max" type="number" placeholder="100" min="1" max="100">
+					</td>
+				</tr>
+				<tr>
+					<th><label for="filterform-origin">Origin Game</label></th>
+					<td>
+						<select id="filterform-origin">
+							<option value="-2">—</option>
+							<optgroup id="filterform-origin-9" label="Gen IX"></optgroup>
+							<optgroup id="filterform-origin-8" label="Gen VIII"></optgroup>
+							<optgroup id="filterform-origin-7" label="Gen VII"></optgroup>
+							<optgroup id="filterform-origin-6" label="Gen VI"></optgroup>
+							<optgroup id="filterform-origin-5" label="Gen V"></optgroup>
+							<optgroup id="filterform-origin-4" label="Gen IV"></optgroup>
+							<optgroup id="filterform-origin-3" label="Gen III"></optgroup>
+							<optgroup id="filterform-origin-2" label="Gen II Virtual Console"></optgroup>
+							<optgroup id="filterform-origin-1" label="Gen I Virtual Console"></optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="filterform-currentgame">Current Game</label></th>
+					<td>
+						<select id="filterform-currentgame">
+							<option value="-2">—</option>
+							<optgroup id="filterform-currentgame-storage" label="Storage"></optgroup>
+							<optgroup id="filterform-currentgame-9" label="Gen IX"></optgroup>
+							<optgroup id="filterform-currentgame-8" label="Gen VIII"></optgroup>
+							<optgroup id="filterform-currentgame-7" label="Gen VII"></optgroup>
+							<optgroup id="filterform-currentgame-6" label="Gen VI"></optgroup>
+							<optgroup id="filterform-currentgame-5" label="Gen V"></optgroup>
+							<optgroup id="filterform-currentgame-4" label="Gen IV"></optgroup>
+							<optgroup id="filterform-currentgame-3" label="Gen III"></optgroup>
+							<optgroup id="filterform-currentgame-2" label="Gen II Virtual Console"></optgroup>
+							<optgroup id="filterform-currentgame-1" label="Gen I Virtual Console"></optgroup>
 						</select>
 					</td>
 				</tr>
@@ -124,7 +166,25 @@
 					</td>
 				</tr>
 				<tr>
-					<td colspan="2">Pokémon will only be shown if they fulfill all conditions, including being able to travel to all of the selected games (which requires setting their current game).<br><br>Pokémon stored in HOME are not considered able to travel to <em>Let's&nbsp;Go, Pikachu!</em> or <em>Let's&nbsp;Go, Eevee!</em>.</td>
+					<th><label for="filterform-lang">Language</label></th>
+					<td>
+						<select id="filterform-lang">
+							<option value="-2">—</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="filterform-ball">Poké Ball</label></th>
+					<td>
+						<select id="filterform-ball">
+							<option value="-2">—</option>
+							<optgroup id="filterform-ball-standard" label="Standard"></optgroup>
+							<optgroup id="filterform-ball-hisui" label="Hisui"></optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">Pokémon will only be shown if they fulfill all conditions, including being able to travel to all of the selected games (which requires setting their current game). Pokémon stored in HOME are not considered able to travel to <em>Let's&nbsp;Go, Pikachu!</em> or <em>Let's&nbsp;Go, Eevee!</em>.</td>
 				</tr>
 			</table>
 			<h5>
@@ -233,7 +293,7 @@
 					<td id="pokeform-preview"><img src="img/ui/1x1.svg" alt="Pokémon preview"></td>
 				</tr>
 				<tr class="pokeform-tab1">
-					<th><label for="pokeform-ball"><span class="asterisk">*</span>Ball</label></th>
+					<th><label for="pokeform-ball"><span class="asterisk">*</span>Poké Ball</label></th>
 					<td colspan="2">
 						<select id="pokeform-ball" required>
 							<option></option>
@@ -811,6 +871,6 @@
 				<span class="button close">Close</span>
 			</h5>
 		</div>
-		<footer>This open-source project is not affiliated with Nintendo, Game Freak, or The Pokémon Company. All data is stored in your browser. <a href="https://github.com/Azekthi/Ribbons.Guide">View the source code on GitHub.</a></footer>
+		<footer>This open-source project is not affiliated with Nintendo, Creatures Inc., Game Freak, or The Pokémon Company. All data is stored in your browser. <a href="https://github.com/Azekthi/Ribbons.Guide">View the source code on GitHub.</a></footer>
 	</body>
 </html>
