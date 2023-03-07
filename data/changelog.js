@@ -5,6 +5,7 @@ const changelog = {
 		"Your list of Pokémon can now be sorted by their National Pokédex number, their current level, and their (nick)name",
 		"The tooltips for the Battle and Contest Memory Ribbons now include how many Ribbons were merged into them",
 		"The World Ability and Once-in-a-Lifetime Ribbons are now displayed like other special-case Ribbons in the Ribbon Guide",
+		"Spiky-eared Pichu and Cosplay Pikachu are now available as separate forms",
 		"The footer can now be collapsed"
 	],
 	"1 March 2023": [

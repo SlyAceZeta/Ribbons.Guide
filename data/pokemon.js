@@ -22631,6 +22631,25 @@ const pokemon = {
 			"umoon"
 		]
 	},
+	"pichu-spiky-eared": {
+		"data-source": "pichu",
+		"forms": {
+			"ger": "Strubbelohr",
+			"eng": "Spiky-eared",
+			"spa": "Picoreja",
+			"fre": "Troizépi",
+			"ita": "Spunzorek",
+			"jpn": "ギザみみ",
+			"kor": "삐쭉귀",
+			"cht": "刺刺耳",
+			"chs": "刺刺耳"
+		},
+		"gender": "female",
+		"games": [
+			"hg",
+			"ss"
+		]
+	},
 	"pichu": {
 		"names": {
 			"ger": "Pichu",
@@ -22923,6 +22942,26 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh"
+		]
+	},
+	"pikachu-cosplay": {
+		"data-source": "pikachu",
+		"forms": {
+			"ger": "Cosplay",
+			"eng": "Cosplay",
+			"spa": "Coqueta",
+			"fre": "Cosplayeur",
+			"ita": "Cosplay",
+			"jpn": "おきがえ",
+			"kor": "옷갈아입기",
+			"cht": "換裝",
+			"chs": "换装"
+		},
+		"femsprite": false,
+		"gender": "female",
+		"games": [
+			"or",
+			"as"
 		]
 	},
 	"pikachu-hoenn-cap": {

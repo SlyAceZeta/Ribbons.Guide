@@ -337,8 +337,9 @@ function ribbonGuide(id){
 			$("#ribbonguide .game").text(games[pkmn.currentgame].name);
 			$("#ribbonguide .metgame").text(" (met in "+games[pkmn.origin].name+")");
 
-			// hide gens earlier than current
+			// get current and future gens
 			var curGen = parseInt(games[pkmn.currentgame].gen);
+			var gensLeft = [];
 			var virtualConsole = false;
 			if(curGen < 3){
 				virtualConsole = true;
@@ -346,17 +347,14 @@ function ribbonGuide(id){
 			} else if(pkmn.currentgame == "go"){
 				curGen = 8;
 			}
-			for(var i = 3; i < curGen; i++){
-				$("#ribbonguide-transfer-" + i).hide();
-			}
-
-			// get current and future gens
-			var gensLeft = [];
 			for(let g in terms.gens){
 				var gen = parseInt(g);
 				if(gen){
 					if(gen >= curGen){
 						gensLeft.push(gen);
+					} else {
+						// hide gens earlier than current
+						$("#ribbonguide-transfer-" + g).hide();
 					}
 				}
 			}
