@@ -226,9 +226,6 @@ header {
 	justify-content: space-between;
 	align-items: center;
 }
-#header-logo {
-	float: left;
-}
 #header-logo img {
 	width: 32px;
 	height: 32px;
@@ -239,9 +236,19 @@ header {
 	display: inline-block;
 	vertical-align: middle;
 }
+#header-icons {
+	display: flex;
+	align-items: center;
+	height: 32px;
+}
+#header-discord,
+#header-discord img {
+	height: 24px;
+}
 #header-settings {
 	height: 32px;
 	cursor: pointer;
+	margin-left: 20px;
 }
 footer {
 	text-align: center;
