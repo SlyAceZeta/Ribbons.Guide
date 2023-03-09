@@ -360,7 +360,6 @@ function ribbonGuide(id){
 			}
 			// get compatible games and more info
 			var pkmnGames = getData(pkmn.dex, "games");
-			var isLegendary = getData(pkmn.dex, "legendary");
 			var isMythical = getData(pkmn.dex, "mythical");
 			var evoWarnMon = getData(pkmn.dex, "evowarnmon", true);
 			var evoWarnGen = getData(pkmn.dex, "evowarngen", true);
@@ -370,7 +369,7 @@ function ribbonGuide(id){
 				if(pkmn.ribbons.indexOf(ribbon) == -1){
 					// Ribbon not earned
 					// check for Legendary and Mythical restrictions
-					if(!(allRibbons[ribbon].nolegendary && isLegendary) && !(allRibbons[ribbon].nomythical && isMythical)){
+					if(!(allRibbons[ribbon].banned && allRibbons[ribbon].banned.indexOf(pkmn.dex) > -1) && !(allRibbons[ribbon].nomythical && isMythical)){
 						// prepare to add to guide
 						var ribbonAddToGens = [];
 
@@ -453,7 +452,7 @@ function ribbonGuide(id){
 											}
 										}
 									} else if(ribbon == "tower-master-ribbon"){
-										if(isLegendary || isMythical){
+										if(isMythical || allRibbons["ability-ribbon"].banned.indexOf(pkmn.dex) > -1){
 											if(ribbonGame == "sw" || ribbonGame == "sh"){
 												specialEarn = true;
 											}
@@ -1008,7 +1007,6 @@ function formatDropOption(o){
 		if(isMint) img = "<img src='img/mints/" + natures[o.id]["img"] + ".png' class='pokedropimg'>";
 		return $(img + names);
 	} else if(result.indexOf("pokeform-origin") > 0 || (result.indexOf("filterform-origin") > 0 && o.id != -2)){
-		console.log(o.id);
 		var mark = games[o.id]["mark"];
 		var $origin;
 		if(mark){

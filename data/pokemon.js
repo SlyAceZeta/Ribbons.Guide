@@ -1202,7 +1202,6 @@ const pokemon = {
 			"chs": "急冻鸟"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 144,
 		"games": [
 			"red-eng",
@@ -1382,7 +1381,6 @@ const pokemon = {
 			"chs": "亚克诺姆"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 482,
 		"games": [
 			"diamond",
@@ -3456,7 +3454,6 @@ const pokemon = {
 			"chs": "蕾冠王"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 898,
 		"games": [
 			"sw",
@@ -5038,7 +5035,6 @@ const pokemon = {
 			"chs": "勾帕路翁"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 638,
 		"games": [
 			"black",
@@ -5397,7 +5393,6 @@ const pokemon = {
 			"chs": "科斯莫姆"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 790,
 		"games": [
 			"sun",
@@ -5421,7 +5416,6 @@ const pokemon = {
 			"chs": "科斯莫古"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 789,
 		"games": [
 			"sun",
@@ -5665,7 +5659,6 @@ const pokemon = {
 			"chs": "克雷色利亚"
 		},
 		"gender": "female",
-		"legendary": true,
 		"natdex": 488,
 		"games": [
 			"diamond",
@@ -6759,7 +6752,6 @@ const pokemon = {
 			"chs": "帝牙卢卡"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 483,
 		"games": [
 			"diamond",
@@ -8809,7 +8801,6 @@ const pokemon = {
 		},
 		"form-source": "incarnate",
 		"gender": "female",
-		"legendary": true,
 		"natdex": 905,
 		"games": [
 			"pla"
@@ -8828,7 +8819,6 @@ const pokemon = {
 			"chs": "炎帝"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 244,
 		"games": [
 			"gold",
@@ -8984,7 +8974,6 @@ const pokemon = {
 			"chs": "无极汰那"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 890,
 		"games": [
 			"sw",
@@ -11192,7 +11181,6 @@ const pokemon = {
 			"chs": "骑拉帝纳"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 487,
 		"games": [
 			"diamond",
@@ -11354,7 +11342,6 @@ const pokemon = {
 			"chs": "雪暴马"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 896,
 		"games": [
 			"sw",
@@ -12503,7 +12490,6 @@ const pokemon = {
 			"chs": "固拉多"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 383,
 		"games": [
 			"ruby",
@@ -13207,7 +13193,6 @@ const pokemon = {
 			"chs": "席多蓝恩"
 		},
 		"gender": "both",
-		"legendary": true,
 		"natdex": 485,
 		"games": [
 			"diamond",
@@ -13621,7 +13606,6 @@ const pokemon = {
 			"chs": "凤王"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 250,
 		"games": [
 			"gold",
@@ -15786,7 +15770,6 @@ const pokemon = {
 			"chs": "熊徒弟"
 		},
 		"gender": "both",
-		"legendary": true,
 		"natdex": 891,
 		"games": [
 			"sw",
@@ -15806,7 +15789,6 @@ const pokemon = {
 			"chs": "盖欧卡"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 382,
 		"games": [
 			"ruby",
@@ -15852,7 +15834,6 @@ const pokemon = {
 			"chs": "酋雷姆"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 646,
 		"games": [
 			"black",
@@ -15965,7 +15946,6 @@ const pokemon = {
 		},
 		"form-source": "incarnate",
 		"gender": "male",
-		"legendary": true,
 		"natdex": 645,
 		"games": [
 			"black",
@@ -16181,7 +16161,6 @@ const pokemon = {
 			"chs": "拉帝亚斯"
 		},
 		"gender": "female",
-		"legendary": true,
 		"natdex": 380,
 		"games": [
 			"ruby",
@@ -16227,7 +16206,6 @@ const pokemon = {
 			"chs": "拉帝欧斯"
 		},
 		"gender": "male",
-		"legendary": true,
 		"natdex": 381,
 		"games": [
 			"ruby",
@@ -17066,7 +17044,6 @@ const pokemon = {
 			"chs": "洛奇亚"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 249,
 		"games": [
 			"gold",
@@ -17152,7 +17129,6 @@ const pokemon = {
 			"chs": "露奈雅拉"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 792,
 		"games": [
 			"sun",
@@ -19103,7 +19079,6 @@ const pokemon = {
 			"chs": "艾姆利多"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 481,
 		"games": [
 			"diamond",
@@ -19348,7 +19323,6 @@ const pokemon = {
 			"chs": "超梦"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 150,
 		"games": [
 			"red-eng",
@@ -19968,7 +19942,6 @@ const pokemon = {
 			"chs": "火焰鸟"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 146,
 		"games": [
 			"red-eng",
@@ -20618,7 +20591,6 @@ const pokemon = {
 			"chs": "奈克洛兹玛"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 800,
 		"games": [
 			"sun",
@@ -21912,7 +21884,6 @@ const pokemon = {
 			"chs": "帕路奇亚"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 484,
 		"games": [
 			"diamond",
@@ -24728,7 +24699,6 @@ const pokemon = {
 			"chs": "雷公"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 243,
 		"games": [
 			"gold",
@@ -25057,7 +25027,6 @@ const pokemon = {
 			"chs": "烈空坐"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 384,
 		"games": [
 			"ruby",
@@ -25104,7 +25073,6 @@ const pokemon = {
 		},
 		"voiceless": true,
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 378,
 		"games": [
 			"ruby",
@@ -25150,7 +25118,6 @@ const pokemon = {
 			"chs": "雷吉铎拉戈"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 895,
 		"games": [
 			"sw",
@@ -25170,7 +25137,6 @@ const pokemon = {
 			"chs": "雷吉艾勒奇"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 894,
 		"games": [
 			"sw",
@@ -25191,7 +25157,6 @@ const pokemon = {
 		},
 		"voiceless": true,
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 486,
 		"games": [
 			"diamond",
@@ -25232,7 +25197,6 @@ const pokemon = {
 		},
 		"voiceless": true,
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 377,
 		"games": [
 			"black2",
@@ -25279,7 +25243,6 @@ const pokemon = {
 		},
 		"voiceless": true,
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 379,
 		"games": [
 			"ruby",
@@ -25420,7 +25383,6 @@ const pokemon = {
 			"chs": "莱希拉姆"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 643,
 		"games": [
 			"black",
@@ -28061,7 +28023,6 @@ const pokemon = {
 			"chs": "银伴战兽"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 773,
 		"games": [
 			"sun",
@@ -29316,7 +29277,6 @@ const pokemon = {
 			"chs": "索尔迦雷欧"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 791,
 		"games": [
 			"sun",
@@ -29471,7 +29431,6 @@ const pokemon = {
 			"chs": "灵幽马"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 897,
 		"games": [
 			"sw",
@@ -30383,7 +30342,6 @@ const pokemon = {
 			"chs": "水君"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 245,
 		"games": [
 			"black2",
@@ -31102,7 +31060,6 @@ const pokemon = {
 			"chs": "卡璞・哞哞"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 787,
 		"games": [
 			"sun",
@@ -31126,7 +31083,6 @@ const pokemon = {
 			"chs": "卡璞・鳍鳍"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 788,
 		"games": [
 			"sun",
@@ -31150,7 +31106,6 @@ const pokemon = {
 			"chs": "卡璞・鸣鸣"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 785,
 		"games": [
 			"sun",
@@ -31174,7 +31129,6 @@ const pokemon = {
 			"chs": "卡璞・蝶蝶"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 786,
 		"games": [
 			"sun",
@@ -31498,7 +31452,6 @@ const pokemon = {
 			"chs": "代拉基翁"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 639,
 		"games": [
 			"black",
@@ -31585,7 +31538,6 @@ const pokemon = {
 		},
 		"form-source": "incarnate",
 		"gender": "male",
-		"legendary": true,
 		"natdex": 642,
 		"games": [
 			"black",
@@ -31954,7 +31906,6 @@ const pokemon = {
 		},
 		"form-source": "incarnate",
 		"gender": "male",
-		"legendary": true,
 		"natdex": 641,
 		"games": [
 			"black",
@@ -32625,7 +32576,6 @@ const pokemon = {
 			"chs": "属性：空"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 772,
 		"games": [
 			"sun",
@@ -33244,7 +33194,6 @@ const pokemon = {
 			"chs": "武道熊师"
 		},
 		"gender": "both",
-		"legendary": true,
 		"natdex": 892,
 		"games": [
 			"sw",
@@ -33264,7 +33213,6 @@ const pokemon = {
 			"chs": "由克希"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 480,
 		"games": [
 			"diamond",
@@ -33942,7 +33890,6 @@ const pokemon = {
 			"chs": "毕力吉翁"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 640,
 		"games": [
 			"black",
@@ -35661,7 +35608,6 @@ const pokemon = {
 			"chs": "哲尔尼亚斯"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 716,
 		"games": [
 			"x",
@@ -35875,7 +35821,6 @@ const pokemon = {
 			"chs": "伊裴尔塔尔"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 717,
 		"games": [
 			"x",
@@ -35903,7 +35848,6 @@ const pokemon = {
 			"chs": "苍响"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 888,
 		"games": [
 			"sw",
@@ -35923,7 +35867,6 @@ const pokemon = {
 			"chs": "藏玛然特"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 889,
 		"games": [
 			"sw",
@@ -35994,7 +35937,6 @@ const pokemon = {
 			"chs": "闪电鸟"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 145,
 		"games": [
 			"red-eng",
@@ -36114,7 +36056,6 @@ const pokemon = {
 			"chs": "捷克罗姆"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 644,
 		"games": [
 			"black",
@@ -36387,7 +36328,6 @@ const pokemon = {
 			"chs": "基格尔德"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 718,
 		"games": [
 			"x",
@@ -38576,7 +38516,6 @@ const pokemon = {
 			"chs": "波荡水"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 1009,
 		"games": [
 			"scar",
@@ -38596,7 +38535,6 @@ const pokemon = {
 			"chs": "铁斑叶"
 		},
 		"gender": "unknown",
-		"legendary": true,
 		"natdex": 1010,
 		"games": [
 			"scar",

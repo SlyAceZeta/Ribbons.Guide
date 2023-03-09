@@ -1,5 +1,10 @@
 const changelog = {
-	"6-8 March 2023": [
+	"9 March 2023": [
+		"Fixed an issue where Ribbons from the Battle Tower, Battle Maison, and Battle Tree did not show in the Ribbon Guide for certain Legendary Pokémon (thanks Athis!)",
+		"Fixed an issue where Ribbons from the Battle Tower were showing in the Ribbon Guide for Spiky-eared Pichu",
+		"Added a Discord invite link"
+	],
+	"6 March 2023": [
 		"Ribbons.Guide is now a progressive web app! Visit the site using a <a href='https://en.wikipedia.org/wiki/Progressive_web_app' target='_blank'>supported browser</a> to install it directly to your device!",
 		"Your list of Pokémon can now be filtered by the games they can travel to, their Poké Ball, and more",
 		"Your list of Pokémon can now be sorted by their National Pokédex number, their current level, and their (nick)name",
@@ -7,7 +12,6 @@ const changelog = {
 		"The World Ability and Once-in-a-Lifetime Ribbons are now displayed like other special-case Ribbons in the Ribbon Guide",
 		"Spiky-eared Pichu and Cosplay Pikachu are now available as separate forms",
 		"The footer can now be collapsed",
-		"8 March: Added a Discord invite link"
 	],
 	"1 March 2023": [
 		"We've moved to ribbons.guide! Name is updated everywhere",

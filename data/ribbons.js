@@ -1349,7 +1349,7 @@ const allRibbons = {
 	},
 	"winning-ribbon": {
 		"gen": 3,
-		"nolegendary": true,
+		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza"],
 		"nomythical": true,
 		"merge": "battle",
 		"available": [
@@ -1368,7 +1368,7 @@ const allRibbons = {
 	},
 	"victory-ribbon": {
 		"gen": 3,
-		"nolegendary": true,
+		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza"],
 		"nomythical": true,
 		"merge": "battle",
 		"available": [
@@ -1387,7 +1387,7 @@ const allRibbons = {
 	},
 	"ability-ribbon": {
 		"gen": 4,
-		"nolegendary": true,
+		"banned": ["mewtwo", "pichu-spiky-eared", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
 		"nomythical": true,
 		"merge": "battle",
 		"available": [
@@ -1408,7 +1408,7 @@ const allRibbons = {
 	},
 	"great-ability-ribbon": {
 		"gen": 4,
-		"nolegendary": true,
+		"banned": ["mewtwo", "pichu-spiky-eared", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
 		"nomythical": true,
 		"merge": "battle",
 		"available": [
@@ -1429,7 +1429,7 @@ const allRibbons = {
 	},
 	"double-ability-ribbon": {
 		"gen": 4,
-		"nolegendary": true,
+		"banned": ["mewtwo", "pichu-spiky-eared", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
 		"nomythical": true,
 		"merge": "battle",
 		"available": [
@@ -1450,7 +1450,7 @@ const allRibbons = {
 	},
 	"multi-ability-ribbon": {
 		"gen": 4,
-		"nolegendary": true,
+		"banned": ["mewtwo", "pichu-spiky-eared", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
 		"nomythical": true,
 		"merge": "battle",
 		"available": [
@@ -1471,7 +1471,7 @@ const allRibbons = {
 	},
 	"pair-ability-ribbon": {
 		"gen": 4,
-		"nolegendary": true,
+		"banned": ["mewtwo", "pichu-spiky-eared", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
 		"nomythical": true,
 		"merge": "battle",
 		"available": [
@@ -1492,7 +1492,7 @@ const allRibbons = {
 	},
 	"world-ability-ribbon": {
 		"optional": true,
-		"nolegendary": true,
+		"banned": ["mewtwo", "pichu-spiky-eared", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
 		"nomythical": true,
 		"merge": "battle",
 		"gen": 4,
@@ -1514,7 +1514,7 @@ const allRibbons = {
 	},
 	"battle-memory-ribbon": {
 		"gen": 6,
-		"nolegendary": true,
+		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
 		"nomythical": true,
 		"optional": true,
 		"available": [
@@ -1559,7 +1559,7 @@ const allRibbons = {
 	},
 	"battle-memory-ribbon-gold": {
 		"gen": 6,
-		"nolegendary": true,
+		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
 		"nomythical": true,
 		"optional": true,
 		"available": [
@@ -1604,7 +1604,7 @@ const allRibbons = {
 	},
 	"skillful-battler-ribbon": {
 		"gen": 6,
-		"nolegendary": true,
+		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "xerneas", "yveltal", "zygarde"],
 		"nomythical": true,
 		"available": [
 			"x",
@@ -1648,7 +1648,7 @@ const allRibbons = {
 	},
 	"expert-battler-ribbon": {
 		"gen": 6,
-		"nolegendary": true,
+		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "xerneas", "yveltal", "zygarde"],
 		"nomythical": true,
 		"available": [
 			"x",
@@ -1734,7 +1734,7 @@ const allRibbons = {
 	},
 	"battle-tree-master-ribbon": {
 		"gen": 7,
-		"nolegendary": true,
+		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "xerneas", "yveltal", "zygarde", "cosmog", "cosmoem", "solgaleo", "lunala", "necrozma"],
 		"nomythical": true,
 		"available": [
 			"sun",
@@ -2585,7 +2585,7 @@ const allRibbons = {
 	},
 	"battle-royal-master-ribbon": {
 		"gen": 7,
-		"nolegendary": true,
+		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "xerneas", "yveltal", "zygarde", "cosmog", "cosmoem", "solgaleo", "lunala", "necrozma"],
 		"nomythical": true,
 		"available": [
 			"sun",
