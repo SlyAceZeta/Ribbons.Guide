@@ -135,7 +135,11 @@ function createBox(edit = false){
 }
 
 function saveBackup(){
-	var data = localStorage.getItem("pokemon") + "," + localStorage.getItem("boxes");
+	var data = localStorage.getItem("pokemon");
+	var boxData = localStorage.getItem("boxes");
+	if(boxData){
+		data = data + "," + boxData;
+	}
 	var blob = new Blob([data], {type: 'application/json'});
 
 	var ele = document.createElement('a');
@@ -1348,7 +1352,7 @@ $(function(){
 	var theme = localStorage.getItem("theme");
 	if(!theme){
 		if(window.matchMedia("(prefers-color-scheme: light)").matches){
-			theme = "sword";
+			theme = "shield";
 		} else {
 			theme = "start";
 		}
