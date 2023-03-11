@@ -277,15 +277,15 @@ footer {
 	line-height: 25px;
 	cursor: pointer;
 }
-footer.collapsed {
+body[data-footer="collapsed"] footer {
 	width: 28px;
 	height: 30px;
 	border-top-left-radius: 2px;
 }
-footer.collapsed #footer-text {
+body[data-footer="collapsed"] #footer-text {
 	display: none;
 }
-footer.collapsed #footer-icon {
+body[data-footer="collapsed"] #footer-icon {
 	transform: rotate(-180deg);
 }
 #settings .button {
@@ -790,6 +790,9 @@ footer.collapsed #footer-icon {
 #pokemon-list {
 	margin-top: 0;
 }
+body[data-footer="collapsed"] #pokemon-list {
+	margin-bottom: 85px;
+}
 #menu {
 	margin-bottom: 0;
 	display: flex;
@@ -861,6 +864,7 @@ footer.collapsed #footer-icon {
 	max-width: 250px;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	text-rendering: auto;
 }
 #boxsort-boxes button {
 	cursor: pointer;
@@ -880,6 +884,7 @@ footer.collapsed #footer-icon {
 	max-width: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	text-rendering: auto;
 }
 .pokemon-list-entry {
 	border-radius: 5px;
@@ -900,6 +905,9 @@ footer.collapsed #footer-icon {
 	padding: 9px;
 	text-align: center;
 	cursor: pointer;
+}
+body[data-footer="collapsed"] #add-pokemon-button {
+	bottom: 40px;
 }
 #add-pokemon-button img {
 	width: 32px;
@@ -1013,9 +1021,6 @@ footer.collapsed #footer-icon {
 .ribbonguide-warning span span {
 	font-weight: bold;
 }
-.pokemon-list-box-name {
-	max-width: 15vw;
-}
 @media only screen and (max-width: 600px){
 	#pokeform-shiny-toggle span,
 	#pokeform-gender-toggle span {
@@ -1055,13 +1060,11 @@ footer.collapsed #footer-icon {
 	#pokemon-list {
 		margin-bottom: 110px;
 	}
-	.pokemon-list-box-name {
-		max-width: 3vw;
+	body[data-footer="collapsed"] #add-pokemon-button {
+		bottom: 40px;
 	}
-}
-@media only screen and (min-width: 900px) {
-	.pokemon-list-box-name {
-		max-width: 9vw;
+	body[data-footer="collapsed"] #pokemon-list {
+		margin-bottom: 85px;
 	}
 }
 @media only screen and (min-width: 1200px) {
@@ -1078,24 +1081,6 @@ footer.collapsed #footer-icon {
 	#pokemon-list {
 		margin-bottom: 85px;
 	}
-	.pokemon-list-box-name {
-		max-width: 2vw;
-	}
-}
-@media only screen and (min-width: 1400px) {
-	.pokemon-list-box-name {
-		max-width: 6vw;
-	}
-}
-@media only screen and (min-width: 1600px) {
-	.pokemon-list-box-name {
-		max-width: 9vw;
-	}
-}
-@media only screen and (min-width: 1800px) {
-	.pokemon-list-box-name {
-		max-width: 12vw;
-	}
 }
 .pokemon-list-entry-header,
 .pokemon-list-entry-footer {
@@ -1105,18 +1090,35 @@ footer.collapsed #footer-icon {
 	border-radius: 5px 5px 0 0;
 	padding: 5px 10px;
 }
+.pokemon-list-entry-header {
+	flex-wrap: wrap;
+	height: 55px;
+}
 .pokemon-list-entry-footer {
+	display: grid;
+	grid-template-columns: auto 120px;
 	border-radius: 0 0 5px 5px;
 }
 .pokemon-list-entry-header * {
 	vertical-align: middle;
 }
+.pokemon-list-entry-header-left,
+.pokemon-list-entry-header-right {
+	line-height: 1;
+}
 .pokemon-list-entry-header-left *,
 .pokemon-list-entry-header-right * {
 	margin-right: 5px;
 }
+.pokemon-list-entry-header-left {
+	display: grid;
+	grid-template-columns: 25px auto 25px 25px;
+}
 .pokemon-list-entry-header-right {
 	font-weight: 600;
+}
+.pokemon-list-entry-footer-left {
+	min-width: 180px;
 }
 .pokemon-list-entry-footer-right {
 	margin-top: -1px;
@@ -1151,16 +1153,18 @@ footer.collapsed #footer-icon {
 	font-weight: bold;
 	font-size: 20px;
 	padding: 0 5px;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-rendering: auto;
 }
 .pokemon-list-level {
-	width: 60px;
+	min-width: 60px;
 }
 .pokemon-list-lang-wrapper {
-	width: 70px;
+	min-width: 70px;
 }
-.pokemon-list-origin {
-	margin-right: 10px;
-}
+.pokemon-list-origin,
 .pokemon-list-box-icon {
 	margin-right: 5px;
 }
@@ -1168,6 +1172,7 @@ footer.collapsed #footer-icon {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	text-rendering: auto;
 }
 .pokemon-list-lang {
 	display: inline-block;
@@ -1184,7 +1189,7 @@ footer.collapsed #footer-icon {
 }
 .pokemon-list-entry-center {
 	display: flex;
-	height: calc(100% - 69px);
+	height: calc(100% - 89px);
 	align-items: center;
 }
 .pokemon-list-entry-center > img {

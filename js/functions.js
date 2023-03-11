@@ -1131,7 +1131,7 @@ $(function(){
 	// Set footer state
 	var footerState = localStorage.getItem("footerState");
 	if(!footerState || footerState == "expanded"){
-		$("footer").removeClass("collapsed");
+		$("body").removeAttr("data-footer");
 	}
 
 	// Load form data: mints and natures
@@ -1487,10 +1487,11 @@ $(function(){
 		var footerState = localStorage.getItem("footerState");
 		if(!footerState || footerState == "expanded"){
 			localStorage.setItem("footerState", "collapsed");
+			$("body").attr("data-footer", "collapsed");
 		} else {
 			localStorage.setItem("footerState", "expanded");
+			$("body").removeAttr("data-footer");
 		}
-		$("footer").toggleClass("collapsed");
 	});
 	$("#pokeform-tabs img").click(function(){
 		if(!$(this).hasClass("pokeform-tabs-active")){
