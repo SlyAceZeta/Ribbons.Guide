@@ -1,4 +1,12 @@
+// don't forget to update index.html cache-version
 const changelog = {
+	"11 March 2023": [
+		"Expanded height of Pokémon card headers; on mobile, if the name and title do not fit, the title will move to a second line <a href='https://github.com/Azekthi/Ribbons.Guide/issues/51'>#51</a> (thanks Pikapal52!)",
+		"Improved handling of box names in Pokémon card footers to ensure they are properly truncated across all mobile devices",
+		"Improved positioning of the New Pokémon button at the bottom-right on mobile devices",
+		"Ribbon Guide warnings are now in a single section and can be collapsed after viewing them <a href='https://github.com/Azekthi/Ribbons.Guide/issues/49'>#49</a>",
+		"Fixed the swapped colors of Intrepid Sword and Dauntless Shield (thanks Vamp1836!)",
+	],
 	"9 March 2023": [
 		"Fixed an issue where Ribbons from the Battle Tower, Battle Maison, and Battle Tree did not show in the Ribbon Guide for certain Legendary Pokémon (thanks Athis!)",
 		"Fixed an issue where Ribbons from the Battle Tower were showing in the Ribbon Guide for Spiky-eared Pichu",
@@ -6,12 +14,12 @@ const changelog = {
 	],
 	"6 March 2023": [
 		"Ribbons.Guide is now a progressive web app! Visit the site using a <a href='https://en.wikipedia.org/wiki/Progressive_web_app' target='_blank'>supported browser</a> to install it directly to your device!",
-		"Your list of Pokémon can now be filtered by the games they can travel to, their Poké Ball, and more",
-		"Your list of Pokémon can now be sorted by their National Pokédex number, their current level, and their (nick)name",
-		"The tooltips for the Battle and Contest Memory Ribbons now include how many Ribbons were merged into them",
+		"Your list of Pokémon can now be filtered by the games they can travel to, their Poké Ball, and more <a href='https://github.com/Azekthi/Ribbons.Guide/issues/18'>#18</a>&nbsp;&&nbsp;<a href='https://github.com/Azekthi/Ribbons.Guide/issues/32'>#32</a> (thanks Noaxzl!)",
+		"Your list of Pokémon can now be sorted by their National Pokédex number, their current level, and their (nick)name <a href='https://github.com/Azekthi/Ribbons.Guide/issues/17'>#17</a> (thanks Noaxzl!)",
+		"The tooltips for the Battle and Contest Memory Ribbons now include how many Ribbons were merged into them <a href='https://github.com/Azekthi/Ribbons.Guide/issues/30'>#30</a> (thanks SadisticMystic!)",
 		"The World Ability and Once-in-a-Lifetime Ribbons are now displayed like other special-case Ribbons in the Ribbon Guide",
 		"Spiky-eared Pichu and Cosplay Pikachu are now available as separate forms",
-		"The footer can now be collapsed",
+		"The footer can now be collapsed <a href='https://github.com/Azekthi/Ribbons.Guide/issues/33'>#33</a>",
 	],
 	"1 March 2023": [
 		"We've moved to ribbons.guide! Name is updated everywhere",
@@ -24,25 +32,25 @@ const changelog = {
 	"27 February 2023": [
 		"Happy Pokémon Day! Added Walking Wake and Iron Leaves (sprites and Chinese names to be updated)",
 		"Removed unavailable Ribbons that were inadvertendly added in a prior update",
-		"Fixed an error where old Battle and Contest Ribbons were hidden from Gen V Pokémon; they will now start hiding in Gen VI as in the games",
+		"Fixed an error where old Battle and Contest Ribbons were hidden from Gen V Pokémon; they will now start hiding in Gen VI as in the games (thanks SadisticMystic!)",
 		"Fixed an issue where Pokémon caught in Scarlet or Violet were not showing Ribbon guidance if they were not National #906 or above"
 	],
 	"9 January 2023": [
-		"Added the long-awaited Ribbon Master Guide! Click the clipboard icon on a Pokémon's summary to see the remaining Ribbons available to them!",
+		"Added the long-awaited Ribbon Master Guide! Click the clipboard icon on a Pokémon's summary to see the remaining Ribbons available to them! <a href='https://github.com/Azekthi/Ribbons.Guide/issues/8'>#8</a>",
 		"Bank is now split into Gen VI and Gen VII because Pokémon sent to Gen VII cannot go back to Gen VI; all Pokémon currently in Bank are set to Gen VI until edited",
 		"Warnings appear in the Ribbon Master Guide for cross-generation evolutions and level-locked Ribbons where applicable",
 		"Battle and Contest Ribbons are now hidden from the main display if the Pokémon is in Gen V or above",
 		"Box names are no longer limited to 12 characters and can be edited from the edit window"
 	],
 	"6 January 2023": [
-		"Added support for Square shinies",
+		"Added support for Square shinies <a href='https://github.com/Azekthi/Ribbons.Guide/issues/10'>#10</a>",
 		"Updated gender toggle similar to new shiny toggle",
 		"Ribbon categories can now be collapsed in the form (Event and Marks are collapsed by default)",
 		"Fixed various mobile issues; Pokémon can now be dragged and re-ordered on mobile, and certain Pokémon will no longer overflow the add/edit form"
 	],
 	"2 January 2023": [
-		"Added Boxes to group your Pokémon",
-		"Added ability to drag and re-order Pokémon",
+		"Added Boxes to group your Pokémon <a href='https://github.com/Azekthi/Ribbons.Guide/issues/16'>#16</a>",
+		"Added ability to drag and re-order Pokémon <a href='https://github.com/Azekthi/Ribbons.Guide/issues/21'>#21</a>",
 		"Updated data backup/restore to include Boxes; Pokémon order is also saved; restore is backwards compatible with older files",
 		"Added new theme \"Start Menu\"; updated Naranja and Uva themes to appear closer to the game",
 		"Replaced add/edit form tab labels with icons",
@@ -55,7 +63,7 @@ const changelog = {
 		"Downloaded version of website can now be run fully offline"
 	],
 	"12 December 2022": [
-		"Added Scarlet/Violet Pokémon, forms, and origin mark",
+		"Added Scarlet/Violet Pokémon, forms, and origin mark <a href='https://github.com/Azekthi/Ribbons.Guide/issues/22'>#22</a>",
 		"Updated SPA language tag to SP-EU as per Scarlet/Violet"
 	],
 	"21 November 2022": [
@@ -64,14 +72,14 @@ const changelog = {
 		"Updated Timer Ball sprite"
 	],
 	"17 November 2022": [
-		"Add/edit form now supports Current Game, IVs, EVs, Ability, Met Level, Met Date, and Characteristic",
+		"Add/edit form now supports Current Game, IVs, EVs, Ability, Met Level, Met Date, and Characteristic <a href='https://github.com/Azekthi/Ribbons.Guide/issues/11'>#11</a>",
 		"Updated ball and mint sprites to match their HOME/PLA sprites"
 	],
 	"14 November 2022": [
 		"Added all forms to the species selection",
 		"Nickname field can now be left empty; species name will be used in these cases",
 		"Add/edit form now has tabs! They don't look the best for now, but they work!",
-		"You can now add notes to each Pokémon"
+		"You can now add notes to each Pokémon (thanks lovelycoris!)"
 	],
 	"13 November 2022": [
 		"Added a changelog! This will automatically appear when there's a new update."
