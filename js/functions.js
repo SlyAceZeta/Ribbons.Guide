@@ -367,6 +367,7 @@ function ribbonGuide(id){
 			var isMythical = getData(pkmn.dex, "mythical");
 			var evoWarnMon = getData(pkmn.dex, "evowarnmon", true);
 			var evoWarnGen = getData(pkmn.dex, "evowarngen", true);
+			var noWarnings = true;
 			var noRibbons = true;
 
 			for(var ribbon in allRibbons){
@@ -405,7 +406,8 @@ function ribbonGuide(id){
 									} else if(ribbon == "winning-ribbon"){
 										if(parseInt(pkmn.level) < 51){
 											specialEarn = true;
-											$("#ribbonguide-winning").html("<span><span>WARNING:</span> Leveling " + name + " above Lv.50 will make the Winning Ribbon unavailable!</span>");
+											noWarnings = false;
+											$("#ribbonguide-winning").html("Leveling " + name + " above Lv.50 will make the Winning Ribbon unavailable!");
 										}
 									} else if(ribbon == "national-ribbon"){
 										if(pkmn.origin == "colosseum" || pkmn.origin == "xd"){
@@ -422,7 +424,8 @@ function ribbonGuide(id){
 											// so check the later two conditions for potential failure
 											if(!getData(pkmn.dex, "voiceless") && parseInt(pkmn.level) < 71){
 												// add preliminary warning about leveling up and leaving Gen IV
-												$("#ribbonguide-footprint").html("<span><span>WARNING:</span> Leveling " + name + " above Lv.70 will make the Footprint Ribbon exclusive to "+terms.gens[4]+"!</span>");
+												noWarnings = false;
+												$("#ribbonguide-footprint").html("Leveling " + name + " above Lv.70 will make the Footprint Ribbon exclusive to "+terms.gens[4]+"!");
 											}
 										} else if(getData(pkmn.dex, "voiceless") && gameGen == 8){
 											// voiceless Pokemon can still earn this in BDSP
@@ -443,14 +446,16 @@ function ribbonGuide(id){
 													// Met Level also changes if transferred out of Virtual Console
 													// if it's a voiced Pokemon, warn the user like above
 													specialEarn = true;
-													$("#ribbonguide-footprint").html("<span><span>WARNING:</span> Leveling " + name + " above Lv.70 will make the Footprint Ribbon unavailable!</span>");
+													noWarnings = false;
+													$("#ribbonguide-footprint").html("Leveling " + name + " above Lv.70 will make the Footprint Ribbon unavailable!");
 												} else if(metLevel == 0){
 													// if the Pokemon is Lv70 or below in Gen V+, outside of Virtual Console, then its Met Level must be Lv70 or below
 													if(parseInt(pkmn.level) < 71){
 														specialEarn = true;
 													} else {
 														// otherwise, warn the user
-														$("#ribbonguide-notice").html("<span><span>NOTE:</span> " + name + "'s Met Level has not been set. The availability of the Footprint Ribbon after "+terms.gens[4]+" cannot be determined.");
+														noWarnings = false;
+														$("#ribbonguide-notice").html(name + "'s Met Level has not been set. The availability of the Footprint Ribbon after "+terms.gens[4]+" cannot be determined.");
 													}
 												}
 											}
@@ -513,6 +518,7 @@ function ribbonGuide(id){
 				var testGen = curGen;
 				if(pkmn.currentgame == "go") testGen = 7;
 				if(testGen <= parseInt(evoWarnGen)){
+					noWarnings = false;
 					var evoWarnNames = getData(evoWarnMon, "names");
 					var evoWarnName = evoWarnNames.eng;
 					var evoWarnForms = getData(evoWarnMon, "forms");
@@ -528,11 +534,16 @@ function ribbonGuide(id){
 					if(evoWarnForms){
 						evoWarnName = evoWarnName + " (" + evoWarnForms.eng + ")";
 					}
-					$("#ribbonguide-evolution").append("<span><span>WARNING:</span> Evolving " + name + " into " + evoWarnName + " may change the availability of certain Ribbons!</span>");
+					$("#ribbonguide-evolution").html("Evolving " + name + " into " + evoWarnName + " may change the availability of certain Ribbons!");
 				}
 			}
 			if(noRibbons){
 				$("#ribbonguide-transfer").html("<div class='ribbonguide-transfer-noneleft'>There are no more Ribbons for " + name + " to earn!</div>");
+			}
+			if(noWarnings){
+				$("#ribbonguide-warnings").hide();
+			} else {
+				$("#ribbonguide-warnings").show().addClass("active");
 			}
 			showModal("ribbonguide");
 		} else {
@@ -926,7 +937,7 @@ function generateRibbons(){
 }
 
 function resetRibbonGuide(){
-	$("#ribbonguide-transfer, .ribbonguide-warning, #ribbonguide-info .metlevel").empty();
+	$("#ribbonguide-transfer, #ribbonguide-warnings li, #ribbonguide-info .metlevel").empty();
 	for(var i in ribbonIDs){
 		if(parseInt(ribbonIDs[i])){
 			$("#ribbonguide-transfer").append("<div id='ribbonguide-transfer-"+ribbonIDs[i]+"'><div class='ribbonguide-transfer-exclusive' style='display:none'><div>Last chance in "+i+"</div></div><div class='ribbonguide-transfer-later' style='display:none'><div>Available later</div></div><div class='ribbonguide-transfer-footer'><span class='name'></span> is<span class='notready'> not</span> ready to leave "+i+"<span class='unsure'> after verifying special cases</span>.</div></div>");
@@ -1479,6 +1490,9 @@ $(function(){
 	});
 	$("#changelog tr:not(:last-child)").click(function(){
 		$(this).toggleClass("changelog-active");
+	});
+	$("#ribbonguide-warnings").click(function(){
+		$(this).toggleClass("active");
 	});
 	$(".ribbons-gen").click(function(){
 		$(this).toggleClass("rg-active");

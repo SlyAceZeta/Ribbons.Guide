@@ -291,6 +291,15 @@ body[data-footer="collapsed"] #footer-icon {
 #settings .button {
 	font-size: 16px;
 }
+#settings-about {
+	font-size: 11px;
+}
+#settings-about td {
+	padding: 3px 10px;
+}
+#settings-about div {
+	margin: 5px 0;
+}
 .ribbons {
 	padding: 10px 0;
 }
@@ -1007,19 +1016,18 @@ body[data-footer="collapsed"] #add-pokemon-button {
 	text-align: center;
 	margin: 40px 0;
 }
-.ribbonguide-warning > span {
+#ribbonguide-warnings {
 	display: block;
 	padding: 10px;
 	background: #881430;
 	color: #fff;
 	border-bottom: 2px solid grey;
 }
-#ribbonguide-notice > span {
-	background: #ebbe0b;
-	color: #000;
+#ribbonguide-warnings li {
+	list-style: none;
 }
-.ribbonguide-warning span span {
-	font-weight: bold;
+#ribbonguide-warnings li:not(:empty) {
+	list-style: circle;
 }
 @media only screen and (max-width: 600px){
 	#pokeform-shiny-toggle span,
@@ -1217,13 +1225,16 @@ body[data-footer="collapsed"] #add-pokemon-button {
 	display: block;
 }
 #changelog tr:not(:last-child),
-.ribbons-gen {
+.ribbons-gen,
+#ribbonguide-warnings {
 	cursor: pointer;
 }
-.changelog-date {
+.changelog-date,
+#ribbonguide-warnings-toggle {
 	font-weight: bold;
 }
-.changelog-date + ul {
+.changelog-date + ul,
+#ribbonguide-warnings-toggle + ul {
 	padding-left: 5%;
 	margin: 1% 0;
 	display: none;
@@ -1231,22 +1242,29 @@ body[data-footer="collapsed"] #add-pokemon-button {
 .ribbons-gen.rg-active + .ribbons-list {
 	display: flex;
 }
-.changelog-active .changelog-date + ul {
+.changelog-active .changelog-date + ul,
+#ribbonguide-warnings.active #ribbonguide-warnings-toggle + ul {
 	display: block;
 }
 .changelog-date:before,
-.ribbons-gen:before {
+.ribbons-gen:before,
+#ribbonguide-warnings-toggle:before {
 	content: "▼";
 	margin-right: 5px;
 	font-size: 12px;
 	vertical-align: middle;
 }
 .changelog-date span,
-.ribbons-gen span {
+.ribbons-gen span,
+#ribbonguide-warnings-toggle span {
 	vertical-align: middle;
 }
+#ribbonguide-warnings-toggle span {
+	text-transform: uppercase;
+}
 .changelog-active .changelog-date:before,
-.ribbons-gen.rg-active:before {
+.ribbons-gen.rg-active:before,
+#ribbonguide-warnings.active #ribbonguide-warnings-toggle:before {
 	content: "▲";
 }
 
