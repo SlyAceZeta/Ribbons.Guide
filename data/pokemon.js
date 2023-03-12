@@ -8266,6 +8266,8 @@ const pokemon = {
 			"cht": "伊布",
 			"chs": "伊布"
 		},
+		"evowarnmon": "sylveon",
+		"evowarngen": 8,
 		"gender": "both",
 		"natdex": 133,
 		"games": [
