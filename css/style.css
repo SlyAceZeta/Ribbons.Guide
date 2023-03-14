@@ -343,14 +343,16 @@ body[data-footer="collapsed"] #footer-icon {
 	cursor: pointer;
 }
 #pokeform-shiny-toggle img,
-#pokeform-gender-toggle img {
+#pokeform-gender-toggle img,
+#pokeform-gender-unknown img {
 	width: 16px;
 	vertical-align: middle;
 	margin-right: 5px;
 	transition: filter 0.25s;
 }
 #pokeform-shiny-toggle span,
-#pokeform-gender-toggle span {
+#pokeform-gender-toggle span,
+#pokeform-gender-unknown span {
 	vertical-align: middle;
 }
 #pokeform-shiny-toggle label:first-of-type,
@@ -954,9 +956,6 @@ body[data-footer="collapsed"] #add-pokemon-button {
 #ribbonguide-transfer > div > div > div:first-child {
 	padding-bottom: 5px;
 }
-#ribbonguide-info span {
-	white-space: nowrap;
-}
 #ribbonguide-transfer img {
 	width: 40px;
 	height: 40px;
@@ -1031,14 +1030,17 @@ body[data-footer="collapsed"] #add-pokemon-button {
 }
 @media only screen and (max-width: 600px){
 	#pokeform-shiny-toggle span,
-	#pokeform-gender-toggle span {
+	#pokeform-gender-toggle span,
+	#pokeform-gender-unknown span {
 		display: none;
 	}
 	#pokeform-shiny-toggle img,
-	#pokeform-gender-toggle img {
+	#pokeform-gender-toggle img,
+	#pokeform-gender-unknown img {
 		margin-right: 0;
 	}
-	#pokeform-gender-toggle label {
+	#pokeform-gender-toggle label,
+	#pokeform-gender-unknown {
 		padding-top: 0;
 	}
 	.select2-container {

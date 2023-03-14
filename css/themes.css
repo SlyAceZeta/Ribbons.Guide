@@ -74,11 +74,13 @@ body.theme-shield {
 .theme-sword #menu button:not(#menu-boxes) img,
 .theme-sword #pokeform-shiny-toggle img,
 .theme-sword .pokemon-list-entry .shiny,
+.theme-sword #pokeform-gender-unknown img,
 .theme-shield .pokemon-list-origin,
 .theme-shield .pokemon-list-entry-footer-right,
 .theme-shield #menu button:not(#menu-boxes) img,
 .theme-shield #pokeform-shiny-toggle img,
-.theme-shield .pokemon-list-entry .shiny {
+.theme-shield .pokemon-list-entry .shiny,
+.theme-shield #pokeform-gender-unknown img {
 	filter: invert(1);
 }
 .theme-sword #pokeform-tabs .pokeform-tabs-active,
@@ -126,12 +128,14 @@ body.theme-light {
 	--asterisk: #a00;
 }
 .theme-light #header-settings,
+.theme-light #header-discord img,
 .theme-light .pokemon-list-origin,
 .theme-light .pokemon-list-entry-footer-right,
 .theme-light #add-pokemon-button img,
 .theme-light #menu button:not(#menu-boxes) img,
 .theme-light #pokeform-shiny-toggle img,
-.theme-light .pokemon-list-entry .shiny {
+.theme-light .pokemon-list-entry .shiny,
+.theme-light #pokeform-gender-unknown img {
 	filter: invert(1);
 }
 .theme-light #pokeform-tabs .pokeform-tabs-active {
