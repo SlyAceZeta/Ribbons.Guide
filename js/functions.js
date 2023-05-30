@@ -348,7 +348,7 @@ function ribbonGuide(id){
 			if(curGen < 3){
 				virtualConsole = true;
 				curGen = 7;
-			} else if(pkmn.currentgame == "go"){
+			} else if(pkmn.currentgame == "go" || pkmn.currentgame == "scar" || pkmn.currentgame == "vio"){
 				curGen = 8;
 			}
 			for(let g in terms.gens){
@@ -385,13 +385,13 @@ function ribbonGuide(id){
 							if(gameGen && ribbonAddToGens.indexOf(gameGen) == -1 && gensLeft.indexOf(gameGen) > -1){
 								// Ribbon has not been added to this gen yet
 								// and Pokemon is in this game's gen or will be later
-								// check if Pokemon can be sent to this game, or if Pokemon is currently in Scarlet or Violet to temporarily handle SV before HOME compatibility
-								if(pkmnGames.indexOf(ribbonGame) > -1 || ((ribbonGame == "scar" || ribbonGame == "vio") && (pkmn.currentgame == "scar" || pkmn.currentgame == "vio"))){
+								// check if Pokemon can be sent to this game
+								if(pkmnGames.indexOf(ribbonGame) > -1){
 									// now check for special Ribbon restrictions
 									var specialEarn = false;
 									if(ribbon.indexOf("contest-memory-ribbon") == 0 || ribbon.indexOf("battle-memory-ribbon") == 0){
-										// Pokemon originating in Gen VI or Virtual Console cannot have these Ribbons
-										if(games[pkmn.origin].gen < 6 && games[pkmn.origin].gen > 2){
+										// Pokemon originating in Gen V or Virtual Console cannot have these Ribbons
+										if(games[pkmn.origin].gen < 5 && games[pkmn.origin].gen > 2){
 											// only show blue if gold is not obtained, and vice versa
 											if(ribbon == "contest-memory-ribbon" && pkmn.ribbons.indexOf("contest-memory-ribbon-gold") == -1){
 												specialEarn = true;
@@ -1183,10 +1183,9 @@ $(function(){
 			$("#pokeform-currentgame-storage, #filterform-currentgame-storage").append(newGame);
 		} else {
 			var gGen = games[g]["gen"];
-			// Scarlet & Violet: pending HOME compatibility
 			// GO: Pokemon cannot move there
 			var destination = ", #filterform-games-" + gGen;
-			if(g == "scar" || g == "vio" || g == "go"){
+			if(g == "go"){
 				destination = "";
 			}
 			$("#pokeform-origin-" + gGen + ", #pokeform-currentgame-" + gGen + ", #filterform-origin-" + gGen + ", #filterform-currentgame-" + gGen + destination).append(newGame);

@@ -1,5 +1,12 @@
 // don't forget to update index.html cache-version
 const changelog = {
+	"30 May 2023": [
+		"Added HOME support for Scarlet/Violet! (finally)",
+		"Combined Gens VIII and IX to support Gen VIII's forward compatibility with Pokémon caught in Gen IX! Check your Gen IX-origin Pokémon in case they can earn more Ribbons!",
+		"Removed Once-in-a-Lifetime Ribbon and Itemfinder Mark",
+		"Fixed an issue where the Ribbon Guide was asking to check Battle and Contest Memory Ribbons for Pokémon caught in Gen V, which cannot have these Ribbons",
+		"More updates coming soon!"
+	],
 	"11 March 2023": [
 		"Expanded height of Pokémon card headers; on mobile, if the name and title do not fit, the title will move to a second line <a href='https://github.com/Azekthi/Ribbons.Guide/issues/51'>#51</a> (thanks Pikapal52!)",
 		"Improved handling of box names in Pokémon card footers to ensure they are properly truncated across all mobile devices",

@@ -1,4 +1,4 @@
-const ribbonIDs = {"Event": "e", "Marks": "m", "Gen III": 3, "Gen IV": 4, "Gen VI": 6, "Gen VII": 7, "Gen VIII": 8, "Gen IX": 9};
+const ribbonIDs = {"Event": "e", "Marks": "m", "Gen III": 3, "Gen IV": 4, "Gen VI": 6, "Gen VII": 7, "Gen VIII/IX": 8};
 
 const allRibbons = {
 	"champion-ribbon": {
@@ -250,7 +250,7 @@ const allRibbons = {
 		}
 	},
 	"paldea-champion-ribbon": {
-		"gen": 9,
+		"gen": 8,
 		"available": [
 			"scar",
 			"vio"
@@ -2709,47 +2709,6 @@ const allRibbons = {
 			"chs": "遥远过去的"
 		}
 	},
-	"once-in-a-lifetime-ribbon": {
-		"optional": true,
-		"gen": 9,
-		"available": [
-			"scar",
-			"vio"
-		],
-		"names": {
-			"ger": "Glückstrefferband",
-			"eng": "Once-in-a-Lifetime Ribbon",
-			"spa": "Cinta Excepcionalidad",
-			"fre": "Ruban Exceptionnel",
-			"ita": "Fiocco Eccezionale",
-			"jpn": "せんざいいちぐうリボン",
-			"kor": "천재일우리본",
-			"cht": "千載難逢獎章",
-			"chs": "千载难逢奖章"
-		},
-		"descs": {
-			"ger": "Besonderes Band, das nur sehr selten an Pokémon zu finden ist, die man per Zaubertausch erhält.",
-			"eng": "A rare Ribbon found extremely infrequently on Pokémon obtained in a Surprise Trade.",
-			"spa": "Extraña cinta que muy rara vez lleva consigo un Pokémon recibido en un intercambio mágico.",
-			"fre": "Ruban trouvé à de très rares occasions chez les Pokémon obtenus lors d'Échanges Magiques.",
-			"ita": "Fiocco raro indossato molto di rado da Pokémon ottenuti tramite scambio magico.",
-			"jpn": "マジカル交換で　手に入れた　ポケモンに ごくまれに　つけられている　めずらしいリボン",
-			"kor": "매지컬 교환으로 손에 넣은 포켓몬이 매우 드물게 달고 있는 희귀한 리본",
-			"cht": "極少數情況下會戴在透過魔法交換 獲得的寶可夢身上的稀有獎章。",
-			"chs": "通过魔法交换获得的宝可梦 会有极低概率佩戴着的稀有奖章。"
-		},
-		"titles": {
-			"ger": "Glückstreffer",
-			"eng": "the One-in-a-Million",
-			"spa": "el Excepcional",
-			"fre": "l'Irremplaçable",
-			"ita": "eccezionale",
-			"jpn": "せんざいいちぐうの",
-			"kor": "천재일우의",
-			"cht": "千載難逢的",
-			"chs": "千载难逢的"
-		}
-	},
 	"country-ribbon": {
 		"gen": 3,
 		"available": null,
@@ -3696,7 +3655,7 @@ const allRibbons = {
 		}
 	},
 	"destiny-mark": {
-		"gen": 9,
+		"gen": 8,
 		"available": null,
 		"mark": true,
 		"names": {
@@ -4951,7 +4910,7 @@ const allRibbons = {
 	},
 	"jumbo-mark": {
 		"optional": true,
-		"gen": 9,
+		"gen": 8,
 		"available": [
 			"scar",
 			"vio"
@@ -4993,7 +4952,7 @@ const allRibbons = {
 	},
 	"mini-mark": {
 		"optional": true,
-		"gen": 9,
+		"gen": 8,
 		"available": [
 			"scar",
 			"vio"
@@ -5033,46 +4992,8 @@ const allRibbons = {
 			"chs": "小不点"
 		}
 	},
-	"itemfinder-mark": {
-		"gen": 9,
-		"available": null,
-		"mark": true,
-		"names": {
-			"ger": "Aufsammler-Zeichen",
-			"eng": "Itemfinder Mark",
-			"spa": "Emblema Recolección",
-			"fre": "Insigne Ramassage",
-			"ita": "Emblema Pigliatutto",
-			"jpn": "ものひろいのあかし",
-			"kor": "습득의증표",
-			"cht": "撿拾之證",
-			"chs": "捡拾之证"
-		},
-		"descs": {
-			"ger": "Zeichen eines Pokémon, das gerne Gegenstände aufsammelt.",
-			"eng": "A mark for a Pokémon that likes to pick things up.",
-			"spa": "Emblema que distingue a un Pokémon al que le gusta recoger cosas.",
-			"fre": "L'insigne d'un Pokémon qui ramasse des objets.",
-			"ita": "Emblema che contraddistingue un Pokémon bravo nella raccolta.",
-			"jpn": "ものひろいな　ポケモンである　あかし",
-			"kor": "물건을 잘 줍는 포켓몬임을 나타내는 증표",
-			"cht": "愛撿拾的寶可夢的證明。",
-			"chs": "爱捡拾的宝可梦的证章。"
-		},
-		"titles": {
-			"ger": "Schatzsucher",
-			"eng": "the Treasure Hunter",
-			"spa": "el Recolector",
-			"fre": "le Chasseur de Trésors",
-			"ita": "cacciatore di tesori",
-			"jpn": "トレジャーハンター",
-			"kor": "트레져헌터",
-			"cht": "尋寶獵人",
-			"chs": "寻宝猎人"
-		}
-	},
 	"partner-mark": {
-		"gen": 9,
+		"gen": 8,
 		"available": [
 			"scar",
 			"vio"
@@ -5113,7 +5034,7 @@ const allRibbons = {
 		}
 	},
 	"gourmand-mark": {
-		"gen": 9,
+		"gen": 8,
 		"available": [
 			"scar",
 			"vio"
@@ -5154,7 +5075,7 @@ const allRibbons = {
 		}
 	},
 	"alpha-mark": {
-		"gen": 9,
+		"gen": 8,
 		"available": null,
 		"mark": true,
 		"names": {
@@ -5192,7 +5113,7 @@ const allRibbons = {
 		}
 	},
 	"mightiest-mark": {
-		"gen": 9,
+		"gen": 8,
 		"available": null,
 		"mark": true,
 		"names": {
@@ -5230,7 +5151,7 @@ const allRibbons = {
 		}
 	},
 	"titan-mark": {
-		"gen": 9,
+		"gen": 8,
 		"available": null,
 		"mark": true,
 		"names": {

@@ -43,8 +43,7 @@ const terms = {
 		5: "Gen&nbsp;V",
 		6: "Gen&nbsp;VI",
 		7: "Gen&nbsp;VII",
-		8: "Gen&nbsp;VIII",
-		9: "Gen&nbsp;IX",
+		8: "Gen&nbsp;VIII/IX",
 		"e": "Event",
 		"m": "Marks"
 	}
@@ -52,11 +51,11 @@ const terms = {
 
 // Origin Marks
 const games = {
-	"home":		{"name": "HOME - Gen VIII",		"gen": 8,		"mark": null},
-	"bank7":	{"name": "Bank - Gen VII",		"gen": 7,		"mark": null},
-	"bank":		{"name": "Bank - Gen VI",		"gen": 6,		"mark": null},
-	"scar":		{"name": "Scarlet",				"gen": 9,		"mark": "paldea"},
-	"vio":		{"name": "Violet",				"gen": 9,		"mark": "paldea"},
+	"home":		{"name": "HOME",				"gen": 8,		"mark": null},
+	"bank7":	{"name": "Bank (Gen VII)",		"gen": 7,		"mark": null},
+	"bank":		{"name": "Bank (Gen VI)",		"gen": 6,		"mark": null},
+	"scar":		{"name": "Scarlet",				"gen": 8,		"mark": "paldea"},
+	"vio":		{"name": "Violet",				"gen": 8,		"mark": "paldea"},
 	"sw":		{"name": "Sword",				"gen": 8,		"mark": "galar"},
 	"sh":		{"name": "Shield",				"gen": 8,		"mark": "galar"},
 	"bd":		{"name": "Brilliant Diamond",	"gen": 8,		"mark": "bdsp"},
