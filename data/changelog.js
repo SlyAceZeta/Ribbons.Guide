@@ -4,7 +4,7 @@ const changelog = {
 		"Added HOME support for Scarlet/Violet! (finally)",
 		"Combined Gens VIII and IX to support Gen VIII's forward compatibility with Pokémon caught in Gen IX! Check your Gen IX-origin Pokémon in case they can earn more Ribbons!",
 		"Removed Once-in-a-Lifetime Ribbon and Itemfinder Mark",
-		"Fixed an issue where the Ribbon Guide was asking to check Battle and Contest Memory Ribbons for Pokémon caught in Gen V, which cannot have these Ribbons",
+		"Fixed an issue where the Ribbon Guide was asking to check Battle and Contest Memory Ribbons for Pokémon caught in Gen V, which cannot have these Ribbons (thanks OrangeAurora!)",
 		"More updates coming soon!"
 	],
 	"11 March 2023": [
