@@ -1044,6 +1044,8 @@ function formatDropOption(o){
 					var form = "";
 					if(o.element.dataset["form" + lang]){
 						form = " (" + o.element.dataset["form" + lang] + ")";
+					} else if(o.element.dataset["formAll"]){
+						form = " (" + o.element.dataset["formAll"] + ")";
 					}
 					names = names + "<span class='lang " + lang.toLowerCase() + "'>" + o.element.dataset["name" + lang] + form + "</span>";
 				}
@@ -1242,10 +1244,15 @@ $(function(){
 			}
 		}
 		if(forms){
-			for(var pf in forms){
-				formdata = formdata + " data-form-" + pf + "='" + forms[pf] + "'";
+			if(typeof forms === 'string'){
+				formdisp = " (" + forms + ")";
+				formdata = formdata + " data-form-all='" + forms + "'";
+			} else {
+				for(var pf in forms){
+					formdata = formdata + " data-form-" + pf + "='" + forms[pf] + "'";
+				}
+				formdisp = " (" + forms["eng"] + ")";
 			}
-			formdisp = " (" + forms["eng"] + ")";
 		}
 		var sort = getData(p, "sort", true);
 		if(sort){
