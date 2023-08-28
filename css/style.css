@@ -1300,3 +1300,43 @@ body[lang="zh-Hant"] span.lang.cht {
 body[lang="zh-Hans"] span.lang.chs {
 	display: inline;
 }
+
+/* TEMPORARY MEW MIGHTIEST MARK */
+.pokemon-list-entry[data-timelimited] .pokemon-list-guide {
+	position: relative;
+}
+.pokemon-list-entry[data-timelimited] .pokemon-list-guide:after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	display: block;
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	background: #881430;
+	border-radius: 10px;
+	box-shadow: 0px 0px 1px 1px #ffffff00;
+	animation: pulse-animation 1s infinite;
+}
+.theme-light .pokemon-list-entry[data-timelimited] .pokemon-list-guide:after,
+.theme-shield .pokemon-list-entry[data-timelimited] .pokemon-list-guide:after,
+.theme-sword .pokemon-list-entry[data-timelimited] .pokemon-list-guide:after {
+	filter: invert(1);
+	animation: pulse-animation-invert 1s infinite;
+}
+@keyframes pulse-animation {
+	0% {
+		box-shadow: 0 0 1px 0px rgba(255, 255, 255, 0.75);
+	}
+	100% {
+		box-shadow: 0 0 1px 20px rgba(255, 255, 255, 0);
+	}
+}
+@keyframes pulse-animation-invert {
+	0% {
+		box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.75);
+	}
+	100% {
+		box-shadow: 0 0 1px 20px rgba(0, 0, 0, 0);
+	}
+}

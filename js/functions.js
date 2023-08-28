@@ -378,110 +378,117 @@ function ribbonGuide(id){
 						// prepare to add to guide
 						var ribbonAddToGens = [];
 
-						// check for per-game availability
-						for(var ribbonGameKey in allRibbons[ribbon].available){
-							var ribbonGame = allRibbons[ribbon].available[ribbonGameKey];
-							var gameGen = parseInt(games[ribbonGame]["gen"]);
-							if(gameGen && ribbonAddToGens.indexOf(gameGen) == -1 && gensLeft.indexOf(gameGen) > -1){
-								// Ribbon has not been added to this gen yet
-								// and Pokemon is in this game's gen or will be later
-								// check if Pokemon can be sent to this game
-								if(pkmnGames.indexOf(ribbonGame) > -1){
-									// now check for special Ribbon restrictions
-									var specialEarn = false;
-									if(ribbon.indexOf("contest-memory-ribbon") == 0 || ribbon.indexOf("battle-memory-ribbon") == 0){
-										// Pokemon originating in Gen V or Virtual Console cannot have these Ribbons
-										if(games[pkmn.origin].gen < 5 && games[pkmn.origin].gen > 2){
-											// only show blue if gold is not obtained, and vice versa
-											if(ribbon == "contest-memory-ribbon" && pkmn.ribbons.indexOf("contest-memory-ribbon-gold") == -1){
-												specialEarn = true;
-											} else if(ribbon == "contest-memory-ribbon-gold" && pkmn.ribbons.indexOf("contest-memory-ribbon") == -1){
-												specialEarn = true;
-											} else if(ribbon == "battle-memory-ribbon" && pkmn.ribbons.indexOf("battle-memory-ribbon-gold") == -1){
-												specialEarn = true;
-											} else if(ribbon == "battle-memory-ribbon-gold" && pkmn.ribbons.indexOf("battle-memory-ribbon") == -1){
-												specialEarn = true;
+						// TEMPORARY MEW MIGHTIEST MARK
+						if(ribbon === "mightiest-mark" && pkmn.dex === "mew"){
+							noWarnings = false;
+							$("#ribbonguide-timelimited").html(name + " can earn the Mightiest Mark by winning a Mewtwo Tera Raid during the \"Mighty Mewtwo Showdown\" event! This event ends on September 17 at 11:59 PM UTC!");
+							ribbonAddToGens.push(8);
+						} else {
+							// check for per-game availability
+							for(var ribbonGameKey in allRibbons[ribbon].available){
+								var ribbonGame = allRibbons[ribbon].available[ribbonGameKey];
+								var gameGen = parseInt(games[ribbonGame]["gen"]);
+								if(gameGen && ribbonAddToGens.indexOf(gameGen) == -1 && gensLeft.indexOf(gameGen) > -1){
+									// Ribbon has not been added to this gen yet
+									// and Pokemon is in this game's gen or will be later
+									// check if Pokemon can be sent to this game
+									if(pkmnGames.indexOf(ribbonGame) > -1){
+										// now check for special Ribbon restrictions
+										var specialEarn = false;
+										if(ribbon.indexOf("contest-memory-ribbon") == 0 || ribbon.indexOf("battle-memory-ribbon") == 0){
+											// Pokemon originating in Gen V or Virtual Console cannot have these Ribbons
+											if(games[pkmn.origin].gen < 5 && games[pkmn.origin].gen > 2){
+												// only show blue if gold is not obtained, and vice versa
+												if(ribbon == "contest-memory-ribbon" && pkmn.ribbons.indexOf("contest-memory-ribbon-gold") == -1){
+													specialEarn = true;
+												} else if(ribbon == "contest-memory-ribbon-gold" && pkmn.ribbons.indexOf("contest-memory-ribbon") == -1){
+													specialEarn = true;
+												} else if(ribbon == "battle-memory-ribbon" && pkmn.ribbons.indexOf("battle-memory-ribbon-gold") == -1){
+													specialEarn = true;
+												} else if(ribbon == "battle-memory-ribbon-gold" && pkmn.ribbons.indexOf("battle-memory-ribbon") == -1){
+													specialEarn = true;
+												}
 											}
-										}
-									} else if(ribbon == "winning-ribbon"){
-										if(parseInt(pkmn.level) < 51){
-											specialEarn = true;
-											noWarnings = false;
-											$("#ribbonguide-winning").html("Leveling " + name + " above Lv.50 will make the Winning Ribbon unavailable!");
-										}
-									} else if(ribbon == "national-ribbon"){
-										if(pkmn.origin == "colosseum" || pkmn.origin == "xd"){
-											specialEarn = true;
-										}
-									} else if(ribbon == "footprint-ribbon"){
-										var metLevel = 0;
-										if(pkmn.metlevel) metLevel = parseInt(pkmn.metlevel);
-										var metNote = false;
-										if(gameGen == 4){
-											// all Gen IV Pokemon can earn this through friendship
-											specialEarn = true;
-											// if this block is running, this Pokemon is either in or before Gen IV
-											// so check the later two conditions for potential failure
-											if(!getData(pkmn.dex, "voiceless") && parseInt(pkmn.level) < 71){
-												// add preliminary warning about leveling up and leaving Gen IV
+										} else if(ribbon == "winning-ribbon"){
+											if(parseInt(pkmn.level) < 51){
+												specialEarn = true;
 												noWarnings = false;
-												$("#ribbonguide-footprint").html("Leveling " + name + " above Lv.70 will make the Footprint Ribbon exclusive to "+terms.gens[4]+"!");
+												$("#ribbonguide-winning").html("Leveling " + name + " above Lv.50 will make the Winning Ribbon unavailable!");
 											}
-										} else if(getData(pkmn.dex, "voiceless") && gameGen == 8){
-											// voiceless Pokemon can still earn this in BDSP
-											specialEarn = true;
-										} else {
-											// voiced Pokemon can earn this in all other games with a met level below 71
-											// however, met level changes if transferred to Gen V
-											if(curGen < 5){
-												if(parseInt(pkmn.level) < 71){
-													specialEarn = true;
-												} // else it will appear exclusive to Gen IV as per above
-											} else {
-												// we're not in Gen IV anymore, Toto
-												if(metLevel > 0 && metLevel < 71){
-													// met level has changed (or Pokemon was caught in Gen V+), so let's check it
-													specialEarn = true;
-												} else if(virtualConsole && !getData(pkmn.dex, "voiceless")){
-													// Met Level also changes if transferred out of Virtual Console
-													// if it's a voiced Pokemon, warn the user like above
-													specialEarn = true;
+										} else if(ribbon == "national-ribbon"){
+											if(pkmn.origin == "colosseum" || pkmn.origin == "xd"){
+												specialEarn = true;
+											}
+										} else if(ribbon == "footprint-ribbon"){
+											var metLevel = 0;
+											if(pkmn.metlevel) metLevel = parseInt(pkmn.metlevel);
+											var metNote = false;
+											if(gameGen == 4){
+												// all Gen IV Pokemon can earn this through friendship
+												specialEarn = true;
+												// if this block is running, this Pokemon is either in or before Gen IV
+												// so check the later two conditions for potential failure
+												if(!getData(pkmn.dex, "voiceless") && parseInt(pkmn.level) < 71){
+													// add preliminary warning about leveling up and leaving Gen IV
 													noWarnings = false;
-													$("#ribbonguide-footprint").html("Leveling " + name + " above Lv.70 will make the Footprint Ribbon unavailable!");
-												} else if(metLevel == 0){
-													// if the Pokemon is Lv70 or below in Gen V+, outside of Virtual Console, then its Met Level must be Lv70 or below
+													$("#ribbonguide-footprint").html("Leveling " + name + " above Lv.70 will make the Footprint Ribbon exclusive to "+terms.gens[4]+"!");
+												}
+											} else if(getData(pkmn.dex, "voiceless") && gameGen == 8){
+												// voiceless Pokemon can still earn this in BDSP
+												specialEarn = true;
+											} else {
+												// voiced Pokemon can earn this in all other games with a met level below 71
+												// however, met level changes if transferred to Gen V
+												if(curGen < 5){
 													if(parseInt(pkmn.level) < 71){
 														specialEarn = true;
-													} else {
-														// otherwise, warn the user
+													} // else it will appear exclusive to Gen IV as per above
+												} else {
+													// we're not in Gen IV anymore, Toto
+													if(metLevel > 0 && metLevel < 71){
+														// met level has changed (or Pokemon was caught in Gen V+), so let's check it
+														specialEarn = true;
+													} else if(virtualConsole && !getData(pkmn.dex, "voiceless")){
+														// Met Level also changes if transferred out of Virtual Console
+														// if it's a voiced Pokemon, warn the user like above
+														specialEarn = true;
 														noWarnings = false;
-														$("#ribbonguide-notice").html(name + "'s Met Level has not been set. The availability of the Footprint Ribbon after "+terms.gens[4]+" cannot be determined.");
+														$("#ribbonguide-footprint").html("Leveling " + name + " above Lv.70 will make the Footprint Ribbon unavailable!");
+													} else if(metLevel == 0){
+														// if the Pokemon is Lv70 or below in Gen V+, outside of Virtual Console, then its Met Level must be Lv70 or below
+														if(parseInt(pkmn.level) < 71){
+															specialEarn = true;
+														} else {
+															// otherwise, warn the user
+															noWarnings = false;
+															$("#ribbonguide-notice").html(name + "'s Met Level has not been set. The availability of the Footprint Ribbon after "+terms.gens[4]+" cannot be determined.");
+														}
 													}
 												}
 											}
-										}
-									} else if(ribbon == "tower-master-ribbon"){
-										if(isMythical || allRibbons["ability-ribbon"].banned.indexOf(pkmn.dex) > -1){
-											if(ribbonGame == "sw" || ribbonGame == "sh"){
+										} else if(ribbon == "tower-master-ribbon"){
+											if(isMythical || allRibbons["ability-ribbon"].banned.indexOf(pkmn.dex) > -1){
+												if(ribbonGame == "sw" || ribbonGame == "sh"){
+													specialEarn = true;
+												}
+											} else {
+												specialEarn = true;
+											}
+										} else if(ribbon == "jumbo-mark"){
+											if(pkmn.ribbons.indexOf("mini-mark") == -1){
+												specialEarn = true;
+											}
+										} else if(ribbon == "mini-mark"){
+											if(pkmn.ribbons.indexOf("jumbo-mark") == -1){
 												specialEarn = true;
 											}
 										} else {
 											specialEarn = true;
 										}
-									} else if(ribbon == "jumbo-mark"){
-										if(pkmn.ribbons.indexOf("mini-mark") == -1){
-											specialEarn = true;
+										if(specialEarn){
+											// all checks complete, add Ribbon to gen
+											ribbonAddToGens.push(gameGen);
 										}
-									} else if(ribbon == "mini-mark"){
-										if(pkmn.ribbons.indexOf("jumbo-mark") == -1){
-											specialEarn = true;
-										}
-									} else {
-										specialEarn = true;
-									}
-									if(specialEarn){
-										// all checks complete, add Ribbon to gen
-										ribbonAddToGens.push(gameGen);
 									}
 								}
 							}
@@ -632,6 +639,11 @@ function addRow(pkmn, i){
 	var mint = pkmn.mint || "None";
 	var mintImg = (mint !== "None") ? "<div class='mint " + natures[mint] + "'>" + mint + "</div>" : "";
 
+	// TEMPORARY MEW MIGHTIEST MARK
+	if(pkmn.dex === "mew"){
+		var timeLimited = " data-timelimited='true'";
+	}
+
 	var ribbons = "<div class='ribbons-list-empty'>This Pokémon has no ribbons.</div>";
 	var r;
 	var mergeBattle = 0;
@@ -674,6 +686,10 @@ function addRow(pkmn, i){
 				var rFldr = "ribbons";
 				if(rData["mark"]) rFldr = "marks";
 				ribbons = ribbons + "<img class='" + rCode + "' src='img/" + rFldr + "/" + rCode + ".png' alt=\"" + rName + "\" title=\"" + rName + rDesc + "\">";
+				// TEMPORARY MEW MIGHTIEST MARK
+				if(rCode === "mightiest-mark" && pkmn.dex === "mew"){
+					timeLimited = "";
+				}
 			}
 		}
 	}
@@ -734,8 +750,8 @@ function addRow(pkmn, i){
 	} else {
 		boxID = " data-box='-1'";
 	}
-
-	$("#pokemon-list").append("<div class='pokemon-list-entry' data-natdex='" + getData(pkmn.dex, "natdex") + "' data-ball='" + pkmn.ball + "' data-name='" + name + "' data-gender='" + gender + "' data-level='" + level + "' data-shiny='" + pkmn.shiny + "' data-lang='" + lang + "' data-origin='" + pkmn.origin + "' data-currentgame='" + pkmn.currentgame + "' data-compatgames='" + stillCompat.join(" ") + "' data-pokemon='" + i + "'" + boxID + "><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png' alt='" + ballName + "' title='" + ballName + "'><span class='pokemon-list-name'>" + name + "</span>" + genderimg + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' alt='" + name + "'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span class='pokemon-list-lang-wrapper'><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + boxLabel + "</div><div class='pokemon-list-entry-footer-right'><button class='pokemon-list-move'><img src='img/ui/move.svg' alt='Reorder " + name + "' title='Reorder " + name + "'></button><button class='pokemon-list-guide' onclick='ribbonGuide("+i+")'><img src='img/ui/clipboard.png' alt='Ribbons' title='" + name + "&#39;s Ribbon Guide'></button><button class='pokemon-list-edit' onclick='editPkmn("+i+")'><img src='img/ui/edit.svg' alt='Edit " + name + "' title='Edit " + name + "'></button><button class='pokemon-list-delete' onclick='deletePkmn("+i+")'><img src='img/ui/delete.svg' alt='Delete " + name + "' title='Delete " + name + "'></button></div></div></div>");
+	// TEMPORARY MEW MIGHTIEST MARK
+	$("#pokemon-list").append("<div class='pokemon-list-entry' data-natdex='" + getData(pkmn.dex, "natdex") + "' data-ball='" + pkmn.ball + "' data-name='" + name + "' data-gender='" + gender + "' data-level='" + level + "' data-shiny='" + pkmn.shiny + "' data-lang='" + lang + "' data-origin='" + pkmn.origin + "' data-currentgame='" + pkmn.currentgame + "' data-compatgames='" + stillCompat.join(" ") + "' data-pokemon='" + i + "'" + boxID + timeLimited + "><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png' alt='" + ballName + "' title='" + ballName + "'><span class='pokemon-list-name'>" + name + "</span>" + genderimg + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' alt='" + name + "'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span class='pokemon-list-lang-wrapper'><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + boxLabel + "</div><div class='pokemon-list-entry-footer-right'><button class='pokemon-list-move'><img src='img/ui/move.svg' alt='Reorder " + name + "' title='Reorder " + name + "'></button><button class='pokemon-list-guide' onclick='ribbonGuide("+i+")'><img src='img/ui/clipboard.png' alt='Ribbons' title='" + name + "&#39;s Ribbon Guide'></button><button class='pokemon-list-edit' onclick='editPkmn("+i+")'><img src='img/ui/edit.svg' alt='Edit " + name + "' title='Edit " + name + "'></button><button class='pokemon-list-delete' onclick='deletePkmn("+i+")'><img src='img/ui/delete.svg' alt='Delete " + name + "' title='Delete " + name + "'></button></div></div></div>");
 }
 
 function filterPkmn(filters){
