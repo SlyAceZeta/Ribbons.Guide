@@ -1,6 +1,6 @@
 // don't forget to update index.html cache-version
 const changelog = {
-	"31 August - 1 September 2023": [
+	"31 August–1 September 2023": [
 		"<span class='timelimited'>LIMITED TIME: Mew can earn the <img src='img/marks/mightiest-mark.png'>&nbsp;Mightiest Mark by winning a Mewtwo Tera Raid Battle! This event ends on September&nbsp;17 at 23:59&nbsp;UTC!</span>",
 		"Added a pulsing alert bubble and guide warning for time-limited events",
 		"Fixed display of Unown forms in the dropdown menu",
