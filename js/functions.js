@@ -381,7 +381,7 @@ function ribbonGuide(id){
 						// TEMPORARY MEW MIGHTIEST MARK
 						if(ribbon === "mightiest-mark" && pkmn.dex === "mew"){
 							noWarnings = false;
-							$("#ribbonguide-timelimited").html(name + " can earn the Mightiest Mark by winning a Mewtwo Tera Raid during the \"Mighty Mewtwo Showdown\" event! This event ends on September 17 at 11:59 PM UTC!");
+							$("#ribbonguide-timelimited").html("LIMITED TIME: " + name + " can earn the Mightiest Mark by winning a Mewtwo Tera Raid Battle! This event ends on September&nbsp;17 at 23:59&nbsp;UTC!");
 							ribbonAddToGens.push(8);
 						} else {
 							// check for per-game availability

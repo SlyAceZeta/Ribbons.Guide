@@ -728,6 +728,8 @@ const pokemon = {
 		},
 		"gender": "both",
 		"natdex": 840,
+		/*"evowarnmon": "dipplin",
+		"evowarngen": 8,*/
 		"games": [
 			"sw",
 			"sh",
@@ -8138,6 +8140,8 @@ const pokemon = {
 		},
 		"gender": "both",
 		"natdex": 884,
+		/*"evowarnmon": "archaludon",
+		"evowarngen": 8,*/
 		"games": [
 			"sw",
 			"sh"
@@ -39354,5 +39358,195 @@ const pokemon = {
 			"scar",
 			"vio"
 		]
-	}
+	}/*,
+	"archaludon": {
+		"names": {
+			"ger": "Briduradon",
+			"eng": "Archaludon",
+			"spa": "Archaludon",
+			"fre": "Pondralugon",
+			"ita": "Archaludon",
+			"jpn": "ブリジュラス",
+			"kor": "브리두라스",
+			"cht": "鋁鋼橋龍",
+			"chs": "铝钢桥龙"
+		},
+		"gender": "",
+		"natdex": ,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"dipplin": {
+		"names": {
+			"ger": "Sirapfel",
+			"eng": "Dipplin",
+			"spa": "Dipplin",
+			"fre": "Pomdramour",
+			"ita": "Dipplin",
+			"jpn": "カミッチュ",
+			"kor": "과미르",
+			"cht": "裹蜜蟲",
+			"chs": "裹蜜虫"
+		},
+		"gender": "",
+		"natdex": ,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"fezandipiti": {
+		"names": {
+			"ger": "Beatori",
+			"eng": "Fezandipiti",
+			"spa": "Fezandipiti",
+			"fre": "Favianos",
+			"ita": "Fezandipiti",
+			"jpn": "キチキギス",
+			"kor": "기로치",
+			"cht": "吉雉雞",
+			"chs": "吉雉鸡"
+		},
+		"gender": "",
+		"natdex": ,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"iron-crown": {
+		"names": {
+			"ger": "Eisenhaupt",
+			"eng": "Iron Crown",
+			"spa": "Ferrotesta",
+			"fre": "Chef-de-Fer",
+			"ita": "Capoferreo",
+			"jpn": "テツノカシラ",
+			"kor": "무쇠감투",
+			"cht": "鐵頭殼",
+			"chs": "铁头壳"
+		},
+		"gender": "",
+		"natdex": ,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"munkidori": {
+		"names": {
+			"ger": "Benesaru",
+			"eng": "Munkidori",
+			"spa": "Munkidori",
+			"fre": "Fortusimia",
+			"ita": "Munkidori",
+			"jpn": "マシマシラ",
+			"kor": "이야후",
+			"cht": "願增猿",
+			"chs": "愿增猿"
+		},
+		"gender": "",
+		"natdex": ,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"ogerpon": {
+		"names": {
+			"ger": "Ogerpon",
+			"eng": "Ogerpon",
+			"spa": "Ogerpon",
+			"fre": "Ogerpon",
+			"ita": "Ogerpon",
+			"jpn": "オーガポン",
+			"kor": "오거폰",
+			"cht": "厄鬼椪",
+			"chs": "厄诡椪"
+		},
+		"gender": "",
+		"natdex": ,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"okidogi": {
+		"names": {
+			"ger": "Boninu",
+			"eng": "Okidogi",
+			"spa": "Okidogi",
+			"fre": "Félicanis",
+			"ita": "Okidogi",
+			"jpn": "イイネイヌ",
+			"kor": "조타구",
+			"cht": "夠讚狗",
+			"chs": "够赞狗"
+		},
+		"gender": "",
+		"natdex": ,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"poltchageist": {
+		"names": {
+			"ger": "Mortcha",
+			"eng": "Poltchageist",
+			"spa": "Poltchageist",
+			"fre": "Poltchageist",
+			"ita": "Poltchageist",
+			"jpn": "チャデス",
+			"kor": "차데스",
+			"cht": "斯魔茶",
+			"chs": "斯魔茶"
+		},
+		"gender": "",
+		"natdex": ,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"raging-bolt": {
+		"names": {
+			"ger": "Furienblitz",
+			"eng": "Raging Bolt",
+			"spa": "Electrofuria",
+			"fre": "Ire-Foudre",
+			"ita": "Furiatonante",
+			"jpn": "タケルライコ",
+			"kor": "날뛰는우레",
+			"cht": "猛雷鼓",
+			"chs": "猛雷鼓"
+		},
+		"gender": "",
+		"natdex": ,
+		"games": [
+			"scar",
+			"vio"
+		]
+	},
+	"terapagos": {
+		"names": {
+			"ger": "Terapagos",
+			"eng": "Terapagos",
+			"spa": "Terapagos",
+			"fre": "Terapagos",
+			"ita": "Terapagos",
+			"jpn": "テラパゴス",
+			"kor": "테라파고스",
+			"cht": "太樂巴戈斯",
+			"chs": "太乐巴戈斯"
+		},
+		"gender": "",
+		"natdex": ,
+		"games": [
+			"scar",
+			"vio"
+		]
+	}*/
 }

@@ -1269,6 +1269,19 @@ body[data-footer="collapsed"] #add-pokemon-button {
 #ribbonguide-warnings.active #ribbonguide-warnings-toggle:before {
 	content: "▲";
 }
+#changelog .timelimited {
+	font-weight: bold;
+	background: #881430;
+	color: #fff;
+	padding: 2px 7px;
+	display: block;
+	border-radius: 3px;
+}
+#changelog .timelimited img {
+	height: 22px;
+	width: auto;
+	vertical-align: bottom;
+}
 
 span.lang {
 	display: none;
