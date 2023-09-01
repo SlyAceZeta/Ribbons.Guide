@@ -5128,15 +5128,15 @@ const allRibbons = {
 			"chs": "最强之证"
 		},
 		"descs": {
-			"ger": "Zeichen eines Pokémon, das bei einem Tera-Raid mit sieben Sternen gefangen wurde.",
-			"eng": "A mark for a Pokémon caught in a seven-star Tera Raid Battle.",
-			"spa": "Emblema que distingue a un Pokémon capturado en una teraincursión de 7 ★.",
-			"fre": "L'insigne d'un Pokémon attrapé lors d'un raid Téracristal de difficulté sept étoiles.",
-			"ita": "Emblema che contraddistingue un Pokémon catturato durante un Raid Teracristal da 7★.",
-			"jpn": "★７の　テラレイドバトルで　捕まえた　あかし",
-			"kor": "★7 테라 레이드배틀에서 잡은 포켓몬임을 나타내는 증표",
-			"cht": "在★７的太晶團體戰中捕獲的證明。",
-			"chs": "在★７太晶团体战中捕捉到的证章。"
+			"ger": "",
+			"eng": "A mark for an especially mighty Pokémon.",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
 		},
 		"titles": {
 			"ger": "Titan",
