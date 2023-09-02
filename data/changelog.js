@@ -1,10 +1,11 @@
 // don't forget to update index.html cache-version
 const changelog = {
-	"31 August–1 September 2023": [
+	"31 August–2 September 2023": [
 		"<span class='timelimited'>LIMITED TIME: Mew can earn the <img src='img/marks/mightiest-mark.png'>&nbsp;Mightiest Mark by winning a Mewtwo Tera Raid Battle! This event ends on September&nbsp;17 at 23:59&nbsp;UTC!</span>",
 		"Added a pulsing alert bubble and guide warning for time-limited events",
 		"Fixed display of Unown forms in the dropdown menu",
-		"Sep 1: Updated description of Mightiest Mark"
+		"Sep 1: Updated description of Mightiest Mark",
+		"Sep 2: Fixed an issue where Gen VII Ribbons appeared in the guide for Pokémon currently in Let's Go, Pikachu! and Let's Go, Eevee! (thanks Fanriya!)"
 	],
 	"30 May 2023": [
 		"Added HOME support for Scarlet/Violet! (finally)",

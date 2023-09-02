@@ -392,7 +392,7 @@ function ribbonGuide(id){
 									// Ribbon has not been added to this gen yet
 									// and Pokemon is in this game's gen or will be later
 									// check if Pokemon can be sent to this game
-									if(pkmnGames.indexOf(ribbonGame) > -1){
+									if(pkmnGames.indexOf(ribbonGame) > -1 && !((pkmn.currentgame == "lgp" || pkmn.currentgame == "lge") && gameGen == 7)){
 										// now check for special Ribbon restrictions
 										var specialEarn = false;
 										if(ribbon.indexOf("contest-memory-ribbon") == 0 || ribbon.indexOf("battle-memory-ribbon") == 0){
