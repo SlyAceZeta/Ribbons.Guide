@@ -18,6 +18,7 @@ The images used in Ribbons.Guide were provided by:
 - [PokéJungle](https://pokejungle.net)
 - [Pokémon Database](https://pokemondb.net)
 - [PokéSprite](https://github.com/msikma/pokesprite)
+- [Bulbagarden Archives](https://archives.bulbagarden.net/wiki/Main_Page)
 - [Pokémon GO Assets](https://github.com/PokeMiners/pogo_assets)
 - [Material Symbols](https://github.com/google/material-design-icons)
 

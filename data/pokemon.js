@@ -10620,7 +10620,8 @@ const pokemon = {
 			"kor": "젠틀컷",
 			"cht": "紳士造型",
 			"chs": "绅士造型"
-		}
+		},
+		"sort": 7
 	},
 	"furfrou-debutante": {
 		"data-source": "furfrou",
@@ -10634,7 +10635,8 @@ const pokemon = {
 			"kor": "레이디컷",
 			"cht": "淑女造型",
 			"chs": "淑女造型"
-		}
+		},
+		"sort": 5
 	},
 	"furfrou-diamond": {
 		"data-source": "furfrou",
@@ -10648,7 +10650,8 @@ const pokemon = {
 			"kor": "다이아컷",
 			"cht": "菱形造型",
 			"chs": "菱形造型"
-		}
+		},
+		"sort": 4
 	},
 	"furfrou-heart": {
 		"data-source": "furfrou",
@@ -10662,7 +10665,8 @@ const pokemon = {
 			"kor": "하트컷",
 			"cht": "心形造型",
 			"chs": "心形造型"
-		}
+		},
+		"sort": 2
 	},
 	"furfrou-kabuki": {
 		"data-source": "furfrou",
@@ -10676,7 +10680,8 @@ const pokemon = {
 			"kor": "가부키컷",
 			"cht": "歌舞伎造型",
 			"chs": "歌舞伎造型"
-		}
+		},
+		"sort": 9
 	},
 	"furfrou-la-reine": {
 		"data-source": "furfrou",
@@ -10690,7 +10695,8 @@ const pokemon = {
 			"kor": "퀸컷",
 			"cht": "女王造型",
 			"chs": "女王造型"
-		}
+		},
+		"sort": 8
 	},
 	"furfrou-matron": {
 		"data-source": "furfrou",
@@ -10704,7 +10710,8 @@ const pokemon = {
 			"kor": "마담컷",
 			"cht": "貴婦造型",
 			"chs": "贵妇造型"
-		}
+		},
+		"sort": 6
 	},
 	"furfrou-pharaoh": {
 		"data-source": "furfrou",
@@ -10718,7 +10725,8 @@ const pokemon = {
 			"kor": "킹덤컷",
 			"cht": "國王造型",
 			"chs": "国王造型"
-		}
+		},
+		"sort": 10
 	},
 	"furfrou-star": {
 		"data-source": "furfrou",
@@ -10732,7 +10740,8 @@ const pokemon = {
 			"kor": "스타컷",
 			"cht": "星形造型",
 			"chs": "星形造型"
-		}
+		},
+		"sort": 3
 	},
 	"furfrou": {
 		"names": {
@@ -10768,7 +10777,8 @@ const pokemon = {
 			"umoon",
 			"sun",
 			"moon"
-		]
+		],
+		"sort": 1
 	},
 	"furret": {
 		"names": {
@@ -22281,7 +22291,7 @@ const pokemon = {
 		"data-source": "oricorio",
 		"forms": {
 			"ger": "Hula-Stil",
-			"eng": "Pa'u Style",
+			"eng": "Pa&#39;u Style",
 			"spa": "Estilo Plácido",
 			"fre": "Style Hula",
 			"ita": "Stile Hula",
@@ -23511,7 +23521,8 @@ const pokemon = {
 			"sh",
 			"scar",
 			"vio"
-		]
+		],
+		"sort": 6
 	},
 	"pikachu-cosplay": {
 		"data-source": "pikachu",
@@ -23531,7 +23542,113 @@ const pokemon = {
 		"games": [
 			"or",
 			"as"
-		]
+		],
+		"sort": 8
+	},
+	"pikachu-cosplay-belle": {
+		"data-source": "pikachu",
+		"forms": {
+			"ger": "Cosplay [Damen]",
+			"eng": "Cosplay [Belle]",
+			"spa": "Coqueta [Aristócrata]",
+			"fre": "Cosplayeur [Lady]",
+			"ita": "Cosplay [Damigella]",
+			"jpn": "おきがえ [マダム]",
+			"kor": "옷갈아입기 [마담]",
+			"cht": "換裝 [貴婦]",
+			"chs": "换装 [貴婦]"
+		},
+		"femsprite": false,
+		"gender": "female",
+		"games": [
+			"or",
+			"as"
+		],
+		"sort": 10
+	},
+	"pikachu-cosplay-libre": {
+		"data-source": "pikachu",
+		"forms": {
+			"ger": "Cosplay [Wrestler]",
+			"eng": "Cosplay [Libre]",
+			"spa": "Coqueta [Enmascarada]",
+			"fre": "Cosplayeur [Catcheur]",
+			"ita": "Cosplay [Wrestler]",
+			"jpn": "おきがえ [マスクド]",
+			"kor": "옷갈아입기 [마스크드]",
+			"cht": "換裝 [幪面]",
+			"chs": "换装 [蒙面]"
+		},
+		"femsprite": false,
+		"gender": "female",
+		"games": [
+			"or",
+			"as"
+		],
+		"sort": 13
+	},
+	"pikachu-cosplay-phd": {
+		"data-source": "pikachu",
+		"forms": {
+			"ger": "Cosplay [Professoren]",
+			"eng": "Cosplay [Ph.D.]",
+			"spa": "Coqueta [Erudita]",
+			"fre": "Cosplayeur [Docteur]",
+			"ita": "Cosplay [Scienziata]",
+			"jpn": "おきがえ [ドクター]",
+			"kor": "옷갈아입기 [닥터]",
+			"cht": "換裝 [博士]",
+			"chs": "换装 [博士]"
+		},
+		"femsprite": false,
+		"gender": "female",
+		"games": [
+			"or",
+			"as"
+		],
+		"sort": 12
+	},
+	"pikachu-cosplay-popstar": {
+		"data-source": "pikachu",
+		"forms": {
+			"ger": "Cosplay [Star]",
+			"eng": "Cosplay [Pop Star]",
+			"spa": "Coqueta [Superstar]",
+			"fre": "Cosplayeur [Star]",
+			"ita": "Cosplay [Confetto]",
+			"jpn": "おきがえ [アイドル]",
+			"kor": "옷갈아입기 [아이돌]",
+			"cht": "換裝 [偶像]",
+			"chs": "换装 [偶像]"
+		},
+		"femsprite": false,
+		"gender": "female",
+		"games": [
+			"or",
+			"as"
+		],
+		"sort": 11
+	},
+	"pikachu-cosplay-rockstar": {
+		"data-source": "pikachu",
+		"forms": {
+			"ger": "Cosplay [Rocker]",
+			"eng": "Cosplay [Rock Star]",
+			"spa": "Coqueta [Roquera]",
+			"fre": "Cosplayeur [Rockeur]",
+			"ita": "Cosplay [Rockstar]",
+			"jpn": "おきがえ [ハードロック]",
+			"kor": "옷갈아입기 [하드록]",
+			"cht": "換裝 [重搖滾]",
+			"chs": "换装 [重搖滾]"
+		},
+		"femsprite": false,
+		"gender": "female",
+		"games": [
+			"or",
+			"as"
+		],
+		"sort": 9
 	},
 	"pikachu-hoenn-cap": {
 		"data-source": "pikachu",
@@ -23556,7 +23673,8 @@ const pokemon = {
 			"sh",
 			"scar",
 			"vio"
-		]
+		],
+		"sort": 2
 	},
 	"pikachu-kalos-cap": {
 		"data-source": "pikachu",
@@ -23581,7 +23699,8 @@ const pokemon = {
 			"sh",
 			"scar",
 			"vio"
-		]
+		],
+		"sort": 5
 	},
 	"pikachu-original-cap": {
 		"data-source": "pikachu",
@@ -23606,7 +23725,8 @@ const pokemon = {
 			"sh",
 			"scar",
 			"vio"
-		]
+		],
+		"sort": 1
 	},
 	"pikachu-partner-cap": {
 		"data-source": "pikachu",
@@ -23631,7 +23751,8 @@ const pokemon = {
 			"sh",
 			"scar",
 			"vio"
-		]
+		],
+		"sort": 7
 	},
 	"pikachu-sinnoh-cap": {
 		"data-source": "pikachu",
@@ -23656,7 +23777,8 @@ const pokemon = {
 			"sh",
 			"scar",
 			"vio"
-		]
+		],
+		"sort": 3
 	},
 	"pikachu-unova-cap": {
 		"data-source": "pikachu",
@@ -23664,7 +23786,7 @@ const pokemon = {
 			"ger": "Einall-Kappe",
 			"eng": "Unova Cap",
 			"spa": "Gorra Teselia",
-			"fre": "Casquette d'Unys",
+			"fre": "Casquette d&#39;Unys",
 			"ita": "Berretto Unima",
 			"jpn": "イッシュキャップ",
 			"kor": "하나캡",
@@ -23681,7 +23803,8 @@ const pokemon = {
 			"sh",
 			"scar",
 			"vio"
-		]
+		],
+		"sort": 4
 	},
 	"pikachu-world-cap": {
 		"data-source": "pikachu",
@@ -23702,7 +23825,8 @@ const pokemon = {
 			"sh",
 			"scar",
 			"vio"
-		]
+		],
+		"sort": 7
 	},
 	"pikachu": {
 		"names": {
