@@ -471,7 +471,8 @@ body[data-footer="collapsed"] #footer-icon {
 	padding: 0 10px 10px;
 }
 .pokemon-list-entry .ribbons-list {
-	padding: 5px 0;
+	padding: 5px 0 5px 5px;
+	height: 100%;
 }
 .pokemon-list-entry .ribbons-list img {
 	height: 32px;
@@ -938,8 +939,8 @@ body[data-footer="collapsed"] #add-pokemon-button {
 	border-bottom: 2px solid grey;
 }
 #ribbonguide-info img {
-	width: 120px;
-	margin-right: 10px;
+	width: 100px;
+	padding: 5px;
 }
 #ribbonguide-info div div {
 	margin: 5px 0;
@@ -1205,6 +1206,7 @@ body[data-footer="collapsed"] #add-pokemon-button {
 .pokemon-list-entry-center > img {
 	height: 100px;
 	width: auto;
+	padding: 5px;
 }
 #pokeform-preview {
 	padding: 0;
