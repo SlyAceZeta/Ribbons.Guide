@@ -15,9 +15,10 @@ Regardless of how you use Ribbons.Guide, all data is stored in your browser's lo
 Ribbons.Guide was developed as a love letter to the helpful and welcoming [r/PokémonRibbons](https://www.reddit.com/r/pokemonribbons/) community.
 
 The images used in Ribbons.Guide were provided by:
+- [PokéJungle](https://pokejungle.net)
+- [Pokémon Database](https://pokemondb.net)
 - [PokéSprite](https://github.com/msikma/pokesprite)
-- [ポケモン徹底攻略](https://yakkun.com/sv/zukan/#filter=9)
-- [PokéLiberty](https://pokeliberty.net/resources/82)
+- [Bulbagarden Archives](https://archives.bulbagarden.net/wiki/Main_Page)
 - [Pokémon GO Assets](https://github.com/PokeMiners/pogo_assets)
 - [Material Symbols](https://github.com/google/material-design-icons)
 
