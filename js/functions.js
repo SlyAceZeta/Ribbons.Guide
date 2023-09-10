@@ -413,6 +413,13 @@ function ribbonGuide(id){
 											} else if(games[pkmn.origin].gen !== 8 && gameGen !== 8){
 												specialEarn = true;
 											}
+										} else if(pkmn.dex === "marowak-alola" || pkmn.dex === "ribombee" || pkmn.dex === "araquanid" || pkmn.dex === "togedemaru"){
+											// Totem-sized versions of these four cannot leave USUM
+											if((pkmn.origin === "usun" || pkmn.origin === "umoon") && (pkmn.currentgame === "usun" || pkmn.currentgame === "umoon")){
+												specialEarn = true;
+												noWarnings = false;
+												$("#ribbonguide-totem").html("If " + name + " is a Totem-sized Pokémon, " + name + " cannot leave " + terms.gens[7] + ".");
+											}
 										} else if(ribbon.indexOf("contest-memory-ribbon") == 0 || ribbon.indexOf("battle-memory-ribbon") == 0){
 											// Pokemon originating in Gen V or Virtual Console cannot have these Ribbons
 											if(games[pkmn.origin].gen < 5 && games[pkmn.origin].gen > 2){
