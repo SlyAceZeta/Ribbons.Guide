@@ -87,7 +87,7 @@ function createPokemon(edit = false){
 		notes: $("#pokeform-notes").val()
 	};
 	if(str.dex && str.ball && str.origin && str.title && str.level && str.lang){
-		if(!str.id || str.id.match(/^[0-9]{5,6}$/)){
+		if(!str.id || str.id.match(/^[0-9]{1,6}$/)){
 			if(parseInt(str.level) > 0 && parseInt(str.level) < 101){
 				if(!str.metlevel || parseInt(str.metlevel) <= parseInt(str.level)){
 					allpkmn = JSON.parse(localStorage.getItem("pokemon"));
@@ -107,7 +107,7 @@ function createPokemon(edit = false){
 				alert("The Pokémon's level must be a number from 1 to 100.");
 			}
 		} else {
-			alert("The ID No. can only be five or six numbers.");
+			alert("The ID No. must be a number with one to six digits.");
 		}
 	} else {
 		alert("One or more required fields in the Summary tab has not been filled.");
