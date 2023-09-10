@@ -481,7 +481,8 @@ function ribbonGuide(id){
 														$("#ribbonguide-footprint").html("Leveling " + name + " above Lv.70 will make the Footprint Ribbon unavailable!");
 													} else if(metLevel == 0){
 														// if the Pokemon is Lv70 or below in Gen V+, outside of Virtual Console, then its Met Level must be Lv70 or below
-														if(parseInt(pkmn.level) < 71){
+														// if the Pokemon came from GO, its Met Level must be Lv50 or below
+														if(parseInt(pkmn.level) < 71 || pkmn.origin === "go"){
 															specialEarn = true;
 														} else {
 															// otherwise, warn the user
