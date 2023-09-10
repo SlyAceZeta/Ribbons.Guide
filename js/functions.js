@@ -395,7 +395,25 @@ function ribbonGuide(id){
 									if(pkmnGames.indexOf(ribbonGame) > -1 && !((pkmn.currentgame == "lgp" || pkmn.currentgame == "lge") && gameGen == 7)){
 										// now check for special Ribbon restrictions
 										var specialEarn = false;
-										if(ribbon.indexOf("contest-memory-ribbon") == 0 || ribbon.indexOf("battle-memory-ribbon") == 0){
+										if(pkmn.dex === "nincada"){
+											// Nincada from BDSP cannot go to SwSh
+											if(pkmn.origin === "bd" || pkmn.origin === "sp"){
+												if(ribbonGame !== "sw" && ribbonGame !== "sh"){
+													specialEarn = true;
+												}
+											// Nincada not from BDSP cannot go to BDSP
+											} else if(ribbonGame !== "bd" && ribbonGame !== "sp"){
+												specialEarn = true;
+											}
+										} else if(pkmn.dex === "spinda"){
+											// Spinda cannot enter or leave BDSP
+											// the only Gen VIII/IX game Spinda can originate from is BDSP, so we can just check the generation
+											if(games[pkmn.origin].gen == 8 && gameGen == 8){
+												specialEarn = true;
+											} else if(games[pkmn.origin].gen !== 8 && gameGen !== 8){
+												specialEarn = true;
+											}
+										} else if(ribbon.indexOf("contest-memory-ribbon") == 0 || ribbon.indexOf("battle-memory-ribbon") == 0){
 											// Pokemon originating in Gen V or Virtual Console cannot have these Ribbons
 											if(games[pkmn.origin].gen < 5 && games[pkmn.origin].gen > 2){
 												// only show blue if gold is not obtained, and vice versa
