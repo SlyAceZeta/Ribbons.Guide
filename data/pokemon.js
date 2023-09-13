@@ -39903,7 +39903,7 @@ const pokemon = {
 			"chs": "裹蜜虫"
 		},
 		"gender": "both",
-		"natdex": 9999,
+		"natdex": 1011,
 		"games": [
 			"scar",
 			"vio"
@@ -39922,7 +39922,7 @@ const pokemon = {
 			"chs": "斯魔茶"
 		},
 		"gender": "unknown",
-		"natdex": 9999,
+		"natdex": 1012,
 		"games": [
 			"scar",
 			"vio"
@@ -39941,12 +39941,12 @@ const pokemon = {
 			"chs": "來悲粗茶"
 		},
 		"gender": "unknown",
-		"natdex": 9999,
+		"natdex": 1013,
 		"games": [
 			"scar",
 			"vio"
 		]
-	}/*,
+	},
 	"okidogi": {
 		"names": {
 			"ger": "Boninu",
@@ -39959,8 +39959,8 @@ const pokemon = {
 			"cht": "夠讚狗",
 			"chs": "够赞狗"
 		},
-		"gender": "",
-		"natdex": 9999,
+		"gender": "male",
+		"natdex": 1014,
 		"games": [
 			"scar",
 			"vio"
@@ -39978,8 +39978,8 @@ const pokemon = {
 			"cht": "願增猿",
 			"chs": "愿增猿"
 		},
-		"gender": "",
-		"natdex": 9999,
+		"gender": "male",
+		"natdex": 1015,
 		"games": [
 			"scar",
 			"vio"
@@ -39997,8 +39997,8 @@ const pokemon = {
 			"cht": "吉雉雞",
 			"chs": "吉雉鸡"
 		},
-		"gender": "",
-		"natdex": 9999,
+		"gender": "male",
+		"natdex": 1016,
 		"games": [
 			"scar",
 			"vio"
@@ -40017,12 +40017,12 @@ const pokemon = {
 			"chs": "厄诡椪"
 		},
 		"gender": "female",
-		"natdex": 9999,
+		"natdex": 1017,
 		"games": [
 			"scar",
 			"vio"
 		]
-	},
+	}/*,
 	"archaludon": {
 		"names": {
 			"ger": "Briduradon",
