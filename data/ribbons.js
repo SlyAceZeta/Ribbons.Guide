@@ -4992,6 +4992,47 @@ const allRibbons = {
 			"chs": "小不点"
 		}
 	},
+	"itemfinder-mark": {
+		"gen": 8,
+		"available": [
+			"scar",
+			"vio"
+		],
+		"mark": true,
+		"names": {
+			"ger": "Aufsammler-Zeichen",
+			"eng": "Itemfinder Mark",
+			"spa": "Emblema Recolección",
+			"fre": "Insigne Ramassage",
+			"ita": "Emblema Pigliatutto",
+			"jpn": "ものひろいのあかし",
+			"kor": "습득의증표",
+			"cht": "撿拾之證",
+			"chs": "捡拾之证"
+		},
+		"descs": {
+			"ger": "Zeichen eines Pokémon, das gerne Gegenstände aufsammelt.",
+			"eng": "A mark for a Pokémon that likes to pick things up.",
+			"spa": "Emblema que distingue a un Pokémon al que le gusta recoger cosas.",
+			"fre": "L'insigne d'un Pokémon qui ramasse des objets.",
+			"ita": "Emblema che contraddistingue un Pokémon bravo nella raccolta.",
+			"jpn": "ものひろいな　ポケモンである　あかし",
+			"kor": "물건을 잘 줍는 포켓몬임을 나타내는 증표",
+			"cht": "愛撿拾的寶可夢的證明。",
+			"chs": "爱捡拾的宝可梦的证章。"
+		},
+		"titles": {
+			"ger": "Schatzsucher",
+			"eng": "the Treasure Hunter",
+			"spa": "el Recolector",
+			"fre": "le Chasseur de Trésors",
+			"ita": "cacciatore di tesori",
+			"jpn": "トレジャーハンター",
+			"kor": "트레져헌터",
+			"cht": "尋寶獵人",
+			"chs": "寻宝猎人"
+		}
+	},
 	"partner-mark": {
 		"gen": 8,
 		"available": [
