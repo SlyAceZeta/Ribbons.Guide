@@ -34295,18 +34295,18 @@ const pokemon = {
 			"xd"
 		]
 	},
-	"ursaluna-blood-moon": {
+	"ursaluna-bloodmoon": {
 		"data-source": "ursaluna",
 		"forms": {
-			"ger": "",
-			"eng": "Blood Moon",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"ger": "Blutmond",
+			"eng": "Bloodmoon",
+			"spa": "Luna Carmesí",
+			"fre": "Lune Vermeille",
+			"ita": "Luna Cremisi",
+			"jpn": "アカツキ",
+			"kor": "붉은 달",
+			"cht": "赫月",
+			"chs": "赫月"
 		}
 	},
 	"ursaluna": {
@@ -39902,8 +39902,8 @@ const pokemon = {
 			"cht": "裹蜜蟲",
 			"chs": "裹蜜虫"
 		},
-		"gender": "",
-		"natdex": ,
+		"gender": "both",
+		"natdex": 9999,
 		"games": [
 			"scar",
 			"vio"
@@ -39921,8 +39921,8 @@ const pokemon = {
 			"cht": "斯魔茶",
 			"chs": "斯魔茶"
 		},
-		"gender": "",
-		"natdex": ,
+		"gender": "unknown",
+		"natdex": 9999,
 		"games": [
 			"scar",
 			"vio"
@@ -39930,23 +39930,23 @@ const pokemon = {
 	},
 	"sinistcha": {
 		"names": {
-			"ger": "",
+			"ger": "Fatalitcha",
 			"eng": "Sinistcha",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Sinistcha",
+			"fre": "Théffroyable",
+			"ita": "Sinistcha",
+			"jpn": "ヤバソチャ",
+			"kor": "그우린차",
+			"cht": "来悲粗茶",
+			"chs": "來悲粗茶"
 		},
-		"gender": "",
-		"natdex": ,
+		"gender": "unknown",
+		"natdex": 9999,
 		"games": [
 			"scar",
 			"vio"
 		]
-	},
+	}/*,
 	"okidogi": {
 		"names": {
 			"ger": "Boninu",
@@ -39960,7 +39960,7 @@ const pokemon = {
 			"chs": "够赞狗"
 		},
 		"gender": "",
-		"natdex": ,
+		"natdex": 9999,
 		"games": [
 			"scar",
 			"vio"
@@ -39979,7 +39979,7 @@ const pokemon = {
 			"chs": "愿增猿"
 		},
 		"gender": "",
-		"natdex": ,
+		"natdex": 9999,
 		"games": [
 			"scar",
 			"vio"
@@ -39998,7 +39998,7 @@ const pokemon = {
 			"chs": "吉雉鸡"
 		},
 		"gender": "",
-		"natdex": ,
+		"natdex": 9999,
 		"games": [
 			"scar",
 			"vio"
@@ -40016,13 +40016,13 @@ const pokemon = {
 			"cht": "厄鬼椪",
 			"chs": "厄诡椪"
 		},
-		"gender": "",
-		"natdex": ,
+		"gender": "female",
+		"natdex": 9999,
 		"games": [
 			"scar",
 			"vio"
 		]
-	}/*,
+	},
 	"archaludon": {
 		"names": {
 			"ger": "Briduradon",
