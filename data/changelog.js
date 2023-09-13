@@ -1,7 +1,19 @@
 // don't forget to update index.html cache-version
 const changelog = {
+	"13 September 2023": [
+		"Added support for new/returning Pokémon in The Teal Mask",
+		"Restored the Itemfinder Mark! Game Freak has fixed the bug preventing it from being earned",
+		"Replaced pixel sprites with HOME renders, resolving the SV fan art requirement and matching the app's overall style",
+		"Added Hoopa (Unbound), Zygarde (10% Forme), Cosplay Pikachu's outfits, and Urshifu (Rapid Strike Style); <strong>all existing Urshifus display as Single Strike Style until edited</strong>",
+		"Added handling for Spinda and Nincada's BDSP restrictions",
+		"Added warnings for Totem-sized Pokémon from USUM <a href='https://github.com/Azekthi/Ribbons.Guide/issues/52'>#52</a>",
+		"Removed Footprint Ribbon warning for Pokémon from GO, since their Met Level must be ≤50 (thanks Josh Lemmy!)",
+		"Removed 5-or-6-digit requirement from ID No. field (thanks Randomdice101!)",
+		"Improved Pikachu and Furfrou sorting in the dropdown menu",
+		"Fixed display of Oricorio (Pa'u Style) in the dropdown menu",
+		"<span class='timelimited'>ENDING SOON: Mew can earn the <img src='img/marks/mightiest-mark.png'>&nbsp;Mightiest Mark by winning a Mewtwo Tera Raid Battle! This event ends on September&nbsp;17 at 23:59&nbsp;UTC!</span>"
+	],
 	"31 August–2 September 2023": [
-		"<span class='timelimited'>LIMITED TIME: Mew can earn the <img src='img/marks/mightiest-mark.png'>&nbsp;Mightiest Mark by winning a Mewtwo Tera Raid Battle! This event ends on September&nbsp;17 at 23:59&nbsp;UTC!</span>",
 		"Added a pulsing alert bubble and guide warning for time-limited events",
 		"Fixed display of Unown forms in the dropdown menu",
 		"Sep 1: Updated description of Mightiest Mark",
