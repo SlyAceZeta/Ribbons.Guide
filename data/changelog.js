@@ -1,5 +1,9 @@
 // don't forget to update index.html cache-version
 const changelog = {
+	"15 September 2023": [
+		"Fixed issue introduced in the previous update where no Ribbons were suggested for Alolan Marowak, Ribombee, Araquanid, and Togedemaru if they originated from games other than USUM (thanks autumn!)",
+		"<span class='timelimited'>ENDING SOON: Mew can earn the <img src='img/marks/mightiest-mark.png'>&nbsp;Mightiest Mark by winning a Mewtwo Tera Raid Battle! This event ends on September&nbsp;17 at 23:59&nbsp;UTC!</span>"
+	],
 	"13 September 2023": [
 		"Added support for new/returning Pokémon in The Teal Mask",
 		"Restored the Itemfinder Mark! Game Freak has fixed the bug preventing it from being earned",
@@ -10,14 +14,17 @@ const changelog = {
 		"Removed Footprint Ribbon warning for Pokémon from GO, since their Met Level must be ≤50 (thanks Josh Lemmy!)",
 		"Removed 5-or-6-digit requirement from ID No. field (thanks Randomdice101!)",
 		"Improved Pikachu and Furfrou sorting in the dropdown menu",
-		"Fixed display of Oricorio (Pa'u Style) in the dropdown menu",
-		"<span class='timelimited'>ENDING SOON: Mew can earn the <img src='img/marks/mightiest-mark.png'>&nbsp;Mightiest Mark by winning a Mewtwo Tera Raid Battle! This event ends on September&nbsp;17 at 23:59&nbsp;UTC!</span>"
+		"Fixed display of Oricorio (Pa'u Style) in the dropdown menu"
 	],
-	"31 August–2 September 2023": [
+	"2 September 2023": [
+		"Fixed an issue where Gen VII Ribbons appeared in the guide for Pokémon currently in Let's Go, Pikachu! and Let's Go, Eevee! (thanks Fanriya!)"
+	],
+	"1 September 2023": [
+		"Updated description of Mightiest Mark"
+	],
+	"31 August 2023": [
 		"Added a pulsing alert bubble and guide warning for time-limited events",
-		"Fixed display of Unown forms in the dropdown menu",
-		"Sep 1: Updated description of Mightiest Mark",
-		"Sep 2: Fixed an issue where Gen VII Ribbons appeared in the guide for Pokémon currently in Let's Go, Pikachu! and Let's Go, Eevee! (thanks Fanriya!)"
+		"Fixed display of Unown forms in the dropdown menu"
 	],
 	"30 May 2023": [
 		"Added HOME support for Scarlet/Violet! (finally)",

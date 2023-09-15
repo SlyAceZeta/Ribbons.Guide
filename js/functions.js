@@ -370,6 +370,14 @@ function ribbonGuide(id){
 			var noWarnings = true;
 			var noRibbons = true;
 
+			if(pkmn.dex === "marowak-alola" || pkmn.dex === "ribombee" || pkmn.dex === "araquanid" || pkmn.dex === "togedemaru"){
+				// Totem-sized versions of these four cannot leave USUM
+				if((pkmn.origin === "usun" || pkmn.origin === "umoon") && (pkmn.currentgame === "usun" || pkmn.currentgame === "umoon")){
+					noWarnings = false;
+					$("#ribbonguide-totem").html("If " + name + " is a Totem-sized Pokémon, " + name + " cannot leave " + terms.gens[7] + ".");
+				}
+			}
+
 			for(var ribbon in allRibbons){
 				if(pkmn.ribbons.indexOf(ribbon) == -1){
 					// Ribbon not earned
@@ -396,29 +404,22 @@ function ribbonGuide(id){
 										// now check for special Ribbon restrictions
 										var specialEarn = false;
 										if(pkmn.dex === "nincada"){
-											// Nincada from BDSP cannot go to SwSh
+											// Nincada from BDSP cannot earn SwSh Ribbons
 											if(pkmn.origin === "bd" || pkmn.origin === "sp"){
 												if(ribbonGame !== "sw" && ribbonGame !== "sh"){
 													specialEarn = true;
 												}
-											// Nincada not from BDSP cannot go to BDSP
+											// Nincada not from BDSP cannot earn BDSP Ribbons
 											} else if(ribbonGame !== "bd" && ribbonGame !== "sp"){
 												specialEarn = true;
 											}
 										} else if(pkmn.dex === "spinda"){
 											// Spinda cannot enter or leave BDSP
-											// the only Gen VIII/IX game Spinda can originate from is BDSP, so we can just check the generation
+											// the only Gen VIII/IX game Spinda can originate from is BDSP, so we can just check the generations of Spinda and the Ribbon
 											if(games[pkmn.origin].gen == 8 && gameGen == 8){
 												specialEarn = true;
 											} else if(games[pkmn.origin].gen !== 8 && gameGen !== 8){
 												specialEarn = true;
-											}
-										} else if(pkmn.dex === "marowak-alola" || pkmn.dex === "ribombee" || pkmn.dex === "araquanid" || pkmn.dex === "togedemaru"){
-											// Totem-sized versions of these four cannot leave USUM
-											if((pkmn.origin === "usun" || pkmn.origin === "umoon") && (pkmn.currentgame === "usun" || pkmn.currentgame === "umoon")){
-												specialEarn = true;
-												noWarnings = false;
-												$("#ribbonguide-totem").html("If " + name + " is a Totem-sized Pokémon, " + name + " cannot leave " + terms.gens[7] + ".");
 											}
 										} else if(ribbon.indexOf("contest-memory-ribbon") == 0 || ribbon.indexOf("battle-memory-ribbon") == 0){
 											// Pokemon originating in Gen V or Virtual Console cannot have these Ribbons
