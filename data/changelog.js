@@ -2,6 +2,7 @@
 const changelog = {
 	"15 September 2023": [
 		"Fixed issue introduced in the previous update where no Ribbons were suggested for Alolan Marowak, Ribombee, Araquanid, and Togedemaru if they originated from games other than USUM (thanks autumn!)",
+		"Fixed remaining cases where apostrophes were not being properly escaped <a href='https://github.com/Azekthi/Ribbons.Guide/issues/70'>#70</a> (thanks FlitPix!)",
 		"<span class='timelimited'>ENDING SOON: Mew can earn the <img src='img/marks/mightiest-mark.png'>&nbsp;Mightiest Mark by winning a Mewtwo Tera Raid Battle! This event ends on September&nbsp;17 at 23:59&nbsp;UTC!</span>"
 	],
 	"13 September 2023": [

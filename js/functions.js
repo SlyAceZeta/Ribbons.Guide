@@ -724,12 +724,12 @@ function addRow(pkmn, i){
 	var gender = pkmn.gender, genderimg = "";
 	if(gender !== "unknown"){
 		gender = pkmn.gender.charAt(0).toUpperCase() + pkmn.gender.slice(1);
-		genderimg = "<img src='img/gender/" + pkmn.gender + ".png' class='gender' alt='" + gender + "' title='" + gender + "'>";
+		genderimg = "<img src='img/gender/" + pkmn.gender + ".png' class='gender' alt=\"" + gender + "\" title=\"" + gender + "\">";
 	}
 
 	var origin = games[pkmn.origin]["mark"];
 	if(origin){
-		origin = "<img src='img/origins/" + origin + ".png' class='pokemon-list-origin' alt='" + games[pkmn.origin]["name"] + "' title='" + games[pkmn.origin]["name"] + "'>";
+		origin = "<img src='img/origins/" + origin + ".png' class='pokemon-list-origin' alt=\"" + games[pkmn.origin]["name"] + "\" title=\"" + games[pkmn.origin]["name"] + "\">";
 	} else {
 		origin = "<img src='img/ui/1x1.svg' class='pokemon-list-origin' alt='No Origin Mark'>";
 	}
@@ -739,7 +739,8 @@ function addRow(pkmn, i){
 	var title = "";
 	if(titleBon !== "None"){
 		if(titleBon.indexOf("-mark") > 0) titleDir = "marks";
-		title = "<img src='img/" + titleDir + "/" + titleBon + ".png' alt='"+allRibbons[titleBon]["names"]["eng"]+"'><span>" + allRibbons[titleBon]["titles"]["eng"] + "</span>";
+
+		title = "<img src='img/" + titleDir + "/" + titleBon + ".png' alt=\""+allRibbons[titleBon]["names"]["eng"]+"\"><span>" + allRibbons[titleBon]["titles"]["eng"] + "</span>";
 	}
 
 	var lang = pkmn.lang;
@@ -778,7 +779,7 @@ function addRow(pkmn, i){
 		boxID = " data-box='-1'";
 	}
 	// TEMPORARY MEW MIGHTIEST MARK
-	$("#pokemon-list").append("<div class='pokemon-list-entry' data-natdex='" + getData(pkmn.dex, "natdex") + "' data-ball='" + pkmn.ball + "' data-name='" + name + "' data-gender='" + gender + "' data-level='" + level + "' data-shiny='" + pkmn.shiny + "' data-lang='" + lang + "' data-origin='" + pkmn.origin + "' data-currentgame='" + pkmn.currentgame + "' data-compatgames='" + stillCompat.join(" ") + "' data-pokemon='" + i + "'" + boxID + timeLimited + "><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png' alt='" + ballName + "' title='" + ballName + "'><span class='pokemon-list-name'>" + name + "</span>" + genderimg + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' alt='" + name + "'><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span class='pokemon-list-lang-wrapper'><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + boxLabel + "</div><div class='pokemon-list-entry-footer-right'><button class='pokemon-list-move'><img src='img/ui/move.svg' alt='Reorder " + name + "' title='Reorder " + name + "'></button><button class='pokemon-list-guide' onclick='ribbonGuide("+i+")'><img src='img/ui/clipboard.png' alt='Ribbons' title='" + name + "&#39;s Ribbon Guide'></button><button class='pokemon-list-edit' onclick='editPkmn("+i+")'><img src='img/ui/edit.svg' alt='Edit " + name + "' title='Edit " + name + "'></button><button class='pokemon-list-delete' onclick='deletePkmn("+i+")'><img src='img/ui/delete.svg' alt='Delete " + name + "' title='Delete " + name + "'></button></div></div></div>");
+	$("#pokemon-list").append("<div class='pokemon-list-entry' data-natdex='" + getData(pkmn.dex, "natdex") + "' data-ball='" + pkmn.ball + "' data-name='" + name + "' data-gender='" + gender + "' data-level='" + level + "' data-shiny='" + pkmn.shiny + "' data-lang='" + lang + "' data-origin='" + pkmn.origin + "' data-currentgame='" + pkmn.currentgame + "' data-compatgames='" + stillCompat.join(" ") + "' data-pokemon='" + i + "'" + boxID + timeLimited + "><div class='pokemon-list-entry-header'><div class='pokemon-list-entry-header-left'><img src='img/balls/" + pkmn.ball + ".png' alt=\"" + ballName + "\" title=\"" + ballName + "\"><span class='pokemon-list-name'>" + name + "</span>" + genderimg + shinyMark + "</div><div class='pokemon-list-entry-header-right'>"+title+"</div></div><div class='pokemon-list-entry-center'><img src='img/pkmn/" + shinyDir + femaleDir + pkmn.dex + ".png' alt=\"" + name + "\"><div class='ribbons-list'>" + ribbons + "</div></div><div class='pokemon-list-entry-footer'><div class='pokemon-list-entry-footer-left'><span class='pokemon-list-level'>Lv.&nbsp;"+level+"</span><span class='pokemon-list-lang-wrapper'><span class='pokemon-list-lang'>"+lang+"</span></span>" + origin + boxLabel + "</div><div class='pokemon-list-entry-footer-right'><button class='pokemon-list-move'><img src='img/ui/move.svg' alt=\"Reorder " + name + "\" title=\"Reorder " + name + "\"></button><button class='pokemon-list-guide' onclick='ribbonGuide("+i+")'><img src='img/ui/clipboard.png' alt='Ribbons' title=\"" + name + "'s Ribbon Guide\"></button><button class='pokemon-list-edit' onclick='editPkmn("+i+")'><img src='img/ui/edit.svg' alt=\"Edit " + name + "\" title=\"Edit " + name + "\"></button><button class='pokemon-list-delete' onclick='deletePkmn("+i+")'><img src='img/ui/delete.svg' alt=\"Delete " + name + "\" title=\"Delete " + name + "\"></button></div></div></div>");
 }
 
 function filterPkmn(filters){
