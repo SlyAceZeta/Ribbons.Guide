@@ -1,5 +1,8 @@
 // don't forget to update index.html cache-version
 const changelog = {
+	"23 September 2023": [
+		"Added a checkbox to indicate that you've checked the Pokémon's scale in Mesagoza to hide the Jumbo and Mini Marks from the guide <a href='https://github.com/Azekthi/Ribbons.Guide/issues/67'>#67</a> (thanks Fanriya!)"
+	],
 	"15 September 2023": [
 		"Fixed issue introduced in the previous update where no Ribbons were suggested for Alolan Marowak, Ribombee, Araquanid, and Togedemaru if they originated from games other than USUM (thanks autumn!)",
 		"Fixed remaining cases where apostrophes were not being properly escaped <a href='https://github.com/Azekthi/Ribbons.Guide/issues/70'>#70</a> (thanks FlitPix!)"

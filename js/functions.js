@@ -69,6 +69,7 @@ function createPokemon(edit = false){
 		ball: $("#pokeform-ball").val(),
 		title: $("#pokeform-title").val(),
 		level: $("#pokeform-level").val(),
+		scale: $("#pokeform-scale").prop("checked"),
 		metlevel: $("#pokeform-metlevel").val(),
 		metdate: $("#pokeform-metdate").val(),
 		characteristic: $("#pokeform-characteristic").val(),
@@ -243,6 +244,7 @@ function editPkmn(id){
 	}
 	if(pkmn.gender === "female") $("#pokeform-gender-female").prop("checked", true).change();
 	$("#pokeform-ball").val(pkmn.ball).change();
+	if(pkmn.scale) $("#pokeform-scale").prop("checked", true).change();
 	if(pkmn.title) $("#pokeform-title").val(pkmn.title).change();
 	if(pkmn.ability) $("#pokeform-ability").val(pkmn.ability).change();
 	if(pkmn.level) $("#pokeform-level").val(pkmn.level);
@@ -496,11 +498,11 @@ function ribbonGuide(id){
 											specialEarn = true;
 										}
 									} else if(ribbon == "jumbo-mark"){
-										if(pkmn.ribbons.indexOf("mini-mark") == -1){
+										if(pkmn.ribbons.indexOf("mini-mark") == -1 && !pkmn.scale){
 											specialEarn = true;
 										}
 									} else if(ribbon == "mini-mark"){
-										if(pkmn.ribbons.indexOf("jumbo-mark") == -1){
+										if(pkmn.ribbons.indexOf("jumbo-mark") == -1 && !pkmn.scale){
 											specialEarn = true;
 										}
 									} else {
@@ -523,7 +525,13 @@ function ribbonGuide(id){
 							if(rData.descs) rDesc = rData.descs.eng;
 							var optClass = "";
 							if(allRibbons[ribbon].optional){
-								optClass = " ribbon-optional";
+								if(ribbon == "jumbo-mark" || ribbon == "mini-mark"){
+									if(!pkmn.scale){
+										optClass = " ribbon-optional";
+									}
+								} else {
+									optClass = " ribbon-optional";
+								}
 							}
 							var rImage = "<span class='"+optClass+"'><img class='" + ribbon + "' src='img/" + rFldr + "/" + ribbon + ".png' alt=\"" + rData.names.eng + "\" title=\"" + rData.names.eng + " - " + rDesc + "\"></span>";
 							// add Ribbon to each gen

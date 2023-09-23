@@ -1354,3 +1354,20 @@ body[lang="zh-Hans"] span.lang.chs {
 		box-shadow: 0 0 1px 20px rgba(0, 0, 0, 0);
 	}
 }
+#pokeform-scale {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}
+.pokeform-scale-row {
+	display: flex;
+	align-items: center;
+}
+.pokeform-scale-row label {
+	display: contents;
+}
+.pokeform-scale-icon {
+	width: 18px;
+	height: 18px;
+	margin-left: 5px;
+}

@@ -48,7 +48,7 @@
 		<script src="upup.min.js"></script>
         <script>
             UpUp.start({
-				'cache-version': '2023-09-17-1',
+				'cache-version': '2023-09-23-1',
                 'content-url': 'index.html',
                 'assets': [
                     'css/jquery.modal.min.css', 'css/select2.min.css', 'css/style.css', 'css/themes.css',
@@ -333,6 +333,12 @@
 				<tr class="pokeform-tab1">
 					<th><label for="pokeform-level"><span class="asterisk">*</span>Level</label></th>
 					<td colspan="2"><input id="pokeform-level" type="number" min="1" max="100" required></td>
+				</tr>
+				<tr class="pokeform-tab1">
+					<th><label for="pokeform-scale">Scale</label></th>
+					<td colspan="2">
+						<div class="pokeform-scale-row"><input type="checkbox" id="pokeform-scale"> <label for="pokeform-scale">Checked in Mesagoza <img class="pokeform-scale-icon" src="img/origins/paldea.png" alt="Scarlet/Violet" title="Scarlet/Violet"></label></div>
+					</td>
 				</tr>
 				<tr class="pokeform-tab1">
 					<th><label for="pokeform-ot">Original Trainer</label></th>
