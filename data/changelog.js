@@ -1,6 +1,7 @@
 // don't forget to update index.html cache-version
 const changelog = {
 	"23 September 2023": [
+		"Updated sprites for new Pokémon in The Teal Mask",
 		"Added a checkbox to indicate that you've checked the Pokémon's scale in Mesagoza to hide the Jumbo and Mini Marks from the guide <a href='https://github.com/Azekthi/Ribbons.Guide/issues/67'>#67</a> (thanks Fanriya!)"
 	],
 	"15 September 2023": [
