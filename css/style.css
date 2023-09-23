@@ -1371,3 +1371,6 @@ body[lang="zh-Hans"] span.lang.chs {
 	height: 18px;
 	margin-left: 5px;
 }
+.pokeform-scale-icon + .pokeform-scale-icon {
+	margin-left: 0;
+}
