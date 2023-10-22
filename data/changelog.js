@@ -1,5 +1,8 @@
 // don't forget to update index.html cache-version
 const changelog = {
+	"22 October 2023": [
+		"Fixed issue where Bloodmoon Ursaluna was mistakenly able to transfer to Legends: Arceus and earn the Hisui Ribbon"
+	],
 	"23 September 2023": [
 		"Updated sprites for new Pokémon in The Teal Mask",
 		"Added a checkbox to indicate that you've checked the Pokémon's scale in Mesagoza to hide the Jumbo and Mini Marks from the guide <a href='https://github.com/Azekthi/Ribbons.Guide/issues/67'>#67</a> (thanks Fanriya!)"

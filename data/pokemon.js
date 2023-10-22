@@ -34307,7 +34307,11 @@ const pokemon = {
 			"kor": "붉은 달",
 			"cht": "赫月",
 			"chs": "赫月"
-		}
+		},
+		"games": [
+			"scar",
+			"vio"
+		]
 	},
 	"ursaluna": {
 		"names": {
