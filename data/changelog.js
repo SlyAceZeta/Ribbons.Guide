@@ -1,7 +1,7 @@
 // don't forget to update index.html cache-version
 const changelog = {
 	"22 October 2023": [
-		"Fixed issue where Bloodmoon Ursaluna was mistakenly able to transfer to Legends: Arceus and earn the Hisui Ribbon"
+		"Fixed issue where Bloodmoon Ursaluna was mistakenly able to transfer to Legends: Arceus and earn the Hisui Ribbon (thanks AuronWarcrest!)"
 	],
 	"23 September 2023": [
 		"Updated sprites for new Pokémon in The Teal Mask",
