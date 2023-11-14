@@ -631,7 +631,7 @@ const allRibbons = {
 	},
 	"cool-ribbon-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -649,7 +649,7 @@ const allRibbons = {
 	},
 	"cool-ribbon-great-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -667,7 +667,7 @@ const allRibbons = {
 	},
 	"cool-ribbon-ultra-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -685,7 +685,7 @@ const allRibbons = {
 	},
 	"cool-ribbon-master-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -703,7 +703,7 @@ const allRibbons = {
 	},
 	"beauty-ribbon-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -721,7 +721,7 @@ const allRibbons = {
 	},
 	"beauty-ribbon-great-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -739,7 +739,7 @@ const allRibbons = {
 	},
 	"beauty-ribbon-ultra-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -757,7 +757,7 @@ const allRibbons = {
 	},
 	"beauty-ribbon-master-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -775,7 +775,7 @@ const allRibbons = {
 	},
 	"cute-ribbon-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -793,7 +793,7 @@ const allRibbons = {
 	},
 	"cute-ribbon-great-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -811,7 +811,7 @@ const allRibbons = {
 	},
 	"cute-ribbon-ultra-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -829,7 +829,7 @@ const allRibbons = {
 	},
 	"cute-ribbon-master-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -847,7 +847,7 @@ const allRibbons = {
 	},
 	"smart-ribbon-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -865,7 +865,7 @@ const allRibbons = {
 	},
 	"smart-ribbon-great-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -883,7 +883,7 @@ const allRibbons = {
 	},
 	"smart-ribbon-ultra-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -901,7 +901,7 @@ const allRibbons = {
 	},
 	"smart-ribbon-master-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -919,7 +919,7 @@ const allRibbons = {
 	},
 	"tough-ribbon-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -937,7 +937,7 @@ const allRibbons = {
 	},
 	"tough-ribbon-great-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -955,7 +955,7 @@ const allRibbons = {
 	},
 	"tough-ribbon-ultra-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -973,7 +973,7 @@ const allRibbons = {
 	},
 	"tough-ribbon-master-sinnoh": {
 		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -1326,7 +1326,7 @@ const allRibbons = {
 	},
 	"contest-memory-ribbon-gold": {
 		"gen": 6,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z"],
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
 		"optional": true,
 		"available": [
 			"x",
