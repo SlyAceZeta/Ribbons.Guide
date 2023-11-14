@@ -1,6 +1,6 @@
 // don't forget to update index.html cache-version
 const changelog = {
-	"13 November 2023": [
+	"14 November 2023": [
 		"Fixed issue where Johtonian Typhlosion and Unovan Samurott were mistakenly able to transfer to Legends: Arceus and earn the Hisui Ribbon (thanks AuronWarcrest!)",
 		"Fixed issue where Ditto and Unown were mistakenly able to earn Contest Ribbons in Gen IV <a href='https://github.com/Azekthi/Ribbons.Guide/issues/73'>#73</a> (thanks Rusher, autumn, and SadisticMystic!)"
 	],
