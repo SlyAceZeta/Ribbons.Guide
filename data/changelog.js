@@ -1,5 +1,8 @@
 // don't forget to update index.html cache-version
 const changelog = {
+	"16 December 2023": [
+		"Added support for new and returning Pokémon in The Indigo Disk"
+	],
 	"14 November 2023": [
 		"Fixed issue where Johtonian Typhlosion and Unovan Samurott were mistakenly able to transfer to Legends: Arceus and earn the Hisui Ribbon (thanks AuronWarcrest!)",
 		"Fixed issue where Ditto and Unown were mistakenly able to earn Contest Ribbons in Gen IV <a href='https://github.com/Azekthi/Ribbons.Guide/issues/73'>#73</a> (thanks Rusher, autumn, and SadisticMystic!)"
@@ -16,7 +19,7 @@ const changelog = {
 		"Fixed remaining cases where apostrophes were not being properly escaped <a href='https://github.com/Azekthi/Ribbons.Guide/issues/70'>#70</a> (thanks FlitPix!)"
 	],
 	"13 September 2023": [
-		"Added support for new/returning Pokémon in The Teal Mask",
+		"Added support for new and returning Pokémon in The Teal Mask",
 		"Restored the Itemfinder Mark! Game Freak has fixed the bug preventing it from being earned",
 		"Replaced pixel sprites with HOME renders, resolving the SV fan art requirement and matching the app's overall style",
 		"Added Hoopa (Unbound), Zygarde (10% Forme), Cosplay Pikachu's outfits, and Urshifu (Rapid Strike Style); <strong>all existing Urshifus display as Single Strike Style until edited</strong>",
