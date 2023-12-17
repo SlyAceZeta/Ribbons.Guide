@@ -337,7 +337,11 @@ function ribbonGuide(id){
 			var img = $(".pokemon-list-entry[data-pokemon="+id+"] .pokemon-list-entry-center img").attr("src");
 			$("#ribbonguide-info img").attr("src", img);
 			$("#ribbonguide .name").text(name);
-			$("#ribbonguide-info .name").text(name + " " + title);
+			if(title.endsWith("'s")){
+				$("#ribbonguide-info .name").text(title + " " + name);
+			} else {
+				$("#ribbonguide-info .name").text(name + " " + title);
+			}
 			$("#ribbonguide .level").text(pkmn.level);
 			if(pkmn.metlevel) $("#ribbonguide .metlevel").text(" (met at "+pkmn.metlevel+")");
 			$("#ribbonguide .game").text(games[pkmn.currentgame].name);
@@ -734,7 +738,7 @@ function addRow(pkmn, i){
 	if(titleBon !== "None"){
 		if(titleBon.indexOf("-mark") > 0) titleDir = "marks";
 
-		title = "<img src='img/" + titleDir + "/" + titleBon + ".png' alt=\""+allRibbons[titleBon]["names"]["eng"]+"\"><span>" + allRibbons[titleBon]["titles"]["eng"] + "</span>";
+		title = "<img src='img/" + titleDir + "/" + titleBon + ".png' alt=\""+allRibbons[titleBon]["names"]["eng"]+"\"><span>" + allRibbons[titleBon]["titles"]["eng"].replace("[Original Trainer]", pkmn.ot) + "</span>";
 	}
 
 	var lang = pkmn.lang;

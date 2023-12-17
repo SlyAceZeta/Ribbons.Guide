@@ -3219,6 +3219,43 @@ const allRibbons = {
 			"chs": "世界冠军"
 		}
 	},
+	"partner-ribbon": {
+		"gen": 8,
+		"available": null,
+		"names": {
+			"ger": "",
+			"eng": "Partner Ribbon",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"descs": {
+			"ger": "",
+			"eng": "A special Ribbon awarded to a Pokémon that was once partnered with another great Trainer.",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		},
+		"titles": {
+			"ger": "",
+			"eng": "[Original Trainer]'s",
+			"spa": "",
+			"fre": "",
+			"ita": "",
+			"jpn": "",
+			"kor": "",
+			"cht": "",
+			"chs": ""
+		}
+	},
 	"lunchtime-mark": {
 		"gen": 8,
 		"available": null,
