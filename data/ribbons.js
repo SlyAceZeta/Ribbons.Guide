@@ -3225,10 +3225,10 @@ const allRibbons = {
 		"names": {
 			"ger": "",
 			"eng": "Partner Ribbon",
-			"spa": "",
+			"spa": "Cinta Camarada",
 			"fre": "",
 			"ita": "",
-			"jpn": "",
+			"jpn": "パートナーリボン",
 			"kor": "",
 			"cht": "",
 			"chs": ""
@@ -3236,7 +3236,7 @@ const allRibbons = {
 		"descs": {
 			"ger": "",
 			"eng": "A special Ribbon awarded to a Pokémon that was once partnered with another great Trainer.",
-			"spa": "",
+			"spa": "Cinta especial que llevan los Pokémon recibidos por parte de Entrenadores selectos.",
 			"fre": "",
 			"ita": "",
 			"jpn": "",
@@ -3247,10 +3247,10 @@ const allRibbons = {
 		"titles": {
 			"ger": "",
 			"eng": "[Original Trainer]'s",
-			"spa": "",
+			"spa": "de [entrenador original]",
 			"fre": "",
 			"ita": "",
-			"jpn": "",
+			"jpn": "[親]の",
 			"kor": "",
 			"cht": "",
 			"chs": ""

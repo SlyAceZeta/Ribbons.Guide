@@ -1,8 +1,14 @@
 // don't forget to update index.html cache-version
 const changelog = {
-	"16–17 December 2023": [
-		"Added support for new & returning Pokémon in The Indigo Disk",
-		"Added the Partner Ribbon; since it cannot be earned, it appears in the Event section of the editor (thanks Q8yshadow!)"
+	"20 December 2023": [
+		"Pokémon with the Partner Ribbon can no longer have a blank Original Trainer",
+		"Fixed a bug where Lv.71+ voiced Pokémon in the Virtual Console games could still earn the Footprint Ribbon in BDSP",
+	],
+	"17 December 2023": [
+		"Added the Partner Ribbon; since it cannot be earned, it appears in the Event section of the editor (thanks Q8yShadow!)"
+	],
+	"16 December 2023": [
+		"Added support for new & returning Pokémon in The Indigo Disk"
 	],
 	"14 November 2023": [
 		"Fixed issue where Johtonian Typhlosion and Unovan Samurott were mistakenly able to transfer to Legends: Arceus and earn the Hisui Ribbon (thanks AuronWarcrest!)",

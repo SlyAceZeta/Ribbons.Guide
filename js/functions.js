@@ -91,16 +91,26 @@ function createPokemon(edit = false){
 		if(!str.id || str.id.match(/^[0-9]{1,6}$/)){
 			if(parseInt(str.level) > 0 && parseInt(str.level) < 101){
 				if(!str.metlevel || parseInt(str.metlevel) <= parseInt(str.level)){
-					allpkmn = JSON.parse(localStorage.getItem("pokemon"));
-					var n = (edit) ? $("#pokeform-edit").attr("data-editing") : allpkmn.entries.length;
-					allpkmn.entries[n] = str;
-					localStorage.setItem("pokemon", JSON.stringify(allpkmn));
-					if(edit){
-						clearTable(allpkmn);
+					var partnerotcheck = false;
+					if(ribbons.includes("partner-ribbon") || str.title === "partner-ribbon"){
+						if(str.ot.length > 0) partnerotcheck = true;
 					} else {
-						addRow(str, n);
+						partnerotcheck = true;
 					}
-					$.modal.close();
+					if(partnerotcheck){
+						allpkmn = JSON.parse(localStorage.getItem("pokemon"));
+						var n = (edit) ? $("#pokeform-edit").attr("data-editing") : allpkmn.entries.length;
+						allpkmn.entries[n] = str;
+						localStorage.setItem("pokemon", JSON.stringify(allpkmn));
+						if(edit){
+							clearTable(allpkmn);
+						} else {
+							addRow(str, n);
+						}
+						$.modal.close();
+					} else {
+						alert("The Pokémon's Original Trainer must be set if it has the Partner Ribbon.");
+					}
 				} else {
 					alert("The Pokémon's current level cannot be lower than the level you met it.");
 				}
@@ -395,12 +405,12 @@ function ribbonGuide(id){
 						// check for per-game availability
 						for(var ribbonGameKey in allRibbons[ribbon].available){
 							var ribbonGame = allRibbons[ribbon].available[ribbonGameKey];
-							var gameGen = parseInt(games[ribbonGame]["gen"]);
-							if(gameGen && ribbonAddToGens.indexOf(gameGen) == -1 && gensLeft.indexOf(gameGen) > -1){
+							var ribbonGen = parseInt(games[ribbonGame]["gen"]);
+							if(ribbonGen && ribbonAddToGens.indexOf(ribbonGen) == -1 && gensLeft.indexOf(ribbonGen) > -1){
 								// Ribbon has not been added to this gen yet
 								// and Pokemon is in this game's gen or will be later
 								// check if Pokemon can be sent to this game
-								if(pkmnGames.indexOf(ribbonGame) > -1 && !((pkmn.currentgame == "lgp" || pkmn.currentgame == "lge") && gameGen == 7)){
+								if(pkmnGames.indexOf(ribbonGame) > -1 && !((pkmn.currentgame == "lgp" || pkmn.currentgame == "lge") && ribbonGen == 7)){
 									// now check for special Ribbon restrictions
 									var specialEarn = false;
 									if(pkmn.dex === "nincada"){
@@ -416,9 +426,9 @@ function ribbonGuide(id){
 									} else if(pkmn.dex === "spinda"){
 										// Spinda cannot enter or leave BDSP
 										// the only Gen VIII/IX game Spinda can originate from is BDSP, so we can just check the generations of Spinda and the Ribbon
-										if(games[pkmn.origin].gen == 8 && gameGen == 8){
+										if(games[pkmn.origin].gen == 8 && ribbonGen == 8){
 											specialEarn = true;
-										} else if(games[pkmn.origin].gen !== 8 && gameGen !== 8){
+										} else if(games[pkmn.origin].gen !== 8 && ribbonGen !== 8){
 											specialEarn = true;
 										}
 									} else if(ribbon.indexOf("contest-memory-ribbon") == 0 || ribbon.indexOf("battle-memory-ribbon") == 0){
@@ -446,49 +456,54 @@ function ribbonGuide(id){
 											specialEarn = true;
 										}
 									} else if(ribbon == "footprint-ribbon"){
-										var metLevel = 0;
-										if(pkmn.metlevel) metLevel = parseInt(pkmn.metlevel);
-										var metNote = false;
-										if(gameGen == 4){
-											// all Gen IV Pokemon can earn this through friendship
+										var voiceless = getData(pkmn.dex, "voiceless");
+										var lessThan71 = parseInt(pkmn.level) < 71;
+										if(ribbonGen == 4){
+											// always show Footprint in Gen IV
 											specialEarn = true;
-											// if this block is running, this Pokemon is either in or before Gen IV
-											// so check the later two conditions for potential failure
-											if(!getData(pkmn.dex, "voiceless") && parseInt(pkmn.level) < 71){
-												// add preliminary warning about leveling up and leaving Gen IV
-												noWarnings = false;
-												$("#ribbonguide-footprint").html("Leveling " + name + " above Lv.70 will make the Footprint Ribbon exclusive to "+terms.gens[4]+"!");
-											}
-										} else if(getData(pkmn.dex, "voiceless") && gameGen == 8){
-											// voiceless Pokemon can still earn this in BDSP
+										} else if(ribbonGen == 8 && voiceless){
+											// for voiceless Pokemon, always show Footprint in Gen VIII
 											specialEarn = true;
 										} else {
-											// voiced Pokemon can earn this in all other games with a met level below 71
-											// however, met level changes if transferred to Gen V
-											if(curGen < 5){
-												if(parseInt(pkmn.level) < 71){
+											// in all other gens (and Gen VIII for voiced Pokemon), showing Footprint relies on Met Level < 71
+											if(curGen < 5 || virtualConsole){
+												// Met Level will change upon entering Gen V or leaving Virtual Console
+												if(lessThan71){
+													// the Pokemon's current level is < 71
+													// if it transfers now, its Met Level will also be < 71
+													// therefore it will always be able to earn Footprint
 													specialEarn = true;
-												} // else it will appear exclusive to Gen IV as per above
-											} else {
-												// we're not in Gen IV anymore, Toto
-												if(metLevel > 0 && metLevel < 71){
-													// met level has changed (or Pokemon was caught in Gen V+), so let's check it
-													specialEarn = true;
-												} else if(virtualConsole && !getData(pkmn.dex, "voiceless")){
-													// Met Level also changes if transferred out of Virtual Console
-													// if it's a voiced Pokemon, warn the user like above
-													specialEarn = true;
+													// BUT if the player levels the Pokemon to 71+, Footprint will be blocked
 													noWarnings = false;
-													$("#ribbonguide-footprint").html("Leveling " + name + " above Lv.70 will make the Footprint Ribbon unavailable!");
-												} else if(metLevel == 0){
-													// if the Pokemon is Lv70 or below in Gen V+, outside of Virtual Console, then its Met Level must be Lv70 or below
-													// if the Pokemon came from GO, its Met Level must be Lv50 or below
-													if(parseInt(pkmn.level) < 71 || pkmn.origin === "go"){
+													if(curGen < 5){
+														$("#ribbonguide-footprint").html("Leveling " + name + " above Lv.70 will make the Footprint Ribbon exclusive to "+terms.gens[4]+"!");
+													} else if(virtualConsole){
+														$("#ribbonguide-footprint").html("Leveling " + name + " above Lv.70 will make the Footprint Ribbon unavailable!");
+													}
+												}
+											} else {
+												// Pokemon has left Gen V and Virtual Console, so Met Level is now permanently set
+												var metLevel = (pkmn.metlevel) ? parseInt(pkmn.metlevel) : 0;
+												if(metLevel > 0 && metLevel < 71){
+													// user has set Met Level < 71, so the Pokemon will always be able to earn Footprint
+													specialEarn = true;
+												} else if(metLevel === 0){
+													// user has not set Met Level, so let's try to determine it automatically
+													if(pkmn.origin === "go"){
+														// Pokemon from GO must have Met Level < 50, so they will always be able to earn Footprint
+														specialEarn = true;
+													} else if(lessThan71){
+														// Pokemon in Gen V+ with current level < 71 must also have Met Level < 71, so they will always be able to earn Footprint
 														specialEarn = true;
 													} else {
-														// otherwise, warn the user
-														noWarnings = false;
-														$("#ribbonguide-notice").html(name + "'s Met Level has not been set. The availability of the Footprint Ribbon after "+terms.gens[4]+" cannot be determined.");
+														// we cannot automatically determine Met Level
+														if((pkmnGames.indexOf("bd") > -1 || pkmnGames.indexOf("sp") > -1) && voiceless){
+															// if Footprint will show in the Gen VIII section, no need to warn the user
+														} else {
+															// otherwise, if Footprint is not guaranteed, warn the user
+															noWarnings = false;
+															$("#ribbonguide-notice").html(name + "'s Met Level has not been set. The availability of the Footprint Ribbon after "+terms.gens[4]+" cannot be determined.");
+														}
 													}
 												}
 											}
@@ -514,7 +529,7 @@ function ribbonGuide(id){
 									}
 									if(specialEarn){
 										// all checks complete, add Ribbon to gen
-										ribbonAddToGens.push(gameGen);
+										ribbonAddToGens.push(ribbonGen);
 									}
 								}
 							}
@@ -738,7 +753,7 @@ function addRow(pkmn, i){
 	if(titleBon !== "None"){
 		if(titleBon.indexOf("-mark") > 0) titleDir = "marks";
 
-		title = "<img src='img/" + titleDir + "/" + titleBon + ".png' alt=\""+allRibbons[titleBon]["names"]["eng"]+"\"><span>" + allRibbons[titleBon]["titles"]["eng"].replace("[Original Trainer]", pkmn.ot) + "</span>";
+		title = "<img src='img/" + titleDir + "/" + titleBon + ".png' alt=\""+allRibbons[titleBon]["names"]["eng"]+"\"><span>" + allRibbons[titleBon]["titles"]["eng"].replace(/\[.*\]/, pkmn.ot) + "</span>";
 	}
 
 	var lang = pkmn.lang;
