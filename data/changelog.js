@@ -1,5 +1,8 @@
 // don't forget to update index.html cache-version
 const changelog = {
+	"24 December 2023": [
+		"Fixed issue where Koraidon, Miraidon, and Terapagos could earn the Master Rank Ribbon"
+	],
 	"20 December 2023": [
 		"Pokémon with the Partner Ribbon can no longer have a blank Original Trainer",
 		"Fixed a bug where Lv.71+ voiced Pokémon in the Virtual Console games could still earn the Footprint Ribbon in BDSP",

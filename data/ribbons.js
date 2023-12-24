@@ -2650,6 +2650,7 @@ const allRibbons = {
 	},
 	"master-rank-ribbon": {
 		"gen": 8,
+		"banned": ["koraidon", "miraidon", "terapagos"],
 		"nomythical": true,
 		"available": [
 			"sw",
