@@ -13,11 +13,11 @@ const allRibbons = {
 		"names": {
 			"ger": "Band des Champs",
 			"eng": "Champion Ribbon",
-			"spa": "Cinta Campeón",
+			"spa": "Cinta Campeón (Cinta de Campeón)",
 			"fre": "Ruban Maître",
 			"ita": "Fiocco Campione",
-			"jpn": "チャンプリボン",
-			"kor": "챔피언리본",
+			"jpn": "チャンプリボン (ホウエン　チャンプリボン)",
+			"kor": "챔피언리본 (호연챔피언리본)",
 			"cht": "冠軍獎章",
 			"chs": "冠军奖章"
 		},
@@ -54,10 +54,10 @@ const allRibbons = {
 			"sp"
 		],
 		"names": {
-			"ger": "Band des Sinnoh-Champs",
-			"eng": "Sinnoh Champion Ribbon",
+			"ger": "Band des Sinnoh-Champs (Band des Champs von Sinnoh)",
+			"eng": "Sinnoh Champion Ribbon (Sinnoh Champ Ribbon)",
 			"spa": "Cinta Campeón de Sinnoh",
-			"fre": "Ruban Maître de Sinnoh",
+			"fre": "Ruban Maître de Sinnoh (Ruban Maître Sinnoh)",
 			"ita": "Fiocco Campione Sinnoh",
 			"jpn": "シンオウ　チャンプリボン",
 			"kor": "신오챔피언리본",
@@ -1907,11 +1907,11 @@ const allRibbons = {
 			"vio"
 		],
 		"names": {
-			"ger": "Fleißband",
+			"ger": "Fleißband (Fleiß-Band)",
 			"eng": "Effort Ribbon",
 			"spa": "Cinta Esfuerzo",
 			"fre": "Ruban Effort",
-			"ita": "Fiocco Merito",
+			"ita": "Fiocco Merito (Fiocco di Merito)",
 			"jpn": "がんばリボン",
 			"kor": "노력리본",
 			"cht": "努力獎章",
@@ -2054,7 +2054,7 @@ const allRibbons = {
 			"sp"
 		],
 		"names": {
-			"ger": "Band der Traurigkeit",
+			"ger": "Band der Traurigkeit (Band des Niederschlags)",
 			"eng": "Downcast Ribbon",
 			"spa": "Cinta Abatimiento",
 			"fre": "Ruban Déprime",
@@ -2437,7 +2437,7 @@ const allRibbons = {
 			"sp"
 		],
 		"names": {
-			"ger": "Fußabdruckband",
+			"ger": "Fußabdruckband (Fußabdruck-Band)",
 			"eng": "Footprint Ribbon",
 			"spa": "Cinta Huella",
 			"fre": "Ruban Empreinte",
@@ -3224,15 +3224,15 @@ const allRibbons = {
 		"gen": 8,
 		"available": null,
 		"names": {
-			"ger": "",
+			"ger": "Partnerband",
 			"eng": "Partner Ribbon",
 			"spa": "Cinta Camarada",
-			"fre": "",
-			"ita": "",
+			"fre": "Ruban Partenaire",
+			"ita": "Fiocco Compagno",
 			"jpn": "パートナーリボン",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"kor": "파트너리본",
+			"cht": "同伴獎章",
+			"chs": "同伴奖章"
 		},
 		"descs": {
 			"ger": "",
