@@ -121,7 +121,14 @@ function createPokemon(edit = false){
 			alert("The ID No. must be a number with one to six digits.");
 		}
 	} else {
-		alert("One or more required fields in the Summary tab has not been filled.");
+		var missing = [];
+		if(!str.dex) missing.push("Species");
+		if(!str.ball) missing.push("Poké Ball");
+		if(!str.origin) missing.push("Origin Game");
+		if(!str.title) missing.push("Title");
+		if(!str.level) missing.push("Level");
+		if(!str.lang) missing.push("Language");
+		alert("One or more required fields in the Summary tab has not been filled: " + missing.toString().replaceAll(",",", "));
 	}
 }
 

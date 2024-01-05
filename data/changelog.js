@@ -1,5 +1,8 @@
 // don't forget to update index.html cache-version
 const changelog = {
+	"5 January 2024": [
+		"Added specifity to the error that appears when saving a Pokemon without filling out the required Summary fields (thanks retroaqua!)"
+	],
 	"24 December 2023": [
 		"Fixed issue where Koraidon, Miraidon, and Terapagos could earn the Master Rank Ribbon"
 	],
