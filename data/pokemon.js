@@ -40433,5 +40433,25 @@ const pokemon = {
 			"scar",
 			"vio"
 		]
+	},
+	"pecharunt": {
+		"names": {
+			"ger": "Infamomo",
+			"eng": "Pecharunt",
+			"spa": "Pecharunt",
+			"fre": "Pêchaminus",
+			"ita": "Pecharunt",
+			"jpn": "モモワロウ",
+			"kor": "복숭악동",
+			"cht": "桃歹郎",
+			"chs": "桃歹郎"
+		},
+		"gender": "unknown",
+		"mythical": true,
+		"natdex": 1025,
+		"games": [
+			"scar",
+			"vio"
+		]
 	}
 }
