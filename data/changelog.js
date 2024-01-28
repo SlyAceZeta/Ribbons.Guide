@@ -1,5 +1,8 @@
 // don't forget to update index.html cache-version
 const changelog = {
+	"28 January 2024": [
+		"Fixed issue where Regigigas appeared unable to transfer to Scarlet/Violet even after Indigo Disk support (thanks PatManDX!)"
+	],
 	"11 January 2024": [
 		"Added support for Pecharunt"
 	],

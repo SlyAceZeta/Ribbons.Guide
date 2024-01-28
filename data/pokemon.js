@@ -26309,7 +26309,9 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"scar",
+			"vio"
 		]
 	},
 	"regirock": {
