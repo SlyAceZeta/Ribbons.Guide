@@ -41420,7 +41420,8 @@ const pokemon = {
 		"games": [
 			"scar",
 			"vio"
-		]
+		],
+		"evolvesFrom": "duraludon"
 	},
 	"hydrapple": {
 		"names": {
