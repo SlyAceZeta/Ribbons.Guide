@@ -1,4 +1,4 @@
-[![Current Data](https://img.shields.io/badge/data-Scarlet%20%26%20Violet%3A%20The%20Indigo%20Disk%20v3.0.0-330099)](#)  
+[![Current Data](https://img.shields.io/badge/data-Scarlet%20%26%20Violet%3A%20The%20Indigo%20Disk%20v3.0.1-330099)](#)  
 [![GPL-3.0 license](https://img.shields.io/github/license/azekthi/Ribbons.Guide)](https://opensource.org/license/gpl-3-0/) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/azekthi/Ribbons.Guide/deploy.yml)](https://github.com/Azekthi/Ribbons.Guide/actions/workflows/deploy.yml) [![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fribbons.guide)](https://validator.w3.org/nu/?doc=https%3A%2F%2Fribbons.guide%2F)
 
 Ribbons.Guide is a [progressive web app](https://en.wikipedia.org/wiki/Progressive_web_app) that allows you to keep track of your Pokémon and their Ribbons! Ribbons.Guide doesn't store or send any data anywhere—it's all saved on your device!
