@@ -9146,7 +9146,6 @@ const pokemon = {
 			"as",
 			"lgp",
 			"lge",
-			"pla",
 			"sun",
 			"moon",
 			"usun",
@@ -9346,7 +9345,7 @@ const pokemon = {
 	"enamorus-therian": {
 		"data-source": "enamorus",
 		"form-source": "therian"
-  },
+	},
 	"enamorus": {
 		"names": {
 			"ger": "Cupidos",
@@ -12645,7 +12644,6 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla",
 			"scar",
 			"vio"
 		],
@@ -13466,7 +13464,6 @@ const pokemon = {
 			"lge",
 			"sw",
 			"sh",
-			"pla",
 			"colosseum",
 			"xd",
 			"scar",
@@ -17025,7 +17022,7 @@ const pokemon = {
 	"landorus-therian": {
 		"data-source": "landorus",
 		"form-source": "therian"
-  },
+	},
 	"landorus": {
 		"names": {
 			"ger": "Demeteros",
@@ -17742,7 +17739,6 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla",
 			"scar",
 			"vio"
 		],
@@ -26369,7 +26365,6 @@ const pokemon = {
 			"as",
 			"sw",
 			"sh",
-			"pla",
 			"sun",
 			"moon",
 			"usun",
@@ -28110,7 +28105,6 @@ const pokemon = {
 			"y",
 			"or",
 			"as",
-			"pla",
 			"sun",
 			"moon",
 			"usun",
@@ -30649,7 +30643,6 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla",
 			"scar",
 			"vio"
 		],
@@ -33798,7 +33791,7 @@ const pokemon = {
 	"thundurus-therian": {
 		"data-source": "thundurus",
 		"form-source": "therian"
-  },
+	},
 	"thundurus": {
 		"names": {
 			"ger": "Voltolos",
@@ -34187,7 +34180,7 @@ const pokemon = {
 	"tornadus-therian": {
 		"data-source": "tornadus",
 		"form-source": "therian"
-  },
+	},
 	"tornadus": {
 		"names": {
 			"ger": "Boreos",
@@ -34978,7 +34971,6 @@ const pokemon = {
 			"y",
 			"or",
 			"as",
-			"pla",
 			"sun",
 			"moon",
 			"usun",
@@ -35239,22 +35231,22 @@ const pokemon = {
 		"data-source": "unown",
 		"forms-all": "B",
 		"sort": 2
-  },
+	},
 	"unown-c": {
 		"data-source": "unown",
 		"forms-all": "C",
 		"sort": 3
-  },
+	},
 	"unown-d": {
 		"data-source": "unown",
 		"forms-all": "D",
 		"sort": 4
-  },
+	},
 	"unown-e": {
 		"data-source": "unown",
 		"forms-all": "E",
 		"sort": 5
-  },
+	},
 	"unown-exclamation": {
 		"data-source": "unown",
 		"forms-all": "!",
@@ -35293,62 +35285,62 @@ const pokemon = {
 		"data-source": "unown",
 		"forms-all": "F",
 		"sort": 6
-  },
+	},
 	"unown-g": {
 		"data-source": "unown",
 		"forms-all": "G",
 		"sort": 7
-  },
+	},
 	"unown-h": {
 		"data-source": "unown",
 		"forms-all": "H",
 		"sort": 8
-  },
+	},
 	"unown-i": {
 		"data-source": "unown",
 		"forms-all": "I",
 		"sort": 9
-  },
+	},
 	"unown-j": {
 		"data-source": "unown",
 		"forms-all": "J",
 		"sort": 10
-  },
+	},
 	"unown-k": {
 		"data-source": "unown",
 		"forms-all": "K",
 		"sort": 11
-  },
+	},
 	"unown-l": {
 		"data-source": "unown",
 		"forms-all": "L",
 		"sort": 12
-  },
+	},
 	"unown-m": {
 		"data-source": "unown",
 		"forms-all": "M",
 		"sort": 13
-  },
+	},
 	"unown-n": {
 		"data-source": "unown",
 		"forms-all": "N",
 		"sort": 14
-  },
+	},
 	"unown-o": {
 		"data-source": "unown",
 		"forms-all": "O",
 		"sort": 15
-  },
+	},
 	"unown-p": {
 		"data-source": "unown",
 		"forms-all": "P",
 		"sort": 16
-  },
+	},
 	"unown-q": {
 		"data-source": "unown",
 		"forms-all": "Q",
 		"sort": 17
-  },
+	},
 	"unown-question": {
 		"data-source": "unown",
 		"forms-all": "?",
@@ -35387,47 +35379,47 @@ const pokemon = {
 		"data-source": "unown",
 		"forms-all": "R",
 		"sort": 18
-  },
+	},
 	"unown-s": {
 		"data-source": "unown",
 		"forms-all": "S",
 		"sort": 19
-  },
+	},
 	"unown-t": {
 		"data-source": "unown",
 		"forms-all": "T",
 		"sort": 20
-  },
+	},
 	"unown-u": {
 		"data-source": "unown",
 		"forms-all": "U",
 		"sort": 21
-  },
+	},
 	"unown-v": {
 		"data-source": "unown",
 		"forms-all": "V",
 		"sort": 22
-  },
+	},
 	"unown-w": {
 		"data-source": "unown",
 		"forms-all": "W",
 		"sort": 23
-  },
+	},
 	"unown-x": {
 		"data-source": "unown",
 		"forms-all": "X",
 		"sort": 24
-  },
+	},
 	"unown-y": {
 		"data-source": "unown",
 		"forms-all": "Y",
 		"sort": 25
-  },
+	},
 	"unown-z": {
 		"data-source": "unown",
 		"forms-all": "Z",
 		"sort": 26
-  },
+	},
 	"unown": {
 		"names": {
 			"ger": "Icognito",
@@ -36850,7 +36842,6 @@ const pokemon = {
 			"as",
 			"lgp",
 			"lge",
-			"pla",
 			"sun",
 			"moon",
 			"usun",
@@ -38785,7 +38776,6 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla",
 			"sun",
 			"moon",
 			"scar",
@@ -38829,7 +38819,6 @@ const pokemon = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla",
 			"sun",
 			"moon",
 			"scar",

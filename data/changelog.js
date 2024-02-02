@@ -1,5 +1,8 @@
 // don't forget to update index.html cache-version
 const changelog = {
+	"2 February 2024": [
+		"Fixed issue where the original forms of Electrode, Goodra, Growlithe, Lilligant, Qwilfish, Sliggoo, Voltorb, Zoroark, and Zorua were able to transfer to Legends: Arceus and earn the Hisui Ribbon (thanks missingno.00!)",
+	],
 	"28 January 2024": [
 		"Fixed issue where Regigigas appeared unable to transfer to Scarlet/Violet even after Indigo Disk support (thanks PatManDX!)"
 	],
