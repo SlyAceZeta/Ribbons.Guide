@@ -42,17 +42,6 @@ const allRibbons = {
 			"kor": "챔피언",
 			"cht": "冠軍",
 			"chs": "冠军"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"sinnoh-champion-ribbon": {
@@ -96,17 +85,6 @@ const allRibbons = {
 			"kor": "신오 챔피언",
 			"cht": "神奧冠軍",
 			"chs": "神奥冠军"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"kalos-champion-ribbon": {
@@ -147,17 +125,6 @@ const allRibbons = {
 			"kor": "칼로스 챔피언",
 			"cht": "卡洛斯冠軍",
 			"chs": "卡洛斯冠军"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"hoenn-champion-ribbon": {
@@ -198,17 +165,6 @@ const allRibbons = {
 			"kor": "호연 챔피언",
 			"cht": "豐緣冠軍",
 			"chs": "丰缘冠军"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"alola-champion-ribbon": {
@@ -251,17 +207,6 @@ const allRibbons = {
 			"kor": "알로라 챔피언",
 			"cht": "阿羅拉冠軍",
 			"chs": "阿罗拉冠军"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"galar-champion-ribbon": {
@@ -302,17 +247,6 @@ const allRibbons = {
 			"kor": "가라르 챔피언",
 			"cht": "伽勒爾冠軍",
 			"chs": "伽勒尔冠军"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"paldea-champion-ribbon": {
@@ -353,17 +287,6 @@ const allRibbons = {
 			"kor": "팔데아 챔피언",
 			"cht": "帕底亞冠軍",
 			"chs": "帕底亚冠军"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"cool-ribbon-hoenn": {
@@ -1351,7 +1274,7 @@ const allRibbons = {
 			"fre": "Super Concours d'Intelligence Gagnant catégorie Master!",
 			"ita": "Super Gara di Acume Vincitore Livello Master!",
 			"jpn": "スーパーコンテスト　かしこさ　ぶもん　マスターランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 아름다움 부문 마스터랭크 우승!
+			"kor": "슈퍼콘테스트 아름다움 부문 마스터랭크 우승!"
 		}
 	},
 	"tough-ribbon-sinnoh": {
@@ -1463,7 +1386,7 @@ const allRibbons = {
 			"fre": "Super Concours de Robustesse Gagnant catégorie Master!",
 			"ita": "Super Gara di Grinta Vincitore Livello Master!",
 			"jpn": "スーパーコンテスト　たくましさ　ぶもん　マスターランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 아름다움 부문 마스터랭크 우승!
+			"kor": "슈퍼콘테스트 아름다움 부문 마스터랭크 우승!"
 		}
 	},
 	"coolness-master-ribbon": {
@@ -1506,17 +1429,6 @@ const allRibbons = {
 			"kor": "과거의 스타",
 			"cht": "曾是明星的",
 			"chs": "曾经是明星的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"beauty-master-ribbon": {
@@ -1559,17 +1471,6 @@ const allRibbons = {
 			"kor": "한때는 아름다웠던",
 			"cht": "當時美麗動人的",
 			"chs": "当时美丽动人的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"cuteness-master-ribbon": {
@@ -1612,17 +1513,6 @@ const allRibbons = {
 			"kor": "과거의 아이돌",
 			"cht": "曾是偶像的",
 			"chs": "曾是偶像的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"cleverness-master-ribbon": {
@@ -1665,17 +1555,6 @@ const allRibbons = {
 			"kor": "천재라 불리던",
 			"cht": "被稱作天才的",
 			"chs": "被称作天才的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"toughness-master-ribbon": {
@@ -1718,17 +1597,6 @@ const allRibbons = {
 			"kor": "한때는 울끈불끈했던",
 			"cht": "曾經渾身肌肉的",
 			"chs": "曾经浑身肌肉的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"contest-star-ribbon": {
@@ -1771,17 +1639,6 @@ const allRibbons = {
 			"kor": "전설적인 스타",
 			"cht": "傳奇明星",
 			"chs": "传奇明星"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"twinkling-star-ribbon": {
@@ -1822,17 +1679,6 @@ const allRibbons = {
 			"kor": "트윙클스타",
 			"cht": "閃亮之星",
 			"chs": "闪亮之星"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"contest-memory-ribbon": {
@@ -1876,17 +1722,6 @@ const allRibbons = {
 			"kor": "반짝이는 추억을 가진",
 			"cht": "輝煌回憶裡的",
 			"chs": "辉煌回忆里的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"contest-memory-ribbon-gold": {
@@ -1931,17 +1766,6 @@ const allRibbons = {
 			"kor": "반짝이는 추억을 가진",
 			"cht": "輝煌回憶裡的",
 			"chs": "辉煌回忆里的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"winning-ribbon": {
@@ -2025,7 +1849,7 @@ const allRibbons = {
 		},
 		"descs": {
 			"ger": "Band, verliehen zum Sieg über den Kampfkoloss des Duellturms",
-			"eng": "A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower.
+			"eng": "A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower.",
 			"spa": "Cinta obtenida por vencer al Amo de la Torre en la Torre Batalla.",
 			"fre": "Ruban pour une victoire contre l'Aigle Tour de la Tour de Combat.",
 			"ita": "Fiocco per aver sconfitto il Boss Torre presso la Torre Lotta.",
@@ -2056,9 +1880,9 @@ const allRibbons = {
 		},
 		"descs": {
 			"ger": "Band, verliehen zum Sieg über den Kampfkoloss des Duellturms",
-			"eng": "A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower.
+			"eng": "A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower.",
 			"spa": "Cinta obtenida por vencer al Amo de la Torre en la Torre Batalla.",
-			"fre": "Ruban pour une victoire contre l’Aigle Tour de la Tour de Combat.",
+			"fre": "Ruban pour une victoire contre l'Aigle Tour de la Tour de Combat.",
 			"ita": "Fiocco per aver sconfitto il Boss Torre presso la Torre Lotta.",
 			"jpn": "バトルタワーで　タワータイクーンに　しょうりした　きねんの　リボン",
 			"kor": "배틀타워에서 타워타이쿤에게 승리한 기념리본"
@@ -2232,17 +2056,6 @@ const allRibbons = {
 			"kor": "뜨거운 추억을 가진",
 			"cht": "熱血回憶裡的",
 			"chs": "热血回忆里的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"battle-memory-ribbon-gold": {
@@ -2288,17 +2101,6 @@ const allRibbons = {
 			"kor": "뜨거운 추억을 가진",
 			"cht": "熱血回憶裡的",
 			"chs": "热血回忆里的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"skillful-battler-ribbon": {
@@ -2343,17 +2145,6 @@ const allRibbons = {
 			"kor": "베테랑",
 			"cht": "經驗老到的",
 			"chs": "经验老到的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"expert-battler-ribbon": {
@@ -2398,17 +2189,6 @@ const allRibbons = {
 			"kor": "달인",
 			"cht": "高手",
 			"chs": "高手"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"battle-tree-great-ribbon": {
@@ -2451,17 +2231,6 @@ const allRibbons = {
 			"kor": "트리 위너",
 			"cht": "對戰樹贏家",
 			"chs": "对战树赢家"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"battle-tree-master-ribbon": {
@@ -2506,17 +2275,6 @@ const allRibbons = {
 			"kor": "트리 마스터",
 			"cht": "對戰樹大師",
 			"chs": "对战树大师"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"tower-master-ribbon": {
@@ -2559,17 +2317,6 @@ const allRibbons = {
 			"kor": "타워 마스터",
 			"cht": "對戰塔大師",
 			"chs": "对战塔大师"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"artist-ribbon": {
@@ -2611,17 +2358,6 @@ const allRibbons = {
 			"kor": "그림 모델이 된",
 			"cht": "成為繪畫模特兒的",
 			"chs": "成为绘画模特的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"effort-ribbon": {
@@ -2682,17 +2418,6 @@ const allRibbons = {
 			"kor": "한때는 노력했던",
 			"cht": "那時很努力的",
 			"chs": "那时很努力的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"alert-ribbon": {
@@ -2742,17 +2467,6 @@ const allRibbons = {
 			"kor": "한때는 뚝심 있던",
 			"cht": "那天精神抖擻的",
 			"chs": "那天精神抖擞的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"shock-ribbon": {
@@ -2802,17 +2516,6 @@ const allRibbons = {
 			"kor": "한때는 겁쟁이였던",
 			"cht": "以前是膽小鬼的",
 			"chs": "以前是胆小鬼的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"downcast-ribbon": {
@@ -2862,17 +2565,6 @@ const allRibbons = {
 			"kor": "슬픈 일이 있었던",
 			"cht": "有著傷心過去的",
 			"chs": "有着伤心过去的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"careless-ribbon": {
@@ -2922,17 +2614,6 @@ const allRibbons = {
 			"kor": "실수하는 날도 있던",
 			"cht": "也曾犯錯的",
 			"chs": "也曾犯错的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"relax-ribbon": {
@@ -2982,17 +2663,6 @@ const allRibbons = {
 			"kor": "한때는 산뜻했던",
 			"cht": "那天神清氣爽的",
 			"chs": "那天神清气爽的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"snooze-ribbon": {
@@ -3042,17 +2712,6 @@ const allRibbons = {
 			"kor": "잠만 자던",
 			"cht": "總是在睡覺的",
 			"chs": "总是在睡觉的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"smile-ribbon": {
@@ -3102,17 +2761,6 @@ const allRibbons = {
 			"kor": "잘 웃던",
 			"cht": "笑口常開的",
 			"chs": "笑口常开的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"gorgeous-ribbon": {
@@ -3159,17 +2807,6 @@ const allRibbons = {
 			"kor": "고저스",
 			"cht": "豪華",
 			"chs": "豪华"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"royal-ribbon": {
@@ -3215,17 +2852,6 @@ const allRibbons = {
 			"kor": "로열",
 			"cht": "高貴",
 			"chs": "高贵"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"gorgeous-royal-ribbon": {
@@ -3271,17 +2897,6 @@ const allRibbons = {
 			"kor": "고저스&로열",
 			"cht": "豪華＆高貴",
 			"chs": "豪华＆高贵"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"footprint-ribbon": {
@@ -3333,17 +2948,6 @@ const allRibbons = {
 			"kor": "발자국이 훌륭한",
 			"cht": "以自己的腳印為傲的",
 			"chs": "以自己的脚印为傲的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"legend-ribbon": {
@@ -3384,17 +2988,6 @@ const allRibbons = {
 			"kor": "굉장한 기록을 보유한",
 			"cht": "保持厲害紀錄的",
 			"chs": "保持厉害纪录的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"best-friends-ribbon": {
@@ -3447,17 +3040,6 @@ const allRibbons = {
 			"kor": "절친",
 			"cht": "摯友",
 			"chs": "挚友"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"training-ribbon": {
@@ -3500,17 +3082,6 @@ const allRibbons = {
 			"kor": "시련을 함께한",
 			"cht": "一起接受過試煉的",
 			"chs": "一起接受过试练的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"battle-royal-master-ribbon": {
@@ -3555,17 +3126,6 @@ const allRibbons = {
 			"kor": "로열 마스터",
 			"cht": "皇家大師",
 			"chs": "皇家大师"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"master-rank-ribbon": {
@@ -3610,17 +3170,6 @@ const allRibbons = {
 			"kor": "랭크 마스터",
 			"cht": "級別對戰大師",
 			"chs": "级别对战大师"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"hisui-ribbon": {
@@ -3660,17 +3209,6 @@ const allRibbons = {
 			"kor": "먼 옛날의",
 			"cht": "遙遠過去的",
 			"chs": "遥远过去的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"country-ribbon": {
@@ -3708,17 +3246,6 @@ const allRibbons = {
 			"kor": "우승자",
 			"cht": "優勝者",
 			"chs": "优胜者"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"national-ribbon": {
@@ -3760,17 +3287,6 @@ const allRibbons = {
 			"kor": "고난을 극복한",
 			"cht": "克服了困難的",
 			"chs": "克服了困难的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"earth-ribbon": {
@@ -3811,17 +3327,6 @@ const allRibbons = {
 			"kor": "100명에게 승리한",
 			"cht": "１００連勝的",
 			"chs": "１００连胜的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"world-ribbon": {
@@ -3860,17 +3365,6 @@ const allRibbons = {
 			"kor": "세계를 제패한",
 			"cht": "稱霸世界的",
 			"chs": "称霸世界的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"classic-ribbon": {
@@ -3908,17 +3402,6 @@ const allRibbons = {
 			"kor": "포켓몬을 좋아하는",
 			"cht": "喜歡寶可夢的",
 			"chs": "喜欢宝可梦的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"premier-ribbon": {
@@ -3956,17 +3439,6 @@ const allRibbons = {
 			"kor": "기념일을 보낸",
 			"cht": "度過了紀念日的",
 			"chs": "度过了纪念日的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"event-ribbon": {
@@ -4004,17 +3476,6 @@ const allRibbons = {
 			"kor": "이벤트에 참가한",
 			"cht": "參加了活動的",
 			"chs": "参加了活动的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"birthday-ribbon": {
@@ -4052,17 +3513,6 @@ const allRibbons = {
 			"kor": "언제나 함께인",
 			"cht": "總是在一起的",
 			"chs": "总是在一起的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"special-ribbon": {
@@ -4100,17 +3550,6 @@ const allRibbons = {
 			"kor": "프리미엄한 날의",
 			"cht": "特別日子裡的",
 			"chs": "特别日子里的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"souvenir-ribbon": {
@@ -4148,17 +3587,6 @@ const allRibbons = {
 			"kor": "최고의 추억을 가진",
 			"cht": "精彩回憶裡的",
 			"chs": "精彩回忆里的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"wishing-ribbon": {
@@ -4196,17 +3624,6 @@ const allRibbons = {
 			"kor": "소원을 이룬",
 			"cht": "夢想成真的",
 			"chs": "梦想成真的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"battle-champion-ribbon": {
@@ -4244,17 +3661,6 @@ const allRibbons = {
 			"kor": "배틀 챔피언",
 			"cht": "對戰冠軍",
 			"chs": "对战冠军"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"world-champion-ribbon": {
@@ -4292,17 +3698,6 @@ const allRibbons = {
 			"kor": "월드 챔피언",
 			"cht": "世界冠軍",
 			"chs": "世界冠军"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"partner-ribbon": {
@@ -4323,7 +3718,7 @@ const allRibbons = {
 			"ger": "Spezielles Band zur Auszeichnung eines Pokémon, das dir von einem besonderen Trainer anvertraut wurde.",
 			"eng": "A special Ribbon awarded to a Pokémon that was once partnered with another great Trainer.",
 			"spa": "Cinta especial que llevan los Pokémon recibidos por parte de Entrenadores selectos.",
-			"fre": "Ruban spécial donné au Pokémon qu’un Dresseur ou une Dresseuse unique au monde vous a confié.",
+			"fre": "Ruban spécial donné au Pokémon qu'un Dresseur ou une Dresseuse unique au monde vous a confié.",
 			"ita": "Fiocco speciale indossato da Pokémon che ti sono stati affidati da Allenatori particolari.",
 			"jpn": "特別なトレーナーから　たくされた パートナーに　ついている　特別なリボン",
 			"kor": "특별한 트레이너로부터 받은 파트너가 달고 있는 특별한 리본",
@@ -4343,14 +3738,7 @@ const allRibbons = {
 		},
 		"title-is-prefix": {
 			"ger": 0,
-			"eng": 1,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
+			"eng": 1
 		},
 	},
 	"lunchtime-mark": {
@@ -4389,17 +3777,6 @@ const allRibbons = {
 			"kor": "배가 고픈",
 			"cht": "肚子餓扁了的",
 			"chs": "肚子饿扁了的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"sleepy-time-mark": {
@@ -4438,17 +3815,6 @@ const allRibbons = {
 			"kor": "졸린",
 			"cht": "想睡覺的",
 			"chs": "想睡觉的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"dusk-mark": {
@@ -4487,17 +3853,6 @@ const allRibbons = {
 			"kor": "슬슬 졸린",
 			"cht": "開始犯睏的",
 			"chs": "开始犯困的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"dawn-mark": {
@@ -4536,17 +3891,6 @@ const allRibbons = {
 			"kor": "일찍 일어난",
 			"cht": "很早就醒來的",
 			"chs": "很早就醒来的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"cloudy-mark": {
@@ -4585,17 +3929,6 @@ const allRibbons = {
 			"kor": "구름을 바라보는",
 			"cht": "盯著雲看的",
 			"chs": "盯着云看的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"rainy-mark": {
@@ -4634,17 +3967,6 @@ const allRibbons = {
 			"kor": "비에 젖은",
 			"cht": "在雨中哽咽的",
 			"chs": "在雨中哽咽的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"stormy-mark": {
@@ -4683,17 +4005,6 @@ const allRibbons = {
 			"kor": "번개에 놀라는",
 			"cht": "對打雷大呼小叫的",
 			"chs": "对打雷大呼小叫的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"snowy-mark": {
@@ -4732,17 +4043,6 @@ const allRibbons = {
 			"kor": "눈밭을 구르는",
 			"cht": "在雪裡打滾的",
 			"chs": "在雪里打滚的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"blizzard-mark": {
@@ -4781,17 +4081,6 @@ const allRibbons = {
 			"kor": "추위에 떠는",
 			"cht": "凍得發抖的",
 			"chs": "冻得发抖的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"dry-mark": {
@@ -4830,17 +4119,6 @@ const allRibbons = {
 			"kor": "목이 마른",
 			"cht": "喉嚨乾渴的",
 			"chs": "喉咙干渴的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"sandstorm-mark": {
@@ -4879,17 +4157,6 @@ const allRibbons = {
 			"kor": "모래투성이인",
 			"cht": "滿身沙子的",
 			"chs": "满身沙子的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"misty-mark": {
@@ -4928,17 +4195,6 @@ const allRibbons = {
 			"kor": "안개 속을 헤매는",
 			"cht": "對霧感到困惑的",
 			"chs": "对雾感到困惑的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"destiny-mark": {
@@ -4977,17 +4233,6 @@ const allRibbons = {
 			"kor": "운명을 느끼는",
 			"cht": "命中注定的",
 			"chs": "命中注定的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"fishing-mark": {
@@ -5026,17 +4271,6 @@ const allRibbons = {
 			"kor": "방금 낚아 팔팔한",
 			"cht": "剛釣上來活蹦亂跳的",
 			"chs": "刚钓上来活蹦乱跳的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"curry-mark": {
@@ -5075,17 +4309,6 @@ const allRibbons = {
 			"kor": "카레를 좋아하는",
 			"cht": "喜歡咖哩的",
 			"chs": "喜欢咖喱的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"uncommon-mark": {
@@ -5124,17 +4347,6 @@ const allRibbons = {
 			"kor": "사람을 따르는",
 			"cht": "不怕人的",
 			"chs": "不怕人的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"rare-mark": {
@@ -5173,17 +4385,6 @@ const allRibbons = {
 			"kor": "사람을 모르는",
 			"cht": "沒見過人類的",
 			"chs": "没见过人类的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"rowdy-mark": {
@@ -5222,17 +4423,6 @@ const allRibbons = {
 			"kor": "난폭한",
 			"cht": "脾氣暴躁的",
 			"chs": "脾气暴躁的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"absent-minded-mark": {
@@ -5271,17 +4461,6 @@ const allRibbons = {
 			"kor": "아무 생각이 없는",
 			"cht": "腦袋空空的",
 			"chs": "脑袋空空的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"jittery-mark": {
@@ -5320,17 +4499,6 @@ const allRibbons = {
 			"kor": "두근거리는",
 			"cht": "心跳不已的",
 			"chs": "心跳不已的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"excited-mark": {
@@ -5369,17 +4537,6 @@ const allRibbons = {
 			"kor": "기대에 찬",
 			"cht": "興奮的",
 			"chs": "兴奋期待的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"charismatic-mark": {
@@ -5418,17 +4575,6 @@ const allRibbons = {
 			"kor": "오라가 느껴지는",
 			"cht": "感覺到氣場的",
 			"chs": "感觉到气场的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"calmness-mark": {
@@ -5467,17 +4613,6 @@ const allRibbons = {
 			"kor": "쿨한",
 			"cht": "酷酷的",
 			"chs": "酷酷的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"intense-mark": {
@@ -5516,17 +4651,6 @@ const allRibbons = {
 			"kor": "적극적인",
 			"cht": "好鬥的",
 			"chs": "好斗的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"zoned-out-mark": {
@@ -5565,17 +4689,6 @@ const allRibbons = {
 			"kor": "멍한",
 			"cht": "在發呆的",
 			"chs": "在发呆的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"joyful-mark": {
@@ -5614,17 +4727,6 @@ const allRibbons = {
 			"kor": "행복해 보이는",
 			"cht": "看起來很幸福的",
 			"chs": "看起来很幸福的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"angry-mark": {
@@ -5663,17 +4765,6 @@ const allRibbons = {
 			"kor": "화가 난",
 			"cht": "氣呼呼的",
 			"chs": "气呼呼的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"smiley-mark": {
@@ -5712,17 +4803,6 @@ const allRibbons = {
 			"kor": "생긋생긋 웃는",
 			"cht": "笑瞇瞇的",
 			"chs": "笑眯眯的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"teary-mark": {
@@ -5761,17 +4841,6 @@ const allRibbons = {
 			"kor": "훌쩍훌쩍 우는",
 			"cht": "淚汪汪的",
 			"chs": "泪汪汪的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"upbeat-mark": {
@@ -5810,17 +4879,6 @@ const allRibbons = {
 			"kor": "기분이 좋은",
 			"cht": "心情好的",
 			"chs": "心情好的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"peeved-mark": {
@@ -5859,17 +4917,6 @@ const allRibbons = {
 			"kor": "기분이 나쁜",
 			"cht": "心情不好的",
 			"chs": "心情不好的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"intellectual-mark": {
@@ -5908,17 +4955,6 @@ const allRibbons = {
 			"kor": "지적인",
 			"cht": "聰慧的",
 			"chs": "聪慧的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"ferocious-mark": {
@@ -5957,17 +4993,6 @@ const allRibbons = {
 			"kor": "거칠게 날뛰는",
 			"cht": "狂暴的",
 			"chs": "狂暴的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"crafty-mark": {
@@ -6006,17 +5031,6 @@ const allRibbons = {
 			"kor": "빈틈을 노리는",
 			"cht": "伺機而動的",
 			"chs": "伺机而动的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"scowling-mark": {
@@ -6055,17 +5069,6 @@ const allRibbons = {
 			"kor": "엄격한",
 			"cht": "粗獷的",
 			"chs": "粗犷的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"kindly-mark": {
@@ -6104,17 +5107,6 @@ const allRibbons = {
 			"kor": "상냥한",
 			"cht": "溫柔的",
 			"chs": "温柔的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"flustered-mark": {
@@ -6153,17 +5145,6 @@ const allRibbons = {
 			"kor": "덤벙대는",
 			"cht": "慌慌張張的",
 			"chs": "慌慌张张的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"pumped-up-mark": {
@@ -6202,17 +5183,6 @@ const allRibbons = {
 			"kor": "의욕이 넘치는",
 			"cht": "充滿幹勁的",
 			"chs": "充满干劲的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"zero-energy-mark": {
@@ -6251,17 +5221,6 @@ const allRibbons = {
 			"kor": "의욕이 없는",
 			"cht": "毫無幹勁的",
 			"chs": "毫无干劲的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"prideful-mark": {
@@ -6300,17 +5259,6 @@ const allRibbons = {
 			"kor": "거만한",
 			"cht": "囂張跋扈的",
 			"chs": "嚣张跋扈的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"unsure-mark": {
@@ -6349,17 +5297,6 @@ const allRibbons = {
 			"kor": "자신감이 없는",
 			"cht": "缺乏自信的",
 			"chs": "缺乏自信的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"humble-mark": {
@@ -6398,17 +5335,6 @@ const allRibbons = {
 			"kor": "순박한",
 			"cht": "樸素的",
 			"chs": "朴素的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"thorny-mark": {
@@ -6447,17 +5373,6 @@ const allRibbons = {
 			"kor": "잘난 체하는",
 			"cht": "裝模作樣的",
 			"chs": "装模作样的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"vigor-mark": {
@@ -6496,17 +5411,6 @@ const allRibbons = {
 			"kor": "기운이 넘치는",
 			"cht": "精力充沛的",
 			"chs": "精力充沛的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"slump-mark": {
@@ -6545,17 +5449,6 @@ const allRibbons = {
 			"kor": "어딘가 지쳐 보이는",
 			"cht": "看似疲憊的",
 			"chs": "看似疲惫的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"jumbo-mark": {
@@ -6598,17 +5491,6 @@ const allRibbons = {
 			"kor": "커다란",
 			"cht": "大個子的",
 			"chs": "大个子"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"mini-mark": {
@@ -6651,17 +5533,6 @@ const allRibbons = {
 			"kor": "작은",
 			"cht": "小不點的",
 			"chs": "小不点"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"itemfinder-mark": {
@@ -6703,17 +5574,6 @@ const allRibbons = {
 			"kor": "트레져헌터",
 			"cht": "尋寶獵人",
 			"chs": "寻宝猎人"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"partner-mark": {
@@ -6755,17 +5615,6 @@ const allRibbons = {
 			"kor": "믿음직한 파트너",
 			"cht": "可靠的搭檔",
 			"chs": "可靠搭档"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"gourmand-mark": {
@@ -6807,17 +5656,6 @@ const allRibbons = {
 			"kor": "미식가",
 			"cht": "美食家",
 			"chs": "美食家"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"alpha-mark": {
@@ -6856,17 +5694,6 @@ const allRibbons = {
 			"kor": "우두머리였던",
 			"cht": "曾是頭目的",
 			"chs": "曾是头目的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"mightiest-mark": {
@@ -6888,7 +5715,7 @@ const allRibbons = {
 			"ger": "Zeichen eines besonders starken Pokémon.",
 			"eng": "A mark for an especially mighty Pokémon.",
 			"spa": "Emblema que distingue a un Pokémon poseedor de una fuerza especial.",
-			"fre": "L’insigne d’un Pokémon particulièrement puissant.",
+			"fre": "L'insigne d'un Pokémon particulièrement puissant.",
 			"ita": "Emblema che contraddistingue un Pokémon dalla forza eccezionale.",
 			"jpn": "特別な強さの　ポケモンである　あかし",
 			"kor": "특별히 강한 포켓몬임을 나타내는 증표",
@@ -6905,17 +5732,6 @@ const allRibbons = {
 			"kor": "최강의",
 			"cht": "最強的",
 			"chs": "最强的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	},
 	"titan-mark": {
@@ -6954,17 +5770,6 @@ const allRibbons = {
 			"kor": "주인이었던",
 			"cht": "曾是寶主的",
 			"chs": "曾是宝主的"
-		},
-		"title-is-prefix": {
-			"ger": 1,
-			"eng": 0,
-			"spa": 0,
-			"fre": 0,
-			"ita": 0,
-			"jpn": 1,
-			"kor": 1,
-			"cht": 1,
-			"chs": 1
 		}
 	}
 }
