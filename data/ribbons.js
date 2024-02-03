@@ -42,6 +42,17 @@ const allRibbons = {
 			"kor": "챔피언",
 			"cht": "冠軍",
 			"chs": "冠军"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"sinnoh-champion-ribbon": {
@@ -85,6 +96,17 @@ const allRibbons = {
 			"kor": "신오 챔피언",
 			"cht": "神奧冠軍",
 			"chs": "神奥冠军"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"kalos-champion-ribbon": {
@@ -125,6 +147,17 @@ const allRibbons = {
 			"kor": "칼로스 챔피언",
 			"cht": "卡洛斯冠軍",
 			"chs": "卡洛斯冠军"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"hoenn-champion-ribbon": {
@@ -165,6 +198,17 @@ const allRibbons = {
 			"kor": "호연 챔피언",
 			"cht": "豐緣冠軍",
 			"chs": "丰缘冠军"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"alola-champion-ribbon": {
@@ -207,6 +251,17 @@ const allRibbons = {
 			"kor": "알로라 챔피언",
 			"cht": "阿羅拉冠軍",
 			"chs": "阿罗拉冠军"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"galar-champion-ribbon": {
@@ -247,6 +302,17 @@ const allRibbons = {
 			"kor": "가라르 챔피언",
 			"cht": "伽勒爾冠軍",
 			"chs": "伽勒尔冠军"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"paldea-champion-ribbon": {
@@ -287,6 +353,17 @@ const allRibbons = {
 			"kor": "팔데아 챔피언",
 			"cht": "帕底亞冠軍",
 			"chs": "帕底亚冠军"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"cool-ribbon-hoenn": {
@@ -298,12 +375,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Coolness",
 			"eng": "Cool Ribbon",
-			"jpn": "クールリボン"
+			"spa": "Cinta Carisma",
+			"fre": "Ruban Sang-froid",
+			"ita": "Fiocco Classe",
+			"jpn": "クールリボン",
+			"kor": "쿨리본"
 		},
 		"descs": {
+			"ger": "Hoenn Coolness-Wettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Hoenn Cool Contest Normal Rank winner!",
-			"jpn": "ホウエンちほう　かっこよさコンテスト　ノーマルランク　ゆうしょう！"
+			"spa": "Concurso Carisma de Hoenn Ganador nivel normal.",
+			"fre": "Concours de Sang-froid de Hoenn Gagnant catégorie Normal!",
+			"ita": "Gara di Classe della regione di Hoenn Vincitore Livello Normale!",
+			"jpn": "ホウエンちほう　かっこよさコンテスト　ノーマルランク　ゆうしょう！",
+			"kor": "호연지방 근사함콘테스트 노말랭크 우승!"
 		}
 	},
 	"cool-ribbon-super-hoenn": {
@@ -315,12 +402,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Coolness Super",
 			"eng": "Cool Ribbon Super",
-			"jpn": "クールリボンスーパー"
+			"spa": "Cinta Carisma alto",
+			"fre": "Ruban Sang-froid Super",
+			"ita": "Fiocco Classe: Livello Super",
+			"jpn": "クールリボンスーパー",
+			"kor": "쿨리본슈퍼"
 		},
 		"descs": {
+			"ger": "Hoenn Coolness-Wettbewerb Sieger in der Super-Klasse!",
 			"eng": "Hoenn Cool Contest Super Rank winner!",
-			"jpn": "ホウエンちほう　かっこよさコンテスト　スーパーランク　ゆうしょう！"
+			"spa": "Concurso Carisma de Hoenn Ganador nivel alto.",
+			"fre": "Concours de Sang-froid de Hoenn Gagnant catégorie Super!",
+			"ita": "Gara di Classe della regione di Hoenn Vincitore Livello Super!",
+			"jpn": "ホウエンちほう　かっこよさコンテスト　スーパーランク　ゆうしょう！",
+			"kor": "호연지방 근사함콘테스트 슈퍼랭크 우승!"
 		}
 	},
 	"cool-ribbon-hyper-hoenn": {
@@ -332,12 +429,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Coolness Hyper",
 			"eng": "Cool Ribbon Hyper",
-			"jpn": "クールリボンハイパー"
+			"spa": "Cinta Carisma avanzado",
+			"fre": "Ruban Sang-froid Hyper",
+			"ita": "Fiocco Classe: Livello Iper",
+			"jpn": "クールリボンハイパー",
+			"kor": "쿨리본하이퍼"
 		},
 		"descs": {
-			"eng": "Hoenn Cool Contest Hyper Rank winner!",
-			"jpn": "ホウエンちほう　かっこよさコンテスト　ハイパーランク　ゆうしょう！"
+			"ger": "Hoenn Coolness-Wettbewerb Sieger in der Hyper-Klasse!",
+			"eng": "Hoenn Cool Contest Super Rank winner!",
+			"spa": "Concurso Carisma de Hoenn Ganador nivel avanzado.",
+			"fre": "Concours de Sang-froid de Hoenn Gagnant catégorie Hyper!",
+			"ita": "Gara di Classe della regione di Hoenn Vincitore Livello Iper!",
+			"jpn": "ホウエンちほう　かっこよさコンテスト　ハイパーランク　ゆうしょう！",
+			"kor": "호연지방 근사함콘테스트 하이퍼랭크 우승!"
 		}
 	},
 	"cool-ribbon-master-hoenn": {
@@ -349,12 +456,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Coolness Master",
 			"eng": "Cool Ribbon Master",
-			"jpn": "クールリボンマスター"
+			"spa": "Cinta Carisma experto",
+			"fre": "Ruban Sang-froid Master",
+			"ita": "Fiocco Classe: Livello Master",
+			"jpn": "クールリボンマスター",
+			"kor": "쿨리본마스터"
 		},
 		"descs": {
+			"ger": "Hoenn Coolness-Wettbewerb Sieger in der Master-Klasse!",
 			"eng": "Hoenn Cool Contest Master Rank winner!",
-			"jpn": "ホウエンちほう　かっこよさコンテスト　マスターランク　ゆうしょう！"
+			"spa": "Concurso Carisma de Hoenn Ganador nivel experto.",
+			"fre": "Concours de Sang-froid de Hoenn Gagnant catégorie Master!",
+			"ita": "Gara di Classe della regione di Hoenn Vincitore Livello Master!",
+			"jpn": "ホウエンちほう　かっこよさコンテスト　マスターランク　ゆうしょう！",
+			"kor": "호연지방 근사함콘테스트 마스터랭크 우승!"
 		}
 	},
 	"beauty-ribbon-hoenn": {
@@ -366,12 +483,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Schönheit",
 			"eng": "Beauty Ribbon",
-			"jpn": "ビューティリボン"
+			"spa": "Cinta Belleza",
+			"fre": "Ruban Beauté",
+			"ita": "Fiocco Bellezza",
+			"jpn": "ビューティリボン",
+			"kor": "뷰티리본"
 		},
 		"descs": {
+			"ger": "Hoenn Schönheitswettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Hoenn Beauty Contest Normal Rank winner!",
-			"jpn": "ホウエンちほう　うつくしさコンテスト　ノーマルランク　ゆうしょう！"
+			"spa": "Concurso Belleza de Hoenn Ganador nivel normal.",
+			"fre": "Concours de Beauté de Hoenn Gagnant catégorie Normal!",
+			"ita": "Gara di Bellezza della regione di Hoenn Vincitore Livello Normale!",
+			"jpn": "ホウエンちほう　うつくしさコンテスト　ノーマルランク　ゆうしょう！",
+			"kor": "호연지방 아름다움콘테스트 노말랭크 우승!"
 		}
 	},
 	"beauty-ribbon-super-hoenn": {
@@ -383,12 +510,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Schönheit Super",
 			"eng": "Beauty Ribbon Super",
-			"jpn": "ビューティリボンスーパー"
+			"spa": "Cinta Belleza alto",
+			"fre": "Ruban Beauté Super",
+			"ita": "Fiocco Bellezza: Livello Super",
+			"jpn": "ビューティリボンスーパー",
+			"kor": "뷰티리본슈퍼"
 		},
 		"descs": {
+			"ger": "Hoenn Schönheitswettbewerb Sieger in der Super-Klasse!",
 			"eng": "Hoenn Beauty Contest Super Rank winner!",
-			"jpn": "ホウエンちほう　うつくしさコンテスト　スーパーランク　ゆうしょう！"
+			"spa": "Concurso Belleza de Hoenn Ganador nivel alto.",
+			"fre": "Concours de Beauté de Hoenn Gagnant catégorie Super!",
+			"ita": "Gara di Bellezza della regione di Hoenn Vincitore Livello Super!",
+			"jpn": "ホウエンちほう　うつくしさコンテスト　スーパーランク　ゆうしょう！",
+			"kor": "호연지방 아름다움콘테스트 슈퍼랭크 우승!"
 		}
 	},
 	"beauty-ribbon-hyper-hoenn": {
@@ -400,12 +537,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Schönheit Hyper",
 			"eng": "Beauty Ribbon Hyper",
-			"jpn": "ビューティリボンハイパー"
+			"spa": "Cinta Belleza avanzado",
+			"fre": "Ruban Beauté Hyper",
+			"ita": "Fiocco Bellezza: Livello Iper",
+			"jpn": "ビューティリボンハイパー",
+			"kor": "뷰티리본하이퍼"
 		},
 		"descs": {
-			"eng": "Hoenn Beauty Contest Hyper Rank winner!",
-			"jpn": "ホウエンちほう　うつくしさコンテスト　ハイパーランク　ゆうしょう！"
+			"ger": "Hoenn Schönheitswettbewerb Sieger in der Hyper-Klasse!",
+			"eng": "Hoenn Beauty Contest Super Rank winner!",
+			"spa": "Concurso Belleza de Hoenn Ganador nivel avanzado.",
+			"fre": "Concours de Beauté de Hoenn Gagnant catégorie Hyper!",
+			"ita": "Gara di Bellezza della regione di Hoenn Vincitore Livello Iper!",
+			"jpn": "ホウエンちほう　うつくしさコンテスト　ハイパーランク　ゆうしょう！",
+			"kor": "호연지방 아름다움콘테스트 하이퍼랭크 우승!"
 		}
 	},
 	"beauty-ribbon-master-hoenn": {
@@ -417,12 +564,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Schönheit Master",
 			"eng": "Beauty Ribbon Master",
-			"jpn": "ビューティリボンマスター"
+			"spa": "Cinta Belleza experto",
+			"fre": "Ruban Beauté Master",
+			"ita": "Fiocco Bellezza: Livello Master",
+			"jpn": "ビューティリボンマスター",
+			"kor": "뷰티리본마스터"
 		},
 		"descs": {
+			"ger": "Hoenn Schönheitswettbewerb Sieger in der Master-Klasse!",
 			"eng": "Hoenn Beauty Contest Master Rank winner!",
-			"jpn": "ホウエンちほう　うつくしさコンテスト　マスターランク　ゆうしょう！"
+			"spa": "Concurso Belleza de Hoenn Ganador nivel experto.",
+			"fre": "Concours de Beauté de Hoenn Gagnant catégorie Master!",
+			"ita": "Gara di Bellezza della regione di Hoenn Vincitore Livello Master!",
+			"jpn": "ホウエンちほう　うつくしさコンテスト　マスターランク　ゆうしょう！",
+			"kor": "호연지방 아름다움콘테스트 마스터랭크 우승!"
 		}
 	},
 	"cute-ribbon-hoenn": {
@@ -434,12 +591,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Anmut",
 			"eng": "Cute Ribbon",
-			"jpn": "キュートリボン"
+			"spa": "Cinta Dulzura",
+			"fre": "Ruban Grâce",
+			"ita": "Fiocco Grazia",
+			"jpn": "キュートリボン",
+			"kor": "큐트리본"
 		},
 		"descs": {
+			"ger": "Hoenn Anmut-Wettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Hoenn Cute Contest Normal Rank winner!",
-			"jpn": "ホウエンちほう　かわいさコンテスト　ノーマルランク　ゆうしょう！"
+			"spa": "Concurso Dulzura de Hoenn Ganador nivel normal.",
+			"fre": "Concours de Grâce de Hoenn Gagnant catégorie Normal!",
+			"ita": "Gara di Grazia della regione di Hoenn Vincitore Livello Normale!",
+			"jpn": "ホウエンちほう　かわいさコンテスト　ノーマルランク　ゆうしょう！",
+			"kor": "호연지방 귀여움콘테스트 노말랭크 우승!"
 		}
 	},
 	"cute-ribbon-super-hoenn": {
@@ -451,12 +618,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Anmut Super",
 			"eng": "Cute Ribbon Super",
-			"jpn": "キュートリボンスーパー"
+			"spa": "Cinta Dulzura alto",
+			"fre": "Ruban Grâce Super",
+			"ita": "Fiocco Grazia: Livello Super",
+			"jpn": "キュートリボンスーパー",
+			"kor": "큐트리본슈퍼"
 		},
 		"descs": {
+			"ger": "Hoenn Anmut-Wettbewerb Sieger in der Super-Klasse!",
 			"eng": "Hoenn Cute Contest Super Rank winner!",
-			"jpn": "ホウエンちほう　かわいさコンテスト　スーパーランク　ゆうしょう！"
+			"spa": "Concurso Dulzura de Hoenn Ganador nivel alto.",
+			"fre": "Concours de Grâce de Hoenn Gagnant catégorie Super!",
+			"ita": "Gara di Grazia della regione di Hoenn Vincitore Livello Super!",
+			"jpn": "ホウエンちほう　かわいさコンテスト　スーパーランク　ゆうしょう！",
+			"kor": "호연지방 귀여움콘테스트 슈퍼랭크 우승!"
 		}
 	},
 	"cute-ribbon-hyper-hoenn": {
@@ -468,12 +645,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Anmut Hyper",
 			"eng": "Cute Ribbon Hyper",
-			"jpn": "キュートリボンハイパー"
+			"spa": "Cinta Dulzura avanzado",
+			"fre": "Ruban Grâce Hyper",
+			"ita": "Fiocco Grazia: Livello Iper",
+			"jpn": "キュートリボンハイパー",
+			"kor": "큐트리본하이퍼"
 		},
 		"descs": {
-			"eng": "Hoenn Cute Contest Hyper Rank winner!",
-			"jpn": "ホウエンちほう　かわいさコンテスト　ハイパーランク　ゆうしょう！"
+			"ger": "Hoenn Anmut-Wettbewerb Sieger in der Hyper-Klasse!",
+			"eng": "Hoenn Cute Contest Super Rank winner!",
+			"spa": "Concurso Dulzura de Hoenn Ganador nivel avanzado.",
+			"fre": "Concours de Grâce de Hoenn Gagnant catégorie Hyper!",
+			"ita": "Gara di Grazia della regione di Hoenn Vincitore Livello Iper!",
+			"jpn": "ホウエンちほう　かわいさコンテスト　ハイパーランク　ゆうしょう！",
+			"kor": "호연지방 귀여움콘테스트 하이퍼랭크 우승!"
 		}
 	},
 	"cute-ribbon-master-hoenn": {
@@ -485,12 +672,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Anmut Master",
 			"eng": "Cute Ribbon Master",
-			"jpn": "キュートリボンマスター"
+			"spa": "Cinta Dulzura experto",
+			"fre": "Ruban Grâce Master",
+			"ita": "Fiocco Grazia: Livello Master",
+			"jpn": "キュートリボンマスター",
+			"kor": "큐트리본마스터"
 		},
 		"descs": {
+			"ger": "Hoenn Anmut-Wettbewerb Sieger in der Master-Klasse!",
 			"eng": "Hoenn Cute Contest Master Rank winner!",
-			"jpn": "ホウエンちほう　かわいさコンテスト　マスターランク　ゆうしょう！"
+			"spa": "Concurso Dulzura de Hoenn Ganador nivel experto.",
+			"fre": "Concours de Grâce de Hoenn Gagnant catégorie Master!",
+			"ita": "Gara di Grazia della regione di Hoenn Vincitore Livello Master!",
+			"jpn": "ホウエンちほう　かわいさコンテスト　マスターランク　ゆうしょう！",
+			"kor": "호연지방 귀여움콘테스트 마스터랭크 우승!"
 		}
 	},
 	"smart-ribbon-hoenn": {
@@ -502,12 +699,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Klugheit",
 			"eng": "Smart Ribbon",
-			"jpn": "ジーニアスリボン"
+			"spa": "Cinta Ingenio",
+			"fre": "Ruban Intelligence",
+			"ita": "Fiocco Acume",
+			"jpn": "ジーニアスリボン",
+			"kor": "지니어스리본"
 		},
 		"descs": {
+			"ger": "Hoenn Klugheits-Wettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Hoenn Smart Contest Normal Rank winner!",
-			"jpn": "ホウエンちほう　かしこさコンテスト　ノーマルランク　ゆうしょう！"
+			"spa": "Concurso Belleza de Hoenn Ganador nivel normal.",
+			"fre": "Concours d'Intelligence de Hoenn Gagnant catégorie Normal!",
+			"ita": "Gara di Acume della regione di Hoenn Vincitore Livello Normale!",
+			"jpn": "ホウエンちほう　かしこさコンテスト　ノーマルランク　ゆうしょう！",
+			"kor": "호연지방 슬기로움콘테스트 노말랭크 우승!"
 		}
 	},
 	"smart-ribbon-super-hoenn": {
@@ -519,12 +726,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Klugheit Super",
 			"eng": "Smart Ribbon Super",
-			"jpn": "ジーニアスリボンスーパー"
+			"spa": "Cinta Ingenio alto",
+			"fre": "Ruban Intelligence Super",
+			"ita": "Fiocco Acume: Livello Super",
+			"jpn": "ジーニアスリボンスーパー",
+			"kor": "지니어스리본슈퍼"
 		},
 		"descs": {
+			"ger": "Hoenn Klugheits-Wettbewerb Sieger in der Super-Klasse!",
 			"eng": "Hoenn Smart Contest Super Rank winner!",
-			"jpn": "ホウエンちほう　かしこさコンテスト　スーパーランク　ゆうしょう！"
+			"spa": "Concurso Ingenio de Hoenn Ganador nivel alto.",
+			"fre": "Concours d'Intelligence de Hoenn Gagnant catégorie Super!",
+			"ita": "Gara di Acume della regione di Hoenn Vincitore Livello Super!",
+			"jpn": "ホウエンちほう　かしこさコンテスト　スーパーランク　ゆうしょう！",
+			"kor": "호연지방 슬기로움콘테스트 슈퍼랭크 우승!"
 		}
 	},
 	"smart-ribbon-hyper-hoenn": {
@@ -536,12 +753,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Klugheit Hyper",
 			"eng": "Smart Ribbon Hyper",
-			"jpn": "ジーニアスリボンハイパー"
+			"spa": "Cinta Ingenio avanzado",
+			"fre": "Ruban Intelligence Hyper",
+			"ita": "Fiocco Acume: Livello Iper",
+			"jpn": "ジーニアスリボンハイパー",
+			"kor": "지니어스리본하이퍼"
 		},
 		"descs": {
-			"eng": "Hoenn Smart Contest Hyper Rank winner!",
-			"jpn": "ホウエンちほう　かしこさコンテスト　ハイパーランク　ゆうしょう！"
+			"ger": "Hoenn Klugheits-Wettbewerb Sieger in der Hyper-Klasse!",
+			"eng": "Hoenn Smart Contest Super Rank winner!",
+			"spa": "Concurso Ingenio de Hoenn Ganador nivel avanzado.",
+			"fre": "Concours d'Intelligence de Hoenn Gagnant catégorie Hyper!",
+			"ita": "Gara di Acume della regione di Hoenn Vincitore Livello Iper!",
+			"jpn": "ホウエンちほう　かしこさコンテスト　ハイパーランク　ゆうしょう！",
+			"kor": "호연지방 슬기로움콘테스트 하이퍼랭크 우승!"
 		}
 	},
 	"smart-ribbon-master-hoenn": {
@@ -553,12 +780,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Klugheit Master",
 			"eng": "Smart Ribbon Master",
-			"jpn": "ジーニアスリボンマスター"
+			"spa": "Cinta Ingenio experto",
+			"fre": "Ruban Intelligence Master",
+			"ita": "Fiocco Acume: Livello Master",
+			"jpn": "ジーニアスリボンマスター",
+			"kor": "지니어스리본마스터"
 		},
 		"descs": {
+			"ger": "Hoenn Klugheits-Wettbewerb Sieger in der Master-Klasse!",
 			"eng": "Hoenn Smart Contest Master Rank winner!",
-			"jpn": "ホウエンちほう　かしこさコンテスト　マスターランク　ゆうしょう！"
+			"spa": "Concurso Ingenio de Hoenn Ganador nivel experto.",
+			"fre": "Concours d'Intelligence de Hoenn Gagnant catégorie Master!",
+			"ita": "Gara di Acume della regione di Hoenn Vincitore Livello Master!",
+			"jpn": "ホウエンちほう　かしこさコンテスト　マスターランク　ゆうしょう！",
+			"kor": "호연지방 슬기로움콘테스트 마스터랭크 우승!"
 		}
 	},
 	"tough-ribbon-hoenn": {
@@ -570,12 +807,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Stärke",
 			"eng": "Tough Ribbon",
-			"jpn": "パワフルリボン"
+			"spa": "Cinta Dureza",
+			"fre": "Ruban Robustesse",
+			"ita": "Fiocco Grinta",
+			"jpn": "パワフルリボン",
+			"kor": "파워풀리본"
 		},
 		"descs": {
+			"ger": "Hoenn Stärke-Wettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Hoenn Tough Contest Normal Rank winner!",
-			"jpn": "ホウエンちほう　たくましさコンテスト　ノーマルランク　ゆうしょう！"
+			"spa": "Concurso Dureza de Hoenn Ganador nivel normal.",
+			"fre": "Concours de Robustesse de Hoenn Gagnant catégorie Normal!",
+			"ita": "Gara di Grinta della regione di Hoenn Vincitore Livello Normale!",
+			"jpn": "ホウエンちほう　たくましさコンテスト　ノーマルランク　ゆうしょう！",
+			"kor": "호연지방 강인함콘테스트 노말랭크 우승!"
 		}
 	},
 	"tough-ribbon-super-hoenn": {
@@ -587,12 +834,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Stärke Super",
 			"eng": "Tough Ribbon Super",
-			"jpn": "パワフルリボンスーパー"
+			"spa": "Cinta Dureza alto",
+			"fre": "Ruban Robustesse Super",
+			"ita": "Fiocco Grinta: Livello Super",
+			"jpn": "パワフルリボンスーパー",
+			"kor": "파워풀리본슈퍼"
 		},
 		"descs": {
+			"ger": "Hoenn Stärke-Wettbewerb Sieger in der Super-Klasse!",
 			"eng": "Hoenn Tough Contest Super Rank winner!",
-			"jpn": "ホウエンちほう　たくましさコンテスト　スーパーランク　ゆうしょう！"
+			"spa": "Concurso Dureza de Hoenn Ganador nivel alto.",
+			"fre": "Concours de Robustesse de Hoenn Gagnant catégorie Super!",
+			"ita": "Gara di Grinta della regione di Hoenn Vincitore Livello Super!",
+			"jpn": "ホウエンちほう　たくましさコンテスト　スーパーランク　ゆうしょう！",
+			"kor": "호연지방 강인함콘테스트 슈퍼랭크 우승!"
 		}
 	},
 	"tough-ribbon-hyper-hoenn": {
@@ -604,12 +861,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Stärke Hyper",
 			"eng": "Tough Ribbon Hyper",
-			"jpn": "パワフルリボンハイパー"
+			"spa": "Cinta Dureza avanzado",
+			"fre": "Ruban Robustesse Hyper",
+			"ita": "Fiocco Grinta: Livello Iper",
+			"jpn": "パワフルリボンハイパー",
+			"kor": "파워풀리본하이퍼"
 		},
 		"descs": {
-			"eng": "Hoenn Tough Contest Hyper Rank winner!",
-			"jpn": "ホウエンちほう　たくましさコンテスト　ハイパーランク　ゆうしょう！"
+			"ger": "Hoenn Stärke-Wettbewerb Sieger in der Hyper-Klasse!",
+			"eng": "Hoenn Tough Contest Super Rank winner!",
+			"spa": "Concurso Dureza de Hoenn Ganador nivel avanzado.",
+			"fre": "Concours de Robustesse de Hoenn Gagnant catégorie Hyper!",
+			"ita": "Gara di Grinta della regione di Hoenn Vincitore Livello Iper!",
+			"jpn": "ホウエンちほう　たくましさコンテスト　ハイパーランク　ゆうしょう！",
+			"kor": "호연지방 강인함콘테스트 하이퍼랭크 우승!"
 		}
 	},
 	"tough-ribbon-master-hoenn": {
@@ -621,12 +888,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Stärke Master",
 			"eng": "Tough Ribbon Master",
-			"jpn": "パワフルリボンマスター"
+			"spa": "Cinta Dureza experto",
+			"fre": "Ruban Robustesse Master",
+			"ita": "Fiocco Grinta: Livello Master",
+			"jpn": "パワフルリボンマスター",
+			"kor": "파워풀리본마스터"
 		},
 		"descs": {
+			"ger": "Hoenn Stärke-Wettbewerb Sieger in der Master-Klasse!",
 			"eng": "Hoenn Tough Contest Master Rank winner!",
-			"jpn": "ホウエンちほう　たくましさコンテスト　マスターランク　ゆうしょう！"
+			"spa": "Concurso Dureza de Hoenn Ganador nivel experto.",
+			"fre": "Concours de Robustesse de Hoenn Gagnant catégorie Master!",
+			"ita": "Gara di Grinta della regione di Hoenn Vincitore Livello Master!",
+			"jpn": "ホウエンちほう　たくましさコンテスト　マスターランク　ゆうしょう！",
+			"kor": "호연지방 강인함콘테스트 마스터랭크 우승!"
 		}
 	},
 	"cool-ribbon-sinnoh": {
@@ -639,12 +916,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Coolness",
 			"eng": "Cool Ribbon",
-			"jpn": "クールリボン"
+			"spa": "Cinta Carisma",
+			"fre": "Ruban Sang-froid",
+			"ita": "Fiocco Classe",
+			"jpn": "クールリボン",
+			"kor": "쿨리본"
 		},
 		"descs": {
+			"ger": "Super-Coolness-Wettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Super Contest Cool Category Normal Rank winner!",
-			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　ノーマルランク　ゆうしょう！"
+			"spa": "Súper Concurso Carisma Ganador nivel normal.",
+			"fre": "Super Concours de Sang-froid Gagnant catégorie Normal!",
+			"ita": "Super Gara di Classe Vincitore Livello Normale!",
+			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　ノーマルランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 노말랭크 우승!"
 		}
 	},
 	"cool-ribbon-great-sinnoh": {
@@ -657,12 +944,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Coolness Mega",
 			"eng": "Cool Ribbon Great",
-			"jpn": "クールリボングレート"
+			"spa": "Cinta Carisma difícil",
+			"fre": "Ruban Sang-froid Méga",
+			"ita": "Fiocco Classe: Livello Mega",
+			"jpn": "クールリボングレート",
+			"kor": "쿨리본그레이트"
 		},
 		"descs": {
+			"ger": "Super-Coolness-Wettbewerb Sieger in der Mega-Klasse!",
 			"eng": "Super Contest Cool Category Great Rank winner!",
-			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　グレートランク　ゆうしょう！"
+			"spa": "Súper Concurso Carisma Ganador nivel difícil.",
+			"fre": "Super Concours de Sang-froid Gagnant catégorie Méga!",
+			"ita": "Super Gara di Classe Vincitore Livello Mega!",
+			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　グレートランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 그레이트랭크 우승!"
 		}
 	},
 	"cool-ribbon-ultra-sinnoh": {
@@ -675,12 +972,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Coolness Ultra",
 			"eng": "Cool Ribbon Ultra",
-			"jpn": "クールリボングレートウルトラ"
+			"spa": "Cinta Carisma superior",
+			"fre": "Ruban Sang-froid Ultra",
+			"ita": "Fiocco Classe: Livello Ultra",
+			"jpn": "クールリボンウルトラ",
+			"kor": "쿨리본울트라"
 		},
 		"descs": {
+			"ger": "Super-Coolness-Wettbewerb Sieger in der Ultra-Klasse!",
 			"eng": "Super Contest Cool Category Ultra Rank winner!",
-			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　ウルトラランク　ゆうしょう！"
+			"spa": "Súper Concurso Carisma Ganador nivel superior.",
+			"fre": "Super Concours de Sang-froid Gagnant catégorie Ultra!",
+			"ita": "Super Gara di Classe Vincitore Livello Ultra!",
+			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　ウルトラランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 울트라랭크 우승!"
 		}
 	},
 	"cool-ribbon-master-sinnoh": {
@@ -693,12 +1000,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Coolness Master",
 			"eng": "Cool Ribbon Master",
-			"jpn": "クールリボンマスター"
+			"spa": "Cinta Carisma experto",
+			"fre": "Ruban Sang-froid Master",
+			"ita": "Fiocco Classe: Livello Master",
+			"jpn": "クールリボンマスター",
+			"kor": "쿨리본마스터"
 		},
 		"descs": {
+			"ger": "Super-Coolness-Wettbewerb Sieger in der Master-Klasse!",
 			"eng": "Super Contest Cool Category Master Rank winner!",
-			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　マスターランク　ゆうしょう！"
+			"spa": "Súper Concurso Carisma Ganador nivel experto.",
+			"fre": "Super Concours de Sang-froid Gagnant catégorie Master!",
+			"ita": "Super Gara di Classe Vincitore Livello Master!",
+			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　マスターランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 마스터랭크 우승!"
 		}
 	},
 	"beauty-ribbon-sinnoh": {
@@ -711,12 +1028,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Schönheit",
 			"eng": "Beauty Ribbon",
-			"jpn": "ビューティリボン"
+			"spa": "Cinta Belleza",
+			"fre": "Ruban Beauté",
+			"ita": "Fiocco Bellezza",
+			"jpn": "ビューティリボン",
+			"kor": "뷰티리본"
 		},
 		"descs": {
+			"ger": "Super-CSchönheitswettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Super Contest Beauty Category Normal Rank winner!",
-			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　ノーマルランク　ゆうしょう！"
+			"spa": "Súper Concurso Belleza Ganador nivel normal.",
+			"fre": "Super Concours de Beauté Gagnant catégorie Normal!",
+			"ita": "Super Gara di Bellezza Vincitore Livello Normale!",
+			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　ノーマルランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 노말랭크 우승!"
 		}
 	},
 	"beauty-ribbon-great-sinnoh": {
@@ -729,12 +1056,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Schönheit Mega",
 			"eng": "Beauty Ribbon Great",
-			"jpn": "ビューティリボングレート"
+			"spa": "Cinta Belleza difícil",
+			"fre": "Ruban Beauté Méga",
+			"ita": "Fiocco Bellezza: Livello Mega",
+			"jpn": "ビューティリボングレート",
+			"kor": "뷰티리본그레이트"
 		},
 		"descs": {
+			"ger": "Super-Schönheitswettbewerb Sieger in der Mega-Klasse!",
 			"eng": "Super Contest Beauty Category Great Rank winner!",
-			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　グレートランク　ゆうしょう！"
+			"spa": "Súper Concurso Belleza Ganador nivel difícil.",
+			"fre": "Super Concours de Beauté Gagnant catégorie Méga!",
+			"ita": "Super Gara di Bellezza Vincitore Livello Mega!",
+			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　グレートランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 그레이트랭크 우승!"
 		}
 	},
 	"beauty-ribbon-ultra-sinnoh": {
@@ -747,12 +1084,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Schönheit Ultra",
 			"eng": "Beauty Ribbon Ultra",
-			"jpn": "ビューティリボンウルトラ"
+			"spa": "Cinta Belleza superior",
+			"fre": "Ruban Beauté Ultra",
+			"ita": "Fiocco Bellezza: Livello Ultra",
+			"jpn": "ビューティリボンウルトラ",
+			"kor": "뷰티리본울트라"
 		},
 		"descs": {
+			"ger": "Super-Schönheitswettbewerb Sieger in der Ultra-Klasse!",
 			"eng": "Super Contest Beauty Category Ultra Rank winner!",
-			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　ウルトラランク　ゆうしょう！"
+			"spa": "Súper Concurso Belleza Ganador nivel superior.",
+			"fre": "Super Concours de Beauté Gagnant catégorie Ultra!",
+			"ita": "Super Gara di Bellezza Vincitore Livello Ultra!",
+			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　ウルトラランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 울트라랭크 우승!"
 		}
 	},
 	"beauty-ribbon-master-sinnoh": {
@@ -765,12 +1112,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Schönheit Master",
 			"eng": "Beauty Ribbon Master",
-			"jpn": "ビューティリボンマスター"
+			"spa": "Cinta Belleza experto",
+			"fre": "Ruban Beauté Master",
+			"ita": "Fiocco Bellezza: Livello Master",
+			"jpn": "ビューティリボンマスター",
+			"kor": "뷰티리본마스터"
 		},
 		"descs": {
+			"ger": "Super-Schönheitswettbewerb Sieger in der Master-Klasse!",
 			"eng": "Super Contest Beauty Category Master Rank winner!",
-			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　マスターランク　ゆうしょう！"
+			"spa": "Súper Concurso Belleza Ganador nivel experto.",
+			"fre": "Super Concours de Beauté Gagnant catégorie Master!",
+			"ita": "Super Gara di Bellezza Vincitore Livello Master!",
+			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　マスターランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 마스터랭크 우승!"
 		}
 	},
 	"cute-ribbon-sinnoh": {
@@ -783,12 +1140,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Anmut",
 			"eng": "Cute Ribbon",
-			"jpn": "キュートリボン"
+			"spa": "Cinta Dulzura",
+			"fre": "Ruban Grâce",
+			"ita": "Fiocco Grazia",
+			"jpn": "キュートリボン",
+			"kor": "큐트리본"
 		},
 		"descs": {
+			"ger": "Super-Anmut-Wettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Super Contest Cute Category Normal Rank winner!",
-			"jpn": "スーパーコンテスト　かわいさ　ぶもん　ノーマルランク　ゆうしょう！"
+			"spa": "Súper Concurso Dulzura Ganador nivel normal.",
+			"fre": "Super Concours de Grâce Gagnant catégorie Normal!",
+			"ita": "Super Gara di Grazia Vincitore Livello Normale!",
+			"jpn": "スーパーコンテスト　かわいさ　ぶもん　ノーマルランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 귀여움 부문 노말랭크 우승!"
 		}
 	},
 	"cute-ribbon-great-sinnoh": {
@@ -801,12 +1168,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Anmut Mega",
 			"eng": "Cute Ribbon Great",
-			"jpn": "キュートリボングレート"
+			"spa": "Cinta Dulzura difícil",
+			"fre": "Ruban Grâce Méga",
+			"ita": "Fiocco Grazia: Livello Mega",
+			"jpn": "キュートリボングレート",
+			"kor": "큐트리본그레이트"
 		},
 		"descs": {
+			"ger": "Super-Anmut-Wettbewerb Sieger in der Mega-Klasse!",
 			"eng": "Super Contest Cute Category Great Rank winner!",
-			"jpn": "スーパーコンテスト　かわいさ　ぶもん　グレートランク　ゆうしょう！"
+			"spa": "Súper Concurso Dulzura Ganador nivel difícil.",
+			"fre": "Super Concours de Grâce Gagnant catégorie Méga!",
+			"ita": "Super Gara di Grazia Vincitore Livello Mega!",
+			"jpn": "スーパーコンテスト　かわいさ　ぶもん　グレートランク　ゆうしょう！",
+			"kr": "슈퍼콘테스트 귀여움 부문 그레이트랭크 우승!"
 		}
 	},
 	"cute-ribbon-ultra-sinnoh": {
@@ -819,12 +1196,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Anmut Ultra",
 			"eng": "Cute Ribbon Ultra",
-			"jpn": "キュートリボンウルトラ"
+			"spa": "Cinta Dulzura superior",
+			"fre": "Ruban Grâce Ultra",
+			"ita": "Fiocco Classe: Livello Ultra",
+			"jpn": "キュートリボンウルトラ",
+			"kor": "큐트리본울트라"
 		},
 		"descs": {
+			"ger": "Super-Anmut-Wettbewerb Sieger in der Ultra-Klasse!",
 			"eng": "Super Contest Cute Category Ultra Rank winner!",
-			"jpn": "スーパーコンテスト　かわいさ　ぶもん　ウルトラランク　ゆうしょう！"
+			"spa": "Súper Concurso Dulzura Ganador nivel superior.",
+			"fre": "Super Concours de Grâce Gagnant catégorie Ultra!",
+			"ita": "Super Gara di Grazia Vincitore Livello Ultra!",
+			"jpn": "スーパーコンテスト　かわいさ　ぶもん　ウルトラランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 귀여움 부문 울트라랭크 우승!"
 		}
 	},
 	"cute-ribbon-master-sinnoh": {
@@ -837,12 +1224,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Anmut Master",
 			"eng": "Cute Ribbon Master",
-			"jpn": "キュートリボンマスター"
+			"spa": "Cinta Dulzura experto",
+			"fre": "Ruban Grâce Master",
+			"ita": "Fiocco Grazia: Livello Master",
+			"jpn": "キュートリボンマスター",
+			"kor": "큐트리본마스터"
 		},
 		"descs": {
+			"ger": "Super-Anmut-Wettbewerb Sieger in der Master-Klasse!",
 			"eng": "Super Contest Cute Category Master Rank winner!",
-			"jpn": "スーパーコンテスト　かわいさ　ぶもん　マスターランク　ゆうしょう！"
+			"spa": "Súper Concurso Dulzura Ganador nivel experto.",
+			"fre": "Super Concours de Grâce Gagnant catégorie Master!",
+			"ita": "Super Gara di Grazia Vincitore Livello Master!",
+			"jpn": "スーパーコンテスト　かわいさ　ぶもん　マスターランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 귀여움 부문 마스터랭크 우승!"
 		}
 	},
 	"smart-ribbon-sinnoh": {
@@ -855,12 +1252,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Klugheit",
 			"eng": "Smart Ribbon",
-			"jpn": "ジーニアスリボン"
+			"spa": "Cinta Ingenio",
+			"fre": "Ruban Intelligence",
+			"ita": "Fiocco Acume",
+			"jpn": "ジーニアスリボン",
+			"kor": "지니어스리본"
 		},
 		"descs": {
+			"ger": "Super-Klugheits-Wettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Super Contest Smart Category Normal Rank winner!",
-			"jpn": "スーパーコンテスト　かしこさ　ぶもん　ノーマルランク　ゆうしょう！"
+			"spa": "Súper Concurso Ingenio Ganador nivel normal.",
+			"fre": "Super Concours d'Intelligence Gagnant catégorie Normal!",
+			"ita": "Super Gara di Acume Vincitore Livello Normale!",
+			"jpn": "スーパーコンテスト　かしこさ　ぶもん　ノーマルランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 노말랭크 우승!"
 		}
 	},
 	"smart-ribbon-great-sinnoh": {
@@ -873,12 +1280,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Klugheit Mega",
 			"eng": "Smart Ribbon Great",
-			"jpn": "ジーニアスリボングレート"
+			"spa": "Cinta Ingenio difícil",
+			"fre": "Ruban Intelligence Méga",
+			"ita": "Fiocco Acume: Livello Mega",
+			"jpn": "ジーニアスリボングレート",
+			"kor": "지니어스리본그레이트"
 		},
 		"descs": {
+			"ger": "Super-Klugheits-Wettbewerb Sieger in der Mega-Klasse!",
 			"eng": "Super Contest Smart Category Great Rank winner!",
-			"jpn": "スーパーコンテスト　かしこさ　ぶもん　グレートランク　ゆうしょう！"
+			"spa": "Súper Concurso Ingenio Ganador nivel difícil.",
+			"fre": "Super Concours d'Intelligence Gagnant catégorie Méga!",
+			"ita": "Super Gara di Acume Vincitore Livello Mega!",
+			"jpn": "スーパーコンテスト　かしこさ　ぶもん　グレートランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 그레이트랭크 우승!"
 		}
 	},
 	"smart-ribbon-ultra-sinnoh": {
@@ -891,12 +1308,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Klugheit Ultra",
 			"eng": "Smart Ribbon Ultra",
-			"jpn": "ジーニアスリボンウルトラ"
+			"spa": "Cinta Ingenio superior",
+			"fre": "Ruban Intelligence Ultra",
+			"ita": "Fiocco Acume: Livello Ultra",
+			"jpn": "ジーニアスリボンウルトラ",
+			"kor": "지니어스리본울트라"
 		},
 		"descs": {
+			"ger": "Super-Klugheits-Wettbewerb Sieger in der Ultra-Klasse!",
 			"eng": "Super Contest Smart Category Ultra Rank winner!",
-			"jpn": "スーパーコンテスト　かしこさ　ぶもん　ウルトラランク　ゆうしょう！"
+			"spa": "Súper Concurso Ingenio Ganador nivel superior.",
+			"fre": "Super Concours d'Intelligence Gagnant catégorie Ultra!",
+			"ita": "Super Gara di Acume Vincitore Livello Ultra!",
+			"jpn": "スーパーコンテスト　かしこさ　ぶもん　ウルトラランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 울트라랭크 우승!"
 		}
 	},
 	"smart-ribbon-master-sinnoh": {
@@ -909,12 +1336,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Klugheit Master",
 			"eng": "Smart Ribbon Master",
-			"jpn": "ジーニアスリボンマスター"
+			"spa": "Cinta Ingenio experto",
+			"fre": "Ruban Intelligence Master",
+			"ita": "Fiocco Acume: Livello Master",
+			"jpn": "ジーニアスリボンマスター",
+			"kor": "지니어스리본마스터"
 		},
 		"descs": {
+			"ger": "Super-Klugheits-Wettbewerb Sieger in der Master-Klasse!",
 			"eng": "Super Contest Smart Category Master Rank winner!",
-			"jpn": "スーパーコンテスト　かしこさ　ぶもん　マスターランク　ゆうしょう！"
+			"spa": "Súper Concurso Ingenio Ganador nivel experto.",
+			"fre": "Super Concours d'Intelligence Gagnant catégorie Master!",
+			"ita": "Super Gara di Acume Vincitore Livello Master!",
+			"jpn": "スーパーコンテスト　かしこさ　ぶもん　マスターランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 마스터랭크 우승!
 		}
 	},
 	"tough-ribbon-sinnoh": {
@@ -927,12 +1364,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Stärke",
 			"eng": "Tough Ribbon",
-			"jpn": "パワフルリボン"
+			"spa": "Cinta Dureza",
+			"fre": "Ruban Robustesse",
+			"ita": "Fiocco Grinta",
+			"jpn": "パワフルリボン",
+			"kor": "파워풀리본"
 		},
 		"descs": {
+			"ger": "Super-Stärkewettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Super Contest Tough Category Normal Rank winner!",
-			"jpn": "スーパーコンテスト　たくましさ　ぶもん　ノーマルランク　ゆうしょう！"
+			"spa": "Súper Concurso Dureza Ganador nivel normal.",
+			"fre": "Super Concours de Robustesse Gagnant catégorie Normal!",
+			"ita": "Super Gara di Grinta Vincitore Livello Normale!",
+			"jpn": "スーパーコンテスト　たくましさ　ぶもん　ノーマルランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 노말랭크 우승!"
 		}
 	},
 	"tough-ribbon-great-sinnoh": {
@@ -945,12 +1392,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Stärke Mega",
 			"eng": "Tough Ribbon Great",
-			"jpn": "パワフルリボングレート"
+			"spa": "Cinta Dureza difícil",
+			"fre": "Ruban Robustesse Méga",
+			"ita": "Fiocco Grinta: Livello Mega",
+			"jpn": "パワフルリボングレート",
+			"kor": "파워풀리본그레이트"
 		},
 		"descs": {
+			"ger": "Super-Stärkewettbewerb Sieger in der Mega-Klasse!",
 			"eng": "Super Contest Tough Category Great Rank winner!",
-			"jpn": "スーパーコンテスト　たくましさ　ぶもん　グレートランク　ゆうしょう！"
+			"spa": "Súper Concurso Dureza Ganador nivel difícil.",
+			"fre": "Super Concours de Robustesse Gagnant catégorie Méga!",
+			"ita": "Super Gara di Grinta Vincitore Livello Mega!",
+			"jpn": "スーパーコンテスト　たくましさ　ぶもん　グレートランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 그레이트랭크 우승!"
 		}
 	},
 	"tough-ribbon-ultra-sinnoh": {
@@ -963,12 +1420,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Stärke Ultra",
 			"eng": "Tough Ribbon Ultra",
-			"jpn": "パワフルリボンウルトラ"
+			"spa": "Cinta Dureza superior",
+			"fre": "Ruban Robustesse Ultra",
+			"ita": "Fiocco Grinta: Livello Ultra",
+			"jpn": "パワフルリボンウルトラ",
+			"kor": "파워풀리본울트라"
 		},
 		"descs": {
+			"ger": "Super-Stärkewettbewerb Sieger in der Ultra-Klasse!",
 			"eng": "Super Contest Tough Category Ultra Rank winner!",
-			"jpn": "スーパーコンテスト　たくましさ　ぶもん　ウルトラランク　ゆうしょう！"
+			"spa": "Súper Concurso Dureza Ganador nivel superior.",
+			"fre": "Super Concours de Robustesse Gagnant catégorie Ultra!",
+			"ita": "Super Gara di Grinta Vincitore Livello Ultra!",
+			"jpn": "スーパーコンテスト　たくましさ　ぶもん　ウルトラランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 울트라랭크 우승!"
 		}
 	},
 	"tough-ribbon-master-sinnoh": {
@@ -981,12 +1448,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Stärke Master",
 			"eng": "Tough Ribbon Master",
-			"jpn": "パワフルリボンマスター"
+			"spa": "Cinta Dureza experto",
+			"fre": "Ruban Robustesse Master",
+			"ita": "Fiocco Grinta: Livello Master",
+			"jpn": "パワフルリボンマスター",
+			"kor": "파워풀리본마스터"
 		},
 		"descs": {
+			"ger": "Super-Stärkewettbewerb Sieger in der Master-Klasse!",
 			"eng": "Super Contest Tough Category Master Rank winner!",
-			"jpn": "スーパーコンテスト　たくましさ　ぶもん　マスターランク　ゆうしょう！"
+			"spa": "Súper Concurso Dureza Ganador nivel experto.",
+			"fre": "Super Concours de Robustesse Gagnant catégorie Master!",
+			"ita": "Super Gara di Grinta Vincitore Livello Master!",
+			"jpn": "スーパーコンテスト　たくましさ　ぶもん　マスターランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 마스터랭크 우승!
 		}
 	},
 	"coolness-master-ribbon": {
@@ -1029,6 +1506,17 @@ const allRibbons = {
 			"kor": "과거의 스타",
 			"cht": "曾是明星的",
 			"chs": "曾经是明星的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"beauty-master-ribbon": {
@@ -1071,6 +1559,17 @@ const allRibbons = {
 			"kor": "한때는 아름다웠던",
 			"cht": "當時美麗動人的",
 			"chs": "当时美丽动人的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"cuteness-master-ribbon": {
@@ -1113,6 +1612,17 @@ const allRibbons = {
 			"kor": "과거의 아이돌",
 			"cht": "曾是偶像的",
 			"chs": "曾是偶像的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"cleverness-master-ribbon": {
@@ -1155,6 +1665,17 @@ const allRibbons = {
 			"kor": "천재라 불리던",
 			"cht": "被稱作天才的",
 			"chs": "被称作天才的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"toughness-master-ribbon": {
@@ -1197,6 +1718,17 @@ const allRibbons = {
 			"kor": "한때는 울끈불끈했던",
 			"cht": "曾經渾身肌肉的",
 			"chs": "曾经浑身肌肉的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"contest-star-ribbon": {
@@ -1239,6 +1771,17 @@ const allRibbons = {
 			"kor": "전설적인 스타",
 			"cht": "傳奇明星",
 			"chs": "传奇明星"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"twinkling-star-ribbon": {
@@ -1279,6 +1822,17 @@ const allRibbons = {
 			"kor": "트윙클스타",
 			"cht": "閃亮之星",
 			"chs": "闪亮之星"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"contest-memory-ribbon": {
@@ -1322,6 +1876,17 @@ const allRibbons = {
 			"kor": "반짝이는 추억을 가진",
 			"cht": "輝煌回憶裡的",
 			"chs": "辉煌回忆里的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"contest-memory-ribbon-gold": {
@@ -1366,6 +1931,17 @@ const allRibbons = {
 			"kor": "반짝이는 추억을 가진",
 			"cht": "輝煌回憶裡的",
 			"chs": "辉煌回忆里的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"winning-ribbon": {
@@ -1379,12 +1955,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band des Gewinners",
 			"eng": "Winning Ribbon",
-			"jpn": "ウイニングリボン"
+			"spa": "Cinta Ganador",
+			"fre": "Ruban Gagnant",
+			"ita": "Fiocco Vittoria",
+			"jpn": "ウイニングリボン",
+			"kor": "위닝리본"
 		},
 		"descs": {
+			"ger": "Band für Siege in der Lv. 50-Kategorie im Duellturm von Hoenn",
 			"eng": "Ribbon awarded for clearing Hoenn's Battle Tower's Lv. 50 challenge.",
-			"jpn": "ホウエンの　バトルタワア　レベル５０を　かちぬいた　きねんの　リボン"
+			"spa": "Cinta obtenida por superar el desafío de la Torre Batalla de Hoenn Nv. 50.",
+			"fre": "Ruban pour une victoire au N. 50 de la Tour de Combat de Hoenn.",
+			"ita": "Fiocco per aver completato la sfida al L. 50 della Torre Lotta della regione di Hoenn.",
+			"jpn": "ホウエンの　バトルタワア　レベル５０を　かちぬいた　きねんの　リボン",
+			"kor": "호연의 배틀타워 레벨 50에서 연승한 기념리본"
 		}
 	},
 	"victory-ribbon": {
@@ -1398,12 +1984,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band des Sieges",
 			"eng": "Victory Ribbon",
-			"jpn": "ビクトリーリボン"
+			"spa": "Cinta Victoria",
+			"fre": "Ruban Victoire",
+			"ita": "Fiocco Trionfo",
+			"jpn": "ビクトリーリボン",
+			"kor": "빅토리리본"
 		},
 		"descs": {
+			"ger": "Band für Siege in der Lv. 100-Kategorie im Duellturm von Hoenn",
 			"eng": "Ribbon awarded for clearing Hoenn's Battle Tower's Lv. 100 challenge.",
-			"jpn": "ホウエンの　バトルタワア　レベル１００を　かちぬいた　きねんの　リボン"
+			"spa": "Cinta obtenida por superar el desafío de la Torre Batalla de Hoenn Nv. 100.",
+			"fre": "Ruban pour une victoire au N. 100 de la Tour de Combat de Hoenn.",
+			"ita": "Fiocco per aver completato la sfida al L. 100 della Torre Lotta della regione di Hoenn.",
+			"jpn": "ホウエンの　バトルタワア　レベル１００を　かちぬいた　きねんの　リボン",
+			"kor": "호연의 배틀타워 레벨 100에서 연승한 기념리본"
 		}
 	},
 	"ability-ribbon": {
@@ -1419,12 +2015,22 @@ const allRibbons = {
 			"ss"
 		],
 		"names": {
+			"ger": "Band der Fähigkeit",
 			"eng": "Ability Ribbon",
-			"jpn": "アビリティリボン"
+			"spa": "Cinta Habilidad",
+			"fre": "Ruban Aptitude",
+			"ita": "Fiocco Abilità",
+			"jpn": "アビリティリボン",
+			"kor": "어빌리티리본"
 		},
 		"descs": {
-			"eng": "A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower.",
-			"jpn": "バトルタワーで　タワータイクーンに　しょうりした　きねんの　リボン"
+			"ger": "Band, verliehen zum Sieg über den Kampfkoloss des Duellturms",
+			"eng": "A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower.
+			"spa": "Cinta obtenida por vencer al Amo de la Torre en la Torre Batalla.",
+			"fre": "Ruban pour une victoire contre l'Aigle Tour de la Tour de Combat.",
+			"ita": "Fiocco per aver sconfitto il Boss Torre presso la Torre Lotta.",
+			"jpn": "バトルタワーで　タワータイクーンに　しょうりした　きねんの　リボン",
+			"kor": "배틀타워에서 타워타이쿤에게 승리한 기념리본"
 		}
 	},
 	"great-ability-ribbon": {
@@ -1440,12 +2046,22 @@ const allRibbons = {
 			"ss"
 		],
 		"names": {
+			"ger": "Großes Band der Fähigkeit",
 			"eng": "Great Ability Ribbon",
-			"jpn": "グレートアビリティリボン"
+			"spa": "Cinta Gran Habilidad",
+			"fre": "Ruban Aptitude Méga",
+			"ita": "Fiocco Abilità Mega",
+			"jpn": "グレートアビリティリボン",
+			"kor": "그레이트어빌리티리본"
 		},
 		"descs": {
-			"eng": "A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower.",
-			"jpn": "バトルタワーで　タワータイクーンに　しょうりした　きねんの　リボン"
+			"ger": "Band, verliehen zum Sieg über den Kampfkoloss des Duellturms",
+			"eng": "A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower.
+			"spa": "Cinta obtenida por vencer al Amo de la Torre en la Torre Batalla.",
+			"fre": "Ruban pour une victoire contre l’Aigle Tour de la Tour de Combat.",
+			"ita": "Fiocco per aver sconfitto il Boss Torre presso la Torre Lotta.",
+			"jpn": "バトルタワーで　タワータイクーンに　しょうりした　きねんの　リボン",
+			"kor": "배틀타워에서 타워타이쿤에게 승리한 기념리본"
 		}
 	},
 	"double-ability-ribbon": {
@@ -1461,12 +2077,22 @@ const allRibbons = {
 			"ss"
 		],
 		"names": {
+			"ger": "Doppel-Band der Fähigkeit",
 			"eng": "Double Ability Ribbon",
-			"jpn": "ダブルアビリティリボン"
+			"spa": "Cinta Doble Habilidad",
+			"fre": "Ruban Aptitude Duo",
+			"ita": "Fiocco Abilità Doppia",
+			"jpn": "ダブルアビリティリボン",
+			"kor": "더블어빌리티리본"
 		},
 		"descs": {
+			"ger": "Band für die Meisterung des Doppels im Sinnoh Duellturm",
 			"eng": "A Ribbon awarded for completing the Battle Tower Double challenge.",
-			"jpn": "バトルタワーで　ダブルを　かちぬいた　きねんの　リボン"
+			"spa": "Cinta obtenida por superar el desafío doble en la Torre Batalla.",
+			"fre": "Ruban pour une réussite au défi Duo de la Tour de Combat.",
+			"ita": "Fiocco per aver concluso la Lotta in Doppio della Torre Lotta.",
+			"jpn": "バトルタワーで　ダブルを　かちぬいた　きねんの　リボン",
+			"kor": "배틀타워 더블을 연승한 기념리본"
 		}
 	},
 	"multi-ability-ribbon": {
@@ -1482,12 +2108,22 @@ const allRibbons = {
 			"ss"
 		],
 		"names": {
+			"ger": "Multi-Band der Fähigkeit",
 			"eng": "Multi Ability Ribbon",
-			"jpn": "マルチアビリティリボン"
+			"spa": "Cinta Habilidad Múltiple",
+			"fre": "Ruban Aptitude Multi",
+			"ita": "Fiocco Abilità Multipla",
+			"jpn": "マルチアビリティリボン",
+			"kor": "멀티어빌리티리본"
 		},
 		"descs": {
+			"ger": "Band für die Meisterung der Multi-Herausforderung im Sinnoh Duellturm",
 			"eng": "A Ribbon awarded for completing the Battle Tower Multi challenge.",
-			"jpn": "バトルタワーで　マルチを　かちぬいた　きねんの　リボン"
+			"spa": "Cinta obtenida por superar el desafío múlt. en la Torre Batalla.",
+			"fre": "Ruban pour une réussite au défi Multi de la Tour de Combat.",
+			"ita": "Fiocco per aver concluso la Lotta Multipla della Torre Lotta.",
+			"jpn": "バトルタワーで　マルチを　かちぬいた　きねんの　リボン",
+			"kor": "배틀타워 멀티를 연승한 기념리본"
 		}
 	},
 	"pair-ability-ribbon": {
@@ -1503,12 +2139,22 @@ const allRibbons = {
 			"ss"
 		],
 		"names": {
+			"ger": "Paar-Band der Fähigkeit",
 			"eng": "Pair Ability Ribbon",
-			"jpn": "ペアアビリティリボン"
+			"spa": "Cinta Habilidad Par",
+			"fre": "Ruban Aptitude Paire",
+			"ita": "Fiocco Abilità Insieme",
+			"jpn": "ペアアビリティリボン",
+			"kor": "페어어빌리티리본"
 		},
 		"descs": {
+			"ger": "Band für die Meisterung der Link-Multi-Herausforderung im Sinnoh Duellturm",
 			"eng": "A Ribbon awarded for completing the Battle Tower Link Multi challenge.",
-			"jpn": "バトルタワーで　つうしんマルチを　かちぬいた　きねんの　リボン"
+			"spa": "Cinta obtenida por superar el desafío múlt. conexión en la Torre Batalla.",
+			"fre": "Ruban pour une réussite au défi Multi Link de la Tour de Combat.",
+			"ita": "Fiocco per aver concluso la Lotta Multipla in Link della Torre Lotta.",
+			"jpn": "バトルタワーで　つうしんマルチを　かちぬいた　きねんの　リボン",
+			"kor": "배틀타워 통신멀티를 연승한 기념리본"
 		}
 	},
 	"world-ability-ribbon": {
@@ -1525,12 +2171,22 @@ const allRibbons = {
 			"ss"
 		],
 		"names": {
+			"ger": "Welt-Band der Fähigkeit",
 			"eng": "World Ability Ribbon",
-			"jpn": "ワールドアビリティリボン"
+			"spa": "Cinta Habilidad Mundial",
+			"fre": "Ruban Aptitude Monde",
+			"ita": "Fiocco Abilità Mondiale",
+			"jpn": "ワールドアビリティリボン",
+			"kor": "월드어빌리티리본"
 		},
 		"descs": {
+			"ger": "Band für die Meisterung der Wi-Fi-Herausforderung im Sinnoh Duellturm",
 			"eng": "A Ribbon awarded for completing the Wi-Fi Battle Tower challenge.",
-			"jpn": "Ｗｉ－Ｆｉバトルタワーを　かちぬいた　きねんの　リボン"
+			"spa": "Cinta obtenida por superar el desafío en la Torre Batalla Wi-Fi.",
+			"fre": "Ruban pour une réussite au défi Wi-Fi de la Tour de Combat.",
+			"ita": "Fiocco per aver completato la Torre Lotta Wi-Fi.",
+			"jpn": "Ｗｉ－Ｆｉバトルタワーを　かちぬいた　きねんの　リボン",
+			"kor": "Wi-Fi 배틀타워를 연승한 기념리본"
 		}
 	},
 	"battle-memory-ribbon": {
@@ -1576,6 +2232,17 @@ const allRibbons = {
 			"kor": "뜨거운 추억을 가진",
 			"cht": "熱血回憶裡的",
 			"chs": "热血回忆里的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"battle-memory-ribbon-gold": {
@@ -1621,6 +2288,17 @@ const allRibbons = {
 			"kor": "뜨거운 추억을 가진",
 			"cht": "熱血回憶裡的",
 			"chs": "热血回忆里的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"skillful-battler-ribbon": {
@@ -1665,6 +2343,17 @@ const allRibbons = {
 			"kor": "베테랑",
 			"cht": "經驗老到的",
 			"chs": "经验老到的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"expert-battler-ribbon": {
@@ -1709,6 +2398,17 @@ const allRibbons = {
 			"kor": "달인",
 			"cht": "高手",
 			"chs": "高手"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"battle-tree-great-ribbon": {
@@ -1751,6 +2451,17 @@ const allRibbons = {
 			"kor": "트리 위너",
 			"cht": "對戰樹贏家",
 			"chs": "对战树赢家"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"battle-tree-master-ribbon": {
@@ -1795,6 +2506,17 @@ const allRibbons = {
 			"kor": "트리 마스터",
 			"cht": "對戰樹大師",
 			"chs": "对战树大师"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"tower-master-ribbon": {
@@ -1837,6 +2559,17 @@ const allRibbons = {
 			"kor": "타워 마스터",
 			"cht": "對戰塔大師",
 			"chs": "对战塔大师"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"artist-ribbon": {
@@ -1878,6 +2611,17 @@ const allRibbons = {
 			"kor": "그림 모델이 된",
 			"cht": "成為繪畫模特兒的",
 			"chs": "成为绘画模特的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"effort-ribbon": {
@@ -1938,6 +2682,17 @@ const allRibbons = {
 			"kor": "한때는 노력했던",
 			"cht": "那時很努力的",
 			"chs": "那时很努力的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"alert-ribbon": {
@@ -1987,6 +2742,17 @@ const allRibbons = {
 			"kor": "한때는 뚝심 있던",
 			"cht": "那天精神抖擻的",
 			"chs": "那天精神抖擞的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"shock-ribbon": {
@@ -2036,6 +2802,17 @@ const allRibbons = {
 			"kor": "한때는 겁쟁이였던",
 			"cht": "以前是膽小鬼的",
 			"chs": "以前是胆小鬼的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"downcast-ribbon": {
@@ -2085,6 +2862,17 @@ const allRibbons = {
 			"kor": "슬픈 일이 있었던",
 			"cht": "有著傷心過去的",
 			"chs": "有着伤心过去的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"careless-ribbon": {
@@ -2134,6 +2922,17 @@ const allRibbons = {
 			"kor": "실수하는 날도 있던",
 			"cht": "也曾犯錯的",
 			"chs": "也曾犯错的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"relax-ribbon": {
@@ -2183,6 +2982,17 @@ const allRibbons = {
 			"kor": "한때는 산뜻했던",
 			"cht": "那天神清氣爽的",
 			"chs": "那天神清气爽的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"snooze-ribbon": {
@@ -2232,6 +3042,17 @@ const allRibbons = {
 			"kor": "잠만 자던",
 			"cht": "總是在睡覺的",
 			"chs": "总是在睡觉的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"smile-ribbon": {
@@ -2281,6 +3102,17 @@ const allRibbons = {
 			"kor": "잘 웃던",
 			"cht": "笑口常開的",
 			"chs": "笑口常开的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"gorgeous-ribbon": {
@@ -2327,6 +3159,17 @@ const allRibbons = {
 			"kor": "고저스",
 			"cht": "豪華",
 			"chs": "豪华"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"royal-ribbon": {
@@ -2372,6 +3215,17 @@ const allRibbons = {
 			"kor": "로열",
 			"cht": "高貴",
 			"chs": "高贵"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"gorgeous-royal-ribbon": {
@@ -2417,6 +3271,17 @@ const allRibbons = {
 			"kor": "고저스&로열",
 			"cht": "豪華＆高貴",
 			"chs": "豪华＆高贵"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"footprint-ribbon": {
@@ -2468,6 +3333,17 @@ const allRibbons = {
 			"kor": "발자국이 훌륭한",
 			"cht": "以自己的腳印為傲的",
 			"chs": "以自己的脚印为傲的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"legend-ribbon": {
@@ -2508,6 +3384,17 @@ const allRibbons = {
 			"kor": "굉장한 기록을 보유한",
 			"cht": "保持厲害紀錄的",
 			"chs": "保持厉害纪录的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"best-friends-ribbon": {
@@ -2560,6 +3447,17 @@ const allRibbons = {
 			"kor": "절친",
 			"cht": "摯友",
 			"chs": "挚友"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"training-ribbon": {
@@ -2602,6 +3500,17 @@ const allRibbons = {
 			"kor": "시련을 함께한",
 			"cht": "一起接受過試煉的",
 			"chs": "一起接受过试练的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"battle-royal-master-ribbon": {
@@ -2646,6 +3555,17 @@ const allRibbons = {
 			"kor": "로열 마스터",
 			"cht": "皇家大師",
 			"chs": "皇家大师"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"master-rank-ribbon": {
@@ -2690,6 +3610,17 @@ const allRibbons = {
 			"kor": "랭크 마스터",
 			"cht": "級別對戰大師",
 			"chs": "级别对战大师"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"hisui-ribbon": {
@@ -2729,6 +3660,17 @@ const allRibbons = {
 			"kor": "먼 옛날의",
 			"cht": "遙遠過去的",
 			"chs": "遥远过去的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"country-ribbon": {
@@ -2766,6 +3708,17 @@ const allRibbons = {
 			"kor": "우승자",
 			"cht": "優勝者",
 			"chs": "优胜者"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"national-ribbon": {
@@ -2807,6 +3760,17 @@ const allRibbons = {
 			"kor": "고난을 극복한",
 			"cht": "克服了困難的",
 			"chs": "克服了困难的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"earth-ribbon": {
@@ -2847,6 +3811,17 @@ const allRibbons = {
 			"kor": "100명에게 승리한",
 			"cht": "１００連勝的",
 			"chs": "１００连胜的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"world-ribbon": {
@@ -2885,6 +3860,17 @@ const allRibbons = {
 			"kor": "세계를 제패한",
 			"cht": "稱霸世界的",
 			"chs": "称霸世界的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"classic-ribbon": {
@@ -2922,6 +3908,17 @@ const allRibbons = {
 			"kor": "포켓몬을 좋아하는",
 			"cht": "喜歡寶可夢的",
 			"chs": "喜欢宝可梦的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"premier-ribbon": {
@@ -2959,6 +3956,17 @@ const allRibbons = {
 			"kor": "기념일을 보낸",
 			"cht": "度過了紀念日的",
 			"chs": "度过了纪念日的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"event-ribbon": {
@@ -2996,6 +4004,17 @@ const allRibbons = {
 			"kor": "이벤트에 참가한",
 			"cht": "參加了活動的",
 			"chs": "参加了活动的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"birthday-ribbon": {
@@ -3033,6 +4052,17 @@ const allRibbons = {
 			"kor": "언제나 함께인",
 			"cht": "總是在一起的",
 			"chs": "总是在一起的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"special-ribbon": {
@@ -3070,6 +4100,17 @@ const allRibbons = {
 			"kor": "프리미엄한 날의",
 			"cht": "特別日子裡的",
 			"chs": "特别日子里的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"souvenir-ribbon": {
@@ -3107,6 +4148,17 @@ const allRibbons = {
 			"kor": "최고의 추억을 가진",
 			"cht": "精彩回憶裡的",
 			"chs": "精彩回忆里的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"wishing-ribbon": {
@@ -3144,6 +4196,17 @@ const allRibbons = {
 			"kor": "소원을 이룬",
 			"cht": "夢想成真的",
 			"chs": "梦想成真的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"battle-champion-ribbon": {
@@ -3181,6 +4244,17 @@ const allRibbons = {
 			"kor": "배틀 챔피언",
 			"cht": "對戰冠軍",
 			"chs": "对战冠军"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"world-champion-ribbon": {
@@ -3218,6 +4292,17 @@ const allRibbons = {
 			"kor": "월드 챔피언",
 			"cht": "世界冠軍",
 			"chs": "世界冠军"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"partner-ribbon": {
@@ -3235,27 +4320,38 @@ const allRibbons = {
 			"chs": "同伴奖章"
 		},
 		"descs": {
-			"ger": "",
+			"ger": "Spezielles Band zur Auszeichnung eines Pokémon, das dir von einem besonderen Trainer anvertraut wurde.",
 			"eng": "A special Ribbon awarded to a Pokémon that was once partnered with another great Trainer.",
 			"spa": "Cinta especial que llevan los Pokémon recibidos por parte de Entrenadores selectos.",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"fre": "Ruban spécial donné au Pokémon qu’un Dresseur ou une Dresseuse unique au monde vous a confié.",
+			"ita": "Fiocco speciale indossato da Pokémon che ti sono stati affidati da Allenatori particolari.",
+			"jpn": "特別なトレーナーから　たくされた パートナーに　ついている　特別なリボン",
+			"kor": "특별한 트레이너로부터 받은 파트너가 달고 있는 특별한 리본",
+			"cht": "受特殊的訓練家託付的 同伴所戴著的特殊獎章。",
+			"chs": "受特殊的训练家托付的 同伴所戴着的特殊奖章。"
 		},
 		"titles": {
-			"ger": "",
+			"ger": "von [Originaltrainer]",
 			"eng": "[Original Trainer]'s",
-			"spa": "de [entrenador original]",
-			"fre": "",
-			"ita": "",
+			"spa": "de [Entrenador Original]",
+			"fre": "de [Dresseur d'Origine]",
+			"ita": "di [Allenatore Originale]",
 			"jpn": "[親]の",
-			"kor": "",
-			"cht": "",
-			"chs": ""
-		}
+			"kor": "[트레이너]의",
+			"cht": "[訓練家]的",
+			"chs": "[訓練家]的"
+		},
+		"title-is-prefix": {
+			"ger": 0,
+			"eng": 1,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
+		},
 	},
 	"lunchtime-mark": {
 		"gen": 8,
@@ -3293,6 +4389,17 @@ const allRibbons = {
 			"kor": "배가 고픈",
 			"cht": "肚子餓扁了的",
 			"chs": "肚子饿扁了的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"sleepy-time-mark": {
@@ -3331,6 +4438,17 @@ const allRibbons = {
 			"kor": "졸린",
 			"cht": "想睡覺的",
 			"chs": "想睡觉的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"dusk-mark": {
@@ -3369,6 +4487,17 @@ const allRibbons = {
 			"kor": "슬슬 졸린",
 			"cht": "開始犯睏的",
 			"chs": "开始犯困的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"dawn-mark": {
@@ -3407,6 +4536,17 @@ const allRibbons = {
 			"kor": "일찍 일어난",
 			"cht": "很早就醒來的",
 			"chs": "很早就醒来的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"cloudy-mark": {
@@ -3445,6 +4585,17 @@ const allRibbons = {
 			"kor": "구름을 바라보는",
 			"cht": "盯著雲看的",
 			"chs": "盯着云看的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"rainy-mark": {
@@ -3483,6 +4634,17 @@ const allRibbons = {
 			"kor": "비에 젖은",
 			"cht": "在雨中哽咽的",
 			"chs": "在雨中哽咽的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"stormy-mark": {
@@ -3521,6 +4683,17 @@ const allRibbons = {
 			"kor": "번개에 놀라는",
 			"cht": "對打雷大呼小叫的",
 			"chs": "对打雷大呼小叫的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"snowy-mark": {
@@ -3559,6 +4732,17 @@ const allRibbons = {
 			"kor": "눈밭을 구르는",
 			"cht": "在雪裡打滾的",
 			"chs": "在雪里打滚的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"blizzard-mark": {
@@ -3597,6 +4781,17 @@ const allRibbons = {
 			"kor": "추위에 떠는",
 			"cht": "凍得發抖的",
 			"chs": "冻得发抖的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"dry-mark": {
@@ -3635,6 +4830,17 @@ const allRibbons = {
 			"kor": "목이 마른",
 			"cht": "喉嚨乾渴的",
 			"chs": "喉咙干渴的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"sandstorm-mark": {
@@ -3673,6 +4879,17 @@ const allRibbons = {
 			"kor": "모래투성이인",
 			"cht": "滿身沙子的",
 			"chs": "满身沙子的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"misty-mark": {
@@ -3711,6 +4928,17 @@ const allRibbons = {
 			"kor": "안개 속을 헤매는",
 			"cht": "對霧感到困惑的",
 			"chs": "对雾感到困惑的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"destiny-mark": {
@@ -3749,6 +4977,17 @@ const allRibbons = {
 			"kor": "운명을 느끼는",
 			"cht": "命中注定的",
 			"chs": "命中注定的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"fishing-mark": {
@@ -3787,6 +5026,17 @@ const allRibbons = {
 			"kor": "방금 낚아 팔팔한",
 			"cht": "剛釣上來活蹦亂跳的",
 			"chs": "刚钓上来活蹦乱跳的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"curry-mark": {
@@ -3825,6 +5075,17 @@ const allRibbons = {
 			"kor": "카레를 좋아하는",
 			"cht": "喜歡咖哩的",
 			"chs": "喜欢咖喱的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"uncommon-mark": {
@@ -3863,6 +5124,17 @@ const allRibbons = {
 			"kor": "사람을 따르는",
 			"cht": "不怕人的",
 			"chs": "不怕人的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"rare-mark": {
@@ -3901,6 +5173,17 @@ const allRibbons = {
 			"kor": "사람을 모르는",
 			"cht": "沒見過人類的",
 			"chs": "没见过人类的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"rowdy-mark": {
@@ -3939,6 +5222,17 @@ const allRibbons = {
 			"kor": "난폭한",
 			"cht": "脾氣暴躁的",
 			"chs": "脾气暴躁的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"absent-minded-mark": {
@@ -3977,6 +5271,17 @@ const allRibbons = {
 			"kor": "아무 생각이 없는",
 			"cht": "腦袋空空的",
 			"chs": "脑袋空空的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"jittery-mark": {
@@ -4015,6 +5320,17 @@ const allRibbons = {
 			"kor": "두근거리는",
 			"cht": "心跳不已的",
 			"chs": "心跳不已的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"excited-mark": {
@@ -4053,6 +5369,17 @@ const allRibbons = {
 			"kor": "기대에 찬",
 			"cht": "興奮的",
 			"chs": "兴奋期待的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"charismatic-mark": {
@@ -4091,6 +5418,17 @@ const allRibbons = {
 			"kor": "오라가 느껴지는",
 			"cht": "感覺到氣場的",
 			"chs": "感觉到气场的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"calmness-mark": {
@@ -4129,6 +5467,17 @@ const allRibbons = {
 			"kor": "쿨한",
 			"cht": "酷酷的",
 			"chs": "酷酷的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"intense-mark": {
@@ -4167,6 +5516,17 @@ const allRibbons = {
 			"kor": "적극적인",
 			"cht": "好鬥的",
 			"chs": "好斗的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"zoned-out-mark": {
@@ -4205,6 +5565,17 @@ const allRibbons = {
 			"kor": "멍한",
 			"cht": "在發呆的",
 			"chs": "在发呆的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"joyful-mark": {
@@ -4243,6 +5614,17 @@ const allRibbons = {
 			"kor": "행복해 보이는",
 			"cht": "看起來很幸福的",
 			"chs": "看起来很幸福的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"angry-mark": {
@@ -4281,6 +5663,17 @@ const allRibbons = {
 			"kor": "화가 난",
 			"cht": "氣呼呼的",
 			"chs": "气呼呼的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"smiley-mark": {
@@ -4319,6 +5712,17 @@ const allRibbons = {
 			"kor": "생긋생긋 웃는",
 			"cht": "笑瞇瞇的",
 			"chs": "笑眯眯的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"teary-mark": {
@@ -4357,6 +5761,17 @@ const allRibbons = {
 			"kor": "훌쩍훌쩍 우는",
 			"cht": "淚汪汪的",
 			"chs": "泪汪汪的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"upbeat-mark": {
@@ -4395,6 +5810,17 @@ const allRibbons = {
 			"kor": "기분이 좋은",
 			"cht": "心情好的",
 			"chs": "心情好的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"peeved-mark": {
@@ -4433,6 +5859,17 @@ const allRibbons = {
 			"kor": "기분이 나쁜",
 			"cht": "心情不好的",
 			"chs": "心情不好的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"intellectual-mark": {
@@ -4471,6 +5908,17 @@ const allRibbons = {
 			"kor": "지적인",
 			"cht": "聰慧的",
 			"chs": "聪慧的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"ferocious-mark": {
@@ -4509,6 +5957,17 @@ const allRibbons = {
 			"kor": "거칠게 날뛰는",
 			"cht": "狂暴的",
 			"chs": "狂暴的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"crafty-mark": {
@@ -4547,6 +6006,17 @@ const allRibbons = {
 			"kor": "빈틈을 노리는",
 			"cht": "伺機而動的",
 			"chs": "伺机而动的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"scowling-mark": {
@@ -4585,6 +6055,17 @@ const allRibbons = {
 			"kor": "엄격한",
 			"cht": "粗獷的",
 			"chs": "粗犷的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"kindly-mark": {
@@ -4623,6 +6104,17 @@ const allRibbons = {
 			"kor": "상냥한",
 			"cht": "溫柔的",
 			"chs": "温柔的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"flustered-mark": {
@@ -4661,6 +6153,17 @@ const allRibbons = {
 			"kor": "덤벙대는",
 			"cht": "慌慌張張的",
 			"chs": "慌慌张张的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"pumped-up-mark": {
@@ -4699,6 +6202,17 @@ const allRibbons = {
 			"kor": "의욕이 넘치는",
 			"cht": "充滿幹勁的",
 			"chs": "充满干劲的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"zero-energy-mark": {
@@ -4737,6 +6251,17 @@ const allRibbons = {
 			"kor": "의욕이 없는",
 			"cht": "毫無幹勁的",
 			"chs": "毫无干劲的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"prideful-mark": {
@@ -4775,6 +6300,17 @@ const allRibbons = {
 			"kor": "거만한",
 			"cht": "囂張跋扈的",
 			"chs": "嚣张跋扈的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"unsure-mark": {
@@ -4813,6 +6349,17 @@ const allRibbons = {
 			"kor": "자신감이 없는",
 			"cht": "缺乏自信的",
 			"chs": "缺乏自信的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"humble-mark": {
@@ -4851,6 +6398,17 @@ const allRibbons = {
 			"kor": "순박한",
 			"cht": "樸素的",
 			"chs": "朴素的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"thorny-mark": {
@@ -4889,6 +6447,17 @@ const allRibbons = {
 			"kor": "잘난 체하는",
 			"cht": "裝模作樣的",
 			"chs": "装模作样的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"vigor-mark": {
@@ -4927,6 +6496,17 @@ const allRibbons = {
 			"kor": "기운이 넘치는",
 			"cht": "精力充沛的",
 			"chs": "精力充沛的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"slump-mark": {
@@ -4965,6 +6545,17 @@ const allRibbons = {
 			"kor": "어딘가 지쳐 보이는",
 			"cht": "看似疲憊的",
 			"chs": "看似疲惫的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"jumbo-mark": {
@@ -5007,6 +6598,17 @@ const allRibbons = {
 			"kor": "커다란",
 			"cht": "大個子的",
 			"chs": "大个子"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"mini-mark": {
@@ -5049,6 +6651,17 @@ const allRibbons = {
 			"kor": "작은",
 			"cht": "小不點的",
 			"chs": "小不点"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"itemfinder-mark": {
@@ -5090,6 +6703,17 @@ const allRibbons = {
 			"kor": "트레져헌터",
 			"cht": "尋寶獵人",
 			"chs": "寻宝猎人"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"partner-mark": {
@@ -5131,6 +6755,17 @@ const allRibbons = {
 			"kor": "믿음직한 파트너",
 			"cht": "可靠的搭檔",
 			"chs": "可靠搭档"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"gourmand-mark": {
@@ -5172,6 +6807,17 @@ const allRibbons = {
 			"kor": "미식가",
 			"cht": "美食家",
 			"chs": "美食家"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"alpha-mark": {
@@ -5210,6 +6856,17 @@ const allRibbons = {
 			"kor": "우두머리였던",
 			"cht": "曾是頭目的",
 			"chs": "曾是头目的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"mightiest-mark": {
@@ -5228,15 +6885,15 @@ const allRibbons = {
 			"chs": "最强之证"
 		},
 		"descs": {
-			"ger": "",
+			"ger": "Zeichen eines besonders starken Pokémon.",
 			"eng": "A mark for an especially mighty Pokémon.",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Emblema que distingue a un Pokémon poseedor de una fuerza especial.",
+			"fre": "L’insigne d’un Pokémon particulièrement puissant.",
+			"ita": "Emblema che contraddistingue un Pokémon dalla forza eccezionale.",
+			"jpn": "特別な強さの　ポケモンである　あかし",
+			"kor": "특별히 강한 포켓몬임을 나타내는 증표",
+			"cht": "實力特別強大的寶可夢的證明。",
+			"chs": "拥有特殊实力的宝可梦的证章。"
 		},
 		"titles": {
 			"ger": "Titan",
@@ -5248,6 +6905,17 @@ const allRibbons = {
 			"kor": "최강의",
 			"cht": "最強的",
 			"chs": "最强的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	},
 	"titan-mark": {
@@ -5286,6 +6954,17 @@ const allRibbons = {
 			"kor": "주인이었던",
 			"cht": "曾是寶主的",
 			"chs": "曾是宝主的"
+		},
+		"title-is-prefix": {
+			"ger": 1,
+			"eng": 0,
+			"spa": 0,
+			"fre": 0,
+			"ita": 0,
+			"jpn": 1,
+			"kor": 1,
+			"cht": 1,
+			"chs": 1
 		}
 	}
 }
