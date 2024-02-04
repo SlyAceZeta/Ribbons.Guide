@@ -1106,7 +1106,7 @@ const allRibbons = {
 			"fre": "Super Concours de Grâce Gagnant catégorie Méga!",
 			"ita": "Super Gara di Grazia Vincitore Livello Mega!",
 			"jpn": "スーパーコンテスト　かわいさ　ぶもん　グレートランク　ゆうしょう！",
-			"kr": "슈퍼콘테스트 귀여움 부문 그레이트랭크 우승!"
+			"kor": "슈퍼콘테스트 귀여움 부문 그레이트랭크 우승!"
 		}
 	},
 	"cute-ribbon-ultra-sinnoh": {
