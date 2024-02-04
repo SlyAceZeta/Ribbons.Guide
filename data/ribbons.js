@@ -960,7 +960,7 @@ const allRibbons = {
 			"kor": "뷰티리본"
 		},
 		"descs": {
-			"ger": "Super-CSchönheitswettbewerb Sieger in der Normal-Klasse!",
+			"ger": "Super-Schönheitswettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Super Contest Beauty Category Normal Rank winner!",
 			"spa": "Súper Concurso Belleza Ganador nivel normal.",
 			"fre": "Super Concours de Beauté Gagnant catégorie Normal!",
