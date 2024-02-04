@@ -298,12 +298,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Coolness",
 			"eng": "Cool Ribbon",
-			"jpn": "クールリボン"
+			"spa": "Cinta Carisma",
+			"fre": "Ruban Sang-froid",
+			"ita": "Fiocco Classe",
+			"jpn": "クールリボン",
+			"kor": "쿨리본"
 		},
 		"descs": {
+			"ger": "Hoenn Coolness-Wettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Hoenn Cool Contest Normal Rank winner!",
-			"jpn": "ホウエンちほう　かっこよさコンテスト　ノーマルランク　ゆうしょう！"
+			"spa": "Concurso Carisma de Hoenn Ganador nivel normal.",
+			"fre": "Concours de Sang-froid de Hoenn Gagnant catégorie Normal!",
+			"ita": "Gara di Classe della regione di Hoenn Vincitore Livello Normale!",
+			"jpn": "ホウエンちほう　かっこよさコンテスト　ノーマルランク　ゆうしょう！",
+			"kor": "호연지방 근사함콘테스트 노말랭크 우승!"
 		}
 	},
 	"cool-ribbon-super-hoenn": {
@@ -315,12 +325,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Coolness Super",
 			"eng": "Cool Ribbon Super",
-			"jpn": "クールリボンスーパー"
+			"spa": "Cinta Carisma alto",
+			"fre": "Ruban Sang-froid Super",
+			"ita": "Fiocco Classe: Livello Super",
+			"jpn": "クールリボンスーパー",
+			"kor": "쿨리본슈퍼"
 		},
 		"descs": {
+			"ger": "Hoenn Coolness-Wettbewerb Sieger in der Super-Klasse!",
 			"eng": "Hoenn Cool Contest Super Rank winner!",
-			"jpn": "ホウエンちほう　かっこよさコンテスト　スーパーランク　ゆうしょう！"
+			"spa": "Concurso Carisma de Hoenn Ganador nivel alto.",
+			"fre": "Concours de Sang-froid de Hoenn Gagnant catégorie Super!",
+			"ita": "Gara di Classe della regione di Hoenn Vincitore Livello Super!",
+			"jpn": "ホウエンちほう　かっこよさコンテスト　スーパーランク　ゆうしょう！",
+			"kor": "호연지방 근사함콘테스트 슈퍼랭크 우승!"
 		}
 	},
 	"cool-ribbon-hyper-hoenn": {
@@ -332,12 +352,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Coolness Hyper",
 			"eng": "Cool Ribbon Hyper",
-			"jpn": "クールリボンハイパー"
+			"spa": "Cinta Carisma avanzado",
+			"fre": "Ruban Sang-froid Hyper",
+			"ita": "Fiocco Classe: Livello Iper",
+			"jpn": "クールリボンハイパー",
+			"kor": "쿨리본하이퍼"
 		},
 		"descs": {
-			"eng": "Hoenn Cool Contest Hyper Rank winner!",
-			"jpn": "ホウエンちほう　かっこよさコンテスト　ハイパーランク　ゆうしょう！"
+			"ger": "Hoenn Coolness-Wettbewerb Sieger in der Hyper-Klasse!",
+			"eng": "Hoenn Cool Contest Super Rank winner!",
+			"spa": "Concurso Carisma de Hoenn Ganador nivel avanzado.",
+			"fre": "Concours de Sang-froid de Hoenn Gagnant catégorie Hyper!",
+			"ita": "Gara di Classe della regione di Hoenn Vincitore Livello Iper!",
+			"jpn": "ホウエンちほう　かっこよさコンテスト　ハイパーランク　ゆうしょう！",
+			"kor": "호연지방 근사함콘테스트 하이퍼랭크 우승!"
 		}
 	},
 	"cool-ribbon-master-hoenn": {
@@ -349,12 +379,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Coolness Master",
 			"eng": "Cool Ribbon Master",
-			"jpn": "クールリボンマスター"
+			"spa": "Cinta Carisma experto",
+			"fre": "Ruban Sang-froid Master",
+			"ita": "Fiocco Classe: Livello Master",
+			"jpn": "クールリボンマスター",
+			"kor": "쿨리본마스터"
 		},
 		"descs": {
+			"ger": "Hoenn Coolness-Wettbewerb Sieger in der Master-Klasse!",
 			"eng": "Hoenn Cool Contest Master Rank winner!",
-			"jpn": "ホウエンちほう　かっこよさコンテスト　マスターランク　ゆうしょう！"
+			"spa": "Concurso Carisma de Hoenn Ganador nivel experto.",
+			"fre": "Concours de Sang-froid de Hoenn Gagnant catégorie Master!",
+			"ita": "Gara di Classe della regione di Hoenn Vincitore Livello Master!",
+			"jpn": "ホウエンちほう　かっこよさコンテスト　マスターランク　ゆうしょう！",
+			"kor": "호연지방 근사함콘테스트 마스터랭크 우승!"
 		}
 	},
 	"beauty-ribbon-hoenn": {
@@ -366,12 +406,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Schönheit",
 			"eng": "Beauty Ribbon",
-			"jpn": "ビューティリボン"
+			"spa": "Cinta Belleza",
+			"fre": "Ruban Beauté",
+			"ita": "Fiocco Bellezza",
+			"jpn": "ビューティリボン",
+			"kor": "뷰티리본"
 		},
 		"descs": {
+			"ger": "Hoenn Schönheitswettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Hoenn Beauty Contest Normal Rank winner!",
-			"jpn": "ホウエンちほう　うつくしさコンテスト　ノーマルランク　ゆうしょう！"
+			"spa": "Concurso Belleza de Hoenn Ganador nivel normal.",
+			"fre": "Concours de Beauté de Hoenn Gagnant catégorie Normal!",
+			"ita": "Gara di Bellezza della regione di Hoenn Vincitore Livello Normale!",
+			"jpn": "ホウエンちほう　うつくしさコンテスト　ノーマルランク　ゆうしょう！",
+			"kor": "호연지방 아름다움콘테스트 노말랭크 우승!"
 		}
 	},
 	"beauty-ribbon-super-hoenn": {
@@ -383,12 +433,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Schönheit Super",
 			"eng": "Beauty Ribbon Super",
-			"jpn": "ビューティリボンスーパー"
+			"spa": "Cinta Belleza alto",
+			"fre": "Ruban Beauté Super",
+			"ita": "Fiocco Bellezza: Livello Super",
+			"jpn": "ビューティリボンスーパー",
+			"kor": "뷰티리본슈퍼"
 		},
 		"descs": {
+			"ger": "Hoenn Schönheitswettbewerb Sieger in der Super-Klasse!",
 			"eng": "Hoenn Beauty Contest Super Rank winner!",
-			"jpn": "ホウエンちほう　うつくしさコンテスト　スーパーランク　ゆうしょう！"
+			"spa": "Concurso Belleza de Hoenn Ganador nivel alto.",
+			"fre": "Concours de Beauté de Hoenn Gagnant catégorie Super!",
+			"ita": "Gara di Bellezza della regione di Hoenn Vincitore Livello Super!",
+			"jpn": "ホウエンちほう　うつくしさコンテスト　スーパーランク　ゆうしょう！",
+			"kor": "호연지방 아름다움콘테스트 슈퍼랭크 우승!"
 		}
 	},
 	"beauty-ribbon-hyper-hoenn": {
@@ -400,12 +460,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Schönheit Hyper",
 			"eng": "Beauty Ribbon Hyper",
-			"jpn": "ビューティリボンハイパー"
+			"spa": "Cinta Belleza avanzado",
+			"fre": "Ruban Beauté Hyper",
+			"ita": "Fiocco Bellezza: Livello Iper",
+			"jpn": "ビューティリボンハイパー",
+			"kor": "뷰티리본하이퍼"
 		},
 		"descs": {
-			"eng": "Hoenn Beauty Contest Hyper Rank winner!",
-			"jpn": "ホウエンちほう　うつくしさコンテスト　ハイパーランク　ゆうしょう！"
+			"ger": "Hoenn Schönheitswettbewerb Sieger in der Hyper-Klasse!",
+			"eng": "Hoenn Beauty Contest Super Rank winner!",
+			"spa": "Concurso Belleza de Hoenn Ganador nivel avanzado.",
+			"fre": "Concours de Beauté de Hoenn Gagnant catégorie Hyper!",
+			"ita": "Gara di Bellezza della regione di Hoenn Vincitore Livello Iper!",
+			"jpn": "ホウエンちほう　うつくしさコンテスト　ハイパーランク　ゆうしょう！",
+			"kor": "호연지방 아름다움콘테스트 하이퍼랭크 우승!"
 		}
 	},
 	"beauty-ribbon-master-hoenn": {
@@ -417,12 +487,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Schönheit Master",
 			"eng": "Beauty Ribbon Master",
-			"jpn": "ビューティリボンマスター"
+			"spa": "Cinta Belleza experto",
+			"fre": "Ruban Beauté Master",
+			"ita": "Fiocco Bellezza: Livello Master",
+			"jpn": "ビューティリボンマスター",
+			"kor": "뷰티리본마스터"
 		},
 		"descs": {
+			"ger": "Hoenn Schönheitswettbewerb Sieger in der Master-Klasse!",
 			"eng": "Hoenn Beauty Contest Master Rank winner!",
-			"jpn": "ホウエンちほう　うつくしさコンテスト　マスターランク　ゆうしょう！"
+			"spa": "Concurso Belleza de Hoenn Ganador nivel experto.",
+			"fre": "Concours de Beauté de Hoenn Gagnant catégorie Master!",
+			"ita": "Gara di Bellezza della regione di Hoenn Vincitore Livello Master!",
+			"jpn": "ホウエンちほう　うつくしさコンテスト　マスターランク　ゆうしょう！",
+			"kor": "호연지방 아름다움콘테스트 마스터랭크 우승!"
 		}
 	},
 	"cute-ribbon-hoenn": {
@@ -434,12 +514,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Anmut",
 			"eng": "Cute Ribbon",
-			"jpn": "キュートリボン"
+			"spa": "Cinta Dulzura",
+			"fre": "Ruban Grâce",
+			"ita": "Fiocco Grazia",
+			"jpn": "キュートリボン",
+			"kor": "큐트리본"
 		},
 		"descs": {
+			"ger": "Hoenn Anmut-Wettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Hoenn Cute Contest Normal Rank winner!",
-			"jpn": "ホウエンちほう　かわいさコンテスト　ノーマルランク　ゆうしょう！"
+			"spa": "Concurso Dulzura de Hoenn Ganador nivel normal.",
+			"fre": "Concours de Grâce de Hoenn Gagnant catégorie Normal!",
+			"ita": "Gara di Grazia della regione di Hoenn Vincitore Livello Normale!",
+			"jpn": "ホウエンちほう　かわいさコンテスト　ノーマルランク　ゆうしょう！",
+			"kor": "호연지방 귀여움콘테스트 노말랭크 우승!"
 		}
 	},
 	"cute-ribbon-super-hoenn": {
@@ -451,12 +541,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Anmut Super",
 			"eng": "Cute Ribbon Super",
-			"jpn": "キュートリボンスーパー"
+			"spa": "Cinta Dulzura alto",
+			"fre": "Ruban Grâce Super",
+			"ita": "Fiocco Grazia: Livello Super",
+			"jpn": "キュートリボンスーパー",
+			"kor": "큐트리본슈퍼"
 		},
 		"descs": {
+			"ger": "Hoenn Anmut-Wettbewerb Sieger in der Super-Klasse!",
 			"eng": "Hoenn Cute Contest Super Rank winner!",
-			"jpn": "ホウエンちほう　かわいさコンテスト　スーパーランク　ゆうしょう！"
+			"spa": "Concurso Dulzura de Hoenn Ganador nivel alto.",
+			"fre": "Concours de Grâce de Hoenn Gagnant catégorie Super!",
+			"ita": "Gara di Grazia della regione di Hoenn Vincitore Livello Super!",
+			"jpn": "ホウエンちほう　かわいさコンテスト　スーパーランク　ゆうしょう！",
+			"kor": "호연지방 귀여움콘테스트 슈퍼랭크 우승!"
 		}
 	},
 	"cute-ribbon-hyper-hoenn": {
@@ -468,12 +568,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Anmut Hyper",
 			"eng": "Cute Ribbon Hyper",
-			"jpn": "キュートリボンハイパー"
+			"spa": "Cinta Dulzura avanzado",
+			"fre": "Ruban Grâce Hyper",
+			"ita": "Fiocco Grazia: Livello Iper",
+			"jpn": "キュートリボンハイパー",
+			"kor": "큐트리본하이퍼"
 		},
 		"descs": {
-			"eng": "Hoenn Cute Contest Hyper Rank winner!",
-			"jpn": "ホウエンちほう　かわいさコンテスト　ハイパーランク　ゆうしょう！"
+			"ger": "Hoenn Anmut-Wettbewerb Sieger in der Hyper-Klasse!",
+			"eng": "Hoenn Cute Contest Super Rank winner!",
+			"spa": "Concurso Dulzura de Hoenn Ganador nivel avanzado.",
+			"fre": "Concours de Grâce de Hoenn Gagnant catégorie Hyper!",
+			"ita": "Gara di Grazia della regione di Hoenn Vincitore Livello Iper!",
+			"jpn": "ホウエンちほう　かわいさコンテスト　ハイパーランク　ゆうしょう！",
+			"kor": "호연지방 귀여움콘테스트 하이퍼랭크 우승!"
 		}
 	},
 	"cute-ribbon-master-hoenn": {
@@ -485,12 +595,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Anmut Master",
 			"eng": "Cute Ribbon Master",
-			"jpn": "キュートリボンマスター"
+			"spa": "Cinta Dulzura experto",
+			"fre": "Ruban Grâce Master",
+			"ita": "Fiocco Grazia: Livello Master",
+			"jpn": "キュートリボンマスター",
+			"kor": "큐트리본마스터"
 		},
 		"descs": {
+			"ger": "Hoenn Anmut-Wettbewerb Sieger in der Master-Klasse!",
 			"eng": "Hoenn Cute Contest Master Rank winner!",
-			"jpn": "ホウエンちほう　かわいさコンテスト　マスターランク　ゆうしょう！"
+			"spa": "Concurso Dulzura de Hoenn Ganador nivel experto.",
+			"fre": "Concours de Grâce de Hoenn Gagnant catégorie Master!",
+			"ita": "Gara di Grazia della regione di Hoenn Vincitore Livello Master!",
+			"jpn": "ホウエンちほう　かわいさコンテスト　マスターランク　ゆうしょう！",
+			"kor": "호연지방 귀여움콘테스트 마스터랭크 우승!"
 		}
 	},
 	"smart-ribbon-hoenn": {
@@ -502,12 +622,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Klugheit",
 			"eng": "Smart Ribbon",
-			"jpn": "ジーニアスリボン"
+			"spa": "Cinta Ingenio",
+			"fre": "Ruban Intelligence",
+			"ita": "Fiocco Acume",
+			"jpn": "ジーニアスリボン",
+			"kor": "지니어스리본"
 		},
 		"descs": {
+			"ger": "Hoenn Klugheits-Wettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Hoenn Smart Contest Normal Rank winner!",
-			"jpn": "ホウエンちほう　かしこさコンテスト　ノーマルランク　ゆうしょう！"
+			"spa": "Concurso Belleza de Hoenn Ganador nivel normal.",
+			"fre": "Concours d'Intelligence de Hoenn Gagnant catégorie Normal!",
+			"ita": "Gara di Acume della regione di Hoenn Vincitore Livello Normale!",
+			"jpn": "ホウエンちほう　かしこさコンテスト　ノーマルランク　ゆうしょう！",
+			"kor": "호연지방 슬기로움콘테스트 노말랭크 우승!"
 		}
 	},
 	"smart-ribbon-super-hoenn": {
@@ -519,12 +649,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Klugheit Super",
 			"eng": "Smart Ribbon Super",
-			"jpn": "ジーニアスリボンスーパー"
+			"spa": "Cinta Ingenio alto",
+			"fre": "Ruban Intelligence Super",
+			"ita": "Fiocco Acume: Livello Super",
+			"jpn": "ジーニアスリボンスーパー",
+			"kor": "지니어스리본슈퍼"
 		},
 		"descs": {
+			"ger": "Hoenn Klugheits-Wettbewerb Sieger in der Super-Klasse!",
 			"eng": "Hoenn Smart Contest Super Rank winner!",
-			"jpn": "ホウエンちほう　かしこさコンテスト　スーパーランク　ゆうしょう！"
+			"spa": "Concurso Ingenio de Hoenn Ganador nivel alto.",
+			"fre": "Concours d'Intelligence de Hoenn Gagnant catégorie Super!",
+			"ita": "Gara di Acume della regione di Hoenn Vincitore Livello Super!",
+			"jpn": "ホウエンちほう　かしこさコンテスト　スーパーランク　ゆうしょう！",
+			"kor": "호연지방 슬기로움콘테스트 슈퍼랭크 우승!"
 		}
 	},
 	"smart-ribbon-hyper-hoenn": {
@@ -536,12 +676,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Klugheit Hyper",
 			"eng": "Smart Ribbon Hyper",
-			"jpn": "ジーニアスリボンハイパー"
+			"spa": "Cinta Ingenio avanzado",
+			"fre": "Ruban Intelligence Hyper",
+			"ita": "Fiocco Acume: Livello Iper",
+			"jpn": "ジーニアスリボンハイパー",
+			"kor": "지니어스리본하이퍼"
 		},
 		"descs": {
-			"eng": "Hoenn Smart Contest Hyper Rank winner!",
-			"jpn": "ホウエンちほう　かしこさコンテスト　ハイパーランク　ゆうしょう！"
+			"ger": "Hoenn Klugheits-Wettbewerb Sieger in der Hyper-Klasse!",
+			"eng": "Hoenn Smart Contest Super Rank winner!",
+			"spa": "Concurso Ingenio de Hoenn Ganador nivel avanzado.",
+			"fre": "Concours d'Intelligence de Hoenn Gagnant catégorie Hyper!",
+			"ita": "Gara di Acume della regione di Hoenn Vincitore Livello Iper!",
+			"jpn": "ホウエンちほう　かしこさコンテスト　ハイパーランク　ゆうしょう！",
+			"kor": "호연지방 슬기로움콘테스트 하이퍼랭크 우승!"
 		}
 	},
 	"smart-ribbon-master-hoenn": {
@@ -553,12 +703,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Klugheit Master",
 			"eng": "Smart Ribbon Master",
-			"jpn": "ジーニアスリボンマスター"
+			"spa": "Cinta Ingenio experto",
+			"fre": "Ruban Intelligence Master",
+			"ita": "Fiocco Acume: Livello Master",
+			"jpn": "ジーニアスリボンマスター",
+			"kor": "지니어스리본마스터"
 		},
 		"descs": {
+			"ger": "Hoenn Klugheits-Wettbewerb Sieger in der Master-Klasse!",
 			"eng": "Hoenn Smart Contest Master Rank winner!",
-			"jpn": "ホウエンちほう　かしこさコンテスト　マスターランク　ゆうしょう！"
+			"spa": "Concurso Ingenio de Hoenn Ganador nivel experto.",
+			"fre": "Concours d'Intelligence de Hoenn Gagnant catégorie Master!",
+			"ita": "Gara di Acume della regione di Hoenn Vincitore Livello Master!",
+			"jpn": "ホウエンちほう　かしこさコンテスト　マスターランク　ゆうしょう！",
+			"kor": "호연지방 슬기로움콘테스트 마스터랭크 우승!"
 		}
 	},
 	"tough-ribbon-hoenn": {
@@ -570,12 +730,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Stärke",
 			"eng": "Tough Ribbon",
-			"jpn": "パワフルリボン"
+			"spa": "Cinta Dureza",
+			"fre": "Ruban Robustesse",
+			"ita": "Fiocco Grinta",
+			"jpn": "パワフルリボン",
+			"kor": "파워풀리본"
 		},
 		"descs": {
+			"ger": "Hoenn Stärke-Wettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Hoenn Tough Contest Normal Rank winner!",
-			"jpn": "ホウエンちほう　たくましさコンテスト　ノーマルランク　ゆうしょう！"
+			"spa": "Concurso Dureza de Hoenn Ganador nivel normal.",
+			"fre": "Concours de Robustesse de Hoenn Gagnant catégorie Normal!",
+			"ita": "Gara di Grinta della regione di Hoenn Vincitore Livello Normale!",
+			"jpn": "ホウエンちほう　たくましさコンテスト　ノーマルランク　ゆうしょう！",
+			"kor": "호연지방 강인함콘테스트 노말랭크 우승!"
 		}
 	},
 	"tough-ribbon-super-hoenn": {
@@ -587,12 +757,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Stärke Super",
 			"eng": "Tough Ribbon Super",
-			"jpn": "パワフルリボンスーパー"
+			"spa": "Cinta Dureza alto",
+			"fre": "Ruban Robustesse Super",
+			"ita": "Fiocco Grinta: Livello Super",
+			"jpn": "パワフルリボンスーパー",
+			"kor": "파워풀리본슈퍼"
 		},
 		"descs": {
+			"ger": "Hoenn Stärke-Wettbewerb Sieger in der Super-Klasse!",
 			"eng": "Hoenn Tough Contest Super Rank winner!",
-			"jpn": "ホウエンちほう　たくましさコンテスト　スーパーランク　ゆうしょう！"
+			"spa": "Concurso Dureza de Hoenn Ganador nivel alto.",
+			"fre": "Concours de Robustesse de Hoenn Gagnant catégorie Super!",
+			"ita": "Gara di Grinta della regione di Hoenn Vincitore Livello Super!",
+			"jpn": "ホウエンちほう　たくましさコンテスト　スーパーランク　ゆうしょう！",
+			"kor": "호연지방 강인함콘테스트 슈퍼랭크 우승!"
 		}
 	},
 	"tough-ribbon-hyper-hoenn": {
@@ -604,12 +784,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Stärke Hyper",
 			"eng": "Tough Ribbon Hyper",
-			"jpn": "パワフルリボンハイパー"
+			"spa": "Cinta Dureza avanzado",
+			"fre": "Ruban Robustesse Hyper",
+			"ita": "Fiocco Grinta: Livello Iper",
+			"jpn": "パワフルリボンハイパー",
+			"kor": "파워풀리본하이퍼"
 		},
 		"descs": {
-			"eng": "Hoenn Tough Contest Hyper Rank winner!",
-			"jpn": "ホウエンちほう　たくましさコンテスト　ハイパーランク　ゆうしょう！"
+			"ger": "Hoenn Stärke-Wettbewerb Sieger in der Hyper-Klasse!",
+			"eng": "Hoenn Tough Contest Super Rank winner!",
+			"spa": "Concurso Dureza de Hoenn Ganador nivel avanzado.",
+			"fre": "Concours de Robustesse de Hoenn Gagnant catégorie Hyper!",
+			"ita": "Gara di Grinta della regione di Hoenn Vincitore Livello Iper!",
+			"jpn": "ホウエンちほう　たくましさコンテスト　ハイパーランク　ゆうしょう！",
+			"kor": "호연지방 강인함콘테스트 하이퍼랭크 우승!"
 		}
 	},
 	"tough-ribbon-master-hoenn": {
@@ -621,12 +811,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band der Stärke Master",
 			"eng": "Tough Ribbon Master",
-			"jpn": "パワフルリボンマスター"
+			"spa": "Cinta Dureza experto",
+			"fre": "Ruban Robustesse Master",
+			"ita": "Fiocco Grinta: Livello Master",
+			"jpn": "パワフルリボンマスター",
+			"kor": "파워풀리본마스터"
 		},
 		"descs": {
+			"ger": "Hoenn Stärke-Wettbewerb Sieger in der Master-Klasse!",
 			"eng": "Hoenn Tough Contest Master Rank winner!",
-			"jpn": "ホウエンちほう　たくましさコンテスト　マスターランク　ゆうしょう！"
+			"spa": "Concurso Dureza de Hoenn Ganador nivel experto.",
+			"fre": "Concours de Robustesse de Hoenn Gagnant catégorie Master!",
+			"ita": "Gara di Grinta della regione di Hoenn Vincitore Livello Master!",
+			"jpn": "ホウエンちほう　たくましさコンテスト　マスターランク　ゆうしょう！",
+			"kor": "호연지방 강인함콘테스트 마스터랭크 우승!"
 		}
 	},
 	"cool-ribbon-sinnoh": {
@@ -639,12 +839,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Coolness",
 			"eng": "Cool Ribbon",
-			"jpn": "クールリボン"
+			"spa": "Cinta Carisma",
+			"fre": "Ruban Sang-froid",
+			"ita": "Fiocco Classe",
+			"jpn": "クールリボン",
+			"kor": "쿨리본"
 		},
 		"descs": {
+			"ger": "Super-Coolness-Wettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Super Contest Cool Category Normal Rank winner!",
-			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　ノーマルランク　ゆうしょう！"
+			"spa": "Súper Concurso Carisma Ganador nivel normal.",
+			"fre": "Super Concours de Sang-froid Gagnant catégorie Normal!",
+			"ita": "Super Gara di Classe Vincitore Livello Normale!",
+			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　ノーマルランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 노말랭크 우승!"
 		}
 	},
 	"cool-ribbon-great-sinnoh": {
@@ -657,12 +867,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Coolness Mega",
 			"eng": "Cool Ribbon Great",
-			"jpn": "クールリボングレート"
+			"spa": "Cinta Carisma difícil",
+			"fre": "Ruban Sang-froid Méga",
+			"ita": "Fiocco Classe: Livello Mega",
+			"jpn": "クールリボングレート",
+			"kor": "쿨리본그레이트"
 		},
 		"descs": {
+			"ger": "Super-Coolness-Wettbewerb Sieger in der Mega-Klasse!",
 			"eng": "Super Contest Cool Category Great Rank winner!",
-			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　グレートランク　ゆうしょう！"
+			"spa": "Súper Concurso Carisma Ganador nivel difícil.",
+			"fre": "Super Concours de Sang-froid Gagnant catégorie Méga!",
+			"ita": "Super Gara di Classe Vincitore Livello Mega!",
+			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　グレートランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 그레이트랭크 우승!"
 		}
 	},
 	"cool-ribbon-ultra-sinnoh": {
@@ -675,12 +895,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Coolness Ultra",
 			"eng": "Cool Ribbon Ultra",
-			"jpn": "クールリボングレートウルトラ"
+			"spa": "Cinta Carisma superior",
+			"fre": "Ruban Sang-froid Ultra",
+			"ita": "Fiocco Classe: Livello Ultra",
+			"jpn": "クールリボンウルトラ",
+			"kor": "쿨리본울트라"
 		},
 		"descs": {
+			"ger": "Super-Coolness-Wettbewerb Sieger in der Ultra-Klasse!",
 			"eng": "Super Contest Cool Category Ultra Rank winner!",
-			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　ウルトラランク　ゆうしょう！"
+			"spa": "Súper Concurso Carisma Ganador nivel superior.",
+			"fre": "Super Concours de Sang-froid Gagnant catégorie Ultra!",
+			"ita": "Super Gara di Classe Vincitore Livello Ultra!",
+			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　ウルトラランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 울트라랭크 우승!"
 		}
 	},
 	"cool-ribbon-master-sinnoh": {
@@ -693,12 +923,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Coolness Master",
 			"eng": "Cool Ribbon Master",
-			"jpn": "クールリボンマスター"
+			"spa": "Cinta Carisma experto",
+			"fre": "Ruban Sang-froid Master",
+			"ita": "Fiocco Classe: Livello Master",
+			"jpn": "クールリボンマスター",
+			"kor": "쿨리본마스터"
 		},
 		"descs": {
+			"ger": "Super-Coolness-Wettbewerb Sieger in der Master-Klasse!",
 			"eng": "Super Contest Cool Category Master Rank winner!",
-			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　マスターランク　ゆうしょう！"
+			"spa": "Súper Concurso Carisma Ganador nivel experto.",
+			"fre": "Super Concours de Sang-froid Gagnant catégorie Master!",
+			"ita": "Super Gara di Classe Vincitore Livello Master!",
+			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　マスターランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 마스터랭크 우승!"
 		}
 	},
 	"beauty-ribbon-sinnoh": {
@@ -711,12 +951,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Schönheit",
 			"eng": "Beauty Ribbon",
-			"jpn": "ビューティリボン"
+			"spa": "Cinta Belleza",
+			"fre": "Ruban Beauté",
+			"ita": "Fiocco Bellezza",
+			"jpn": "ビューティリボン",
+			"kor": "뷰티리본"
 		},
 		"descs": {
+			"ger": "Super-Schönheitswettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Super Contest Beauty Category Normal Rank winner!",
-			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　ノーマルランク　ゆうしょう！"
+			"spa": "Súper Concurso Belleza Ganador nivel normal.",
+			"fre": "Super Concours de Beauté Gagnant catégorie Normal!",
+			"ita": "Super Gara di Bellezza Vincitore Livello Normale!",
+			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　ノーマルランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 노말랭크 우승!"
 		}
 	},
 	"beauty-ribbon-great-sinnoh": {
@@ -729,12 +979,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Schönheit Mega",
 			"eng": "Beauty Ribbon Great",
-			"jpn": "ビューティリボングレート"
+			"spa": "Cinta Belleza difícil",
+			"fre": "Ruban Beauté Méga",
+			"ita": "Fiocco Bellezza: Livello Mega",
+			"jpn": "ビューティリボングレート",
+			"kor": "뷰티리본그레이트"
 		},
 		"descs": {
+			"ger": "Super-Schönheitswettbewerb Sieger in der Mega-Klasse!",
 			"eng": "Super Contest Beauty Category Great Rank winner!",
-			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　グレートランク　ゆうしょう！"
+			"spa": "Súper Concurso Belleza Ganador nivel difícil.",
+			"fre": "Super Concours de Beauté Gagnant catégorie Méga!",
+			"ita": "Super Gara di Bellezza Vincitore Livello Mega!",
+			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　グレートランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 그레이트랭크 우승!"
 		}
 	},
 	"beauty-ribbon-ultra-sinnoh": {
@@ -747,12 +1007,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Schönheit Ultra",
 			"eng": "Beauty Ribbon Ultra",
-			"jpn": "ビューティリボンウルトラ"
+			"spa": "Cinta Belleza superior",
+			"fre": "Ruban Beauté Ultra",
+			"ita": "Fiocco Bellezza: Livello Ultra",
+			"jpn": "ビューティリボンウルトラ",
+			"kor": "뷰티리본울트라"
 		},
 		"descs": {
+			"ger": "Super-Schönheitswettbewerb Sieger in der Ultra-Klasse!",
 			"eng": "Super Contest Beauty Category Ultra Rank winner!",
-			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　ウルトラランク　ゆうしょう！"
+			"spa": "Súper Concurso Belleza Ganador nivel superior.",
+			"fre": "Super Concours de Beauté Gagnant catégorie Ultra!",
+			"ita": "Super Gara di Bellezza Vincitore Livello Ultra!",
+			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　ウルトラランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 울트라랭크 우승!"
 		}
 	},
 	"beauty-ribbon-master-sinnoh": {
@@ -765,12 +1035,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Schönheit Master",
 			"eng": "Beauty Ribbon Master",
-			"jpn": "ビューティリボンマスター"
+			"spa": "Cinta Belleza experto",
+			"fre": "Ruban Beauté Master",
+			"ita": "Fiocco Bellezza: Livello Master",
+			"jpn": "ビューティリボンマスター",
+			"kor": "뷰티리본마스터"
 		},
 		"descs": {
+			"ger": "Super-Schönheitswettbewerb Sieger in der Master-Klasse!",
 			"eng": "Super Contest Beauty Category Master Rank winner!",
-			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　マスターランク　ゆうしょう！"
+			"spa": "Súper Concurso Belleza Ganador nivel experto.",
+			"fre": "Super Concours de Beauté Gagnant catégorie Master!",
+			"ita": "Super Gara di Bellezza Vincitore Livello Master!",
+			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　マスターランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 마스터랭크 우승!"
 		}
 	},
 	"cute-ribbon-sinnoh": {
@@ -783,12 +1063,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Anmut",
 			"eng": "Cute Ribbon",
-			"jpn": "キュートリボン"
+			"spa": "Cinta Dulzura",
+			"fre": "Ruban Grâce",
+			"ita": "Fiocco Grazia",
+			"jpn": "キュートリボン",
+			"kor": "큐트리본"
 		},
 		"descs": {
+			"ger": "Super-Anmut-Wettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Super Contest Cute Category Normal Rank winner!",
-			"jpn": "スーパーコンテスト　かわいさ　ぶもん　ノーマルランク　ゆうしょう！"
+			"spa": "Súper Concurso Dulzura Ganador nivel normal.",
+			"fre": "Super Concours de Grâce Gagnant catégorie Normal!",
+			"ita": "Super Gara di Grazia Vincitore Livello Normale!",
+			"jpn": "スーパーコンテスト　かわいさ　ぶもん　ノーマルランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 귀여움 부문 노말랭크 우승!"
 		}
 	},
 	"cute-ribbon-great-sinnoh": {
@@ -801,12 +1091,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Anmut Mega",
 			"eng": "Cute Ribbon Great",
-			"jpn": "キュートリボングレート"
+			"spa": "Cinta Dulzura difícil",
+			"fre": "Ruban Grâce Méga",
+			"ita": "Fiocco Grazia: Livello Mega",
+			"jpn": "キュートリボングレート",
+			"kor": "큐트리본그레이트"
 		},
 		"descs": {
+			"ger": "Super-Anmut-Wettbewerb Sieger in der Mega-Klasse!",
 			"eng": "Super Contest Cute Category Great Rank winner!",
-			"jpn": "スーパーコンテスト　かわいさ　ぶもん　グレートランク　ゆうしょう！"
+			"spa": "Súper Concurso Dulzura Ganador nivel difícil.",
+			"fre": "Super Concours de Grâce Gagnant catégorie Méga!",
+			"ita": "Super Gara di Grazia Vincitore Livello Mega!",
+			"jpn": "スーパーコンテスト　かわいさ　ぶもん　グレートランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 귀여움 부문 그레이트랭크 우승!"
 		}
 	},
 	"cute-ribbon-ultra-sinnoh": {
@@ -819,12 +1119,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Anmut Ultra",
 			"eng": "Cute Ribbon Ultra",
-			"jpn": "キュートリボンウルトラ"
+			"spa": "Cinta Dulzura superior",
+			"fre": "Ruban Grâce Ultra",
+			"ita": "Fiocco Classe: Livello Ultra",
+			"jpn": "キュートリボンウルトラ",
+			"kor": "큐트리본울트라"
 		},
 		"descs": {
+			"ger": "Super-Anmut-Wettbewerb Sieger in der Ultra-Klasse!",
 			"eng": "Super Contest Cute Category Ultra Rank winner!",
-			"jpn": "スーパーコンテスト　かわいさ　ぶもん　ウルトラランク　ゆうしょう！"
+			"spa": "Súper Concurso Dulzura Ganador nivel superior.",
+			"fre": "Super Concours de Grâce Gagnant catégorie Ultra!",
+			"ita": "Super Gara di Grazia Vincitore Livello Ultra!",
+			"jpn": "スーパーコンテスト　かわいさ　ぶもん　ウルトラランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 귀여움 부문 울트라랭크 우승!"
 		}
 	},
 	"cute-ribbon-master-sinnoh": {
@@ -837,12 +1147,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Anmut Master",
 			"eng": "Cute Ribbon Master",
-			"jpn": "キュートリボンマスター"
+			"spa": "Cinta Dulzura experto",
+			"fre": "Ruban Grâce Master",
+			"ita": "Fiocco Grazia: Livello Master",
+			"jpn": "キュートリボンマスター",
+			"kor": "큐트리본마스터"
 		},
 		"descs": {
+			"ger": "Super-Anmut-Wettbewerb Sieger in der Master-Klasse!",
 			"eng": "Super Contest Cute Category Master Rank winner!",
-			"jpn": "スーパーコンテスト　かわいさ　ぶもん　マスターランク　ゆうしょう！"
+			"spa": "Súper Concurso Dulzura Ganador nivel experto.",
+			"fre": "Super Concours de Grâce Gagnant catégorie Master!",
+			"ita": "Super Gara di Grazia Vincitore Livello Master!",
+			"jpn": "スーパーコンテスト　かわいさ　ぶもん　マスターランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 귀여움 부문 마스터랭크 우승!"
 		}
 	},
 	"smart-ribbon-sinnoh": {
@@ -855,12 +1175,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Klugheit",
 			"eng": "Smart Ribbon",
-			"jpn": "ジーニアスリボン"
+			"spa": "Cinta Ingenio",
+			"fre": "Ruban Intelligence",
+			"ita": "Fiocco Acume",
+			"jpn": "ジーニアスリボン",
+			"kor": "지니어스리본"
 		},
 		"descs": {
+			"ger": "Super-Klugheits-Wettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Super Contest Smart Category Normal Rank winner!",
-			"jpn": "スーパーコンテスト　かしこさ　ぶもん　ノーマルランク　ゆうしょう！"
+			"spa": "Súper Concurso Ingenio Ganador nivel normal.",
+			"fre": "Super Concours d'Intelligence Gagnant catégorie Normal!",
+			"ita": "Super Gara di Acume Vincitore Livello Normale!",
+			"jpn": "スーパーコンテスト　かしこさ　ぶもん　ノーマルランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 노말랭크 우승!"
 		}
 	},
 	"smart-ribbon-great-sinnoh": {
@@ -873,12 +1203,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Klugheit Mega",
 			"eng": "Smart Ribbon Great",
-			"jpn": "ジーニアスリボングレート"
+			"spa": "Cinta Ingenio difícil",
+			"fre": "Ruban Intelligence Méga",
+			"ita": "Fiocco Acume: Livello Mega",
+			"jpn": "ジーニアスリボングレート",
+			"kor": "지니어스리본그레이트"
 		},
 		"descs": {
+			"ger": "Super-Klugheits-Wettbewerb Sieger in der Mega-Klasse!",
 			"eng": "Super Contest Smart Category Great Rank winner!",
-			"jpn": "スーパーコンテスト　かしこさ　ぶもん　グレートランク　ゆうしょう！"
+			"spa": "Súper Concurso Ingenio Ganador nivel difícil.",
+			"fre": "Super Concours d'Intelligence Gagnant catégorie Méga!",
+			"ita": "Super Gara di Acume Vincitore Livello Mega!",
+			"jpn": "スーパーコンテスト　かしこさ　ぶもん　グレートランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 그레이트랭크 우승!"
 		}
 	},
 	"smart-ribbon-ultra-sinnoh": {
@@ -891,12 +1231,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Klugheit Ultra",
 			"eng": "Smart Ribbon Ultra",
-			"jpn": "ジーニアスリボンウルトラ"
+			"spa": "Cinta Ingenio superior",
+			"fre": "Ruban Intelligence Ultra",
+			"ita": "Fiocco Acume: Livello Ultra",
+			"jpn": "ジーニアスリボンウルトラ",
+			"kor": "지니어스리본울트라"
 		},
 		"descs": {
+			"ger": "Super-Klugheits-Wettbewerb Sieger in der Ultra-Klasse!",
 			"eng": "Super Contest Smart Category Ultra Rank winner!",
-			"jpn": "スーパーコンテスト　かしこさ　ぶもん　ウルトラランク　ゆうしょう！"
+			"spa": "Súper Concurso Ingenio Ganador nivel superior.",
+			"fre": "Super Concours d'Intelligence Gagnant catégorie Ultra!",
+			"ita": "Super Gara di Acume Vincitore Livello Ultra!",
+			"jpn": "スーパーコンテスト　かしこさ　ぶもん　ウルトラランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 울트라랭크 우승!"
 		}
 	},
 	"smart-ribbon-master-sinnoh": {
@@ -909,12 +1259,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Klugheit Master",
 			"eng": "Smart Ribbon Master",
-			"jpn": "ジーニアスリボンマスター"
+			"spa": "Cinta Ingenio experto",
+			"fre": "Ruban Intelligence Master",
+			"ita": "Fiocco Acume: Livello Master",
+			"jpn": "ジーニアスリボンマスター",
+			"kor": "지니어스리본마스터"
 		},
 		"descs": {
+			"ger": "Super-Klugheits-Wettbewerb Sieger in der Master-Klasse!",
 			"eng": "Super Contest Smart Category Master Rank winner!",
-			"jpn": "スーパーコンテスト　かしこさ　ぶもん　マスターランク　ゆうしょう！"
+			"spa": "Súper Concurso Ingenio Ganador nivel experto.",
+			"fre": "Super Concours d'Intelligence Gagnant catégorie Master!",
+			"ita": "Super Gara di Acume Vincitore Livello Master!",
+			"jpn": "スーパーコンテスト　かしこさ　ぶもん　マスターランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 마스터랭크 우승!"
 		}
 	},
 	"tough-ribbon-sinnoh": {
@@ -927,12 +1287,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Stärke",
 			"eng": "Tough Ribbon",
-			"jpn": "パワフルリボン"
+			"spa": "Cinta Dureza",
+			"fre": "Ruban Robustesse",
+			"ita": "Fiocco Grinta",
+			"jpn": "パワフルリボン",
+			"kor": "파워풀리본"
 		},
 		"descs": {
+			"ger": "Super-Stärkewettbewerb Sieger in der Normal-Klasse!",
 			"eng": "Super Contest Tough Category Normal Rank winner!",
-			"jpn": "スーパーコンテスト　たくましさ　ぶもん　ノーマルランク　ゆうしょう！"
+			"spa": "Súper Concurso Dureza Ganador nivel normal.",
+			"fre": "Super Concours de Robustesse Gagnant catégorie Normal!",
+			"ita": "Super Gara di Grinta Vincitore Livello Normale!",
+			"jpn": "スーパーコンテスト　たくましさ　ぶもん　ノーマルランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 노말랭크 우승!"
 		}
 	},
 	"tough-ribbon-great-sinnoh": {
@@ -945,12 +1315,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Stärke Mega",
 			"eng": "Tough Ribbon Great",
-			"jpn": "パワフルリボングレート"
+			"spa": "Cinta Dureza difícil",
+			"fre": "Ruban Robustesse Méga",
+			"ita": "Fiocco Grinta: Livello Mega",
+			"jpn": "パワフルリボングレート",
+			"kor": "파워풀리본그레이트"
 		},
 		"descs": {
+			"ger": "Super-Stärkewettbewerb Sieger in der Mega-Klasse!",
 			"eng": "Super Contest Tough Category Great Rank winner!",
-			"jpn": "スーパーコンテスト　たくましさ　ぶもん　グレートランク　ゆうしょう！"
+			"spa": "Súper Concurso Dureza Ganador nivel difícil.",
+			"fre": "Super Concours de Robustesse Gagnant catégorie Méga!",
+			"ita": "Super Gara di Grinta Vincitore Livello Mega!",
+			"jpn": "スーパーコンテスト　たくましさ　ぶもん　グレートランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 그레이트랭크 우승!"
 		}
 	},
 	"tough-ribbon-ultra-sinnoh": {
@@ -963,12 +1343,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Stärke Ultra",
 			"eng": "Tough Ribbon Ultra",
-			"jpn": "パワフルリボンウルトラ"
+			"spa": "Cinta Dureza superior",
+			"fre": "Ruban Robustesse Ultra",
+			"ita": "Fiocco Grinta: Livello Ultra",
+			"jpn": "パワフルリボンウルトラ",
+			"kor": "파워풀리본울트라"
 		},
 		"descs": {
+			"ger": "Super-Stärkewettbewerb Sieger in der Ultra-Klasse!",
 			"eng": "Super Contest Tough Category Ultra Rank winner!",
-			"jpn": "スーパーコンテスト　たくましさ　ぶもん　ウルトラランク　ゆうしょう！"
+			"spa": "Súper Concurso Dureza Ganador nivel superior.",
+			"fre": "Super Concours de Robustesse Gagnant catégorie Ultra!",
+			"ita": "Super Gara di Grinta Vincitore Livello Ultra!",
+			"jpn": "スーパーコンテスト　たくましさ　ぶもん　ウルトラランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 울트라랭크 우승!"
 		}
 	},
 	"tough-ribbon-master-sinnoh": {
@@ -981,12 +1371,22 @@ const allRibbons = {
 			"platinum"
 		],
 		"names": {
+			"ger": "Band der Stärke Master",
 			"eng": "Tough Ribbon Master",
-			"jpn": "パワフルリボンマスター"
+			"spa": "Cinta Dureza experto",
+			"fre": "Ruban Robustesse Master",
+			"ita": "Fiocco Grinta: Livello Master",
+			"jpn": "パワフルリボンマスター",
+			"kor": "파워풀리본마스터"
 		},
 		"descs": {
+			"ger": "Super-Stärkewettbewerb Sieger in der Master-Klasse!",
 			"eng": "Super Contest Tough Category Master Rank winner!",
-			"jpn": "スーパーコンテスト　たくましさ　ぶもん　マスターランク　ゆうしょう！"
+			"spa": "Súper Concurso Dureza Ganador nivel experto.",
+			"fre": "Super Concours de Robustesse Gagnant catégorie Master!",
+			"ita": "Super Gara di Grinta Vincitore Livello Master!",
+			"jpn": "スーパーコンテスト　たくましさ　ぶもん　マスターランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 마스터랭크 우승!"
 		}
 	},
 	"coolness-master-ribbon": {
@@ -1379,12 +1779,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band des Gewinners",
 			"eng": "Winning Ribbon",
-			"jpn": "ウイニングリボン"
+			"spa": "Cinta Ganador",
+			"fre": "Ruban Gagnant",
+			"ita": "Fiocco Vittoria",
+			"jpn": "ウイニングリボン",
+			"kor": "위닝리본"
 		},
 		"descs": {
+			"ger": "Band für Siege in der Lv. 50-Kategorie im Duellturm von Hoenn",
 			"eng": "Ribbon awarded for clearing Hoenn's Battle Tower's Lv. 50 challenge.",
-			"jpn": "ホウエンの　バトルタワア　レベル５０を　かちぬいた　きねんの　リボン"
+			"spa": "Cinta obtenida por superar el desafío de la Torre Batalla de Hoenn Nv. 50.",
+			"fre": "Ruban pour une victoire au N. 50 de la Tour de Combat de Hoenn.",
+			"ita": "Fiocco per aver completato la sfida al L. 50 della Torre Lotta della regione di Hoenn.",
+			"jpn": "ホウエンの　バトルタワア　レベル５０を　かちぬいた　きねんの　リボン",
+			"kor": "호연의 배틀타워 레벨 50에서 연승한 기념리본"
 		}
 	},
 	"victory-ribbon": {
@@ -1398,12 +1808,22 @@ const allRibbons = {
 			"emerald"
 		],
 		"names": {
+			"ger": "Band des Sieges",
 			"eng": "Victory Ribbon",
-			"jpn": "ビクトリーリボン"
+			"spa": "Cinta Victoria",
+			"fre": "Ruban Victoire",
+			"ita": "Fiocco Trionfo",
+			"jpn": "ビクトリーリボン",
+			"kor": "빅토리리본"
 		},
 		"descs": {
+			"ger": "Band für Siege in der Lv. 100-Kategorie im Duellturm von Hoenn",
 			"eng": "Ribbon awarded for clearing Hoenn's Battle Tower's Lv. 100 challenge.",
-			"jpn": "ホウエンの　バトルタワア　レベル１００を　かちぬいた　きねんの　リボン"
+			"spa": "Cinta obtenida por superar el desafío de la Torre Batalla de Hoenn Nv. 100.",
+			"fre": "Ruban pour une victoire au N. 100 de la Tour de Combat de Hoenn.",
+			"ita": "Fiocco per aver completato la sfida al L. 100 della Torre Lotta della regione di Hoenn.",
+			"jpn": "ホウエンの　バトルタワア　レベル１００を　かちぬいた　きねんの　リボン",
+			"kor": "호연의 배틀타워 레벨 100에서 연승한 기념리본"
 		}
 	},
 	"ability-ribbon": {
@@ -1419,12 +1839,22 @@ const allRibbons = {
 			"ss"
 		],
 		"names": {
+			"ger": "Band der Fähigkeit",
 			"eng": "Ability Ribbon",
-			"jpn": "アビリティリボン"
+			"spa": "Cinta Habilidad",
+			"fre": "Ruban Aptitude",
+			"ita": "Fiocco Abilità",
+			"jpn": "アビリティリボン",
+			"kor": "어빌리티리본"
 		},
 		"descs": {
+			"ger": "Band, verliehen zum Sieg über den Kampfkoloss des Duellturms",
 			"eng": "A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower.",
-			"jpn": "バトルタワーで　タワータイクーンに　しょうりした　きねんの　リボン"
+			"spa": "Cinta obtenida por vencer al Amo de la Torre en la Torre Batalla.",
+			"fre": "Ruban pour une victoire contre l'Aigle Tour de la Tour de Combat.",
+			"ita": "Fiocco per aver sconfitto il Boss Torre presso la Torre Lotta.",
+			"jpn": "バトルタワーで　タワータイクーンに　しょうりした　きねんの　リボン",
+			"kor": "배틀타워에서 타워타이쿤에게 승리한 기념리본"
 		}
 	},
 	"great-ability-ribbon": {
@@ -1440,12 +1870,22 @@ const allRibbons = {
 			"ss"
 		],
 		"names": {
+			"ger": "Großes Band der Fähigkeit",
 			"eng": "Great Ability Ribbon",
-			"jpn": "グレートアビリティリボン"
+			"spa": "Cinta Gran Habilidad",
+			"fre": "Ruban Aptitude Méga",
+			"ita": "Fiocco Abilità Mega",
+			"jpn": "グレートアビリティリボン",
+			"kor": "그레이트어빌리티리본"
 		},
 		"descs": {
+			"ger": "Band, verliehen zum Sieg über den Kampfkoloss des Duellturms",
 			"eng": "A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower.",
-			"jpn": "バトルタワーで　タワータイクーンに　しょうりした　きねんの　リボン"
+			"spa": "Cinta obtenida por vencer al Amo de la Torre en la Torre Batalla.",
+			"fre": "Ruban pour une victoire contre l'Aigle Tour de la Tour de Combat.",
+			"ita": "Fiocco per aver sconfitto il Boss Torre presso la Torre Lotta.",
+			"jpn": "バトルタワーで　タワータイクーンに　しょうりした　きねんの　リボン",
+			"kor": "배틀타워에서 타워타이쿤에게 승리한 기념리본"
 		}
 	},
 	"double-ability-ribbon": {
@@ -1461,12 +1901,22 @@ const allRibbons = {
 			"ss"
 		],
 		"names": {
+			"ger": "Doppel-Band der Fähigkeit",
 			"eng": "Double Ability Ribbon",
-			"jpn": "ダブルアビリティリボン"
+			"spa": "Cinta Doble Habilidad",
+			"fre": "Ruban Aptitude Duo",
+			"ita": "Fiocco Abilità Doppia",
+			"jpn": "ダブルアビリティリボン",
+			"kor": "더블어빌리티리본"
 		},
 		"descs": {
+			"ger": "Band für die Meisterung des Doppels im Sinnoh Duellturm",
 			"eng": "A Ribbon awarded for completing the Battle Tower Double challenge.",
-			"jpn": "バトルタワーで　ダブルを　かちぬいた　きねんの　リボン"
+			"spa": "Cinta obtenida por superar el desafío doble en la Torre Batalla.",
+			"fre": "Ruban pour une réussite au défi Duo de la Tour de Combat.",
+			"ita": "Fiocco per aver concluso la Lotta in Doppio della Torre Lotta.",
+			"jpn": "バトルタワーで　ダブルを　かちぬいた　きねんの　リボン",
+			"kor": "배틀타워 더블을 연승한 기념리본"
 		}
 	},
 	"multi-ability-ribbon": {
@@ -1482,12 +1932,22 @@ const allRibbons = {
 			"ss"
 		],
 		"names": {
+			"ger": "Multi-Band der Fähigkeit",
 			"eng": "Multi Ability Ribbon",
-			"jpn": "マルチアビリティリボン"
+			"spa": "Cinta Habilidad Múltiple",
+			"fre": "Ruban Aptitude Multi",
+			"ita": "Fiocco Abilità Multipla",
+			"jpn": "マルチアビリティリボン",
+			"kor": "멀티어빌리티리본"
 		},
 		"descs": {
+			"ger": "Band für die Meisterung der Multi-Herausforderung im Sinnoh Duellturm",
 			"eng": "A Ribbon awarded for completing the Battle Tower Multi challenge.",
-			"jpn": "バトルタワーで　マルチを　かちぬいた　きねんの　リボン"
+			"spa": "Cinta obtenida por superar el desafío múlt. en la Torre Batalla.",
+			"fre": "Ruban pour une réussite au défi Multi de la Tour de Combat.",
+			"ita": "Fiocco per aver concluso la Lotta Multipla della Torre Lotta.",
+			"jpn": "バトルタワーで　マルチを　かちぬいた　きねんの　リボン",
+			"kor": "배틀타워 멀티를 연승한 기념리본"
 		}
 	},
 	"pair-ability-ribbon": {
@@ -1503,12 +1963,22 @@ const allRibbons = {
 			"ss"
 		],
 		"names": {
+			"ger": "Paar-Band der Fähigkeit",
 			"eng": "Pair Ability Ribbon",
-			"jpn": "ペアアビリティリボン"
+			"spa": "Cinta Habilidad Par",
+			"fre": "Ruban Aptitude Paire",
+			"ita": "Fiocco Abilità Insieme",
+			"jpn": "ペアアビリティリボン",
+			"kor": "페어어빌리티리본"
 		},
 		"descs": {
+			"ger": "Band für die Meisterung der Link-Multi-Herausforderung im Sinnoh Duellturm",
 			"eng": "A Ribbon awarded for completing the Battle Tower Link Multi challenge.",
-			"jpn": "バトルタワーで　つうしんマルチを　かちぬいた　きねんの　リボン"
+			"spa": "Cinta obtenida por superar el desafío múlt. conexión en la Torre Batalla.",
+			"fre": "Ruban pour une réussite au défi Multi Link de la Tour de Combat.",
+			"ita": "Fiocco per aver concluso la Lotta Multipla in Link della Torre Lotta.",
+			"jpn": "バトルタワーで　つうしんマルチを　かちぬいた　きねんの　リボン",
+			"kor": "배틀타워 통신멀티를 연승한 기념리본"
 		}
 	},
 	"world-ability-ribbon": {
@@ -1525,12 +1995,22 @@ const allRibbons = {
 			"ss"
 		],
 		"names": {
+			"ger": "Welt-Band der Fähigkeit",
 			"eng": "World Ability Ribbon",
-			"jpn": "ワールドアビリティリボン"
+			"spa": "Cinta Habilidad Mundial",
+			"fre": "Ruban Aptitude Monde",
+			"ita": "Fiocco Abilità Mondiale",
+			"jpn": "ワールドアビリティリボン",
+			"kor": "월드어빌리티리본"
 		},
 		"descs": {
+			"ger": "Band für die Meisterung der Wi-Fi-Herausforderung im Sinnoh Duellturm",
 			"eng": "A Ribbon awarded for completing the Wi-Fi Battle Tower challenge.",
-			"jpn": "Ｗｉ－Ｆｉバトルタワーを　かちぬいた　きねんの　リボン"
+			"spa": "Cinta obtenida por superar el desafío en la Torre Batalla Wi-Fi.",
+			"fre": "Ruban pour une réussite au défi Wi-Fi de la Tour de Combat.",
+			"ita": "Fiocco per aver completato la Torre Lotta Wi-Fi.",
+			"jpn": "Ｗｉ－Ｆｉバトルタワーを　かちぬいた　きねんの　リボン",
+			"kor": "Wi-Fi 배틀타워를 연승한 기념리본"
 		}
 	},
 	"battle-memory-ribbon": {
@@ -3235,27 +3715,31 @@ const allRibbons = {
 			"chs": "同伴奖章"
 		},
 		"descs": {
-			"ger": "",
+			"ger": "Spezielles Band zur Auszeichnung eines Pokémon, das dir von einem besonderen Trainer anvertraut wurde.",
 			"eng": "A special Ribbon awarded to a Pokémon that was once partnered with another great Trainer.",
 			"spa": "Cinta especial que llevan los Pokémon recibidos por parte de Entrenadores selectos.",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"fre": "Ruban spécial donné au Pokémon qu'un Dresseur ou une Dresseuse unique au monde vous a confié.",
+			"ita": "Fiocco speciale indossato da Pokémon che ti sono stati affidati da Allenatori particolari.",
+			"jpn": "特別なトレーナーから　たくされた パートナーに　ついている　特別なリボン",
+			"kor": "특별한 트레이너로부터 받은 파트너가 달고 있는 특별한 리본",
+			"cht": "受特殊的訓練家託付的 同伴所戴著的特殊獎章。",
+			"chs": "受特殊的训练家托付的 同伴所戴着的特殊奖章。"
 		},
 		"titles": {
-			"ger": "",
+			"ger": "von [Originaltrainer]",
 			"eng": "[Original Trainer]'s",
-			"spa": "de [entrenador original]",
-			"fre": "",
-			"ita": "",
+			"spa": "de [Entrenador Original]",
+			"fre": "de [Dresseur d'Origine]",
+			"ita": "di [Allenatore Originale]",
 			"jpn": "[親]の",
-			"kor": "",
-			"cht": "",
-			"chs": ""
-		}
+			"kor": "[트레이너]의",
+			"cht": "[訓練家]的",
+			"chs": "[訓練家]的"
+		},
+		"title-is-prefix": {
+			"ger": 0,
+			"eng": 1
+		},
 	},
 	"lunchtime-mark": {
 		"gen": 8,
@@ -5228,15 +5712,15 @@ const allRibbons = {
 			"chs": "最强之证"
 		},
 		"descs": {
-			"ger": "",
+			"ger": "Zeichen eines besonders starken Pokémon.",
 			"eng": "A mark for an especially mighty Pokémon.",
-			"spa": "",
-			"fre": "",
-			"ita": "",
-			"jpn": "",
-			"kor": "",
-			"cht": "",
-			"chs": ""
+			"spa": "Emblema que distingue a un Pokémon poseedor de una fuerza especial.",
+			"fre": "L'insigne d'un Pokémon particulièrement puissant.",
+			"ita": "Emblema che contraddistingue un Pokémon dalla forza eccezionale.",
+			"jpn": "特別な強さの　ポケモンである　あかし",
+			"kor": "특별히 강한 포켓몬임을 나타내는 증표",
+			"cht": "實力特別強大的寶可夢的證明。",
+			"chs": "拥有特殊实力的宝可梦的证章。"
 		},
 		"titles": {
 			"ger": "Titan",
