@@ -1,5 +1,8 @@
 // don't forget to update index.html cache-version
 const changelog = {
+	"25 February 2024": [
+		"Fixed issue where Ash-Greninja could earn the Master Rank Ribbon (thanks Krillin!)"
+	],
 	"2 February 2024": [
 		"Fixed issue where the original forms of Electrode, Goodra, Growlithe, Lilligant, Qwilfish, Sliggoo, Voltorb, Zoroark, and Zorua were able to transfer to Legends: Arceus and earn the Hisui Ribbon (thanks missingno.00!)",
 	],
