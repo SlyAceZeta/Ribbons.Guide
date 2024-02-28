@@ -54,6 +54,7 @@ const games = {
 	"home":		{"name": "HOME",				"gen": 8,		"mark": null},
 	"bank7":	{"name": "Bank (Gen VII)",		"gen": 7,		"mark": null},
 	"bank":		{"name": "Bank (Gen VI)",		"gen": 6,		"mark": null},
+	"plza":		{"name": "Legends: Z-A",		"gen": 8,		"mark": null},
 	"scar":		{"name": "Scarlet",				"gen": 8,		"mark": "paldea"},
 	"vio":		{"name": "Violet",				"gen": 8,		"mark": "paldea"},
 	"sw":		{"name": "Sword",				"gen": 8,		"mark": "galar"},

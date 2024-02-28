@@ -1,5 +1,11 @@
 // don't forget to update index.html cache-version
 const changelog = {
+	"27 February 2024": [
+		"Happy Pokémon Day! Added Legends: Z-A to filter for destination games, for those who want to see which of their tracked Pokémon should be able to transfer",
+		"Not all Pokémon from <a href='https://www.youtube.com/watch?v=uq-Znr_jGIg'>the game's trailer</a> are included, only the ones that are absolutely identifiable",
+		"Evolutions are not added due to the precedent set by Legends: Arceus",
+		"Preliminary list: Pikachu, Litleo, Pyroar, Flabébé, Furfrou, Klefki, Dragonair, Staryu, Hawlucha, Skrelp, Gyarados, Magikarp, Hippopotas, Arbok, Absol, Wingull, Sylveon, Aegislash, Sandile, Krokorok, Pinsir, Heracross, Onix, Bellsprout, Eevee, Ariados, Noibat, Noivern"
+	],
 	"25 February 2024": [
 		"Fixed issue where Ash-Greninja could earn the Master Rank Ribbon (thanks Krillin!)"
 	],

@@ -141,7 +141,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -203,7 +204,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "doublade"
 	},
@@ -846,7 +848,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -1112,7 +1115,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -2357,7 +2361,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"bergmite": {
@@ -7749,7 +7754,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "dratini"
 	},
@@ -8840,7 +8846,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"eiscue": {
@@ -10291,7 +10298,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"flapple": {
@@ -11178,7 +11186,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sun",
-			"moon"
+			"moon",
+			"plza"
 		],
 		"sort": 1
 	},
@@ -13731,7 +13740,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "magikarp"
 	},
@@ -13999,7 +14009,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"haxorus": {
@@ -14212,7 +14223,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -14289,7 +14301,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"hippowdon": {
@@ -16452,7 +16465,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"klink": {
@@ -16794,7 +16808,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "sandile"
 	},
@@ -17854,7 +17869,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"litten": {
@@ -18961,7 +18977,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"magmar": {
@@ -22659,7 +22676,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"noivern": {
@@ -22688,7 +22706,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "noibat"
 	},
@@ -23136,7 +23155,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"oranguru": {
@@ -24828,7 +24848,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "pichu"
 	},
@@ -25037,7 +25058,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -26151,7 +26173,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "litleo"
 	},
@@ -28166,7 +28189,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"sandshrew-alola": {
@@ -30451,7 +30475,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"skuntank": {
@@ -32231,7 +32256,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"steelix": {
@@ -33117,7 +33143,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -37707,7 +37734,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"wishiwashi": {

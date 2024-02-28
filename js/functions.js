@@ -1253,7 +1253,12 @@ $(function(){
 			if(g == "go"){
 				destination = "";
 			}
-			$("#pokeform-origin-" + gGen + ", #pokeform-currentgame-" + gGen + ", #filterform-origin-" + gGen + ", #filterform-currentgame-" + gGen + destination).append(newGame);
+			if(g == "plza"){
+				destination = "#filterform-games-" + gGen;
+				$(destination).append(newGame);
+			} else {
+				$("#pokeform-origin-" + gGen + ", #pokeform-currentgame-" + gGen + ", #filterform-origin-" + gGen + ", #filterform-currentgame-" + gGen + destination).append(newGame);
+			}
 		}
 	}
 
