@@ -1,5 +1,3 @@
-const ribbonIDs = {"Event": "e", "Marks": "m", "Gen III": 3, "Gen IV": 4, "Gen VI": 6, "Gen VII": 7, "Gen VIII/IX": 8};
-
 const allRibbons = {
 	"champion-ribbon": {
 		"gen": 3,
