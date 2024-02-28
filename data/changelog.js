@@ -2,9 +2,11 @@
 const changelog = {
 	"27 February 2024": [
 		"Happy Pokémon Day! Added Legends: Z-A to filter for destination games, for those who want to see which of their tracked Pokémon should be able to transfer",
+		"<strong>This is a preliminary list and subject to change</strong>",
 		"Not all Pokémon from <a href='https://www.youtube.com/watch?v=uq-Znr_jGIg'>the game's trailer</a> are included, only the ones that are absolutely identifiable",
 		"Evolutions are not added due to the precedent set by Legends: Arceus",
-		"Preliminary list: Pikachu, Litleo, Pyroar, Flabébé, Furfrou, Klefki, Dragonair, Staryu, Hawlucha, Skrelp, Gyarados, Magikarp, Hippopotas, Arbok, Absol, Wingull, Sylveon, Aegislash, Sandile, Krokorok, Pinsir, Heracross, Onix, Bellsprout, Eevee, Ariados, Noibat, Noivern"
+		"Preliminary list: Absol, Aegislash, Arbok, Ariados, Bellsprout, Dragonair, Eevee, Flabébé, Furfrou, Gyarados, Hawlucha, Heracross, Hippopotas, Klefki, <s>Krokorok</s>, Litleo, Magikarp, Noibat, Noivern, Onix, Pikachu, Pinsir, Pyroar, Sandile, Skrelp, Staryu, Sylveon, <s>Wingull</s>",
+		"This update was re-released on 28 February to add Emolga, Fletchling, Gogoat, Krookodile, Meowstic, Pancham, Pangoro, Talonflame, and Tyranitar, and remove Krokorok and Wingull"
 	],
 	"25 February 2024": [
 		"Fixed issue where Ash-Greninja could earn the Master Rank Ribbon (thanks Krillin!)"

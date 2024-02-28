@@ -9306,7 +9306,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"empoleon": {
@@ -10440,7 +10441,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"floatzel": {
@@ -12271,7 +12273,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "skiddo"
 	},
@@ -16808,8 +16811,7 @@ const pokemon = {
 			"sw",
 			"sh",
 			"scar",
-			"vio",
-			"plza"
+			"vio"
 		],
 		"evolvesFrom": "sandile"
 	},
@@ -16843,7 +16845,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "krokorok"
 	},
@@ -20310,7 +20313,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "espurr"
 	},
@@ -23499,7 +23503,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"pangoro": {
@@ -23526,7 +23531,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"evolvesFrom": "pancham"
 	},
@@ -33217,7 +33223,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "fletchinder"
 	},
@@ -35056,7 +35063,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow",
@@ -37734,8 +37742,7 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio",
-			"plza"
+			"vio"
 		]
 	},
 	"wishiwashi": {
