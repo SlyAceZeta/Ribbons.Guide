@@ -1,0 +1,209 @@
+{
+	"home": {
+		"name": "HOME",
+		"gen": 8,
+		"storage": true
+	},
+	"bank7": {
+		"name": "Bank (Gen VII)",
+		"gen": 7,
+		"storage": true
+	},
+	"bank": {
+		"name": "Bank (Gen VI)",
+		"gen": 6,
+		"storage": true
+	},
+	"plza": {
+		"name": "Legends: Z-A",
+		"gen": 9
+	},
+	"scar": {
+		"name": "Scarlet",
+		"gen": 9
+	},
+	"vio": {
+		"name": "Violet",
+		"gen": 9
+	},
+	"pla": {
+		"name": "Legends: Arceus",
+		"gen": 8
+	},
+	"bd": {
+		"name": "Brilliant Diamond",
+		"gen": 8
+	},
+	"sp": {
+		"name": "Shining Pearl",
+		"gen": 8
+	},
+	"sw": {
+		"name": "Sword",
+		"gen": 8
+	},
+	"sh": {
+		"name": "Shield",
+		"gen": 8
+	},
+	"lgp": {
+		"name": "Let's Go, Pikachu!",
+		"gen": 7
+	},
+	"lge": {
+		"name": "Let's Go, Eevee!",
+		"gen": 7
+	},
+	"usun": {
+		"name": "Ultra Sun",
+		"gen": 7
+	},
+	"umoon": {
+		"name": "Ultra Moon",
+		"gen": 7
+	},
+	"sun": {
+		"name": "Sun",
+		"gen": 7
+	},
+	"moon": {
+		"name": "Moon",
+		"gen": 7
+	},
+	"go": {
+		"name": "GO",
+		"gen": 6
+	},
+	"or": {
+		"name": "Omega Ruby",
+		"gen": 6
+	},
+	"as": {
+		"name": "Alpha Sapphire",
+		"gen": 6
+	},
+	"x": {
+		"name": "X",
+		"gen": 6
+	},
+	"y": {
+		"name": "Y",
+		"gen": 6
+	},
+	"black2": {
+		"name": "Black 2",
+		"gen": 5,
+		"platformIcon": "dsi"
+	},
+	"white2": {
+		"name": "White 2",
+		"gen": 5,
+		"platformIcon": "dsi"
+	},
+	"black": {
+		"name": "Black",
+		"gen": 5,
+		"platformIcon": "dsi"
+	},
+	"white": {
+		"name": "White",
+		"gen": 5,
+		"platformIcon": "dsi"
+	},
+	"hg": {
+		"name": "HeartGold",
+		"gen": 4,
+		"platformIcon": "dsi"
+	},
+	"ss": {
+		"name": "SoulSilver",
+		"gen": 4,
+		"platformIcon": "dsi"
+	},
+	"platinum": {
+		"name": "Platinum",
+		"gen": 4,
+		"platformIcon": "dsi"
+	},
+	"diamond": {
+		"name": "Diamond",
+		"gen": 4,
+		"platformIcon": "dsi"
+	},
+	"pearl": {
+		"name": "Pearl",
+		"gen": 4,
+		"platformIcon": "dsi"
+	},
+	"xd": {
+		"name": "XD: Gale of Darkness",
+		"gen": 3,
+		"platformIcon": "gamecube"
+	},
+	"emerald": {
+		"name": "Emerald",
+		"gen": 3,
+		"platformIcon": "gba"
+	},
+	"fr": {
+		"name": "FireRed",
+		"gen": 3,
+		"platformIcon": "gba"
+	},
+	"lg": {
+		"name": "LeafGreen",
+		"gen": 3,
+		"platformIcon": "gba"
+	},
+	"colosseum": {
+		"name": "Colosseum",
+		"gen": 3,
+		"platformIcon": "gamecube"
+	},
+	"ruby": {
+		"name": "Ruby",
+		"gen": 3,
+		"platformIcon": "gba"
+	},
+	"sapphire": {
+		"name": "Sapphire",
+		"gen": 3,
+		"platformIcon": "gba"
+	},
+	"crystal": {
+		"name": "Crystal",
+		"gen": 2
+	},
+	"gold": {
+		"name": "Gold",
+		"gen": 2
+	},
+	"silver": {
+		"name": "Silver",
+		"gen": 2
+	},
+	"yellow": {
+		"name": "Yellow",
+		"gen": 1
+	},
+	"red-eng": {
+		"name": "Red (ENG)",
+		"gen": 1
+	},
+	"blue-eng": {
+		"name": "Blue (ENG)",
+		"gen": 1
+	},
+	"blue-jpn": {
+		"name": "Blue (JPN)",
+		"gen": 1
+	},
+	"red-jpn": {
+		"name": "Red (JPN)",
+		"gen": 1
+	},
+	"green": {
+		"name": "Green (JPN)",
+		"gen": 1
+	}
+}

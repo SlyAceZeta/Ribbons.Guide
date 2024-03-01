@@ -1,0 +1,101 @@
+{
+	"none": {
+		"name": "None",
+		"games": [
+			"black",
+			"white",
+			"black2",
+			"white2",
+			"diamond",
+			"pearl",
+			"platinum",
+			"hg",
+			"ss",
+			"ruby",
+			"sapphire",
+			"emerald",
+			"fr",
+			"lg",
+			"colosseum",
+			"xd"
+		]
+	},
+	"pentagon": {
+		"name": "Kalos/Hoenn (Gen VI)",
+		"games": [
+			"x",
+			"y",
+			"or",
+			"as",
+			"bank"
+		]
+	},
+	"clover": {
+		"name": "Alola",
+		"games": [
+			"sun",
+			"moon",
+			"usun",
+			"umoon",
+			"bank7"
+		]
+	},
+	"game-boy": {
+		"name": "Kanto (Gen I)/Johto (Gen II)",
+		"games": [
+			"gold",
+			"silver",
+			"crystal",
+			"red-jpn",
+			"green",
+			"blue-jpn",
+			"red-eng",
+			"blue-eng",
+			"yellow"
+		]
+	},
+	"go": {
+		"name": "GO",
+		"games": [
+			"go"
+		]
+	},
+	"lets-go": {
+		"name": "Kanto (Gen VII)",
+		"games": [
+			"lgp",
+			"lge"
+		]
+	},
+	"galar": {
+		"name": "Galar",
+		"games": [
+			"sw",
+			"sh",
+			"home"
+		]
+	},
+	"bdsp": {
+		"name": "Sinnoh (Gen VIII)",
+		"games": [
+			"bd",
+			"sp",
+			"home"
+		]
+	},
+	"hisui": {
+		"name": "Hisui",
+		"games": [
+			"pla",
+			"home"
+		]
+	},
+	"paldea": {
+		"name": "Paldea",
+		"games": [
+			"scar",
+			"vio",
+			"home"
+		]
+	}
+}

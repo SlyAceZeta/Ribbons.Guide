@@ -1,205 +1,89 @@
-/* Start Menu by default */
+/* "light" is default from Bootstrap, so we modify that by default */
+/* --rg are custom Ribbons.Guide variables */
 :root {
-	--header-bg: #112028;
-	--header-border: #f7cd12;
-	--header-link: #91AAD6;
-	--page-bg: linear-gradient(#111e34, #243a5b);
-	--modal-center-bg: #1f2f45;
-	--text: #fff;
-	--pokemon: #1f2f45;
-	--asterisk: #FFA2A2;
+	--bs-body-bg: #fff;
+	--bs-body-color: #000;
+	--bs-border-color: #888;
+
+	--rg-header-background: #ddd;
+	--rg-header-text: #444;
+	--rg-header-text-active: #000;
+
+	--rg-card-bg: #eee;
+	--rg-card-cap-bg: #d5d5d5;
+	--rg-card-color: #000;
+
+	--rg-icon-filter: invert(1);
+}
+a:not(.btn) {
+	color: #0148B1;
+}
+.form-floating > .form-control-plaintext ~ label,
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+	color: #57595C;
+}
+.btn-primary {
+}
+.btn-secondary {
 }
 
-/* Start Menu-specific */
-body.theme-start {
-	--modal-bg: #152731;
+/* sword/shield overrides */
+[data-bs-theme="sword"],
+[data-bs-theme="shield"] {
+	--bs-border-color: #000;
+
+	--rg-header-background: #000;
+	--rg-header-text: #bbb;
+	--rg-header-text-active: #fff;
 }
 
-/* Classic Dark */
-body.theme-dark {
-	--header-bg: #333;
-	--header-border: #222;
-	--header-link: #96ADD7;
-	--page-bg: #121212;
-	--modal-center-bg: #121212;
-	--text: #fff;
-	--pokemon: #555;
+/* sword background */
+[data-bs-theme="sword"] body {
+	background-image: linear-gradient(120deg, #43a7ff 0%, #43a7ff 20%, #0d93f4 20%, #0d93f4 30%, #fff 30%, #fff 100%);
+}
+/* shield background */
+[data-bs-theme="shield"] body {
+	background-image: linear-gradient(120deg, #e3313d 0%, #e3313d 20%, #c42835 20%, #c42835 30%, #fff 30%, #fff 100%);
 }
 
-/* Naranja/Uva Academy */
-body.theme-naranja,
-body.theme-uva {
-	--header-border: #f7cd12;
-	--header-link: #fff;
-	--page-bg: linear-gradient(225deg, #001e4f, #0058ba);
-	--text: #fff;
-	--pokemon: #002c67;
-	--pokemon-header: #081d3c;
+/* dark overrides */
+[data-bs-theme="dark"] {
+	--bs-body-bg: #121212;
+	--bs-body-color: #fff;
+	--bs-border-color: #161616;
 
-	--modal-bg: #081d3c;
-	--modal-center-bg: #002c67;
-	--label-text: #fcd821;
-}
+	--rg-header-background: #333;
+	--rg-header-text: #bbb;
+	--rg-header-text-active: #fff;
 
-/* Naranja Academy */
-body.theme-naranja {
-	--header-bg: #b65726;
-}
+	--rg-card-bg: #333;
+	--rg-card-cap-bg: #222;
+	--rg-card-color: #fff;
 
-/* Uva Academy */
-body.theme-uva {
-	--header-bg: #852eb0;
+	--rg-icon-filter: none;
 }
-
-/* Intrepid Sword and Dauntless Shield */
-body.theme-sword,
-body.theme-shield {
-	--header-bg: #000;
-	--header-border: #000;
-	--header-link: #91AAD6;
-	--page-bg: linear-gradient(120deg, #43a7ff 0%, #43a7ff 20%, #0d93f4 20%, #0d93f4 30%, #fff 30%, #fff 100%);
-	--text: #000;
-	--header-text: #fff;
-	--pokemon: #eee;
-
-	--modal-bg: #4d4d4d;
-	--modal-center-bg: #fff;
-	--modal-text: #fff;
-	--modal-link: #38578e;
-	--pokemon-header: #dbdbd9;
-	--asterisk: #a00;
+[data-bs-theme="dark"] .no-ribbons-left {
+	--rg-card-bg: #020;
+	--rg-card-cap-bg: #030;
 }
-.theme-sword .pokemon-list-origin,
-.theme-sword .pokemon-list-entry-footer-right,
-.theme-sword #menu button:not(#menu-boxes) img,
-.theme-sword #pokeform-shiny-toggle img,
-.theme-sword .pokemon-list-entry .shiny,
-.theme-sword #pokeform-gender-unknown img,
-.theme-shield .pokemon-list-origin,
-.theme-shield .pokemon-list-entry-footer-right,
-.theme-shield #menu button:not(#menu-boxes) img,
-.theme-shield #pokeform-shiny-toggle img,
-.theme-shield .pokemon-list-entry .shiny,
-.theme-shield #pokeform-gender-unknown img,
-.theme-sword .pokeform-scale-icon,
-.theme-shield .pokeform-scale-icon {
-	filter: invert(1);
+[data-bs-theme="dark"] .move-to-next-gen {
+	--rg-card-bg: #223;
+	--rg-card-cap-bg: #112;
 }
-.theme-sword #pokeform-tabs .pokeform-tabs-active,
-.theme-shield #pokeform-tabs .pokeform-tabs-active {
-	filter: brightness(0);
+[data-bs-theme="dark"] a:not(.btn) {
+	color: #9CC4FE;
 }
-.theme-sword #boxsort-boxes > div,
-.theme-shield #boxsort-boxes > div {
-	background-color: #dbdbd9;
-	background-image: url("../img/ui/drag.svg"), linear-gradient(120deg, #dbdbd9 20%, #dbdbd9 80%, #4d4d4d 80%, #4d4d4d 100%);
-	background-size: 20px, auto;
-	background-blend-mode: difference, normal;
-	color: #000;
+[data-bs-theme="dark"] .form-floating > .form-control-plaintext ~ label,
+[data-bs-theme="dark"] .form-floating > .form-control:focus ~ label,
+[data-bs-theme="dark"] .form-floating > .form-control:not(:placeholder-shown) ~ label,
+[data-bs-theme="dark"] .form-floating > .form-select ~ label {
+	color: #9D9FA1;
 }
-.theme-sword .modal th,
-.theme-shield .modal th {
-	background: #dbdbd9;
-}
-.theme-sword #pokemon-list-nomatch,
-.theme-sword #pokemon-list-empty,
-.theme-shield #pokemon-list-nomatch,
-.theme-shield #pokemon-list-empty {
-	text-shadow: 0 0 5px #fff;
-}
-
-/* Dauntless Shield-specific */
-body.theme-shield {
-	--page-bg: linear-gradient(120deg, #e3313d 0%, #e3313d 20%, #c42835 20%, #c42835 30%, #fff 30%, #fff 100%);
-}
-
-/* Classic Light */
-body.theme-light {
-	--header-bg: #ddd;
-	--header-border: #888;
-	--header-link: #38578e;
-	--page-bg: #fff;
-	--text: #121212;
-	--pokemon: #eee;
-
-	--modal-bg: #333;
-	--modal-center-bg: #fff;
-	--modal-text: #fff;
-	--modal-link: #38578e;
-	--pokemon-header: #bbb;
-	--asterisk: #a00;
-}
-.theme-light #header-settings,
-.theme-light #header-discord img,
-.theme-light .pokemon-list-origin,
-.theme-light .pokemon-list-entry-footer-right,
-.theme-light #add-pokemon-button img,
-.theme-light #menu button:not(#menu-boxes) img,
-.theme-light #pokeform-shiny-toggle img,
-.theme-light .pokemon-list-entry .shiny,
-.theme-light #pokeform-gender-unknown img,
-.theme-light .pokeform-scale-icon {
-	filter: invert(1);
-}
-.theme-light #pokeform-tabs .pokeform-tabs-active {
-	filter: brightness(0);
-}
-.theme-light #boxsort-boxes > div {
-	background-color: #333;
-	color: #fff;
-}
-
-/* Main Event */
-body {
-	background: var(--page-bg);
-	background-attachment: fixed;
-	color: var(--text);
-}
-header,
-footer,
-#add-pokemon-button,
-#menu-filter-count {
-	background: var(--header-bg);
-	border-color: var(--header-border);
-	color: var(--header-text, var(--text));
-}
-header a:not(.button),
-footer a:not(.button) {
-	color: var(--header-link);
-}
-.modal a:not(.button) {
-	color: var(--modal-link, #add8e6);
-}
-.modal {
-	background: var(--modal-center-bg, var(--page-bg));
-	border-color: var(--modal-bg, var(--header-bg));
-}
-.modal h4,
-.modal h5 {
-	background: var(--modal-bg, var(--header-bg));
-	color: var(--modal-text, var(--text));
-}
-.modal th label,
-.ribbons-gen,
-.changelog-date,
-.ribbonguide-label,
-#ribbonguide-transfer > div > div > div:first-child {
-	color: var(--label-text, var(--text));
-}
-.modal th label .asterisk {
-	color: var(--asterisk);
-}
-.pokemon-list-entry:hover,
-#menu button:hover,
-#menu button:focus {
-	box-shadow: 0 0 10px -5px var(--text);
-}
-.pokemon-list-entry-header,
-.pokemon-list-entry-footer,
-#menu button,
-#boxsort-boxes > div {
-	background-color: var(--pokemon-header, var(--modal-bg, var(--header-bg)));
-}
-.pokemon-list-entry-center {
-	background: var(--pokemon);
+[data-bs-theme="dark"] .btn-secondary {
+	--bs-btn-bg: #333;
+	--bs-btn-border-color: #3a3a3a;
+	--bs-btn-hover-bg: #444;
+	--bs-btn-hover-border-color: #4a4a4a;
 }

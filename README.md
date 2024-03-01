@@ -25,11 +25,10 @@ The images used in Ribbons.Guide were provided by:
 
 Ribbons.Guide also makes use of the following dependencies:
 - [jQuery](https://github.com/jquery/jquery)
-- [jQuery UI](https://github.com/jquery/jquery-ui)
-- [jQuery UI Touch Punch](https://github.com/RWAP/jquery-ui-touch-punch)
-- [jQuery Modal](https://github.com/kylefox/jquery-modal)
+- [Bootstrap](https://getbootstrap.com/)
 - [Select2](https://github.com/select2/select2)
-- [UpUp](https://github.com/TalAter/UpUp)
+- [Sortable](https://github.com/SortableJS/Sortable)
+- [Workbox](https://github.com/GoogleChrome/workbox)
 - [Google Fonts](https://fonts.google.com/)
 
 ### License
