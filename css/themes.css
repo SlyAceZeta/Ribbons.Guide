@@ -14,6 +14,7 @@
 	--rg-card-color: #000;
 
 	--rg-icon-filter: invert(1);
+	--rg-pulse-rgb: 0, 0, 0;
 }
 a:not(.btn) {
 	color: #0148B1;
@@ -63,6 +64,7 @@ a:not(.btn) {
 	--rg-card-color: #fff;
 
 	--rg-icon-filter: none;
+	--rg-pulse-rgb: 255, 255, 255;
 }
 [data-bs-theme="dark"] .no-ribbons-left {
 	--rg-card-bg: #020;

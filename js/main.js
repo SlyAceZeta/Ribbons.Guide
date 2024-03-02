@@ -256,7 +256,6 @@ function getData(dex, field, search = false){
 }
 
 function getEarnableRibbons(dex, currentLevel, currentGame, originGame, currentRibbons, checkedSize){
-	var allPossibleRibbons = [];
 	var earnableRibbons = [];
 	var earnableNotices = [];
 	var earnableWarnings = [];
@@ -504,7 +503,7 @@ function createCard(p){
 	/* body */
 	var genderDirectory = (getData(p.dex, "femsprite") && p.gender === "female") ? "female/" : "";
 	$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + p.dex + ".png", "alt": pokemon[p.dex].names["eng"], "title": pokemon[p.dex].names["eng"] }));
-	var $cardRibbons = $("<div>", { "class": "card-ribbons flex-grow-1 d-flex flex-wrap" });
+	var $cardRibbons = $("<div>", { "class": "card-ribbons flex-grow-1 d-flex flex-wrap p-1" });
 	var ribbonCount = 0;
 	var markCount = 0;
 	for(let r in p.ribbons){
@@ -608,9 +607,17 @@ function presetSettings(change = false){
 
 var balls, games, origins, pokemon, ribbons;
 function initRun(){
+	function loadingBar(n){
+		$("#loading-spinner-info-progress").attr("aria-valuenow", n);
+		$("#loading-spinner-info-progress-bar").css("width", n + "%");
+	}
 	/* initial preset of settings modal */
+	$("#loading-spinner-info-text").text("Loading settings");
 	presetSettings();
 
+	/* data load */
+	loadingBar(10);
+	$("#loading-spinner-info-text").text("Loading data");
 	$.when(
 		$.getJSON("./data/balls.json"),
 		$.getJSON("./data/changelog.json"),
@@ -620,7 +627,7 @@ function initRun(){
 		$.getJSON("./data/ribbons.json")
 	).fail(function(response, status, error){
 		var $errorimg = $("<img>", { "src": "./img/ui/cross.svg", "class": "mb-3" });
-		var $errortext = $("<div>", { "class": "fw-bold", "role": "status" }).text("Data loading error: " + error);
+		var $errortext = $("<div>", { "id": "loading-spinner-info-text", "class": "fw-bold", "role": "status" }).text("Data loading error: " + error);
 		$("#loading-spinner-info").html($errorimg).append($errortext);
 	}).done(function(dataBalls, dataChangelog, dataGames, dataOrigins, dataPokemon, dataRibbons){
 		/* set variables */
@@ -632,6 +639,8 @@ function initRun(){
 		ribbons = dataRibbons[0];
 
 		/* changelog logic */
+		loadingBar(20);
+		$("#loading-spinner-info-text").text("Loading changelog");
 		var newChanges = [], initialRun = true;
 		for(let date in changelog){
 			if(initialRun){
@@ -663,6 +672,8 @@ function initRun(){
 		}
 
 		/* data conversion from old app */
+		loadingBar(22);
+		$("#loading-spinner-info-text").text("Converting old data");
 		if(userPokemon.entries){
 			userPokemon = Object.assign({}, userPokemon.entries.filter(Boolean));
 			for(let p in userPokemon){
@@ -676,12 +687,36 @@ function initRun(){
 		}
 
 		/* create the Pokemon list */
+		loadingBar(23);
+		$("#loading-spinner-info-text").text("Loading Pokémon list");
 		for(let p in userPokemon){
 			$("#tracker-grid").append(createCard(userPokemon[p]));
 		}
 
-		/* remove spinner */
-		$("#loading-spinner").fadeOut("fast");
+		/* image check */
+		loadingBar(25);
+		$("#loading-spinner-info-text").text("Loading images");
+		/* thanks to Sean C Davis */
+		/* https://www.seancdavis.com/posts/wait-until-all-images-loaded/ */
+		var imagesLoaded = 0;
+		var totalImages = $("img").length;
+		$("img").each(function(idx, img){
+			$("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
+		});
+		var imagesProgress = 0;
+		function imageLoaded(){
+			imagesLoaded++;
+			loadingBar(25 + Math.floor((imagesLoaded/totalImages)*75));
+			if(imagesLoaded == totalImages){
+				allImagesLoaded();
+			}
+		}
+		/* finally ready to remove spinner */
+		function allImagesLoaded(){
+			setTimeout(() => {
+				$("#loading-spinner").fadeOut("fast")
+			}, 500);
+		}
 	});
 }
 

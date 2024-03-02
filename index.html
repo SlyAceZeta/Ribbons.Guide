@@ -14,6 +14,21 @@
 				navigator.serviceWorker.register("sw.js")
 			}
 		</script>
+		<!-- fonts -->
+		<link rel="preload" href="fonts/NunitoSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
+		<link rel="preload" href="fonts/NunitoSans-Bold.ttf" as="font" type="font/ttf" crossorigin>
+		<style type="text/css">
+		@font-face {
+			font-family: "Nunito Sans";
+			src: url("fonts/NunitoSans-Regular.ttf") format("truetype");
+			font-weight: 400;
+		}
+		@font-face {
+			font-family: "Nunito Sans";
+			src: url("fonts/NunitoSans-Bold.ttf") format("truetype");
+			font-weight: 700;
+		}
+		</style>
 		<!-- dependencies -->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/select2.min.js"></script>
@@ -31,14 +46,17 @@
 		<div id="loading-spinner" class="position-fixed">
 			<div id="loading-spinner-info" class="position-absolute top-50 start-50 translate-middle text-center">
 				<div class="spinner-grow mb-3" aria-hidden="true"></div>
-				<div class="fw-bold" role="status">LOADING</div>
+				<div id="loading-spinner-info-text" class="fw-bold mb-3" role="status">Loading app</div>
+				<div id="loading-spinner-info-progress" class="progress mx-auto" role="progressbar" aria-label="Loading progress bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+					<div id="loading-spinner-info-progress-bar" class="progress-bar"></div>
+				</div>
 			</div>
 		</div>
 		<!-- Header -->
 		<header id="headerNav" class="navbar navbar-expand-lg sticky-top border-top border-3">
 			<div class="container-fluid">
 				<h1 class="navbar-brand my-0 py-0">
-					<img class="align-middle mx-1" src="img/ribbons/best-friends-ribbon.png" alt="Logo" style="width:32px;height:32px;">
+					<img class="align-middle mx-1" src="img/ribbons/best-friends-ribbon.png" alt="Logo">
 					<span class="text-uppercase fw-bold align-middle">Ribbons.Guide</span>
 				</h1>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,11 +75,11 @@
 		</header>
 		<!-- Tracker -->
 		<section id="sectionTracker" class="container-fluid">
-			<div class="d-flex justify-content-between mt-4 px-3">
+			<div id="sectionTrackerButtonRow" class="d-flex justify-content-between mt-4 px-3">
 				<div>
-					<button class="btn btn-primary pb-1 me-2" type="button">
-						<img class="align-text-top" src="img/ui/add.svg" alt="Add" style="width:18px;height:18px;">
-						<span class="align-text-bottom d-none d-md-inline">Add New Pokémon</span>
+					<button class="btn btn-primary py-2 me-2 lh-1" type="button">
+						<img src="img/ui/add.svg" alt="Add">
+						<span class="align-middle d-none d-md-inline">Add New Pokémon</span>
 					</button>
 				</div>
 				<div class="d-flex">
@@ -71,9 +89,9 @@
 						<input type="radio" class="btn-check" name="switchViewBtn" id="switchViewBtn-expanded" autocomplete="off" value="expanded" checked>
 						<label class="btn btn-outline-secondary" for="switchViewBtn-expanded"><img class="align-text-bottom" src="img/ui/expanded.svg"></label>
 					</div>
-					<button class="btn btn-secondary pb-1 me-2" type="button">
-						<img class="align-text-top" src="img/ui/filter.svg" alt="Filter" style="width:18px;height:18px;">
-						<span class="align-text-bottom d-none d-md-inline">Filters</span>
+					<button class="btn btn-secondary py-2 me-2 lh-1" type="button">
+						<img src="img/ui/filter.svg" alt="Filter">
+						<span class="align-middle d-none d-md-inline">Filters</span>
 					</button>
 				</div>
 			</div>
@@ -138,7 +156,7 @@
 										<span class="align-text-bottom">Show World Ability Ribbon in checklists</span>
 										<img class="align-text-top" src="img/ribbons/world-ability-ribbon.png" alt="World Ability Ribbon" title="World Ability Ribbon">
 									</div>
-									<div style="font-size:.75em">Earning this Ribbon requires connecting to unofficial servers.</div>
+									<div class="form-check-label-info">Earning this Ribbon requires connecting to unofficial servers.</div>
 								</label>
 							</div>
 							<div class="form-check form-switch">
@@ -153,7 +171,7 @@
 											<img class="align-text-top" src="img/ribbons/contest-memory-ribbon-gold.png" alt="Contest Memory Ribbon (Gold)" title="Contest Memory Ribbon (Gold)">
 										</span>
 									</div>
-									<div style="font-size:.75em">This is a global setting that can be disabled per-Pokémon.</div>
+									<div class="form-check-label-info">This is a global setting that can be disabled per-Pokémon.</div>
 								</label>
 							</div>
 							<div class="form-check form-switch">
@@ -163,7 +181,7 @@
 										<span class="align-text-bottom">Automatically display Strange Ball</span>
 										<img class="align-text-top" src="img/balls/strange.png" alt="Strange Ball" title="Strange Ball">
 									</div>
-									<div style="font-size:.75em">This is a global setting that can be disabled per-Pokémon.</div>
+									<div class="form-check-label-info">This is a global setting that can be disabled per-Pokémon.</div>
 								</label>
 							</div>
 							<div class="form-check form-switch">
@@ -172,7 +190,7 @@
 									<div>
 										<span class="align-text-bottom">Enable Square Shiny option</span>
 									</div>
-									<div style="font-size:.75em">The Square Shiny animation only appears in Sword/Shield.</div>
+									<div class="form-check-label-info">The Square Shiny animation only appears in Sword/Shield.</div>
 								</label>
 							</div>
 							<div class="form-check form-switch">
@@ -181,7 +199,7 @@
 									<div>
 										<span class="align-text-bottom">Display Ribbon count and assigned Box</span>
 									</div>
-									<div style="font-size:.75em">This setting only affects the expanded card view.</div>
+									<div class="form-check-label-info">This setting only affects the expanded card view.</div>
 								</label>
 							</div>
 						</form>
@@ -224,9 +242,9 @@
 						<p>The images used in Ribbons.Guide were provided by <a href="https://pokejungle.net">PokéJungle</a>, <a href="https://pokemondb.net">Pokémon Database</a>, <a href="https://github.com/msikma/pokesprite">PokéSprite</a>, <a href="https://archives.bulbagarden.net/wiki/Main_Page">Bulbagarden Archives</a>, <a href="https://github.com/PokeMiners/pogo_assets">Pokémon GO Assets</a>, and <a href="https://github.com/google/material-design-icons">Material Symbols</a>. Ribbons.Guide also makes use of <a href="https://github.com/jquery/jquery">jQuery</a>, <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://github.com/select2/select2">Select2</a>, <a href="https://github.com/SortableJS/Sortable">Sortable</a>, <a href="https://github.com/GoogleChrome/workbox">Workbox</a>, and <a href="https://fonts.google.com/">Google Fonts</a>.</p>
 						<p>Pokémon, data, and images © Nintendo/Creatures Inc./Game Freak. This project is not affiliated with Nintendo, Creatures Inc., Game Freak, or The Pokémon Company. All original content and code is governed by the <a href="https://opensource.org/license/gpl-3-0/">GPL-3.0 license</a>.</p>
 						<p id="modalAboutLinks">
-							<a class="px-1" href="https://discord.gg/frv7dpWzDG" title="Discord"><img src="img/ui/discord.svg" alt="Discord" style="width:26px;height:26px;"></a>
-							<a class="px-1" href="https://github.com/SlyAceZeta/Ribbons.Guide" title="GitHub"><img src="img/ui/github.svg" alt="GitHub" style="width:26px;height:26px;"></a>
-							<a class="px-1" href="https://ko-fi.com/slyacezeta" title="Ko-Fi"><img src="img/ui/kofi.png" alt="Ko-Fi" style="width:32px;height:32px;"></a>
+							<a class="px-1" href="https://discord.gg/frv7dpWzDG" title="Discord"><img src="img/ui/discord.svg" alt="Discord"></a>
+							<a class="px-1" href="https://github.com/SlyAceZeta/Ribbons.Guide" title="GitHub"><img src="img/ui/github.svg" alt="GitHub"></a>
+							<a class="px-1" href="https://ko-fi.com/slyacezeta" title="Ko-Fi"><img src="img/ui/kofi.png" alt="Ko-Fi"></a>
 						</p>
 					</div>
 				</div>

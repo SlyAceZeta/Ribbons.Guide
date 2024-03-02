@@ -1,18 +1,11 @@
-/* fonts */
-@font-face {
-	font-family: "Nunito Sans";
-	src: url("../fonts/NunitoSans-Regular.ttf") format("truetype");
-	font-weight: 400;
-}
-@font-face {
-	font-family: "Nunito Sans";
-	src: url("../fonts/NunitoSans-SemiBold.ttf") format("truetype");
-	font-weight: 600;
-}
-@font-face {
-	font-family: "Nunito Sans";
-	src: url("../fonts/NunitoSans-Bold.ttf") format("truetype");
-	font-weight: 700;
+/* animations */
+@keyframes pulse-animation {
+	0% {
+		box-shadow: 0 0 1px 0px rgba(var(--rg-pulse-rgb), 0.75);
+	}
+	100% {
+		box-shadow: 0 0 1px 10px rgba(var(--rg-pulse-rgb), 0);
+	}
 }
 
 /* variables */
@@ -35,14 +28,24 @@ body {
 	height: 100vh;
 	background: var(--bs-body-bg);
 }
-/*#loading-spinner .container {
-	position: absolute;
-	top: calc(50% - calc(var(--bs-spinner-height)/2));
-}*/
+#loading-spinner-info-text {
+	text-transform: uppercase;
+}
+#loading-spinner-info-progress {
+	width: 200px;
+	height: 7px;
+}
+#loading-spinner-info-progress-bar {
+	width: 0%;
+}
 
 /* nav */
 .navbar-brand {
 	color: var(--rg-header-text-active);
+}
+.navbar-brand img {
+	width: 32px;
+	height: 32px;
 }
 .nav-link,
 .nav-link.disabled, .nav-link:disabled {
@@ -61,11 +64,6 @@ body {
 	background: var(--rg-header-background);
 	color: var(--rg-header-text-active);
 }
-#switchView img {
-	width: 22px;
-	height: 22px;
-	filter: var(--rg-icon-filter);
-}
 
 /* modals */
 .modal-content {
@@ -82,6 +80,10 @@ body {
 .modal-header {
 	--bs-modal-header-padding: 0.75rem 1rem;
 }
+#modalAboutLinks img {
+	width: 32px;
+	height: 32px;
+}
 #modalAboutLinks img:not([src*="kofi"]) {
 	filter: var(--rg-icon-filter);
 }
@@ -89,13 +91,27 @@ body {
 	width: auto;
 	height: 20px;
 }
+#modalSettings .form-check-label-info {
+	font-size: .75em;
+}
 
 /* links */
 a:not(:hover):not(:focus) {
 	text-decoration: none;
 }
 
-/* cards */
+/* tracker buttons */
+#sectionTrackerButtonRow img {
+	width: 18px;
+	height: 18px;
+}
+#sectionTrackerButtonRow #switchView img {
+	width: 22px;
+	height: 22px;
+	filter: var(--rg-icon-filter);
+}
+
+/* tracker cards */
 .card {
 	--bs-card-border-color: var(--bs-border-color);
 	--bs-card-bg: var(--rg-card-bg);
@@ -112,6 +128,13 @@ a:not(:hover):not(:focus) {
 .card-footer img {
 	width: auto;
 	height: 20px;
+}
+.card-header button {
+	width: 28px;
+}
+.move-to-next-gen .card-header button {
+	box-shadow: 0px 0px 1px 1px #ffffff00;
+	animation: pulse-animation 1s infinite;
 }
 .card-header-name {
 	font-size: 1.15em;
@@ -139,10 +162,14 @@ html[data-autostrangeball="true"] .card-header-ball-strange {
 	width: auto;
 	height: 100px;
 }
+.card-ribbons {
+	height: 100%;
+	align-content: space-evenly;
+}
 .card-ribbons img {
 	width: auto;
 	height: 32px;
-	margin: 5px 1px;
+	margin: 1px;
 }
 html[data-footerextrainfo="false"] .card-footer {
 	padding-top: .25rem !important;
