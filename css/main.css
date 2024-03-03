@@ -124,6 +124,9 @@ a:not(:hover):not(:focus) {
 	--bs-card-cap-color: var(--rg-card-color);
 	border: none;
 }
+.card-header {
+	padding-right: 0.75em;
+}
 .card-header img,
 .card-footer img {
 	width: auto;
@@ -131,10 +134,16 @@ a:not(:hover):not(:focus) {
 }
 .card-header button {
 	width: 28px;
+	background: url("../img/ui/clipboard.png") center center no-repeat;
+	background-size: 20px;
 }
 .move-to-next-gen .card-header button {
+	background-image: url("../img/ui/arrow-upward.svg");
 	box-shadow: 0px 0px 1px 1px #ffffff00;
 	animation: pulse-animation 1s infinite;
+}
+.no-ribbons-left .card-header button {
+	background-image: url("../img/ui/check.svg");
 }
 .card-header-name {
 	font-size: 1.15em;

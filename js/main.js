@@ -214,7 +214,6 @@ function loadBackup(file, filename){
 						backupBoxes = backupObj.boxes;
 						settings = backupObj.settings;
 						localStorage.settings = JSON.stringify(backupObj.settings);
-						presetSettings(true);
 					}
 				}
 			}
@@ -227,8 +226,7 @@ function loadBackup(file, filename){
 				}
 				localStorage.pokemon = JSON.stringify(backupPokemon);
 				localStorage.boxes = JSON.stringify(backupBoxes);
-				// TODO: load Pokemon view
-				// TODO: load boxes
+				location.reload();
 			} else {
 				alert("This is not a valid Ribbons.Guide backup. Your data has not changed.");
 			}
@@ -276,12 +274,14 @@ function getEarnableRibbons(dex, currentLevel, currentGame, originGame, currentR
 	var evoWarnMon = getData(dex, "evowarnmon", true);
 	var evoWarnGen = getData(dex, "evowarngen", true);
 	// add warning for USUM Totem Pokemon
+	// TODO: update this to look for the Totem setting instead of current game
 	if(dex === "marowak-alola" || dex === "ribombee" || dex === "araquanid" || dex === "togedemaru"){
 		if((currentGame === "usun" || currentGame === "umoon") && (originGame === "usun" || originGame === "umoon")){
 			earnableNotices.push("usum-totem");
 		}
 	}
 	// add warning for SwSh Gigantamax Pokemon
+	// TODO: update this to look for the GMax setting instead of current game
 	if(dex === "pikachu" || dex === "eevee" || dex === "meowth" || dex == "duraludon"){
 		if(currentGame === "sw" || currentGame === "sh" || currentGame === "home"){
 			earnableNotices.push("gigantamax");
@@ -405,6 +405,7 @@ function createCard(p){
 
 	/* containers */
 	var $cardCol = $("<div>", { "class": "col" });
+	// TODO: change this to list all of the Ribbons and the current Gen and next Gen to handle all of this through CSS, and also add warnings and notices here
 	if(ribbonLists && ribbonLists.remaining.length == 0){
 		$cardCol.addClass("no-ribbons-left");
 	} else if(ribbonLists && ribbonLists.nextRibbonGen > currentGen){
@@ -487,13 +488,7 @@ function createCard(p){
 	}
 	$cardHeader.append($cardHeaderLeft);
 	var $cardHeaderButton = $("<button>", { "type": "button", "class": "btn btn-link p-0 ms-1 position-relative" });
-	var checklistIcon = "clipboard.png";
-	if(ribbonLists && ribbonLists.remaining.length == 0){
-		checklistIcon = "check.svg";
-	} else if(ribbonLists && ribbonLists.nextRibbonGen > currentGen){
-		checklistIcon = "arrow-upward.svg";
-	}
-	$cardHeaderButton.append($("<img>", { "class": "align-text-top", "src": "img/ui/" + checklistIcon, "alt": "Checklist", "title": "Checklist" }));
+	// TODO: add this hidden by default and show it with CSS per above TODO
 	if(ribbonLists && ribbonLists.warnings.length > 0){
 		$cardHeaderButton.append($("<span>", { "class": "ribbon-checklist-badge position-absolute translate-middle bg-danger rounded-circle" }).html($("<span>", {"class": "visually-hidden"}).text("Warnings")));
 	}
