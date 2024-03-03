@@ -253,7 +253,7 @@ function getData(dex, field, search = false){
 	}
 }
 
-function getEarnableRibbons(dex, currentLevel, currentGame, originGame, currentRibbons, checkedSize){
+function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame, currentRibbons, checkedSize){
 	var earnableRibbons = [];
 	var earnableNotices = [];
 	var earnableWarnings = [];
@@ -366,7 +366,54 @@ function getEarnableRibbons(dex, currentLevel, currentGame, originGame, currentR
 							continue;
 						}
 					} else if(ribbon == "footprint-ribbon"){
-						// TODO: sigh
+						// if Pokemon can to go to Gen IV, it can always earn this
+						if(ribbonGen !== 4){
+							// if Pokemon is voiceless and can go to Gen VIII, it can always earn this
+							var voiceless = getData(dex, "voiceless");
+							if(!(ribbonGen == 8 && voiceless)){
+								// otherwise, Footprint relies on Met Level < 71
+								var currentLevelBelow71 = currentLevel < 71;
+								// Met Level changes upon entering Gen V or leaving Virtual Console
+								if(currentGen < 5 || virtualConsole){
+									if(currentLevelBelow71){
+										// Pokemon's current level is < 71
+										// if it transfers now, its Met Level will also be < 71
+										// therefore it will always be able to earn Footprint
+										// BUT if the player levels to 71+ before transferring, Footprint will be blocked
+										if(currentGen < 5){
+											earnableWarnings.push("footprint-gen4");
+										} else if(virtualConsole){
+											earnableWarnings.push("footprint-virtualconsole");
+										}
+									} else {
+										// Pokemon has already leveled to 71+, Footprint is unavailable
+										continue;
+									}
+								} else {
+									// Pokemon has left Gen V and Virtual Console, so Met Level is now permanently set
+									if(metLevel){
+										// user has set Met Level
+										if(metLevel > 70){
+											// Pokemon was met at 71+, Footprint is unavailable
+											continue;
+										}
+									} else {
+										// user has not set Met Level, let's try to determine it automatically
+										// Pokemon from GO must have Met Level < 50 and can always earn Footprint
+										if(originGame !== "go"){
+											// Pokemon in Gen V+ with Current Level < 71 must also have Met Level < 71 and can always earn Footprint
+											if(!currentLevelBelow71){
+												// we cannot automatically determine Met Level
+												// before we warn the user as such, let's check if the ribbon will appear for the Pokemon in BDSP--if so, no warning is necessary
+												if(!((compatibleGames.includes("bd") || compatibleGames.includes("sp")) && voiceless)){
+													earnableWarnings.push("footprint-met-level");
+												}
+											}
+										}
+									}
+								}
+							}
+						}
 					}
 
 					// all checks passed
@@ -399,8 +446,12 @@ function createCard(p){
 			currentGen = 7;
 		}
 	}
+	var metLevel;
+	if(p.metlevel){
+		metLevel = p.metlevel;
+	}
 	if(p.dex && p.level && p.currentgame && p.origingame){
-		ribbonLists = getEarnableRibbons(p.dex, p.level, p.currentgame, p.origingame, p.ribbons, p.scale);
+		ribbonLists = getEarnableRibbons(p.dex, p.level, metLevel, p.currentgame, p.origingame, p.ribbons, p.scale);
 	}
 
 	/* containers */
