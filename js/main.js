@@ -5,12 +5,12 @@ if(!localStorage.settings){
 var settings = JSON.parse(localStorage.settings);
 /* get pokemon */
 if(!localStorage.pokemon){
-	localStorage.pokemon = "{}";
+	localStorage.pokemon = "[]";
 }
 var userPokemon = JSON.parse(localStorage.pokemon);
 /* get boxes */
 if(!localStorage.boxes){
-	localStorage.boxes = "{}";
+	localStorage.boxes = "[]";
 }
 var userBoxes = JSON.parse(localStorage.boxes);
 /* get last viewed changelog date */
@@ -196,12 +196,12 @@ function loadBackup(file, filename){
 			var fileVersion = 0;
 			// check for the different backup file versions
 			var oldBoxPosition = contents.indexOf(',{"entries":[');
-			var backupPokemon = {}, backupBoxes = {};
+			var backupPokemon = [], backupBoxes = [];
 			if(oldBoxPosition > -1){
 				fileVersion = 2;
 				backupPokemon = JSON.parse(contents.substring(0, oldBoxPosition));
 				backupBoxes = JSON.parse(contents.substring(oldBoxPosition+1));
-				backupBoxes = Object.assign({}, backupBoxes.entries.filter(Boolean));
+				backupBoxes = Object.assign([], backupBoxes.entries.filter(Boolean));
 			} else {
 				if(contents.indexOf('{"entries"') == 0){
 					fileVersion = 1;
@@ -219,7 +219,7 @@ function loadBackup(file, filename){
 			}
 			if(fileVersion){
 				if(fileVersion < 3){
-					backupPokemon = Object.assign({}, backupPokemon.entries.filter(Boolean));
+					backupPokemon = Object.assign([], backupPokemon.entries.filter(Boolean));
 				}
 				for(let p in backupPokemon){
 					backupPokemon[p] = updateOldPokemon(backupPokemon[p]);
@@ -718,18 +718,20 @@ function initRun(){
 		}
 
 		/* data conversion from old app */
-		loadingBar(22);
-		$("#loading-spinner-info-text").text("Converting old data");
-		if(userPokemon.entries){
-			userPokemon = Object.assign({}, userPokemon.entries.filter(Boolean));
-			for(let p in userPokemon){
-				userPokemon[p] = updateOldPokemon(userPokemon[p]);
+		if((userPokemon.entries && typeof userPokemon.entries !== "function") || (userBoxes.entries && typeof userBoxes.entries !== "function")){
+			loadingBar(22);
+			$("#loading-spinner-info-text").text("Converting old data");
+			if(userPokemon.entries && typeof userPokemon.entries !== "function"){
+				userPokemon = Object.assign([], userPokemon.entries.filter(Boolean));
+				for(let p in userPokemon){
+					userPokemon[p] = updateOldPokemon(userPokemon[p]);
+				}
+				localStorage.pokemon = JSON.stringify(userPokemon);
 			}
-			localStorage.pokemon = JSON.stringify(userPokemon);
-		}
-		if(userBoxes.entries){
-			userBoxes = Object.assign({}, userBoxes.entries.filter(Boolean));
-			localStorage.boxes = JSON.stringify(userBoxes);
+			if(userBoxes.entries && typeof userBoxes.entries !== "function"){
+				userBoxes = Object.assign([], userBoxes.entries.filter(Boolean));
+				localStorage.boxes = JSON.stringify(userBoxes);
+			}
 		}
 
 		/* create the Pokemon list */
