@@ -18,6 +18,8 @@ var lastChangeDate;
 if(localStorage.changelog){
 	lastChangeDate = new Date(localStorage.changelog);
 }
+/* set sortable variables in advance */
+var sortablePokemon;
 
 /* change setting */
 function changeSetting(key, value){
@@ -433,6 +435,19 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	return {"remaining": earnableRibbons, "notices": earnableNotices, "warnings": earnableWarnings, "nextRibbonGen": nextRibbonGen};
 }
 
+function deletePokemon(){
+	var cardContainer = $(event.target).parents(".col");
+	var pokemonID = cardContainer.index();
+	var pokemonName = cardContainer.find(".card-header-name").text();
+	if(confirm("Are you sure you want to delete " + pokemonName + "? This is permanent!")){
+		cardContainer.fadeOut(300, function(){
+			$(this).remove();
+		});
+		userPokemon.splice(pokemonID, 1);
+		localStorage.pokemon = JSON.stringify(userPokemon);
+	}
+}
+
 function createCard(p){
 	var ribbonLists;
 	var currentGen = 1000;
@@ -602,9 +617,9 @@ function createCard(p){
 		$cardFooterBottomLeft.append($("<img>", { "class": "align-middle card-footer-origin", "src": "img/origins/" + p.originmark + ".png", "alt": originName, "title": originName }));
 	}
 	var $cardFooterBottomRight = $("<div>")
-		.append($("<button>", { "class": "btn btn-link p-0 ms-2 align-text-bottom" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/move.svg", "alt": "Move", "title": "Drag to re-order" })))
+		.append($("<button>", { "class": "btn btn-link p-0 ms-2 align-text-bottom card-sortable-handle" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/move.svg", "alt": "Move", "title": "Drag to re-order" })))
 		.append($("<button>", { "class": "btn btn-link p-0 ms-2 align-text-bottom" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/edit.svg", "alt": "Edit", "title": "Edit" })))
-		.append($("<button>", { "class": "btn btn-link p-0 ms-2 align-text-bottom" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/delete.svg", "alt": "Delete", "title": "Delete" })));
+		.append($("<button>", { "class": "btn btn-link p-0 ms-2 align-text-bottom", "onclick": "deletePokemon()" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/delete.svg", "alt": "Delete", "title": "Delete" })));
 	$cardFooterBottom.append($cardFooterBottomLeft).append($cardFooterBottomRight);
 	$cardFooter.append($cardFooterTop).append($cardFooterBottom);
 
@@ -740,6 +755,19 @@ function initRun(){
 		for(let p in userPokemon){
 			$("#tracker-grid").append(createCard(userPokemon[p]));
 		}
+		sortablePokemon = new Sortable($("#tracker-grid")[0], {
+			handle: ".card-sortable-handle",
+			animation: 200,
+			put: false,
+			onEnd: function(evt){
+				if(evt.oldDraggableIndex !== evt.newDraggableIndex){
+					var movedPokemon = userPokemon[evt.oldDraggableIndex];
+					userPokemon.splice(evt.oldDraggableIndex, 1);
+					userPokemon.splice(evt.newDraggableIndex, 0, movedPokemon);
+					localStorage.pokemon = JSON.stringify(userPokemon);
+				}
+			}
+		});
 
 		/* image check */
 		loadingBar(25);
