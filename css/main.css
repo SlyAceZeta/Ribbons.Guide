@@ -40,7 +40,8 @@ body {
 }
 
 /* nav */
-.navbar-brand {
+.navbar-brand,
+.navbar-brand:hover {
 	color: var(--rg-header-text-active);
 }
 .navbar-brand img {
@@ -102,11 +103,11 @@ a:not(:hover):not(:focus) {
 
 /* tracker buttons */
 #sectionTrackerButtonRow img {
-	width: 18px;
+	width: auto;
 	height: 18px;
 }
 #sectionTrackerButtonRow #switchView img {
-	width: 22px;
+	width: auto;
 	height: 22px;
 	filter: var(--rg-icon-filter);
 }
@@ -224,7 +225,7 @@ html[data-cardview="condensed"] .card-header-name {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	max-width: 4.75em;
+	max-width: 4.5em;
 }
 html[data-cardview="condensed"] .card-body {
 	justify-content: center;

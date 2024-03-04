@@ -435,12 +435,24 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	return {"remaining": earnableRibbons, "notices": earnableNotices, "warnings": earnableWarnings, "nextRibbonGen": nextRibbonGen};
 }
 
+function copyPokemon(){
+	var cardContainer = $(event.target).parents(".col");
+	var pokemonID = cardContainer.index();
+	var pokemonName = cardContainer.find(".card-header-name").text();
+	if(confirm("Are you sure you want to create a copy of " + pokemonName + "?")){
+		var pokemonToCopy = userPokemon[pokemonID];
+		userPokemon.splice(pokemonID, 0, pokemonToCopy);
+		localStorage.pokemon = JSON.stringify(userPokemon);
+		cardContainer.after(createCard(pokemonToCopy));
+	}
+}
+
 function deletePokemon(){
 	var cardContainer = $(event.target).parents(".col");
 	var pokemonID = cardContainer.index();
 	var pokemonName = cardContainer.find(".card-header-name").text();
 	if(confirm("Are you sure you want to delete " + pokemonName + "? This is permanent!")){
-		cardContainer.fadeOut(300, function(){
+		cardContainer.fadeOut(250, function(){
 			$(this).remove();
 		});
 		userPokemon.splice(pokemonID, 1);
@@ -619,6 +631,7 @@ function createCard(p){
 	var $cardFooterBottomRight = $("<div>")
 		.append($("<button>", { "class": "btn btn-link p-0 ms-2 align-text-bottom card-sortable-handle" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/move.svg", "alt": "Move", "title": "Drag to re-order" })))
 		.append($("<button>", { "class": "btn btn-link p-0 ms-2 align-text-bottom" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/edit.svg", "alt": "Edit", "title": "Edit" })))
+		.append($("<button>", { "class": "btn btn-link p-0 ms-2 align-text-bottom", "onclick": "copyPokemon()" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/copy.svg", "alt": "Copy", "title": "Copy" })))
 		.append($("<button>", { "class": "btn btn-link p-0 ms-2 align-text-bottom", "onclick": "deletePokemon()" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/delete.svg", "alt": "Delete", "title": "Delete" })));
 	$cardFooterBottom.append($cardFooterBottomLeft).append($cardFooterBottomRight);
 	$cardFooter.append($cardFooterTop).append($cardFooterBottom);
