@@ -11,7 +11,7 @@
 		<link rel="manifest" href="manifest.json">
 		<script>
 			if(typeof navigator.serviceWorker !== "undefined") {
-				navigator.serviceWorker.register("sw.js")
+				navigator.serviceWorker.register("sw.js");
 			}
 		</script>
 		<!-- fonts -->
@@ -76,12 +76,10 @@
 		<!-- Tracker -->
 		<section id="sectionTracker" class="container-fluid">
 			<div id="sectionTrackerButtonRow" class="d-flex justify-content-between mt-4 px-3">
-				<div>
-					<button class="btn btn-primary py-2 me-2 lh-1" type="button">
-						<img src="img/ui/add.svg" alt="Add">
-						<span class="align-middle d-none d-md-inline">Add New Pokémon</span>
-					</button>
-				</div>
+				<button class="btn btn-primary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button">
+					<img src="img/ui/add.svg" alt="Add">
+					<span class="align-middle d-none d-md-inline">Add New Pokémon</span>
+				</button>
 				<div class="d-flex">
 					<div id="switchView" class="btn-group me-2" role="group" aria-label="Switch view">
 						<input type="radio" class="btn-check" name="switchViewBtn" id="switchViewBtn-condensed" autocomplete="off" value="condensed">
@@ -89,7 +87,11 @@
 						<input type="radio" class="btn-check" name="switchViewBtn" id="switchViewBtn-expanded" autocomplete="off" value="expanded" checked>
 						<label class="btn btn-outline-secondary" for="switchViewBtn-expanded"><img class="align-text-bottom" src="img/ui/expanded.svg"></label>
 					</div>
-					<button class="btn btn-secondary py-2 me-2 lh-1" type="button">
+					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button">
+						<img src="img/ui/box-closed.png" alt="Filter">
+						<span class="align-middle d-none d-md-inline">Boxes</span>
+					</button>
+					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button">
 						<img src="img/ui/filter.svg" alt="Filter">
 						<span class="align-middle d-none d-md-inline">Filters</span>
 					</button>
@@ -163,11 +165,11 @@
 								<input class="form-check-input" type="checkbox" role="switch" id="settingsAutoMemoryRibbons" checked>
 								<label class="form-check-label" for="settingsAutoMemoryRibbons">
 									<div>
-										<span class="align-text-bottom">Automatically display Memory Ribbons</span>
+										<span class="align-text-bottom">Automatically manage Memory Ribbons</span>
 										<span class="text-nowrap">
 											<img class="align-text-top" src="img/ribbons/battle-memory-ribbon.png" alt="Battle Memory Ribbon" title="Battle Memory Ribbon">
-											<img class="align-text-top" src="img/ribbons/battle-memory-ribbon-gold.png" alt="Battle Memory Ribbon (Gold)" title="Battle Memory Ribbon (Gold)">
 											<img class="align-text-top" src="img/ribbons/contest-memory-ribbon.png" alt="Contest Memory Ribbon" title="Contest Memory Ribbon">
+											<img class="align-text-top" src="img/ribbons/battle-memory-ribbon-gold.png" alt="Battle Memory Ribbon (Gold)" title="Battle Memory Ribbon (Gold)">
 											<img class="align-text-top" src="img/ribbons/contest-memory-ribbon-gold.png" alt="Contest Memory Ribbon (Gold)" title="Contest Memory Ribbon (Gold)">
 										</span>
 									</div>
@@ -188,9 +190,10 @@
 								<input class="form-check-input" type="checkbox" role="switch" id="settingsDisplaySquareShiny" checked>
 								<label class="form-check-label" for="settingsDisplaySquareShiny">
 									<div>
-										<span class="align-text-bottom">Enable Square Shiny option</span>
+										<span class="align-text-bottom">Enable Square Shiny option in add/edit forms</span>
+										<img class="align-text-top" src="img/ui/shiny-square.svg" alt="Square Shiny" title="Square Shiny">
 									</div>
-									<div class="form-check-label-info">The Square Shiny animation only appears in Sword/Shield.</div>
+									<div class="form-check-label-info">The Square Shiny animation only appears in Sword/Shield. Pokémon set as Square Shiny will show the Square Shiny icon regardless of this setting.</div>
 								</label>
 							</div>
 							<div class="form-check form-switch">
@@ -198,6 +201,7 @@
 								<label class="form-check-label" for="settingsFooterExtraInfo">
 									<div>
 										<span class="align-text-bottom">Display Ribbon count and assigned Box</span>
+										<img class="align-text-top" src="img/ui/box-closed.png" alt="Box" title="Box">
 									</div>
 									<div class="form-check-label-info">This setting only affects the expanded card view.</div>
 								</label>

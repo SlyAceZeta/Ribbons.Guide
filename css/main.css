@@ -111,6 +111,11 @@ a:not(:hover):not(:focus) {
 	height: 22px;
 	filter: var(--rg-icon-filter);
 }
+@media (max-width: 767.98px){
+	#sectionTrackerButtonRow img {
+		height: 24px;
+	}
+}
 
 /* tracker cards */
 .card {
@@ -163,10 +168,14 @@ html[data-autostrangeball="true"] .card-header-ball-strange {
 .card .btn-link img {
 	filter: var(--rg-icon-filter);
 }
-.ribbon-checklist-badge {
+.ribbon-checklist-warning-badge {
+	display: none;
 	top: 25%;
 	left: 85%;
 	padding: 0.33rem;
+}
+.col[data-ribbon-warnings] .ribbon-checklist-warning-badge {
+	display: inline;
 }
 .card-sprite {
 	width: auto;
@@ -181,6 +190,7 @@ html[data-autostrangeball="true"] .card-header-ball-strange {
 	height: 32px;
 	margin: 1px;
 }
+html[data-cardview="condensed"] .card-footer,
 html[data-footerextrainfo="false"] .card-footer {
 	padding-top: .25rem !important;
 	padding-bottom: .25rem !important;
@@ -189,7 +199,10 @@ html[data-footerextrainfo="false"] .card-footer-top {
 	display: none!important;
 }
 .card-footer-level {
-	min-width: 60px;
+	display: inline-flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	width: 50px;
 }
 .card-footer-language {
 	background: #efefef;

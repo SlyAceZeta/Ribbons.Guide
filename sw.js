@@ -10,7 +10,7 @@ self.addEventListener("message", (event) => {
 
 workbox.routing.registerRoute(
 	new RegExp("/*"),
-	new workbox.strategies.StaleWhileRevalidate({
+	new workbox.strategies.NetworkFirst({
 		cacheName: CACHE
 	})
 );
