@@ -112,7 +112,6 @@ var toggles = { // default settings
 	"ShowWorldAbility": false,
 	"AutoMemoryRibbons": true,
 	"AutoStrangeBall": true,
-	"DisplaySquareShiny": false,
 	"FooterExtraInfo": true
 };
 /* change toggle settings */
@@ -901,6 +900,9 @@ $(function(){
 		var file = $(this)[0].files[0];
 		if(file) loadBackup(file, $(this).val());
 	});
+	/* initialize tooltips */
+	const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+	const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 	/* initial functions that run after all else */
 	initRun();
 });

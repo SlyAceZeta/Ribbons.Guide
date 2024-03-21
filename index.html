@@ -76,7 +76,7 @@
 		<!-- Tracker -->
 		<section id="sectionTracker" class="container-fluid">
 			<div id="sectionTrackerButtonRow" class="d-flex justify-content-between mt-4 px-3">
-				<button class="btn btn-primary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button">
+				<button class="btn btn-primary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button" data-bs-toggle="modal" data-bs-target="#modalPokemonForm">
 					<img src="img/ui/add.svg" alt="Add">
 					<span class="align-middle d-none d-md-inline">Add New Pokémon</span>
 				</button>
@@ -99,6 +99,276 @@
 			</div>
 			<div id="tracker-grid" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mt-2 mb-4"></div>
 		</section>
+		<!-- Add/Edit Pokemon Modal -->
+		<div class="modal fade" id="modalPokemonForm" tabindex="-1" aria-labelledby="modalPokemonFormLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalPokemonFormLabel">Add New Pokémon</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body p-0 pt-1">
+						<ul class="nav nav-tabs justify-content-center" id="pokemonFormTabs" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button class="nav-link active" id="pokemonFormTabs-details" data-bs-toggle="tab" data-bs-target="#pokemonFormSections-details" type="button" role="tab" aria-controls="pokemonFormSections-details" aria-selected="true">Details</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="pokemonFormTabs-ribbons" data-bs-toggle="tab" data-bs-target="#pokemonFormSections-ribbons" type="button" role="tab" aria-controls="pokemonFormSections-ribbons">Ribbons</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="pokemonFormTabs-memories" data-bs-toggle="tab" data-bs-target="#pokemonFormSections-memories" type="button" role="tab" aria-controls="pokemonFormSections-memories">Memories</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="pokemonFormTabs-notes" data-bs-toggle="tab" data-bs-target="#pokemonFormSections-notes" type="button" role="tab" aria-controls="pokemonFormSections-notes">Notes</button>
+							</li>
+						</ul>
+						<div class="tab-content p-3 pt-2" id="pokemonFormSections">
+							<div class="tab-pane fade show active" id="pokemonFormSections-details" role="tabpanel" aria-labelledby="pokemonFormTabs-details" tabindex="0">
+								<div class="row g-2">
+									<div class="col-4 col-sm-3 col-lg-2 d-flex align-items-center justify-content-center">
+										<img src="img/ui/1x1.svg" id="pokemonFormSprite">
+									</div>
+									<div class="col-8 col-sm-9 col-lg-10">
+										<div class="row g-2">
+											<div class="col-12">
+												<label for="pokemonFormSpecies" class="form-label">Species <span class="form-asterisk">*</span></label>
+												<select id="pokemonFormSpecies" class="form-select">
+													<!-- TODO -->
+												</select>
+											</div>
+											<div class="col-lg-6">
+												<div class="btn-group d-flex" role="group" aria-label="Gender">
+													<input type="radio" class="btn-check" name="pokemonFormGender" id="pokemonFormGender-male" autocomplete="off" value="male" checked>
+													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormGender-male">
+														<img class="align-middle" src="img/ui/male.png" style="height:16px;">
+														<span class="align-middle">Male</span>
+													</label>
+													<input type="radio" class="btn-check" name="pokemonFormGender" id="pokemonFormGender-female" autocomplete="off" value="female">
+													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormGender-female">
+														<img class="align-middle" src="img/ui/female.png" style="height:16px;">
+														<span class="align-middle">Female</span>
+													</label>
+													<input type="radio" class="btn-check d-none" name="pokemonFormGender" id="pokemonFormGender-unknown" autocomplete="off" value="unknown">
+													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1 d-none" for="pokemonFormGender-unknown">
+														<img class="align-middle" src="img/ui/gender-unknown.png" style="height:16px;">
+														<span class="align-middle">Gender unknown</span>
+													</label>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="btn-group d-flex align-items-center" role="group" aria-label="Shiny">
+													<input type="radio" class="btn-check" name="pokemonFormShiny" id="pokemonFormShiny-none" autocomplete="off" value="none" checked>
+													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormShiny-none">
+														<span class="align-middle">Normal</span>
+													</label>
+													<input type="radio" class="btn-check" name="pokemonFormShiny" id="pokemonFormShiny-star" autocomplete="off" value="star">
+													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormShiny-star">
+														<img class="align-middle" src="img/ui/shiny-star.png" style="height:16px;">
+														<span class="align-middle d-none d-lg-inline" id="pokemonFormShiny-star-labelspecific">Star</span>
+													</label>
+													<input type="radio" class="btn-check" name="pokemonFormShiny" id="pokemonFormShiny-square" autocomplete="off" value="square">
+													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormShiny-square">
+														<img class="align-middle" src="img/ui/shiny-square.svg" style="height:16px;">
+														<span class="align-middle d-none d-lg-inline">Square</span>
+													</label>
+													<img class="align-middle ms-2" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="Square Shiny Pokémon have a unique animation in <span class='text-nowrap'>Sword/Shield</span>. If the Pokémon is shiny and you're unsure which type, select Star.">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<label for="pokemonFormNickname" class="form-label">Nickname</label>
+										<input type="text" class="form-control" id="pokemonFormNickname" maxlength="12">
+									</div>
+									<div class="col-lg-6">
+										<label for="pokemonFormLanguage" class="form-label">Language <span class="form-asterisk">*</span></label>
+										<select class="form-select" id="pokemonFormLanguage" aria-label="Pokemon language">
+											<option></option>
+											<option value="GER">GER - Deutsch</option>
+											<option value="ENG">ENG - English</option>
+											<option value="SPA">SP-EU - Español (España)</option>
+											<option value="FRE">FRE - Français</option>
+											<option value="ITA">ITA - Italiano</option>
+											<option value="JPN">JPN - 日本語</option>
+											<option value="KOR">KOR - 한국어</option>
+											<option value="CHT">CHT - 正體字</option>
+											<option value="CHS">CHS - 简化字</option>
+										</select>
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormLevel" class="form-label">Current Level <span class="form-asterisk">*</span></label>
+										<input type="number" class="form-control" id="pokemonFormLevel" min="1" max="100" required>
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormNature" class="form-label">Nature</label>
+										<select class="form-select" id="pokemonFormNature" aria-label="Nature">
+											<!-- TODO -->
+										</select>
+									</div>
+									<div class="col-lg-6">
+										<label for="pokemonFormBall" class="form-label">Poké Ball <span class="form-asterisk">*</span></label>
+										<select class="form-select" id="pokemonFormBall" aria-label="Poké Ball">
+											<!-- TODO -->
+										</select>
+									</div>
+									<div class="col-lg-6">
+										<label class="form-label">
+											<span class="align-middle">Strange Ball</span>
+											<img class="align-middle ms-1" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="If enabled, the Strange Ball will replace the selected Poké Ball depending on the Current Game. If disabled, the selected Poké Ball will always appear.">
+										</label>
+										<div class="btn-group d-flex align-items-center" role="group" aria-label="Strange Ball">
+											<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-global" autocomplete="off" value="global" checked>
+											<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormStrangeBall-global">
+												<span class="align-middle">Global Setting</span>
+											</label>
+											<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-enabled" autocomplete="off" value="on">
+											<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormStrangeBall-enabled">
+												<span class="align-middle">Enabled</span>
+											</label>
+											<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-disabled" autocomplete="off" value="off">
+											<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormStrangeBall-disabled">
+												<span class="align-middle">Disabled</span>
+											</label>
+										</div>
+									</div>
+									<div class="col-lg-6 mt-3">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="pokemonFormTotem">
+											<label class="form-check-label" for="pokemonFormTotem">Totem Pokémon (SM/USUM)</label>
+										</div>
+									</div>
+									<div class="col-lg-6 mt-lg-3">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="pokemonFormGMax">
+											<label class="form-check-label" for="pokemonFormGMax">
+												<span>Gigantamax Factor (SwSh)</span>
+												<img src="img/ui/gigantamax.png" style="height:16px;">
+											</label>
+										</div>
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormTrainer" class="form-label">Original Trainer</label>
+										<input type="text" class="form-control" id="pokemonFormTrainer" maxlength="15">
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormIDNumber" class="form-label">ID No.</label>
+										<input type="text" class="form-control" id="pokemonFormIDNumber" inputmode="numeric" maxlength="6">
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormOriginMark" class="form-label">Origin Mark <span class="form-asterisk">*</span></label>
+										<select class="form-select" id="pokemonFormOriginMark">
+											<!-- TODO -->
+										</select>
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormOriginGame" class="form-label">Origin Game</label>
+										<select class="form-select" id="pokemonFormOriginGame">
+											<!-- TODO -->
+										</select>
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormCurrentGame" class="form-label">Current Game</label>
+										<select class="form-select" id="pokemonFormCurrentGame">
+											<!-- TODO -->
+										</select>
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormBox" class="form-label">Box</label>
+										<select class="form-select" id="pokemonFormBox">
+											<!-- TODO -->
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="pokemonFormSections-ribbons" role="tabpanel" aria-labelledby="pokemonFormTabs-ribbons" tabindex="0">
+								<!-- TODO -->
+							</div>
+							<div class="tab-pane fade" id="pokemonFormSections-memories" role="tabpanel" aria-labelledby="pokemonFormTabs-memories" tabindex="0">
+								<div class="row g-2">
+									<div class="col-6">
+										<label for="pokemonFormMetLevel" class="form-label">Met Level</label>
+										<input type="number" class="form-control" id="pokemonFormMetLevel" min="1" max="100">
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormMetDate" class="form-label">Met Date</label>
+										<input type="date" class="form-control" id="pokemonFormMetDate">
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormMetLocation" class="form-label">Met Location</label>
+										<input type="text" class="form-control" id="pokemonFormMetLocation">
+									</div>
+									<div class="col-6">
+										<div class="form-label">Pokérus</div>
+										<div class="btn-group d-flex align-items-center" role="group" aria-label="Pokerus">
+											<input type="radio" class="btn-check" name="pokemonFormPokerus" id="pokemonFormPokerus-none" autocomplete="off" value="none" checked>
+											<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormPokerus-none">
+												<span class="align-middle">None</span>
+											</label>
+											<input type="radio" class="btn-check" name="pokemonFormPokerus" id="pokemonFormPokerus-infected" autocomplete="off" value="infected">
+											<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormPokerus-infected">
+												<img class="align-middle" src="img/ui/pokerus-infected.png" style="height:16px;">
+												<span class="align-middle d-none d-lg-inline">Infected</span>
+											</label>
+											<input type="radio" class="btn-check" name="pokemonFormPokerus" id="pokemonFormPokerus-cured" autocomplete="off" value="cured">
+											<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormPokerus-cured">
+												<img class="align-middle" src="img/ui/pokerus-cured.png" style="height:16px;">
+												<span class="align-middle d-none d-lg-inline">Cured</span>
+											</label>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-label">
+											<span class="align-middle">Optional Achievements</span>
+											<img class="align-middle ms-1" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="These achievements are not tracked by the games when transferring across generations.">
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="pokemonFormOptional-LeafCrown">
+											<label class="form-check-label" for="pokemonFormOptional-LeafCrown">
+												<span>Leaf Crown (HGSS)</span>
+												<img class="align-middle ms-1" src="img/ui/leaf-crown.png" style="height:16px;" alt="Leaf Crown" title="Leaf Crown">
+											</label>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="pokemonFormOptional-PokestarShine">
+											<label class="form-check-label" for="pokemonFormOptional-PokestarShine">
+												<span>Pokéstar Shine (B2W2)</span>
+												<img class="align-middle ms-1" src="img/ui/pokestar.svg" style="height:16px;" alt="PokéStar" title="PokéStar">
+											</label>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="pokemonFormOptional-TimeTraveler">
+											<label class="form-check-label" for="pokemonFormOptional-TimeTraveler">Time Travel Award (ORAS/BDSP)</label>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="pokemonFormOptional-BestBuddyGO">
+											<label class="form-check-label" for="pokemonFormOptional-BestBuddyGO">
+												<span>Best Buddy Ribbon (GO)</span>
+												<img class="align-middle ms-1" src="img/ui/pogo-buddy-ribbon.png" style="height:16px;" alt="Best Buddy Ribbon" title="Best Buddy Ribbon">
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="pokemonFormSections-notes" role="tabpanel" aria-labelledby="pokemonFormTabs-notes" tabindex="0">
+								<textarea class="form-control" id="pokemonFormNotes" rows="10" maxlength="50000"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-primary" id="modalPokemonFormAdd">Add</button>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Cancel">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- Settings Modal -->
 		<div class="modal fade" id="modalSettings" tabindex="-1" aria-labelledby="modalSettingsLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
@@ -107,7 +377,7 @@
 						<h2 class="modal-title fs-6 fw-bold" id="modalSettingsLabel">Settings</h2>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
-					<div class="modal-body">
+					<div class="modal-body px-2 px-sm-3">
 						<form>
 							<div class="form-floating mb-3">
 								<select class="form-select" id="settingsTheme" aria-label="Theme selection">
@@ -151,7 +421,7 @@
 								</select>
 								<label for="settingsExtraOriginMarks">Gen III/IV/V origin marks</label>
 							</div>
-							<div class="form-check form-switch">
+							<div class="form-check form-switch mb-2">
 								<input class="form-check-input" type="checkbox" role="switch" id="settingsShowWorldAbility">
 								<label class="form-check-label" for="settingsShowWorldAbility">
 									<div>
@@ -161,22 +431,22 @@
 									<div class="form-check-label-info">Earning this Ribbon requires connecting to unofficial servers.</div>
 								</label>
 							</div>
-							<div class="form-check form-switch">
+							<div class="form-check form-switch mb-2">
 								<input class="form-check-input" type="checkbox" role="switch" id="settingsAutoMemoryRibbons" checked>
 								<label class="form-check-label" for="settingsAutoMemoryRibbons">
 									<div>
-										<span class="align-text-bottom">Automatically manage Memory Ribbons</span>
+										<span class="align-text-bottom">Automatic Memory Ribbons</span>
 										<span class="text-nowrap">
-											<img class="align-text-top" src="img/ribbons/battle-memory-ribbon.png" alt="Battle Memory Ribbon" title="Battle Memory Ribbon">
-											<img class="align-text-top" src="img/ribbons/contest-memory-ribbon.png" alt="Contest Memory Ribbon" title="Contest Memory Ribbon">
-											<img class="align-text-top" src="img/ribbons/battle-memory-ribbon-gold.png" alt="Battle Memory Ribbon (Gold)" title="Battle Memory Ribbon (Gold)">
-											<img class="align-text-top" src="img/ribbons/contest-memory-ribbon-gold.png" alt="Contest Memory Ribbon (Gold)" title="Contest Memory Ribbon (Gold)">
+											<img class="align-text-top" src="img/ribbons/battle-memory-ribbon.png" alt="Battle Memory Ribbon" title="Battle Memory Ribbon"><!--
+											--><img class="align-text-top" src="img/ribbons/contest-memory-ribbon.png" alt="Contest Memory Ribbon" title="Contest Memory Ribbon"><!--
+											--><img class="align-text-top" src="img/ribbons/battle-memory-ribbon-gold.png" alt="Battle Memory Ribbon (Gold)" title="Battle Memory Ribbon (Gold)"><!--
+											--><img class="align-text-top" src="img/ribbons/contest-memory-ribbon-gold.png" alt="Contest Memory Ribbon (Gold)" title="Contest Memory Ribbon (Gold)">
 										</span>
 									</div>
 									<div class="form-check-label-info">This is a global setting that can be disabled per-Pokémon.</div>
 								</label>
 							</div>
-							<div class="form-check form-switch">
+							<div class="form-check form-switch mb-2">
 								<input class="form-check-input" type="checkbox" role="switch" id="settingsAutoStrangeBall" checked>
 								<label class="form-check-label" for="settingsAutoStrangeBall">
 									<div>
@@ -184,16 +454,6 @@
 										<img class="align-text-top" src="img/balls/strange.png" alt="Strange Ball" title="Strange Ball">
 									</div>
 									<div class="form-check-label-info">This is a global setting that can be disabled per-Pokémon.</div>
-								</label>
-							</div>
-							<div class="form-check form-switch">
-								<input class="form-check-input" type="checkbox" role="switch" id="settingsDisplaySquareShiny" checked>
-								<label class="form-check-label" for="settingsDisplaySquareShiny">
-									<div>
-										<span class="align-text-bottom">Enable Square Shiny option in add/edit forms</span>
-										<img class="align-text-top" src="img/ui/shiny-square.svg" alt="Square Shiny" title="Square Shiny">
-									</div>
-									<div class="form-check-label-info">The Square Shiny animation only appears in Sword/Shield. Pokémon set as Square Shiny will show the Square Shiny icon regardless of this setting.</div>
 								</label>
 							</div>
 							<div class="form-check form-switch">

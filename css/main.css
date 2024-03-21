@@ -95,6 +95,21 @@ body {
 #modalSettings .form-check-label-info {
 	font-size: .75em;
 }
+label[for="pokemonFormGender-female"],
+label[for="pokemonFormShiny-square"] {
+	border-top-right-radius: var(--bs-btn-border-radius)!important;
+	border-bottom-right-radius: var(--bs-btn-border-radius)!important;
+}
+.form-label {
+	margin-bottom: 0.25rem;
+}
+#pokemonFormSprite {
+	width: 100%;
+	height: auto;
+}
+.form-asterisk {
+	color: red;
+}
 
 /* links */
 a:not(:hover):not(:focus) {

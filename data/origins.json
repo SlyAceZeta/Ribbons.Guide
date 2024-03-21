@@ -21,7 +21,7 @@
 		]
 	},
 	"pentagon": {
-		"name": "Kalos/Hoenn (Gen VI)",
+		"name": "Pentagon",
 		"games": [
 			"x",
 			"y",
@@ -31,7 +31,7 @@
 		]
 	},
 	"clover": {
-		"name": "Alola",
+		"name": "Clover",
 		"games": [
 			"sun",
 			"moon",
@@ -41,7 +41,7 @@
 		]
 	},
 	"game-boy": {
-		"name": "Kanto (Gen I)/Johto (Gen II)",
+		"name": "Game Boy",
 		"games": [
 			"gold",
 			"silver",
@@ -61,7 +61,7 @@
 		]
 	},
 	"lets-go": {
-		"name": "Kanto (Gen VII)",
+		"name": "Let's Go",
 		"games": [
 			"lgp",
 			"lge"
@@ -76,7 +76,7 @@
 		]
 	},
 	"bdsp": {
-		"name": "Sinnoh (Gen VIII)",
+		"name": "Sinnoh (BDSP)",
 		"games": [
 			"bd",
 			"sp",
