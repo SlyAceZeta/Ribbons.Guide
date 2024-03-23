@@ -3667,7 +3667,8 @@
 			"vio"
 		],
 		"flags": [
-			"restricted"
+			"restricted",
+			"shinyLocked"
 		]
 	},
 	"camerupt": {
@@ -5724,7 +5725,8 @@
 			"vio"
 		],
 		"flags": [
-			"restricted"
+			"restricted",
+			"shinyLocked"
 		],
 		"evolvesFrom": "cosmog"
 	},
@@ -5753,7 +5755,8 @@
 			"vio"
 		],
 		"flags": [
-			"restricted"
+			"restricted",
+			"shinyLocked"
 		]
 	},
 	"cottonee": {
@@ -9375,7 +9378,8 @@
 			"vio"
 		],
 		"flags": [
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	},
 	"entei": {
@@ -12094,6 +12098,9 @@
 			"sh",
 			"scar",
 			"vio"
+		],
+		"flags": [
+			"shinyLocked"
 		]
 	},
 	"gligar": {
@@ -13131,7 +13138,10 @@
 			"scar",
 			"vio"
 		],
-		"evolvesFrom": null
+		"evolvesFrom": null,
+		"flags": [
+			"shinyLocked"
+		]
 	},
 	"greninja": {
 		"names": {
@@ -14702,7 +14712,8 @@
 			"vio"
 		],
 		"flags": [
-			"restricted"
+			"restricted",
+			"shinyLocked"
 		]
 	},
 	"hoothoot": {
@@ -16229,7 +16240,8 @@
 			"vio"
 		],
 		"flags": [
-			"restricted"
+			"restricted",
+			"shinyLocked"
 		]
 	},
 	"kingdra": {
@@ -16869,6 +16881,9 @@
 			"sh",
 			"scar",
 			"vio"
+		],
+		"flags": [
+			"shinyLocked"
 		]
 	},
 	"kyogre": {
@@ -18921,6 +18936,9 @@
 			"sh",
 			"scar",
 			"vio"
+		],
+		"flags": [
+			"shinyLocked"
 		]
 	},
 	"magikarp": {
@@ -19909,7 +19927,8 @@
 			"sh"
 		],
 		"flags": [
-			"restricted"
+			"restricted",
+			"shinyLocked"
 		]
 	},
 	"marshtomp": {
@@ -20258,7 +20277,8 @@
 			"vio"
 		],
 		"flags": [
-			"restricted"
+			"restricted",
+			"shinyLocked"
 		]
 	},
 	"meltan": {
@@ -24168,6 +24188,9 @@
 		"games": [
 			"hg",
 			"ss"
+		],
+		"flags": [
+			"shinyLocked"
 		]
 	},
 	"pichu": {
@@ -24476,7 +24499,10 @@
 			"vio"
 		],
 		"sort": 6,
-		"evolvesFrom": null
+		"evolvesFrom": null,
+		"flags": [
+			"shinyLocked"
+		]
 	},
 	"pikachu-cosplay": {
 		"data-source": "pikachu",
@@ -24498,7 +24524,10 @@
 			"as"
 		],
 		"sort": 8,
-		"evolvesFrom": null
+		"evolvesFrom": null,
+		"flags": [
+			"shinyLocked"
+		]
 	},
 	"pikachu-cosplay-belle": {
 		"data-source": "pikachu",
@@ -24520,7 +24549,10 @@
 			"as"
 		],
 		"sort": 10,
-		"evolvesFrom": null
+		"evolvesFrom": null,
+		"flags": [
+			"shinyLocked"
+		]
 	},
 	"pikachu-cosplay-libre": {
 		"data-source": "pikachu",
@@ -24542,7 +24574,10 @@
 			"as"
 		],
 		"sort": 13,
-		"evolvesFrom": null
+		"evolvesFrom": null,
+		"flags": [
+			"shinyLocked"
+		]
 	},
 	"pikachu-cosplay-phd": {
 		"data-source": "pikachu",
@@ -24564,7 +24599,10 @@
 			"as"
 		],
 		"sort": 12,
-		"evolvesFrom": null
+		"evolvesFrom": null,
+		"flags": [
+			"shinyLocked"
+		]
 	},
 	"pikachu-cosplay-popstar": {
 		"data-source": "pikachu",
@@ -24586,7 +24624,10 @@
 			"as"
 		],
 		"sort": 11,
-		"evolvesFrom": null
+		"evolvesFrom": null,
+		"flags": [
+			"shinyLocked"
+		]
 	},
 	"pikachu-cosplay-rockstar": {
 		"data-source": "pikachu",
@@ -24608,7 +24649,10 @@
 			"as"
 		],
 		"sort": 9,
-		"evolvesFrom": null
+		"evolvesFrom": null,
+		"flags": [
+			"shinyLocked"
+		]
 	},
 	"pikachu-hoenn-cap": {
 		"data-source": "pikachu",
@@ -24635,7 +24679,10 @@
 			"vio"
 		],
 		"sort": 2,
-		"evolvesFrom": null
+		"evolvesFrom": null,
+		"flags": [
+			"shinyLocked"
+		]
 	},
 	"pikachu-kalos-cap": {
 		"data-source": "pikachu",
@@ -24662,7 +24709,10 @@
 			"vio"
 		],
 		"sort": 5,
-		"evolvesFrom": null
+		"evolvesFrom": null,
+		"flags": [
+			"shinyLocked"
+		]
 	},
 	"pikachu-original-cap": {
 		"data-source": "pikachu",
@@ -24689,7 +24739,10 @@
 			"vio"
 		],
 		"sort": 1,
-		"evolvesFrom": null
+		"evolvesFrom": null,
+		"flags": [
+			"shinyLocked"
+		]
 	},
 	"pikachu-partner-cap": {
 		"data-source": "pikachu",
@@ -24743,7 +24796,10 @@
 			"vio"
 		],
 		"sort": 3,
-		"evolvesFrom": null
+		"evolvesFrom": null,
+		"flags": [
+			"shinyLocked"
+		]
 	},
 	"pikachu-unova-cap": {
 		"data-source": "pikachu",
@@ -24770,7 +24826,10 @@
 			"vio"
 		],
 		"sort": 4,
-		"evolvesFrom": null
+		"evolvesFrom": null,
+		"flags": [
+			"shinyLocked"
+		]
 	},
 	"pikachu-world-cap": {
 		"data-source": "pikachu",
@@ -24793,7 +24852,10 @@
 			"vio"
 		],
 		"sort": 7,
-		"evolvesFrom": null
+		"evolvesFrom": null,
+		"flags": [
+			"shinyLocked"
+		]
 	},
 	"pikachu": {
 		"names": {
@@ -31606,6 +31668,9 @@
 			"sh",
 			"scar",
 			"vio"
+		],
+		"flags": [
+			"shinyLocked"
 		]
 	},
 	"spewpa": {
@@ -35524,7 +35589,8 @@
 		],
 		"evolvesFrom": null,
 		"flags": [
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	},
 	"ursaluna": {
@@ -35649,7 +35715,10 @@
 			"scar",
 			"vio"
 		],
-		"evolvesFrom": "kubfu"
+		"evolvesFrom": "kubfu",
+		"flags": [
+			"shinyLocked"
+		]
 	},
 	"uxie": {
 		"names": {
@@ -36180,7 +36249,8 @@
 			"sh"
 		],
 		"flags": [
-			"restricted"
+			"restricted",
+			"shinyLocked"
 		]
 	},
 	"victreebel": {
@@ -36585,7 +36655,10 @@
 			"kor": "볼의 모양",
 			"cht": "球球花纹",
 			"chs": "球球花紋"
-		}
+		},
+		"flags": [
+			"shinyLocked"
+		]
 	},
 	"vivillon-polar": {
 		"data-source": "vivillon",
@@ -36785,7 +36858,8 @@
 			"vio"
 		],
 		"flags": [
-			"restricted"
+			"restricted",
+			"shinyLocked"
 		]
 	},
 	"volcarona": {
@@ -38625,7 +38699,8 @@
 			"vio"
 		],
 		"flags": [
-			"restricted"
+			"restricted",
+			"shinyLocked"
 		]
 	},
 	"zebstrika": {
@@ -41018,6 +41093,9 @@
 		"games": [
 			"scar",
 			"vio"
+		],
+		"flags": [
+			"shinyLocked"
 		]
 	},
 	"gimmighoul": {
@@ -41089,7 +41167,8 @@
 			"vio"
 		],
 		"flags": [
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	},
 	"chien-pao": {
@@ -41111,7 +41190,8 @@
 			"vio"
 		],
 		"flags": [
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	},
 	"ting-lu": {
@@ -41133,7 +41213,8 @@
 			"vio"
 		],
 		"flags": [
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	},
 	"chi-yu": {
@@ -41155,7 +41236,8 @@
 			"vio"
 		],
 		"flags": [
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	},
 	"roaring-moon": {
@@ -41216,7 +41298,8 @@
 		],
 		"flags": [
 			"restricted",
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	},
 	"miraidon": {
@@ -41239,7 +41322,8 @@
 		],
 		"flags": [
 			"restricted",
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	},
 	"walking-wake": {
@@ -41259,6 +41343,9 @@
 		"games": [
 			"scar",
 			"vio"
+		],
+		"flags": [
+			"shinyLocked"
 		]
 	},
 	"iron-leaves": {
@@ -41278,6 +41365,9 @@
 		"games": [
 			"scar",
 			"vio"
+		],
+		"flags": [
+			"shinyLocked"
 		]
 	},
 	"dipplin": {
@@ -41358,7 +41448,8 @@
 			"vio"
 		],
 		"flags": [
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	},
 	"munkidori": {
@@ -41380,7 +41471,8 @@
 			"vio"
 		],
 		"flags": [
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	},
 	"fezandipiti": {
@@ -41402,7 +41494,8 @@
 			"vio"
 		],
 		"flags": [
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	},
 	"ogerpon": {
@@ -41424,7 +41517,8 @@
 			"vio"
 		],
 		"flags": [
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	},
 	"archaludon": {
@@ -41485,7 +41579,8 @@
 			"vio"
 		],
 		"flags": [
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	},
 	"raging-bolt": {
@@ -41507,7 +41602,8 @@
 			"vio"
 		],
 		"flags": [
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	},
 	"iron-boulder": {
@@ -41529,7 +41625,8 @@
 			"vio"
 		],
 		"flags": [
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	},
 	"iron-crown": {
@@ -41551,7 +41648,8 @@
 			"vio"
 		],
 		"flags": [
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	},
 	"terapagos": {
@@ -41566,7 +41664,7 @@
 			"cht": "太樂巴戈斯",
 			"chs": "太乐巴戈斯"
 		},
-		"gender": "both",
+		"gender": "male",
 		"natdex": 1024,
 		"games": [
 			"scar",
@@ -41574,7 +41672,8 @@
 		],
 		"flags": [
 			"restricted",
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	},
 	"pecharunt": {
@@ -41598,7 +41697,8 @@
 		],
 		"flags": [
 			"restricted",
-			"sizeLocked"
+			"sizeLocked",
+			"shinyLocked"
 		]
 	}
 }

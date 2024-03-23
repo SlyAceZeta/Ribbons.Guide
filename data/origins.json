@@ -2,41 +2,41 @@
 	"none": {
 		"name": "None",
 		"games": [
-			"black",
-			"white",
 			"black2",
 			"white2",
+			"black",
+			"white",
+			"hg",
+			"ss",
 			"diamond",
 			"pearl",
 			"platinum",
-			"hg",
-			"ss",
-			"ruby",
-			"sapphire",
-			"emerald",
 			"fr",
 			"lg",
 			"colosseum",
-			"xd"
+			"xd",
+			"ruby",
+			"sapphire",
+			"emerald"
 		]
 	},
 	"pentagon": {
 		"name": "Pentagon",
 		"games": [
-			"x",
-			"y",
 			"or",
 			"as",
+			"x",
+			"y",
 			"bank"
 		]
 	},
 	"clover": {
 		"name": "Clover",
 		"games": [
-			"sun",
-			"moon",
 			"usun",
 			"umoon",
+			"sun",
+			"moon",
 			"bank7"
 		]
 	},
@@ -46,11 +46,11 @@
 			"gold",
 			"silver",
 			"crystal",
-			"red-jpn",
-			"green",
-			"blue-jpn",
 			"red-eng",
+			"red-jpn",
 			"blue-eng",
+			"blue-jpn",
+			"green",
 			"yellow"
 		]
 	},

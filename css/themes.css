@@ -29,6 +29,12 @@ a:not(.btn) {
 }
 .btn-secondary {
 }
+.btn.btn-outline-secondary {
+	color: var(--bs-secondary-color);
+}
+.btn.btn-outline-secondary:hover {
+	color: var(--bs-body-color);
+}
 
 /* sword/shield overrides */
 [data-bs-theme="sword"],
@@ -88,4 +94,7 @@ a:not(.btn) {
 	--bs-btn-border-color: #3a3a3a;
 	--bs-btn-hover-bg: #444;
 	--bs-btn-hover-border-color: #4a4a4a;
+}
+[data-bs-theme="dark"] .select2 .selection .select2-selection {
+	--bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23dee2e6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 }

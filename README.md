@@ -28,7 +28,6 @@ Ribbons.Guide also makes use of the following dependencies:
 - [Bootstrap](https://getbootstrap.com/)
 - [Select2](https://github.com/select2/select2)
 - [Sortable](https://github.com/SortableJS/Sortable)
-- [Workbox](https://github.com/GoogleChrome/workbox)
 - [Google Fonts](https://fonts.google.com/)
 
 ### License

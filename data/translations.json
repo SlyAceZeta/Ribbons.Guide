@@ -1,0 +1,369 @@
+{
+	"ietfToPokemon": {
+		"de": "ger",
+		"en": "eng",
+		"es": "spa",
+		"fr": "fre",
+		"it": "ita",
+		"ja": "jpn",
+		"ko": "kor",
+		"zh-Hant": "cht",
+		"zh-Hans": "chs"
+	},
+	"none": {
+		"ger": "Keiner",
+		"eng": "None",
+		"spa": "Ninguna",
+		"fre": "Aucune",
+		"ita": "Nessuno",
+		"jpn": "なし",
+		"kor": "없음",
+		"cht": "沒有任何",
+		"chs": "没有任何"
+	},
+	"forms": {
+		"alola": {
+			"ger": "Alola-Form",
+			"eng": "Alolan Form",
+			"spa": "Forma de Alola",
+			"fre": "Forme d'Alola",
+			"ita": "Forma di Alola",
+			"jpn": "アローラのすがた",
+			"kor": "알로라의 모습",
+			"cht": "阿羅拉的樣子",
+			"chs": "阿罗拉的样子"
+		},
+		"galar": {
+			"ger": "Galar-Form",
+			"eng": "Galarian Form",
+			"spa": "Forma de Galar",
+			"fre": "Forme de Galar",
+			"ita": "Forma di Galar",
+			"jpn": "ガラルのすがた",
+			"kor": "가라르의 모습",
+			"cht": "伽勒爾的樣子",
+			"chs": "伽勒尔的样子"
+		},
+		"hisui": {
+			"ger": "Hisui-Form",
+			"eng": "Hisuian Form",
+			"spa": "Forma de Hisui",
+			"fre": "Forme de Hisui",
+			"ita": "Forma di Hisui",
+			"jpn": "ヒスイのすがた",
+			"kor": "히스이의 모습",
+			"cht": "洗翠的樣子",
+			"chs": "洗翠的样子"
+		},
+		"paldea": {
+			"ger": "Paldea-Form",
+			"eng": "Paldean Form",
+			"spa": "Forma de Paldea",
+			"fre": "Forme de Paldea",
+			"ita": "Forma di Paldea",
+			"jpn": "パルデアのすがた",
+			"kor": "팔데아 모습",
+			"cht": "帕底亞的樣子",
+			"chs": "帕底亚的样子"
+		},
+		"incarnate": {
+			"ger": "Inkarnationsform",
+			"eng": "Incarnate Form",
+			"spa": "Forma Avatar",
+			"fre": "Forme Avatar",
+			"ita": "Forma Incarnazione",
+			"jpn": "けしんフォルム",
+			"kor": "화신폼",
+			"cht": "化身形態",
+			"chs": "化身形态"
+		},
+		"therian": {
+			"ger": "Tiergeistform",
+			"eng": "Therian Form",
+			"spa": "Forma Tótem",
+			"fre": "Forme Totémique",
+			"ita": "Forma Totem",
+			"jpn": "れいじゅうフォルム",
+			"kor": "영물폼",
+			"cht": "靈獸形態",
+			"chs": "灵兽形态"
+		}
+	},
+	"natures": {
+		"hardy": {
+			"ger": "Robust",
+			"eng": "Hardy",
+			"spa": "Fuerte",
+			"fre": "Hardi",
+			"ita": "Ardita",
+			"jpn": "がんばりや",
+			"kor": "노력",
+			"cht": "勤奮",
+			"chs": "勤奋"
+		},
+		"lonely": {
+			"ger": "Solo",
+			"eng": "Lonely",
+			"spa": "Huraña",
+			"fre": "Solo",
+			"ita": "Schiva",
+			"jpn": "さみしがり",
+			"kor": "외로움",
+			"cht": "怕寂寞",
+			"chs": "怕寂寞"
+		},
+		"brave": {
+			"ger": "Mutig",
+			"eng": "Brave",
+			"spa": "Audaz",
+			"fre": "Brave",
+			"ita": "Audace",
+			"jpn": "ゆうかん",
+			"kor": "용감",
+			"cht": "勇敢",
+			"chs": "勇敢"
+		},
+		"adamant": {
+			"ger": "Hart",
+			"eng": "Adamant",
+			"spa": "Firme",
+			"fre": "Rigide",
+			"ita": "Decisa",
+			"jpn": "いじっぱり",
+			"kor": "고집",
+			"cht": "固執",
+			"chs": "固执"
+		},
+		"naughty": {
+			"ger": "Frech",
+			"eng": "Naughty",
+			"spa": "Pícara",
+			"fre": "Mauvais",
+			"ita": "Birbona",
+			"jpn": "やんちゃ",
+			"kor": "개구쟁이",
+			"cht": "頑皮",
+			"chs": "顽皮"
+		},
+		"bold": {
+			"ger": "Kühn",
+			"eng": "Bold",
+			"spa": "Osada",
+			"fre": "Assuré",
+			"ita": "Sicura",
+			"jpn": "ずぶとい",
+			"kor": "대담",
+			"cht": "大膽",
+			"chs": "大胆"
+		},
+		"docile": {
+			"ger": "Sanft",
+			"eng": "Docile",
+			"spa": "Dócil",
+			"fre": "Docile",
+			"ita": "Docile",
+			"jpn": "すなお",
+			"kor": "온순",
+			"cht": "坦率",
+			"chs": "坦率"
+		},
+		"relaxed": {
+			"ger": "Locker",
+			"eng": "Relaxed",
+			"spa": "Plácida",
+			"fre": "Relax",
+			"ita": "Placida",
+			"jpn": "のんき",
+			"kor": "무사태평",
+			"cht": "悠閒",
+			"chs": "悠闲"
+		},
+		"impish": {
+			"ger": "Pfiffig",
+			"eng": "Impish",
+			"spa": "Agitada",
+			"fre": "Malin",
+			"ita": "Scaltra",
+			"jpn": "わんぱく",
+			"kor": "장난꾸러기",
+			"cht": "淘氣",
+			"chs": "淘气"
+		},
+		"lax": {
+			"ger": "Lasch",
+			"eng": "Lax",
+			"spa": "Floja",
+			"fre": "Lâche",
+			"ita": "Fiacca",
+			"jpn": "のうてんき",
+			"kor": "촐랑",
+			"cht": "樂天",
+			"chs": "乐天"
+		},
+		"timid": {
+			"ger": "Scheu",
+			"eng": "Timid",
+			"spa": "Miedosa",
+			"fre": "Timide",
+			"ita": "Timida",
+			"jpn": "おくびょう",
+			"kor": "겁쟁이",
+			"cht": "膽小",
+			"chs": "胆小"
+		},
+		"hasty": {
+			"ger": "Hastig",
+			"eng": "Hasty",
+			"spa": "Activa",
+			"fre": "Pressé",
+			"ita": "Lesta",
+			"jpn": "せっかち",
+			"kor": "성급",
+			"cht": "急躁",
+			"chs": "急躁"
+		},
+		"serious": {
+			"ger": "Ernst",
+			"eng": "Serious",
+			"spa": "Seria",
+			"fre": "Sérieux",
+			"ita": "Seria",
+			"jpn": "まじめ",
+			"kor": "성실",
+			"cht": "認真",
+			"chs": "认真"
+		},
+		"jolly": {
+			"ger": "Froh",
+			"eng": "Jolly",
+			"spa": "Alegre",
+			"fre": "Jovial",
+			"ita": "Allegra",
+			"jpn": "ようき",
+			"kor": "명랑",
+			"cht": "爽朗",
+			"chs": "爽朗"
+		},
+		"naive": {
+			"ger": "Naiv",
+			"eng": "Naive",
+			"spa": "Ingenua",
+			"fre": "Naïf",
+			"ita": "Ingenua",
+			"jpn": "むじゃき",
+			"kor": "천진난만",
+			"cht": "天真",
+			"chs": "天真"
+		},
+		"modest": {
+			"ger": "Mäßig",
+			"eng": "Modest",
+			"spa": "Modesta",
+			"fre": "Modeste",
+			"ita": "Modesta",
+			"jpn": "ひかえめ",
+			"kor": "조심",
+			"cht": "內斂",
+			"chs": "内敛"
+		},
+		"mild": {
+			"ger": "Mild",
+			"eng": "Mild",
+			"spa": "Afable",
+			"fre": "Doux",
+			"ita": "Mite",
+			"jpn": "おっとり",
+			"kor": "의젓",
+			"cht": "慢吞吞",
+			"chs": "慢吞吞"
+		},
+		"quiet": {
+			"ger": "Ruhig",
+			"eng": "Quiet",
+			"spa": "Mansa",
+			"fre": "Discret",
+			"ita": "Quieta",
+			"jpn": "れいせい",
+			"kor": "냉정",
+			"cht": "冷靜",
+			"chs": "冷静"
+		},
+		"bashful": {
+			"ger": "Zaghaft",
+			"eng": "Bashful",
+			"spa": "Tímida",
+			"fre": "Pudique",
+			"ita": "Ritrosa",
+			"jpn": "てれや",
+			"kor": "수줍음",
+			"cht": "害羞",
+			"chs": "害羞"
+		},
+		"rash": {
+			"ger": "Hitzig",
+			"eng": "Rash",
+			"spa": "Alocada",
+			"fre": "Foufou",
+			"ita": "Ardente",
+			"jpn": "うっかりや",
+			"kor": "덜렁",
+			"cht": "馬虎",
+			"chs": "马虎"
+		},
+		"calm": {
+			"ger": "Still",
+			"eng": "Calm",
+			"spa": "Serena",
+			"fre": "Calme",
+			"ita": "Calma",
+			"jpn": "おだやか",
+			"kor": "차분",
+			"cht": "溫和",
+			"chs": "温和"
+		},
+		"gentle": {
+			"ger": "Zart",
+			"eng": "Gentle",
+			"spa": "Amable",
+			"fre": "Gentil",
+			"ita": "Gentile",
+			"jpn": "おとなしい",
+			"kor": "얌전",
+			"cht": "溫順",
+			"chs": "温顺"
+		},
+		"sassy": {
+			"ger": "Forsch",
+			"eng": "Sassy",
+			"spa": "Grosera",
+			"fre": "Malpoli",
+			"ita": "Vivace",
+			"jpn": "なまいき",
+			"kor": "건방",
+			"cht": "自大",
+			"chs": "自大"
+		},
+		"careful": {
+			"ger": "Sacht",
+			"eng": "Careful",
+			"spa": "Cauta",
+			"fre": "Prudent",
+			"ita": "Cauta",
+			"jpn": "しんちょう",
+			"kor": "신중",
+			"cht": "慎重",
+			"chs": "慎重"
+		},
+		"quirky": {
+			"ger": "Kauzig",
+			"eng": "Quirky",
+			"spa": "Rara",
+			"fre": "Bizarre",
+			"ita": "Furba",
+			"jpn": "きまぐれ",
+			"kor": "변덕",
+			"cht": "浮躁",
+			"chs": "浮躁"
+		}
+	}
+}

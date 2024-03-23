@@ -1,3 +1,5 @@
+/* globals */
+var balls, games, origins, pokemon, ribbons, translations, forms, natures;
 /* get settings */
 if(!localStorage.settings){
 	localStorage.settings = "{}";
@@ -145,6 +147,12 @@ function updateOldPokemon(p){
 	delete p.ability;
 	delete p.mint;
 	delete p.characteristic;
+	p.lang = p.lang.toLowerCase();
+	p.nature = p.nature.toLowerCase();
+	p.strangeball = "global";
+	p.totem = false;
+	p.gmax = false;
+	p.achievements = [];
 	if(p.origin){
 		var newmark = "none";
 		// old app only had one origin game per mark, so only check for the first result
@@ -521,8 +529,7 @@ function createCard(p){
 	var displayName = p.name;
 	if(displayName.length === 0){
 		var displayNameLang = p.lang;
-		if(!displayNameLang) displayNameLang = "ENG";
-		displayNameLang = displayNameLang.toLowerCase();
+		if(!displayNameLang) displayNameLang = "eng";
 		displayName = getPokemonData(p.dex, "names")[displayNameLang];
 	}
 
@@ -626,7 +633,6 @@ function createCard(p){
 
 	/* body */
 	var genderDirectory = (getPokemonData(p.dex, "femsprite") && p.gender === "female") ? "female/" : "";
-	console.log(p.dex);
 	$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + p.dex + ".png", "alt": getPokemonData(p.dex, "names")["eng"], "title": getPokemonData(p.dex, "names")["eng"] }));
 	var $cardRibbons = $("<div>", { "class": "card-ribbons flex-grow-1 d-flex flex-wrap p-1" });
 	var ribbonCount = 0;
@@ -659,9 +665,13 @@ function createCard(p){
 	var $cardFooterBottomLevel = $("<span>", { "class": "align-middle card-footer-level" } )
 		.append($("<span>").text("Lv."))
 		.append($("<span>").text(p.level));
+	var displayLang = p.lang.toUpperCase();
+	if(displayLang === "SPA"){
+		displayLang === "SP-EU";
+	}
 	var $cardFooterBottomLeft = $("<div>")
 		.append($cardFooterBottomLevel)
-		.append($("<span>", { "class": "align-middle card-footer-language d-inline-block text-center rounded-pill fw-bold mx-2" }).text(p.lang));
+		.append($("<span>", { "class": "align-middle card-footer-language d-inline-block text-center rounded-pill fw-bold mx-2" }).text(displayLang));
 	var originName = origins[p.originmark].name;
 	if(p.origingame){
 		originName = getGameData(p.origingame, "name");
@@ -734,7 +744,139 @@ function presetSettings(change = false){
 	}
 }
 
-var balls, games, origins, pokemon, ribbons;
+/* reset form */
+function resetForm(){
+	$("#modalPokemonFormLabel").text("Add New Pokémon");
+	$("#pokemonFormTabs-details").click();
+	$("#modalPokemonForm input").each(function(){
+		if($(this).attr("type") === "text" || $(this).attr("type") === "number" || $(this).attr("type") === "date"){
+			$(this).val("");
+		} else if($(this).attr("type") === "checkbox"){
+			$(this).prop("checked", false);
+		}
+	});
+	$("#modalPokemonForm select").each(function(){
+		$(this).val(null).change();
+	});
+	$("#pokemonFormShiny-normal, #pokemonFormGender-male, #pokemonFormStrangeBall-global, #pokemonFormPokerus-none").prop("checked", true).change();
+	$("#pokemonFormNotes").val("");
+	$("#pokemonFormSprite").attr("src", "img/ui/1x1.svg");
+	$("#pokemonFormLanguage").val(translations.ietfToPokemon[settings.language]).change();
+
+	/* re-populate boxes dropdown */
+	var $boxNone = $("<option>", { "value": "-1" }).text(translations.none["eng"]);
+	for(var lang in translations.none){
+		$boxNone.attr("data-lang-" + lang, translations.none[lang]);
+	}
+	$("#pokemonFormBox").html($boxNone);
+	for(var b in userBoxes){
+		$("#pokemonFormBox").append(new Option(userBoxes[b], b));
+	}
+	$("#pokemonFormBox").val("-1").change();
+}
+
+function updateFormSprite(){
+	if($("#pokemonFormSpecies").val()){
+		var species = $("#pokemonFormSpecies").val();
+		var shinyDir = $("#pokemonFormShiny-normal").prop("checked") ? "regular/" : "shiny/";
+		var femaleDir = $("#pokemonFormGender-female").prop("checked") && getPokemonData(species, "femsprite") ? "female/" : "";
+		$("#pokemonFormSprite").attr("src", "img/pkmn/" + shinyDir + femaleDir + species + ".png");
+	}
+}
+
+function selectCustomMatcher(params, data){
+	// fallbacks
+	if($.trim(params.term) === ""){
+		return data;
+	}
+	if(typeof data.text === "undefined"){
+		return null;
+	}
+	// if the plain text matches
+	var dataText = data.text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+	if(dataText.indexOf(params.term.toUpperCase()) > -1){
+		var modifiedData = $.extend({}, data, true);
+		return modifiedData;
+	}
+	// if other languages match
+	for(var ded in data.element.dataset){
+		if(ded.indexOf("lang") == 0){
+			dataText = data.element.dataset[ded].normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+			if(dataText.indexOf(params.term.toUpperCase()) > -1){
+				var modifiedData = $.extend({}, data, true);
+				return modifiedData;
+			}
+		}
+	}
+	return null;
+}
+
+function selectCustomOption(o){
+	// o.id is the option value
+	var result = o._resultId || o.text;
+	if(result.indexOf("pokemonFormBall") > 0){
+		var $ball = $("<span>")
+			.append($("<img>", { "class": "pokemonFormSelectIcon", "src": "img/balls/" + o.id + ".png" }));
+		for(var oed in o.element.dataset){
+			if(oed.indexOf("lang") == 0){
+				lang = oed.substring(4).toLowerCase();
+				$ball.append($("<span>", { "class": "translation translation-" + lang}).text(balls[o.id][lang]));
+			}
+		}
+		return $ball;
+	} else if(result.indexOf("pokemonFormOriginMark") > 0){
+		var markSrc = "img/origins/" + o.id + ".png";
+		if(o.id === "none"){
+			markSrc = "img/ui/1x1.svg";
+		}
+		var $mark = $("<span>")
+			.append($("<img>", { "class": "pokemonFormSelectIcon", "src": markSrc }))
+			.append($("<span>").text(origins[o.id].name));
+		return $mark;
+	} else if(result.indexOf("pokemonFormNature") > 0){
+		var $nature = $("<span>");
+		for(var oed in o.element.dataset){
+			if(oed.indexOf("lang") == 0){
+				lang = oed.substring(4).toLowerCase();
+				$nature.append($("<span>", { "class": "translation translation-" + lang}).text(natures[o.id][lang]));
+			}
+		}
+		return $nature;
+	} else if(result.indexOf("pokemonFormBox") > 0){
+		var $box = $("<span>");
+		var boxImage = "closed";
+		if(o.id == "-1"){
+			boxImage = "ball";
+		}
+		$box.append($("<img>", { "class": "pokemonFormSelectIcon", "src": "img/ui/box-" + boxImage + ".png" }));
+		if(o.id == "-1"){
+			for(var lang in translations.none){
+				$box.append($("<span>", { "class": "translation translation-" + lang}).text(translations.none[lang]));
+			}
+		} else {
+			$box.append($("<span>").text(userBoxes[o.id]));
+		}
+		return $box;
+	} else if(result.indexOf("pokemonFormSpecies") > 0){
+		var $pokemon = $("<span>");
+		for(var oed in o.element.dataset){
+			if(oed.indexOf("name") == 0){
+				var lang = oed.substring(4);
+				var form = "";
+				if(o.element.dataset["form" + lang]){
+					form = " (" + o.element.dataset["form" + lang] + ")";
+				} else if(o.element.dataset["formAll"]){
+					form = " (" + o.element.dataset["formAll"] + ")";
+				}
+				$pokemon.append($("<span>", { "class": "translation translation-" + lang.toLowerCase() }).text(o.element.dataset["name" + lang] + form));
+			}
+		}
+		return $pokemon;
+	} else {
+		return o.text;
+	}
+}
+
 function initRun(){
 	function loadingBar(n){
 		$("#loading-spinner-info-progress").attr("aria-valuenow", n);
@@ -753,12 +895,13 @@ function initRun(){
 		$.getJSON("./data/games.json"),
 		$.getJSON("./data/origins.json"),
 		$.getJSON("./data/pokemon.json"),
-		$.getJSON("./data/ribbons.json")
+		$.getJSON("./data/ribbons.json"),
+		$.getJSON("./data/translations.json")
 	).fail(function(response, status, error){
 		var $errorimg = $("<img>", { "src": "./img/ui/cross.svg", "class": "mb-3" });
 		var $errortext = $("<div>", { "id": "loading-spinner-info-text", "class": "fw-bold", "role": "status" }).text("Data loading error: " + error);
 		$("#loading-spinner-info").html($errorimg).append($errortext);
-	}).done(function(dataBalls, dataChangelog, dataGames, dataOrigins, dataPokemon, dataRibbons){
+	}).done(function(dataBalls, dataChangelog, dataGames, dataOrigins, dataPokemon, dataRibbons, dataTranslations){
 		/* set variables */
 		balls = dataBalls[0];
 		var changelog = dataChangelog[0];
@@ -766,6 +909,173 @@ function initRun(){
 		origins = dataOrigins[0];
 		pokemon = dataPokemon[0];
 		ribbons = dataRibbons[0];
+		translations = dataTranslations[0];
+		forms = translations.forms;
+		natures = translations.natures;
+
+		/* initialize forms */
+		loadingBar(15);
+		$("#loading-spinner-info-text").text("Loading form");
+		/* create temporary image area for later image loading */
+		$("body").append($("<div>", { "id": "imageHoldingArea", "class": "d-none" }));
+		/* add form options */
+		for(var b in balls){
+			var $ballOption = $("<option>", { "value": b }).text(balls[b]["eng"]);
+			for(var lang in balls[b]){
+				if(lang === "hisui") continue;
+				$ballOption.attr("data-lang-" + lang, balls[b][lang]);
+			}
+			$("#pokemonFormBall").append($ballOption);
+			$("#imageHoldingArea").append($("<img>", { "src": "img/balls/" + b + ".png" }));
+		}
+		for(var o in origins){
+			$("#pokemonFormOriginMark").prepend(new Option(origins[o].name, o));
+			if(origins[o].name !== "None"){
+				$("#imageHoldingArea").append($("<img>", { "src": "img/origins/" + o + ".png" }));
+			}
+		}
+		for(var n in natures){
+			var $natureOption = $("<option>", { "value": n }).text(natures[n]["eng"]);
+			for(var lang in natures[n]){
+				$natureOption.attr("data-lang-" + lang, natures[n][lang]);
+			}
+			$("#pokemonFormNature").append($natureOption);
+		}
+		for(var g in games){
+			var gameOption = new Option(games[g].name, g);
+			if(!games[g].combo){
+				// temporary until Legends: Z-A releases
+				if(g !== "plza"){
+					$("#pokemonFormCurrentGame").append(gameOption);
+				}
+			}
+		}
+		var pokemonCount = 0;
+		var pokemonTotal = Object.keys(pokemon).length;
+		for(var p in pokemon){
+			pokemonCount++;
+			var $pokemon = $("<option>", { "value": p, "data-natdex": getPokemonData(p, "natdex") });
+			var pokemonNames = getPokemonData(p, "names");
+			for(var lang in pokemonNames){
+				$pokemon.attr("data-name-" + lang, pokemonNames[lang]);
+			}
+			var pokemonForms = getPokemonData(p, "forms");
+			var pokemonFormDisplay = "";
+			if(!pokemonForms){
+				pokemonForms = getPokemonData(p, "forms-all");
+				if(!pokemonForms){
+					var pokemonFormSource = getPokemonData(p, "form-source");
+					if(pokemonFormSource){
+						pokemonForms = translations.forms[pokemonFormSource];
+					}
+				}
+			}
+			if(pokemonForms){
+				if(typeof pokemonForms === 'string'){
+					pokemonFormDisplay = " (" + pokemonForms + ")";
+					$pokemon.attr("data-form-all", pokemonForms);
+				} else {
+					pokemonFormDisplay = " (" + pokemonForms["eng"] + ")";
+					for(var lang in pokemonForms){
+						$pokemon.attr("data-form-" + lang, pokemonForms[lang]);
+					}
+				}
+			}
+			var pokemonSort = getPokemonData(p, "sort", true);
+			if(pokemonSort){
+				$pokemon.attr("data-sort", pokemonSort);
+			}
+			$pokemon.text(pokemonNames["eng"] + pokemonFormDisplay);
+			$("#pokemonFormSpecies").append($pokemon);
+			if(pokemonCount === pokemonTotal){
+				var dexSort = function(a, b){
+					if(a.dataset.natdex === b.dataset.natdex){
+						if(a.dataset.sort && b.dataset.sort){
+							return a.dataset.sort - b.dataset.sort;
+						} else {
+							return a.innerHTML.toLowerCase().localeCompare(b.innerHTML.toLowerCase());
+						}
+					} else {
+						return a.dataset.natdex - b.dataset.natdex;
+					}
+				}
+				var allPokemonOptions = $("#pokemonFormSpecies").find("option").get();
+				allPokemonOptions.sort(dexSort);
+				for(var z = 0; z < allPokemonOptions.length; z++){
+					allPokemonOptions[z].parentNode.appendChild(allPokemonOptions[z]);
+				}
+			}
+		}
+		/* apply select2 dropdowns */
+		$("#pokemonFormLanguage, #pokemonFormOriginGame, #pokemonFormCurrentGame").select2({
+			dropdownParent: $("#pokemonFormSections")
+		});
+		$("#pokemonFormBall, #pokemonFormNature, #pokemonFormBox, #pokemonFormOriginMark, #pokemonFormSpecies").select2({
+			matcher: selectCustomMatcher,
+			templateSelection: selectCustomOption,
+			templateResult: selectCustomOption,
+			dropdownParent: $("#pokemonFormSections")
+		});
+		/* listeners */
+		$("input[name='pokemonFormGender'], input[name='pokemonFormShiny']").change(function(){
+			updateFormSprite();
+		})
+		$("#pokemonFormSpecies").change(function(){
+			var species = $(this).val();
+			if(species){
+				var pokemonGender = getPokemonData(species, "gender");
+				if(pokemonGender === "both"){
+					$("#pokemonFormGender-unknown").prop("disabled", true);
+					$("#pokemonFormGender-male, #pokemonFormGender-female").prop("disabled", false);
+					if(!$("#pokemonFormGender-female").prop("checked")){
+						$("#pokemonFormGender-male").prop("checked", true).change();
+					}
+				} else {
+					$("#pokemonFormGenderGroup input").prop("disabled", true);
+					$("#pokemonFormGender-" + pokemonGender).prop("checked", true).change();
+				}
+
+				var pokemonFlags = getPokemonData(species, "flags");
+				if(pokemonFlags && pokemonFlags.includes("shinyLocked")){
+					$("#pokemonFormShinyGroup input").prop("disabled", true);
+					$("#pokemonFormShiny-normal").prop("checked", true).change();
+				} else {
+					$("#pokemonFormShinyGroup input").prop("disabled", false);
+				}
+
+				updateFormSprite();
+			}
+		});
+		$("#pokemonFormOriginMark").change(function(){
+			if($(this).val()){
+				var matchingGames = origins[$(this).val()].games;
+				console.log(matchingGames);
+				if(matchingGames.length == 1){
+					$("#pokemonFormOriginGame").html("<option></option>").prop("disabled", true);
+					$("#pokemonFormOriginGame").append(new Option(games[matchingGames[0]].name, matchingGames[0]));
+					$("#pokemonFormOriginGame").val(matchingGames[0]).change();
+				} else {
+					$("#pokemonFormOriginGame").html("<option></option>").prop("disabled", false);
+					for(var g in matchingGames){
+						var gameKey = matchingGames[g];
+						$("#pokemonFormOriginGame").append(new Option(games[gameKey].name, gameKey));
+					}
+					$("#pokemonFormOriginGame").val("").change();
+				}
+			} else {
+				$("#pokemonFormOriginGame").html("<option></option>").prop("disabled", true);
+			}
+		});
+		/* prevent clear button from re-opening the dropdown */
+		/* https://github.com/select2/select2/issues/3320#issuecomment-524153140 */
+		$("select").on("select2:clear", function (evt) {
+			$(this).on("select2:opening.cancelOpen", function (evt) {
+				evt.preventDefault();
+				$(this).off("select2:opening.cancelOpen");
+			});
+		});
+		/* initial form reset */
+		resetForm();
 
 		/* changelog logic */
 		loadingBar(20);

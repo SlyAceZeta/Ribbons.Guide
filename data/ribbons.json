@@ -248,7 +248,7 @@
 		}
 	},
 	"paldea-champion-ribbon": {
-		"gen": 8,
+		"gen": 9,
 		"available": [
 			"scar",
 			"vio"
@@ -3700,7 +3700,7 @@
 		}
 	},
 	"partner-ribbon": {
-		"gen": 8,
+		"gen": 9,
 		"available": null,
 		"names": {
 			"ger": "Partnerband",
@@ -4197,7 +4197,7 @@
 		}
 	},
 	"destiny-mark": {
-		"gen": 8,
+		"gen": 9,
 		"available": null,
 		"mark": true,
 		"names": {
@@ -5452,7 +5452,7 @@
 	},
 	"jumbo-mark": {
 		"optional": true,
-		"gen": 8,
+		"gen": 9,
 		"available": [
 			"scar",
 			"vio"
@@ -5494,7 +5494,7 @@
 	},
 	"mini-mark": {
 		"optional": true,
-		"gen": 8,
+		"gen": 9,
 		"available": [
 			"scar",
 			"vio"
@@ -5535,7 +5535,7 @@
 		}
 	},
 	"itemfinder-mark": {
-		"gen": 8,
+		"gen": 9,
 		"available": [
 			"scar",
 			"vio"
@@ -5576,7 +5576,7 @@
 		}
 	},
 	"partner-mark": {
-		"gen": 8,
+		"gen": 9,
 		"available": [
 			"scar",
 			"vio"
@@ -5617,7 +5617,7 @@
 		}
 	},
 	"gourmand-mark": {
-		"gen": 8,
+		"gen": 9,
 		"available": [
 			"scar",
 			"vio"
@@ -5658,7 +5658,7 @@
 		}
 	},
 	"alpha-mark": {
-		"gen": 8,
+		"gen": 9,
 		"available": null,
 		"mark": true,
 		"names": {
@@ -5696,7 +5696,7 @@
 		}
 	},
 	"mightiest-mark": {
-		"gen": 8,
+		"gen": 9,
 		"available": null,
 		"mark": true,
 		"names": {
@@ -5734,7 +5734,7 @@
 		}
 	},
 	"titan-mark": {
-		"gen": 8,
+		"gen": 9,
 		"available": null,
 		"mark": true,
 		"names": {

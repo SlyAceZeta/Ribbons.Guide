@@ -95,10 +95,26 @@ body {
 #modalSettings .form-check-label-info {
 	font-size: .75em;
 }
+#pokemonFormGenderGroup input:disabled:not(:checked),
+#pokemonFormGenderGroup input:disabled:not(:checked) + label,
+#pokemonFormShinyGroup input:disabled:not(:checked),
+#pokemonFormShinyGroup input:disabled:not(:checked) + label,
+#pokemonFormShiny-normal:disabled:checked ~ img {
+	display: none;
+}
+#pokemonFormGender-male:disabled:checked + label span:after,
+#pokemonFormGender-female:disabled:checked + label span:after,
+#pokemonFormShiny-normal:disabled:checked + label span:after {
+	content: " only";
+}
 label[for="pokemonFormGender-female"],
 label[for="pokemonFormShiny-square"] {
 	border-top-right-radius: var(--bs-btn-border-radius)!important;
 	border-bottom-right-radius: var(--bs-btn-border-radius)!important;
+}
+#pokemonFormGenderGroup input:disabled:checked + label,
+#pokemonFormShinyGroup input:disabled:checked + label {
+	border-radius: var(--bs-btn-border-radius)!important;
 }
 .form-label {
 	margin-bottom: 0.25rem;
@@ -109,6 +125,77 @@ label[for="pokemonFormShiny-square"] {
 }
 .form-asterisk {
 	color: red;
+}
+.select2 {
+	display: block;
+	width: 100%;
+	padding: 0;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: var(--bs-body-color);
+	background: var(--bs-body-bg);
+	border: var(--bs-border-width) solid var(--bs-border-color);
+	border-radius: var(--bs-border-radius);
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.select2 .selection .select2-selection {
+	--bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+	background-image: var(--bs-form-select-bg-img),var(--bs-form-select-bg-icon,none);
+	padding: .25rem 2.25rem .25rem .75rem;
+	background-repeat: no-repeat;
+	background-position: right .75rem center;
+	background-size: 16px 12px;
+	box-sizing: content-box;
+	border-radius: var(--bs-border-radius);
+}
+.select2-container--default .select2-selection--single {
+	background-color: transparent;
+	border: none;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	color: var(--bs-body-color);
+	padding: 0;
+	line-height: 28px;
+}
+.select2-selection__arrow {
+	display: none;
+}
+.select2-dropdown {
+	background-color: var(--bs-body-bg);
+	border: var(--bs-border-width) solid #52525E!important;
+	border-radius: 0.25rem!important;
+	padding: 0.25rem;
+}
+.select2-container--default .select2-selection--single .select2-selection__clear {
+	margin-right: 5px;
+}
+.select2-results__option {
+	border-radius: 0.25rem;
+}
+.select2-container--default .select2-results__option--selected {
+	background: none;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+	background: var(--bs-secondary-bg);
+	color: var(--bs-body-color);
+}
+.select2-container--default.select2-container--disabled .select2-selection--single {
+	background-color: var(--bs-secondary-bg);
+}
+#pokemonFormGender-male:checked + label {
+	background: #248;
+	color: #fff;
+}
+#pokemonFormGender-female:checked + label {
+	background: #824;
+	color: #fff;
+}
+.pokemonFormSelectIcon {
+	width: 24px;
+	height: 24px;
+	margin-top: -2px;
+	margin-right: 5px;
 }
 
 /* links */
