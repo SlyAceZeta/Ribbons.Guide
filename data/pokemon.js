@@ -9373,9 +9373,6 @@ const pokemon = {
 			"pla",
 			"scar",
 			"vio"
-		],
-		"flags": [
-			"sizeLocked"
 		]
 	},
 	"entei": {
