@@ -155,7 +155,7 @@
 											</div>
 											<div class="col-lg-6">
 												<div id="pokemonFormShinyGroup" class="btn-group d-flex align-items-center" role="group" aria-label="Shiny">
-													<input type="radio" class="btn-check" name="pokemonFormShiny" id="pokemonFormShiny-normal" autocomplete="off" value="none" checked>
+													<input type="radio" class="btn-check" name="pokemonFormShiny" id="pokemonFormShiny-normal" autocomplete="off" value="" checked>
 													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormShiny-normal">
 														<span class="align-middle">Normal</span>
 													</label>
@@ -230,7 +230,9 @@
 											</div>
 											<div class="col-6">
 												<label for="pokemonFormNature" class="form-label">Nature</label>
-												<select class="form-select" id="pokemonFormNature" aria-label="Nature" data-placeholder=""></select>
+												<select class="form-select" id="pokemonFormNature" aria-label="Nature" data-placeholder="">
+													<option></option>
+												</select>
 											</div>
 										</div>
 										<div class="col-12 mt-3">
@@ -269,7 +271,9 @@
 									</div>
 									<div class="col-6">
 										<label for="pokemonFormCurrentGame" class="form-label">Current Game</label>
-										<select class="form-select" id="pokemonFormCurrentGame" data-placeholder=""></select>
+										<select class="form-select" id="pokemonFormCurrentGame" data-placeholder="">
+											<option></option>
+										</select>
 									</div>
 									<div class="col-6">
 										<label for="pokemonFormBox" class="form-label">Box</label>
@@ -278,7 +282,34 @@
 								</div>
 							</div>
 							<div class="tab-pane fade" id="pokemonFormSections-ribbons" role="tabpanel" aria-labelledby="pokemonFormTabs-ribbons" tabindex="0">
-								<!-- TODO -->
+								<div class="row g-2">
+									<div class="col-lg-6">
+										<label for="pokemonFormTitle" class="form-label">Title</label>
+										<select class="form-select" id="pokemonFormTitle" data-placeholder="">
+											<option value="None">None</option>
+										</select>
+									</div>
+									<div class="col-lg-6">
+										<label for="pokemonFormScale" class="form-label">Scale</label>
+										<div class="form-check d-flex align-items-center mb-0" style="height:36px;">
+											<input class="form-check-input mt-0 me-1" type="checkbox" id="pokemonFormScale">
+											<label class="form-check-label" for="pokemonFormScale">
+												<span>Checked in Mesagoza (SV)</span>
+											</label>
+										</div>
+									</div>
+									<!-- TODO: mass select/deselect buttons -->
+									<div class="col-12 offset-lg-1 col-lg-10">
+										<input id="pokemonFormRibbonSearch" type="search" class="form-control" placeholder="Search Ribbons and Marks..." aria-label="Search">
+									</div>
+									<div class="col-12">
+										<ul id="pokemonFormRibbons" class="list-group overflow-y-scroll border">
+											<li id="pokemonFormRibbons-none" class="list-group-item border-0 text-center d-none">
+												<div>No results found</div>
+											</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 							<div class="tab-pane fade" id="pokemonFormSections-memories" role="tabpanel" aria-labelledby="pokemonFormTabs-memories" tabindex="0">
 								<div class="row g-2">
@@ -355,7 +386,7 @@
 								</div>
 							</div>
 							<div class="tab-pane fade" id="pokemonFormSections-notes" role="tabpanel" aria-labelledby="pokemonFormTabs-notes" tabindex="0">
-								<textarea class="form-control" id="pokemonFormNotes" rows="10" maxlength="50000"></textarea>
+								<textarea class="form-control" id="pokemonFormNotes" rows="10"></textarea>
 							</div>
 						</div>
 					</div>

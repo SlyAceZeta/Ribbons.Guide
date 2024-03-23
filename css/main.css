@@ -197,6 +197,46 @@ label[for="pokemonFormShiny-square"] {
 	margin-top: -2px;
 	margin-right: 5px;
 }
+#pokemonFormSections-ribbons .list-group-item {
+	--bs-list-group-item-padding-x: 0.5rem;
+	--bs-list-group-item-padding-y: 0.5rem;
+}
+#pokemonFormRibbons {
+	max-height: 500px;
+}
+#pokemonFormRibbons img {
+	width: 42px;
+	height: auto;
+}
+#pokemonFormRibbons input {
+	width: 18px;
+	height: 18px;
+}
+#pokemonFormRibbons img.pokemonFormRibbon-memory-sync {
+	width: 20px;
+	margin-right: 2px;
+}
+@media (min-width: 992px) {
+	#pokemonFormRibbons img.pokemonFormRibbon-memory-sync {
+		width: 23px;
+		margin-left: 2px;
+		margin-right: 5px;
+	}
+}
+html[data-automemoryribbons="true"] .pokemonFormRibbon-memory-sync {
+	display: inline;
+}
+html[data-automemoryribbons="true"] #pokemonFormRibbon-contest-memory-ribbon:not(:checked),
+html[data-automemoryribbons="true"] #pokemonFormRibbon-contest-memory-ribbon-gold:not(:checked),
+html[data-automemoryribbons="true"] #pokemonFormRibbon-battle-memory-ribbon:not(:checked),
+html[data-automemoryribbons="true"] #pokemonFormRibbon-battle-memory-ribbon-gold:not(:checked),
+html[data-automemoryribbons="true"] #pokemonFormRibbon-contest-memory-ribbon:checked + .pokemonFormRibbon-memory-sync,
+html[data-automemoryribbons="true"] #pokemonFormRibbon-contest-memory-ribbon-gold:checked + .pokemonFormRibbon-memory-sync,
+html[data-automemoryribbons="true"] #pokemonFormRibbon-battle-memory-ribbon:checked + .pokemonFormRibbon-memory-sync,
+html[data-automemoryribbons="true"] #pokemonFormRibbon-battle-memory-ribbon-gold:checked + .pokemonFormRibbon-memory-sync,
+html[data-automemoryribbons="false"] .pokemonFormRibbon-memory-sync {
+	display: none;
+}
 
 /* links */
 a:not(:hover):not(:focus) {

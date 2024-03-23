@@ -1,4 +1,15 @@
 {
+	"arabicToRoman": [
+		"I",
+		"II",
+		"III",
+		"IV",
+		"V",
+		"VI",
+		"VII",
+		"VIII",
+		"IX"
+	],
 	"ietfToPokemon": {
 		"de": "ger",
 		"en": "eng",

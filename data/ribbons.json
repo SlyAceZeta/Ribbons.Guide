@@ -1,292 +1,4 @@
 {
-	"champion-ribbon": {
-		"gen": 3,
-		"available": [
-			"ruby",
-			"sapphire",
-			"emerald",
-			"fr",
-			"lg"
-		],
-		"names": {
-			"ger": "Band des Champs",
-			"eng": "Champion Ribbon",
-			"spa": "Cinta Campeón (Cinta de Campeón)",
-			"fre": "Ruban Maître",
-			"ita": "Fiocco Campione",
-			"jpn": "チャンプリボン (ホウエン　チャンプリボン)",
-			"kor": "챔피언리본 (호연챔피언리본)",
-			"cht": "冠軍獎章",
-			"chs": "冠军奖章"
-		},
-		"descs": {
-			"ger": "Band für einen alten Sieg über den Champ einer anderen Region und den Einzug in die Ruhmeshalle.",
-			"eng": "A Ribbon awarded for clearing the Pokémon League and entering the Hall of Fame somewhere long ago.",
-			"spa": "Cinta obtenida por superar la Liga Pokémon de otra región y entrar en su Hall de la Fama.",
-			"fre": "Ruban reçu il y a longtemps pour une victoire contre la Ligue Pokémon d'une certaine région.",
-			"ita": "Fiocco conferito a chi in passato ha sconfitto il Campione di un'altra regione ed è entrato nella Sala d'Onore.",
-			"jpn": "昔　どこかの　リーグで　勝ち抜き 殿堂入りした　記念リボン",
-			"kor": "옛날 어딘가의 리그에서 이겨서 전당등록한 기념리본",
-			"cht": "以前在某地的聯盟裡勝出並登入 名人堂後獲得的紀念獎章。",
-			"chs": "以前在某地的联盟里胜出并登入 名人堂后获得的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Champ",
-			"eng": "the Champion",
-			"spa": "el Campeón",
-			"fre": "le Maître",
-			"ita": "Campione",
-			"jpn": "チャンピオン",
-			"kor": "챔피언",
-			"cht": "冠軍",
-			"chs": "冠军"
-		}
-	},
-	"sinnoh-champion-ribbon": {
-		"gen": 4,
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum",
-			"bd",
-			"sp"
-		],
-		"names": {
-			"ger": "Band des Sinnoh-Champs (Band des Champs von Sinnoh)",
-			"eng": "Sinnoh Champion Ribbon (Sinnoh Champ Ribbon)",
-			"spa": "Cinta Campeón de Sinnoh",
-			"fre": "Ruban Maître de Sinnoh (Ruban Maître Sinnoh)",
-			"ita": "Fiocco Campione Sinnoh",
-			"jpn": "シンオウ　チャンプリボン",
-			"kor": "신오챔피언리본",
-			"cht": "神奧冠軍獎章",
-			"chs": "神奥冠军奖章"
-		},
-		"descs": {
-			"ger": "Band für den Sieg über den Champ von Sinnoh und den Einzug in die Ruhmeshalle.",
-			"eng": "A Ribbon awarded for beating the Sinnoh Champion and entering the Sinnoh Hall of Fame.",
-			"spa": "Cinta obtenida por vencer a la Campeona de Sinnoh y entrar en el Hall de la Fama.",
-			"fre": "Ruban commémorant la victoire contre la Maîtresse de Sinnoh et l'entrée au Panthéon.",
-			"ita": "Fiocco conferito a chi sconfigge la Campionessa di Sinnoh ed entra nella Sala d'Onore.",
-			"jpn": "シンオウで　チャンピオンに　勝利し 殿堂入りした　記念リボン",
-			"kor": "신오에서 챔피언에게 이겨서 전당등록한 기념리본",
-			"cht": "在神奧奪冠並登入 名人堂後獲得的紀念獎章。",
-			"chs": "在神奥夺冠并登入 名人堂后获得的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Sinnoh-Champ",
-			"eng": "the Sinnoh Champion",
-			"spa": "el Campeón de Sinnoh",
-			"fre": "le Maître de Sinnoh",
-			"ita": "Campione di Sinnoh",
-			"jpn": "シンオウチャンピオン",
-			"kor": "신오 챔피언",
-			"cht": "神奧冠軍",
-			"chs": "神奥冠军"
-		}
-	},
-	"kalos-champion-ribbon": {
-		"gen": 6,
-		"available": [
-			"x",
-			"y"
-		],
-		"names": {
-			"ger": "Band des Kalos-Champs",
-			"eng": "Kalos Champion Ribbon",
-			"spa": "Cinta Campeón de Kalos",
-			"fre": "Ruban Maître de Kalos",
-			"ita": "Fiocco Campione Kalos",
-			"jpn": "カロス　チャンプリボン",
-			"kor": "칼로스챔피언리본",
-			"cht": "卡洛斯冠軍獎章",
-			"chs": "卡洛斯冠军奖章"
-		},
-		"descs": {
-			"ger": "Band für den Sieg über den Champ von Kalos und den Einzug in die Ruhmeshalle.",
-			"eng": "A Ribbon awarded for beating the Kalos Champion and entering the Kalos Hall of Fame.",
-			"spa": "Cinta obtenida por vencer a la Campeona de Kalos y entrar en el Hall de la Fama.",
-			"fre": "Ruban commémorant la victoire contre la Maîtresse de Kalos et l'entrée au Panthéon.",
-			"ita": "Fiocco conferito a chi sconfigge la Campionessa di Kalos ed entra nella Sala d'Onore.",
-			"jpn": "カロスで　チャンピオンに　勝利し 殿堂入りした　記念リボン",
-			"kor": "칼로스에서 챔피언에게 이겨서 전당등록한 기념리본",
-			"cht": "在卡洛斯奪冠並登入 名人堂後獲得的紀念獎章。",
-			"chs": "在卡洛斯夺冠并登入 名人堂后获得的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Kalos-Champ",
-			"eng": "the Kalos Champion",
-			"spa": "el Campeón de Kalos",
-			"fre": "le Maître de Kalos",
-			"ita": "Campione di Kalos",
-			"jpn": "カロスチャンピオン",
-			"kor": "칼로스 챔피언",
-			"cht": "卡洛斯冠軍",
-			"chs": "卡洛斯冠军"
-		}
-	},
-	"hoenn-champion-ribbon": {
-		"gen": 6,
-		"available": [
-			"or",
-			"as"
-		],
-		"names": {
-			"ger": "Band des Hoenn-Champs",
-			"eng": "Hoenn Champion Ribbon",
-			"spa": "Cinta Campeón de Hoenn",
-			"fre": "Ruban Maître de Hoenn",
-			"ita": "Fiocco Campione Hoenn",
-			"jpn": "ホウエン　チャンプリボン",
-			"kor": "호연챔피언리본",
-			"cht": "豐緣冠軍獎章",
-			"chs": "丰缘冠军奖章"
-		},
-		"descs": {
-			"ger": "Band für den Sieg über den Champ von Hoenn und den Einzug in die Ruhmeshalle.",
-			"eng": "A Ribbon awarded for beating the Hoenn Champion and entering the Hoenn Hall of Fame.",
-			"spa": "Cinta obtenida por vencer al Campeón de Hoenn y entrar en el Hall de la Fama.",
-			"fre": "Ruban commémorant la victoire contre le Maître de Hoenn et l'entrée au Panthéon.",
-			"ita": "Fiocco conferito a chi sconfigge il Campione di Hoenn ed entra nella Sala d'Onore.",
-			"jpn": "ホウエンで　チャンピオンに　勝利し 殿堂入りした　記念リボン",
-			"kor": "호연에서 챔피언에게 이겨서 전당등록한 기념리본",
-			"cht": "在豐緣奪冠並登入 名人堂後獲得的紀念獎章。",
-			"chs": "在丰缘夺冠并登入 名人堂后获得的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Hoenn-Champ",
-			"eng": "the Hoenn Champion",
-			"spa": "el Campeón de Hoenn",
-			"fre": "le Maître de Hoenn",
-			"ita": "Campione di Hoenn",
-			"jpn": "ホウエンチャンピオン",
-			"kor": "호연 챔피언",
-			"cht": "豐緣冠軍",
-			"chs": "丰缘冠军"
-		}
-	},
-	"alola-champion-ribbon": {
-		"gen": 7,
-		"available": [
-			"sun",
-			"moon",
-			"usun",
-			"umoon"
-		],
-		"names": {
-			"ger": "Band des Alola-Champs",
-			"eng": "Alola Champion Ribbon",
-			"spa": "Cinta Campeón de Alola",
-			"fre": "Ruban Maître d'Alola",
-			"ita": "Fiocco Campione Alola",
-			"jpn": "アローラ　チャンプリボン",
-			"kor": "알로라챔피언리본",
-			"cht": "阿羅拉冠軍獎章",
-			"chs": "阿罗拉冠军奖章"
-		},
-		"descs": {
-			"ger": "Band zur Ehrung des Champs in Alola und für den Einzug in die Ruhmeshalle.",
-			"eng": "A Ribbon awarded for becoming the Alola Champion and entering the Alola Hall of Fame.",
-			"spa": "Cinta que se recibe al formar parte del equipo campeón de Alola y entrar en el Hall de la Fama.",
-			"fre": "Ruban commémorant l'accession au rang de Maître d'Alola et l'entrée au Panthéon.",
-			"ita": "Fiocco conferito a un Pokémon che diventa Campione di Alola ed entra nella Sala d'Onore.",
-			"jpn": "アローラで　チャンピオンに　なって 殿堂入りした　記念リボン",
-			"kor": "알로라에서 챔피언이 되어 전당등록한 기념리본",
-			"cht": "在阿羅拉成為冠軍並登入 名人堂後獲得的紀念獎章。",
-			"chs": "在阿罗拉成为冠军并登入 名人堂后获得的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Alola-Champ",
-			"eng": "the Alola Champion",
-			"spa": "el Campeón de Alola",
-			"fre": "le Maître d'Alola",
-			"ita": "Campione di Alola",
-			"jpn": "アローラチャンピオン",
-			"kor": "알로라 챔피언",
-			"cht": "阿羅拉冠軍",
-			"chs": "阿罗拉冠军"
-		}
-	},
-	"galar-champion-ribbon": {
-		"gen": 8,
-		"available": [
-			"sw",
-			"sh"
-		],
-		"names": {
-			"ger": "Band des Galar-Champs",
-			"eng": "Galar Champion Ribbon",
-			"spa": "Cinta Campeón de Galar",
-			"fre": "Ruban Maître de Galar",
-			"ita": "Fiocco Campione Galar",
-			"jpn": "ガラル チャンプリボン",
-			"kor": "가라르챔피언리본",
-			"cht": "伽勒爾冠軍獎章",
-			"chs": "伽勒尔冠军奖章"
-		},
-		"descs": {
-			"ger": "Band zur Ehrung des Champs von Galar und für den Einzug in die Ruhmeshalle.",
-			"eng": "A Ribbon awarded for becoming the Galar Champion and entering the Galar Hall of Fame.",
-			"spa": "Cinta que se recibe al formar parte del equipo campeón de Galar y entrar en el Hall de la Fama.",
-			"fre": "Ruban commémorant l'accession au rang de Maître de Galar et l'entrée au Panthéon.",
-			"ita": "Fiocco conferito a un Pokémon che diventa Campione di Galar ed entra nella Sala d'Onore.",
-			"jpn": "ガラルで　チャンピオンに　なって 殿堂入りした　記念リボン",
-			"kor": "가라르에서 챔피언이 되어 전당등록한 기념리본",
-			"cht": "在伽勒爾成為冠軍並登入 名人堂後獲得的紀念獎章。",
-			"chs": "在伽勒尔成为冠军并登入 名人堂后获得的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Galar-Champ",
-			"eng": "the Galar Champion",
-			"spa": "el Campeón de Galar",
-			"fre": "le Maître de Galar",
-			"ita": "Campione di Galar",
-			"jpn": "ガラルチャンピオン",
-			"kor": "가라르 챔피언",
-			"cht": "伽勒爾冠軍",
-			"chs": "伽勒尔冠军"
-		}
-	},
-	"paldea-champion-ribbon": {
-		"gen": 9,
-		"available": [
-			"scar",
-			"vio"
-		],
-		"names": {
-			"ger": "Band des Paldea-Champs",
-			"eng": "Paldea Champion Ribbon",
-			"spa": "Cinta Campeón de Paldea",
-			"fre": "Ruban Maître de Paldea",
-			"ita": "Fiocco Campione Paldea",
-			"jpn": "パルデア　チャンプリボン",
-			"kor": "팔데아챔피언리본",
-			"cht": "帕底亞冠軍獎章",
-			"chs": "帕底亚冠军奖章"
-		},
-		"descs": {
-			"ger": "Band zur Ehrung eines Champs von Paldea und für den Einzug in die Ruhmeshalle.",
-			"eng": "A Ribbon awarded for becoming a Paldea Champion and entering the Paldea Hall of Fame.",
-			"spa": "Cinta que se recibe al formar parte del equipo campeón de Paldea y entrar en el Hall de la Fama.",
-			"fre": "Ruban commémorant l'accession au rang de Maître de Paldea et un exploit digne d'entrer au Panthéon.",
-			"ita": "Fiocco conferito a un Pokémon che diventa Campione di Paldea ed entra nella Sala d'Onore.",
-			"jpn": "パルデアで　チャンピオンに　なって 殿堂入りした　記念リボン",
-			"kor": "팔데아에서 챔피언이 되어 전당등록한 기념리본",
-			"cht": "在帕底亞成為冠軍並登入 名人堂後獲得的紀念獎章。",
-			"chs": "在帕底亚成为冠军并登入 名人堂后获得的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Paldea-Champ",
-			"eng": "the Paldea Champion",
-			"spa": "el Campeón de Paldea",
-			"fre": "le Maître de Paldea",
-			"ita": "Campione di Paldea",
-			"jpn": "パルデアチャンピオン",
-			"kor": "팔데아 챔피언",
-			"cht": "帕底亞冠軍",
-			"chs": "帕底亚冠军"
-		}
-	},
 	"cool-ribbon-hoenn": {
 		"gen": 3,
 		"merge": "contest",
@@ -827,943 +539,47 @@
 			"kor": "호연지방 강인함콘테스트 마스터랭크 우승!"
 		}
 	},
-	"cool-ribbon-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
+	"champion-ribbon": {
+		"gen": 3,
 		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
+			"ruby",
+			"sapphire",
+			"emerald",
+			"fr",
+			"lg"
 		],
 		"names": {
-			"ger": "Band der Coolness",
-			"eng": "Cool Ribbon",
-			"spa": "Cinta Carisma",
-			"fre": "Ruban Sang-froid",
-			"ita": "Fiocco Classe",
-			"jpn": "クールリボン",
-			"kor": "쿨리본"
+			"ger": "Band des Champs",
+			"eng": "Champion Ribbon",
+			"spa": "Cinta Campeón (Cinta de Campeón)",
+			"fre": "Ruban Maître",
+			"ita": "Fiocco Campione",
+			"jpn": "チャンプリボン (ホウエン　チャンプリボン)",
+			"kor": "챔피언리본 (호연챔피언리본)",
+			"cht": "冠軍獎章",
+			"chs": "冠军奖章"
 		},
 		"descs": {
-			"ger": "Super-Coolness-Wettbewerb Sieger in der Normal-Klasse!",
-			"eng": "Super Contest Cool Category Normal Rank winner!",
-			"spa": "Súper Concurso Carisma Ganador nivel normal.",
-			"fre": "Super Concours de Sang-froid Gagnant catégorie Normal!",
-			"ita": "Super Gara di Classe Vincitore Livello Normale!",
-			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　ノーマルランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 근사함 부문 노말랭크 우승!"
-		}
-	},
-	"cool-ribbon-great-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Coolness Mega",
-			"eng": "Cool Ribbon Great",
-			"spa": "Cinta Carisma difícil",
-			"fre": "Ruban Sang-froid Méga",
-			"ita": "Fiocco Classe: Livello Mega",
-			"jpn": "クールリボングレート",
-			"kor": "쿨리본그레이트"
-		},
-		"descs": {
-			"ger": "Super-Coolness-Wettbewerb Sieger in der Mega-Klasse!",
-			"eng": "Super Contest Cool Category Great Rank winner!",
-			"spa": "Súper Concurso Carisma Ganador nivel difícil.",
-			"fre": "Super Concours de Sang-froid Gagnant catégorie Méga!",
-			"ita": "Super Gara di Classe Vincitore Livello Mega!",
-			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　グレートランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 근사함 부문 그레이트랭크 우승!"
-		}
-	},
-	"cool-ribbon-ultra-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Coolness Ultra",
-			"eng": "Cool Ribbon Ultra",
-			"spa": "Cinta Carisma superior",
-			"fre": "Ruban Sang-froid Ultra",
-			"ita": "Fiocco Classe: Livello Ultra",
-			"jpn": "クールリボンウルトラ",
-			"kor": "쿨리본울트라"
-		},
-		"descs": {
-			"ger": "Super-Coolness-Wettbewerb Sieger in der Ultra-Klasse!",
-			"eng": "Super Contest Cool Category Ultra Rank winner!",
-			"spa": "Súper Concurso Carisma Ganador nivel superior.",
-			"fre": "Super Concours de Sang-froid Gagnant catégorie Ultra!",
-			"ita": "Super Gara di Classe Vincitore Livello Ultra!",
-			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　ウルトラランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 근사함 부문 울트라랭크 우승!"
-		}
-	},
-	"cool-ribbon-master-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Coolness Master",
-			"eng": "Cool Ribbon Master",
-			"spa": "Cinta Carisma experto",
-			"fre": "Ruban Sang-froid Master",
-			"ita": "Fiocco Classe: Livello Master",
-			"jpn": "クールリボンマスター",
-			"kor": "쿨리본마스터"
-		},
-		"descs": {
-			"ger": "Super-Coolness-Wettbewerb Sieger in der Master-Klasse!",
-			"eng": "Super Contest Cool Category Master Rank winner!",
-			"spa": "Súper Concurso Carisma Ganador nivel experto.",
-			"fre": "Super Concours de Sang-froid Gagnant catégorie Master!",
-			"ita": "Super Gara di Classe Vincitore Livello Master!",
-			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　マスターランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 근사함 부문 마스터랭크 우승!"
-		}
-	},
-	"beauty-ribbon-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Schönheit",
-			"eng": "Beauty Ribbon",
-			"spa": "Cinta Belleza",
-			"fre": "Ruban Beauté",
-			"ita": "Fiocco Bellezza",
-			"jpn": "ビューティリボン",
-			"kor": "뷰티리본"
-		},
-		"descs": {
-			"ger": "Super-Schönheitswettbewerb Sieger in der Normal-Klasse!",
-			"eng": "Super Contest Beauty Category Normal Rank winner!",
-			"spa": "Súper Concurso Belleza Ganador nivel normal.",
-			"fre": "Super Concours de Beauté Gagnant catégorie Normal!",
-			"ita": "Super Gara di Bellezza Vincitore Livello Normale!",
-			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　ノーマルランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 아름다움 부문 노말랭크 우승!"
-		}
-	},
-	"beauty-ribbon-great-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Schönheit Mega",
-			"eng": "Beauty Ribbon Great",
-			"spa": "Cinta Belleza difícil",
-			"fre": "Ruban Beauté Méga",
-			"ita": "Fiocco Bellezza: Livello Mega",
-			"jpn": "ビューティリボングレート",
-			"kor": "뷰티리본그레이트"
-		},
-		"descs": {
-			"ger": "Super-Schönheitswettbewerb Sieger in der Mega-Klasse!",
-			"eng": "Super Contest Beauty Category Great Rank winner!",
-			"spa": "Súper Concurso Belleza Ganador nivel difícil.",
-			"fre": "Super Concours de Beauté Gagnant catégorie Méga!",
-			"ita": "Super Gara di Bellezza Vincitore Livello Mega!",
-			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　グレートランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 아름다움 부문 그레이트랭크 우승!"
-		}
-	},
-	"beauty-ribbon-ultra-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Schönheit Ultra",
-			"eng": "Beauty Ribbon Ultra",
-			"spa": "Cinta Belleza superior",
-			"fre": "Ruban Beauté Ultra",
-			"ita": "Fiocco Bellezza: Livello Ultra",
-			"jpn": "ビューティリボンウルトラ",
-			"kor": "뷰티리본울트라"
-		},
-		"descs": {
-			"ger": "Super-Schönheitswettbewerb Sieger in der Ultra-Klasse!",
-			"eng": "Super Contest Beauty Category Ultra Rank winner!",
-			"spa": "Súper Concurso Belleza Ganador nivel superior.",
-			"fre": "Super Concours de Beauté Gagnant catégorie Ultra!",
-			"ita": "Super Gara di Bellezza Vincitore Livello Ultra!",
-			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　ウルトラランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 아름다움 부문 울트라랭크 우승!"
-		}
-	},
-	"beauty-ribbon-master-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Schönheit Master",
-			"eng": "Beauty Ribbon Master",
-			"spa": "Cinta Belleza experto",
-			"fre": "Ruban Beauté Master",
-			"ita": "Fiocco Bellezza: Livello Master",
-			"jpn": "ビューティリボンマスター",
-			"kor": "뷰티리본마스터"
-		},
-		"descs": {
-			"ger": "Super-Schönheitswettbewerb Sieger in der Master-Klasse!",
-			"eng": "Super Contest Beauty Category Master Rank winner!",
-			"spa": "Súper Concurso Belleza Ganador nivel experto.",
-			"fre": "Super Concours de Beauté Gagnant catégorie Master!",
-			"ita": "Super Gara di Bellezza Vincitore Livello Master!",
-			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　マスターランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 아름다움 부문 마스터랭크 우승!"
-		}
-	},
-	"cute-ribbon-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Anmut",
-			"eng": "Cute Ribbon",
-			"spa": "Cinta Dulzura",
-			"fre": "Ruban Grâce",
-			"ita": "Fiocco Grazia",
-			"jpn": "キュートリボン",
-			"kor": "큐트리본"
-		},
-		"descs": {
-			"ger": "Super-Anmut-Wettbewerb Sieger in der Normal-Klasse!",
-			"eng": "Super Contest Cute Category Normal Rank winner!",
-			"spa": "Súper Concurso Dulzura Ganador nivel normal.",
-			"fre": "Super Concours de Grâce Gagnant catégorie Normal!",
-			"ita": "Super Gara di Grazia Vincitore Livello Normale!",
-			"jpn": "スーパーコンテスト　かわいさ　ぶもん　ノーマルランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 귀여움 부문 노말랭크 우승!"
-		}
-	},
-	"cute-ribbon-great-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Anmut Mega",
-			"eng": "Cute Ribbon Great",
-			"spa": "Cinta Dulzura difícil",
-			"fre": "Ruban Grâce Méga",
-			"ita": "Fiocco Grazia: Livello Mega",
-			"jpn": "キュートリボングレート",
-			"kor": "큐트리본그레이트"
-		},
-		"descs": {
-			"ger": "Super-Anmut-Wettbewerb Sieger in der Mega-Klasse!",
-			"eng": "Super Contest Cute Category Great Rank winner!",
-			"spa": "Súper Concurso Dulzura Ganador nivel difícil.",
-			"fre": "Super Concours de Grâce Gagnant catégorie Méga!",
-			"ita": "Super Gara di Grazia Vincitore Livello Mega!",
-			"jpn": "スーパーコンテスト　かわいさ　ぶもん　グレートランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 귀여움 부문 그레이트랭크 우승!"
-		}
-	},
-	"cute-ribbon-ultra-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Anmut Ultra",
-			"eng": "Cute Ribbon Ultra",
-			"spa": "Cinta Dulzura superior",
-			"fre": "Ruban Grâce Ultra",
-			"ita": "Fiocco Classe: Livello Ultra",
-			"jpn": "キュートリボンウルトラ",
-			"kor": "큐트리본울트라"
-		},
-		"descs": {
-			"ger": "Super-Anmut-Wettbewerb Sieger in der Ultra-Klasse!",
-			"eng": "Super Contest Cute Category Ultra Rank winner!",
-			"spa": "Súper Concurso Dulzura Ganador nivel superior.",
-			"fre": "Super Concours de Grâce Gagnant catégorie Ultra!",
-			"ita": "Super Gara di Grazia Vincitore Livello Ultra!",
-			"jpn": "スーパーコンテスト　かわいさ　ぶもん　ウルトラランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 귀여움 부문 울트라랭크 우승!"
-		}
-	},
-	"cute-ribbon-master-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Anmut Master",
-			"eng": "Cute Ribbon Master",
-			"spa": "Cinta Dulzura experto",
-			"fre": "Ruban Grâce Master",
-			"ita": "Fiocco Grazia: Livello Master",
-			"jpn": "キュートリボンマスター",
-			"kor": "큐트리본마스터"
-		},
-		"descs": {
-			"ger": "Super-Anmut-Wettbewerb Sieger in der Master-Klasse!",
-			"eng": "Super Contest Cute Category Master Rank winner!",
-			"spa": "Súper Concurso Dulzura Ganador nivel experto.",
-			"fre": "Super Concours de Grâce Gagnant catégorie Master!",
-			"ita": "Super Gara di Grazia Vincitore Livello Master!",
-			"jpn": "スーパーコンテスト　かわいさ　ぶもん　マスターランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 귀여움 부문 마스터랭크 우승!"
-		}
-	},
-	"smart-ribbon-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Klugheit",
-			"eng": "Smart Ribbon",
-			"spa": "Cinta Ingenio",
-			"fre": "Ruban Intelligence",
-			"ita": "Fiocco Acume",
-			"jpn": "ジーニアスリボン",
-			"kor": "지니어스리본"
-		},
-		"descs": {
-			"ger": "Super-Klugheits-Wettbewerb Sieger in der Normal-Klasse!",
-			"eng": "Super Contest Smart Category Normal Rank winner!",
-			"spa": "Súper Concurso Ingenio Ganador nivel normal.",
-			"fre": "Super Concours d'Intelligence Gagnant catégorie Normal!",
-			"ita": "Super Gara di Acume Vincitore Livello Normale!",
-			"jpn": "スーパーコンテスト　かしこさ　ぶもん　ノーマルランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 근사함 부문 노말랭크 우승!"
-		}
-	},
-	"smart-ribbon-great-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Klugheit Mega",
-			"eng": "Smart Ribbon Great",
-			"spa": "Cinta Ingenio difícil",
-			"fre": "Ruban Intelligence Méga",
-			"ita": "Fiocco Acume: Livello Mega",
-			"jpn": "ジーニアスリボングレート",
-			"kor": "지니어스리본그레이트"
-		},
-		"descs": {
-			"ger": "Super-Klugheits-Wettbewerb Sieger in der Mega-Klasse!",
-			"eng": "Super Contest Smart Category Great Rank winner!",
-			"spa": "Súper Concurso Ingenio Ganador nivel difícil.",
-			"fre": "Super Concours d'Intelligence Gagnant catégorie Méga!",
-			"ita": "Super Gara di Acume Vincitore Livello Mega!",
-			"jpn": "スーパーコンテスト　かしこさ　ぶもん　グレートランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 아름다움 부문 그레이트랭크 우승!"
-		}
-	},
-	"smart-ribbon-ultra-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Klugheit Ultra",
-			"eng": "Smart Ribbon Ultra",
-			"spa": "Cinta Ingenio superior",
-			"fre": "Ruban Intelligence Ultra",
-			"ita": "Fiocco Acume: Livello Ultra",
-			"jpn": "ジーニアスリボンウルトラ",
-			"kor": "지니어스리본울트라"
-		},
-		"descs": {
-			"ger": "Super-Klugheits-Wettbewerb Sieger in der Ultra-Klasse!",
-			"eng": "Super Contest Smart Category Ultra Rank winner!",
-			"spa": "Súper Concurso Ingenio Ganador nivel superior.",
-			"fre": "Super Concours d'Intelligence Gagnant catégorie Ultra!",
-			"ita": "Super Gara di Acume Vincitore Livello Ultra!",
-			"jpn": "スーパーコンテスト　かしこさ　ぶもん　ウルトラランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 아름다움 부문 울트라랭크 우승!"
-		}
-	},
-	"smart-ribbon-master-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Klugheit Master",
-			"eng": "Smart Ribbon Master",
-			"spa": "Cinta Ingenio experto",
-			"fre": "Ruban Intelligence Master",
-			"ita": "Fiocco Acume: Livello Master",
-			"jpn": "ジーニアスリボンマスター",
-			"kor": "지니어스리본마스터"
-		},
-		"descs": {
-			"ger": "Super-Klugheits-Wettbewerb Sieger in der Master-Klasse!",
-			"eng": "Super Contest Smart Category Master Rank winner!",
-			"spa": "Súper Concurso Ingenio Ganador nivel experto.",
-			"fre": "Super Concours d'Intelligence Gagnant catégorie Master!",
-			"ita": "Super Gara di Acume Vincitore Livello Master!",
-			"jpn": "スーパーコンテスト　かしこさ　ぶもん　マスターランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 아름다움 부문 마스터랭크 우승!"
-		}
-	},
-	"tough-ribbon-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Stärke",
-			"eng": "Tough Ribbon",
-			"spa": "Cinta Dureza",
-			"fre": "Ruban Robustesse",
-			"ita": "Fiocco Grinta",
-			"jpn": "パワフルリボン",
-			"kor": "파워풀리본"
-		},
-		"descs": {
-			"ger": "Super-Stärkewettbewerb Sieger in der Normal-Klasse!",
-			"eng": "Super Contest Tough Category Normal Rank winner!",
-			"spa": "Súper Concurso Dureza Ganador nivel normal.",
-			"fre": "Super Concours de Robustesse Gagnant catégorie Normal!",
-			"ita": "Super Gara di Grinta Vincitore Livello Normale!",
-			"jpn": "スーパーコンテスト　たくましさ　ぶもん　ノーマルランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 근사함 부문 노말랭크 우승!"
-		}
-	},
-	"tough-ribbon-great-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Stärke Mega",
-			"eng": "Tough Ribbon Great",
-			"spa": "Cinta Dureza difícil",
-			"fre": "Ruban Robustesse Méga",
-			"ita": "Fiocco Grinta: Livello Mega",
-			"jpn": "パワフルリボングレート",
-			"kor": "파워풀리본그레이트"
-		},
-		"descs": {
-			"ger": "Super-Stärkewettbewerb Sieger in der Mega-Klasse!",
-			"eng": "Super Contest Tough Category Great Rank winner!",
-			"spa": "Súper Concurso Dureza Ganador nivel difícil.",
-			"fre": "Super Concours de Robustesse Gagnant catégorie Méga!",
-			"ita": "Super Gara di Grinta Vincitore Livello Mega!",
-			"jpn": "スーパーコンテスト　たくましさ　ぶもん　グレートランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 아름다움 부문 그레이트랭크 우승!"
-		}
-	},
-	"tough-ribbon-ultra-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Stärke Ultra",
-			"eng": "Tough Ribbon Ultra",
-			"spa": "Cinta Dureza superior",
-			"fre": "Ruban Robustesse Ultra",
-			"ita": "Fiocco Grinta: Livello Ultra",
-			"jpn": "パワフルリボンウルトラ",
-			"kor": "파워풀리본울트라"
-		},
-		"descs": {
-			"ger": "Super-Stärkewettbewerb Sieger in der Ultra-Klasse!",
-			"eng": "Super Contest Tough Category Ultra Rank winner!",
-			"spa": "Súper Concurso Dureza Ganador nivel superior.",
-			"fre": "Super Concours de Robustesse Gagnant catégorie Ultra!",
-			"ita": "Super Gara di Grinta Vincitore Livello Ultra!",
-			"jpn": "スーパーコンテスト　たくましさ　ぶもん　ウルトラランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 아름다움 부문 울트라랭크 우승!"
-		}
-	},
-	"tough-ribbon-master-sinnoh": {
-		"gen": 4,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"merge": "contest",
-		"available": [
-			"diamond",
-			"pearl",
-			"platinum"
-		],
-		"names": {
-			"ger": "Band der Stärke Master",
-			"eng": "Tough Ribbon Master",
-			"spa": "Cinta Dureza experto",
-			"fre": "Ruban Robustesse Master",
-			"ita": "Fiocco Grinta: Livello Master",
-			"jpn": "パワフルリボンマスター",
-			"kor": "파워풀리본마스터"
-		},
-		"descs": {
-			"ger": "Super-Stärkewettbewerb Sieger in der Master-Klasse!",
-			"eng": "Super Contest Tough Category Master Rank winner!",
-			"spa": "Súper Concurso Dureza Ganador nivel experto.",
-			"fre": "Super Concours de Robustesse Gagnant catégorie Master!",
-			"ita": "Super Gara di Grinta Vincitore Livello Master!",
-			"jpn": "スーパーコンテスト　たくましさ　ぶもん　マスターランク　ゆうしょう！",
-			"kor": "슈퍼콘테스트 아름다움 부문 마스터랭크 우승!"
-		}
-	},
-	"coolness-master-ribbon": {
-		"gen": 6,
-		"available": [
-			"or",
-			"as",
-			"bd",
-			"sp"
-		],
-		"names": {
-			"ger": "Coolnessmeisterband",
-			"eng": "Coolness Master Ribbon",
-			"spa": "Cinta Estrella del Carisma",
-			"fre": "Ruban Maître Sang-froid",
-			"ita": "Fiocco Classe Suprema",
-			"jpn": "かっこよさマスターリボン",
-			"kor": "근사함마스터리본",
-			"cht": "帥氣大師獎章",
-			"chs": "帅气大师奖章"
-		},
-		"descs": {
-			"ger": "Band zur Auszeichnung eines Pokémon, das im Wettbewerb seine Coolness bewiesen hat.",
-			"eng": "A Ribbon awarded to a Pokémon that has perfectly embodied Coolness in Pokémon Contests.",
-			"spa": "Cinta que se concede a un Pokémon por exhibir su carisma en un concurso.",
-			"fre": "Ruban commémorant une incroyable démonstration de Sang-froid durant un concours.",
-			"ita": "Fiocco conferito per l'impareggiabile Classe dimostrata nelle gare.",
-			"jpn": "コンテストで　かっこよさを　発揮した ポケモンに　贈られる　記念リボン",
-			"kor": "콘테스트에서 근사함을 발휘한 포켓몬에게 수여되는 기념리본",
-			"cht": "贈予在華麗大賽中有著帥氣表現的 寶可夢的紀念獎章。",
-			"chs": "赠予在华丽大赛中有着帅气表现的 宝可梦的纪念奖章。"
+			"ger": "Band für einen alten Sieg über den Champ einer anderen Region und den Einzug in die Ruhmeshalle.",
+			"eng": "A Ribbon awarded for clearing the Pokémon League and entering the Hall of Fame somewhere long ago.",
+			"spa": "Cinta obtenida por superar la Liga Pokémon de otra región y entrar en su Hall de la Fama.",
+			"fre": "Ruban reçu il y a longtemps pour une victoire contre la Ligue Pokémon d'une certaine région.",
+			"ita": "Fiocco conferito a chi in passato ha sconfitto il Campione di un'altra regione ed è entrato nella Sala d'Onore.",
+			"jpn": "昔　どこかの　リーグで　勝ち抜き 殿堂入りした　記念リボン",
+			"kor": "옛날 어딘가의 리그에서 이겨서 전당등록한 기념리본",
+			"cht": "以前在某地的聯盟裡勝出並登入 名人堂後獲得的紀念獎章。",
+			"chs": "以前在某地的联盟里胜出并登入 名人堂后获得的纪念奖章。"
 		},
 		"titles": {
-			"ger": "Star",
-			"eng": "the Former Star",
-			"spa": "la Vieja Gloria",
-			"fre": "l'Ancienne Star",
-			"ita": "di gran classe",
-			"jpn": "かつてスターの",
-			"kor": "과거의 스타",
-			"cht": "曾是明星的",
-			"chs": "曾经是明星的"
-		}
-	},
-	"beauty-master-ribbon": {
-		"gen": 6,
-		"available": [
-			"or",
-			"as",
-			"bd",
-			"sp"
-		],
-		"names": {
-			"ger": "Schönheitsmeisterband",
-			"eng": "Beauty Master Ribbon",
-			"spa": "Cinta Estrella de la Belleza",
-			"fre": "Ruban Maître Beauté",
-			"ita": "Fiocco Bellezza Suprema",
-			"jpn": "うつくしさマスターリボン",
-			"kor": "아름다움마스터리본",
-			"cht": "美麗大師獎章",
-			"chs": "美丽大师奖章"
-		},
-		"descs": {
-			"ger": "Band zur Auszeichnung eines Pokémon, das im Wettbewerb seine Schönheit bewiesen hat.",
-			"eng": "A Ribbon awarded to a Pokémon that has perfectly embodied Beauty in Pokémon Contests.",
-			"spa": "Cinta que se concede a un Pokémon por exhibir su belleza en un concurso.",
-			"fre": "Ruban commémorant une incroyable démonstration de Beauté durant un concours.",
-			"ita": "Fiocco conferito per la sublime Bellezza esibita nelle gare.",
-			"jpn": "コンテストで　うつくしさを　発揮した ポケモンに　贈られる　記念リボン",
-			"kor": "콘테스트에서 아름다움을 발휘한 포켓몬에게 수여되는 기념리본",
-			"cht": "贈予在華麗大賽中有著美麗表現的 寶可夢的紀念獎章。",
-			"chs": "赠予在华丽大赛中有着美丽表现的 宝可梦的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Schönheit",
-			"eng": "the Vintage Beauty",
-			"spa": "la Belleza Atemporal",
-			"fre": "la Beauté d'Antan",
-			"ita": "bellezza naturale",
-			"jpn": "とうじきれいだった",
-			"kor": "한때는 아름다웠던",
-			"cht": "當時美麗動人的",
-			"chs": "当时美丽动人的"
-		}
-	},
-	"cuteness-master-ribbon": {
-		"gen": 6,
-		"available": [
-			"or",
-			"as",
-			"bd",
-			"sp"
-		],
-		"names": {
-			"ger": "Putzigkeitsmeisterband",
-			"eng": "Cuteness Master Ribbon",
-			"spa": "Cinta Estrella de la Dulzura",
-			"fre": "Ruban Maître Grâce",
-			"ita": "Fiocco Grazia Suprema",
-			"jpn": "かわいさマスターリボン",
-			"kor": "귀여움마스터리본",
-			"cht": "可愛大師獎章",
-			"chs": "可爱大师奖章"
-		},
-		"descs": {
-			"ger": "Band zur Auszeichnung eines Pokémon, das im Wettbewerb seine Putzigkeit bewiesen hat.",
-			"eng": "A Ribbon awarded to a Pokémon that has perfectly embodied Cuteness in Pokémon Contests.",
-			"spa": "Cinta que se concede a un Pokémon por exhibir su dulzura en un concurso.",
-			"fre": "Ruban commémorant une incroyable démonstration de Grâce durant un concours.",
-			"ita": "Fiocco conferito per l'inarrivabile Grazia esibita nelle gare.",
-			"jpn": "コンテストで　かわいさを　発揮した ポケモンに　贈られる　記念リボン",
-			"kor": "콘테스트에서 귀여움을 발휘한 포켓몬에게 수여되는 기념리본",
-			"cht": "贈予在華麗大賽中有著可愛表現的 寶可夢的紀念獎章。",
-			"chs": "赠予在华丽大赛中有着可爱表现的 宝可梦的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Sternchen",
-			"eng": "the Former Idol",
-			"spa": "el Adorable",
-			"fre": "la Grâce Incarnée",
-			"ita": "dalla grazia innata",
-			"jpn": "かつてアイドルの",
-			"kor": "과거의 아이돌",
-			"cht": "曾是偶像的",
-			"chs": "曾是偶像的"
-		}
-	},
-	"cleverness-master-ribbon": {
-		"gen": 6,
-		"available": [
-			"or",
-			"as",
-			"bd",
-			"sp"
-		],
-		"names": {
-			"ger": "Klugheitsmeisterband",
-			"eng": "Cleverness Master Ribbon",
-			"spa": "Cinta Estrella del Ingenio",
-			"fre": "Ruban Maître Intelligence",
-			"ita": "Fiocco Acume Supremo",
-			"jpn": "かしこさマスターリボン",
-			"kor": "슬기로움마스터리본",
-			"cht": "聰明大師獎章",
-			"chs": "聪明大师奖章"
-		},
-		"descs": {
-			"ger": "Band zur Auszeichnung eines Pokémon, das im Wettbewerb seine Klugheit bewiesen hat.",
-			"eng": "A Ribbon awarded to a Pokémon that has perfectly embodied Cleverness in Pokémon Contests.",
-			"spa": "Cinta que se concede a un Pokémon por exhibir su ingenio en un concurso.",
-			"fre": "Ruban commémorant une incroyable démonstration d'Intelligence durant un concours.",
-			"ita": "Fiocco conferito per l'insuperabile Acume dimostrato nelle gare.",
-			"jpn": "コンテストで　かしこさを　発揮した ポケモンに　贈られる　記念リボン",
-			"kor": "콘테스트에서 슬기로움을 발휘한 포켓몬에게 수여되는 기념리본",
-			"cht": "贈予在華麗大賽中有著聰明表現的 寶可夢的紀念獎章。",
-			"chs": "赠予在华丽大赛中有着聪明表现的 宝可梦的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Genie",
-			"eng": "the Historic Genius",
-			"spa": "el Ingenioso",
-			"fre": "le Génie",
-			"ita": "dall'acume sopraffino",
-			"jpn": "てんさいとよばれた",
-			"kor": "천재라 불리던",
-			"cht": "被稱作天才的",
-			"chs": "被称作天才的"
-		}
-	},
-	"toughness-master-ribbon": {
-		"gen": 6,
-		"available": [
-			"or",
-			"as",
-			"bd",
-			"sp"
-		],
-		"names": {
-			"ger": "Stärkemeisterband",
-			"eng": "Toughness Master Ribbon",
-			"spa": "Cinta Estrella de la Dureza",
-			"fre": "Ruban Maître Robustesse",
-			"ita": "Fiocco Grinta Suprema",
-			"jpn": "たくましさマスターリボン",
-			"kor": "강인함마스터리본",
-			"cht": "強壯大師獎章",
-			"chs": "强壮大师奖章"
-		},
-		"descs": {
-			"ger": "Band zur Auszeichnung eines Pokémon, das im Wettbewerb seine Stärke bewiesen hat.",
-			"eng": "A Ribbon awarded to a Pokémon that has perfectly embodied Toughness in Pokémon Contests.",
-			"spa": "Cinta que se concede a un Pokémon por exhibir su dureza en un concurso.",
-			"fre": "Ruban commémorant une incroyable démonstration de Robustesse durant un concours.",
-			"ita": "Fiocco conferito per la Grinta travolgente dimostrata nelle gare.",
-			"jpn": "コンテストで　たくましさを　発揮した ポケモンに　贈られる　記念リボン",
-			"kor": "콘테스트에서 강인함을 발휘한 포켓몬에게 수여되는 기념리본",
-			"cht": "贈予在華麗大賽中有著強壯表現的 寶可夢的紀念獎章。",
-			"chs": "赠予在华丽大赛中有着强壮表现的 宝可梦的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Kraftprotz",
-			"eng": "the Formerly Buff",
-			"spa": "el Musculoso",
-			"fre": "l'Ancien Gros Dur",
-			"ita": "dalla grinta inarrestabile",
-			"jpn": "むかしはムキムキの",
-			"kor": "한때는 울끈불끈했던",
-			"cht": "曾經渾身肌肉的",
-			"chs": "曾经浑身肌肉的"
-		}
-	},
-	"contest-star-ribbon": {
-		"gen": 6,
-		"available": [
-			"or",
-			"as",
-			"bd",
-			"sp"
-		],
-		"names": {
-			"ger": "Band des Wettbewerbsstars",
-			"eng": "Contest Star Ribbon",
-			"spa": "Cinta Estelar de Concursos",
-			"fre": "Ruban Star des Concours",
-			"ita": "Fiocco Stella delle Gare",
-			"jpn": "コンテストスターリボン",
-			"kor": "콘테스트스타리본",
-			"cht": "華麗大賽之星獎章",
-			"chs": "华丽大赛之星奖章"
-		},
-		"descs": {
-			"ger": "Band zur Auszeichnung eines Pokémon, das in allen Wettbewerben großartige Leistungen vollbracht hat.",
-			"eng": "A Ribbon awarded to a Pokémon that has performed superbly in every kind of contest.",
-			"spa": "Cinta que se concede a un Pokémon por realizar una gran actuación en todos los concursos.",
-			"fre": "Ruban offert à un Pokémon ayant marqué les esprits dans tous les types de concours possibles.",
-			"ita": "Fiocco conferito per aver partecipato con successo a tutte le gare.",
-			"jpn": "あらゆる　コンテストで　大活躍した ポケモンに　贈られる　記念リボン",
-			"kor": "모든 콘테스트에서 대활약한 포켓몬에게 수여되는 기념리본",
-			"cht": "贈予在所有華麗大賽中有著非凡表現的 寶可夢的紀念獎章。",
-			"chs": "赠予在所有华丽大赛中有着非凡表现的 宝可梦的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Starlegende",
-			"eng": "the Shining Star",
-			"spa": "la Superestrella",
-			"fre": "la Star de Légende",
-			"ita": "star",
-			"jpn": "でんせつてきスターの",
-			"kor": "전설적인 스타",
-			"cht": "傳奇明星",
-			"chs": "传奇明星"
-		}
-	},
-	"twinkling-star-ribbon": {
-		"gen": 8,
-		"available": [
-			"bd",
-			"sp"
-		],
-		"names": {
-			"ger": "Glitzersternband",
-			"eng": "Twinkling Star Ribbon",
-			"spa": "Cinta Estrella Rutilante",
-			"fre": "Ruban Étoile Brillante",
-			"ita": "Fiocco Stella Brillante",
-			"jpn": "トゥインクルスターリボン",
-			"kor": "트윙클스타리본",
-			"cht": "閃亮之星獎章",
-			"chs": "闪亮之星奖章"
-		},
-		"descs": {
-			"ger": "Band zur Auszeichnung eines Pokémon, das in der Super-Wettbewerbs-Show perfekten Glanz gezeigt hat.",
-			"eng": "A Ribbon awarded to a Pokémon that has perfectly embodied shining brilliance in Super Contest Shows.",
-			"spa": "Cinta que se concede a un Pokémon por haber brillado con luz propia en una Gala Superconcurso.",
-			"fre": "Ruban commémoratif décerné au Pokémon ayant le plus brillé au Super Show Concours.",
-			"ita": "Fiocco conferito alla stella più brillante delle Super Gare-show.",
-			"jpn": "スーパーコンテストショー！で　最高の　輝きを 発揮した　ポケモンに　贈られる　記念リボン",
-			"kor": "슈퍼 콘테스트 쇼!에서 최고의 반짝임을 발휘한 포켓몬에게 수여되는 기념리본",
-			"cht": "贈予在超級華麗大賽中有著最耀眼表現的 寶可夢的紀念獎章。",
-			"chs": "赠予在超级华丽大赛中有着最耀眼表现的 宝可梦的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Glitzerstern",
-			"eng": "the Twinkling Star",
-			"spa": "el Rutilante",
-			"fre": "l'Étoile Brillante",
-			"ita": "Stella Brillante",
-			"jpn": "トゥインクルスター",
-			"kor": "트윙클스타",
-			"cht": "閃亮之星",
-			"chs": "闪亮之星"
-		}
-	},
-	"contest-memory-ribbon": {
-		"gen": 6,
-		"optional": true,
-		"available": [
-			"x",
-			"y",
-			"or",
-			"as"
-		],
-		"names": {
-			"ger": "Wettbewerbsgedenkband",
-			"eng": "Contest Memory Ribbon",
-			"spa": "Cinta Recuerdo de Concurso",
-			"fre": "Ruban Souvenir Concours",
-			"ita": "Fiocco Ricordo delle Gare",
-			"jpn": "おもいでコンテストリボン",
-			"kor": "추억콘테스트리본",
-			"cht": "華麗大賽回憶獎章",
-			"chs": "华丽大赛回忆奖章"
-		},
-		"descs": {
-			"ger": "Band zur Erinnerung an vergangene Wettbewerbssiege in einer anderen Region.",
-			"eng": "A commemorative Ribbon representing all the Ribbons you collected for contests somewhere long ago.",
-			"spa": "Cinta de recuerdo obtenida tras conseguir cintas en algún lugar por tus concursos anteriores.",
-			"fre": "Ruban reçu il y a longtemps dans une certaine région. Il évoque tant de souvenirs des concours !",
-			"ita": "Fiocco commemorativo di tutti i fiocchi conquistati in passato in gare svoltesi in altre regioni.",
-			"jpn": "昔　どこかで　集めた　リボン コンテストの　思い出が　つまっている！",
-			"kor": "옛날 어딘가에서 수집한 리본 콘테스트의 추억이 담겨 있다!",
-			"cht": "以前在某地收集到的獎章。 滿載著華麗大賽的回憶！",
-			"chs": "以前在某地收集到的奖章。 满载着华丽大赛的回忆！"
-		},
-		"titles": {
-			"ger": "Wettbewerbsglanz",
-			"eng": "the Treasured Memory",
-			"spa": "el Concursante Memorable",
-			"fre": "le Compétiteur Inoubliable",
-			"ita": "dalle virtù memorabili",
-			"jpn": "きらめくおもいでの",
-			"kor": "반짝이는 추억을 가진",
-			"cht": "輝煌回憶裡的",
-			"chs": "辉煌回忆里的"
-		}
-	},
-	"contest-memory-ribbon-gold": {
-		"gen": 6,
-		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
-		"optional": true,
-		"available": [
-			"x",
-			"y",
-			"or",
-			"as"
-		],
-		"names": {
-			"ger": "Wettbewerbsgedenkband",
-			"eng": "Contest Memory Ribbon",
-			"spa": "Cinta Recuerdo de Concurso",
-			"fre": "Ruban Souvenir Concours",
-			"ita": "Fiocco Ricordo delle Gare",
-			"jpn": "おもいでコンテストリボン",
-			"kor": "추억콘테스트리본",
-			"cht": "華麗大賽回憶獎章",
-			"chs": "华丽大赛回忆奖章"
-		},
-		"descs": {
-			"ger": "Band zur Erinnerung an vergangene Wettbewerbssiege in einer anderen Region.",
-			"eng": "A commemorative Ribbon representing all the Ribbons you collected for contests somewhere long ago.",
-			"spa": "Cinta de recuerdo obtenida tras conseguir cintas en algún lugar por tus concursos anteriores.",
-			"fre": "Ruban reçu il y a longtemps dans une certaine région. Il évoque tant de souvenirs des concours !",
-			"ita": "Fiocco commemorativo di tutti i fiocchi conquistati in passato in gare svoltesi in altre regioni.",
-			"jpn": "昔　どこかで　集めた　リボン コンテストの　思い出が　つまっている！",
-			"kor": "옛날 어딘가에서 수집한 리본 콘테스트의 추억이 담겨 있다!",
-			"cht": "以前在某地收集到的獎章。 滿載著華麗大賽的回憶！",
-			"chs": "以前在某地收集到的奖章。 满载着华丽大赛的回忆！"
-		},
-		"titles": {
-			"ger": "Wettbewerbsglanz",
-			"eng": "the Treasured Memory",
-			"spa": "el Concursante Memorable",
-			"fre": "le Compétiteur Inoubliable",
-			"ita": "dalle virtù memorabili",
-			"jpn": "きらめくおもいでの",
-			"kor": "반짝이는 추억을 가진",
-			"cht": "輝煌回憶裡的",
-			"chs": "辉煌回忆里的"
+			"ger": "Champ",
+			"eng": "the Champion",
+			"spa": "el Campeón",
+			"fre": "le Maître",
+			"ita": "Campione",
+			"jpn": "チャンピオン",
+			"kor": "챔피언",
+			"cht": "冠軍",
+			"chs": "冠军"
 		}
 	},
 	"winning-ribbon": {
@@ -1822,6 +638,306 @@
 			"ita": "Fiocco per aver completato la sfida al L. 100 della Torre Lotta della regione di Hoenn.",
 			"jpn": "ホウエンの　バトルタワア　レベル１００を　かちぬいた　きねんの　リボン",
 			"kor": "호연의 배틀타워 레벨 100에서 연승한 기념리본"
+		}
+	},
+	"artist-ribbon": {
+		"gen": 3,
+		"available": [
+			"ruby",
+			"sapphire",
+			"emerald"
+		],
+		"names": {
+			"ger": "Band des Künstlers",
+			"eng": "Artist Ribbon",
+			"spa": "Cinta Artista",
+			"fre": "Ruban Artiste",
+			"ita": "Fiocco Artista",
+			"jpn": "ブロマイドリボン",
+			"kor": "브로마이드리본",
+			"cht": "肖像獎章",
+			"chs": "肖像奖章"
+		},
+		"descs": {
+			"ger": "Band zur Belohnung für die Wahl zum Super-Modell in Hoenn.",
+			"eng": "A Ribbon awarded for being chosen as a super sketch model in the Hoenn region.",
+			"spa": "Cinta obtenida al haberte convertido en supermodelo en Hoenn.",
+			"fre": "Ruban pour les modèles de Hoenn exposés au musée.",
+			"ita": "Fiocco conferito per essere stati scelti come modelli nella regione di Hoenn.",
+			"jpn": "ホウエンで　豪華な　似顔絵の モデルになった　記念の　リボン",
+			"kor": "호연에서 호화로운 초상화의 모델이 된 기념리본",
+			"cht": "為紀念在豐緣成為 華麗肖像畫模特兒的獎章。",
+			"chs": "为纪念在丰缘成为了华丽肖像模特的奖章。"
+		},
+		"titles": {
+			"ger": "Künstlermuse",
+			"eng": "the Model for Paintings",
+			"spa": "el Modelo",
+			"fre": "le Modèle",
+			"ita": "modello",
+			"jpn": "えのモデルになった",
+			"kor": "그림 모델이 된",
+			"cht": "成為繪畫模特兒的",
+			"chs": "成为绘画模特的"
+		}
+	},
+	"effort-ribbon": {
+		"gen": 3,
+		"available": [
+			"ruby",
+			"sapphire",
+			"emerald",
+			"diamond",
+			"pearl",
+			"platinum",
+			"hg",
+			"ss",
+			"x",
+			"y",
+			"or",
+			"as",
+			"sun",
+			"moon",
+			"usun",
+			"umoon",
+			"sw",
+			"sh",
+			"bd",
+			"sp",
+			"scar",
+			"vio"
+		],
+		"names": {
+			"ger": "Fleißband (Fleiß-Band)",
+			"eng": "Effort Ribbon",
+			"spa": "Cinta Esfuerzo",
+			"fre": "Ruban Effort",
+			"ita": "Fiocco Merito (Fiocco di Merito)",
+			"jpn": "がんばリボン",
+			"kor": "노력리본",
+			"cht": "努力獎章",
+			"chs": "努力奖章"
+		},
+		"descs": {
+			"ger": "Band für einen extrem fleißigen Arbeiter.",
+			"eng": "A Ribbon awarded for being an exceptionally hard worker.",
+			"spa": "Cinta obtenida por esforzarse al máximo.",
+			"fre": "Ruban pour récompenser un dur labeur.",
+			"ita": "Fiocco conferito a un Pokémon che ha lavorato sodo.",
+			"jpn": "たくさん　努力している ポケモンに　贈られる　リボン",
+			"kor": "많이 노력하고 있는 포켓몬에게 수여되는 리본",
+			"cht": "贈予勤奮努力的寶可夢的獎章。",
+			"chs": "赠予勤奋努力的宝可梦的奖章。"
+		},
+		"titles": {
+			"ger": "Ranklotzer",
+			"eng": "the Once Well-Trained",
+			"spa": "el Afanado",
+			"fre": "le Déterminé",
+			"ita": "dieci e lode",
+			"jpn": "あのころがんばった",
+			"kor": "한때는 노력했던",
+			"cht": "那時很努力的",
+			"chs": "那时很努力的"
+		}
+	},
+	"country-ribbon": {
+		"gen": 3,
+		"available": null,
+		"names": {
+			"ger": "Band des Landes",
+			"eng": "Country Ribbon",
+			"spa": "Cinta Campo",
+			"fre": "Ruban Pays",
+			"ita": "Fiocco Paese",
+			"jpn": "カントリーリボン",
+			"kor": "컨트리리본",
+			"cht": "地區獎章",
+			"chs": "地区奖章"
+		},
+		"descs": {
+			"ger": "Band zur Ehrung des Champs der Pokémon-Liga.",
+			"eng": "A Ribbon awarded to a Pokémon League Champion.",
+			"spa": "Cinta obtenida por vencer en la Liga Pokémon.",
+			"fre": "Ruban récompensant la victoire à la Ligue Pokémon.",
+			"ita": "Fiocco consegnato al Campione della Lega Pokémon.",
+			"jpn": "ポケモンリーグ 優勝　記念リボン",
+			"kor": "포켓몬리그 우승 기념리본",
+			"cht": "寶可夢聯盟冠軍紀念獎章。",
+			"chs": "宝可梦联盟冠军纪念奖章。"
+		},
+		"titles": {
+			"ger": "Sieger",
+			"eng": "the Victor",
+			"spa": "el Victorioso",
+			"fre": "le Victorieux",
+			"ita": "trionfante",
+			"jpn": "ゆうしょうしゃの",
+			"kor": "우승자",
+			"cht": "優勝者",
+			"chs": "优胜者"
+		}
+	},
+	"national-ribbon": {
+		"optional": true,
+		"gen": 3,
+		"available": [
+			"colosseum",
+			"xd"
+		],
+		"names": {
+			"ger": "Band der Nation",
+			"eng": "National Ribbon",
+			"spa": "Cinta Nacional",
+			"fre": "Ruban National",
+			"ita": "Fiocco Nazionale",
+			"jpn": "ナショナルリボン",
+			"kor": "내셔널리본",
+			"cht": "國家獎章",
+			"chs": "国家奖章"
+		},
+		"descs": {
+			"ger": "Band für das erfolgreiche Überstehen aller Widrigkeiten.",
+			"eng": "A Ribbon awarded for overcoming all difficult challenges.",
+			"spa": "Cinta obtenida por superar todos los desafíos difíciles.",
+			"fre": "Ruban pour avoir triomphé face à toutes les difficultés.",
+			"ita": "Fiocco conferito per aver superato tutte le sfide difficili.",
+			"jpn": "すべての　困難を 乗り越えた　記念リボン",
+			"kor": "모든 고난을 극복한 기념리본",
+			"cht": "為紀念克服了所有困難的獎章。",
+			"chs": "克服了所有困难的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Triumphator",
+			"eng": "the Triumphant",
+			"spa": "el Triunfador",
+			"fre": "le Triomphant",
+			"ita": "tenace",
+			"jpn": "こんなんをのりこえた",
+			"kor": "고난을 극복한",
+			"cht": "克服了困難的",
+			"chs": "克服了困难的"
+		}
+	},
+	"earth-ribbon": {
+		"gen": 3,
+		"available": [
+			"colosseum",
+			"xd"
+		],
+		"names": {
+			"ger": "Band der Erde",
+			"eng": "Earth Ribbon",
+			"spa": "Cinta Planeta",
+			"fre": "Ruban Terre",
+			"ita": "Fiocco Geo",
+			"jpn": "アースリボン",
+			"kor": "어스리본",
+			"cht": "地球獎章",
+			"chs": "地球奖章"
+		},
+		"descs": {
+			"ger": "Band zur Erinnerung an hundert Siege in Folge.",
+			"eng": "A Ribbon awarded for winning one hundred battles in a row.",
+			"spa": "Cinta obtenida por lograr 100 victorias consecutivas.",
+			"fre": "Ruban récompensant 100 victoires à la suite.",
+			"ita": "Fiocco conferito per aver ottenuto 100 vittorie di seguito.",
+			"jpn": "１００人抜き　達成 記念リボン",
+			"kor": "100명에게 승리 달성 기념리본",
+			"cht": "為紀念完成了 連勝１００人的獎章。",
+			"chs": "完成了连赢１００人的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Hundertsassa",
+			"eng": "the 100× Victorious",
+			"spa": "el Supremo Victorioso",
+			"fre": "le Cent Fois Victorieux",
+			"ita": "plurivincente",
+			"jpn": "１００にんぬきの",
+			"kor": "100명에게 승리한",
+			"cht": "１００連勝的",
+			"chs": "１００连胜的"
+		}
+	},
+	"world-ribbon": {
+		"gen": 3,
+		"available": null,
+		"names": {
+			"ger": "Band der Welt",
+			"eng": "World Ribbon",
+			"spa": "Cinta Mundo",
+			"fre": "Ruban Monde",
+			"ita": "Fiocco Mondiale",
+			"jpn": "ワールドリボン",
+			"kor": "월드리본",
+			"cht": "世界獎章",
+			"chs": "世界奖章"
+
+		},
+		"descs": {
+			"ger": "Band zur Ehrung des Champs der Pokémon-Liga.",
+			"eng": "A Ribbon awarded to a Pokémon League Champion.",
+			"spa": "Cinta obtenida por vencer en la Liga Pokémon.",
+			"fre": "Ruban récompensant la victoire à la Ligue Pokémon.",
+			"ita": "Fiocco consegnato al Campione della Lega Pokémon.",
+			"jpn": "ポケモンリーグ 優勝　記念リボン",
+			"kor": "포켓몬리그 우승 기념리본",
+			"cht": "寶可夢聯盟冠軍紀念獎章。",
+			"chs": "宝可梦联盟冠军纪念奖章。"
+		},
+		"titles": {
+			"ger": "Weltenherrscher",
+			"eng": "the World Conqueror",
+			"spa": "el Rey del Mundo",
+			"fre": "le Roi du Monde",
+			"ita": "re del mondo",
+			"jpn": "せかいをせいした",
+			"kor": "세계를 제패한",
+			"cht": "稱霸世界的",
+			"chs": "称霸世界的"
+		}
+	},
+	"sinnoh-champion-ribbon": {
+		"gen": 4,
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum",
+			"bd",
+			"sp"
+		],
+		"names": {
+			"ger": "Band des Sinnoh-Champs (Band des Champs von Sinnoh)",
+			"eng": "Sinnoh Champion Ribbon (Sinnoh Champ Ribbon)",
+			"spa": "Cinta Campeón de Sinnoh",
+			"fre": "Ruban Maître de Sinnoh (Ruban Maître Sinnoh)",
+			"ita": "Fiocco Campione Sinnoh",
+			"jpn": "シンオウ　チャンプリボン",
+			"kor": "신오챔피언리본",
+			"cht": "神奧冠軍獎章",
+			"chs": "神奥冠军奖章"
+		},
+		"descs": {
+			"ger": "Band für den Sieg über den Champ von Sinnoh und den Einzug in die Ruhmeshalle.",
+			"eng": "A Ribbon awarded for beating the Sinnoh Champion and entering the Sinnoh Hall of Fame.",
+			"spa": "Cinta obtenida por vencer a la Campeona de Sinnoh y entrar en el Hall de la Fama.",
+			"fre": "Ruban commémorant la victoire contre la Maîtresse de Sinnoh et l'entrée au Panthéon.",
+			"ita": "Fiocco conferito a chi sconfigge la Campionessa di Sinnoh ed entra nella Sala d'Onore.",
+			"jpn": "シンオウで　チャンピオンに　勝利し 殿堂入りした　記念リボン",
+			"kor": "신오에서 챔피언에게 이겨서 전당등록한 기념리본",
+			"cht": "在神奧奪冠並登入 名人堂後獲得的紀念獎章。",
+			"chs": "在神奥夺冠并登入 名人堂后获得的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Sinnoh-Champ",
+			"eng": "the Sinnoh Champion",
+			"spa": "el Campeón de Sinnoh",
+			"fre": "le Maître de Sinnoh",
+			"ita": "Campione di Sinnoh",
+			"jpn": "シンオウチャンピオン",
+			"kor": "신오 챔피언",
+			"cht": "神奧冠軍",
+			"chs": "神奥冠军"
 		}
 	},
 	"ability-ribbon": {
@@ -2009,414 +1125,6 @@
 			"ita": "Fiocco per aver completato la Torre Lotta Wi-Fi.",
 			"jpn": "Ｗｉ－Ｆｉバトルタワーを　かちぬいた　きねんの　リボン",
 			"kor": "Wi-Fi 배틀타워를 연승한 기념리본"
-		}
-	},
-	"battle-memory-ribbon": {
-		"gen": 6,
-		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
-		"nomythical": true,
-		"optional": true,
-		"available": [
-			"x",
-			"y",
-			"or",
-			"as"
-		],
-		"names": {
-			"ger": "Kampfgedenkband",
-			"eng": "Battle Memory Ribbon",
-			"spa": "Cinta Recuerdo de Combate",
-			"fre": "Ruban Souvenir Combat",
-			"ita": "Fiocco Ricordo delle Lotte",
-			"jpn": "おもいでバトルリボン",
-			"kor": "추억배틀리본",
-			"cht": "對戰回憶獎章",
-			"chs": "对战回忆奖章"
-		},
-		"descs": {
-			"ger": "Band zur Erinnerung an vergangene gewonnene Kämpfe in einer anderen Region.",
-			"eng": "A commemorative Ribbon representing all the Ribbons you collected for battling somewhere long ago.",
-			"spa": "Cinta de recuerdo obtenida tras conseguir cintas en algún lugar por tus combates anteriores.",
-			"fre": "Ruban reçu il y a longtemps dans une lointaine région. Il rappelle le souvenir de féroces combats !",
-			"ita": "Fiocco commemorativo di tutti i fiocchi conquistati in passato in lotte svoltesi in altre regioni.",
-			"jpn": "昔　どこかで　集めた　リボン 戦いの　思い出が　つまっている！",
-			"kor": "옛날 어딘가에서 수집한 리본 배틀의 추억이 담겨 있다!",
-			"cht": "以前在某地收集到的獎章。 滿載著戰鬥的回憶！",
-			"chs": "以前在某地收集到的奖章。 满载着战斗的回忆！"
-		},
-		"titles": {
-			"ger": "Kämpfernatur",
-			"eng": "the Exciting Memory",
-			"spa": "el Combatiente Memorable",
-			"fre": "le Combattant Inoubliable",
-			"ita": "dalle capacità memorabili",
-			"jpn": "あついおもいでの",
-			"kor": "뜨거운 추억을 가진",
-			"cht": "熱血回憶裡的",
-			"chs": "热血回忆里的"
-		}
-	},
-	"battle-memory-ribbon-gold": {
-		"gen": 6,
-		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
-		"nomythical": true,
-		"optional": true,
-		"available": [
-			"x",
-			"y",
-			"or",
-			"as"
-		],
-		"names": {
-			"ger": "Kampfgedenkband",
-			"eng": "Battle Memory Ribbon",
-			"spa": "Cinta Recuerdo de Combate",
-			"fre": "Ruban Souvenir Combat",
-			"ita": "Fiocco Ricordo delle Lotte",
-			"jpn": "おもいでバトルリボン",
-			"kor": "추억배틀리본",
-			"cht": "對戰回憶獎章",
-			"chs": "对战回忆奖章"
-		},
-		"descs": {
-			"ger": "Band zur Erinnerung an vergangene gewonnene Kämpfe in einer anderen Region.",
-			"eng": "A commemorative Ribbon representing all the Ribbons you collected for battling somewhere long ago.",
-			"spa": "Cinta de recuerdo obtenida tras conseguir cintas en algún lugar por tus combates anteriores.",
-			"fre": "Ruban reçu il y a longtemps dans une lointaine région. Il rappelle le souvenir de féroces combats !",
-			"ita": "Fiocco commemorativo di tutti i fiocchi conquistati in passato in lotte svoltesi in altre regioni.",
-			"jpn": "昔　どこかで　集めた　リボン 戦いの　思い出が　つまっている！",
-			"kor": "옛날 어딘가에서 수집한 리본 배틀의 추억이 담겨 있다!",
-			"cht": "以前在某地收集到的獎章。 滿載著戰鬥的回憶！",
-			"chs": "以前在某地收集到的奖章。 满载着战斗的回忆！"
-		},
-		"titles": {
-			"ger": "Kämpfernatur",
-			"eng": "the Exciting Memory",
-			"spa": "el Combatiente Memorable",
-			"fre": "le Combattant Inoubliable",
-			"ita": "dalle capacità memorabili",
-			"jpn": "あついおもいでの",
-			"kor": "뜨거운 추억을 가진",
-			"cht": "熱血回憶裡的",
-			"chs": "热血回忆里的"
-		}
-	},
-	"skillful-battler-ribbon": {
-		"gen": 6,
-		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "xerneas", "yveltal", "zygarde"],
-		"nomythical": true,
-		"available": [
-			"x",
-			"y",
-			"or",
-			"as"
-		],
-		"names": {
-			"ger": "Profikampfband",
-			"eng": "Skillful Battler Ribbon",
-			"spa": "Cinta Figura del Combate",
-			"fre": "Ruban Élite du Combat",
-			"ita": "Fiocco Asso della Lotta",
-			"jpn": "グレートバトルリボン",
-			"kor": "그레이트배틀리본",
-			"cht": "高手對戰獎章",
-			"chs": "高手对战奖章"
-		},
-		"descs": {
-			"ger": "Band zur Ehrung eines Pokémon, das selbst aus dem härtesten Kampf als Sieger hervorgegangen ist.",
-			"eng": "A Ribbon that can be given to a Pokémon that has achieved victory in difficult battles.",
-			"spa": "Cinta que se concede a un Pokémon que haya obtenido la victoria en combates complicados.",
-			"fre": "Ruban pour récompenser un Pokémon ayant remporté de difficiles combats.",
-			"ita": "Fiocco da regalare a un Pokémon che è uscito vittorioso da lotte difficili.",
-			"jpn": "厳しい　戦いを　勝ち抜いた ポケモンに　贈られる　リボン",
-			"kor": "혹독한 배틀에서 승리한 포켓몬에게 수여되는 리본",
-			"cht": "贈予在苦戰中勝出的寶可夢的獎章。",
-			"chs": "赠予在苦战中胜出的宝可梦的奖章。"
-		},
-		"titles": {
-			"ger": "Kampfveteran",
-			"eng": "the Veteran",
-			"spa": "el Figura",
-			"fre": "le Vétéran",
-			"ita": "asso della lotta",
-			"jpn": "べテランの",
-			"kor": "베테랑",
-			"cht": "經驗老到的",
-			"chs": "经验老到的"
-		}
-	},
-	"expert-battler-ribbon": {
-		"gen": 6,
-		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "xerneas", "yveltal", "zygarde"],
-		"nomythical": true,
-		"available": [
-			"x",
-			"y",
-			"or",
-			"as"
-		],
-		"names": {
-			"ger": "Meisterkampfband",
-			"eng": "Expert Battler Ribbon",
-			"spa": "Cinta As del Combate",
-			"fre": "Ruban Génie du Combat",
-			"ita": "Fiocco Genio della Lotta",
-			"jpn": "マスターバトルリボン",
-			"kor": "마스터배틀리본",
-			"cht": "大師對戰獎章",
-			"chs": "大师对战奖章"
-		},
-		"descs": {
-			"ger": "Band zur Ehrung eines heldenhaften Pokémon, das die Kunst des Kämpfens perfektioniert hat.",
-			"eng": "A Ribbon that can be given to a brave Pokémon that has honed its battle skills to an art.",
-			"spa": "Cinta que se concede a un Pokémon valiente que ha dominado con maestría el arte de combatir.",
-			"fre": "Ruban pour récompenser un Pokémon s'étant surpassé au cours des combats.",
-			"ita": "Fiocco da regalare a un Pokémon che ha superato se stesso nella lotta.",
-			"jpn": "戦いを　極めた　つわものの ポケモンに　贈られる　リボン",
-			"kor": "배틀을 평정한 강한 포켓몬에게 수여되는 리본",
-			"cht": "贈予戰鬥造詣之最的 強者寶可夢的獎章。",
-			"chs": "赠予战斗造诣登峰造极的强者宝可梦的奖章。"
-		},
-		"titles": {
-			"ger": "Kampfgenie",
-			"eng": "the Master",
-			"spa": "el As",
-			"fre": "l'Expert",
-			"ita": "fuoriclasse",
-			"jpn": "たつじんの",
-			"kor": "달인",
-			"cht": "高手",
-			"chs": "高手"
-		}
-	},
-	"battle-tree-great-ribbon": {
-		"gen": 7,
-		"available": [
-			"sun",
-			"moon",
-			"usun",
-			"umoon"
-		],
-		"names": {
-			"ger": "Profibaumband",
-			"eng": "Battle Tree Great Ribbon",
-			"spa": "Cinta As del Árbol",
-			"fre": "Ruban Élite de l'Arbre",
-			"ita": "Fiocco Asso dell'Albero",
-			"jpn": "グレートツリーリボン",
-			"kor": "그레이트트리리본",
-			"cht": "高手對戰樹獎章",
-			"chs": "高手对战树奖章"
-		},
-		"descs": {
-			"ger": "Band für den Sieg über eine Kampflegende im Kampfbaum.",
-			"eng": "A Ribbon awarded for winning against a Battle Legend in the Battle Tree.",
-			"spa": "Cinta que se concede en el Árbol de Combate al vencer a los Campeones Legendarios.",
-			"fre": "Ruban commémorant la victoire contre les Dresseurs de légende à l'Arbre de Combat.",
-			"ita": "Fiocco conferito per aver sconfitto le Leggende della lotta all'Albero della lotta.",
-			"jpn": "バトルツリーの　バトルレジェンドに 勝利した　記念リボン",
-			"kor": "배틀트리의 배틀레전드를 이긴 기념리본",
-			"cht": "戰勝了對戰樹的 對戰傳奇的紀念獎章。",
-			"chs": "战胜了对战树的 对战传奇的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Baumsieger",
-			"eng": "the Tree Victor",
-			"spa": "el As del Árbol",
-			"fre": "le Vainqueur de l'Arbre",
-			"ita": "asso dell'Albero",
-			"jpn": "ツリーウィナー",
-			"kor": "트리 위너",
-			"cht": "對戰樹贏家",
-			"chs": "对战树赢家"
-		}
-	},
-	"battle-tree-master-ribbon": {
-		"gen": 7,
-		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "xerneas", "yveltal", "zygarde", "cosmog", "cosmoem", "solgaleo", "lunala", "necrozma"],
-		"nomythical": true,
-		"available": [
-			"sun",
-			"moon",
-			"usun",
-			"umoon"
-		],
-		"names": {
-			"ger": "Meisterbaumband",
-			"eng": "Battle Tree Master Ribbon",
-			"spa": "Cinta Maestro del Árbol",
-			"fre": "Ruban Maître de l'Arbre",
-			"ita": "Fiocco Genio dell'Albero",
-			"jpn": "マスターツリーリボン",
-			"kor": "마스터트리리본",
-			"cht": "大師對戰樹獎章",
-			"chs": "大师对战树奖章"
-		},
-		"descs": {
-			"ger": "Band zur Auszeichnung eines Pokémon, das im Super-Rang gegen eine Kampflegende gewonnen hat.",
-			"eng": "A Ribbon awarded for winning against a Battle Legend in super battles in the Battle Tree.",
-			"spa": "Cinta concedida en el Árbol de Combate al vencer a los Campeones Legendarios en los Supercombates.",
-			"fre": "Ruban commémorant la victoire contre les Dresseurs de légende en Combat Super à l'Arbre de Combat.",
-			"ita": "Fiocco conferito per aver battuto le Leggende della lotta nelle Superlotte.",
-			"jpn": "バトルツリーの　バトルレジェンドに スーパーで　勝利した　記念リボン",
-			"kor": "배틀트리의 배틀레전드를 슈퍼배틀에서 이긴 기념리본",
-			"cht": "在超級對戰中戰勝了對戰樹的 對戰傳奇的紀念獎章。",
-			"chs": "在超级对战中战胜了对战树的 对战传奇的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Baummeister",
-			"eng": "the Tree Master",
-			"spa": "el Maestro del Árbol",
-			"fre": "le Maître de l'Arbre",
-			"ita": "genio dell'Albero",
-			"jpn": "ツリーマスター",
-			"kor": "트리 마스터",
-			"cht": "對戰樹大師",
-			"chs": "对战树大师"
-		}
-	},
-	"tower-master-ribbon": {
-		"gen": 8,
-		"bannedBDSP": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
-		"available": [
-			"sw",
-			"sh",
-			"bd",
-			"sp"
-		],
-		"names": {
-			"ger": "Meisterturmband",
-			"eng": "Tower Master Ribbon",
-			"spa": "Cinta Maestro de la Torre",
-			"fre": "Ruban Maître de la Tour",
-			"ita": "Fiocco Asso della Torre",
-			"jpn": "マスタータワーリボン",
-			"kor": "마스터타워리본",
-			"cht": "對戰塔大師獎章",
-			"chs": "对战塔大师奖章"
-		},
-		"descs": {
-			"ger": "Band für den Sieg über den Meister des Kampfturms.",
-			"eng": "A Ribbon awarded for winning against a champion in the Battle Tower.",
-			"spa": "Cinta que se concede al vencer al Maestro de la Torre Batalla.",
-			"fre": "Ruban commémorant la victoire contre le maître de la Tour de Combat.",
-			"ita": "Fiocco conferito per aver battuto il campione della Torre Lotta.",
-			"jpn": "バトルタワーの　チャンピオンに 勝利した　記念リボン",
-			"kor": "배틀타워의 챔피언을 이긴 기념리본",
-			"cht": "在對戰塔中戰勝了 對戰塔冠軍的紀念獎章。",
-			"chs": "战胜了对战塔冠军的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Turmmeister",
-			"eng": "the Tower Master",
-			"spa": "el Maestro de la Torre",
-			"fre": "le Maître de la Tour",
-			"ita": "asso della Torre",
-			"jpn": "タワーマスター",
-			"kor": "타워 마스터",
-			"cht": "對戰塔大師",
-			"chs": "对战塔大师"
-		}
-	},
-	"artist-ribbon": {
-		"gen": 3,
-		"available": [
-			"ruby",
-			"sapphire",
-			"emerald"
-		],
-		"names": {
-			"ger": "Band des Künstlers",
-			"eng": "Artist Ribbon",
-			"spa": "Cinta Artista",
-			"fre": "Ruban Artiste",
-			"ita": "Fiocco Artista",
-			"jpn": "ブロマイドリボン",
-			"kor": "브로마이드리본",
-			"cht": "肖像獎章",
-			"chs": "肖像奖章"
-		},
-		"descs": {
-			"ger": "Band zur Belohnung für die Wahl zum Super-Modell in Hoenn.",
-			"eng": "A Ribbon awarded for being chosen as a super sketch model in the Hoenn region.",
-			"spa": "Cinta obtenida al haberte convertido en supermodelo en Hoenn.",
-			"fre": "Ruban pour les modèles de Hoenn exposés au musée.",
-			"ita": "Fiocco conferito per essere stati scelti come modelli nella regione di Hoenn.",
-			"jpn": "ホウエンで　豪華な　似顔絵の モデルになった　記念の　リボン",
-			"kor": "호연에서 호화로운 초상화의 모델이 된 기념리본",
-			"cht": "為紀念在豐緣成為 華麗肖像畫模特兒的獎章。",
-			"chs": "为纪念在丰缘成为了华丽肖像模特的奖章。"
-		},
-		"titles": {
-			"ger": "Künstlermuse",
-			"eng": "the Model for Paintings",
-			"spa": "el Modelo",
-			"fre": "le Modèle",
-			"ita": "modello",
-			"jpn": "えのモデルになった",
-			"kor": "그림 모델이 된",
-			"cht": "成為繪畫模特兒的",
-			"chs": "成为绘画模特的"
-		}
-	},
-	"effort-ribbon": {
-		"gen": 3,
-		"available": [
-			"ruby",
-			"sapphire",
-			"emerald",
-			"diamond",
-			"pearl",
-			"platinum",
-			"hg",
-			"ss",
-			"x",
-			"y",
-			"or",
-			"as",
-			"sun",
-			"moon",
-			"usun",
-			"umoon",
-			"sw",
-			"sh",
-			"bd",
-			"sp",
-			"scar",
-			"vio"
-		],
-		"names": {
-			"ger": "Fleißband (Fleiß-Band)",
-			"eng": "Effort Ribbon",
-			"spa": "Cinta Esfuerzo",
-			"fre": "Ruban Effort",
-			"ita": "Fiocco Merito (Fiocco di Merito)",
-			"jpn": "がんばリボン",
-			"kor": "노력리본",
-			"cht": "努力獎章",
-			"chs": "努力奖章"
-		},
-		"descs": {
-			"ger": "Band für einen extrem fleißigen Arbeiter.",
-			"eng": "A Ribbon awarded for being an exceptionally hard worker.",
-			"spa": "Cinta obtenida por esforzarse al máximo.",
-			"fre": "Ruban pour récompenser un dur labeur.",
-			"ita": "Fiocco conferito a un Pokémon che ha lavorato sodo.",
-			"jpn": "たくさん　努力している ポケモンに　贈られる　リボン",
-			"kor": "많이 노력하고 있는 포켓몬에게 수여되는 리본",
-			"cht": "贈予勤奮努力的寶可夢的獎章。",
-			"chs": "赠予勤奋努力的宝可梦的奖章。"
-		},
-		"titles": {
-			"ger": "Ranklotzer",
-			"eng": "the Once Well-Trained",
-			"spa": "el Afanado",
-			"fre": "le Déterminé",
-			"ita": "dieci e lode",
-			"jpn": "あのころがんばった",
-			"kor": "한때는 노력했던",
-			"cht": "那時很努力的",
-			"chs": "那时很努力的"
 		}
 	},
 	"alert-ribbon": {
@@ -2989,383 +1697,6 @@
 			"chs": "保持厉害纪录的"
 		}
 	},
-	"best-friends-ribbon": {
-		"gen": 6,
-		"available": [
-			"x",
-			"y",
-			"or",
-			"as",
-			"sun",
-			"moon",
-			"usun",
-			"umoon",
-			"sw",
-			"sh",
-			"bd",
-			"sp",
-			"scar",
-			"vio"
-		],
-		"names": {
-			"ger": "Zutraulichkeitsband",
-			"eng": "Best Friends Ribbon",
-			"spa": "Cinta Amistad",
-			"fre": "Ruban Affection",
-			"ita": "Fiocco Amicizia",
-			"jpn": "なかよしリボン",
-			"kor": "절친리본",
-			"cht": "好友獎章",
-			"chs": "好友奖章"
-		},
-		"descs": {
-			"ger": "Band zur Ehrung eines Pokémon, das durch die enge Beziehung zu seinem Trainer besticht.",
-			"eng": "A Ribbon that can be given to a Pokémon with which you share a close and meaningful bond.",
-			"spa": "Cinta que se concede a un Pokémon con el que compartes un profundo lazo de amistad.",
-			"fre": "Ruban à offrir à un Pokémon auquel on est très attaché.",
-			"ita": "Fiocco da regalare a un Pokémon con il quale hai creato un legame profondo.",
-			"jpn": "深い　絆で　結ばれた ポケモンに　贈られる　リボン",
-			"kor": "깊은 인연으로 맺어진 포켓몬에게 수여되는 리본",
-			"cht": "贈予彼此密不可分的寶可夢的獎章。",
-			"chs": "赠予彼此密不可分的宝可梦的奖章。"
-		},
-		"titles": {
-			"ger": "Herzensfreund",
-			"eng": "the Great Friend",
-			"spa": "el Colega",
-			"fre": "le Bon Ami",
-			"ita": "fedele partner",
-			"jpn": "しんゆうの",
-			"kor": "절친",
-			"cht": "摯友",
-			"chs": "挚友"
-		}
-	},
-	"training-ribbon": {
-		"gen": 6,
-		"available": [
-			"x",
-			"y",
-			"or",
-			"as"
-		],
-		"names": {
-			"ger": "Trainingsband",
-			"eng": "Training Ribbon",
-			"spa": "Cinta Ejercicio",
-			"fre": "Ruban Perfectionnement",
-			"ita": "Fiocco Training",
-			"jpn": "しゅぎょうリボン",
-			"kor": "수행리본",
-			"cht": "修行獎章",
-			"chs": "修行奖章"
-		},
-		"descs": {
-			"ger": "Band zur Ehrung eines Pokémon, das schwere Prüfungen gemeistert hat.",
-			"eng": "A Ribbon that can be given to a Pokémon that has overcome rigorous trials and training.",
-			"spa": "Cinta que se concede a un Pokémon que haya superado pruebas y entrenamientos muy duros.",
-			"fre": "Ruban pour récompenser un Pokémon ayant réussi un entraînement sans pitié.",
-			"ita": "Fiocco da regalare a un Pokémon che ha sostenuto con successo un duro allenamento.",
-			"jpn": "過酷な　試練を　乗り越えた ポケモンに　贈られる　リボン",
-			"kor": "가혹한 시련을 뛰어넘은 포켓몬에게 수여되는 리본",
-			"cht": "贈予通過了嚴酷考驗的寶可夢的獎章。",
-			"chs": "赠予通过了严酷考验的宝可梦的奖章。"
-		},
-		"titles": {
-			"ger": "Trainingspartner",
-			"eng": "the Tried and True",
-			"spa": "el Entrenado",
-			"fre": "le Surentraîné",
-			"ita": "osso duro",
-			"jpn": "しれんをともにした",
-			"kor": "시련을 함께한",
-			"cht": "一起接受過試煉的",
-			"chs": "一起接受过试练的"
-		}
-	},
-	"battle-royal-master-ribbon": {
-		"gen": 7,
-		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "xerneas", "yveltal", "zygarde", "cosmog", "cosmoem", "solgaleo", "lunala", "necrozma"],
-		"nomythical": true,
-		"available": [
-			"sun",
-			"moon",
-			"usun",
-			"umoon"
-		],
-		"names": {
-			"ger": "Battle-Royale-Meisterband",
-			"eng": "Battle Royal Master Ribbon",
-			"spa": "Cinta Maestro Battle Royale",
-			"fre": "Ruban Champion Royal",
-			"ita": "Fiocco Asso Royale",
-			"jpn": "ロイヤルマスターリボン",
-			"kor": "로열마스터리본",
-			"cht": "皇家大師獎章",
-			"chs": "皇家大师奖章"
-		},
-		"descs": {
-			"ger": "Band zur Auszeichnung eines Pokémon, das beim Battle Royale gesiegt hat.",
-			"eng": "A Ribbon that can be given to a Pokémon that has achieved victory in the Battle Royal.",
-			"spa": "Cinta que se concede a un Pokémon por resultar vencedor en un Battle Royale.",
-			"fre": "Ruban offert à un Pokémon étant sorti grand vainqueur de la Bataille Royale.",
-			"ita": "Fiocco conferito per le vittorie nelle Battle Royale.",
-			"jpn": "バトルロイヤルで　勝ち抜いた ポケモンに　贈られる　記念リボン",
-			"kor": "배틀로열을 이겨 낸 포켓몬에게 수여되는 기념리본",
-			"cht": "贈予在皇家對戰中勝出的 寶可夢的紀念獎章。",
-			"chs": "赠予在皇家对战中胜出的 宝可梦的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Battle-Royale-Meister",
-			"eng": "the Royal Master",
-			"spa": "el Maestro del Battle Royale",
-			"fre": "le Champion Royal",
-			"ita": "asso Royale",
-			"jpn": "ロイヤルマスター",
-			"kor": "로열 마스터",
-			"cht": "皇家大師",
-			"chs": "皇家大师"
-		}
-	},
-	"master-rank-ribbon": {
-		"gen": 8,
-		"banned": ["greninja-ash", "koraidon", "miraidon", "terapagos"],
-		"nomythical": true,
-		"available": [
-			"sw",
-			"sh",
-			"scar",
-			"vio"
-		],
-		"names": {
-			"ger": "Meisterrangband",
-			"eng": "Master Rank Ribbon",
-			"spa": "Cinta Rango Maestro",
-			"fre": "Ruban Top du Classement",
-			"ita": "Fiocco Asso Competizione",
-			"jpn": "マスターランクリボン",
-			"kor": "마스터랭크리본",
-			"cht": "級別對戰大師獎章",
-			"chs": "级别对战大师奖章"
-		},
-		"descs": {
-			"ger": "Band zur Auszeichnung eines Pokémon, das bei einem Rangkampf in der Meisterball-Klasse gewonnen hat.",
-			"eng": "A Ribbon awarded for winning against a Trainer in the Master Ball Tier of Ranked Battles.",
-			"spa": "Cinta que se concede al vencer a un Entrenador de Nivel Maestro en un Combate Clasificatorio.",
-			"fre": "Ruban commémorant la victoire contre un Dresseur de niveau Master Ball en combat classé.",
-			"ita": "Fiocco conferito per aver battuto un Allenatore di Classe Master Ball in una Lotta Competitiva.",
-			"jpn": "ランクバトルの　マスターボール級で トレーナーに　勝利した　記念リボン",
-			"kor": "랭크배틀의 마스터볼급에서 트레이너를 이긴 기념리본",
-			"cht": "在大師球級的級別對戰中 戰勝了訓練家的紀念獎章。",
-			"chs": "在大师球级的级别对战中 战胜了训练家的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Rangmeister",
-			"eng": "the Rank Master",
-			"spa": "el Maestro de la Clasificación",
-			"fre": "le Maître du Classement",
-			"ita": "asso della competizione",
-			"jpn": "ランクマスター",
-			"kor": "랭크 마스터",
-			"cht": "級別對戰大師",
-			"chs": "级别对战大师"
-		}
-	},
-	"hisui-ribbon": {
-		"gen": 8,
-		"available": [
-			"pla"
-		],
-		"names": {
-			"ger": "Hisui-Band",
-			"eng": "Hisui Ribbon",
-			"spa": "Cinta Hisui",
-			"fre": "Ruban Hisui",
-			"ita": "Fiocco Hisui",
-			"jpn": "ヒスイリボン",
-			"kor": "히스이리본",
-			"cht": "洗翠獎章",
-			"chs": "洗翠奖章"
-		},
-		"descs": {
-			"ger": "Band zur Auszeichnung eines Pokémon, das in der fernen Vergangenheit in Hisui für ein Foto posiert hat.",
-			"eng": "A Ribbon awarded to a Pokémon that posed for a photograph in Hisui in the distant past.",
-			"spa": "Cinta concedida a un Pokémon que hizo de modelo para una fotografía tiempo ha en la región de Hisui.",
-			"fre": "Ruban commémorant une séance photo effectuée à Hisui dans un passé lointain.",
-			"ita": "Fiocco conferito per essere stati scelti come modelli di scatti fotografici a Hisui in un lontano passato.",
-			"jpn": "ヒスイで　遠い昔に　写真の モデルになった　記念の　リボン",
-			"kor": "먼 옛날 히스이에서 사진 모델이 된 기념리본",
-			"cht": "為紀念遙遠過去在洗翠成為 照片模特兒的獎章。",
-			"chs": "为纪念在洗翠成为了 遥远过去的照片模特的奖章。"
-		},
-		"titles": {
-			"ger": "Zeitzeuge",
-			"eng": "of the Distant Past",
-			"spa": "el Viajero del Pasado",
-			"fre": "le Témoin du Passé",
-			"ita": "di un lontano passato",
-			"jpn": "とおいむかしの",
-			"kor": "먼 옛날의",
-			"cht": "遙遠過去的",
-			"chs": "遥远过去的"
-		}
-	},
-	"country-ribbon": {
-		"gen": 3,
-		"available": null,
-		"names": {
-			"ger": "Band des Landes",
-			"eng": "Country Ribbon",
-			"spa": "Cinta Campo",
-			"fre": "Ruban Pays",
-			"ita": "Fiocco Paese",
-			"jpn": "カントリーリボン",
-			"kor": "컨트리리본",
-			"cht": "地區獎章",
-			"chs": "地区奖章"
-		},
-		"descs": {
-			"ger": "Band zur Ehrung des Champs der Pokémon-Liga.",
-			"eng": "A Ribbon awarded to a Pokémon League Champion.",
-			"spa": "Cinta obtenida por vencer en la Liga Pokémon.",
-			"fre": "Ruban récompensant la victoire à la Ligue Pokémon.",
-			"ita": "Fiocco consegnato al Campione della Lega Pokémon.",
-			"jpn": "ポケモンリーグ 優勝　記念リボン",
-			"kor": "포켓몬리그 우승 기념리본",
-			"cht": "寶可夢聯盟冠軍紀念獎章。",
-			"chs": "宝可梦联盟冠军纪念奖章。"
-		},
-		"titles": {
-			"ger": "Sieger",
-			"eng": "the Victor",
-			"spa": "el Victorioso",
-			"fre": "le Victorieux",
-			"ita": "trionfante",
-			"jpn": "ゆうしょうしゃの",
-			"kor": "우승자",
-			"cht": "優勝者",
-			"chs": "优胜者"
-		}
-	},
-	"national-ribbon": {
-		"optional": true,
-		"gen": 3,
-		"available": [
-			"colosseum",
-			"xd"
-		],
-		"names": {
-			"ger": "Band der Nation",
-			"eng": "National Ribbon",
-			"spa": "Cinta Nacional",
-			"fre": "Ruban National",
-			"ita": "Fiocco Nazionale",
-			"jpn": "ナショナルリボン",
-			"kor": "내셔널리본",
-			"cht": "國家獎章",
-			"chs": "国家奖章"
-		},
-		"descs": {
-			"ger": "Band für das erfolgreiche Überstehen aller Widrigkeiten.",
-			"eng": "A Ribbon awarded for overcoming all difficult challenges.",
-			"spa": "Cinta obtenida por superar todos los desafíos difíciles.",
-			"fre": "Ruban pour avoir triomphé face à toutes les difficultés.",
-			"ita": "Fiocco conferito per aver superato tutte le sfide difficili.",
-			"jpn": "すべての　困難を 乗り越えた　記念リボン",
-			"kor": "모든 고난을 극복한 기념리본",
-			"cht": "為紀念克服了所有困難的獎章。",
-			"chs": "克服了所有困难的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Triumphator",
-			"eng": "the Triumphant",
-			"spa": "el Triunfador",
-			"fre": "le Triomphant",
-			"ita": "tenace",
-			"jpn": "こんなんをのりこえた",
-			"kor": "고난을 극복한",
-			"cht": "克服了困難的",
-			"chs": "克服了困难的"
-		}
-	},
-	"earth-ribbon": {
-		"gen": 3,
-		"available": [
-			"colosseum",
-			"xd"
-		],
-		"names": {
-			"ger": "Band der Erde",
-			"eng": "Earth Ribbon",
-			"spa": "Cinta Planeta",
-			"fre": "Ruban Terre",
-			"ita": "Fiocco Geo",
-			"jpn": "アースリボン",
-			"kor": "어스리본",
-			"cht": "地球獎章",
-			"chs": "地球奖章"
-		},
-		"descs": {
-			"ger": "Band zur Erinnerung an hundert Siege in Folge.",
-			"eng": "A Ribbon awarded for winning one hundred battles in a row.",
-			"spa": "Cinta obtenida por lograr 100 victorias consecutivas.",
-			"fre": "Ruban récompensant 100 victoires à la suite.",
-			"ita": "Fiocco conferito per aver ottenuto 100 vittorie di seguito.",
-			"jpn": "１００人抜き　達成 記念リボン",
-			"kor": "100명에게 승리 달성 기념리본",
-			"cht": "為紀念完成了 連勝１００人的獎章。",
-			"chs": "完成了连赢１００人的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Hundertsassa",
-			"eng": "the 100× Victorious",
-			"spa": "el Supremo Victorioso",
-			"fre": "le Cent Fois Victorieux",
-			"ita": "plurivincente",
-			"jpn": "１００にんぬきの",
-			"kor": "100명에게 승리한",
-			"cht": "１００連勝的",
-			"chs": "１００连胜的"
-		}
-	},
-	"world-ribbon": {
-		"gen": 3,
-		"available": null,
-		"names": {
-			"ger": "Band der Welt",
-			"eng": "World Ribbon",
-			"spa": "Cinta Mundo",
-			"fre": "Ruban Monde",
-			"ita": "Fiocco Mondiale",
-			"jpn": "ワールドリボン",
-			"kor": "월드리본",
-			"cht": "世界獎章",
-			"chs": "世界奖章"
-
-		},
-		"descs": {
-			"ger": "Band zur Ehrung des Champs der Pokémon-Liga.",
-			"eng": "A Ribbon awarded to a Pokémon League Champion.",
-			"spa": "Cinta obtenida por vencer en la Liga Pokémon.",
-			"fre": "Ruban récompensant la victoire à la Ligue Pokémon.",
-			"ita": "Fiocco consegnato al Campione della Lega Pokémon.",
-			"jpn": "ポケモンリーグ 優勝　記念リボン",
-			"kor": "포켓몬리그 우승 기념리본",
-			"cht": "寶可夢聯盟冠軍紀念獎章。",
-			"chs": "宝可梦联盟冠军纪念奖章。"
-		},
-		"titles": {
-			"ger": "Weltenherrscher",
-			"eng": "the World Conqueror",
-			"spa": "el Rey del Mundo",
-			"fre": "le Roi du Monde",
-			"ita": "re del mondo",
-			"jpn": "せかいをせいした",
-			"kor": "세계를 제패한",
-			"cht": "稱霸世界的",
-			"chs": "称霸世界的"
-		}
-	},
 	"classic-ribbon": {
 		"gen": 4,
 		"available": null,
@@ -3438,6 +1769,566 @@
 			"kor": "기념일을 보낸",
 			"cht": "度過了紀念日的",
 			"chs": "度过了纪念日的"
+		}
+	},
+	"cool-ribbon-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Coolness",
+			"eng": "Cool Ribbon",
+			"spa": "Cinta Carisma",
+			"fre": "Ruban Sang-froid",
+			"ita": "Fiocco Classe",
+			"jpn": "クールリボン",
+			"kor": "쿨리본"
+		},
+		"descs": {
+			"ger": "Super-Coolness-Wettbewerb Sieger in der Normal-Klasse!",
+			"eng": "Super Contest Cool Category Normal Rank winner!",
+			"spa": "Súper Concurso Carisma Ganador nivel normal.",
+			"fre": "Super Concours de Sang-froid Gagnant catégorie Normal!",
+			"ita": "Super Gara di Classe Vincitore Livello Normale!",
+			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　ノーマルランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 노말랭크 우승!"
+		}
+	},
+	"cool-ribbon-great-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Coolness Mega",
+			"eng": "Cool Ribbon Great",
+			"spa": "Cinta Carisma difícil",
+			"fre": "Ruban Sang-froid Méga",
+			"ita": "Fiocco Classe: Livello Mega",
+			"jpn": "クールリボングレート",
+			"kor": "쿨리본그레이트"
+		},
+		"descs": {
+			"ger": "Super-Coolness-Wettbewerb Sieger in der Mega-Klasse!",
+			"eng": "Super Contest Cool Category Great Rank winner!",
+			"spa": "Súper Concurso Carisma Ganador nivel difícil.",
+			"fre": "Super Concours de Sang-froid Gagnant catégorie Méga!",
+			"ita": "Super Gara di Classe Vincitore Livello Mega!",
+			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　グレートランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 그레이트랭크 우승!"
+		}
+	},
+	"cool-ribbon-ultra-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Coolness Ultra",
+			"eng": "Cool Ribbon Ultra",
+			"spa": "Cinta Carisma superior",
+			"fre": "Ruban Sang-froid Ultra",
+			"ita": "Fiocco Classe: Livello Ultra",
+			"jpn": "クールリボンウルトラ",
+			"kor": "쿨리본울트라"
+		},
+		"descs": {
+			"ger": "Super-Coolness-Wettbewerb Sieger in der Ultra-Klasse!",
+			"eng": "Super Contest Cool Category Ultra Rank winner!",
+			"spa": "Súper Concurso Carisma Ganador nivel superior.",
+			"fre": "Super Concours de Sang-froid Gagnant catégorie Ultra!",
+			"ita": "Super Gara di Classe Vincitore Livello Ultra!",
+			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　ウルトラランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 울트라랭크 우승!"
+		}
+	},
+	"cool-ribbon-master-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Coolness Master",
+			"eng": "Cool Ribbon Master",
+			"spa": "Cinta Carisma experto",
+			"fre": "Ruban Sang-froid Master",
+			"ita": "Fiocco Classe: Livello Master",
+			"jpn": "クールリボンマスター",
+			"kor": "쿨리본마스터"
+		},
+		"descs": {
+			"ger": "Super-Coolness-Wettbewerb Sieger in der Master-Klasse!",
+			"eng": "Super Contest Cool Category Master Rank winner!",
+			"spa": "Súper Concurso Carisma Ganador nivel experto.",
+			"fre": "Super Concours de Sang-froid Gagnant catégorie Master!",
+			"ita": "Super Gara di Classe Vincitore Livello Master!",
+			"jpn": "スーパーコンテスト　かっこよさ　ぶもん　マスターランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 마스터랭크 우승!"
+		}
+	},
+	"beauty-ribbon-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Schönheit",
+			"eng": "Beauty Ribbon",
+			"spa": "Cinta Belleza",
+			"fre": "Ruban Beauté",
+			"ita": "Fiocco Bellezza",
+			"jpn": "ビューティリボン",
+			"kor": "뷰티리본"
+		},
+		"descs": {
+			"ger": "Super-Schönheitswettbewerb Sieger in der Normal-Klasse!",
+			"eng": "Super Contest Beauty Category Normal Rank winner!",
+			"spa": "Súper Concurso Belleza Ganador nivel normal.",
+			"fre": "Super Concours de Beauté Gagnant catégorie Normal!",
+			"ita": "Super Gara di Bellezza Vincitore Livello Normale!",
+			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　ノーマルランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 노말랭크 우승!"
+		}
+	},
+	"beauty-ribbon-great-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Schönheit Mega",
+			"eng": "Beauty Ribbon Great",
+			"spa": "Cinta Belleza difícil",
+			"fre": "Ruban Beauté Méga",
+			"ita": "Fiocco Bellezza: Livello Mega",
+			"jpn": "ビューティリボングレート",
+			"kor": "뷰티리본그레이트"
+		},
+		"descs": {
+			"ger": "Super-Schönheitswettbewerb Sieger in der Mega-Klasse!",
+			"eng": "Super Contest Beauty Category Great Rank winner!",
+			"spa": "Súper Concurso Belleza Ganador nivel difícil.",
+			"fre": "Super Concours de Beauté Gagnant catégorie Méga!",
+			"ita": "Super Gara di Bellezza Vincitore Livello Mega!",
+			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　グレートランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 그레이트랭크 우승!"
+		}
+	},
+	"beauty-ribbon-ultra-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Schönheit Ultra",
+			"eng": "Beauty Ribbon Ultra",
+			"spa": "Cinta Belleza superior",
+			"fre": "Ruban Beauté Ultra",
+			"ita": "Fiocco Bellezza: Livello Ultra",
+			"jpn": "ビューティリボンウルトラ",
+			"kor": "뷰티리본울트라"
+		},
+		"descs": {
+			"ger": "Super-Schönheitswettbewerb Sieger in der Ultra-Klasse!",
+			"eng": "Super Contest Beauty Category Ultra Rank winner!",
+			"spa": "Súper Concurso Belleza Ganador nivel superior.",
+			"fre": "Super Concours de Beauté Gagnant catégorie Ultra!",
+			"ita": "Super Gara di Bellezza Vincitore Livello Ultra!",
+			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　ウルトラランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 울트라랭크 우승!"
+		}
+	},
+	"beauty-ribbon-master-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Schönheit Master",
+			"eng": "Beauty Ribbon Master",
+			"spa": "Cinta Belleza experto",
+			"fre": "Ruban Beauté Master",
+			"ita": "Fiocco Bellezza: Livello Master",
+			"jpn": "ビューティリボンマスター",
+			"kor": "뷰티리본마스터"
+		},
+		"descs": {
+			"ger": "Super-Schönheitswettbewerb Sieger in der Master-Klasse!",
+			"eng": "Super Contest Beauty Category Master Rank winner!",
+			"spa": "Súper Concurso Belleza Ganador nivel experto.",
+			"fre": "Super Concours de Beauté Gagnant catégorie Master!",
+			"ita": "Super Gara di Bellezza Vincitore Livello Master!",
+			"jpn": "スーパーコンテスト　うつくしさ　ぶもん　マスターランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 마스터랭크 우승!"
+		}
+	},
+	"cute-ribbon-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Anmut",
+			"eng": "Cute Ribbon",
+			"spa": "Cinta Dulzura",
+			"fre": "Ruban Grâce",
+			"ita": "Fiocco Grazia",
+			"jpn": "キュートリボン",
+			"kor": "큐트리본"
+		},
+		"descs": {
+			"ger": "Super-Anmut-Wettbewerb Sieger in der Normal-Klasse!",
+			"eng": "Super Contest Cute Category Normal Rank winner!",
+			"spa": "Súper Concurso Dulzura Ganador nivel normal.",
+			"fre": "Super Concours de Grâce Gagnant catégorie Normal!",
+			"ita": "Super Gara di Grazia Vincitore Livello Normale!",
+			"jpn": "スーパーコンテスト　かわいさ　ぶもん　ノーマルランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 귀여움 부문 노말랭크 우승!"
+		}
+	},
+	"cute-ribbon-great-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Anmut Mega",
+			"eng": "Cute Ribbon Great",
+			"spa": "Cinta Dulzura difícil",
+			"fre": "Ruban Grâce Méga",
+			"ita": "Fiocco Grazia: Livello Mega",
+			"jpn": "キュートリボングレート",
+			"kor": "큐트리본그레이트"
+		},
+		"descs": {
+			"ger": "Super-Anmut-Wettbewerb Sieger in der Mega-Klasse!",
+			"eng": "Super Contest Cute Category Great Rank winner!",
+			"spa": "Súper Concurso Dulzura Ganador nivel difícil.",
+			"fre": "Super Concours de Grâce Gagnant catégorie Méga!",
+			"ita": "Super Gara di Grazia Vincitore Livello Mega!",
+			"jpn": "スーパーコンテスト　かわいさ　ぶもん　グレートランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 귀여움 부문 그레이트랭크 우승!"
+		}
+	},
+	"cute-ribbon-ultra-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Anmut Ultra",
+			"eng": "Cute Ribbon Ultra",
+			"spa": "Cinta Dulzura superior",
+			"fre": "Ruban Grâce Ultra",
+			"ita": "Fiocco Classe: Livello Ultra",
+			"jpn": "キュートリボンウルトラ",
+			"kor": "큐트리본울트라"
+		},
+		"descs": {
+			"ger": "Super-Anmut-Wettbewerb Sieger in der Ultra-Klasse!",
+			"eng": "Super Contest Cute Category Ultra Rank winner!",
+			"spa": "Súper Concurso Dulzura Ganador nivel superior.",
+			"fre": "Super Concours de Grâce Gagnant catégorie Ultra!",
+			"ita": "Super Gara di Grazia Vincitore Livello Ultra!",
+			"jpn": "スーパーコンテスト　かわいさ　ぶもん　ウルトラランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 귀여움 부문 울트라랭크 우승!"
+		}
+	},
+	"cute-ribbon-master-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Anmut Master",
+			"eng": "Cute Ribbon Master",
+			"spa": "Cinta Dulzura experto",
+			"fre": "Ruban Grâce Master",
+			"ita": "Fiocco Grazia: Livello Master",
+			"jpn": "キュートリボンマスター",
+			"kor": "큐트리본마스터"
+		},
+		"descs": {
+			"ger": "Super-Anmut-Wettbewerb Sieger in der Master-Klasse!",
+			"eng": "Super Contest Cute Category Master Rank winner!",
+			"spa": "Súper Concurso Dulzura Ganador nivel experto.",
+			"fre": "Super Concours de Grâce Gagnant catégorie Master!",
+			"ita": "Super Gara di Grazia Vincitore Livello Master!",
+			"jpn": "スーパーコンテスト　かわいさ　ぶもん　マスターランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 귀여움 부문 마스터랭크 우승!"
+		}
+	},
+	"smart-ribbon-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Klugheit",
+			"eng": "Smart Ribbon",
+			"spa": "Cinta Ingenio",
+			"fre": "Ruban Intelligence",
+			"ita": "Fiocco Acume",
+			"jpn": "ジーニアスリボン",
+			"kor": "지니어스리본"
+		},
+		"descs": {
+			"ger": "Super-Klugheits-Wettbewerb Sieger in der Normal-Klasse!",
+			"eng": "Super Contest Smart Category Normal Rank winner!",
+			"spa": "Súper Concurso Ingenio Ganador nivel normal.",
+			"fre": "Super Concours d'Intelligence Gagnant catégorie Normal!",
+			"ita": "Super Gara di Acume Vincitore Livello Normale!",
+			"jpn": "スーパーコンテスト　かしこさ　ぶもん　ノーマルランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 노말랭크 우승!"
+		}
+	},
+	"smart-ribbon-great-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Klugheit Mega",
+			"eng": "Smart Ribbon Great",
+			"spa": "Cinta Ingenio difícil",
+			"fre": "Ruban Intelligence Méga",
+			"ita": "Fiocco Acume: Livello Mega",
+			"jpn": "ジーニアスリボングレート",
+			"kor": "지니어스리본그레이트"
+		},
+		"descs": {
+			"ger": "Super-Klugheits-Wettbewerb Sieger in der Mega-Klasse!",
+			"eng": "Super Contest Smart Category Great Rank winner!",
+			"spa": "Súper Concurso Ingenio Ganador nivel difícil.",
+			"fre": "Super Concours d'Intelligence Gagnant catégorie Méga!",
+			"ita": "Super Gara di Acume Vincitore Livello Mega!",
+			"jpn": "スーパーコンテスト　かしこさ　ぶもん　グレートランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 그레이트랭크 우승!"
+		}
+	},
+	"smart-ribbon-ultra-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Klugheit Ultra",
+			"eng": "Smart Ribbon Ultra",
+			"spa": "Cinta Ingenio superior",
+			"fre": "Ruban Intelligence Ultra",
+			"ita": "Fiocco Acume: Livello Ultra",
+			"jpn": "ジーニアスリボンウルトラ",
+			"kor": "지니어스리본울트라"
+		},
+		"descs": {
+			"ger": "Super-Klugheits-Wettbewerb Sieger in der Ultra-Klasse!",
+			"eng": "Super Contest Smart Category Ultra Rank winner!",
+			"spa": "Súper Concurso Ingenio Ganador nivel superior.",
+			"fre": "Super Concours d'Intelligence Gagnant catégorie Ultra!",
+			"ita": "Super Gara di Acume Vincitore Livello Ultra!",
+			"jpn": "スーパーコンテスト　かしこさ　ぶもん　ウルトラランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 울트라랭크 우승!"
+		}
+	},
+	"smart-ribbon-master-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Klugheit Master",
+			"eng": "Smart Ribbon Master",
+			"spa": "Cinta Ingenio experto",
+			"fre": "Ruban Intelligence Master",
+			"ita": "Fiocco Acume: Livello Master",
+			"jpn": "ジーニアスリボンマスター",
+			"kor": "지니어스리본마스터"
+		},
+		"descs": {
+			"ger": "Super-Klugheits-Wettbewerb Sieger in der Master-Klasse!",
+			"eng": "Super Contest Smart Category Master Rank winner!",
+			"spa": "Súper Concurso Ingenio Ganador nivel experto.",
+			"fre": "Super Concours d'Intelligence Gagnant catégorie Master!",
+			"ita": "Super Gara di Acume Vincitore Livello Master!",
+			"jpn": "スーパーコンテスト　かしこさ　ぶもん　マスターランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 마스터랭크 우승!"
+		}
+	},
+	"tough-ribbon-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Stärke",
+			"eng": "Tough Ribbon",
+			"spa": "Cinta Dureza",
+			"fre": "Ruban Robustesse",
+			"ita": "Fiocco Grinta",
+			"jpn": "パワフルリボン",
+			"kor": "파워풀리본"
+		},
+		"descs": {
+			"ger": "Super-Stärkewettbewerb Sieger in der Normal-Klasse!",
+			"eng": "Super Contest Tough Category Normal Rank winner!",
+			"spa": "Súper Concurso Dureza Ganador nivel normal.",
+			"fre": "Super Concours de Robustesse Gagnant catégorie Normal!",
+			"ita": "Super Gara di Grinta Vincitore Livello Normale!",
+			"jpn": "スーパーコンテスト　たくましさ　ぶもん　ノーマルランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 근사함 부문 노말랭크 우승!"
+		}
+	},
+	"tough-ribbon-great-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Stärke Mega",
+			"eng": "Tough Ribbon Great",
+			"spa": "Cinta Dureza difícil",
+			"fre": "Ruban Robustesse Méga",
+			"ita": "Fiocco Grinta: Livello Mega",
+			"jpn": "パワフルリボングレート",
+			"kor": "파워풀리본그레이트"
+		},
+		"descs": {
+			"ger": "Super-Stärkewettbewerb Sieger in der Mega-Klasse!",
+			"eng": "Super Contest Tough Category Great Rank winner!",
+			"spa": "Súper Concurso Dureza Ganador nivel difícil.",
+			"fre": "Super Concours de Robustesse Gagnant catégorie Méga!",
+			"ita": "Super Gara di Grinta Vincitore Livello Mega!",
+			"jpn": "スーパーコンテスト　たくましさ　ぶもん　グレートランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 그레이트랭크 우승!"
+		}
+	},
+	"tough-ribbon-ultra-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Stärke Ultra",
+			"eng": "Tough Ribbon Ultra",
+			"spa": "Cinta Dureza superior",
+			"fre": "Ruban Robustesse Ultra",
+			"ita": "Fiocco Grinta: Livello Ultra",
+			"jpn": "パワフルリボンウルトラ",
+			"kor": "파워풀리본울트라"
+		},
+		"descs": {
+			"ger": "Super-Stärkewettbewerb Sieger in der Ultra-Klasse!",
+			"eng": "Super Contest Tough Category Ultra Rank winner!",
+			"spa": "Súper Concurso Dureza Ganador nivel superior.",
+			"fre": "Super Concours de Robustesse Gagnant catégorie Ultra!",
+			"ita": "Super Gara di Grinta Vincitore Livello Ultra!",
+			"jpn": "スーパーコンテスト　たくましさ　ぶもん　ウルトラランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 울트라랭크 우승!"
+		}
+	},
+	"tough-ribbon-master-sinnoh": {
+		"gen": 4,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"merge": "contest",
+		"available": [
+			"diamond",
+			"pearl",
+			"platinum"
+		],
+		"names": {
+			"ger": "Band der Stärke Master",
+			"eng": "Tough Ribbon Master",
+			"spa": "Cinta Dureza experto",
+			"fre": "Ruban Robustesse Master",
+			"ita": "Fiocco Grinta: Livello Master",
+			"jpn": "パワフルリボンマスター",
+			"kor": "파워풀리본마스터"
+		},
+		"descs": {
+			"ger": "Super-Stärkewettbewerb Sieger in der Master-Klasse!",
+			"eng": "Super Contest Tough Category Master Rank winner!",
+			"spa": "Súper Concurso Dureza Ganador nivel experto.",
+			"fre": "Super Concours de Robustesse Gagnant catégorie Master!",
+			"ita": "Super Gara di Grinta Vincitore Livello Master!",
+			"jpn": "スーパーコンテスト　たくましさ　ぶもん　マスターランク　ゆうしょう！",
+			"kor": "슈퍼콘테스트 아름다움 부문 마스터랭크 우승!"
 		}
 	},
 	"event-ribbon": {
@@ -3699,45 +2590,994 @@
 			"chs": "世界冠军"
 		}
 	},
-	"partner-ribbon": {
-		"gen": 9,
-		"available": null,
+	"contest-memory-ribbon": {
+		"gen": 6,
+		"optional": true,
+		"available": [
+			"x",
+			"y",
+			"or",
+			"as"
+		],
 		"names": {
-			"ger": "Partnerband",
-			"eng": "Partner Ribbon",
-			"spa": "Cinta Camarada",
-			"fre": "Ruban Partenaire",
-			"ita": "Fiocco Compagno",
-			"jpn": "パートナーリボン",
-			"kor": "파트너리본",
-			"cht": "同伴獎章",
-			"chs": "同伴奖章"
+			"ger": "Wettbewerbsgedenkband",
+			"eng": "Contest Memory Ribbon",
+			"spa": "Cinta Recuerdo de Concurso",
+			"fre": "Ruban Souvenir Concours",
+			"ita": "Fiocco Ricordo delle Gare",
+			"jpn": "おもいでコンテストリボン",
+			"kor": "추억콘테스트리본",
+			"cht": "華麗大賽回憶獎章",
+			"chs": "华丽大赛回忆奖章"
 		},
 		"descs": {
-			"ger": "Spezielles Band zur Auszeichnung eines Pokémon, das dir von einem besonderen Trainer anvertraut wurde.",
-			"eng": "A special Ribbon awarded to a Pokémon that was once partnered with another great Trainer.",
-			"spa": "Cinta especial que llevan los Pokémon recibidos por parte de Entrenadores selectos.",
-			"fre": "Ruban spécial donné au Pokémon qu'un Dresseur ou une Dresseuse unique au monde vous a confié.",
-			"ita": "Fiocco speciale indossato da Pokémon che ti sono stati affidati da Allenatori particolari.",
-			"jpn": "特別なトレーナーから　たくされた パートナーに　ついている　特別なリボン",
-			"kor": "특별한 트레이너로부터 받은 파트너가 달고 있는 특별한 리본",
-			"cht": "受特殊的訓練家託付的 同伴所戴著的特殊獎章。",
-			"chs": "受特殊的训练家托付的 同伴所戴着的特殊奖章。"
+			"ger": "Band zur Erinnerung an vergangene Wettbewerbssiege in einer anderen Region.",
+			"eng": "A commemorative Ribbon representing all the Ribbons you collected for contests somewhere long ago.",
+			"spa": "Cinta de recuerdo obtenida tras conseguir cintas en algún lugar por tus concursos anteriores.",
+			"fre": "Ruban reçu il y a longtemps dans une certaine région. Il évoque tant de souvenirs des concours !",
+			"ita": "Fiocco commemorativo di tutti i fiocchi conquistati in passato in gare svoltesi in altre regioni.",
+			"jpn": "昔　どこかで　集めた　リボン コンテストの　思い出が　つまっている！",
+			"kor": "옛날 어딘가에서 수집한 리본 콘테스트의 추억이 담겨 있다!",
+			"cht": "以前在某地收集到的獎章。 滿載著華麗大賽的回憶！",
+			"chs": "以前在某地收集到的奖章。 满载着华丽大赛的回忆！"
 		},
 		"titles": {
-			"ger": "von [Originaltrainer]",
-			"eng": "[Original Trainer]'s",
-			"spa": "de [Entrenador Original]",
-			"fre": "de [Dresseur d'Origine]",
-			"ita": "di [Allenatore Originale]",
-			"jpn": "[親]の",
-			"kor": "[트레이너]의",
-			"cht": "[訓練家]的",
-			"chs": "[訓練家]的"
+			"ger": "Wettbewerbsglanz",
+			"eng": "the Treasured Memory",
+			"spa": "el Concursante Memorable",
+			"fre": "le Compétiteur Inoubliable",
+			"ita": "dalle virtù memorabili",
+			"jpn": "きらめくおもいでの",
+			"kor": "반짝이는 추억을 가진",
+			"cht": "輝煌回憶裡的",
+			"chs": "辉煌回忆里的"
+		}
+	},
+	"contest-memory-ribbon-gold": {
+		"gen": 6,
+		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
+		"optional": true,
+		"available": [
+			"x",
+			"y",
+			"or",
+			"as"
+		],
+		"names": {
+			"ger": "Wettbewerbsgedenkband",
+			"eng": "Contest Memory Ribbon",
+			"spa": "Cinta Recuerdo de Concurso",
+			"fre": "Ruban Souvenir Concours",
+			"ita": "Fiocco Ricordo delle Gare",
+			"jpn": "おもいでコンテストリボン",
+			"kor": "추억콘테스트리본",
+			"cht": "華麗大賽回憶獎章",
+			"chs": "华丽大赛回忆奖章"
 		},
-		"titlePosition": {
-			"ger": "suffix",
-			"eng": "prefix"
+		"descs": {
+			"ger": "Band zur Erinnerung an vergangene Wettbewerbssiege in einer anderen Region.",
+			"eng": "A commemorative Ribbon representing all the Ribbons you collected for contests somewhere long ago.",
+			"spa": "Cinta de recuerdo obtenida tras conseguir cintas en algún lugar por tus concursos anteriores.",
+			"fre": "Ruban reçu il y a longtemps dans une certaine région. Il évoque tant de souvenirs des concours !",
+			"ita": "Fiocco commemorativo di tutti i fiocchi conquistati in passato in gare svoltesi in altre regioni.",
+			"jpn": "昔　どこかで　集めた　リボン コンテストの　思い出が　つまっている！",
+			"kor": "옛날 어딘가에서 수집한 리본 콘테스트의 추억이 담겨 있다!",
+			"cht": "以前在某地收集到的獎章。 滿載著華麗大賽的回憶！",
+			"chs": "以前在某地收集到的奖章。 满载着华丽大赛的回忆！"
+		},
+		"titles": {
+			"ger": "Wettbewerbsglanz",
+			"eng": "the Treasured Memory",
+			"spa": "el Concursante Memorable",
+			"fre": "le Compétiteur Inoubliable",
+			"ita": "dalle virtù memorabili",
+			"jpn": "きらめくおもいでの",
+			"kor": "반짝이는 추억을 가진",
+			"cht": "輝煌回憶裡的",
+			"chs": "辉煌回忆里的"
+		}
+	},
+	"battle-memory-ribbon": {
+		"gen": 6,
+		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
+		"nomythical": true,
+		"optional": true,
+		"available": [
+			"x",
+			"y",
+			"or",
+			"as"
+		],
+		"names": {
+			"ger": "Kampfgedenkband",
+			"eng": "Battle Memory Ribbon",
+			"spa": "Cinta Recuerdo de Combate",
+			"fre": "Ruban Souvenir Combat",
+			"ita": "Fiocco Ricordo delle Lotte",
+			"jpn": "おもいでバトルリボン",
+			"kor": "추억배틀리본",
+			"cht": "對戰回憶獎章",
+			"chs": "对战回忆奖章"
+		},
+		"descs": {
+			"ger": "Band zur Erinnerung an vergangene gewonnene Kämpfe in einer anderen Region.",
+			"eng": "A commemorative Ribbon representing all the Ribbons you collected for battling somewhere long ago.",
+			"spa": "Cinta de recuerdo obtenida tras conseguir cintas en algún lugar por tus combates anteriores.",
+			"fre": "Ruban reçu il y a longtemps dans une lointaine région. Il rappelle le souvenir de féroces combats !",
+			"ita": "Fiocco commemorativo di tutti i fiocchi conquistati in passato in lotte svoltesi in altre regioni.",
+			"jpn": "昔　どこかで　集めた　リボン 戦いの　思い出が　つまっている！",
+			"kor": "옛날 어딘가에서 수집한 리본 배틀의 추억이 담겨 있다!",
+			"cht": "以前在某地收集到的獎章。 滿載著戰鬥的回憶！",
+			"chs": "以前在某地收集到的奖章。 满载着战斗的回忆！"
+		},
+		"titles": {
+			"ger": "Kämpfernatur",
+			"eng": "the Exciting Memory",
+			"spa": "el Combatiente Memorable",
+			"fre": "le Combattant Inoubliable",
+			"ita": "dalle capacità memorabili",
+			"jpn": "あついおもいでの",
+			"kor": "뜨거운 추억을 가진",
+			"cht": "熱血回憶裡的",
+			"chs": "热血回忆里的"
+		}
+	},
+	"battle-memory-ribbon-gold": {
+		"gen": 6,
+		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
+		"nomythical": true,
+		"optional": true,
+		"available": [
+			"x",
+			"y",
+			"or",
+			"as"
+		],
+		"names": {
+			"ger": "Kampfgedenkband",
+			"eng": "Battle Memory Ribbon",
+			"spa": "Cinta Recuerdo de Combate",
+			"fre": "Ruban Souvenir Combat",
+			"ita": "Fiocco Ricordo delle Lotte",
+			"jpn": "おもいでバトルリボン",
+			"kor": "추억배틀리본",
+			"cht": "對戰回憶獎章",
+			"chs": "对战回忆奖章"
+		},
+		"descs": {
+			"ger": "Band zur Erinnerung an vergangene gewonnene Kämpfe in einer anderen Region.",
+			"eng": "A commemorative Ribbon representing all the Ribbons you collected for battling somewhere long ago.",
+			"spa": "Cinta de recuerdo obtenida tras conseguir cintas en algún lugar por tus combates anteriores.",
+			"fre": "Ruban reçu il y a longtemps dans une lointaine région. Il rappelle le souvenir de féroces combats !",
+			"ita": "Fiocco commemorativo di tutti i fiocchi conquistati in passato in lotte svoltesi in altre regioni.",
+			"jpn": "昔　どこかで　集めた　リボン 戦いの　思い出が　つまっている！",
+			"kor": "옛날 어딘가에서 수집한 리본 배틀의 추억이 담겨 있다!",
+			"cht": "以前在某地收集到的獎章。 滿載著戰鬥的回憶！",
+			"chs": "以前在某地收集到的奖章。 满载着战斗的回忆！"
+		},
+		"titles": {
+			"ger": "Kämpfernatur",
+			"eng": "the Exciting Memory",
+			"spa": "el Combatiente Memorable",
+			"fre": "le Combattant Inoubliable",
+			"ita": "dalle capacità memorabili",
+			"jpn": "あついおもいでの",
+			"kor": "뜨거운 추억을 가진",
+			"cht": "熱血回憶裡的",
+			"chs": "热血回忆里的"
+		}
+	},
+	"kalos-champion-ribbon": {
+		"gen": 6,
+		"available": [
+			"x",
+			"y"
+		],
+		"names": {
+			"ger": "Band des Kalos-Champs",
+			"eng": "Kalos Champion Ribbon",
+			"spa": "Cinta Campeón de Kalos",
+			"fre": "Ruban Maître de Kalos",
+			"ita": "Fiocco Campione Kalos",
+			"jpn": "カロス　チャンプリボン",
+			"kor": "칼로스챔피언리본",
+			"cht": "卡洛斯冠軍獎章",
+			"chs": "卡洛斯冠军奖章"
+		},
+		"descs": {
+			"ger": "Band für den Sieg über den Champ von Kalos und den Einzug in die Ruhmeshalle.",
+			"eng": "A Ribbon awarded for beating the Kalos Champion and entering the Kalos Hall of Fame.",
+			"spa": "Cinta obtenida por vencer a la Campeona de Kalos y entrar en el Hall de la Fama.",
+			"fre": "Ruban commémorant la victoire contre la Maîtresse de Kalos et l'entrée au Panthéon.",
+			"ita": "Fiocco conferito a chi sconfigge la Campionessa di Kalos ed entra nella Sala d'Onore.",
+			"jpn": "カロスで　チャンピオンに　勝利し 殿堂入りした　記念リボン",
+			"kor": "칼로스에서 챔피언에게 이겨서 전당등록한 기념리본",
+			"cht": "在卡洛斯奪冠並登入 名人堂後獲得的紀念獎章。",
+			"chs": "在卡洛斯夺冠并登入 名人堂后获得的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Kalos-Champ",
+			"eng": "the Kalos Champion",
+			"spa": "el Campeón de Kalos",
+			"fre": "le Maître de Kalos",
+			"ita": "Campione di Kalos",
+			"jpn": "カロスチャンピオン",
+			"kor": "칼로스 챔피언",
+			"cht": "卡洛斯冠軍",
+			"chs": "卡洛斯冠军"
+		}
+	},
+	"best-friends-ribbon": {
+		"gen": 6,
+		"available": [
+			"x",
+			"y",
+			"or",
+			"as",
+			"sun",
+			"moon",
+			"usun",
+			"umoon",
+			"sw",
+			"sh",
+			"bd",
+			"sp",
+			"scar",
+			"vio"
+		],
+		"names": {
+			"ger": "Zutraulichkeitsband",
+			"eng": "Best Friends Ribbon",
+			"spa": "Cinta Amistad",
+			"fre": "Ruban Affection",
+			"ita": "Fiocco Amicizia",
+			"jpn": "なかよしリボン",
+			"kor": "절친리본",
+			"cht": "好友獎章",
+			"chs": "好友奖章"
+		},
+		"descs": {
+			"ger": "Band zur Ehrung eines Pokémon, das durch die enge Beziehung zu seinem Trainer besticht.",
+			"eng": "A Ribbon that can be given to a Pokémon with which you share a close and meaningful bond.",
+			"spa": "Cinta que se concede a un Pokémon con el que compartes un profundo lazo de amistad.",
+			"fre": "Ruban à offrir à un Pokémon auquel on est très attaché.",
+			"ita": "Fiocco da regalare a un Pokémon con il quale hai creato un legame profondo.",
+			"jpn": "深い　絆で　結ばれた ポケモンに　贈られる　リボン",
+			"kor": "깊은 인연으로 맺어진 포켓몬에게 수여되는 리본",
+			"cht": "贈予彼此密不可分的寶可夢的獎章。",
+			"chs": "赠予彼此密不可分的宝可梦的奖章。"
+		},
+		"titles": {
+			"ger": "Herzensfreund",
+			"eng": "the Great Friend",
+			"spa": "el Colega",
+			"fre": "le Bon Ami",
+			"ita": "fedele partner",
+			"jpn": "しんゆうの",
+			"kor": "절친",
+			"cht": "摯友",
+			"chs": "挚友"
+		}
+	},
+	"training-ribbon": {
+		"gen": 6,
+		"available": [
+			"x",
+			"y",
+			"or",
+			"as"
+		],
+		"names": {
+			"ger": "Trainingsband",
+			"eng": "Training Ribbon",
+			"spa": "Cinta Ejercicio",
+			"fre": "Ruban Perfectionnement",
+			"ita": "Fiocco Training",
+			"jpn": "しゅぎょうリボン",
+			"kor": "수행리본",
+			"cht": "修行獎章",
+			"chs": "修行奖章"
+		},
+		"descs": {
+			"ger": "Band zur Ehrung eines Pokémon, das schwere Prüfungen gemeistert hat.",
+			"eng": "A Ribbon that can be given to a Pokémon that has overcome rigorous trials and training.",
+			"spa": "Cinta que se concede a un Pokémon que haya superado pruebas y entrenamientos muy duros.",
+			"fre": "Ruban pour récompenser un Pokémon ayant réussi un entraînement sans pitié.",
+			"ita": "Fiocco da regalare a un Pokémon che ha sostenuto con successo un duro allenamento.",
+			"jpn": "過酷な　試練を　乗り越えた ポケモンに　贈られる　リボン",
+			"kor": "가혹한 시련을 뛰어넘은 포켓몬에게 수여되는 리본",
+			"cht": "贈予通過了嚴酷考驗的寶可夢的獎章。",
+			"chs": "赠予通过了严酷考验的宝可梦的奖章。"
+		},
+		"titles": {
+			"ger": "Trainingspartner",
+			"eng": "the Tried and True",
+			"spa": "el Entrenado",
+			"fre": "le Surentraîné",
+			"ita": "osso duro",
+			"jpn": "しれんをともにした",
+			"kor": "시련을 함께한",
+			"cht": "一起接受過試煉的",
+			"chs": "一起接受过试练的"
+		}
+	},
+	"skillful-battler-ribbon": {
+		"gen": 6,
+		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "xerneas", "yveltal", "zygarde"],
+		"nomythical": true,
+		"available": [
+			"x",
+			"y",
+			"or",
+			"as"
+		],
+		"names": {
+			"ger": "Profikampfband",
+			"eng": "Skillful Battler Ribbon",
+			"spa": "Cinta Figura del Combate",
+			"fre": "Ruban Élite du Combat",
+			"ita": "Fiocco Asso della Lotta",
+			"jpn": "グレートバトルリボン",
+			"kor": "그레이트배틀리본",
+			"cht": "高手對戰獎章",
+			"chs": "高手对战奖章"
+		},
+		"descs": {
+			"ger": "Band zur Ehrung eines Pokémon, das selbst aus dem härtesten Kampf als Sieger hervorgegangen ist.",
+			"eng": "A Ribbon that can be given to a Pokémon that has achieved victory in difficult battles.",
+			"spa": "Cinta que se concede a un Pokémon que haya obtenido la victoria en combates complicados.",
+			"fre": "Ruban pour récompenser un Pokémon ayant remporté de difficiles combats.",
+			"ita": "Fiocco da regalare a un Pokémon che è uscito vittorioso da lotte difficili.",
+			"jpn": "厳しい　戦いを　勝ち抜いた ポケモンに　贈られる　リボン",
+			"kor": "혹독한 배틀에서 승리한 포켓몬에게 수여되는 리본",
+			"cht": "贈予在苦戰中勝出的寶可夢的獎章。",
+			"chs": "赠予在苦战中胜出的宝可梦的奖章。"
+		},
+		"titles": {
+			"ger": "Kampfveteran",
+			"eng": "the Veteran",
+			"spa": "el Figura",
+			"fre": "le Vétéran",
+			"ita": "asso della lotta",
+			"jpn": "べテランの",
+			"kor": "베테랑",
+			"cht": "經驗老到的",
+			"chs": "经验老到的"
+		}
+	},
+	"expert-battler-ribbon": {
+		"gen": 6,
+		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "xerneas", "yveltal", "zygarde"],
+		"nomythical": true,
+		"available": [
+			"x",
+			"y",
+			"or",
+			"as"
+		],
+		"names": {
+			"ger": "Meisterkampfband",
+			"eng": "Expert Battler Ribbon",
+			"spa": "Cinta As del Combate",
+			"fre": "Ruban Génie du Combat",
+			"ita": "Fiocco Genio della Lotta",
+			"jpn": "マスターバトルリボン",
+			"kor": "마스터배틀리본",
+			"cht": "大師對戰獎章",
+			"chs": "大师对战奖章"
+		},
+		"descs": {
+			"ger": "Band zur Ehrung eines heldenhaften Pokémon, das die Kunst des Kämpfens perfektioniert hat.",
+			"eng": "A Ribbon that can be given to a brave Pokémon that has honed its battle skills to an art.",
+			"spa": "Cinta que se concede a un Pokémon valiente que ha dominado con maestría el arte de combatir.",
+			"fre": "Ruban pour récompenser un Pokémon s'étant surpassé au cours des combats.",
+			"ita": "Fiocco da regalare a un Pokémon che ha superato se stesso nella lotta.",
+			"jpn": "戦いを　極めた　つわものの ポケモンに　贈られる　リボン",
+			"kor": "배틀을 평정한 강한 포켓몬에게 수여되는 리본",
+			"cht": "贈予戰鬥造詣之最的 強者寶可夢的獎章。",
+			"chs": "赠予战斗造诣登峰造极的强者宝可梦的奖章。"
+		},
+		"titles": {
+			"ger": "Kampfgenie",
+			"eng": "the Master",
+			"spa": "el As",
+			"fre": "l'Expert",
+			"ita": "fuoriclasse",
+			"jpn": "たつじんの",
+			"kor": "달인",
+			"cht": "高手",
+			"chs": "高手"
+		}
+	},
+	"hoenn-champion-ribbon": {
+		"gen": 6,
+		"available": [
+			"or",
+			"as"
+		],
+		"names": {
+			"ger": "Band des Hoenn-Champs",
+			"eng": "Hoenn Champion Ribbon",
+			"spa": "Cinta Campeón de Hoenn",
+			"fre": "Ruban Maître de Hoenn",
+			"ita": "Fiocco Campione Hoenn",
+			"jpn": "ホウエン　チャンプリボン",
+			"kor": "호연챔피언리본",
+			"cht": "豐緣冠軍獎章",
+			"chs": "丰缘冠军奖章"
+		},
+		"descs": {
+			"ger": "Band für den Sieg über den Champ von Hoenn und den Einzug in die Ruhmeshalle.",
+			"eng": "A Ribbon awarded for beating the Hoenn Champion and entering the Hoenn Hall of Fame.",
+			"spa": "Cinta obtenida por vencer al Campeón de Hoenn y entrar en el Hall de la Fama.",
+			"fre": "Ruban commémorant la victoire contre le Maître de Hoenn et l'entrée au Panthéon.",
+			"ita": "Fiocco conferito a chi sconfigge il Campione di Hoenn ed entra nella Sala d'Onore.",
+			"jpn": "ホウエンで　チャンピオンに　勝利し 殿堂入りした　記念リボン",
+			"kor": "호연에서 챔피언에게 이겨서 전당등록한 기념리본",
+			"cht": "在豐緣奪冠並登入 名人堂後獲得的紀念獎章。",
+			"chs": "在丰缘夺冠并登入 名人堂后获得的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Hoenn-Champ",
+			"eng": "the Hoenn Champion",
+			"spa": "el Campeón de Hoenn",
+			"fre": "le Maître de Hoenn",
+			"ita": "Campione di Hoenn",
+			"jpn": "ホウエンチャンピオン",
+			"kor": "호연 챔피언",
+			"cht": "豐緣冠軍",
+			"chs": "丰缘冠军"
+		}
+	},
+	"coolness-master-ribbon": {
+		"gen": 6,
+		"available": [
+			"or",
+			"as",
+			"bd",
+			"sp"
+		],
+		"names": {
+			"ger": "Coolnessmeisterband",
+			"eng": "Coolness Master Ribbon",
+			"spa": "Cinta Estrella del Carisma",
+			"fre": "Ruban Maître Sang-froid",
+			"ita": "Fiocco Classe Suprema",
+			"jpn": "かっこよさマスターリボン",
+			"kor": "근사함마스터리본",
+			"cht": "帥氣大師獎章",
+			"chs": "帅气大师奖章"
+		},
+		"descs": {
+			"ger": "Band zur Auszeichnung eines Pokémon, das im Wettbewerb seine Coolness bewiesen hat.",
+			"eng": "A Ribbon awarded to a Pokémon that has perfectly embodied Coolness in Pokémon Contests.",
+			"spa": "Cinta que se concede a un Pokémon por exhibir su carisma en un concurso.",
+			"fre": "Ruban commémorant une incroyable démonstration de Sang-froid durant un concours.",
+			"ita": "Fiocco conferito per l'impareggiabile Classe dimostrata nelle gare.",
+			"jpn": "コンテストで　かっこよさを　発揮した ポケモンに　贈られる　記念リボン",
+			"kor": "콘테스트에서 근사함을 발휘한 포켓몬에게 수여되는 기념리본",
+			"cht": "贈予在華麗大賽中有著帥氣表現的 寶可夢的紀念獎章。",
+			"chs": "赠予在华丽大赛中有着帅气表现的 宝可梦的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Star",
+			"eng": "the Former Star",
+			"spa": "la Vieja Gloria",
+			"fre": "l'Ancienne Star",
+			"ita": "di gran classe",
+			"jpn": "かつてスターの",
+			"kor": "과거의 스타",
+			"cht": "曾是明星的",
+			"chs": "曾经是明星的"
+		}
+	},
+	"beauty-master-ribbon": {
+		"gen": 6,
+		"available": [
+			"or",
+			"as",
+			"bd",
+			"sp"
+		],
+		"names": {
+			"ger": "Schönheitsmeisterband",
+			"eng": "Beauty Master Ribbon",
+			"spa": "Cinta Estrella de la Belleza",
+			"fre": "Ruban Maître Beauté",
+			"ita": "Fiocco Bellezza Suprema",
+			"jpn": "うつくしさマスターリボン",
+			"kor": "아름다움마스터리본",
+			"cht": "美麗大師獎章",
+			"chs": "美丽大师奖章"
+		},
+		"descs": {
+			"ger": "Band zur Auszeichnung eines Pokémon, das im Wettbewerb seine Schönheit bewiesen hat.",
+			"eng": "A Ribbon awarded to a Pokémon that has perfectly embodied Beauty in Pokémon Contests.",
+			"spa": "Cinta que se concede a un Pokémon por exhibir su belleza en un concurso.",
+			"fre": "Ruban commémorant une incroyable démonstration de Beauté durant un concours.",
+			"ita": "Fiocco conferito per la sublime Bellezza esibita nelle gare.",
+			"jpn": "コンテストで　うつくしさを　発揮した ポケモンに　贈られる　記念リボン",
+			"kor": "콘테스트에서 아름다움을 발휘한 포켓몬에게 수여되는 기념리본",
+			"cht": "贈予在華麗大賽中有著美麗表現的 寶可夢的紀念獎章。",
+			"chs": "赠予在华丽大赛中有着美丽表现的 宝可梦的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Schönheit",
+			"eng": "the Vintage Beauty",
+			"spa": "la Belleza Atemporal",
+			"fre": "la Beauté d'Antan",
+			"ita": "bellezza naturale",
+			"jpn": "とうじきれいだった",
+			"kor": "한때는 아름다웠던",
+			"cht": "當時美麗動人的",
+			"chs": "当时美丽动人的"
+		}
+	},
+	"cuteness-master-ribbon": {
+		"gen": 6,
+		"available": [
+			"or",
+			"as",
+			"bd",
+			"sp"
+		],
+		"names": {
+			"ger": "Putzigkeitsmeisterband",
+			"eng": "Cuteness Master Ribbon",
+			"spa": "Cinta Estrella de la Dulzura",
+			"fre": "Ruban Maître Grâce",
+			"ita": "Fiocco Grazia Suprema",
+			"jpn": "かわいさマスターリボン",
+			"kor": "귀여움마스터리본",
+			"cht": "可愛大師獎章",
+			"chs": "可爱大师奖章"
+		},
+		"descs": {
+			"ger": "Band zur Auszeichnung eines Pokémon, das im Wettbewerb seine Putzigkeit bewiesen hat.",
+			"eng": "A Ribbon awarded to a Pokémon that has perfectly embodied Cuteness in Pokémon Contests.",
+			"spa": "Cinta que se concede a un Pokémon por exhibir su dulzura en un concurso.",
+			"fre": "Ruban commémorant une incroyable démonstration de Grâce durant un concours.",
+			"ita": "Fiocco conferito per l'inarrivabile Grazia esibita nelle gare.",
+			"jpn": "コンテストで　かわいさを　発揮した ポケモンに　贈られる　記念リボン",
+			"kor": "콘테스트에서 귀여움을 발휘한 포켓몬에게 수여되는 기념리본",
+			"cht": "贈予在華麗大賽中有著可愛表現的 寶可夢的紀念獎章。",
+			"chs": "赠予在华丽大赛中有着可爱表现的 宝可梦的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Sternchen",
+			"eng": "the Former Idol",
+			"spa": "el Adorable",
+			"fre": "la Grâce Incarnée",
+			"ita": "dalla grazia innata",
+			"jpn": "かつてアイドルの",
+			"kor": "과거의 아이돌",
+			"cht": "曾是偶像的",
+			"chs": "曾是偶像的"
+		}
+	},
+	"cleverness-master-ribbon": {
+		"gen": 6,
+		"available": [
+			"or",
+			"as",
+			"bd",
+			"sp"
+		],
+		"names": {
+			"ger": "Klugheitsmeisterband",
+			"eng": "Cleverness Master Ribbon",
+			"spa": "Cinta Estrella del Ingenio",
+			"fre": "Ruban Maître Intelligence",
+			"ita": "Fiocco Acume Supremo",
+			"jpn": "かしこさマスターリボン",
+			"kor": "슬기로움마스터리본",
+			"cht": "聰明大師獎章",
+			"chs": "聪明大师奖章"
+		},
+		"descs": {
+			"ger": "Band zur Auszeichnung eines Pokémon, das im Wettbewerb seine Klugheit bewiesen hat.",
+			"eng": "A Ribbon awarded to a Pokémon that has perfectly embodied Cleverness in Pokémon Contests.",
+			"spa": "Cinta que se concede a un Pokémon por exhibir su ingenio en un concurso.",
+			"fre": "Ruban commémorant une incroyable démonstration d'Intelligence durant un concours.",
+			"ita": "Fiocco conferito per l'insuperabile Acume dimostrato nelle gare.",
+			"jpn": "コンテストで　かしこさを　発揮した ポケモンに　贈られる　記念リボン",
+			"kor": "콘테스트에서 슬기로움을 발휘한 포켓몬에게 수여되는 기념리본",
+			"cht": "贈予在華麗大賽中有著聰明表現的 寶可夢的紀念獎章。",
+			"chs": "赠予在华丽大赛中有着聪明表现的 宝可梦的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Genie",
+			"eng": "the Historic Genius",
+			"spa": "el Ingenioso",
+			"fre": "le Génie",
+			"ita": "dall'acume sopraffino",
+			"jpn": "てんさいとよばれた",
+			"kor": "천재라 불리던",
+			"cht": "被稱作天才的",
+			"chs": "被称作天才的"
+		}
+	},
+	"toughness-master-ribbon": {
+		"gen": 6,
+		"available": [
+			"or",
+			"as",
+			"bd",
+			"sp"
+		],
+		"names": {
+			"ger": "Stärkemeisterband",
+			"eng": "Toughness Master Ribbon",
+			"spa": "Cinta Estrella de la Dureza",
+			"fre": "Ruban Maître Robustesse",
+			"ita": "Fiocco Grinta Suprema",
+			"jpn": "たくましさマスターリボン",
+			"kor": "강인함마스터리본",
+			"cht": "強壯大師獎章",
+			"chs": "强壮大师奖章"
+		},
+		"descs": {
+			"ger": "Band zur Auszeichnung eines Pokémon, das im Wettbewerb seine Stärke bewiesen hat.",
+			"eng": "A Ribbon awarded to a Pokémon that has perfectly embodied Toughness in Pokémon Contests.",
+			"spa": "Cinta que se concede a un Pokémon por exhibir su dureza en un concurso.",
+			"fre": "Ruban commémorant une incroyable démonstration de Robustesse durant un concours.",
+			"ita": "Fiocco conferito per la Grinta travolgente dimostrata nelle gare.",
+			"jpn": "コンテストで　たくましさを　発揮した ポケモンに　贈られる　記念リボン",
+			"kor": "콘테스트에서 강인함을 발휘한 포켓몬에게 수여되는 기념리본",
+			"cht": "贈予在華麗大賽中有著強壯表現的 寶可夢的紀念獎章。",
+			"chs": "赠予在华丽大赛中有着强壮表现的 宝可梦的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Kraftprotz",
+			"eng": "the Formerly Buff",
+			"spa": "el Musculoso",
+			"fre": "l'Ancien Gros Dur",
+			"ita": "dalla grinta inarrestabile",
+			"jpn": "むかしはムキムキの",
+			"kor": "한때는 울끈불끈했던",
+			"cht": "曾經渾身肌肉的",
+			"chs": "曾经浑身肌肉的"
+		}
+	},
+	"contest-star-ribbon": {
+		"gen": 6,
+		"available": [
+			"or",
+			"as",
+			"bd",
+			"sp"
+		],
+		"names": {
+			"ger": "Band des Wettbewerbsstars",
+			"eng": "Contest Star Ribbon",
+			"spa": "Cinta Estelar de Concursos",
+			"fre": "Ruban Star des Concours",
+			"ita": "Fiocco Stella delle Gare",
+			"jpn": "コンテストスターリボン",
+			"kor": "콘테스트스타리본",
+			"cht": "華麗大賽之星獎章",
+			"chs": "华丽大赛之星奖章"
+		},
+		"descs": {
+			"ger": "Band zur Auszeichnung eines Pokémon, das in allen Wettbewerben großartige Leistungen vollbracht hat.",
+			"eng": "A Ribbon awarded to a Pokémon that has performed superbly in every kind of contest.",
+			"spa": "Cinta que se concede a un Pokémon por realizar una gran actuación en todos los concursos.",
+			"fre": "Ruban offert à un Pokémon ayant marqué les esprits dans tous les types de concours possibles.",
+			"ita": "Fiocco conferito per aver partecipato con successo a tutte le gare.",
+			"jpn": "あらゆる　コンテストで　大活躍した ポケモンに　贈られる　記念リボン",
+			"kor": "모든 콘테스트에서 대활약한 포켓몬에게 수여되는 기념리본",
+			"cht": "贈予在所有華麗大賽中有著非凡表現的 寶可夢的紀念獎章。",
+			"chs": "赠予在所有华丽大赛中有着非凡表现的 宝可梦的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Starlegende",
+			"eng": "the Shining Star",
+			"spa": "la Superestrella",
+			"fre": "la Star de Légende",
+			"ita": "star",
+			"jpn": "でんせつてきスターの",
+			"kor": "전설적인 스타",
+			"cht": "傳奇明星",
+			"chs": "传奇明星"
+		}
+	},
+	"alola-champion-ribbon": {
+		"gen": 7,
+		"available": [
+			"sun",
+			"moon",
+			"usun",
+			"umoon"
+		],
+		"names": {
+			"ger": "Band des Alola-Champs",
+			"eng": "Alola Champion Ribbon",
+			"spa": "Cinta Campeón de Alola",
+			"fre": "Ruban Maître d'Alola",
+			"ita": "Fiocco Campione Alola",
+			"jpn": "アローラ　チャンプリボン",
+			"kor": "알로라챔피언리본",
+			"cht": "阿羅拉冠軍獎章",
+			"chs": "阿罗拉冠军奖章"
+		},
+		"descs": {
+			"ger": "Band zur Ehrung des Champs in Alola und für den Einzug in die Ruhmeshalle.",
+			"eng": "A Ribbon awarded for becoming the Alola Champion and entering the Alola Hall of Fame.",
+			"spa": "Cinta que se recibe al formar parte del equipo campeón de Alola y entrar en el Hall de la Fama.",
+			"fre": "Ruban commémorant l'accession au rang de Maître d'Alola et l'entrée au Panthéon.",
+			"ita": "Fiocco conferito a un Pokémon che diventa Campione di Alola ed entra nella Sala d'Onore.",
+			"jpn": "アローラで　チャンピオンに　なって 殿堂入りした　記念リボン",
+			"kor": "알로라에서 챔피언이 되어 전당등록한 기념리본",
+			"cht": "在阿羅拉成為冠軍並登入 名人堂後獲得的紀念獎章。",
+			"chs": "在阿罗拉成为冠军并登入 名人堂后获得的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Alola-Champ",
+			"eng": "the Alola Champion",
+			"spa": "el Campeón de Alola",
+			"fre": "le Maître d'Alola",
+			"ita": "Campione di Alola",
+			"jpn": "アローラチャンピオン",
+			"kor": "알로라 챔피언",
+			"cht": "阿羅拉冠軍",
+			"chs": "阿罗拉冠军"
+		}
+	},
+	"battle-royal-master-ribbon": {
+		"gen": 7,
+		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "xerneas", "yveltal", "zygarde", "cosmog", "cosmoem", "solgaleo", "lunala", "necrozma"],
+		"nomythical": true,
+		"available": [
+			"sun",
+			"moon",
+			"usun",
+			"umoon"
+		],
+		"names": {
+			"ger": "Battle-Royale-Meisterband",
+			"eng": "Battle Royal Master Ribbon",
+			"spa": "Cinta Maestro Battle Royale",
+			"fre": "Ruban Champion Royal",
+			"ita": "Fiocco Asso Royale",
+			"jpn": "ロイヤルマスターリボン",
+			"kor": "로열마스터리본",
+			"cht": "皇家大師獎章",
+			"chs": "皇家大师奖章"
+		},
+		"descs": {
+			"ger": "Band zur Auszeichnung eines Pokémon, das beim Battle Royale gesiegt hat.",
+			"eng": "A Ribbon that can be given to a Pokémon that has achieved victory in the Battle Royal.",
+			"spa": "Cinta que se concede a un Pokémon por resultar vencedor en un Battle Royale.",
+			"fre": "Ruban offert à un Pokémon étant sorti grand vainqueur de la Bataille Royale.",
+			"ita": "Fiocco conferito per le vittorie nelle Battle Royale.",
+			"jpn": "バトルロイヤルで　勝ち抜いた ポケモンに　贈られる　記念リボン",
+			"kor": "배틀로열을 이겨 낸 포켓몬에게 수여되는 기념리본",
+			"cht": "贈予在皇家對戰中勝出的 寶可夢的紀念獎章。",
+			"chs": "赠予在皇家对战中胜出的 宝可梦的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Battle-Royale-Meister",
+			"eng": "the Royal Master",
+			"spa": "el Maestro del Battle Royale",
+			"fre": "le Champion Royal",
+			"ita": "asso Royale",
+			"jpn": "ロイヤルマスター",
+			"kor": "로열 마스터",
+			"cht": "皇家大師",
+			"chs": "皇家大师"
+		}
+	},
+	"battle-tree-great-ribbon": {
+		"gen": 7,
+		"available": [
+			"sun",
+			"moon",
+			"usun",
+			"umoon"
+		],
+		"names": {
+			"ger": "Profibaumband",
+			"eng": "Battle Tree Great Ribbon",
+			"spa": "Cinta As del Árbol",
+			"fre": "Ruban Élite de l'Arbre",
+			"ita": "Fiocco Asso dell'Albero",
+			"jpn": "グレートツリーリボン",
+			"kor": "그레이트트리리본",
+			"cht": "高手對戰樹獎章",
+			"chs": "高手对战树奖章"
+		},
+		"descs": {
+			"ger": "Band für den Sieg über eine Kampflegende im Kampfbaum.",
+			"eng": "A Ribbon awarded for winning against a Battle Legend in the Battle Tree.",
+			"spa": "Cinta que se concede en el Árbol de Combate al vencer a los Campeones Legendarios.",
+			"fre": "Ruban commémorant la victoire contre les Dresseurs de légende à l'Arbre de Combat.",
+			"ita": "Fiocco conferito per aver sconfitto le Leggende della lotta all'Albero della lotta.",
+			"jpn": "バトルツリーの　バトルレジェンドに 勝利した　記念リボン",
+			"kor": "배틀트리의 배틀레전드를 이긴 기념리본",
+			"cht": "戰勝了對戰樹的 對戰傳奇的紀念獎章。",
+			"chs": "战胜了对战树的 对战传奇的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Baumsieger",
+			"eng": "the Tree Victor",
+			"spa": "el As del Árbol",
+			"fre": "le Vainqueur de l'Arbre",
+			"ita": "asso dell'Albero",
+			"jpn": "ツリーウィナー",
+			"kor": "트리 위너",
+			"cht": "對戰樹贏家",
+			"chs": "对战树赢家"
+		}
+	},
+	"battle-tree-master-ribbon": {
+		"gen": 7,
+		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "xerneas", "yveltal", "zygarde", "cosmog", "cosmoem", "solgaleo", "lunala", "necrozma"],
+		"nomythical": true,
+		"available": [
+			"sun",
+			"moon",
+			"usun",
+			"umoon"
+		],
+		"names": {
+			"ger": "Meisterbaumband",
+			"eng": "Battle Tree Master Ribbon",
+			"spa": "Cinta Maestro del Árbol",
+			"fre": "Ruban Maître de l'Arbre",
+			"ita": "Fiocco Genio dell'Albero",
+			"jpn": "マスターツリーリボン",
+			"kor": "마스터트리리본",
+			"cht": "大師對戰樹獎章",
+			"chs": "大师对战树奖章"
+		},
+		"descs": {
+			"ger": "Band zur Auszeichnung eines Pokémon, das im Super-Rang gegen eine Kampflegende gewonnen hat.",
+			"eng": "A Ribbon awarded for winning against a Battle Legend in super battles in the Battle Tree.",
+			"spa": "Cinta concedida en el Árbol de Combate al vencer a los Campeones Legendarios en los Supercombates.",
+			"fre": "Ruban commémorant la victoire contre les Dresseurs de légende en Combat Super à l'Arbre de Combat.",
+			"ita": "Fiocco conferito per aver battuto le Leggende della lotta nelle Superlotte.",
+			"jpn": "バトルツリーの　バトルレジェンドに スーパーで　勝利した　記念リボン",
+			"kor": "배틀트리의 배틀레전드를 슈퍼배틀에서 이긴 기념리본",
+			"cht": "在超級對戰中戰勝了對戰樹的 對戰傳奇的紀念獎章。",
+			"chs": "在超级对战中战胜了对战树的 对战传奇的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Baummeister",
+			"eng": "the Tree Master",
+			"spa": "el Maestro del Árbol",
+			"fre": "le Maître de l'Arbre",
+			"ita": "genio dell'Albero",
+			"jpn": "ツリーマスター",
+			"kor": "트리 마스터",
+			"cht": "對戰樹大師",
+			"chs": "对战树大师"
+		}
+	},
+	"galar-champion-ribbon": {
+		"gen": 8,
+		"available": [
+			"sw",
+			"sh"
+		],
+		"names": {
+			"ger": "Band des Galar-Champs",
+			"eng": "Galar Champion Ribbon",
+			"spa": "Cinta Campeón de Galar",
+			"fre": "Ruban Maître de Galar",
+			"ita": "Fiocco Campione Galar",
+			"jpn": "ガラル チャンプリボン",
+			"kor": "가라르챔피언리본",
+			"cht": "伽勒爾冠軍獎章",
+			"chs": "伽勒尔冠军奖章"
+		},
+		"descs": {
+			"ger": "Band zur Ehrung des Champs von Galar und für den Einzug in die Ruhmeshalle.",
+			"eng": "A Ribbon awarded for becoming the Galar Champion and entering the Galar Hall of Fame.",
+			"spa": "Cinta que se recibe al formar parte del equipo campeón de Galar y entrar en el Hall de la Fama.",
+			"fre": "Ruban commémorant l'accession au rang de Maître de Galar et l'entrée au Panthéon.",
+			"ita": "Fiocco conferito a un Pokémon che diventa Campione di Galar ed entra nella Sala d'Onore.",
+			"jpn": "ガラルで　チャンピオンに　なって 殿堂入りした　記念リボン",
+			"kor": "가라르에서 챔피언이 되어 전당등록한 기념리본",
+			"cht": "在伽勒爾成為冠軍並登入 名人堂後獲得的紀念獎章。",
+			"chs": "在伽勒尔成为冠军并登入 名人堂后获得的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Galar-Champ",
+			"eng": "the Galar Champion",
+			"spa": "el Campeón de Galar",
+			"fre": "le Maître de Galar",
+			"ita": "Campione di Galar",
+			"jpn": "ガラルチャンピオン",
+			"kor": "가라르 챔피언",
+			"cht": "伽勒爾冠軍",
+			"chs": "伽勒尔冠军"
+		}
+	},
+	"tower-master-ribbon": {
+		"gen": 8,
+		"bannedBDSP": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
+		"available": [
+			"sw",
+			"sh",
+			"bd",
+			"sp"
+		],
+		"names": {
+			"ger": "Meisterturmband",
+			"eng": "Tower Master Ribbon",
+			"spa": "Cinta Maestro de la Torre",
+			"fre": "Ruban Maître de la Tour",
+			"ita": "Fiocco Asso della Torre",
+			"jpn": "マスタータワーリボン",
+			"kor": "마스터타워리본",
+			"cht": "對戰塔大師獎章",
+			"chs": "对战塔大师奖章"
+		},
+		"descs": {
+			"ger": "Band für den Sieg über den Meister des Kampfturms.",
+			"eng": "A Ribbon awarded for winning against a champion in the Battle Tower.",
+			"spa": "Cinta que se concede al vencer al Maestro de la Torre Batalla.",
+			"fre": "Ruban commémorant la victoire contre le maître de la Tour de Combat.",
+			"ita": "Fiocco conferito per aver battuto il campione della Torre Lotta.",
+			"jpn": "バトルタワーの　チャンピオンに 勝利した　記念リボン",
+			"kor": "배틀타워의 챔피언을 이긴 기념리본",
+			"cht": "在對戰塔中戰勝了 對戰塔冠軍的紀念獎章。",
+			"chs": "战胜了对战塔冠军的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Turmmeister",
+			"eng": "the Tower Master",
+			"spa": "el Maestro de la Torre",
+			"fre": "le Maître de la Tour",
+			"ita": "asso della Torre",
+			"jpn": "タワーマスター",
+			"kor": "타워 마스터",
+			"cht": "對戰塔大師",
+			"chs": "对战塔大师"
+		}
+	},
+	"master-rank-ribbon": {
+		"gen": 8,
+		"banned": ["greninja-ash", "koraidon", "miraidon", "terapagos"],
+		"nomythical": true,
+		"available": [
+			"sw",
+			"sh",
+			"scar",
+			"vio"
+		],
+		"names": {
+			"ger": "Meisterrangband",
+			"eng": "Master Rank Ribbon",
+			"spa": "Cinta Rango Maestro",
+			"fre": "Ruban Top du Classement",
+			"ita": "Fiocco Asso Competizione",
+			"jpn": "マスターランクリボン",
+			"kor": "마스터랭크리본",
+			"cht": "級別對戰大師獎章",
+			"chs": "级别对战大师奖章"
+		},
+		"descs": {
+			"ger": "Band zur Auszeichnung eines Pokémon, das bei einem Rangkampf in der Meisterball-Klasse gewonnen hat.",
+			"eng": "A Ribbon awarded for winning against a Trainer in the Master Ball Tier of Ranked Battles.",
+			"spa": "Cinta que se concede al vencer a un Entrenador de Nivel Maestro en un Combate Clasificatorio.",
+			"fre": "Ruban commémorant la victoire contre un Dresseur de niveau Master Ball en combat classé.",
+			"ita": "Fiocco conferito per aver battuto un Allenatore di Classe Master Ball in una Lotta Competitiva.",
+			"jpn": "ランクバトルの　マスターボール級で トレーナーに　勝利した　記念リボン",
+			"kor": "랭크배틀의 마스터볼급에서 트레이너를 이긴 기념리본",
+			"cht": "在大師球級的級別對戰中 戰勝了訓練家的紀念獎章。",
+			"chs": "在大师球级的级别对战中 战胜了训练家的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Rangmeister",
+			"eng": "the Rank Master",
+			"spa": "el Maestro de la Clasificación",
+			"fre": "le Maître du Classement",
+			"ita": "asso della competizione",
+			"jpn": "ランクマスター",
+			"kor": "랭크 마스터",
+			"cht": "級別對戰大師",
+			"chs": "级别对战大师"
 		}
 	},
 	"lunchtime-mark": {
@@ -5450,6 +5290,125 @@
 			"chs": "看似疲惫的"
 		}
 	},
+	"twinkling-star-ribbon": {
+		"gen": 8,
+		"available": [
+			"bd",
+			"sp"
+		],
+		"names": {
+			"ger": "Glitzersternband",
+			"eng": "Twinkling Star Ribbon",
+			"spa": "Cinta Estrella Rutilante",
+			"fre": "Ruban Étoile Brillante",
+			"ita": "Fiocco Stella Brillante",
+			"jpn": "トゥインクルスターリボン",
+			"kor": "트윙클스타리본",
+			"cht": "閃亮之星獎章",
+			"chs": "闪亮之星奖章"
+		},
+		"descs": {
+			"ger": "Band zur Auszeichnung eines Pokémon, das in der Super-Wettbewerbs-Show perfekten Glanz gezeigt hat.",
+			"eng": "A Ribbon awarded to a Pokémon that has perfectly embodied shining brilliance in Super Contest Shows.",
+			"spa": "Cinta que se concede a un Pokémon por haber brillado con luz propia en una Gala Superconcurso.",
+			"fre": "Ruban commémoratif décerné au Pokémon ayant le plus brillé au Super Show Concours.",
+			"ita": "Fiocco conferito alla stella più brillante delle Super Gare-show.",
+			"jpn": "スーパーコンテストショー！で　最高の　輝きを 発揮した　ポケモンに　贈られる　記念リボン",
+			"kor": "슈퍼 콘테스트 쇼!에서 최고의 반짝임을 발휘한 포켓몬에게 수여되는 기념리본",
+			"cht": "贈予在超級華麗大賽中有著最耀眼表現的 寶可夢的紀念獎章。",
+			"chs": "赠予在超级华丽大赛中有着最耀眼表现的 宝可梦的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Glitzerstern",
+			"eng": "the Twinkling Star",
+			"spa": "el Rutilante",
+			"fre": "l'Étoile Brillante",
+			"ita": "Stella Brillante",
+			"jpn": "トゥインクルスター",
+			"kor": "트윙클스타",
+			"cht": "閃亮之星",
+			"chs": "闪亮之星"
+		}
+	},
+	"hisui-ribbon": {
+		"gen": 8,
+		"available": [
+			"pla"
+		],
+		"names": {
+			"ger": "Hisui-Band",
+			"eng": "Hisui Ribbon",
+			"spa": "Cinta Hisui",
+			"fre": "Ruban Hisui",
+			"ita": "Fiocco Hisui",
+			"jpn": "ヒスイリボン",
+			"kor": "히스이리본",
+			"cht": "洗翠獎章",
+			"chs": "洗翠奖章"
+		},
+		"descs": {
+			"ger": "Band zur Auszeichnung eines Pokémon, das in der fernen Vergangenheit in Hisui für ein Foto posiert hat.",
+			"eng": "A Ribbon awarded to a Pokémon that posed for a photograph in Hisui in the distant past.",
+			"spa": "Cinta concedida a un Pokémon que hizo de modelo para una fotografía tiempo ha en la región de Hisui.",
+			"fre": "Ruban commémorant une séance photo effectuée à Hisui dans un passé lointain.",
+			"ita": "Fiocco conferito per essere stati scelti come modelli di scatti fotografici a Hisui in un lontano passato.",
+			"jpn": "ヒスイで　遠い昔に　写真の モデルになった　記念の　リボン",
+			"kor": "먼 옛날 히스이에서 사진 모델이 된 기념리본",
+			"cht": "為紀念遙遠過去在洗翠成為 照片模特兒的獎章。",
+			"chs": "为纪念在洗翠成为了 遥远过去的照片模特的奖章。"
+		},
+		"titles": {
+			"ger": "Zeitzeuge",
+			"eng": "of the Distant Past",
+			"spa": "el Viajero del Pasado",
+			"fre": "le Témoin du Passé",
+			"ita": "di un lontano passato",
+			"jpn": "とおいむかしの",
+			"kor": "먼 옛날의",
+			"cht": "遙遠過去的",
+			"chs": "遥远过去的"
+		}
+	},
+	"paldea-champion-ribbon": {
+		"gen": 9,
+		"available": [
+			"scar",
+			"vio"
+		],
+		"names": {
+			"ger": "Band des Paldea-Champs",
+			"eng": "Paldea Champion Ribbon",
+			"spa": "Cinta Campeón de Paldea",
+			"fre": "Ruban Maître de Paldea",
+			"ita": "Fiocco Campione Paldea",
+			"jpn": "パルデア　チャンプリボン",
+			"kor": "팔데아챔피언리본",
+			"cht": "帕底亞冠軍獎章",
+			"chs": "帕底亚冠军奖章"
+		},
+		"descs": {
+			"ger": "Band zur Ehrung eines Champs von Paldea und für den Einzug in die Ruhmeshalle.",
+			"eng": "A Ribbon awarded for becoming a Paldea Champion and entering the Paldea Hall of Fame.",
+			"spa": "Cinta que se recibe al formar parte del equipo campeón de Paldea y entrar en el Hall de la Fama.",
+			"fre": "Ruban commémorant l'accession au rang de Maître de Paldea et un exploit digne d'entrer au Panthéon.",
+			"ita": "Fiocco conferito a un Pokémon che diventa Campione di Paldea ed entra nella Sala d'Onore.",
+			"jpn": "パルデアで　チャンピオンに　なって 殿堂入りした　記念リボン",
+			"kor": "팔데아에서 챔피언이 되어 전당등록한 기념리본",
+			"cht": "在帕底亞成為冠軍並登入 名人堂後獲得的紀念獎章。",
+			"chs": "在帕底亚成为冠军并登入 名人堂后获得的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Paldea-Champ",
+			"eng": "the Paldea Champion",
+			"spa": "el Campeón de Paldea",
+			"fre": "le Maître de Paldea",
+			"ita": "Campione di Paldea",
+			"jpn": "パルデアチャンピオン",
+			"kor": "팔데아 챔피언",
+			"cht": "帕底亞冠軍",
+			"chs": "帕底亚冠军"
+		}
+	},
 	"jumbo-mark": {
 		"optional": true,
 		"gen": 9,
@@ -5769,6 +5728,47 @@
 			"kor": "주인이었던",
 			"cht": "曾是寶主的",
 			"chs": "曾是宝主的"
+		}
+	},
+	"partner-ribbon": {
+		"gen": 9,
+		"available": null,
+		"names": {
+			"ger": "Partnerband",
+			"eng": "Partner Ribbon",
+			"spa": "Cinta Camarada",
+			"fre": "Ruban Partenaire",
+			"ita": "Fiocco Compagno",
+			"jpn": "パートナーリボン",
+			"kor": "파트너리본",
+			"cht": "同伴獎章",
+			"chs": "同伴奖章"
+		},
+		"descs": {
+			"ger": "Spezielles Band zur Auszeichnung eines Pokémon, das dir von einem besonderen Trainer anvertraut wurde.",
+			"eng": "A special Ribbon awarded to a Pokémon that was once partnered with another great Trainer.",
+			"spa": "Cinta especial que llevan los Pokémon recibidos por parte de Entrenadores selectos.",
+			"fre": "Ruban spécial donné au Pokémon qu'un Dresseur ou une Dresseuse unique au monde vous a confié.",
+			"ita": "Fiocco speciale indossato da Pokémon che ti sono stati affidati da Allenatori particolari.",
+			"jpn": "特別なトレーナーから　たくされた パートナーに　ついている　特別なリボン",
+			"kor": "특별한 트레이너로부터 받은 파트너가 달고 있는 특별한 리본",
+			"cht": "受特殊的訓練家託付的 同伴所戴著的特殊獎章。",
+			"chs": "受特殊的训练家托付的 同伴所戴着的特殊奖章。"
+		},
+		"titles": {
+			"ger": "von [Originaltrainer]",
+			"eng": "[Original Trainer]'s",
+			"spa": "de [Entrenador Original]",
+			"fre": "de [Dresseur d'Origine]",
+			"ita": "di [Allenatore Originale]",
+			"jpn": "[親]の",
+			"kor": "[트레이너]의",
+			"cht": "[訓練家]的",
+			"chs": "[訓練家]的"
+		},
+		"titlePosition": {
+			"ger": "suffix",
+			"eng": "prefix"
 		}
 	}
 }

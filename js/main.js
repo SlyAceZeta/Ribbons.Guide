@@ -142,6 +142,7 @@ for(let i in toggles){
 
 /* Pokemon data update from old app */
 function updateOldPokemon(p){
+	// TODO: add these to notes instead of deleting them
 	delete p.iv;
 	delete p.ev;
 	delete p.ability;
@@ -534,6 +535,8 @@ function createCard(p){
 	}
 
 	/* containers and filters */
+	// TODO: add per-Pokemon Strange Ball setting
+	// TODO: add handling for Battle/Contest Memory Ribbons
 	var $cardCol = $("<div>", { "class": "col", "data-name": displayName, "data-national-dex": getPokemonData(p.dex, "natdex"), "data-level": p.level, "data-gender": p.gender, "data-shiny": p.shiny, "data-language": p.lang, "data-ball": p.ball, "data-origin-mark": p.originmark, "data-current-ribbons": p.ribbons });
 	if(p.origingame){
 		$cardCol.attr({ "data-origin-game": p.origingame });
@@ -542,6 +545,7 @@ function createCard(p){
 		$cardCol.attr({ "data-current-game": p.currentgame });
 	}
 	if(ribbonLists){
+		// TODO: add checks for World Ability Ribbon setting
 		if(Object.keys(ribbonLists.remaining).length == 0){
 			$cardCol.addClass("no-ribbons-left");
 		} else {
@@ -632,6 +636,7 @@ function createCard(p){
 	$cardHeader.append($cardHeaderButton);
 
 	/* body */
+	// TODO: add handling for Battle/Contest Memory Ribbons
 	var genderDirectory = (getPokemonData(p.dex, "femsprite") && p.gender === "female") ? "female/" : "";
 	$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + p.dex + ".png", "alt": getPokemonData(p.dex, "names")["eng"], "title": getPokemonData(p.dex, "names")["eng"] }));
 	var $cardRibbons = $("<div>", { "class": "card-ribbons flex-grow-1 d-flex flex-wrap p-1" });
@@ -749,7 +754,7 @@ function resetForm(){
 	$("#modalPokemonFormLabel").text("Add New Pokémon");
 	$("#pokemonFormTabs-details").click();
 	$("#modalPokemonForm input").each(function(){
-		if($(this).attr("type") === "text" || $(this).attr("type") === "number" || $(this).attr("type") === "date"){
+		if($(this).attr("type") === "text" || $(this).attr("type") === "number" || $(this).attr("type") === "date" || $(this).attr("type") === "search"){
 			$(this).val("");
 		} else if($(this).attr("type") === "checkbox"){
 			$(this).prop("checked", false);
@@ -773,6 +778,7 @@ function resetForm(){
 		$("#pokemonFormBox").append(new Option(userBoxes[b], b));
 	}
 	$("#pokemonFormBox").val("-1").change();
+	$("#pokemonFormTitle").val("None").change();
 }
 
 function updateFormSprite(){
@@ -825,6 +831,7 @@ function selectCustomOption(o){
 		}
 		return $ball;
 	} else if(result.indexOf("pokemonFormOriginMark") > 0){
+		// TODO: add custom origin marks
 		var markSrc = "img/origins/" + o.id + ".png";
 		if(o.id === "none"){
 			markSrc = "img/ui/1x1.svg";
@@ -872,6 +879,26 @@ function selectCustomOption(o){
 			}
 		}
 		return $pokemon;
+	} else if(result.indexOf("pokemonFormTitle") > 0){
+		$title = $("<span>");
+		if(o.id === "None"){
+			for(var lang in translations.none){
+				$title.append($("<span>", { "class": "translation translation-" + lang}).text(translations.none[lang]));
+			}
+		} else {
+			var ribbonDir = "ribbons/";
+			if(ribbons[o.id].mark){
+				ribbonDir = "marks/";
+			}
+			$title.append($("<img>", { "class": "pokemonFormSelectIcon", "src": "img/" + ribbonDir + o.id + ".png" }));
+			for(var oed in o.element.dataset){
+				if(oed.indexOf("lang") == 0 && oed.indexOf("langRibbon") == -1){
+					lang = oed.substring(4).toLowerCase();
+					$title.append($("<span>", { "class": "translation translation-" + lang}).text(ribbons[o.id].titles[lang]));
+				}
+			}
+		}
+		return $title;
 	} else {
 		return o.text;
 	}
@@ -928,19 +955,6 @@ function initRun(){
 			$("#pokemonFormBall").append($ballOption);
 			$("#imageHoldingArea").append($("<img>", { "src": "img/balls/" + b + ".png" }));
 		}
-		for(var o in origins){
-			$("#pokemonFormOriginMark").prepend(new Option(origins[o].name, o));
-			if(origins[o].name !== "None"){
-				$("#imageHoldingArea").append($("<img>", { "src": "img/origins/" + o + ".png" }));
-			}
-		}
-		for(var n in natures){
-			var $natureOption = $("<option>", { "value": n }).text(natures[n]["eng"]);
-			for(var lang in natures[n]){
-				$natureOption.attr("data-lang-" + lang, natures[n][lang]);
-			}
-			$("#pokemonFormNature").append($natureOption);
-		}
 		for(var g in games){
 			var gameOption = new Option(games[g].name, g);
 			if(!games[g].combo){
@@ -948,6 +962,13 @@ function initRun(){
 				if(g !== "plza"){
 					$("#pokemonFormCurrentGame").append(gameOption);
 				}
+			}
+		}
+		for(var o in origins){
+			$("#pokemonFormOriginMark").prepend(new Option(origins[o].name, o));
+			// TODO: add custom origin marks
+			if(origins[o].name !== "None"){
+				$("#imageHoldingArea").append($("<img>", { "src": "img/origins/" + o + ".png" }));
 			}
 		}
 		var pokemonCount = 0;
@@ -1006,11 +1027,67 @@ function initRun(){
 				}
 			}
 		}
+		for(var r in ribbons){
+			var ribbonDir = "ribbons/";
+			if(ribbons[r].mark){
+				ribbonDir = "marks/";
+			}
+			var $ribbonRow = $("<li>", { "class": "list-group-item list-group-item-action d-flex align-items-center border-0" })
+				.append($("<input>", { "type": "checkbox", "value": "", "class": "form-check-input mt-0 ms-lg-1 me-1 me-lg-2", "id": "pokemonFormRibbon-" + r }));
+			if(r.startsWith("contest-memory-ribbon") || r.startsWith("battle-memory-ribbon")){
+				$ribbonRow.append($("<img>", { "src": "img/ui/sync.svg", "class": "pokemonFormRibbon-memory-sync" }));
+			}
+			var $ribbonRowLabel = $("<label>", { "for": "pokemonFormRibbon-" + r, "class": "form-check-label stretched-link d-flex align-items-center w-100" })
+				.append($("<img>", { "src": "img/" + ribbonDir + r + ".png", "class": "me-1", "alt": ribbons[r].names.eng, "title": ribbons[r].names.eng }));
+			var $ribbonRowInfo = $("<div>", { "class": "w-100" });
+			var $ribbonRowInfoName = $("<div>", { "class": "fw-bold lh-1 my-1 d-flex w-100 justify-content-between align-items-center" });
+			var $ribbonRowInfoDesc = $("<div>", { "class": "lh-1 mb-1" });
+			for(var lang in ribbons[r].names){
+				$ribbonRowInfoName.append($("<span>", { "class": "translation translation-" + lang }).text(ribbons[r].names[lang]));
+				$ribbonRowInfoDesc.append($("<small>", { "class": "translation translation-" + lang }).text(ribbons[r].descs[lang]));
+			}
+			var ribbonGen = ribbons[r].gen;
+			var ribbonGenText = translations.arabicToRoman[ribbonGen-1];
+			if(ribbons[r].available){
+				var ribbonGenMax = ribbonGen;
+				for(var gameKey in ribbons[r].available){
+					var game = ribbons[r].available[gameKey];
+					var gameGen = getGameData(game, "gen");
+					if(gameGen > ribbonGenMax){
+						ribbonGenMax = gameGen;
+					}
+				}
+				if(ribbonGenMax > ribbonGen){
+					ribbonGenText = ribbonGenText + " – " + translations.arabicToRoman[ribbonGenMax-1];
+				}
+				$ribbonRowInfoName.append($("<span>", { "class": "badge text-bg-primary rounded-pill ms-2" }).text(ribbonGenText));
+			} else {
+				$ribbonRowInfoName.append($("<span>", { "class": "badge text-bg-secondary rounded-pill" }).text("E"));
+			}
+			$ribbonRowInfo.append($ribbonRowInfoName).append($ribbonRowInfoDesc);
+			$ribbonRowLabel.append($ribbonRowInfo);
+			$ribbonRow.append($ribbonRowLabel);
+			$("#pokemonFormRibbons").append($ribbonRow);
+			if(ribbons[r].titles){
+				var $titleOption = $("<option>", { "value": r }).text(ribbons[r].titles["eng"]);
+				for(var lang in ribbons[r].names){
+					$titleOption.attr("data-lang-" + lang, ribbons[r].titles[lang]).attr("data-lang-ribbon-" + lang, ribbons[r].names[lang]);
+				}
+				$("#pokemonFormTitle").append($titleOption);
+			}
+		}
+		for(var n in natures){
+			var $natureOption = $("<option>", { "value": n }).text(natures[n]["eng"]);
+			for(var lang in natures[n]){
+				$natureOption.attr("data-lang-" + lang, natures[n][lang]);
+			}
+			$("#pokemonFormNature").append($natureOption);
+		}
 		/* apply select2 dropdowns */
 		$("#pokemonFormLanguage, #pokemonFormOriginGame, #pokemonFormCurrentGame").select2({
 			dropdownParent: $("#pokemonFormSections")
 		});
-		$("#pokemonFormBall, #pokemonFormNature, #pokemonFormBox, #pokemonFormOriginMark, #pokemonFormSpecies").select2({
+		$("#pokemonFormBall, #pokemonFormNature, #pokemonFormBox, #pokemonFormOriginMark, #pokemonFormSpecies, #pokemonFormTitle").select2({
 			matcher: selectCustomMatcher,
 			templateSelection: selectCustomOption,
 			templateResult: selectCustomOption,
@@ -1019,7 +1096,42 @@ function initRun(){
 		/* listeners */
 		$("input[name='pokemonFormGender'], input[name='pokemonFormShiny']").change(function(){
 			updateFormSprite();
-		})
+		});
+		$("#pokemonFormRibbonSearch").on("input", function(){
+			var searchText = $(this).val().normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+			if(searchText){
+				var matchedRibbons = 0;
+				$("#pokemonFormRibbons li").each(function(i, e){
+					if(i !== 0){
+						var ribbonText = $(this).text().normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+						if(ribbonText.indexOf(searchText) > -1){
+							matchedRibbons++;
+							$(e).removeClass("d-none");
+						} else {
+							$(e).addClass("d-none");
+						}
+					}
+				});
+				if(matchedRibbons == 0){
+					$("#pokemonFormRibbons-none").removeClass("d-none");
+				} else {
+					$("#pokemonFormRibbons-none").addClass("d-none");
+				}
+			} else {
+				$("#pokemonFormRibbons li").removeClass("d-none");
+				$("#pokemonFormRibbons-none").addClass("d-none");
+			}
+		});
+		$("#pokemonFormRibbons input[type='checkbox']").change(function(){
+			var ribbon = this.id.replace("pokemonFormRibbon-", "");
+			if(ribbon == "mini-mark" || ribbon == "jumbo-mark"){
+				if($("#pokemonFormRibbon-mini-mark").prop("checked") || $("#pokemonFormRibbon-jumbo-mark").prop("checked")){
+					$("#pokemonFormScale").prop({ "checked": true, "disabled": true });
+				} else {
+					$("#pokemonFormScale").prop({ "checked": false, "disabled": false });
+				}
+			}
+		});
 		$("#pokemonFormSpecies").change(function(){
 			var species = $(this).val();
 			if(species){
@@ -1147,6 +1259,10 @@ function initRun(){
 			}
 		});
 
+		/* initialize tooltips */
+		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+		const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
 		/* image check */
 		loadingBar(25);
 		$("#loading-spinner-info-text").text("Loading images");
@@ -1210,9 +1326,6 @@ $(function(){
 		var file = $(this)[0].files[0];
 		if(file) loadBackup(file, $(this).val());
 	});
-	/* initialize tooltips */
-	const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-	const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 	/* initial functions that run after all else */
 	initRun();
 });
