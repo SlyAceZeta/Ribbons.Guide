@@ -327,6 +327,13 @@ html[data-extraoriginmarks="platforms"] .card-footer-origin-platform {
 	display: inline;
 }
 /* condensed cards */
+@media (min-width: 1400px) {
+	html[data-cardview="condensed"] #tracker-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 230px);
+		justify-content: space-evenly;
+	}
+}
 html[data-cardview="condensed"] .card-ribbons,
 html[data-cardview="condensed"] .card-footer-top,
 html[data-cardview="condensed"] .card-header-title,
