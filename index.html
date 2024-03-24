@@ -9,11 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- PWA -->
 		<link rel="manifest" href="manifest.json">
-		<script>
-			if(navigator.serviceWorker){
-				navigator.serviceWorker.register("sw.js");
-			}
-		</script>
+		<script>if(navigator.serviceWorker) navigator.serviceWorker.register("sw.js");</script>
 		<!-- fonts -->
 		<link rel="preload" href="fonts/NunitoSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
 		<link rel="preload" href="fonts/NunitoSans-Bold.ttf" as="font" type="font/ttf" crossorigin>
@@ -87,11 +83,12 @@
 						<input type="radio" class="btn-check" name="switchViewBtn" id="switchViewBtn-expanded" autocomplete="off" value="expanded" checked>
 						<label class="btn btn-outline-secondary" for="switchViewBtn-expanded"><img class="align-text-bottom" src="img/ui/expanded.svg"></label>
 					</div>
-					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button">
+					<!-- TODO: create boxes form -->
+					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button" data-bs-toggle="modal" data-bs-target="#modalBoxesForm">
 						<img src="img/ui/box-closed.png" alt="Filter">
 						<span class="align-middle d-none d-md-inline">Boxes</span>
 					</button>
-					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button">
+					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button" data-bs-toggle="modal" data-bs-target="#modalFilterForm">
 						<img src="img/ui/filter.svg" alt="Filter">
 						<span class="align-middle d-none d-md-inline">Filters</span>
 					</button>
@@ -138,12 +135,12 @@
 												<div id="pokemonFormGenderGroup" class="btn-group d-flex" role="group" aria-label="Gender">
 													<input type="radio" class="btn-check" name="pokemonFormGender" id="pokemonFormGender-male" autocomplete="off" value="male" checked>
 													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormGender-male">
-														<img class="align-middle" src="img/ui/male.png" style="height:16px;">
+														<img class="align-middle" src="img/ui/gender-male.png" style="height:16px;">
 														<span class="align-middle">Male</span>
 													</label>
 													<input type="radio" class="btn-check" name="pokemonFormGender" id="pokemonFormGender-female" autocomplete="off" value="female">
 													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormGender-female">
-														<img class="align-middle" src="img/ui/female.png" style="height:16px;">
+														<img class="align-middle" src="img/ui/gender-female.png" style="height:16px;">
 														<span class="align-middle">Female</span>
 													</label>
 													<input type="radio" class="btn-check" name="pokemonFormGender" id="pokemonFormGender-unknown" autocomplete="off" value="unknown" disabled>
@@ -397,6 +394,108 @@
 				</div>
 			</div>
 		</div>
+		<!-- Filter Modal -->
+		<div class="modal fade" id="modalFilterForm" tabindex="-1" aria-labelledby="modalFilterFormLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalFilterFormLabel">Sort/Filter Pokémon</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body p-3 pt-2">
+						<div class="row g-2">
+							<div class="col-lg-6">
+								<label for="filterFormSort" class="form-label">Sort</label>
+								<select id="filterFormSort" class="form-select" data-minimum-results-for-search="Infinity">
+									<option value="default">Default</option>
+									<option value="dexasc">National Pokédex ▲ (0001-1025)</option>
+									<option value="dexdesc">National Pokédex ▼ (1025-0001)</option>
+									<option value="levelasc">Current Level ▲ (1-100)</option>
+									<option value="leveldesc">Current Level ▼ (100-1)</option>
+									<option value="nameasc">Name ▲ (A-Z)</option>
+									<option value="namedesc">Name ▼ (Z-A)</option>
+								</select>
+							</div>
+							<div class="col-6">
+								<label for="filterFormGender" class="form-label">Gender</label>
+								<select id="filterFormGender" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
+									<option></option>
+									<option value="male">Male</option>
+									<option value="female">Female</option>
+									<option value="unknown">Gender unknown</option>
+								</select>
+							</div>
+							<div class="col-6">
+								<label for="filterFormShiny" class="form-label">Shiny</label>
+								<select id="filterFormShiny" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
+									<option></option>
+									<option value="normal">Normal</option>
+									<option value="shiny">Shiny</option>
+									<option value="star">Star</option>
+									<option value="square">Square</option>
+								</select>
+							</div>
+							<div class="col-6">
+								<label for="filterFormLanguage" class="form-label">Language</label>
+								<select id="filterFormLanguage" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
+									<option></option>
+									<option value="eng">ENG - English</option>
+									<option value="fre">FRE - Français</option>
+									<option value="ita">ITA - Italiano</option>
+									<option value="ger">GER - Deutsch</option>
+									<option value="spa">SP-EU/SPA - Español (España)</option>
+									<option value="jpn">JPN - 日本語</option>
+									<option value="kor">KOR - 한국어</option>
+									<option value="cht">CHT - 正體字</option>
+									<option value="chs">CHS - 简化字</option>
+								</select>
+							</div>
+							<div class="col-6">
+								<label for="filterFormBall" class="form-label">Poké Ball</label>
+								<select id="filterFormBall" class="form-select" data-placeholder="" data-allow-clear="true"></select>
+							</div>
+							<div class="col-6">
+								<label for="filterFormCurrentLevel-min" class="form-label">Current Level</label>
+								<div class="input-group">
+									<input id="filterFormCurrentLevel-min" class="form-control" type="number" min="1" max="100" placeholder="1" aria-label="Minimum Level">
+									<span class="input-group-text">–</span>
+									<input id="filterFormCurrentLevel-max" class="form-control" type="number" min="1" max="100" placeholder="100" aria-label="Maximum Level">
+								</div>
+							</div>
+							<div class="col-6">
+								<label for="filterFormOriginMark" class="form-label">Origin Mark</label>
+								<select id="filterFormOriginMark" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true"></select>
+							</div>
+							<div class="col-6">
+								<label for="filterFormCurrentGame" class="form-label">Current Game</label>
+								<select id="filterFormCurrentGame" class="form-select" data-placeholder="" data-allow-clear="true"></select>
+							</div>
+							<div class="col-6">
+								<label for="filterFormBox" class="form-label">Box</label>
+								<select id="filterFormBox" class="form-select" data-placeholder="" data-allow-clear="true"></select>
+							</div>
+							<div class="col-lg-6">
+								<label for="filterFormTargetGames" class="form-label">Games it can travel to</label>
+								<select id="filterFormTargetGames" class="form-select"></select>
+								<div class="form-text" id="filterformTargetGamesLGPE">Pokémon currently in HOME are not considered able to travel to <em>Let's Go, Pikachu!/Eevee!</em>.</div>
+							</div>
+							<div class="col-lg-6">
+								<label for="filterFormEarnedRibbons" class="form-label">Earned Ribbons</label>
+								<select id="filterFormEarnedRibbons" class="form-select"></select>
+							</div>
+							<div class="col-lg-6">
+								<label for="filterFormTargetRibbons" class="form-label">Ribbons it can earn</label>
+								<select id="filterFormTargetRibbons" class="form-select"></select>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" id="modalFilterFormReset">Reset</button>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- Settings Modal -->
 		<div class="modal fade" id="modalSettings" tabindex="-1" aria-labelledby="modalSettingsLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
@@ -531,7 +630,7 @@
 					</div>
 					<div class="modal-body">
 						<p>Ribbons.Guide is a progressive web app that helps you keep track of your Pokémon and their Ribbons! Ribbons.Guide doesn't store or send any data anywhere—it's all saved on your device! <a href="https://github.com/SlyAceZeta/Ribbons.Guide">This is an open-source project hosted on GitHub using GitHub Pages.</a> It was developed as a love letter to the helpful and welcoming r/PokémonRibbons community.</p>
-						<p>The images used in Ribbons.Guide were provided by <a href="https://pokejungle.net">PokéJungle</a>, <a href="https://pokemondb.net">Pokémon Database</a>, <a href="https://github.com/msikma/pokesprite">PokéSprite</a>, <a href="https://archives.bulbagarden.net/wiki/Main_Page">Bulbagarden Archives</a>, <a href="https://github.com/PokeMiners/pogo_assets">Pokémon GO Assets</a>, and <a href="https://github.com/google/material-design-icons">Material Symbols</a>. Ribbons.Guide also makes use of <a href="https://github.com/jquery/jquery">jQuery</a>, <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://github.com/select2/select2">Select2</a>, <a href="https://github.com/SortableJS/Sortable">Sortable</a>, and <a href="https://fonts.google.com/">Google Fonts</a>.</p>
+						<p>The images used in Ribbons.Guide were provided by <a href="https://pokejungle.net">PokéJungle</a>, <a href="https://pokemondb.net">Pokémon Database</a>, <a href="https://github.com/msikma/pokesprite">PokéSprite</a>, <a href="https://archives.bulbagarden.net/wiki/Main_Page">Bulbagarden Archives</a>, <a href="https://github.com/PokeMiners/pogo_assets">Pokémon GO Assets</a>, and <a href="https://github.com/google/material-design-icons">Material Symbols</a>. Ribbons.Guide also makes use of <a href="https://github.com/jquery/jquery">jQuery</a>, <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://github.com/select2/select2">Select2</a>, <a href="https://github.com/SortableJS/Sortable">Sortable</a>, <a href="https://github.com/GoogleChrome/workbox">Workbox</a>, and <a href="https://fonts.google.com/">Google Fonts</a>.</p>
 						<p>Pokémon, data, and images © Nintendo/Creatures Inc./Game Freak. This project is not affiliated with Nintendo, Creatures Inc., Game Freak, or The Pokémon Company. All original content and code is governed by the <a href="https://opensource.org/license/gpl-3-0/">GPL-3.0 license</a>.</p>
 						<p id="modalAboutLinks">
 							<a class="px-1" href="https://discord.gg/frv7dpWzDG" title="Discord"><img src="img/ui/discord.svg" alt="Discord"></a>

@@ -627,7 +627,7 @@ function savePokemon(edit = false){
 }
 
 function editPokemon(){
-	resetForm(true);
+	resetPokemonForm(true);
 	var cardContainer = $(event.target).parents(".col");
 	var pokemonID = cardContainer.index();
 	modalPokemonState = "editing";
@@ -814,7 +814,7 @@ function createCard(p){
 	}
 	if(p.gender && p.gender !== "unknown"){
 		var genderText = p.gender.charAt(0).toUpperCase() + p.gender.slice(1);
-		$cardHeaderLeft.append($("<img>", { "class": "align-middle card-header-gender ms-2", "src": "img/ui/" + p.gender + ".png", "alt": genderText, "title": genderText }));
+		$cardHeaderLeft.append($("<img>", { "class": "align-middle card-header-gender ms-2", "src": "img/ui/gender-" + p.gender + ".png", "alt": genderText, "title": genderText }));
 	}
 	if(p.shiny){
 		var shinyIcon = "shiny-star.png";
@@ -854,6 +854,7 @@ function createCard(p){
 	var $cardFooterTop = $("<div>", { "class": "card-footer-top d-flex justify-content-between" })
 		.append($("<div>").text(ribbonCount + " Ribbon" + (ribbonCount !== 1 ? "s" : "") + (markCount ? ", " + markCount + " Mark" + (markCount !== 1 ? "s" : "") : "")));
 	if(p.box !== -1){
+		$cardCol.attr("data-box", "" + p.box);
 		var boxName = userBoxes[p.box];
 		var $cardFooterBox = $("<div>")
 			.append($("<img>", { "class": "align-text-top me-1", "src": "img/ui/box-closed.png", "alt": "Box", "title": "Box" }))
@@ -937,8 +938,8 @@ function presetSettings(change = false){
 	}
 }
 
-/* reset form */
-function resetForm(edit = false){
+/* reset Pokemon form */
+function resetPokemonForm(edit = false){
 	setFormValidAll();
 	if(edit){
 		$("#modalPokemonFormLabel").text("Edit Pokémon");
@@ -976,6 +977,17 @@ function resetForm(edit = false){
 	$("#pokemonFormTitle").val("None").change();
 	$("#pokemonFormRibbons li").removeClass("d-none");
 	$("#pokemonFormRibbons-none").addClass("d-none");
+}
+
+/* reset filter form */
+function resetFilterForm(){
+	$("#modalFilterForm select, #modalFilterForm input").each(function(){
+		if(this.id === "filterFormSort"){
+			$(this).val("default").change();
+		} else {
+			$(this).val("").change();
+		}
+	});
 }
 
 function updateFormSprite(){
@@ -1016,10 +1028,15 @@ function selectCustomMatcher(params, data){
 
 function selectCustomOption(o){
 	// o.id is the option value
+	// TODO: reduce duplication: some of these alternate-language options have data- attributes holding them, so no need to search JSON a second time
 	var result = o._resultId || o.text;
-	if(result.indexOf("pokemonFormBall") > 0){
+	var selectIconClass = "pokemonFormSelectIcon";
+	if(result.indexOf("filterForm") > 0){
+		selectIconClass = "filterFormSelectIcon";
+	}
+	if(result.indexOf("pokemonFormBall") > 0 || result.indexOf("filterFormBall") > 0){
 		var $ball = $("<span>")
-			.append($("<img>", { "class": "pokemonFormSelectIcon", "src": "img/balls/" + o.id + ".png" }));
+			.append($("<img>", { "class": selectIconClass, "src": "img/balls/" + o.id + ".png" }));
 		for(var oed in o.element.dataset){
 			if(oed.indexOf("lang") == 0){
 				lang = oed.substring(4).toLowerCase();
@@ -1027,14 +1044,14 @@ function selectCustomOption(o){
 			}
 		}
 		return $ball;
-	} else if(result.indexOf("pokemonFormOriginMark") > 0){
+	} else if(result.indexOf("pokemonFormOriginMark") > 0 || result.indexOf("filterFormOriginMark") > 0){
 		// TODO: add custom origin marks
 		var markSrc = "img/origins/" + o.id + ".png";
 		if(o.id === "none"){
 			markSrc = "img/ui/1x1.svg";
 		}
 		var $mark = $("<span>")
-			.append($("<img>", { "class": "pokemonFormSelectIcon", "src": markSrc }))
+			.append($("<img>", { "class": selectIconClass, "src": markSrc }))
 			.append($("<span>").text(origins[o.id].name));
 		return $mark;
 	} else if(result.indexOf("pokemonFormNature") > 0){
@@ -1052,7 +1069,7 @@ function selectCustomOption(o){
 		if(o.id == "-1"){
 			boxImage = "ball";
 		}
-		$box.append($("<img>", { "class": "pokemonFormSelectIcon", "src": "img/ui/box-" + boxImage + ".png" }));
+		$box.append($("<img>", { "class": selectIconClass, "src": "img/ui/box-" + boxImage + ".png" }));
 		if(o.id == "-1"){
 			for(var lang in translations.none){
 				$box.append($("<span>", { "class": "translation translation-" + lang}).text(translations.none[lang]));
@@ -1087,7 +1104,7 @@ function selectCustomOption(o){
 			if(ribbons[o.id].mark){
 				ribbonDir = "marks/";
 			}
-			$title.append($("<img>", { "class": "pokemonFormSelectIcon", "src": "img/" + ribbonDir + o.id + ".png" }));
+			$title.append($("<img>", { "class": selectIconClass, "src": "img/" + ribbonDir + o.id + ".png" }));
 			for(var oed in o.element.dataset){
 				if(oed.indexOf("lang") == 0 && oed.indexOf("langRibbon") == -1){
 					lang = oed.substring(4).toLowerCase();
@@ -1096,6 +1113,21 @@ function selectCustomOption(o){
 			}
 		}
 		return $title;
+	} else if(result.indexOf("filterFormGender") > 0){
+		var $gender = $("<span>")
+			.append($("<img>", { "class": selectIconClass, "src": "img/ui/gender-" + o.id + ".png" }))
+			.append($("<span>").text(o.text));
+		return $gender;
+	} else if(result.indexOf("filterFormShiny") > 0){
+		var $shiny = $("<span>");
+		if(o.id === "shiny" || o.id === "star"){
+			$shiny.append($("<img>", { "class": selectIconClass, "src": "img/ui/shiny-star.png" }));
+		}
+		if(o.id === "shiny" || o.id === "square"){
+			$shiny.append($("<img>", { "class": selectIconClass, "src": "img/ui/shiny-square.svg" }));
+		}
+		$shiny.append($("<span>").text(o.text));
+		return $shiny;
 	} else {
 		return o.text;
 	}
@@ -1150,19 +1182,22 @@ function initRun(){
 				$ballOption.attr("data-lang-" + lang, balls[b][lang]);
 			}
 			$("#pokemonFormBall").append($ballOption);
+			$("#filterFormBall").append($ballOption);
 			$("#imageHoldingArea").append($("<img>", { "src": "img/balls/" + b + ".png" }));
 		}
 		for(var g in games){
-			var gameOption = new Option(games[g].name, g);
+			if(games[g].combo || games[g].solo){
+				$("#filterFormTargetGames").append(new Option(games[g].name, g));
+			}
 			if(!games[g].combo){
 				// temporary until Legends: Z-A releases
 				if(g !== "plza"){
-					$("#pokemonFormCurrentGame").append(gameOption);
+					$("#pokemonFormCurrentGame, #filterFormCurrentGame").append(new Option(games[g].name, g));
 				}
 			}
 		}
 		for(var o in origins){
-			$("#pokemonFormOriginMark").prepend(new Option(origins[o].name, o));
+			$("#pokemonFormOriginMark, #filterFormOriginMark").prepend(new Option(origins[o].name, o));
 			// TODO: add custom origin marks
 			if(origins[o].name !== "None"){
 				$("#imageHoldingArea").append($("<img>", { "src": "img/origins/" + o + ".png" }));
@@ -1290,6 +1325,15 @@ function initRun(){
 			templateResult: selectCustomOption,
 			dropdownParent: $("#pokemonFormSections")
 		});
+		$("#filterFormSort, #filterFormLanguage, #filterFormCurrentGame, #filterFormTargetGames").select2({
+			dropdownParent: $("#modalFilterForm .modal-body")
+		});
+		$("#filterFormGender, #filterFormShiny, #filterFormBall, #filterFormOriginMark").select2({
+			matcher: selectCustomMatcher,
+			templateSelection: selectCustomOption,
+			templateResult: selectCustomOption,
+			dropdownParent: $("#modalFilterForm .modal-body")
+		});
 		/* listeners */
 		$("input[name='pokemonFormGender'], input[name='pokemonFormShiny']").change(function(){
 			updateFormSprite();
@@ -1383,7 +1427,8 @@ function initRun(){
 			});
 		});
 		/* initial form reset */
-		resetForm();
+		resetPokemonForm();
+		resetFilterForm();
 
 		/* changelog logic */
 		loadingBar(20);
@@ -1535,12 +1580,15 @@ $(function(){
 		modalPokemonEditing = -1;
 	});
 	$("#sectionTrackerButtonAdd").click(function(){
-		resetForm();
+		resetPokemonForm();
 		modalPokemonForm.toggle();
-	})
+	});
 	$("#modalPokemonFormSave").click(function(){
 		savePokemon(modalPokemonState === "editing");
-	})
+	});
+	$("#modalFilterFormReset").click(function(){
+		resetFilterForm();
+	});
 	/* initial functions that run after all else */
 	initRun();
 });
