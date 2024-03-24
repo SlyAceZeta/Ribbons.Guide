@@ -1,6 +1,6 @@
 /* https://github.com/codepo8/github-page-pwa */
 var CACHE_PREFIX = "ribbonsguide_";
-var VERSION = "2024-03-22--2";
+var VERSION = "2024-03-24--0";
 var CACHE_NAME = CACHE_PREFIX + VERSION;
 
 self.addEventListener("fetch", function(e){

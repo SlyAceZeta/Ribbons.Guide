@@ -5409,90 +5409,6 @@
 			"chs": "帕底亚冠军"
 		}
 	},
-	"jumbo-mark": {
-		"optional": true,
-		"gen": 9,
-		"available": [
-			"scar",
-			"vio"
-		],
-		"mark": true,
-		"names": {
-			"ger": "Riesen-Zeichen",
-			"eng": "Jumbo Mark",
-			"spa": "Emblema Enormidad",
-			"fre": "Insigne Maxi",
-			"ita": "Emblema Grande e Grosso",
-			"jpn": "でっかいあかし",
-			"kor": "커다란증표",
-			"cht": "大個子之證",
-			"chs": "大个子之证"
-		},
-		"descs": {
-			"ger": "Zeichen eines Pokémon, das so groß wie möglich ist.",
-			"eng": "A mark for a Pokémon that's the largest it can be.",
-			"spa": "Emblema que distingue a un Pokémon enorme.",
-			"fre": "L'insigne d'un Pokémon considéré comme le plus grand possible.",
-			"ita": "Emblema che contraddistingue un Pokémon di taglia enorme.",
-			"jpn": "最大な　ポケモンである　あかし",
-			"kor": "가장 큰 포켓몬임을 나타내는 증표",
-			"cht": "最大的寶可夢的證明。",
-			"chs": "最大的宝可梦的证章。"
-		},
-		"titles": {
-			"ger": "Riese",
-			"eng": "the Great",
-			"spa": "el Gigante",
-			"fre": "le Géant",
-			"ita": "grande e grosso",
-			"jpn": "でっかい",
-			"kor": "커다란",
-			"cht": "大個子的",
-			"chs": "大个子"
-		}
-	},
-	"mini-mark": {
-		"optional": true,
-		"gen": 9,
-		"available": [
-			"scar",
-			"vio"
-		],
-		"mark": true,
-		"names": {
-			"ger": "Winzlings-Zeichen",
-			"eng": "Mini Mark",
-			"spa": "Emblema Miniatura",
-			"fre": "Insigne Mini",
-			"ita": "Emblema Piccoletto",
-			"jpn": "ちっちゃいあかし",
-			"kor": "조그만증표",
-			"cht": "小不點之證",
-			"chs": "小不点之证"
-		},
-		"descs": {
-			"ger": "Zeichen eines Pokémon, das so klein wie möglich ist.",
-			"eng": "A mark for a Pokémon that's the smallest it can be.",
-			"spa": "Emblema que distingue a un Pokémon muy pequeño.",
-			"fre": "L'insigne d'un Pokémon considéré comme le plus petit possible.",
-			"ita": "Emblema che contraddistingue un Pokémon di taglia minuscola.",
-			"jpn": "最小な　ポケモンである　あかし",
-			"kor": "가장 작은 포켓몬임을 나타내는 증표",
-			"cht": "最小的寶可夢的證明。",
-			"chs": "最小的宝可梦的证章。"
-		},
-		"titles": {
-			"ger": "Winzling",
-			"eng": "the Teeny",
-			"spa": "el Diminuto",
-			"fre": "le Minuscule",
-			"ita": "piccoletto",
-			"jpn": "ちっちゃい",
-			"kor": "작은",
-			"cht": "小不點的",
-			"chs": "小不点"
-		}
-	},
 	"itemfinder-mark": {
 		"gen": 9,
 		"available": [
@@ -5614,6 +5530,90 @@
 			"kor": "미식가",
 			"cht": "美食家",
 			"chs": "美食家"
+		}
+	},
+	"jumbo-mark": {
+		"optional": true,
+		"gen": 9,
+		"available": [
+			"scar",
+			"vio"
+		],
+		"mark": true,
+		"names": {
+			"ger": "Riesen-Zeichen",
+			"eng": "Jumbo Mark",
+			"spa": "Emblema Enormidad",
+			"fre": "Insigne Maxi",
+			"ita": "Emblema Grande e Grosso",
+			"jpn": "でっかいあかし",
+			"kor": "커다란증표",
+			"cht": "大個子之證",
+			"chs": "大个子之证"
+		},
+		"descs": {
+			"ger": "Zeichen eines Pokémon, das so groß wie möglich ist.",
+			"eng": "A mark for a Pokémon that's the largest it can be.",
+			"spa": "Emblema que distingue a un Pokémon enorme.",
+			"fre": "L'insigne d'un Pokémon considéré comme le plus grand possible.",
+			"ita": "Emblema che contraddistingue un Pokémon di taglia enorme.",
+			"jpn": "最大な　ポケモンである　あかし",
+			"kor": "가장 큰 포켓몬임을 나타내는 증표",
+			"cht": "最大的寶可夢的證明。",
+			"chs": "最大的宝可梦的证章。"
+		},
+		"titles": {
+			"ger": "Riese",
+			"eng": "the Great",
+			"spa": "el Gigante",
+			"fre": "le Géant",
+			"ita": "grande e grosso",
+			"jpn": "でっかい",
+			"kor": "커다란",
+			"cht": "大個子的",
+			"chs": "大个子"
+		}
+	},
+	"mini-mark": {
+		"optional": true,
+		"gen": 9,
+		"available": [
+			"scar",
+			"vio"
+		],
+		"mark": true,
+		"names": {
+			"ger": "Winzlings-Zeichen",
+			"eng": "Mini Mark",
+			"spa": "Emblema Miniatura",
+			"fre": "Insigne Mini",
+			"ita": "Emblema Piccoletto",
+			"jpn": "ちっちゃいあかし",
+			"kor": "조그만증표",
+			"cht": "小不點之證",
+			"chs": "小不点之证"
+		},
+		"descs": {
+			"ger": "Zeichen eines Pokémon, das so klein wie möglich ist.",
+			"eng": "A mark for a Pokémon that's the smallest it can be.",
+			"spa": "Emblema que distingue a un Pokémon muy pequeño.",
+			"fre": "L'insigne d'un Pokémon considéré comme le plus petit possible.",
+			"ita": "Emblema che contraddistingue un Pokémon di taglia minuscola.",
+			"jpn": "最小な　ポケモンである　あかし",
+			"kor": "가장 작은 포켓몬임을 나타내는 증표",
+			"cht": "最小的寶可夢的證明。",
+			"chs": "最小的宝可梦的证章。"
+		},
+		"titles": {
+			"ger": "Winzling",
+			"eng": "the Teeny",
+			"spa": "el Diminuto",
+			"fre": "le Minuscule",
+			"ita": "piccoletto",
+			"jpn": "ちっちゃい",
+			"kor": "작은",
+			"cht": "小不點的",
+			"chs": "小不点"
 		}
 	},
 	"alpha-mark": {

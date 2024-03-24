@@ -76,7 +76,7 @@
 		<!-- Tracker -->
 		<section id="sectionTracker" class="container-fluid">
 			<div id="sectionTrackerButtonRow" class="d-flex justify-content-between mt-4 px-3">
-				<button class="btn btn-primary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button" data-bs-toggle="modal" data-bs-target="#modalPokemonForm">
+				<button id="sectionTrackerButtonAdd" class="btn btn-primary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button">
 					<img src="img/ui/add.svg" alt="Add">
 					<span class="align-middle d-none d-md-inline">Add New Pokémon</span>
 				</button>
@@ -205,16 +205,16 @@
 													<span class="align-middle">Strange Ball</span>
 													<img class="align-middle ms-1" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="If enabled, the Strange Ball will replace the selected Poké Ball depending on the Current Game. If disabled, the selected Poké Ball will always appear.">
 												</label>
-												<div class="btn-group d-flex align-items-center" role="group" aria-label="Strange Ball">
-													<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-global" autocomplete="off" value="global" checked>
+												<div id="pokemonFormStrangeBallGroup" class="btn-group d-flex align-items-center" role="group" aria-label="Strange Ball">
+													<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-global" autocomplete="off" value="" checked>
 													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormStrangeBall-global">
 														<span class="align-middle">Global Setting</span>
 													</label>
-													<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-enabled" autocomplete="off" value="on">
+													<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-enabled" autocomplete="off" value="enabled">
 													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormStrangeBall-enabled">
 														<span class="align-middle">Enabled</span>
 													</label>
-													<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-disabled" autocomplete="off" value="off">
+													<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-disabled" autocomplete="off" value="disabled">
 													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormStrangeBall-disabled">
 														<span class="align-middle">Disabled</span>
 													</label>
@@ -225,8 +225,8 @@
 									<div class="col-lg-6">
 										<div class="row g-2">
 											<div class="col-6">
-												<label for="pokemonFormLevel" class="form-label">Current Level <span class="form-asterisk">*</span></label>
-												<input type="number" class="form-control" id="pokemonFormLevel" min="1" max="100" required>
+												<label for="pokemonFormCurrentLevel" class="form-label">Current Level <span class="form-asterisk">*</span></label>
+												<input type="number" class="form-control" id="pokemonFormCurrentLevel" min="1" max="100">
 											</div>
 											<div class="col-6">
 												<label for="pokemonFormNature" class="form-label">Nature</label>
@@ -250,12 +250,12 @@
 										</div>
 									</div>
 									<div class="col-6">
-										<label for="pokemonFormTrainer" class="form-label">Original Trainer</label>
-										<input type="text" class="form-control" id="pokemonFormTrainer" maxlength="15">
+										<label for="pokemonFormTrainerName" class="form-label">Original Trainer</label>
+										<input type="text" class="form-control" id="pokemonFormTrainerName" maxlength="15">
 									</div>
 									<div class="col-6">
-										<label for="pokemonFormIDNumber" class="form-label">ID No.</label>
-										<input type="text" class="form-control" id="pokemonFormIDNumber" inputmode="numeric" maxlength="6">
+										<label for="pokemonFormTrainerID" class="form-label">ID No.</label>
+										<input type="text" class="form-control" id="pokemonFormTrainerID" inputmode="numeric" maxlength="6">
 									</div>
 									<div class="col-6">
 										<label for="pokemonFormOriginMark" class="form-label">Origin Mark <span class="form-asterisk">*</span></label>
@@ -265,7 +265,7 @@
 									</div>
 									<div class="col-6">
 										<label for="pokemonFormOriginGame" class="form-label">Origin Game</label>
-										<select class="form-select" id="pokemonFormOriginGame" data-placeholder="" data-minimum-results-for-search="Infinity" disabled>
+										<select class="form-select" id="pokemonFormOriginGame" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true" disabled>
 											<option></option>
 										</select>
 									</div>
@@ -327,8 +327,8 @@
 									</div>
 									<div class="col-6">
 										<div class="form-label">Pokérus</div>
-										<div class="btn-group d-flex align-items-center" role="group" aria-label="Pokerus">
-											<input type="radio" class="btn-check" name="pokemonFormPokerus" id="pokemonFormPokerus-none" autocomplete="off" value="none" checked>
+										<div id="pokemonFormPokerusGroup" class="btn-group d-flex align-items-center" role="group" aria-label="Pokerus">
+											<input type="radio" class="btn-check" name="pokemonFormPokerus" id="pokemonFormPokerus-none" autocomplete="off" value="" checked>
 											<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormPokerus-none">
 												<span class="align-middle">None</span>
 											</label>
@@ -352,7 +352,7 @@
 									</div>
 									<div class="col-lg-6">
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="pokemonFormAchievements-LeafCrown">
+											<input class="form-check-input pokemonFormAchievements" type="checkbox" id="pokemonFormAchievements-LeafCrown">
 											<label class="form-check-label" for="pokemonFormAchievements-LeafCrown">
 												<span>Leaf Crown (HGSS)</span>
 												<img class="align-middle ms-1" src="img/ui/leaf-crown.png" style="height:16px;" alt="Leaf Crown" title="Leaf Crown">
@@ -361,7 +361,7 @@
 									</div>
 									<div class="col-lg-6">
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="pokemonFormAchievements-PokestarShine">
+											<input class="form-check-input pokemonFormAchievements" type="checkbox" id="pokemonFormAchievements-PokestarShine">
 											<label class="form-check-label" for="pokemonFormAchievements-PokestarShine">
 												<span>Pokéstar Shine (B2W2)</span>
 												<img class="align-middle ms-1" src="img/ui/pokestar.svg" style="height:16px;" alt="PokéStar" title="PokéStar">
@@ -370,13 +370,13 @@
 									</div>
 									<div class="col-lg-6">
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="pokemonFormAchievements-TimeTraveler">
+											<input class="form-check-input pokemonFormAchievements" type="checkbox" id="pokemonFormAchievements-TimeTraveler">
 											<label class="form-check-label" for="pokemonFormAchievements-TimeTraveler">Time Travel Award (ORAS/BDSP)</label>
 										</div>
 									</div>
 									<div class="col-lg-6">
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="pokemonFormAchievements-BestBuddyGO">
+											<input class="form-check-input pokemonFormAchievements" type="checkbox" id="pokemonFormAchievements-BestBuddyGO">
 											<label class="form-check-label" for="pokemonFormAchievements-BestBuddyGO">
 												<span>Best Buddy Ribbon (GO)</span>
 												<img class="align-middle ms-1" src="img/ui/pogo-buddy-ribbon.png" style="height:16px;" alt="Best Buddy Ribbon" title="Best Buddy Ribbon">
