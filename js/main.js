@@ -1174,6 +1174,28 @@ function filterPokemon(p, data){
 				pass = false;
 				break;
 			}
+		} else if(f == "gmax"){
+			if((p.gmax + "") !== activeFilters[f]){
+				pass = false;
+				break;
+			}
+		} else if(f == "pokerus"){
+			if(activeFilters[f] == "any"){
+				if(!p.pokerus.length){
+					pass = false;
+					break;
+				}
+			} else if(activeFilters[f] == "none"){
+				if(p.pokerus.length){
+					pass = false;
+					break;
+				}
+			} else {
+				if(p.pokerus !== activeFilters[f]){
+					pass = false;
+					break;
+				}
+			}
 		} else if(f == "originmark"){
 			if(p.originmark !== activeFilters[f]){
 				pass = false;
@@ -1393,6 +1415,23 @@ function selectCustomOption(o){
 		}
 		$shiny.append($("<span>").text(o.text));
 		return $shiny;
+	} else if(result.indexOf("filterFormGMax") > 0){
+		var $gmax = $("<span>");
+		if(o.id === "true"){
+			$gmax.append($("<img>", { "class": selectIconClass, "src": "img/ui/gigantamax.png" }));
+		}
+		$gmax.append($("<span>").text(o.text));
+		return $gmax;
+	} else if(result.indexOf("filterFormPokerus") > 0){
+		var $pokerus = $("<span>");
+		if(o.id === "any" || o.id === "infected"){
+			$pokerus.append($("<img>", { "class": selectIconClass, "src": "img/ui/pokerus-infected.png" }));
+		}
+		if(o.id === "any" || o.id === "cured"){
+			$pokerus.append($("<img>", { "class": selectIconClass, "src": "img/ui/pokerus-cured.png" }));
+		}
+		$pokerus.append($("<span>").text(o.text));
+		return $pokerus;
 	} else {
 		return o.text;
 	}
@@ -1709,7 +1748,7 @@ function initRun(){
 		$("#filterFormSort, #filterFormLanguage, #filterFormCurrentGame, #filterFormTargetGames").select2({
 			dropdownParent: $("#modalFilterForm .modal-body")
 		});
-		$("#filterFormGender, #filterFormShiny, #filterFormBall, #filterFormOriginMark, #filterFormBox, #filterFormEarnedRibbons, #filterFormTargetRibbons").select2({
+		$("#filterFormGender, #filterFormShiny, #filterFormBall, #filterFormOriginMark, #filterFormBox, #filterFormEarnedRibbons, #filterFormTargetRibbons, #filterFormGMax, #filterFormPokerus").select2({
 			matcher: selectCustomMatcher,
 			templateSelection: selectCustomOption,
 			templateResult: selectCustomOption,
