@@ -63,8 +63,8 @@
 						<!--<button type="button" class="nav-link py-1 active" aria-current="page">Tracker</button>-->
 					</div>
 					<div class="navbar-nav">
-						<button type="button" class="nav-link py-1" href="#" data-bs-toggle="modal" data-bs-target="#modalSettings">Settings</button>
-						<button type="button" class="nav-link py-1" href="#" data-bs-toggle="modal" data-bs-target="#modalAbout">About</button>
+						<button type="button" class="nav-link py-1" id="headerNavSettingsLink">Settings</button>
+						<button type="button" class="nav-link py-1" data-bs-toggle="modal" data-bs-target="#modalAbout">About</button>
 					</div>
 				</div>
 			</div>
@@ -629,6 +629,19 @@
 						<button type="button" class="btn btn-primary" id="modalSettingsSaveBackup">Save Backup File</button>
 						<label class="btn btn-primary" role="button">Restore Backup<input type="file" id="modalSettingsLoadBackup" class="d-none" accept="application/json"></label>
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Backup Reload Modal -->
+		<div class="modal" id="modalReloading" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalReloadingLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalReloadingLabel">Reloading</h2>
+					</div>
+					<div class="modal-body">
+						<div>Please wait...</div>
 					</div>
 				</div>
 			</div>

@@ -409,14 +409,20 @@ html[data-footerextrainfo="false"] .card-footer-top {
 .card-footer-origin-arabic-outline,
 .card-footer-origin-roman,
 .card-footer-origin-roman-outline,
-.card-footer-origin-platform {
+.card-footer-origin-platform,
+.select-icon-origin {
 	display: none;
 }
 html[data-extraoriginmarks="arabic"] .card-footer-origin-arabic,
 html[data-extraoriginmarks="arabic-outline"] .card-footer-origin-arabic-outline,
 html[data-extraoriginmarks="roman"] .card-footer-origin-roman,
 html[data-extraoriginmarks="roman-outline"] .card-footer-origin-roman-outline,
-html[data-extraoriginmarks="platforms"] .card-footer-origin-platform {
+html[data-extraoriginmarks="platforms"] .card-footer-origin-platform,
+html[data-extraoriginmarks="arabic"] .select-icon-origin-arabic,
+html[data-extraoriginmarks="arabic-outline"] .select-icon-origin-arabic-outline,
+html[data-extraoriginmarks="roman"] .select-icon-origin-roman,
+html[data-extraoriginmarks="roman-outline"] .select-icon-origin-roman-outline,
+html[data-extraoriginmarks="platforms"] .select-icon-origin-platform {
 	display: inline;
 }
 .sorting-disabled .card-sortable-handle {

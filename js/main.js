@@ -1,5 +1,5 @@
 /* globals */
-var balls, games, origins, pokemon, ribbons, translations, forms, natures, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default";
+var balls, games, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default";
 /* get settings */
 if(!localStorage.settings){
 	localStorage.settings = "{}";
@@ -251,6 +251,8 @@ function loadBackup(file, filename){
 				}
 				localStorage.pokemon = JSON.stringify(backupPokemon);
 				localStorage.boxes = JSON.stringify(backupBoxes);
+				modalSettings.toggle();
+				new bootstrap.Modal("#modalReloading").toggle();
 				location.reload();
 			} else {
 				alert("This is not a valid Ribbons.Guide backup. Your data has not changed.");
@@ -1271,14 +1273,27 @@ function selectCustomOption(o){
 		}
 		return $ball;
 	} else if(result.indexOf("pokemonFormOriginMark") > 0 || result.indexOf("filterFormOriginMark") > 0){
-		// TODO: add custom origin marks
-		var markSrc = "img/origins/" + o.id + ".png";
+		var $mark = $("<span>");
 		if(o.id === "none"){
-			markSrc = "img/ui/1x1.svg";
+			// TODO: remove duplication
+			var noneGens = [3, 4, 5];
+			var noneTypes = ["arabic", "arabic-outline", "roman", "roman-outline"];
+			var nonePlatforms = ["dsi", "gamecube", "gba"];
+			for(var i in noneGens){
+				for(var t in noneTypes){
+					$mark.append($("<img>", { "class": selectIconClass + " select-icon-origin select-icon-origin-" + noneTypes[t], "src": "img/origins/custom/" + noneTypes[t] + "/" + noneGens[i] + ".svg" }));
+				}
+			}
+			for(var p in nonePlatforms){
+				$mark.append($("<img>", { "class": selectIconClass + " select-icon-origin select-icon-origin-platform", "src": "img/origins/custom/platforms/" + nonePlatforms[p] + ".svg" }));
+			}
+			for(var lang in translations.none){
+				$mark.append($("<span>", { "class": "translation translation-" + lang}).text(translations.none[lang]));
+			}
+		} else {
+			$mark.append($("<img>", { "class": selectIconClass, "src": "img/origins/" + o.id + ".png" }))
+				.append($("<span>").text(origins[o.id].name));
 		}
-		var $mark = $("<span>")
-			.append($("<img>", { "class": selectIconClass, "src": markSrc }))
-			.append($("<span>").text(origins[o.id].name));
 		return $mark;
 	} else if(result.indexOf("pokemonFormNature") > 0){
 		var $nature = $("<span>");
@@ -1524,8 +1539,20 @@ function initRun(){
 		}
 		for(var o in origins){
 			$("#pokemonFormOriginMark, #filterFormOriginMark").prepend(new Option(origins[o].name, o));
-			// TODO: add custom origin marks
-			if(origins[o].name !== "None"){
+			// TODO: remove duplication
+			if(origins[o].name == "None"){
+				var noneGens = [3, 4, 5];
+				var noneTypes = ["arabic", "arabic-outline", "roman", "roman-outline"];
+				var nonePlatforms = ["dsi", "gamecube", "gba"];
+				for(var i in noneGens){
+					for(var t in noneTypes){
+						$("#imageHoldingArea").append($("<img>", { "src": "img/origins/custom/" + noneTypes[t] + "/" + noneGens[i] + ".svg" }));
+					}
+				}
+				for(var p in nonePlatforms){
+					$("#imageHoldingArea").append($("<img>", { "src": "img/origins/custom/platforms/" + nonePlatforms[p] + ".svg" }));
+				}
+			} else {
 				$("#imageHoldingArea").append($("<img>", { "src": "img/origins/" + o + ".png" }));
 			}
 		}
@@ -1998,6 +2025,10 @@ $(function(){
 		});
 	}
 	/* button listeners */
+	modalSettings = new bootstrap.Modal("#modalSettings");
+	$("#headerNavSettingsLink").click(function(){
+		modalSettings.toggle();
+	});
 	$("#modalSettingsSaveBackup").click(function(){
 		saveBackup();
 	});
