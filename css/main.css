@@ -250,7 +250,11 @@ label[for="pokemonFormShiny-square"] {
 		margin-right: 5px;
 	}
 }
-html[data-automemoryribbons="true"] .pokemonFormRibbon-memory-sync {
+.auto-memory-ribbon {
+	display: none;
+}
+html[data-automemoryribbons="true"] .pokemonFormRibbon-memory-sync,
+html[data-automemoryribbons="true"] .auto-memory-ribbon {
 	display: inline;
 }
 html[data-automemoryribbons="true"] #pokemonFormRibbon-contest-memory-ribbon:not(:checked),

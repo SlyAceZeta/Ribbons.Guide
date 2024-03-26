@@ -367,6 +367,8 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 		if(ribbons[ribbon].banned && ribbons[ribbon].banned.includes(dex)) continue;
 		// skip if Pokemon is Mythical and Ribbon is not allowed for Mythicals
 		if(ribbons[ribbon].nomythical && mythical) continue;
+		// skip if Ribbon is a Memory Ribbon
+		if(ribbon.startsWith("contest-memory-ribbon") || ribbon.startsWith("battle-memory-ribbon")) continue;
 
 		var ribbonGames = ribbons[ribbon].available;
 		var ribbonGens = [];
@@ -780,13 +782,12 @@ function createCard(p, id){
 	}
 
 	/* containers and filters */
-	// TODO: add handling for Battle/Contest Memory Ribbons
 	var $cardCol = $("<div>", { "class": "col", "data-name": displayName, "data-national-dex": getPokemonData(p.species, "natdex"), "data-level": p.currentlevel, "data-compatible-games": JSON.stringify(compatibleFiltered), "data-earned-ribbons": JSON.stringify(p.ribbons), "data-pokemon-id": id });
 	if(ribbonLists){
-		// TODO: add checks for World Ability Ribbon setting
 		if(Object.keys(ribbonLists.remaining).length == 0){
 			$cardCol.addClass("no-ribbons-left");
 		} else {
+			// TODO: add checks for World Ability Ribbon setting -- since changing the setting doesn't change the Pokemon list, we should have a special move-to-next-gen-with-world-ability class if World Ability is the only one remaining
 			$cardCol.attr({ "data-remaining-ribbons": JSON.stringify(ribbonLists.remaining) });
 			if(ribbonLists.nextRibbonGen > currentGen){
 				$cardCol.addClass("move-to-next-gen");
@@ -881,23 +882,78 @@ function createCard(p, id){
 	$cardHeader.append($cardHeaderButton);
 
 	/* body */
-	// TODO: add handling for Battle/Contest Memory Ribbons
 	var genderDirectory = (getPokemonData(p.species, "femsprite") && p.gender === "female") ? "female/" : "";
 	$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + p.species + ".png", "alt": getPokemonData(p.species, "names")["eng"], "title": getPokemonData(p.species, "names")["eng"] }));
 	var $cardRibbons = $("<div>", { "class": "card-ribbons flex-grow-1 d-flex flex-wrap p-1" });
-	var ribbonCount = 0;
-	var markCount = 0;
+	var ribbonCount = 0, ribbonCountGen7Check = 0, markCount = 0, battleMemoryCount = 0, contestMemoryCount = 0, battleMemory = "", contestMemory = "";
 	for(let r in p.ribbons){
 		if(ribbons[p.ribbons[r]].mark){
 			$cardRibbons.append($("<img>", { "class": p.ribbons[r], "src": "img/marks/" + p.ribbons[r] + ".png", "alt": ribbons[p.ribbons[r]].names["eng"], "title": ribbons[p.ribbons[r]].names["eng"] + " - " + ribbons[p.ribbons[r]].descs["eng"] }));
 			markCount++;
 		} else {
 			$cardRibbons.append($("<img>", { "class": p.ribbons[r], "src": "img/ribbons/" + p.ribbons[r] + ".png", "alt": ribbons[p.ribbons[r]].names["eng"], "title": ribbons[p.ribbons[r]].names["eng"] + " - " + ribbons[p.ribbons[r]].descs["eng"] }));
-			ribbonCount++;
+			if(!p.ribbons[r].startsWith("battle-memory-ribbon") && !p.ribbons[r].startsWith("contest-memory-ribbon")){
+				ribbonCount++;
+				if(ribbons[p.ribbons[r]].merge == "battle"){
+					if(!battleMemoryCount) ribbonCountGen7Check++;
+					battleMemoryCount++;
+				} else if(ribbons[p.ribbons[r]].merge == "contest"){
+					if(!contestMemoryCount) ribbonCountGen7Check++;
+					contestMemoryCount++;
+				} else {
+					ribbonCountGen7Check++;
+				}
+			}
 		}
 	}
 	if(ribbonCount == 0 && markCount == 0){
 		$cardRibbons.append($("<div>", { "class": "ms-2" }).text("This Pokémon has no ribbons."));
+	}
+	if(!p.ribbons.includes("battle-memory-ribbon") && !p.ribbons.includes("battle-memory-ribbon-gold") && battleMemoryCount > 0){
+		if(p.currentgame === "scar" || p.currentgame === "vio" || p.currentgame === "home"){
+			if(battleMemoryCount >= 7){
+				battleMemory = "gold";
+			} else {
+				battleMemory = "blue";
+			}
+		} else if(currentGen === 7){
+			if(ribbonCountGen7Check >= 8){
+				battleMemory = "gold";
+			} else {
+				battleMemory = "blue";
+			}
+		} else if(currentGen >= 6){
+			if(battleMemoryCount == 8){
+				battleMemory = "gold";
+			} else if(battleMemoryCount > 0){
+				battleMemory = "blue";
+			}
+		}
+	}
+	if(battleMemory == "gold"){
+		$cardRibbons.append($("<img>", { "class": "auto-memory-ribbon battle-memory-ribbon-gold", "src": "img/ribbons/battle-memory-ribbon-gold.png", "alt": ribbons["battle-memory-ribbon-gold"].names["eng"], "title": ribbons["battle-memory-ribbon-gold"].names["eng"] + " (" + battleMemoryCount + ") - " + ribbons["battle-memory-ribbon-gold"].descs["eng"] }));
+	} else if(battleMemory == "blue"){
+		$cardRibbons.append($("<img>", { "class": "auto-memory-ribbon battle-memory-ribbon", "src": "img/ribbons/battle-memory-ribbon.png", "alt": ribbons["battle-memory-ribbon"].names["eng"], "title": ribbons["battle-memory-ribbon"].names["eng"] + " (" + battleMemoryCount + ") - " + ribbons["battle-memory-ribbon"].descs["eng"] }));
+	}
+	if(!p.ribbons.includes("contest-memory-ribbon") && !p.ribbons.includes("contest-memory-ribbon-gold") && contestMemoryCount > 0){
+		if(currentGen === 7){
+			if(ribbonCountGen7Check >= 40){
+				contestMemory = "gold";
+			} else {
+				contestMemory = "blue";
+			}
+		} else if(currentGen > 5){
+			if(contestMemoryCount == 40){
+				contestMemory = "gold";
+			} else {
+				contestMemory = "blue";
+			}
+		}
+	}
+	if(contestMemory == "gold"){
+		$cardRibbons.append($("<img>", { "class": "auto-memory-ribbon contest-memory-ribbon-gold", "src": "img/ribbons/contest-memory-ribbon-gold.png", "alt": ribbons["contest-memory-ribbon-gold"].names["eng"], "title": ribbons["contest-memory-ribbon-gold"].names["eng"] + " (" + contestMemoryCount + ") - " + ribbons["contest-memory-ribbon-gold"].descs["eng"] }));
+	} else if(contestMemory == "blue"){
+		$cardRibbons.append($("<img>", { "class": "auto-memory-ribbon contest-memory-ribbon", "src": "img/ribbons/contest-memory-ribbon.png", "alt": ribbons["contest-memory-ribbon"].names["eng"], "title": ribbons["contest-memory-ribbon"].names["eng"] + " (" + contestMemoryCount + ") - " + ribbons["contest-memory-ribbon"].descs["eng"] }));
 	}
 	$cardBody.append($cardRibbons);
 
@@ -1696,6 +1752,7 @@ function initRun(){
 			var ribbonGen = ribbons[r].gen;
 			var ribbonGenText = translations.arabicToRoman[ribbonGen-1];
 			if(ribbons[r].available && r !== "jumbo-mark" && r !== "mini-mark"){
+				formRibbonSelect = formRibbonSelect + ", #filterFormTargetRibbons";
 				var ribbonGenMax = ribbonGen;
 				for(var gameKey in ribbons[r].available){
 					var game = ribbons[r].available[gameKey];
@@ -1709,13 +1766,14 @@ function initRun(){
 				}
 				$ribbonRowInfoName.append($("<span>", { "class": "badge text-bg-primary rounded-pill ms-2" }).text(ribbonGenText));
 				if(!r.startsWith("contest-memory-ribbon") && !r.startsWith("battle-memory-ribbon")){
-					formRibbonSelect = formRibbonSelect + ", #filterFormTargetRibbons";
 					$ribbonRow.addClass("ribbon-gen-" + ribbonGen);
 				}
 			} else {
 				$ribbonRowInfoName.append($("<span>", { "class": "badge text-bg-secondary rounded-pill" }).text("E"));
 			}
-			$(formRibbonSelect).append($ribbonOption);
+			if(!r.startsWith("contest-memory-ribbon") && !r.startsWith("battle-memory-ribbon")){
+				$(formRibbonSelect).append($ribbonOption);
+			}
 			$ribbonRowInfo.append($ribbonRowInfoName, $ribbonRowInfoDesc);
 			$ribbonRowLabel.append($ribbonRowInfo);
 			$ribbonRow.append($ribbonRowLabel);
