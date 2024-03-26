@@ -1657,9 +1657,6 @@ function initRun(){
 			var ribbonGen = ribbons[r].gen;
 			var ribbonGenText = translations.arabicToRoman[ribbonGen-1];
 			if(ribbons[r].available && r !== "jumbo-mark" && r !== "mini-mark"){
-				if(!r.startsWith("contest-memory-ribbon") && !r.startsWith("battle-memory-ribbon")){
-					var formRibbonSelect = formRibbonSelect + ", #filterFormTargetRibbons";
-				}
 				var ribbonGenMax = ribbonGen;
 				for(var gameKey in ribbons[r].available){
 					var game = ribbons[r].available[gameKey];
@@ -1672,6 +1669,10 @@ function initRun(){
 					ribbonGenText = ribbonGenText + " – " + translations.arabicToRoman[ribbonGenMax-1];
 				}
 				$ribbonRowInfoName.append($("<span>", { "class": "badge text-bg-primary rounded-pill ms-2" }).text(ribbonGenText));
+				if(!r.startsWith("contest-memory-ribbon") && !r.startsWith("battle-memory-ribbon")){
+					formRibbonSelect = formRibbonSelect + ", #filterFormTargetRibbons";
+					$ribbonRow.addClass("ribbon-gen-" + ribbonGen);
+				}
 			} else {
 				$ribbonRowInfoName.append($("<span>", { "class": "badge text-bg-secondary rounded-pill" }).text("E"));
 			}
@@ -1752,6 +1753,12 @@ function initRun(){
 					$("#pokemonFormScale").prop({ "checked": false, "disabled": false });
 				}
 			}
+		});
+		$("#pokemonFormRibbonToggle button").click(function(){
+			var toggleGen = this.dataset.gen;
+			$("#pokemonFormRibbons .ribbon-gen-" + toggleGen + " input[type='checkbox']").each(function(i, c){
+				$(c).prop("checked", !$(c).prop("checked"));
+			});
 		});
 		$("#pokemonFormSpecies").change(function(){
 			var species = $(this).val();

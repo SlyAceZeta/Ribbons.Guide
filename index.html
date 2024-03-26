@@ -299,9 +299,23 @@
 											</label>
 										</div>
 									</div>
-									<!-- TODO: mass select/deselect buttons -->
-									<div class="col-12 offset-lg-1 col-lg-10">
-										<input id="pokemonFormRibbonSearch" type="search" class="form-control" placeholder="Search Ribbons and Marks..." aria-label="Search">
+									<div class="col-12">
+										<div class="d-flex">
+											<input id="pokemonFormRibbonSearch" type="search" class="form-control w-100" placeholder="Search Ribbons/Marks..." aria-label="Search">
+											<div class="dropdown ms-3">
+												<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+													Toggle all...
+												</button>
+												<ul id="pokemonFormRibbonToggle" class="dropdown-menu">
+													<li><button class="dropdown-item" type="button" data-gen="3">introduced in Gen III</button></li>
+													<li><button class="dropdown-item" type="button" data-gen="4">introduced in Gen IV</button></li>
+													<li><button class="dropdown-item" type="button" data-gen="6">introduced in Gen VI</button></li>
+													<li><button class="dropdown-item" type="button" data-gen="7">introduced in Gen VII</button></li>
+													<li><button class="dropdown-item" type="button" data-gen="8">introduced in Gen VIII</button></li>
+													<li><button class="dropdown-item" type="button" data-gen="9">introduced in Gen IX</button></li>
+												</ul>
+											</div>
+										</div>
 									</div>
 									<div class="col-12">
 										<ul id="pokemonFormRibbons" class="list-group overflow-y-scroll border">

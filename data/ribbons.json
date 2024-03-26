@@ -741,43 +741,6 @@
 			"chs": "那时很努力的"
 		}
 	},
-	"country-ribbon": {
-		"gen": 3,
-		"available": null,
-		"names": {
-			"ger": "Band des Landes",
-			"eng": "Country Ribbon",
-			"spa": "Cinta Campo",
-			"fre": "Ruban Pays",
-			"ita": "Fiocco Paese",
-			"jpn": "カントリーリボン",
-			"kor": "컨트리리본",
-			"cht": "地區獎章",
-			"chs": "地区奖章"
-		},
-		"descs": {
-			"ger": "Band zur Ehrung des Champs der Pokémon-Liga.",
-			"eng": "A Ribbon awarded to a Pokémon League Champion.",
-			"spa": "Cinta obtenida por vencer en la Liga Pokémon.",
-			"fre": "Ruban récompensant la victoire à la Ligue Pokémon.",
-			"ita": "Fiocco consegnato al Campione della Lega Pokémon.",
-			"jpn": "ポケモンリーグ 優勝　記念リボン",
-			"kor": "포켓몬리그 우승 기념리본",
-			"cht": "寶可夢聯盟冠軍紀念獎章。",
-			"chs": "宝可梦联盟冠军纪念奖章。"
-		},
-		"titles": {
-			"ger": "Sieger",
-			"eng": "the Victor",
-			"spa": "el Victorioso",
-			"fre": "le Victorieux",
-			"ita": "trionfante",
-			"jpn": "ゆうしょうしゃの",
-			"kor": "우승자",
-			"cht": "優勝者",
-			"chs": "优胜者"
-		}
-	},
 	"national-ribbon": {
 		"optional": true,
 		"gen": 3,
@@ -857,6 +820,43 @@
 			"kor": "100명에게 승리한",
 			"cht": "１００連勝的",
 			"chs": "１００连胜的"
+		}
+	},
+	"country-ribbon": {
+		"gen": 3,
+		"available": null,
+		"names": {
+			"ger": "Band des Landes",
+			"eng": "Country Ribbon",
+			"spa": "Cinta Campo",
+			"fre": "Ruban Pays",
+			"ita": "Fiocco Paese",
+			"jpn": "カントリーリボン",
+			"kor": "컨트리리본",
+			"cht": "地區獎章",
+			"chs": "地区奖章"
+		},
+		"descs": {
+			"ger": "Band zur Ehrung des Champs der Pokémon-Liga.",
+			"eng": "A Ribbon awarded to a Pokémon League Champion.",
+			"spa": "Cinta obtenida por vencer en la Liga Pokémon.",
+			"fre": "Ruban récompensant la victoire à la Ligue Pokémon.",
+			"ita": "Fiocco consegnato al Campione della Lega Pokémon.",
+			"jpn": "ポケモンリーグ 優勝　記念リボン",
+			"kor": "포켓몬리그 우승 기념리본",
+			"cht": "寶可夢聯盟冠軍紀念獎章。",
+			"chs": "宝可梦联盟冠军纪念奖章。"
+		},
+		"titles": {
+			"ger": "Sieger",
+			"eng": "the Victor",
+			"spa": "el Victorioso",
+			"fre": "le Victorieux",
+			"ita": "trionfante",
+			"jpn": "ゆうしょうしゃの",
+			"kor": "우승자",
+			"cht": "優勝者",
+			"chs": "优胜者"
 		}
 	},
 	"world-ribbon": {
@@ -1697,80 +1697,6 @@
 			"chs": "保持厉害纪录的"
 		}
 	},
-	"classic-ribbon": {
-		"gen": 4,
-		"available": null,
-		"names": {
-			"ger": "Klassisches Band",
-			"eng": "Classic Ribbon",
-			"spa": "Cinta Clásica",
-			"fre": "Ruban Classique",
-			"ita": "Fiocco Classico",
-			"jpn": "クラシックリボン",
-			"kor": "클래식리본",
-			"cht": "經典獎章",
-			"chs": "经典奖章"
-		},
-		"descs": {
-			"ger": "Band zur Auszeichnung von wahren Pokémon-Liebhabern.",
-			"eng": "A Ribbon that proclaims love for Pokémon.",
-			"spa": "Cinta que demuestra que te encantan los Pokémon.",
-			"fre": "Ruban qui montre l'amour porté à un Pokémon.",
-			"ita": "Fiocco che proclama amore per i Pokémon.",
-			"jpn": "ポケモンが　大好きな　ことを 証明する　記念リボン",
-			"kor": "포켓몬을 매우 좋아하는 것을 증명하는 기념리본",
-			"cht": "代表著非常喜歡寶可夢的紀念獎章。",
-			"chs": "代表着非常喜欢宝可梦的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Pokémon-Fan",
-			"eng": "the Pokémon Fan",
-			"spa": "el Pokéfan",
-			"fre": "le Fan de Pokémon",
-			"ita": "fan dei Pokémon",
-			"jpn": "ポケモンずきの",
-			"kor": "포켓몬을 좋아하는",
-			"cht": "喜歡寶可夢的",
-			"chs": "喜欢宝可梦的"
-		}
-	},
-	"premier-ribbon": {
-		"gen": 4,
-		"available": null,
-		"names": {
-			"ger": "Premierband",
-			"eng": "Premier Ribbon",
-			"spa": "Cinta Principal",
-			"fre": "Ruban Premier",
-			"ita": "Fiocco Principale",
-			"jpn": "プレミアリボン",
-			"kor": "프리미어리본",
-			"cht": "紀念獎章",
-			"chs": "纪念奖章"
-		},
-		"descs": {
-			"ger": "Band zur Erinnerung an einen besonderen Tag.",
-			"eng": "A Ribbon awarded for a special holiday.",
-			"spa": "Cinta de vacaciones especiales.",
-			"fre": "Ruban commémorant un jour spécial.",
-			"ita": "Fiocco conferito per una celebrazione speciale.",
-			"jpn": "記念日　記念リボン",
-			"kor": "기념일 기념리본",
-			"cht": "紀念日的紀念獎章。",
-			"chs": "纪念日的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Jubilar",
-			"eng": "the Celebratory",
-			"spa": "el Festejador",
-			"fre": "le Fêtard",
-			"ita": "festoso",
-			"jpn": "きねんびをすごした",
-			"kor": "기념일을 보낸",
-			"cht": "度過了紀念日的",
-			"chs": "度过了纪念日的"
-		}
-	},
 	"cool-ribbon-sinnoh": {
 		"gen": 4,
 		"banned": ["ditto", "unown", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"],
@@ -2329,6 +2255,80 @@
 			"ita": "Super Gara di Grinta Vincitore Livello Master!",
 			"jpn": "スーパーコンテスト　たくましさ　ぶもん　マスターランク　ゆうしょう！",
 			"kor": "슈퍼콘테스트 아름다움 부문 마스터랭크 우승!"
+		}
+	},
+	"classic-ribbon": {
+		"gen": 4,
+		"available": null,
+		"names": {
+			"ger": "Klassisches Band",
+			"eng": "Classic Ribbon",
+			"spa": "Cinta Clásica",
+			"fre": "Ruban Classique",
+			"ita": "Fiocco Classico",
+			"jpn": "クラシックリボン",
+			"kor": "클래식리본",
+			"cht": "經典獎章",
+			"chs": "经典奖章"
+		},
+		"descs": {
+			"ger": "Band zur Auszeichnung von wahren Pokémon-Liebhabern.",
+			"eng": "A Ribbon that proclaims love for Pokémon.",
+			"spa": "Cinta que demuestra que te encantan los Pokémon.",
+			"fre": "Ruban qui montre l'amour porté à un Pokémon.",
+			"ita": "Fiocco che proclama amore per i Pokémon.",
+			"jpn": "ポケモンが　大好きな　ことを 証明する　記念リボン",
+			"kor": "포켓몬을 매우 좋아하는 것을 증명하는 기념리본",
+			"cht": "代表著非常喜歡寶可夢的紀念獎章。",
+			"chs": "代表着非常喜欢宝可梦的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Pokémon-Fan",
+			"eng": "the Pokémon Fan",
+			"spa": "el Pokéfan",
+			"fre": "le Fan de Pokémon",
+			"ita": "fan dei Pokémon",
+			"jpn": "ポケモンずきの",
+			"kor": "포켓몬을 좋아하는",
+			"cht": "喜歡寶可夢的",
+			"chs": "喜欢宝可梦的"
+		}
+	},
+	"premier-ribbon": {
+		"gen": 4,
+		"available": null,
+		"names": {
+			"ger": "Premierband",
+			"eng": "Premier Ribbon",
+			"spa": "Cinta Principal",
+			"fre": "Ruban Premier",
+			"ita": "Fiocco Principale",
+			"jpn": "プレミアリボン",
+			"kor": "프리미어리본",
+			"cht": "紀念獎章",
+			"chs": "纪念奖章"
+		},
+		"descs": {
+			"ger": "Band zur Erinnerung an einen besonderen Tag.",
+			"eng": "A Ribbon awarded for a special holiday.",
+			"spa": "Cinta de vacaciones especiales.",
+			"fre": "Ruban commémorant un jour spécial.",
+			"ita": "Fiocco conferito per una celebrazione speciale.",
+			"jpn": "記念日　記念リボン",
+			"kor": "기념일 기념리본",
+			"cht": "紀念日的紀念獎章。",
+			"chs": "纪念日的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Jubilar",
+			"eng": "the Celebratory",
+			"spa": "el Festejador",
+			"fre": "le Fêtard",
+			"ita": "festoso",
+			"jpn": "きねんびをすごした",
+			"kor": "기념일을 보낸",
+			"cht": "度過了紀念日的",
+			"chs": "度过了纪念日的"
 		}
 	},
 	"event-ribbon": {
@@ -3578,6 +3578,85 @@
 			"kor": "랭크 마스터",
 			"cht": "級別對戰大師",
 			"chs": "级别对战大师"
+		}
+	},
+	"twinkling-star-ribbon": {
+		"gen": 8,
+		"available": [
+			"bd",
+			"sp"
+		],
+		"names": {
+			"ger": "Glitzersternband",
+			"eng": "Twinkling Star Ribbon",
+			"spa": "Cinta Estrella Rutilante",
+			"fre": "Ruban Étoile Brillante",
+			"ita": "Fiocco Stella Brillante",
+			"jpn": "トゥインクルスターリボン",
+			"kor": "트윙클스타리본",
+			"cht": "閃亮之星獎章",
+			"chs": "闪亮之星奖章"
+		},
+		"descs": {
+			"ger": "Band zur Auszeichnung eines Pokémon, das in der Super-Wettbewerbs-Show perfekten Glanz gezeigt hat.",
+			"eng": "A Ribbon awarded to a Pokémon that has perfectly embodied shining brilliance in Super Contest Shows.",
+			"spa": "Cinta que se concede a un Pokémon por haber brillado con luz propia en una Gala Superconcurso.",
+			"fre": "Ruban commémoratif décerné au Pokémon ayant le plus brillé au Super Show Concours.",
+			"ita": "Fiocco conferito alla stella più brillante delle Super Gare-show.",
+			"jpn": "スーパーコンテストショー！で　最高の　輝きを 発揮した　ポケモンに　贈られる　記念リボン",
+			"kor": "슈퍼 콘테스트 쇼!에서 최고의 반짝임을 발휘한 포켓몬에게 수여되는 기념리본",
+			"cht": "贈予在超級華麗大賽中有著最耀眼表現的 寶可夢的紀念獎章。",
+			"chs": "赠予在超级华丽大赛中有着最耀眼表现的 宝可梦的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Glitzerstern",
+			"eng": "the Twinkling Star",
+			"spa": "el Rutilante",
+			"fre": "l'Étoile Brillante",
+			"ita": "Stella Brillante",
+			"jpn": "トゥインクルスター",
+			"kor": "트윙클스타",
+			"cht": "閃亮之星",
+			"chs": "闪亮之星"
+		}
+	},
+	"hisui-ribbon": {
+		"gen": 8,
+		"available": [
+			"pla"
+		],
+		"names": {
+			"ger": "Hisui-Band",
+			"eng": "Hisui Ribbon",
+			"spa": "Cinta Hisui",
+			"fre": "Ruban Hisui",
+			"ita": "Fiocco Hisui",
+			"jpn": "ヒスイリボン",
+			"kor": "히스이리본",
+			"cht": "洗翠獎章",
+			"chs": "洗翠奖章"
+		},
+		"descs": {
+			"ger": "Band zur Auszeichnung eines Pokémon, das in der fernen Vergangenheit in Hisui für ein Foto posiert hat.",
+			"eng": "A Ribbon awarded to a Pokémon that posed for a photograph in Hisui in the distant past.",
+			"spa": "Cinta concedida a un Pokémon que hizo de modelo para una fotografía tiempo ha en la región de Hisui.",
+			"fre": "Ruban commémorant une séance photo effectuée à Hisui dans un passé lointain.",
+			"ita": "Fiocco conferito per essere stati scelti come modelli di scatti fotografici a Hisui in un lontano passato.",
+			"jpn": "ヒスイで　遠い昔に　写真の モデルになった　記念の　リボン",
+			"kor": "먼 옛날 히스이에서 사진 모델이 된 기념리본",
+			"cht": "為紀念遙遠過去在洗翠成為 照片模特兒的獎章。",
+			"chs": "为纪念在洗翠成为了 遥远过去的照片模特的奖章。"
+		},
+		"titles": {
+			"ger": "Zeitzeuge",
+			"eng": "of the Distant Past",
+			"spa": "el Viajero del Pasado",
+			"fre": "le Témoin du Passé",
+			"ita": "di un lontano passato",
+			"jpn": "とおいむかしの",
+			"kor": "먼 옛날의",
+			"cht": "遙遠過去的",
+			"chs": "遥远过去的"
 		}
 	},
 	"lunchtime-mark": {
@@ -5288,85 +5367,6 @@
 			"kor": "어딘가 지쳐 보이는",
 			"cht": "看似疲憊的",
 			"chs": "看似疲惫的"
-		}
-	},
-	"twinkling-star-ribbon": {
-		"gen": 8,
-		"available": [
-			"bd",
-			"sp"
-		],
-		"names": {
-			"ger": "Glitzersternband",
-			"eng": "Twinkling Star Ribbon",
-			"spa": "Cinta Estrella Rutilante",
-			"fre": "Ruban Étoile Brillante",
-			"ita": "Fiocco Stella Brillante",
-			"jpn": "トゥインクルスターリボン",
-			"kor": "트윙클스타리본",
-			"cht": "閃亮之星獎章",
-			"chs": "闪亮之星奖章"
-		},
-		"descs": {
-			"ger": "Band zur Auszeichnung eines Pokémon, das in der Super-Wettbewerbs-Show perfekten Glanz gezeigt hat.",
-			"eng": "A Ribbon awarded to a Pokémon that has perfectly embodied shining brilliance in Super Contest Shows.",
-			"spa": "Cinta que se concede a un Pokémon por haber brillado con luz propia en una Gala Superconcurso.",
-			"fre": "Ruban commémoratif décerné au Pokémon ayant le plus brillé au Super Show Concours.",
-			"ita": "Fiocco conferito alla stella più brillante delle Super Gare-show.",
-			"jpn": "スーパーコンテストショー！で　最高の　輝きを 発揮した　ポケモンに　贈られる　記念リボン",
-			"kor": "슈퍼 콘테스트 쇼!에서 최고의 반짝임을 발휘한 포켓몬에게 수여되는 기념리본",
-			"cht": "贈予在超級華麗大賽中有著最耀眼表現的 寶可夢的紀念獎章。",
-			"chs": "赠予在超级华丽大赛中有着最耀眼表现的 宝可梦的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Glitzerstern",
-			"eng": "the Twinkling Star",
-			"spa": "el Rutilante",
-			"fre": "l'Étoile Brillante",
-			"ita": "Stella Brillante",
-			"jpn": "トゥインクルスター",
-			"kor": "트윙클스타",
-			"cht": "閃亮之星",
-			"chs": "闪亮之星"
-		}
-	},
-	"hisui-ribbon": {
-		"gen": 8,
-		"available": [
-			"pla"
-		],
-		"names": {
-			"ger": "Hisui-Band",
-			"eng": "Hisui Ribbon",
-			"spa": "Cinta Hisui",
-			"fre": "Ruban Hisui",
-			"ita": "Fiocco Hisui",
-			"jpn": "ヒスイリボン",
-			"kor": "히스이리본",
-			"cht": "洗翠獎章",
-			"chs": "洗翠奖章"
-		},
-		"descs": {
-			"ger": "Band zur Auszeichnung eines Pokémon, das in der fernen Vergangenheit in Hisui für ein Foto posiert hat.",
-			"eng": "A Ribbon awarded to a Pokémon that posed for a photograph in Hisui in the distant past.",
-			"spa": "Cinta concedida a un Pokémon que hizo de modelo para una fotografía tiempo ha en la región de Hisui.",
-			"fre": "Ruban commémorant une séance photo effectuée à Hisui dans un passé lointain.",
-			"ita": "Fiocco conferito per essere stati scelti come modelli di scatti fotografici a Hisui in un lontano passato.",
-			"jpn": "ヒスイで　遠い昔に　写真の モデルになった　記念の　リボン",
-			"kor": "먼 옛날 히스이에서 사진 모델이 된 기념리본",
-			"cht": "為紀念遙遠過去在洗翠成為 照片模特兒的獎章。",
-			"chs": "为纪念在洗翠成为了 遥远过去的照片模特的奖章。"
-		},
-		"titles": {
-			"ger": "Zeitzeuge",
-			"eng": "of the Distant Past",
-			"spa": "el Viajero del Pasado",
-			"fre": "le Témoin du Passé",
-			"ita": "di un lontano passato",
-			"jpn": "とおいむかしの",
-			"kor": "먼 옛날의",
-			"cht": "遙遠過去的",
-			"chs": "遥远过去的"
 		}
 	},
 	"paldea-champion-ribbon": {
