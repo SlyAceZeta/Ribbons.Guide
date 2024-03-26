@@ -323,7 +323,6 @@ function getPokemonData(dex, field, doNotSearch = false){
 function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame, currentRibbons, checkedSize, totem = false, gmax = false){
 	// TODO: merge some of this logic into a new function, see createCard
 	var earnableRibbons = {};
-	var earnableNotices = [];
 	var earnableWarnings = [];
 	var nextRibbonGen = 1000;
 	currentLevel = parseInt(currentLevel);
@@ -341,22 +340,6 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	var mythical = getPokemonData(dex, "mythical");
 	var evoWarnMon = getPokemonData(dex, "evowarnmon", true);
 	var evoWarnGen = getPokemonData(dex, "evowarngen", true);
-	var totemRestrict = false;
-	var gmaxRestrict = false;
-	// add warning for USUM Totem Pokemon
-	if(dex === "marowak-alola" || dex === "ribombee" || dex === "araquanid" || dex === "togedemaru"){
-		if(totem){
-			totemRestrict = true;
-			earnableNotices.push("usum-totem");
-		}
-	}
-	// add warning for SwSh Gigantamax Pokemon
-	if(dex === "pikachu" || dex === "eevee" || dex === "meowth" || dex == "duraludon"){
-		if(gmax){
-			gmaxRestrict = true;
-			earnableNotices.push("gigantamax");
-		}
-	}
 
 	for(let ribbon in ribbons){
 		// skip if Ribbon is already earned
@@ -384,7 +367,6 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 			if(ribbonGen && (ribbonGen >= currentGen || (ribbonGen == 8 && currentGen == 9))){
 				if(compatibleGames.includes(ribbonGame) && !((currentGame == "lgp" || currentGame == "lge") && ribbonGen == 7)){
 					// Pokemon-specific restrictions
-					// TODO: add restrictions for Totem and GMax Pokemon instead of notices
 					if(dex == "nincada"){
 						// Nincada originally from BDSP cannot enter SwSh
 						if(originGame == "bd" || originGame == "sp"){
@@ -406,6 +388,20 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 						// all other Spinda cannot enter BDSP
 						} else {
 							if(ribbonGame == "bd" || ribbonGame == "sp"){
+								continue;
+							}
+						}
+					} else if(dex === "marowak-alola" || dex === "ribombee" || dex === "araquanid" || dex === "togedemaru"){
+						// Totem-sized versions of these Pokemon cannot leave USUM
+						if(totem){
+							if(ribbonGame !== "usun" && ribbonGame !== "umoon"){
+								continue;
+							}
+						}
+					} else if(dex === "pikachu" || dex === "eevee" || dex === "meowth" || dex == "duraludon"){
+						// if these Pokemon have GMax, they cannot leave SwSh
+						if(gmax){
+							if(ribbonGame !== "sw" && ribbonGame !== "sh"){
 								continue;
 							}
 						}
@@ -516,12 +512,11 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 		}
 	}
 
-	// remove duplicate notices and warnings
-	earnableNotices = [...new Set(earnableNotices)];
+	// remove duplicate warnings
 	earnableWarnings = [...new Set(earnableWarnings)];
 
 	// return
-	return {"remaining": earnableRibbons, "notices": earnableNotices, "warnings": earnableWarnings, "nextRibbonGen": nextRibbonGen};
+	return {"remaining": earnableRibbons, "warnings": earnableWarnings, "nextRibbonGen": nextRibbonGen};
 }
 
 function setFormValidAll(){
@@ -792,9 +787,6 @@ function createCard(p, id){
 			if(ribbonLists.nextRibbonGen > currentGen){
 				$cardCol.addClass("move-to-next-gen");
 			}
-		}
-		if(ribbonLists.notices.length !== 0){
-			$cardCol.attr({ "data-ribbon-notices": JSON.stringify(ribbonLists.notices) });
 		}
 		if(ribbonLists.warnings.length !== 0){
 			$cardCol.attr({ "data-ribbon-warnings": JSON.stringify(ribbonLists.warnings) });
