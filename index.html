@@ -83,8 +83,7 @@
 						<input type="radio" class="btn-check" name="switchViewBtn" id="switchViewBtn-expanded" autocomplete="off" value="expanded" checked>
 						<label class="btn btn-outline-secondary" for="switchViewBtn-expanded"><img class="align-text-bottom" src="img/ui/expanded.svg"></label>
 					</div>
-					<!-- TODO: create boxes form -->
-					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button" data-bs-toggle="modal" data-bs-target="#modalBoxesForm">
+					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button" data-bs-toggle="modal" data-bs-target="#modalBoxes">
 						<img src="img/ui/box-closed.png" alt="Filter">
 						<span class="align-middle d-none d-md-inline">Boxes</span>
 					</button>
@@ -496,6 +495,32 @@
 					</div>
 					<div class="modal-footer justify-content-center">
 						<button type="button" class="btn btn-secondary" id="modalFilterFormReset">Reset</button>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Boxes Modal -->
+		<div class="modal fade" id="modalBoxes" tabindex="-1" aria-labelledby="modalBoxesLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalBoxesLabel">Boxes</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body p-2">
+						<div class="row g-2">
+							<div class="col-12">
+								<ul id="modalBoxesList" class="list-group overflow-y-scroll">
+									<li id="modalBoxesList-none" class="list-group-item border-0 text-center">
+										<div>You don't have any boxes!</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" id="modalBoxesNew">Add New Box</button>
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
 					</div>
 				</div>

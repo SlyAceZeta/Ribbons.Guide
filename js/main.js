@@ -21,7 +21,7 @@ if(localStorage.changelog){
 	lastChangeDate = new Date(localStorage.changelog);
 }
 /* set sortable variables in advance */
-var sortablePokemon;
+var sortablePokemon, sortableBoxes;
 
 /* change setting */
 function changeSetting(key, value){
@@ -883,10 +883,11 @@ function createCard(p, id){
 	var $cardFooterTop = $("<div>", { "class": "card-footer-top d-flex justify-content-between" })
 		.append($("<div>").text(ribbonCount + " Ribbon" + (ribbonCount !== 1 ? "s" : "") + (markCount ? ", " + markCount + " Mark" + (markCount !== 1 ? "s" : "") : "")));
 	if(p.box !== -1){
+		$cardCol.attr("data-box", "" + p.box);
 		var boxName = userBoxes[p.box];
-		var $cardFooterBox = $("<div>")
+		var $cardFooterBox = $("<div>", { "class": "card-footer-top-box" })
 			.append($("<img>", { "class": "align-text-top me-1", "src": "img/ui/box-closed.png", "alt": "Box", "title": "Box" }))
-			.append($("<span>").text(boxName));
+			.append($("<span>", { "class": "card-footer-top-box-name" }).text(boxName));
 		$cardFooterTop.append($cardFooterBox);
 	}
 	var $cardFooterBottom = $("<div>", { "class": "card-footer-bottom d-flex justify-content-between" });
@@ -1008,20 +1009,24 @@ function resetPokemonForm(edit = false){
 	$("#pokemonFormRibbons-none").addClass("d-none");
 }
 
+function relistFilterBoxes(){
+	var $boxNone = $("<option>", { "value": "-1" }).text(translations.none["eng"]);
+	for(var lang in translations.none){
+		$boxNone.attr("data-lang-" + lang, translations.none[lang]);
+	}
+	$("#filterFormBox").html(new Option()).append($boxNone);
+	for(var b in userBoxes){
+		$("#filterFormBox").append(new Option(userBoxes[b], b));
+	}
+}
+
 /* reset filter form */
 function resetFilterForm(relistBoxes = false){
 	filterState = "reset";
 
 	/* re-populate boxes dropdown */
 	if(relistBoxes){
-		var $boxNone = $("<option>", { "value": "-1" }).text(translations.none["eng"]);
-		for(var lang in translations.none){
-			$boxNone.attr("data-lang-" + lang, translations.none[lang]);
-		}
-		$("#filterFormBox").html(new Option()).append($boxNone);
-		for(var b in userBoxes){
-			$("#filterFormBox").append(new Option(userBoxes[b], b));
-		}
+		relistFilterBoxes();
 	}
 
 	/* reset all options */
@@ -1201,7 +1206,7 @@ function filterPokemon(p, data){
 
 function filterPokemonList(){
 	$("#tracker-grid .col").each(function(){
-		var pokemonToFilter = userPokemon[$(this).index()];
+		var pokemonToFilter = userPokemon[this.dataset.pokemonId];
 		if(filterPokemon(pokemonToFilter, this.dataset)){
 			$(this).show();
 		} else {
@@ -1355,6 +1360,103 @@ function selectCustomOption(o){
 		return $shiny;
 	} else {
 		return o.text;
+	}
+}
+
+function boxRow(name){
+	var $boxRow = $("<li>", { "class": "list-group-item list-group-item-action d-flex align-items-center border-0 px-1" });
+	var $boxRowInner = $("<div>", { "class": "d-flex w-100 justify-content-between align-items-center" });
+	var $boxRowLeft = $("<div>")
+		.append($("<img>", { "class": "ms-1 align-middle img-box", "src": "img/ui/box-closed.png", "alt": "Box", "title": "Box" }))
+		.append($("<span>", { "class": "ms-2 align-middle" }).text(name));
+	var $boxRowRight = $("<div>", { "class": "box-controls" })
+		.append($("<button>", { "class": "btn btn-link p-0 lh-1 align-middle", "onclick": "editBox()" }).html($("<img>", { "class": "align-middle", "src": "img/ui/edit.svg", "alt": "Edit", "title": "Edit" })))
+		.append($("<button>", { "class": "ms-2 btn btn-link p-0 lh-1 align-middle", "onclick": "deleteBox()" }).html($("<img>", { "class": "align-middle", "src": "img/ui/delete.svg", "alt": "Delete", "title": "Delete" })));
+	$boxRowInner.append($boxRowLeft, $boxRowRight);
+	$boxRow.append($boxRowInner);
+	return $boxRow;
+}
+
+function populateBoxes(){
+	$("#modalBoxesList li:not(#modalBoxesList-none)").remove();
+	for(var b in userBoxes){
+		$("#modalBoxesList").append(boxRow(userBoxes[b]));
+	}
+}
+
+function createOrEditBox(edit = null, editID = -1){
+	var boxName;
+	if(edit){
+		boxName = prompt("Change box name:", edit);
+	} else {
+		boxName = prompt("Add a new box:");
+	}
+	if(boxName){
+		if(edit){
+			if(boxName === edit) return;
+			userBoxes[editID] = boxName;
+			$("#modalBoxesList li:nth-child(" + (editID+2) + ")").replaceWith(boxRow(boxName));
+			$("#tracker-grid .col").each(function(){
+				if(this.dataset.box == editID){
+					$(this).find(".card-footer-top-box-name").text(boxName);
+				}
+			});
+		} else {
+			userBoxes.push(boxName);
+			$("#modalBoxesList").append(boxRow(boxName));
+		}
+		relistFilterBoxes();
+		if(activeFilters.box){
+			if(edit && activeFilters.box === edit){
+				$("#filterFormBox").val(editID);
+			} else {
+				$("#filterFormBox").val(activeFilters.box);
+			}
+		}
+		localStorage.boxes = JSON.stringify(userBoxes);
+	}
+}
+
+function editBox(){
+	var listContainer = $(event.target).parents(".list-group-item");
+	var boxID = listContainer.index() - 1;
+	createOrEditBox(userBoxes[boxID], boxID);
+}
+
+function deleteBox(){
+	var listContainer = $(event.target).parents(".list-group-item");
+	var boxID = listContainer.index() - 1;
+	if(confirm("Are you sure you want to delete " + userBoxes[boxID] + "? All of the Pokémon in " + userBoxes[boxID] + " will become unsorted.")){
+		listContainer.fadeOut(250, function(){
+			$(this).remove();
+		});
+		userBoxes.splice(boxID, 1);
+		localStorage.boxes = JSON.stringify(userBoxes);
+		var pokemonChanges = false;
+		for(var p in userPokemon){
+			if(userPokemon[p].box || userPokemon[p].box == 0){
+				if(userPokemon[p].box == boxID){
+					pokemonChanges = true;
+					$("#tracker-grid .col[data-pokemon-id='" + p + "']").removeAttr("data-box").find(".card-footer-top-box").remove();
+					userPokemon[p].box = -1;
+				} else if(Number(userPokemon[p].box) > boxID){
+					pokemonChanges = true;
+					$("#tracker-grid .col[data-pokemon-id='" + p + "']").attr("data-box", Number(userPokemon[p].box) - 1);
+					userPokemon[p].box = Number(userPokemon[p].box) - 1;
+				}
+			}
+		}
+		if(pokemonChanges){
+			localStorage.pokemon = JSON.stringify(userPokemon);
+		}
+		relistFilterBoxes();
+		if(activeFilters.box){
+			if(activeFilters.box == boxID){
+				$("#filterFormBox").val("").change();
+			} else {
+				$("#filterFormBox").val(activeFilters.box);
+			}
+		}
 	}
 }
 
@@ -1767,6 +1869,74 @@ function initRun(){
 				}
 			}
 		});
+		sortableBoxes = new Sortable($("#modalBoxesList")[0], {
+			filter: ".box-controls",
+			animation: 200,
+			put: false,
+			onEnd: function(evt){
+				if(evt.oldDraggableIndex !== evt.newDraggableIndex){
+					var oldBoxID = evt.oldDraggableIndex - 1;
+					var newBoxID = evt.newDraggableIndex - 1;
+					var movedBox = userBoxes[oldBoxID];
+					userBoxes.splice(oldBoxID, 1);
+					userBoxes.splice(newBoxID, 0, movedBox);
+					localStorage.boxes = JSON.stringify(userBoxes);
+					var pokemonChanges = false;
+					for(var p in userPokemon){
+						if(userPokemon[p].box || userPokemon[p].box == 0){
+							if(userPokemon[p].box == oldBoxID){
+								pokemonChanges = true;
+								$("#tracker-grid .col[data-pokemon-id='" + p + "']").attr("data-box", newBoxID);
+								userPokemon[p].box = newBoxID;
+							} else {
+								var oldBoxNumber = Number(userPokemon[p].box);
+								if(oldBoxID < newBoxID){
+									// box moved down the list
+									// everything higher than oldDraggableIndex and below or equal to newDraggableIndex needs to subtract 1
+									if(oldBoxNumber > oldBoxID && oldBoxNumber <= newBoxID){
+										pokemonChanges = true;
+										$("#tracker-grid .col[data-pokemon-id='" + p + "']").attr("data-box", oldBoxNumber-1);
+										userPokemon[p].box = oldBoxNumber-1;
+									}
+								} else if(oldBoxID > newBoxID){
+									// box moved up the list
+									// everything higher than or equal to newDraggableIndex and lower than oldDraggableIndex needs to add 1
+									if(oldBoxNumber < oldBoxID && oldBoxNumber >= newBoxID){
+										pokemonChanges = true;
+										$("#tracker-grid .col[data-pokemon-id='" + p + "']").attr("data-box", oldBoxNumber+1);
+										userPokemon[p].box = oldBoxNumber+1;
+									}
+								}
+							}
+						}
+					}
+					if(pokemonChanges){
+						localStorage.pokemon = JSON.stringify(userPokemon);
+					}
+					relistFilterBoxes();
+					if(activeFilters.box){
+						if(activeFilters.box == oldBoxID){
+							$("#filterFormBox").val(newBoxID).change();
+						} else {
+							var oldBoxFilter = Number(activeFilters.box);
+							if(oldBoxID < newBoxID){
+								if(oldBoxFilter > oldBoxID && oldBoxFilter <= newBoxID){
+									$("#filterFormBox").val(oldBoxFilter-1).change();
+								} else {
+									$("#filterFormBox").val(oldBoxFilter).change();
+								}
+							} else if(oldBoxID > newBoxID){
+								if(oldBoxFilter < oldBoxID && oldBoxFilter >= newBoxID){
+									$("#filterFormBox").val(oldBoxFilter+1).change();
+								} else {
+									$("#filterFormBox").val(oldBoxFilter).change();
+								}
+							}
+						}
+					}
+				}
+			}
+		});
 
 		/* initialize tooltips */
 		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
@@ -1856,6 +2026,12 @@ $(function(){
 	});
 	$("#modalFilterFormReset").click(function(){
 		resetFilterForm();
+	});
+	$("#modalBoxes").on("show.bs.modal", function(e){
+		populateBoxes();
+	});
+	$("#modalBoxesNew").click(function(){
+		createOrEditBox();
 	});
 	/* initial functions that run after all else */
 	initRun();

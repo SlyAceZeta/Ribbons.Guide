@@ -267,6 +267,29 @@ html[data-automemoryribbons="false"] .pokemonFormRibbon-memory-sync {
 #filterformTargetGamesLGPE {
 	display: none;
 }
+#modalBoxesList-none {
+	display: none;
+}
+#modalBoxesList-none:only-child {
+	display: list-item;
+}
+#modalBoxesList img {
+	width: auto;
+	height: 20px;
+}
+#modalBoxesList img.img-box {
+	height: 24px;
+}
+#modalBoxesList li {
+	border-width: 0;
+}
+#modalBoxesList li:not(:first-child):not(:last-child){
+	border-bottom-width: 1px;
+}
+#modalBoxesList .list-group-item,
+#tracker-grid button.card-sortable-handle {
+	cursor: grab;
+}
 
 /* links */
 a:not(:hover):not(:focus) {
