@@ -1849,6 +1849,28 @@ function initRun(){
 				} else {
 					$("#pokemonFormScale").prop({ "checked": false, "disabled": false });
 				}
+			} else if(ribbon.startsWith("battle-memory-ribbon")){
+				if($("#pokemonFormRibbon-battle-memory-ribbon-gold").prop("checked")){
+					$("#pokemonFormRibbon-battle-memory-ribbon").prop({ "checked": false, "disabled": true });
+				} else {
+					$("#pokemonFormRibbon-battle-memory-ribbon").prop({ "disabled": false });
+				}
+				if($("#pokemonFormRibbon-battle-memory-ribbon").prop("checked")){
+					$("#pokemonFormRibbon-battle-memory-ribbon-gold").prop({ "checked": false, "disabled": true });
+				} else {
+					$("#pokemonFormRibbon-battle-memory-ribbon-gold").prop({ "disabled": false });
+				}
+			} else if(ribbon.startsWith("contest-memory-ribbon")){
+				if($("#pokemonFormRibbon-contest-memory-ribbon-gold").prop("checked")){
+					$("#pokemonFormRibbon-contest-memory-ribbon").prop({ "checked": false, "disabled": true });
+				} else {
+					$("#pokemonFormRibbon-contest-memory-ribbon").prop({ "disabled": false });
+				}
+				if($("#pokemonFormRibbon-contest-memory-ribbon").prop("checked")){
+					$("#pokemonFormRibbon-contest-memory-ribbon-gold").prop({ "checked": false, "disabled": true });
+				} else {
+					$("#pokemonFormRibbon-contest-memory-ribbon-gold").prop({ "disabled": false });
+				}
 			}
 		});
 		$("#pokemonFormRibbonToggle button").click(function(){

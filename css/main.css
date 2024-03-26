@@ -243,6 +243,9 @@ label[for="pokemonFormShiny-square"] {
 	width: 20px;
 	margin-right: 2px;
 }
+.form-check-input:disabled ~ .pokemonFormRibbon-memory-sync {
+	opacity: 0.5;
+}
 @media (min-width: 992px) {
 	#pokemonFormRibbons img.pokemonFormRibbon-memory-sync {
 		width: 23px;
