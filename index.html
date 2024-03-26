@@ -88,9 +88,14 @@
 						<img src="img/ui/box-closed.png" alt="Filter">
 						<span class="align-middle d-none d-md-inline">Boxes</span>
 					</button>
-					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button" data-bs-toggle="modal" data-bs-target="#modalFilterForm">
+					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1 position-relative" type="button" data-bs-toggle="modal" data-bs-target="#modalFilterForm">
 						<img src="img/ui/filter.svg" alt="Filter">
 						<span class="align-middle d-none d-md-inline">Filters</span>
+						<span id="sectionTrackerFilterCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+							<span id="sectionTrackerFilterCount-num" class="align-middle">0</span>
+							<span class="visually-hidden">active filters</span>
+							<span id="sectionTrackerFilterCount-sort" class="align-middle">⇵</span>
+						</span>
 					</button>
 				</div>
 			</div>
@@ -476,16 +481,16 @@
 							</div>
 							<div class="col-lg-6">
 								<label for="filterFormTargetGames" class="form-label">Games it can travel to</label>
-								<select id="filterFormTargetGames" class="form-select"></select>
+								<select id="filterFormTargetGames" class="form-select" data-placeholder="" data-allow-clear="true"></select>
 								<div class="form-text" id="filterformTargetGamesLGPE">Pokémon currently in HOME are not considered able to travel to <em>Let's Go, Pikachu!/Eevee!</em>.</div>
 							</div>
 							<div class="col-lg-6">
 								<label for="filterFormEarnedRibbons" class="form-label">Earned Ribbons</label>
-								<select id="filterFormEarnedRibbons" class="form-select"></select>
+								<select id="filterFormEarnedRibbons" class="form-select" multiple></select>
 							</div>
 							<div class="col-lg-6">
 								<label for="filterFormTargetRibbons" class="form-label">Ribbons it can earn</label>
-								<select id="filterFormTargetRibbons" class="form-select"></select>
+								<select id="filterFormTargetRibbons" class="form-select" multiple></select>
 							</div>
 						</div>
 					</div>

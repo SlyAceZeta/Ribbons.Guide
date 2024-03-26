@@ -1,5 +1,5 @@
 /* globals */
-var balls, games, origins, pokemon, ribbons, translations, forms, natures, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1;
+var balls, games, origins, pokemon, ribbons, translations, forms, natures, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default";
 /* get settings */
 if(!localStorage.settings){
 	localStorage.settings = "{}";
@@ -298,7 +298,8 @@ function getPokemonData(dex, field, doNotSearch = false){
 	}
 }
 
-function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame, currentRibbons, checkedSize){
+function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame, currentRibbons, checkedSize, totem = false, gmax = false){
+	// TODO: merge some of this logic into a new function, see createCard
 	var earnableRibbons = {};
 	var earnableNotices = [];
 	var earnableWarnings = [];
@@ -318,17 +319,19 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	var mythical = getPokemonData(dex, "mythical");
 	var evoWarnMon = getPokemonData(dex, "evowarnmon", true);
 	var evoWarnGen = getPokemonData(dex, "evowarngen", true);
+	var totemRestrict = false;
+	var gmaxRestrict = false;
 	// add warning for USUM Totem Pokemon
-	// TODO: update this to look for the Totem setting instead of current game
 	if(dex === "marowak-alola" || dex === "ribombee" || dex === "araquanid" || dex === "togedemaru"){
-		if((currentGame === "usun" || currentGame === "umoon") && (originGame === "usun" || originGame === "umoon")){
+		if(totem){
+			totemRestrict = true;
 			earnableNotices.push("usum-totem");
 		}
 	}
 	// add warning for SwSh Gigantamax Pokemon
-	// TODO: update this to look for the GMax setting instead of current game
 	if(dex === "pikachu" || dex === "eevee" || dex === "meowth" || dex == "duraludon"){
-		if(currentGame === "sw" || currentGame === "sh" || currentGame === "home"){
+		if(gmax){
+			gmaxRestrict = true;
 			earnableNotices.push("gigantamax");
 		}
 	}
@@ -354,9 +357,10 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 			}
 
 			var ribbonGen = parseInt(getGameData(ribbonGame, "gen"));
-			if(ribbonGen && ribbonGen >= currentGen){
+			if(ribbonGen && (ribbonGen >= currentGen || (ribbonGen == 8 && currentGen == 9))){
 				if(compatibleGames.includes(ribbonGame) && !((currentGame == "lgp" || currentGame == "lge") && ribbonGen == 7)){
 					// Pokemon-specific restrictions
+					// TODO: add restrictions for Totem and GMax Pokemon instead of notices
 					if(dex == "nincada"){
 						// Nincada originally from BDSP cannot enter SwSh
 						if(originGame == "bd" || originGame == "sp"){
@@ -614,11 +618,13 @@ function savePokemon(edit = false){
 	if(continueForm){
 		if(edit){
 			userPokemon[modalPokemonEditing] = newP;
-			$("#tracker-grid .col:nth-child(" + (modalPokemonEditing+1) + ")").replaceWith(createCard(newP));
+			$("#tracker-grid .col[data-pokemon-id='" + modalPokemonEditing + "']").replaceWith(createCard(newP, modalPokemonEditing));
 		} else {
 			userPokemon.push(newP);
-			$("#tracker-grid").append(createCard(newP));
+			$("#tracker-grid").append(createCard(newP, userPokemon.length-1));
 		}
+		sortPokemonList();
+		filterPokemonList();
 		localStorage.pokemon = JSON.stringify(userPokemon);
 		modalPokemonForm.toggle();
 	} else {
@@ -629,7 +635,7 @@ function savePokemon(edit = false){
 function editPokemon(){
 	resetPokemonForm(true);
 	var cardContainer = $(event.target).parents(".col");
-	var pokemonID = cardContainer.index();
+	var pokemonID = cardContainer[0].dataset.pokemonId;
 	modalPokemonState = "editing";
 	modalPokemonEditing = pokemonID;
 	var pokemonToEdit = userPokemon[pokemonID];
@@ -671,19 +677,19 @@ function editPokemon(){
 
 function copyPokemon(){
 	var cardContainer = $(event.target).parents(".col");
-	var pokemonID = cardContainer.index();
+	var pokemonID = cardContainer[0].dataset.pokemonId;
 	var pokemonName = cardContainer.find(".card-header-name").text();
 	if(confirm("Are you sure you want to create a copy of " + pokemonName + "?")){
 		var pokemonToCopy = userPokemon[pokemonID];
 		userPokemon.splice(pokemonID, 0, pokemonToCopy);
 		localStorage.pokemon = JSON.stringify(userPokemon);
-		cardContainer.after(createCard(pokemonToCopy));
+		cardContainer.after(createCard(pokemonToCopy, userPokemon.length-1));
 	}
 }
 
 function deletePokemon(){
 	var cardContainer = $(event.target).parents(".col");
-	var pokemonID = cardContainer.index();
+	var pokemonID = cardContainer[0].dataset.pokemonId;
 	var pokemonName = cardContainer.find(".card-header-name").text();
 	if(confirm("Are you sure you want to delete " + pokemonName + "? This is permanent!")){
 		cardContainer.fadeOut(250, function(){
@@ -694,10 +700,12 @@ function deletePokemon(){
 	}
 }
 
-function createCard(p){
+function createCard(p, id){
 	/* information */
+	// TODO: merge some of this logic into a new function that returns earnable ribbons *and* compatible games
 	var ribbonLists;
 	var currentGen = 1000;
+	var virtualConsole = false;
 	if(p.currentgame){
 		if(p.currentgame == "go"){
 			currentGen = 8;
@@ -705,6 +713,7 @@ function createCard(p){
 			currentGen = parseInt(getGameData(p.currentgame, "gen"));
 		}
 		if(currentGen < 3){
+			virtualConsole = true;
 			currentGen = 7;
 		}
 	}
@@ -713,7 +722,7 @@ function createCard(p){
 		metLevel = p.metlevel;
 	}
 	if(p.currentgame && p.origingame){
-		ribbonLists = getEarnableRibbons(p.species, p.currentlevel, metLevel, p.currentgame, p.origingame, p.ribbons, p.scale);
+		ribbonLists = getEarnableRibbons(p.species, p.currentlevel, metLevel, p.currentgame, p.origingame, p.ribbons, p.scale, p.totem, p.gmax);
 	}
 	var displayName = p.nickname;
 	if(displayName.length === 0){
@@ -721,16 +730,36 @@ function createCard(p){
 		if(!displayNameLang) displayNameLang = "eng";
 		displayName = getPokemonData(p.species, "names")[displayNameLang];
 	}
+	var compatibleGames = getPokemonData(p.species, "games");
+	var compatibleFiltered = [];
+	if(currentGen < 1000){
+		for(var cg in compatibleGames){
+			var compatibleTest = false;
+			if(games[compatibleGames[cg]]){
+				if(compatibleGames[cg] == "lgp" || compatibleGames[cg] == "lge"){
+					if(p.currentgame == "lgp" || p.currentgame == "lge" || p.currentgame == "go"){
+						compatibleTest = true;
+					}
+				} else {
+					var targetGen = parseInt(getGameData(compatibleGames[cg], "gen"));
+					if(targetGen >= currentGen || (virtualConsole && targetGen < 3) || (currentGen == 9 && targetGen == 8)){
+						compatibleTest = true;
+					}
+				}
+				if(compatibleTest){
+					compatibleFiltered.push(compatibleGames[cg]);
+					var comboToAdd = getGameData(compatibleGames[cg], "partOf", true);
+					if(comboToAdd && !compatibleFiltered.includes(comboToAdd)){
+						compatibleFiltered.push(comboToAdd);
+					}
+				}
+			}
+		}
+	}
 
 	/* containers and filters */
 	// TODO: add handling for Battle/Contest Memory Ribbons
-	var $cardCol = $("<div>", { "class": "col", "data-name": displayName, "data-national-dex": getPokemonData(p.species, "natdex"), "data-level": p.currentlevel, "data-gender": p.gender, "data-shiny": p.shiny, "data-language": p.language, "data-ball": p.ball, "data-origin-mark": p.originmark, "data-current-ribbons": p.ribbons });
-	if(p.origingame){
-		$cardCol.attr({ "data-origin-game": p.origingame });
-	}
-	if(p.currentgame){
-		$cardCol.attr({ "data-current-game": p.currentgame });
-	}
+	var $cardCol = $("<div>", { "class": "col", "data-name": displayName, "data-national-dex": getPokemonData(p.species, "natdex"), "data-level": p.currentlevel, "data-compatible-games": JSON.stringify(compatibleFiltered), "data-earned-ribbons": JSON.stringify(p.ribbons), "data-pokemon-id": id });
 	if(ribbonLists){
 		// TODO: add checks for World Ability Ribbon setting
 		if(Object.keys(ribbonLists.remaining).length == 0){
@@ -742,10 +771,10 @@ function createCard(p){
 			}
 		}
 		if(ribbonLists.notices.length !== 0){
-			$cardCol.attr({ "data-ribbon-notices": ribbonLists.notices });
+			$cardCol.attr({ "data-ribbon-notices": JSON.stringify(ribbonLists.notices) });
 		}
 		if(ribbonLists.warnings.length !== 0){
-			$cardCol.attr({ "data-ribbon-warnings": ribbonLists.warnings });
+			$cardCol.attr({ "data-ribbon-warnings": JSON.stringify(ribbonLists.warnings) });
 		}
 	}
 	var $cardContainer = $("<div>", { "class": "card border-0" });
@@ -770,7 +799,7 @@ function createCard(p){
 			}
 		}
 	}
-	$cardHeaderLeft.append($cardHeaderBallMain).append($cardHeaderBallStrange);
+	$cardHeaderLeft.append($cardHeaderBallMain, $cardHeaderBallStrange);
 	var titleRibbon;
 	var titlePositions = {
 		"ger": "prefix",
@@ -854,7 +883,6 @@ function createCard(p){
 	var $cardFooterTop = $("<div>", { "class": "card-footer-top d-flex justify-content-between" })
 		.append($("<div>").text(ribbonCount + " Ribbon" + (ribbonCount !== 1 ? "s" : "") + (markCount ? ", " + markCount + " Mark" + (markCount !== 1 ? "s" : "") : "")));
 	if(p.box !== -1){
-		$cardCol.attr("data-box", "" + p.box);
 		var boxName = userBoxes[p.box];
 		var $cardFooterBox = $("<div>")
 			.append($("<img>", { "class": "align-text-top me-1", "src": "img/ui/box-closed.png", "alt": "Box", "title": "Box" }))
@@ -870,8 +898,9 @@ function createCard(p){
 		displayLang === "sp-eu";
 	}
 	var $cardFooterBottomLeft = $("<div>")
-		.append($cardFooterBottomLevel)
-		.append($("<span>", { "class": "align-middle card-footer-language d-inline-block text-center rounded-pill fw-bold mx-2 text-uppercase" }).text(displayLang));
+		.append($cardFooterBottomLevel,
+			$("<span>", { "class": "align-middle card-footer-language d-inline-block text-center rounded-pill fw-bold mx-2 text-uppercase" }).text(displayLang)
+		);
 	var originName = origins[p.originmark].name;
 	if(p.origingame){
 		originName = getGameData(p.origingame, "name");
@@ -892,11 +921,11 @@ function createCard(p){
 		.append($("<button>", { "class": "btn btn-link p-0 ms-2 align-text-bottom", "onclick": "editPokemon()" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/edit.svg", "alt": "Edit", "title": "Edit" })))
 		.append($("<button>", { "class": "btn btn-link p-0 ms-2 align-text-bottom", "onclick": "copyPokemon()" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/copy.svg", "alt": "Copy", "title": "Copy" })))
 		.append($("<button>", { "class": "btn btn-link p-0 ms-2 align-text-bottom", "onclick": "deletePokemon()" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/delete.svg", "alt": "Delete", "title": "Delete" })));
-	$cardFooterBottom.append($cardFooterBottomLeft).append($cardFooterBottomRight);
-	$cardFooter.append($cardFooterTop).append($cardFooterBottom);
+	$cardFooterBottom.append($cardFooterBottomLeft, $cardFooterBottomRight);
+	$cardFooter.append($cardFooterTop, $cardFooterBottom);
 
 	/* create and return the card */
-	$cardContainer.append($cardHeader).append($cardBody).append($cardFooter);
+	$cardContainer.append($cardHeader, $cardBody, $cardFooter);
 	$cardCol.append($cardContainer);
 	return $cardCol;
 }
@@ -980,7 +1009,22 @@ function resetPokemonForm(edit = false){
 }
 
 /* reset filter form */
-function resetFilterForm(){
+function resetFilterForm(relistBoxes = false){
+	filterState = "reset";
+
+	/* re-populate boxes dropdown */
+	if(relistBoxes){
+		var $boxNone = $("<option>", { "value": "-1" }).text(translations.none["eng"]);
+		for(var lang in translations.none){
+			$boxNone.attr("data-lang-" + lang, translations.none[lang]);
+		}
+		$("#filterFormBox").html(new Option()).append($boxNone);
+		for(var b in userBoxes){
+			$("#filterFormBox").append(new Option(userBoxes[b], b));
+		}
+	}
+
+	/* reset all options */
 	$("#modalFilterForm select, #modalFilterForm input").each(function(){
 		if(this.id === "filterFormSort"){
 			$(this).val("default").change();
@@ -988,6 +1032,183 @@ function resetFilterForm(){
 			$(this).val("").change();
 		}
 	});
+	$("#tracker-grid .col").show();
+	filterBubble();
+	filterState = "default";
+}
+
+function sortPokemonList(){
+	var trackerList = document.querySelector("#tracker-grid");
+	var comparison = function(a, b){
+		return a.dataset.pokemonId - b.dataset.pokemonId;
+	}
+	if(activeSort == "dexasc"){
+		comparison = function(a, b){
+			return a.dataset.nationalDex - b.dataset.nationalDex;
+		}
+	} else if(activeSort == "dexdesc"){
+		comparison = function(a, b){
+			return b.dataset.nationalDex - a.dataset.nationalDex;
+		}
+	} else if(activeSort == "levelasc"){
+		comparison = function(a, b){
+			return a.dataset.level - b.dataset.level;
+		}
+	} else if(activeSort == "leveldesc"){
+		comparison = function(a, b){
+			return b.dataset.level - a.dataset.level;
+		}
+	} else if(activeSort == "nameasc"){
+		comparison = function(a, b){
+			return a.dataset.name.toLowerCase().localeCompare(b.dataset.name.toLowerCase());
+		}
+	} else if(activeSort == "namedesc"){
+		comparison = function(a, b){
+			return b.dataset.name.toLowerCase().localeCompare(a.dataset.name.toLowerCase());
+		}
+	}
+	[...trackerList.children].sort(comparison).forEach(node => trackerList.appendChild(node));
+	filterBubble();
+}
+
+function filterBubble(){
+	var activeFilterNum = Object.keys(activeFilters).length;
+	$("#sectionTrackerFilterCount-num").text(activeFilterNum);
+	if(activeSort == "default" && activeFilterNum == 0){
+		$("#sectionTrackerFilterCount, #sectionTrackerFilterCount-num, #sectionTrackerFilterCount-sort").hide();
+		if(sortablePokemon){
+			sortablePokemon.option("disabled", false);
+			$("body").removeClass("sorting-disabled");
+		}
+	} else {
+		$("#sectionTrackerFilterCount").show();
+		if(sortablePokemon){
+			sortablePokemon.option("disabled", true);
+			$("body").addClass("sorting-disabled");
+		}
+		if(activeSort == "default"){
+			$("#sectionTrackerFilterCount-sort").hide();
+		} else {
+			$("#sectionTrackerFilterCount-sort").show();
+		}
+		if(activeFilterNum){
+			$("#sectionTrackerFilterCount-num").show();
+		} else {
+			$("#sectionTrackerFilterCount-num").hide();
+		}
+	}
+
+
+}
+
+function filterPokemon(p, data){
+	var pass = true;
+	filter_check:
+	for(var f in activeFilters){
+		if(f == "gender"){
+			if(p.gender !== activeFilters[f]){
+				pass = false;
+				break;
+			}
+		} else if(f == "shiny"){
+			if(activeFilters[f] == "shiny"){
+				if(!p.shiny.length){
+					pass = false;
+					break;
+				}
+			} else if(activeFilters[f] == "normal"){
+				if(p.shiny.length){
+					pass = false;
+					break;
+				}
+			} else {
+				if(p.shiny !== activeFilters[f]){
+					pass = false;
+					break;
+				}
+			}
+		} else if(f == "language"){
+			if(p.language !== activeFilters[f]){
+				pass = false;
+				break;
+			}
+		} else if(f == "ball"){
+			if(p.ball !== activeFilters[f]){
+				pass = false;
+				break;
+			}
+		} else if(f == "currentlevel-min"){
+			if(Number(p.currentlevel) < Number(activeFilters[f])){
+				pass = false;
+				break;
+			}
+		} else if(f == "currentlevel-max"){
+			if(Number(p.currentlevel) > Number(activeFilters[f])){
+				pass = false;
+				break;
+			}
+		} else if(f == "originmark"){
+			if(p.originmark !== activeFilters[f]){
+				pass = false;
+				break;
+			}
+		} else if(f == "currentgame"){
+			if(p.currentgame !== activeFilters[f]){
+				pass = false;
+				break;
+			}
+		} else if(f == "box"){
+			if(Number(p.box) !== Number(activeFilters[f])){
+				pass = false;
+				break;
+			}
+		} else if(f == "targetgames"){
+			var targetgames = JSON.parse(data.compatibleGames);
+			if(!targetgames.includes(activeFilters[f])){
+				pass = false;
+				break;
+			}
+		} else if(f == "earnedribbons"){
+			var earnedRibbons = JSON.parse(data.earnedRibbons);
+			for(var er in activeFilters[f]){
+				if(!earnedRibbons.includes(activeFilters[f][er])){
+					pass = false;
+					break filter_check;
+				}
+			}
+		} else if(f == "targetribbons"){
+			if(data.remainingRibbons){
+				var targetRibbons = JSON.parse(data.remainingRibbons);
+				var plainTargetRibbons = [];
+				for(var game in targetRibbons){
+					plainTargetRibbons = plainTargetRibbons.concat(targetRibbons[game]);
+				}
+				plainTargetRibbons = [...new Set(plainTargetRibbons)];
+				for(var tr in activeFilters[f]){
+					if(!plainTargetRibbons.includes(activeFilters[f][tr])){
+						pass = false;
+						break filter_check;
+					}
+				}
+			} else {
+				pass = false;
+				break;
+			}
+		}
+	}
+	return pass;
+}
+
+function filterPokemonList(){
+	$("#tracker-grid .col").each(function(){
+		var pokemonToFilter = userPokemon[$(this).index()];
+		if(filterPokemon(pokemonToFilter, this.dataset)){
+			$(this).show();
+		} else {
+			$(this).hide();
+		}
+	});
+	filterBubble();
 }
 
 function updateFormSprite(){
@@ -1063,7 +1284,7 @@ function selectCustomOption(o){
 			}
 		}
 		return $nature;
-	} else if(result.indexOf("pokemonFormBox") > 0){
+	} else if(result.indexOf("pokemonFormBox") > 0 || result.indexOf("filterFormBox") > 0){
 		var $box = $("<span>");
 		var boxImage = "closed";
 		if(o.id == "-1"){
@@ -1093,26 +1314,30 @@ function selectCustomOption(o){
 			}
 		}
 		return $pokemon;
-	} else if(result.indexOf("pokemonFormTitle") > 0){
-		$title = $("<span>");
+	} else if(result.indexOf("pokemonFormTitle") > 0 || result.indexOf("filterFormEarnedRibbons") > 0 || result.indexOf("filterFormTargetRibbons") > 0){
+		$option = $("<span>");
 		if(o.id === "None"){
 			for(var lang in translations.none){
-				$title.append($("<span>", { "class": "translation translation-" + lang}).text(translations.none[lang]));
+				$option.append($("<span>", { "class": "translation translation-" + lang}).text(translations.none[lang]));
 			}
 		} else {
 			var ribbonDir = "ribbons/";
 			if(ribbons[o.id].mark){
 				ribbonDir = "marks/";
 			}
-			$title.append($("<img>", { "class": selectIconClass, "src": "img/" + ribbonDir + o.id + ".png" }));
+			$option.append($("<img>", { "class": selectIconClass, "src": "img/" + ribbonDir + o.id + ".png" }));
 			for(var oed in o.element.dataset){
 				if(oed.indexOf("lang") == 0 && oed.indexOf("langRibbon") == -1){
 					lang = oed.substring(4).toLowerCase();
-					$title.append($("<span>", { "class": "translation translation-" + lang}).text(ribbons[o.id].titles[lang]));
+					if(result.indexOf("pokemonFormTitle") > 0){
+						$option.append($("<span>", { "class": "translation translation-" + lang}).text(ribbons[o.id].titles[lang]));
+					} else if(result.indexOf("filterFormEarnedRibbons") > 0 || result.indexOf("filterFormTargetRibbons") > 0){
+						$option.append($("<span>", { "class": "translation translation-" + lang}).text(ribbons[o.id].names[lang]));
+					}
 				}
 			}
 		}
-		return $title;
+		return $option;
 	} else if(result.indexOf("filterFormGender") > 0){
 		var $gender = $("<span>")
 			.append($("<img>", { "class": selectIconClass, "src": "img/ui/gender-" + o.id + ".png" }))
@@ -1181,8 +1406,7 @@ function initRun(){
 				if(lang === "hisui") continue;
 				$ballOption.attr("data-lang-" + lang, balls[b][lang]);
 			}
-			$("#pokemonFormBall").append($ballOption);
-			$("#filterFormBall").append($ballOption);
+			$("#pokemonFormBall, #filterFormBall").append($ballOption);
 			$("#imageHoldingArea").append($("<img>", { "src": "img/balls/" + b + ".png" }));
 		}
 		for(var g in games){
@@ -1260,6 +1484,8 @@ function initRun(){
 			}
 		}
 		for(var r in ribbons){
+			var $ribbonOption = $("<option>", { "value": r }).text(ribbons[r].names["eng"]);
+			var formRibbonSelect = "#filterFormEarnedRibbons";
 			var ribbonDir = "ribbons/";
 			if(ribbons[r].mark){
 				ribbonDir = "marks/";
@@ -1275,12 +1501,16 @@ function initRun(){
 			var $ribbonRowInfoName = $("<div>", { "class": "fw-bold lh-1 my-1 d-flex w-100 justify-content-between align-items-center" });
 			var $ribbonRowInfoDesc = $("<div>", { "class": "lh-1 mb-1" });
 			for(var lang in ribbons[r].names){
+				$ribbonOption.attr("data-lang-" + lang, ribbons[r].names[lang]);
 				$ribbonRowInfoName.append($("<span>", { "class": "translation translation-" + lang }).text(ribbons[r].names[lang]));
 				$ribbonRowInfoDesc.append($("<small>", { "class": "translation translation-" + lang }).text(ribbons[r].descs[lang]));
 			}
 			var ribbonGen = ribbons[r].gen;
 			var ribbonGenText = translations.arabicToRoman[ribbonGen-1];
 			if(ribbons[r].available && r !== "jumbo-mark" && r !== "mini-mark"){
+				if(!r.startsWith("contest-memory-ribbon") && !r.startsWith("battle-memory-ribbon")){
+					var formRibbonSelect = formRibbonSelect + ", #filterFormTargetRibbons";
+				}
 				var ribbonGenMax = ribbonGen;
 				for(var gameKey in ribbons[r].available){
 					var game = ribbons[r].available[gameKey];
@@ -1296,7 +1526,8 @@ function initRun(){
 			} else {
 				$ribbonRowInfoName.append($("<span>", { "class": "badge text-bg-secondary rounded-pill" }).text("E"));
 			}
-			$ribbonRowInfo.append($ribbonRowInfoName).append($ribbonRowInfoDesc);
+			$(formRibbonSelect).append($ribbonOption);
+			$ribbonRowInfo.append($ribbonRowInfoName, $ribbonRowInfoDesc);
 			$ribbonRowLabel.append($ribbonRowInfo);
 			$ribbonRow.append($ribbonRowLabel);
 			$("#pokemonFormRibbons").append($ribbonRow);
@@ -1328,7 +1559,7 @@ function initRun(){
 		$("#filterFormSort, #filterFormLanguage, #filterFormCurrentGame, #filterFormTargetGames").select2({
 			dropdownParent: $("#modalFilterForm .modal-body")
 		});
-		$("#filterFormGender, #filterFormShiny, #filterFormBall, #filterFormOriginMark").select2({
+		$("#filterFormGender, #filterFormShiny, #filterFormBall, #filterFormOriginMark, #filterFormBox, #filterFormEarnedRibbons, #filterFormTargetRibbons").select2({
 			matcher: selectCustomMatcher,
 			templateSelection: selectCustomOption,
 			templateResult: selectCustomOption,
@@ -1418,6 +1649,43 @@ function initRun(){
 				$("#pokemonFormOriginGame").html("<option></option>").prop("disabled", true);
 			}
 		});
+		$("#modalFilterForm select:not(#filterFormSort), #modalFilterForm input[type='number']").change(function(){
+			var filterName = this.id.replace("filterForm", "").toLowerCase();
+			if($(this).val() == "" || $(this).val() === null){
+				delete activeFilters[filterName];
+			} else {
+				if(filterName.startsWith("currentlevel") && Number($(this).val()) > 100){
+					$(this).val(100).change();
+				} else if(filterName.startsWith("currentlevel") && Number($(this).val()) < 1){
+					$(this).val(1).change();
+				} else {
+					if(filterName == "currentlevel-min" && $("#filterFormCurrentLevel-max").val().length && Number($(this).val()) > Number($("#filterFormCurrentLevel-max").val())){
+						$("#filterFormCurrentLevel-max").val($(this).val()).change();
+					} else if(filterName == "currentlevel-max" && $("#filterFormCurrentLevel-min").val().length && Number($(this).val()) < Number($("#filterFormCurrentLevel-min").val())){
+						$("#filterFormCurrentLevel-min").val($(this).val()).change();
+					} else if(filterName == "targetgames"){
+						if($(this).val() == "lgpe"){
+							$("#filterformTargetGamesLGPE").show();
+						} else {
+							$("#filterformTargetGamesLGPE").hide();
+						}
+					}
+					activeFilters[filterName] = $(this).val();
+				}
+			}
+			if(filterState == "default"){
+				if(Object.keys(activeFilters).length){
+					filterPokemonList();
+				} else {
+					$("#tracker-grid .col").show();
+				}
+			}
+			filterBubble();
+		});
+		$("#filterFormSort").change(function(){
+			activeSort = $(this).val();
+			sortPokemonList();
+		});
 		/* prevent clear button from re-opening the dropdown */
 		/* https://github.com/select2/select2/issues/3320#issuecomment-524153140 */
 		$("select").on("select2:clear", function (evt) {
@@ -1428,7 +1696,7 @@ function initRun(){
 		});
 		/* initial form reset */
 		resetPokemonForm();
-		resetFilterForm();
+		resetFilterForm(true);
 
 		/* changelog logic */
 		loadingBar(20);
@@ -1484,7 +1752,7 @@ function initRun(){
 		loadingBar(23);
 		$("#loading-spinner-info-text").text("Loading Pokémon list");
 		for(let p in userPokemon){
-			$("#tracker-grid").append(createCard(userPokemon[p]));
+			$("#tracker-grid").append(createCard(userPokemon[p], p));
 		}
 		sortablePokemon = new Sortable($("#tracker-grid")[0], {
 			handle: ".card-sortable-handle",

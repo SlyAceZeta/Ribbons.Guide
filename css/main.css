@@ -149,7 +149,12 @@ label[for="pokemonFormShiny-square"] {
 	box-sizing: content-box;
 	border-radius: var(--bs-border-radius);
 }
-.select2-container--default .select2-selection--single {
+.select2 .selection .select2-selection.select2-selection--multiple {
+	padding: 0 2.25rem .25rem .25rem;
+}
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple,
+.select2-container--default.select2-container--focus .select2-selection--multiple {
 	background-color: transparent;
 	border: none;
 }
@@ -157,6 +162,18 @@ label[for="pokemonFormShiny-square"] {
 	color: var(--bs-body-color);
 	padding: 0;
 	line-height: 28px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+	background: var(--bs-secondary-bg);
+	border-color: var(--bs-border-color);
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+	color: var(--bs-body-color);
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover,
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:focus {
+	background: var(--bs-tertiary-bg);
+	color: var(--bs-body-color);
 }
 .select2-selection__arrow {
 	display: none;
@@ -378,6 +395,9 @@ html[data-extraoriginmarks="roman"] .card-footer-origin-roman,
 html[data-extraoriginmarks="roman-outline"] .card-footer-origin-roman-outline,
 html[data-extraoriginmarks="platforms"] .card-footer-origin-platform {
 	display: inline;
+}
+.sorting-disabled .card-sortable-handle {
+	opacity: 0.5;
 }
 /* condensed cards */
 @media (min-width: 1400px) {
