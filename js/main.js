@@ -181,7 +181,27 @@ function updateOldPokemon(p){
 		newP.originmark = newmark;
 		newP.origingame = p.origin;
 	}
-	// TODO: add IV, EV, ability, mint, and characteristic to notes
+	if(Object.keys(p.iv).length){
+		if(p.iv.hp) newP.notes = newP.notes + "\nHP IV: " + p.iv.hp;
+		if(p.iv.atk) newP.notes = newP.notes + "\nAttack IV: " + p.iv.atk;
+		if(p.iv.def) newP.notes = newP.notes + "\nDefense IV: " + p.iv.def;
+		if(p.iv.spa) newP.notes = newP.notes + "\nSpecial Attack IV: " + p.iv.spa;
+		if(p.iv.spd) newP.notes = newP.notes + "\nSpecial Defense IV: " + p.iv.spd;
+		if(p.iv.spe) newP.notes = newP.notes + "\nSpeed IV: " + p.iv.spe;
+	}
+	if(Object.keys(p.ev).length){
+		if(p.ev.hp) newP.notes = newP.notes + "\nHP EV: " + p.ev.hp;
+		if(p.ev.atk) newP.notes = newP.notes + "\nAttack EV: " + p.ev.atk;
+		if(p.ev.def) newP.notes = newP.notes + "\nDefense EV: " + p.ev.def;
+		if(p.ev.spa) newP.notes = newP.notes + "\nSpecial Attack EV: " + p.ev.spa;
+		if(p.ev.spd) newP.notes = newP.notes + "\nSpecial Defense EV: " + p.ev.spd;
+		if(p.ev.spe) newP.notes = newP.notes + "\nSpeed EV: " + p.ev.spe;
+	}
+	if(p.ability) newP.notes = newP.notes + "\nAbility: " + p.ability;
+	if(p.mint){
+		if(p.mint !== "None") newP.notes = newP.notes + "\nMint: " + p.mint;
+	}
+	if(p.characteristic) newP.notes = newP.notes + "\nCharacteristic: " + p.characteristic;
 	return newP;
 }
 
@@ -1275,7 +1295,7 @@ function selectCustomOption(o){
 	} else if(result.indexOf("pokemonFormOriginMark") > 0 || result.indexOf("filterFormOriginMark") > 0){
 		var $mark = $("<span>");
 		if(o.id === "none"){
-			// TODO: remove duplication
+			// TODO: remove duplication with image holding area
 			var noneGens = [3, 4, 5];
 			var noneTypes = ["arabic", "arabic-outline", "roman", "roman-outline"];
 			var nonePlatforms = ["dsi", "gamecube", "gba"];
@@ -1539,7 +1559,7 @@ function initRun(){
 		}
 		for(var o in origins){
 			$("#pokemonFormOriginMark, #filterFormOriginMark").prepend(new Option(origins[o].name, o));
-			// TODO: remove duplication
+			// TODO: remove duplication with selectCustomOption
 			if(origins[o].name == "None"){
 				var noneGens = [3, 4, 5];
 				var noneTypes = ["arabic", "arabic-outline", "roman", "roman-outline"];
