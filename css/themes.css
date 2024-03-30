@@ -72,11 +72,11 @@ a:not(.btn) {
 	--rg-icon-filter: none;
 	--rg-pulse-rgb: 255, 255, 255;
 }
-[data-bs-theme="dark"] .no-ribbons-left {
+[data-bs-theme="dark"] .ribbons-done {
 	--rg-card-bg: #020;
 	--rg-card-cap-bg: #030;
 }
-[data-bs-theme="dark"] .move-to-next-gen {
+[data-bs-theme="dark"] .no-ribbons-in-current-game {
 	--rg-card-bg: #223;
 	--rg-card-cap-bg: #112;
 }

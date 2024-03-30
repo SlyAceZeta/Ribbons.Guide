@@ -17,12 +17,14 @@
 	"plza": {
 		"name": "Legends: Z-A",
 		"gen": 9,
-		"solo": true
+		"solo": true,
+		"ribbonGenOrder": 2
 	},
 	"sv": {
 		"name": "Scarlet/Violet",
 		"gen": 9,
-		"combo": true
+		"combo": true,
+		"ribbonGenOrder": 1
 	},
 	"scar": {
 		"name": "Scarlet",
@@ -35,12 +37,14 @@
 	"pla": {
 		"name": "Legends: Arceus",
 		"gen": 8,
-		"solo": true
+		"solo": true,
+		"ribbonGenOrder": 3
 	},
 	"bdsp": {
 		"name": "Brilliant Diamond/Shining Pearl",
 		"gen": 8,
-		"combo": true
+		"combo": true,
+		"ribbonGenOrder": 2
 	},
 	"bd": {
 		"name": "Brilliant Diamond",
@@ -53,7 +57,8 @@
 	"swsh": {
 		"name": "Sword/Shield",
 		"gen": 8,
-		"combo": true
+		"combo": true,
+		"ribbonGenOrder": 1
 	},
 	"sw": {
 		"name": "Sword",
@@ -110,7 +115,8 @@
 	"oras": {
 		"name": "Omega Ruby/Alpha Sapphire",
 		"gen": 6,
-		"combo": true
+		"combo": true,
+		"ribbonGenOrder": 2
 	},
 	"or": {
 		"name": "Omega Ruby",
@@ -123,7 +129,8 @@
 	"xy": {
 		"name": "X/Y",
 		"gen": 6,
-		"combo": true
+		"combo": true,
+		"ribbonGenOrder": 1
 	},
 	"x": {
 		"name": "X",
@@ -166,7 +173,8 @@
 	"hgss": {
 		"name": "HeartGold/SoulSilver",
 		"gen": 4,
-		"combo": true
+		"combo": true,
+		"ribbonGenOrder": 2
 	},
 	"hg": {
 		"name": "HeartGold",
@@ -181,7 +189,8 @@
 	"dppt": {
 		"name": "Diamond/Pearl/Platinum",
 		"gen": 4,
-		"combo": true
+		"combo": true,
+		"ribbonGenOrder": 1
 	},
 	"diamond": {
 		"name": "Diamond",
@@ -201,7 +210,8 @@
 	"frlg": {
 		"name": "FireRed/LeafGreen",
 		"gen": 3,
-		"combo": true
+		"combo": true,
+		"ribbonGenOrder": 2
 	},
 	"fr": {
 		"name": "FireRed",
@@ -216,7 +226,8 @@
 	"coloxd": {
 		"name": "Colosseum/XD: Gale of Darkness",
 		"gen": 3,
-		"combo": true
+		"combo": true,
+		"ribbonGenOrder": 3
 	},
 	"colosseum": {
 		"name": "Colosseum",
@@ -231,7 +242,8 @@
 	"rse": {
 		"name": "Ruby/Sapphire/Emerald",
 		"gen": 3,
-		"combo": true
+		"combo": true,
+		"ribbonGenOrder": 1
 	},
 	"ruby": {
 		"name": "Ruby",

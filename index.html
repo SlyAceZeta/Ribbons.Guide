@@ -170,7 +170,7 @@
 														<img class="align-middle" src="img/ui/shiny-square.svg" style="height:16px;">
 														<span class="align-middle d-none d-lg-inline">Square</span>
 													</label>
-													<img class="align-middle ms-2" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="Square Shiny Pokémon have a unique animation in <span class='text-nowrap'>Sword/Shield</span>. If the Pokémon is shiny and you're unsure which type, select Star.">
+													<img class="align-middle ms-2" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="Square Shiny Pokémon have a unique animation in <span class='text-nowrap'>Sword/Shield</span>. If the Pokémon is shiny and you're unsure which type, select Star.">
 												</div>
 											</div>
 										</div>
@@ -183,14 +183,14 @@
 										<label for="pokemonFormLanguage" class="form-label">Language <span class="form-asterisk">*</span></label>
 										<select class="form-select" id="pokemonFormLanguage" data-minimum-results-for-search="Infinity">
 											<option value="eng">ENG - English</option>
-											<option value="fre">FRE - Français</option>
-											<option value="ita">ITA - Italiano</option>
-											<option value="ger">GER - Deutsch</option>
 											<option value="spa">SP-EU/SPA - Español (España)</option>
+											<option value="fre">FRE - Français</option>
+											<option value="ger">GER - Deutsch</option>
+											<option value="ita">ITA - Italiano</option>
 											<option value="jpn">JPN - 日本語</option>
 											<option value="kor">KOR - 한국어</option>
-											<option value="cht">CHT - 正體字</option>
-											<option value="chs">CHS - 简化字</option>
+											<option value="chs">CHS - 简体中文</option>
+											<option value="cht">CHT - 繁体中文</option>
 										</select>
 									</div>
 									<div class="col-12 col-lg-6">
@@ -204,7 +204,7 @@
 											<div class="col-12">
 												<label class="form-label">
 													<span class="align-middle">Strange Ball</span>
-													<img class="align-middle ms-1" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="If enabled, the Strange Ball will replace the selected Poké Ball depending on the Current Game. If disabled, the selected Poké Ball will always appear.">
+													<img class="align-middle ms-1" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="If enabled, the Strange Ball will replace the selected Poké Ball depending on the Current Game. If disabled, the selected Poké Ball will always appear.">
 												</label>
 												<div id="pokemonFormStrangeBallGroup" class="btn-group d-flex align-items-center" role="group" aria-label="Strange Ball">
 													<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-global" autocomplete="off" value="" checked>
@@ -236,17 +236,27 @@
 												</select>
 											</div>
 										</div>
-										<div class="col-12 mt-3">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" id="pokemonFormTotem">
-												<label class="form-check-label" for="pokemonFormTotem">Totem Pokémon (SM/USUM)</label>
+										<div class="row g-1 mt-2">
+											<div class="col-6">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" id="pokemonFormShadow">
+													<label class="form-check-label" for="pokemonFormShadow">Shadow (Colo/XD)</label>
+												</div>
 											</div>
-											<div class="form-check mt-2 mt-lg-1">
-												<input class="form-check-input" type="checkbox" id="pokemonFormGMax">
-												<label class="form-check-label" for="pokemonFormGMax">
-													<span>Gigantamax Factor (SwSh)</span>
-													<img src="img/ui/gigantamax.png" style="height:16px;">
-												</label>
+											<div class="col-6">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" id="pokemonFormTotem">
+													<label class="form-check-label" for="pokemonFormTotem">Totem (SM/USUM)</label>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" id="pokemonFormGMax">
+													<label class="form-check-label" for="pokemonFormGMax">
+														<span>Gigantamax Factor (SwSh)</span>
+														<img src="img/ui/gigantamax.png" style="height:16px;">
+													</label>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -293,7 +303,7 @@
 									<div class="col-lg-6">
 										<label for="pokemonFormScale" class="form-label">Scale</label>
 										<div class="form-check d-flex align-items-center mb-0" style="height:36px;">
-											<input class="form-check-input mt-0 me-1" type="checkbox" id="pokemonFormScale">
+											<input class="form-check-input mt-0 me-2" type="checkbox" id="pokemonFormScale">
 											<label class="form-check-label" for="pokemonFormScale">
 												<span>Checked in Mesagoza (SV)</span>
 											</label>
@@ -303,9 +313,7 @@
 										<div class="d-flex">
 											<input id="pokemonFormRibbonSearch" type="search" class="form-control w-100" placeholder="Search Ribbons/Marks..." aria-label="Search">
 											<div class="dropdown ms-3">
-												<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-													Toggle all...
-												</button>
+												<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Toggle all...</button>
 												<ul id="pokemonFormRibbonToggle" class="dropdown-menu">
 													<li><button class="dropdown-item" type="button" data-gen="3">introduced in Gen III</button></li>
 													<li><button class="dropdown-item" type="button" data-gen="4">introduced in Gen IV</button></li>
@@ -362,7 +370,7 @@
 									<div class="col-12">
 										<div class="form-label">
 											<span class="align-middle">Optional Achievements</span>
-											<img class="align-middle ms-1" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="These achievements are not tracked by the games when transferring across generations.">
+											<img class="align-middle ms-1" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="These achievements are not tracked by the games when transferring across generations.">
 										</div>
 									</div>
 									<div class="col-lg-6">
@@ -458,14 +466,14 @@
 								<select id="filterFormLanguage" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
 									<option></option>
 									<option value="eng">ENG - English</option>
-									<option value="fre">FRE - Français</option>
-									<option value="ita">ITA - Italiano</option>
-									<option value="ger">GER - Deutsch</option>
 									<option value="spa">SP-EU/SPA - Español (España)</option>
+									<option value="fre">FRE - Français</option>
+									<option value="ger">GER - Deutsch</option>
+									<option value="ita">ITA - Italiano</option>
 									<option value="jpn">JPN - 日本語</option>
 									<option value="kor">KOR - 한국어</option>
-									<option value="cht">CHT - 正體字</option>
-									<option value="chs">CHS - 简化字</option>
+									<option value="chs">CHS - 简体中文</option>
+									<option value="cht">CHT - 繁体中文</option>
 								</select>
 							</div>
 							<div class="col-6">
@@ -558,6 +566,35 @@
 				</div>
 			</div>
 		</div>
+		<!-- Ribbon Checklist Modal -->
+		<div class="modal fade" id="modalRibbonChecklist" tabindex="-1" aria-labelledby="modalRibbonChecklistLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalRibbonChecklistLabel">Ribbon Checklist</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body p-0">
+						<div class="container-fluid">
+							<div id="modalRibbonChecklistInfo" class="row g-2 p-2 align-items-center justify-content-center">
+								<div id="modalRibbonChecklistInfo-sprite" class="col-auto">
+									<img src="img/ui/1x1.svg" style="width:64px;">
+								</div>
+								<div id="modalRibbonChecklistInfo-text" class="col-auto">
+									<div id="modalRibbonChecklistInfo-name"></div>
+									<div id="modalRibbonChecklistInfo-currentgame" class="form-text"></div>
+								</div>
+							</div>
+							<div id="modalRibbonChecklistStatus" class="row"></div>
+							<div id="modalRibbonChecklistRows" class="row g-2 p-2"></div>
+						</div>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- Settings Modal -->
 		<div class="modal fade" id="modalSettings" tabindex="-1" aria-labelledby="modalSettingsLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
@@ -588,14 +625,14 @@
 							<div class="form-floating mb-3">
 								<select class="form-select" id="settingsLanguage" aria-label="Language selection">
 									<option value="en">English (English)</option>
-									<option value="de">Deutsch (German)</option>
 									<option value="es">Español (Spanish)</option>
 									<option value="fr">Français (French)</option>
+									<option value="de">Deutsch (German)</option>
 									<option value="it">Italiano (Italian)</option>
 									<option value="ja">日本語 (Japanese)</option>
 									<option value="ko">한국어 (Korean)</option>
-									<option value="zh-Hant">正體字 (Traditional Chinese)</option>
-									<option value="zh-Hans">简化字 (Simplified Chinese)</option>
+									<option value="zh-Hans">简体中文 (Simplified Chinese)</option>
+									<option value="zh-Hant">繁体中文 (Traditional Chinese)</option>
 								</select>
 								<label for="settingsLanguage">Language</label>
 							</div>
@@ -710,7 +747,6 @@
 						<p id="modalAboutLinks">
 							<a class="px-1" href="https://discord.gg/frv7dpWzDG" title="Discord"><img src="img/ui/discord.svg" alt="Discord"></a>
 							<a class="px-1" href="https://github.com/SlyAceZeta/Ribbons.Guide" title="GitHub"><img src="img/ui/github.svg" alt="GitHub"></a>
-							<a class="px-1" href="https://ko-fi.com/slyacezeta" title="Ko-Fi"><img src="img/ui/kofi.png" alt="Ko-Fi"></a>
 						</p>
 					</div>
 				</div>

@@ -121,7 +121,7 @@ label[for="pokemonFormShiny-square"] {
 }
 #pokemonFormSprite {
 	max-width: 100%;
-	max-height: 150px;
+	max-height: 100px;
 }
 .form-asterisk {
 	color: red;
@@ -297,6 +297,12 @@ html[data-automemoryribbons="false"] .pokemonFormRibbon-memory-sync {
 #tracker-grid button.card-sortable-handle {
 	cursor: grab;
 }
+#modalRibbonChecklistRows:empty {
+	display: none;
+}
+.modalRibbonChecklistRows-ribbon:not(:last-child) {
+	margin-right: .25rem;
+}
 
 /* links */
 a:not(:hover):not(:focus) {
@@ -345,12 +351,12 @@ a:not(:hover):not(:focus) {
 	background: url("../img/ui/clipboard.png") center center no-repeat;
 	background-size: 20px;
 }
-.move-to-next-gen .card-header button {
-	background-image: url("../img/ui/arrow-upward.svg");
+.no-ribbons-in-current-game .card-header button {
+	background-image: url("../img/ui/move-item.svg");
 	box-shadow: 0px 0px 1px 1px #ffffff00;
 	animation: pulse-animation 1s infinite;
 }
-.no-ribbons-left .card-header button {
+.ribbons-done .card-header button {
 	background-image: url("../img/ui/check.svg");
 }
 .card-header-name {
@@ -484,6 +490,14 @@ html[lang="ko"] .translation-kor,
 html[lang="zh-Hant"] .translation-cht,
 html[lang="zh-Hans"] .translation-chs {
 	display: inline;
+}
+
+/* popovers */
+.popover {
+	--bs-popover-body-padding-y: 0.75rem;
+}
+.popover-body {
+	padding: calc(var(--bs-popover-body-padding-y) - 0.25rem) var(--bs-popover-body-padding-x) var(--bs-popover-body-padding-y);
 }
 
 /* ribbon order */
