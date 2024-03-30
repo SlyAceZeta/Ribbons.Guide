@@ -1,5 +1,6 @@
 /* globals */
 var balls, games, gameOrder = {}, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default";
+// TODO: add tutorials
 /* get settings */
 if(!localStorage.settings){
 	localStorage.settings = "{}";
@@ -513,21 +514,21 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 			var currentGameRibbons = earnableRibbons[currentGameKey];
 			for(var r in currentGameRibbons){
 				var thisRibbon = currentGameRibbons[r];
-				var availableLater = false;
+				var availableElsewhere = false;
 				for(var g in earnableRibbons){
 					if(g === currentGameKey) continue;
 					if(earnableRibbons[g].includes(thisRibbon)){
-						availableLater = true;
+						availableElsewhere = true;
 					}
 				}
-				if(!availableLater){
+				if(!availableElsewhere){
 					currentGameStatus = "last-chance";
 				}
 			}
 		}
 	}
 
-	// TODO: add warning for evolutions (evowarnmon) but make it smart: check for the game differences
+	// TODO: add warning for evolutions (evowarnmon) but make it smart: check for the game differences and report them, unless there are no applicable ribbons
 
 	// remove duplicate warnings
 	earnableWarnings = [...new Set(earnableWarnings)];
@@ -853,10 +854,10 @@ function ribbonChecklist(){
 					var allGameRibbons = JSON.parse(g.dataset.ribbons);
 					var thisGameOrder = Number(g.dataset.order);
 					for(var r in allGameRibbons){
-						var availableLater = false;
+						var availableElsewhere = false;
 						$("#modalRibbonChecklistRows > .col-12[data-ribbons*='\"" + allGameRibbons[r] + "\"']").each(function(ii, gi){
 							if(Number(gi.dataset.order) > thisGameOrder){
-								availableLater = true;
+								availableElsewhere = true;
 							}
 						});
 						var ribbonSrc = "ribbons/";
@@ -864,16 +865,16 @@ function ribbonChecklist(){
 							ribbonSrc = "marks/";
 						}
 						var addToList = ".last-chance-list";
-						if(availableLater){
+						if(availableElsewhere){
 							if(thisGameOrder === 0 && currentGameStatus !== "last-chance"){
-								currentGameStatus = "available-later";
+								currentGameStatus = "available-elsewhere";
 							}
-							if(!$(g).find(".available-later").length){
-								$sectionLabel = $("<div>").text("Available later");
-								$sectionRibbons = $("<div>", { "class": "available-later-list" });
-								$(g).append($("<div>", { "class": "available-later px-3" }).append($sectionLabel, $sectionRibbons));
+							if(!$(g).find(".available-elsewhere").length){
+								$sectionLabel = $("<div>").text("Available in other games");
+								$sectionRibbons = $("<div>", { "class": "available-elsewhere-list" });
+								$(g).append($("<div>", { "class": "available-elsewhere px-3" }).append($sectionLabel, $sectionRibbons));
 							}
-							addToList = ".available-later-list";
+							addToList = ".available-elsewhere-list";
 						} else {
 							if(thisGameOrder === 0){
 								currentGameStatus = "last-chance";
@@ -2138,6 +2139,9 @@ function initRun(){
 			var filterName = this.id.replace("filterForm", "").toLowerCase();
 			if($(this).val() == "" || $(this).val() === null){
 				delete activeFilters[filterName];
+				if(filterName == "targetgames"){
+					$("#filterformTargetGamesLGPE").hide();
+				}
 			} else {
 				if(filterName.startsWith("currentlevel") && Number($(this).val()) > 100){
 					$(this).val(100).change();

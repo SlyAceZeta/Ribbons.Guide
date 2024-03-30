@@ -844,7 +844,7 @@ html[lang="zh-Hans"] .translation-chs {
 
 
 
-/*
+/* TODO: determine in what order these Ribbons are displayed in Gen V, start from 500
 .card-ribbons .cool-ribbon-hoenn {
   order:200
 }
