@@ -1133,6 +1133,93 @@ function showPreview(){
 
 // On load
 $(function(){
+	// April Fools
+	var aprilFoolsDay = new Date("1 Apr 2000");
+	var todayDate = new Date();
+	if(aprilFoolsDay.getMonth() == todayDate.getMonth() && aprilFoolsDay.getDate() == todayDate.getDate()){
+		var aprilFoolsStyles = "";
+		var unluckyDraw = Math.floor(Math.random() * 7) + 1;
+		if(unluckyDraw == 1 || unluckyDraw == 4 || unluckyDraw == 5 || unluckyDraw == 7){
+			aprilFoolsStyles = aprilFoolsStyles + `
+				.pokemon-list-entry-center > img:first-child {
+					display: none;
+				}
+				.pokemon-list-entry-center:before {
+					content: "";
+					display: block;
+					width: 100px;
+					height: 100px;
+					min-width: 100px;
+					max-width: 100px;
+					background: url("/img/pkmn/regular/bidoof.png") center no-repeat;
+					background-size: 90px;
+				}
+`
+		}
+		if(unluckyDraw == 2 || unluckyDraw == 4 || unluckyDraw == 6 || unluckyDraw == 7){
+			aprilFoolsStyles = aprilFoolsStyles + `
+				.pokemon-list-entry-header-left > img:first-child {
+					display: none;
+				}
+				.pokemon-list-entry-header-left:before {
+					content: "";
+					display: block;
+					width: 20px;
+					height: 20px;
+					min-width: 20px;
+					max-width: 20px;
+					background: url("img/balls/strange.png") center no-repeat;
+					background-size: 20px;
+				}
+`
+		}
+		if(unluckyDraw == 3 || unluckyDraw == 5 || unluckyDraw == 6){
+			aprilFoolsStyles = aprilFoolsStyles + `
+				@keyframes aprilfools {
+					from {
+						transform: rotate(0deg);
+					}
+					to {
+						transform: rotate(360deg);
+					}
+				}
+				.pokemon-list-entry-center > img {
+					animation: aprilfools 5s linear infinite;
+				}
+				@media (prefers-reduced-motion) {
+					.pokemon-list-entry-center > img {
+						animation: none;
+						transform: rotate(180deg);
+					}
+				}
+`
+		}
+		if(unluckyDraw == 7){
+			aprilFoolsStyles = aprilFoolsStyles + `
+				@keyframes aprilfools {
+					from {
+						transform: rotate(0deg);
+					}
+					to {
+						transform: rotate(360deg);
+					}
+				}
+				.pokemon-list-entry-center:before {
+					animation: aprilfools 5s linear infinite;
+				}
+				@media (prefers-reduced-motion) {
+					.pokemon-list-entry-center:before {
+						animation: none;
+						transform: rotate(180deg);
+					}
+				}
+`
+		}
+		var aprilFoolsStyleSheet = document.createElement("style");
+		aprilFoolsStyleSheet.innerText = aprilFoolsStyles;
+		document.head.appendChild(aprilFoolsStyleSheet);
+	}
+
 	// Set modal defaults
     $.modal.defaults.fadeDuration = 250;
 	$.modal.defaults.fadeDelay = 0;
