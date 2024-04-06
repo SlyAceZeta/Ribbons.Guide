@@ -7,6 +7,7 @@
 		<!-- compatibility -->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="color-scheme" content="light dark">
 		<meta name="darkreader-lock">
 		<!-- PWA -->
 		<link rel="manifest" href="manifest.json">
@@ -562,7 +563,7 @@
 						</div>
 					</div>
 					<div class="modal-footer justify-content-center">
-						<button type="button" class="btn btn-secondary" id="modalBoxesNew">Add New Box</button>
+						<button type="button" class="btn btn-primary" id="modalBoxesNew">Add New Box</button>
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
 					</div>
 				</div>
@@ -730,6 +731,23 @@
 					</div>
 					<div class="modal-footer justify-content-center">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Samsung Internet Modal -->
+		<div class="modal fade" id="modalSamsungInternet" tabindex="-1" aria-labelledby="modalSamsungInternetLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalSamsungInternetLabel">Samsung Internet Warning</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>You appear to be using Samsung Internet. If you have dark mode enabled, please disable it or switch to a different browser. Samsung Internet's dark mode ruins the site's images and colors and violates web guidelines on dark modes. For more information on this issue, see the <a href="https://forum.developer.samsung.com/t/websites-dark-mode-gets-overridden-by-samsung-internets-dark-mode/22937">Samsung Developer Forums</a> and <a href="https://stackoverflow.com/questions/66094087/samsung-internet-forces-dark-mode">Stack Overflow</a>.</p>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Dismiss">Dismiss</button>
 					</div>
 				</div>
 			</div>

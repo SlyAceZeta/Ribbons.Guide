@@ -64,6 +64,13 @@ body {
 #headerNav {
 	background: var(--rg-header-background);
 	color: var(--rg-header-text-active);
+	border-color: var(--rg-header-border, var(--bs-border-color));
+}
+
+/* buttons */
+.btn-outline-secondary {
+	--bs-btn-border-color: var(--bs-border-color);
+	--bs-btn-active-border-color: var(--bs-border-color);
 }
 
 /* modals */
@@ -139,6 +146,9 @@ label[for="pokemonFormShiny-square"] {
 	border-radius: var(--bs-border-radius);
 	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+.select2.select2-container--disabled {
+	background: transparent;
+}
 .select2 .selection .select2-selection {
 	--bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 	background-image: var(--bs-form-select-bg-img),var(--bs-form-select-bg-icon,none);
@@ -199,6 +209,7 @@ label[for="pokemonFormShiny-square"] {
 }
 .select2-container--default.select2-container--disabled .select2-selection--single {
 	background-color: var(--bs-secondary-bg);
+	cursor: not-allowed;
 }
 .select2-hidden-accessible.is-invalid + .select2 {
 	border-color: var(--bs-form-invalid-border-color);
@@ -413,8 +424,8 @@ html[data-footerextrainfo="false"] .card-footer-top {
 	width: 50px;
 }
 .card-footer-language {
-	background: #efefef;
-	color: #121212;
+	background: var(--rg-card-bg);
+	color: var(--rg-card-text);
 	width: 60px;
 	line-height: 1.35;
 }

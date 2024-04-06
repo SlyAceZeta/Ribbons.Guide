@@ -12,6 +12,8 @@
 	--rg-card-bg: #eee;
 	--rg-card-cap-bg: #d5d5d5;
 	--rg-card-color: #000;
+	--rg-card-lang-bg: #efefef;
+	--rg-card-lang-text: #121212;
 
 	--rg-icon-filter: invert(1);
 	--rg-pulse-rgb: 0, 0, 0;
@@ -59,7 +61,7 @@ a:not(.btn) {
 [data-bs-theme="dark"] {
 	--bs-body-bg: #121212;
 	--bs-body-color: #fff;
-	--bs-border-color: #161616;
+	--bs-border-color: #555;
 
 	--rg-header-background: #333;
 	--rg-header-text: #bbb;
@@ -68,6 +70,8 @@ a:not(.btn) {
 	--rg-card-bg: #333;
 	--rg-card-cap-bg: #222;
 	--rg-card-color: #fff;
+	--rg-card-lang-bg: #111;
+	--rg-card-lang-text: #fff;
 
 	--rg-icon-filter: none;
 	--rg-pulse-rgb: 255, 255, 255;
@@ -89,12 +93,50 @@ a:not(.btn) {
 [data-bs-theme="dark"] .form-floating > .form-select ~ label {
 	color: #9D9FA1;
 }
+[data-bs-theme="dark"] .btn-primary {
+	--bs-btn-bg: #0B57D0;
+	--bs-btn-border-color: #0B57D0;
+	--bs-btn-hover-bg: #094FBF;
+	--bs-btn-hover-border-color: #0B57D0;
+	--bs-btn-active-bg: #084AB4;
+	--bs-btn-active-border-color: #0B57D0;
+	--bs-btn-disabled-bg: #084AB4;
+	--bs-btn-disabled-border-color: #084AB4;
+}
+[data-bs-theme="dark"] .form-check-input:checked {
+	background-color: #0B57D0;
+	border-color: var(--bs-border-color);
+}
 [data-bs-theme="dark"] .btn-secondary {
 	--bs-btn-bg: #333;
-	--bs-btn-border-color: #3a3a3a;
-	--bs-btn-hover-bg: #444;
-	--bs-btn-hover-border-color: #4a4a4a;
+	--bs-btn-border-color: #333;
+	--bs-btn-hover-bg: #2b2b2b;
+	--bs-btn-hover-border-color: #333;
+	--bs-btn-active-bg: #272727;
+	--bs-btn-active-border-color: #333;
+	--bs-btn-disabled-bg: #333;
+	--bs-btn-disabled-border-color: #333;
+}
+[data-bs-theme="dark"] .btn-outline-secondary {
+	--bs-btn-active-bg: #333;
+}
+[data-bs-theme="dark"] .modal .btn-outline-secondary {
+	--bs-btn-active-bg: #595959;
+	--bs-btn-border-color: #888;
+	--bs-btn-active-border-color: #888;
 }
 [data-bs-theme="dark"] .select2 .selection .select2-selection {
 	--bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23dee2e6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+[data-bs-theme="dark"] .bg-success-subtle {
+	background-color: #030!important;
+}
+[data-bs-theme="dark"] .bg-warning-subtle {
+	background-color: #6a4e09!important;
+}
+[data-bs-theme="dark"] .bg-danger {
+	background-color: #900!important;
+}
+[data-bs-theme="dark"] .bg-danger-subtle {
+	background-color: #400!important;
 }

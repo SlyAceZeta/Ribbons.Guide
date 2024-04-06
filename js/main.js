@@ -2220,6 +2220,18 @@ function initRun(){
 			});
 		}
 
+		/* Samsung Internet detection */
+		if(navigator.userAgent.match(/samsungbrowser/i)){
+			$(function(){
+				if(!localStorage.SamsungInternet){
+					new bootstrap.Modal("#modalSamsungInternet").toggle();
+					$("#modalSamsungInternet").on("hidden.bs.modal", function(e){
+						localStorage.SamsungInternet = "dismissed";
+					});
+				}
+			});
+		}
+
 		/* data conversion from old app */
 		if((userPokemon.entries && typeof userPokemon.entries !== "function") || (userBoxes.entries && typeof userBoxes.entries !== "function")){
 			loadingBar(22);
