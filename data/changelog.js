@@ -1,5 +1,8 @@
 // don't forget to update index.html cache-version
 const changelog = {
+	"02 May 2024": [
+		"Koraidon, Miraidon, and Terapagos can now earn the Master Rank Ribbon"
+	],
 	"27 February 2024": [
 		"Happy Pokémon Day! Added Legends: Z-A to filter for destination games, for those who want to see which of their tracked Pokémon should be able to transfer",
 		"<strong>This is a preliminary list and subject to change</strong>",

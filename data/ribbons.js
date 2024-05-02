@@ -3128,7 +3128,7 @@ const allRibbons = {
 	},
 	"master-rank-ribbon": {
 		"gen": 8,
-		"banned": ["greninja-ash", "koraidon", "miraidon", "terapagos"],
+		"banned": ["greninja-ash"],
 		"nomythical": true,
 		"available": [
 			"sw",
