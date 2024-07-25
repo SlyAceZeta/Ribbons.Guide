@@ -23,6 +23,12 @@ if(localStorage.changelog){
 }
 /* set sortable variables in advance */
 var sortablePokemon, sortableBoxes;
+var aprilFools = false;
+var aprilFoolsDay = new Date("1 Apr 2000");
+var todayDate = new Date();
+if(aprilFoolsDay.getMonth() == todayDate.getMonth() && aprilFoolsDay.getDate() == todayDate.getDate()){
+	aprilFools = true;
+}
 
 /* change setting */
 function changeSetting(key, value){
@@ -183,7 +189,7 @@ function updateOldPokemon(p){
 		newP.originmark = newmark;
 		newP.origingame = p.origin;
 	}
-	if(Object.keys(p.iv).length){
+	if(p.iv && Object.keys(p.iv).length){
 		if(p.iv.hp) newP.notes = newP.notes + "\nHP IV: " + p.iv.hp;
 		if(p.iv.atk) newP.notes = newP.notes + "\nAttack IV: " + p.iv.atk;
 		if(p.iv.def) newP.notes = newP.notes + "\nDefense IV: " + p.iv.def;
@@ -191,7 +197,7 @@ function updateOldPokemon(p){
 		if(p.iv.spd) newP.notes = newP.notes + "\nSpecial Defense IV: " + p.iv.spd;
 		if(p.iv.spe) newP.notes = newP.notes + "\nSpeed IV: " + p.iv.spe;
 	}
-	if(Object.keys(p.ev).length){
+	if(p.ev && Object.keys(p.ev).length){
 		if(p.ev.hp) newP.notes = newP.notes + "\nHP EV: " + p.ev.hp;
 		if(p.ev.atk) newP.notes = newP.notes + "\nAttack EV: " + p.ev.atk;
 		if(p.ev.def) newP.notes = newP.notes + "\nDefense EV: " + p.ev.def;
@@ -267,9 +273,9 @@ function loadBackup(file, filename){
 			if(fileVersion){
 				if(fileVersion < 3){
 					backupPokemon = Object.assign([], backupPokemon.entries.filter(Boolean));
-				}
-				for(let p in backupPokemon){
-					backupPokemon[p] = updateOldPokemon(backupPokemon[p]);
+					for(let p in backupPokemon){
+						backupPokemon[p] = updateOldPokemon(backupPokemon[p]);
+					}
 				}
 				localStorage.pokemon = JSON.stringify(backupPokemon);
 				localStorage.boxes = JSON.stringify(backupBoxes);
@@ -499,6 +505,11 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 				}
 			}
 		}
+	}
+
+	if(aprilFools){
+		earnableRibbons["sleep"] = [];
+		earnableRibbons["sleep"].push("good-night-ribbon");
 	}
 
 	if(getGameData(currentGame, "storage")){
@@ -1013,14 +1024,18 @@ function createCard(p, id){
 	var $cardHeaderLeft = $("<div>", { "class": "card-header-fullname" });
 	var $cardHeaderBallMain = $("<img>", { "class": "align-middle me-2", "src": "img/balls/"+p.ball+".png", "alt": balls[p.ball].eng, "title": balls[p.ball].eng });
 	var $cardHeaderBallStrange = "";
-	if(p.currentgame && ((p.currentgame !== "pla" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
-		if(p.strangeball !== "disabled"){
-			$cardHeaderBallStrange = $("<img>", { "class": "align-middle me-2", "src": "img/balls/strange.png", "alt": "Strange Ball", "title": "Strange Ball" });
-			if(p.strangeball == ""){
-				$cardHeaderBallMain.addClass("card-header-ball-selected");
-				$cardHeaderBallStrange.addClass("card-header-ball-strange");
-			} else if(p.strangeball == "enabled"){
-				$cardHeaderBallMain = $cardHeaderBallStrange;
+	if(aprilFools){
+		$cardHeaderBallMain = $("<img>", { "class": "align-middle me-2", "src": "img/balls/strange.png", "alt": "Strange Ball", "title": "Strange Ball" });
+	} else {
+		if(p.currentgame && ((p.currentgame !== "pla" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
+			if(p.strangeball !== "disabled"){
+				$cardHeaderBallStrange = $("<img>", { "class": "align-middle me-2", "src": "img/balls/strange.png", "alt": "Strange Ball", "title": "Strange Ball" });
+				if(p.strangeball == ""){
+					$cardHeaderBallMain.addClass("card-header-ball-selected");
+					$cardHeaderBallStrange.addClass("card-header-ball-strange");
+				} else if(p.strangeball == "enabled"){
+					$cardHeaderBallMain = $cardHeaderBallStrange;
+				}
 			}
 		}
 	}
@@ -1084,8 +1099,13 @@ function createCard(p, id){
 	$cardHeader.append($cardHeaderButton);
 
 	/* body */
-	var genderDirectory = (getPokemonData(p.species, "femsprite") && p.gender === "female") ? "female/" : "";
-	$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + p.species + ".png", "alt": getPokemonData(p.species, "names")["eng"], "title": getPokemonData(p.species, "names")["eng"] }));
+	if(aprilFools){
+		var genderDirectory = (p.gender === "female") ? "female/" : "";
+		$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + "bidoof.png", "alt": getPokemonData(p.species, "names")["eng"], "title": getPokemonData(p.species, "names")["eng"] }));
+	} else {
+		var genderDirectory = (getPokemonData(p.species, "femsprite") && p.gender === "female") ? "female/" : "";
+		$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + p.species + ".png", "alt": getPokemonData(p.species, "names")["eng"], "title": getPokemonData(p.species, "names")["eng"] }));
+	}
 	var $cardRibbons = $("<div>", { "class": "card-ribbons flex-grow-1 d-flex flex-wrap p-1" });
 	var ribbonCount = 0, ribbonCountGen7Check = 0, markCount = 0, battleMemoryCount = 0, contestMemoryCount = 0, battleMemory = "", contestMemory = "";
 	for(let r in p.ribbons){
@@ -1939,6 +1959,7 @@ function initRun(){
 			}
 		}
 		for(var r in ribbons){
+			if(r === "good-night-ribbon") continue;
 			var $ribbonOption = $("<option>", { "value": r }).text(ribbons[r].names["eng"]);
 			var formRibbonSelect = "#filterFormEarnedRibbons";
 			var ribbonDir = "ribbons/";
