@@ -3128,7 +3128,7 @@ const allRibbons = {
 	},
 	"master-rank-ribbon": {
 		"gen": 8,
-		"banned": ["greninja-ash"],
+		"banned": ["greninja-ash", "enamorus", "great-tusk", "scream-tail", "brute-bonnet", "flutter-mane", "slither-wing", "sandy-shocks", "iron-treads", "iron-bundle", "iron-hands", "iron-jugulis", "iron-moth", "iron-thorns", "wo-chien", "chien-pao", "ting-lu", "chi-yu", "roaring-moon", "iron-valiant", "koraidon", "miraidon", "walking-wake", "iron-leaves", "okidogi", "munkidori", "fezandipiti", "ogerpon", "gouging-fire", "raging-bolt", "iron-boulder", "iron-crown", "terapagos"],
 		"nomythical": true,
 		"available": [
 			"sw",
