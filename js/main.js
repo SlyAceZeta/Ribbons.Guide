@@ -2164,15 +2164,20 @@ function initRun(){
 					$("#filterformTargetGamesLGPE").hide();
 				}
 			} else {
-				if(filterName.startsWith("currentlevel") && Number($(this).val()) > 100){
-					$(this).val(100).change();
-				} else if(filterName.startsWith("currentlevel") && Number($(this).val()) < 1){
+				var filterLevel = Number($(this).val());
+				if(filterName == "currentlevel-max" && filterLevel > 99){
+					$(this).val("").change();
+				} else if(filterName == "currentlevel-max" && filterLevel < 1){
 					$(this).val(1).change();
+				} else if(filterName == "currentlevel-min" && filterLevel < 2){
+					$(this).val("").change();
+				} else if(filterName == "currentlevel-min" && filterLevel > 100){
+					$(this).val(100).change();
 				} else {
-					if(filterName == "currentlevel-min" && $("#filterFormCurrentLevel-max").val().length && Number($(this).val()) > Number($("#filterFormCurrentLevel-max").val())){
-						$("#filterFormCurrentLevel-max").val($(this).val()).change();
-					} else if(filterName == "currentlevel-max" && $("#filterFormCurrentLevel-min").val().length && Number($(this).val()) < Number($("#filterFormCurrentLevel-min").val())){
-						$("#filterFormCurrentLevel-min").val($(this).val()).change();
+					if(filterName == "currentlevel-min" && $("#filterFormCurrentLevel-max").val().length && filterLevel > Number($("#filterFormCurrentLevel-max").val())){
+						$("#filterFormCurrentLevel-max").val(filterLevel).change();
+					} else if(filterName == "currentlevel-max" && $("#filterFormCurrentLevel-min").val().length && filterLevel < Number($("#filterFormCurrentLevel-min").val())){
+						$("#filterFormCurrentLevel-min").val(filterLevel).change();
 					} else if(filterName == "targetgames"){
 						if($(this).val() == "lgpe"){
 							$("#filterformTargetGamesLGPE").show();
