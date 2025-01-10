@@ -2539,6 +2539,8 @@ const pokemon = {
 		},
 		"gender": "both",
 		"natdex": 625,
+		"evowarnmon": "kingambit",
+		"evowarngen": 8,
 		"games": [
 			"black",
 			"white",
@@ -8377,6 +8379,8 @@ const pokemon = {
 		},
 		"gender": "both",
 		"natdex": 206,
+		"evowarnmon": "dudunsparce",
+		"evowarngen": 8,
 		"games": [
 			"gold",
 			"silver",
@@ -11866,6 +11870,8 @@ const pokemon = {
 		"gender": "both",
 		"femsprite": true,
 		"natdex": 203,
+		"evowarnmon": "farigiraf",
+		"evowarngen": 8,
 		"games": [
 			"gold",
 			"silver",
@@ -25760,6 +25766,8 @@ const pokemon = {
 		},
 		"gender": "both",
 		"natdex": 57,
+		"evowarnmon": "annihilape",
+		"evowarngen": 8,
 		"games": [
 			"red-eng",
 			"red-jpn",
