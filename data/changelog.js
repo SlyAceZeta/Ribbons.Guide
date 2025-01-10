@@ -1,5 +1,9 @@
 // don't forget to update index.html cache-version
 const changelog = {
+	"10 January 2025": [
+		"The previous change has been reverted and the following Pokémon can once again earn the Master Rank Ribbon: Enamorus, Great Tusk, Scream Tail, Brute Bonnet, Flutter Mane, Slither Wing, Sandy Shocks, Iron Treads, Iron Bundle, Iron Hands, Iron Jugulis, Iron Moth, Iron Thorns, Wo-Chien, Chien-Pao, Ting-Lu, Chi-Yu, Roaring Moon, Iron Valiant, Koraidon, Miraidon, Walking Wake, Iron Leaves, Okidogi, Munkidori, Fezandipiti, Ogerpon, Gouging Fire, Raging Bolt, Iron Boulder, Iron Crown, Terapagos",
+		"Primeape, Girafarig, Dunsparce, and Bisharp now show evolution warnings (thanks KYZ124!)"
+	],
 	"01 September 2024": [
 		"The following Pokémon can no longer earn the Master Rank Ribbon: Enamorus, Great Tusk, Scream Tail, Brute Bonnet, Flutter Mane, Slither Wing, Sandy Shocks, Iron Treads, Iron Bundle, Iron Hands, Iron Jugulis, Iron Moth, Iron Thorns, Wo-Chien, Chien-Pao, Ting-Lu, Chi-Yu, Roaring Moon, Iron Valiant, Koraidon, Miraidon, Walking Wake, Iron Leaves, Okidogi, Munkidori, Fezandipiti, Ogerpon, Gouging Fire, Raging Bolt, Iron Boulder, Iron Crown, Terapagos"
 	],
