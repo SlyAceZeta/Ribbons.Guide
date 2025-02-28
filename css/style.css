@@ -805,6 +805,16 @@ body[data-footer="collapsed"] #footer-icon {
 body[data-footer="collapsed"] #pokemon-list {
 	margin-bottom: 85px;
 }
+#site-update-warning {
+	margin: 47px 0 0 0;
+	background: #800;
+	text-align: center;
+	font-weight: bold;
+	padding: 5px;
+}
+#site-update-warning + #menu {
+	margin-top: 10px;
+}
 #menu {
 	margin-bottom: 0;
 	display: flex;

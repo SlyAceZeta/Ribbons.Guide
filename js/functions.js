@@ -167,6 +167,8 @@ function saveBackup(){
 
 	document.body.appendChild(ele);
 	ele.click();
+	localStorage.setItem("site-update-warning", "true");
+	$("#site-update-warning").remove();
 	document.body.removeChild(ele);
 }
 
@@ -1133,6 +1135,11 @@ function showPreview(){
 
 // On load
 $(function(){
+	// site update warning
+	if(!localStorage.getItem("site-update-warning")){
+		$("#menu").before("<div id='site-update-warning'><span>Ribbons.Guide will undergo a major update on April 15. Your data will transfer, but please save a backup just in case!</span></div>");
+	}
+	
 	// April Fools
 	var aprilFoolsDay = new Date("1 Apr 2000");
 	var todayDate = new Date();

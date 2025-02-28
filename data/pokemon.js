@@ -520,7 +520,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -674,7 +675,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "flaaffy"
 	},
@@ -1193,7 +1195,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "spritzee"
 	},
@@ -1649,7 +1652,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"baltoy": {
@@ -2032,7 +2036,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -3229,7 +3234,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"buizel": {
@@ -3393,7 +3399,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"burmy-sandy": {
@@ -4157,7 +4164,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "lampent"
 	},
@@ -4279,7 +4287,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "charmeleon"
 	},
@@ -4364,7 +4373,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"charmeleon": {
@@ -4422,7 +4432,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "charmander"
 	},
@@ -4663,7 +4674,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"chimchar": {
@@ -4966,7 +4978,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"clawitzer": {
@@ -4995,7 +5008,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "clauncher"
 	},
@@ -6171,7 +6185,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -6663,7 +6678,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"deerling-autumn": {
@@ -7259,7 +7275,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "bunnelby"
 	},
@@ -7607,7 +7624,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "honedge"
 	},
@@ -7675,7 +7693,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "skrelp"
 	},
@@ -7816,7 +7835,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow",
@@ -7964,7 +7984,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"drednaw": {
@@ -8928,7 +8949,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"eldegoss": {
@@ -9278,7 +9300,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "pignite"
 	},
@@ -9512,7 +9535,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -9542,7 +9566,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"eternatus": {
@@ -10050,7 +10075,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "croconaw"
 	},
@@ -10202,7 +10228,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -10382,7 +10409,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -10412,7 +10440,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "fletchling"
 	},
@@ -10578,7 +10607,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "flabebe"
 	},
@@ -10673,7 +10703,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "floette"
 	},
@@ -11327,7 +11358,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "kirlia"
 	},
@@ -11393,7 +11425,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"evolvesFrom": "trubbish"
 	},
@@ -11485,7 +11518,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "kirlia"
 	},
@@ -11988,7 +12022,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -12660,7 +12695,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "sliggoo"
 	},
@@ -12693,7 +12729,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"gorebyss": {
@@ -14350,7 +14387,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "hippopotas"
 	},
@@ -14649,7 +14687,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"hoopa-unbound": {
@@ -14910,7 +14949,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -14962,7 +15002,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -15337,7 +15378,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"inteleon": {
@@ -15645,7 +15687,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -16070,7 +16113,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -16388,7 +16432,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "ralts"
 	},
@@ -16814,7 +16859,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "sandile"
 	},
@@ -17036,7 +17082,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "litwick"
 	},
@@ -17271,7 +17318,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"latias": {
@@ -17406,7 +17454,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -17934,7 +17983,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"lombre": {
@@ -18156,7 +18206,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "riolu"
 	},
@@ -19334,7 +19385,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "inkay"
 	},
@@ -19756,7 +19808,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -20199,7 +20252,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "bayleef"
 	},
@@ -23793,7 +23847,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"pawniard": {
@@ -24221,7 +24276,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"pidgeot": {
@@ -24275,7 +24331,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "pidgeotto"
 	},
@@ -24330,7 +24387,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -24388,7 +24446,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"pidove": {
@@ -24450,7 +24509,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "tepig"
 	},
@@ -26086,7 +26146,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "larvitar"
 	},
@@ -26509,7 +26570,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "pikachu"
 	},
@@ -26611,7 +26673,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -27568,7 +27631,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"rockruff": {
@@ -27713,7 +27777,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -27757,7 +27822,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "roselia"
 	},
@@ -27998,7 +28064,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -28048,7 +28115,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -28523,7 +28591,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"sceptile": {
@@ -29514,7 +29583,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "bagon"
 	},
@@ -30323,7 +30393,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"skiploom": {
@@ -30680,7 +30751,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "goomy"
 	},
@@ -30959,7 +31031,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "swirlix"
 	},
@@ -31637,7 +31710,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "scatterbug"
 	},
@@ -31735,7 +31809,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -31894,7 +31969,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"squirtle": {
@@ -32206,7 +32282,8 @@ const pokemon = {
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -32318,7 +32395,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "onix"
 	},
@@ -32802,7 +32880,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -33092,7 +33171,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"swoobat": {
@@ -33740,7 +33820,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"terrakion": {
@@ -34366,7 +34447,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"toucannon": {
@@ -34762,7 +34844,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"trumbeak": {
@@ -35230,7 +35313,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -35848,7 +35932,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -36241,7 +36326,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "weepinbell"
 	},
@@ -36711,7 +36797,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "spewpa"
 	},
@@ -37230,7 +37317,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "patrat"
 	},
@@ -37384,7 +37472,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -38977,7 +39066,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"zygarde": {
@@ -39016,7 +39106,8 @@ const pokemon = {
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"flags": [
 			"restricted"
