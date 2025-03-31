@@ -96,7 +96,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"absol": {
@@ -419,7 +420,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "kadabra"
 	},
@@ -1778,7 +1780,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "binacle"
 	},
@@ -2527,7 +2530,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"bisharp": {
@@ -11579,7 +11583,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"gastrodon-east": {
@@ -11740,7 +11745,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "haunter"
 	},
@@ -14022,7 +14028,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "gastly"
 	},
@@ -16000,7 +16007,8 @@ const pokemon = {
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "abra"
 	},
@@ -23619,7 +23627,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"pansage": {
@@ -23648,7 +23657,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"pansear": {
@@ -23677,7 +23687,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"paras": {
@@ -30192,7 +30203,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "panpour"
 	},
@@ -30222,7 +30234,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "pansage"
 	},
@@ -30252,7 +30265,8 @@ const pokemon = {
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "pansear"
 	},
@@ -30822,7 +30836,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "slowpoke"
 	},
@@ -30884,7 +30899,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "slowpoke"
 	},
@@ -30953,7 +30969,8 @@ const pokemon = {
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"slugma": {

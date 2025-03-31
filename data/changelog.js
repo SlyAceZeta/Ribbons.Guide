@@ -1,5 +1,8 @@
 // don't forget to update index.html cache-version
 const changelog = {
+	"31 March 2025": [
+		"Added more Pokémon to Z-A filter per the latest trailer"
+	]
 	"28 February 2025": [
 		"Happy belated Pokémon Day!",
 		"Added more Pokémon to Z-A filter per the latest trailer",
