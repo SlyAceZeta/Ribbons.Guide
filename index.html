@@ -609,7 +609,7 @@
 					<div class="modal-body px-2 px-sm-3">
 						<form>
 							<div class="mb-3">
-							<label for="settingsTheme">Theme</label>
+								<label class="form-label" for="settingsTheme">Theme</label>
 								<select class="form-select" id="settingsTheme" aria-label="Theme selection">
 									<option value="auto" selected>Automatic (Simple Dark/Simple Light)</option>
 									<optgroup label="Dark">
@@ -626,7 +626,7 @@
 								</select>
 							</div>
 							<div class="mb-3">
-							<label for="settingsLanguage">Language</label>
+								<label class="form-label" for="settingsLanguage">Language</label>
 								<select class="form-select" id="settingsLanguage" aria-label="Language selection">
 									<option value="en">English (English)</option>
 									<option value="es">Español (Spanish)</option>
@@ -640,7 +640,7 @@
 								</select>
 							</div>
 							<div class="mb-3">
-								<label for="settingsExtraOriginMarks">Gen III/IV/V origin marks</label>
+								<label class="form-label" for="settingsExtraOriginMarks">Gen III/IV/V origin marks</label>
 								<select class="form-select" id="settingsExtraOriginMarks" aria-label="Gen III/IV/V origin marks" data-minimum-results-for-search="Infinity">
 									<option value="none">None (official)</option>
 									<option value="platforms">Platform icons</option>
@@ -719,7 +719,7 @@
 			</div>
 		</div>
 		<!-- Changelog Modal -->
-		<div class="modal fade" id="modalChangelog" tabindex="-1" aria-labelledby="modalChangelogLabel" aria-hidden="true">
+		<div class="modal modal-lg fade" id="modalChangelog" tabindex="-1" aria-labelledby="modalChangelogLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -764,10 +764,11 @@
 						<p>Ribbons.Guide is a progressive web app that helps you keep track of your Pokémon and their Ribbons! Ribbons.Guide doesn't store or send any data anywhere—it's all saved on your device! <a href="https://github.com/SlyAceZeta/Ribbons.Guide">This is an open-source project hosted on GitHub using GitHub Pages.</a> It was developed as a love letter to the helpful and welcoming r/PokémonRibbons community.</p>
 						<p>The images used in Ribbons.Guide were provided by <a href="https://pokejungle.net">PokéJungle</a>, <a href="https://pokemondb.net">Pokémon Database</a>, <a href="https://github.com/msikma/pokesprite">PokéSprite</a>, <a href="https://archives.bulbagarden.net/wiki/Main_Page">Bulbagarden Archives</a>, <a href="https://github.com/PokeMiners/pogo_assets">Pokémon GO Assets</a>, and <a href="https://github.com/google/material-design-icons">Material Symbols</a>. Ribbons.Guide also makes use of <a href="https://github.com/jquery/jquery">jQuery</a>, <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://github.com/select2/select2">Select2</a>, <a href="https://github.com/SortableJS/Sortable">Sortable</a>, <a href="https://github.com/GoogleChrome/workbox">Workbox</a>, and <a href="https://fonts.google.com/">Google Fonts</a>.</p>
 						<p>Pokémon, data, and images © Nintendo/Creatures Inc./Game Freak. This project is not affiliated with Nintendo, Creatures Inc., Game Freak, or The Pokémon Company. All original content and code is governed by the <a href="https://opensource.org/license/gpl-3-0/">GPL-3.0 license</a>.</p>
-						<p id="modalAboutLinks">
-							<a class="px-1" href="https://discord.gg/frv7dpWzDG" title="Discord"><img src="img/ui/discord.svg" alt="Discord"></a>
-							<a class="px-1" href="https://github.com/SlyAceZeta/Ribbons.Guide" title="GitHub"><img src="img/ui/github.svg" alt="GitHub"></a>
-						</p>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="modalAboutViewChangelog">View Full Changelog</button>
+						<a class="btn btn-secondary" href="https://discord.gg/frv7dpWzDG"><img src="img/ui/discord.svg" alt="Discord"><span>Discord</span></a>
+						<a class="btn btn-secondary" href="https://github.com/SlyAceZeta/Ribbons.Guide"><img src="img/ui/github.svg" alt="GitHub"><span>GitHub</span></a>
 					</div>
 				</div>
 			</div>

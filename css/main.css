@@ -88,12 +88,13 @@ body {
 .modal-header {
 	--bs-modal-header-padding: 0.75rem 1rem;
 }
-#modalAboutLinks img {
-	width: 32px;
-	height: 32px;
+#modalAbout .btn img {
+	width: 20px;
+	height: 20px;
 }
-#modalAboutLinks img:not([src*="kofi"]) {
-	filter: var(--rg-icon-filter);
+#modalAbout .btn span {
+	vertical-align: middle;
+	margin-left: 5px;
 }
 #modalSettings .form-check-label img {
 	width: auto;
@@ -449,8 +450,9 @@ html[data-extraoriginmarks="roman-outline"] .select-icon-origin-roman-outline,
 html[data-extraoriginmarks="platforms"] .select-icon-origin-platform {
 	display: inline;
 }
-.sorting-disabled .card-sortable-handle {
+.sorting-disabled #tracker-grid .card-sortable-handle {
 	opacity: 0.5;
+	cursor: not-allowed;
 }
 /* condensed cards */
 @media (min-width: 1400px) {

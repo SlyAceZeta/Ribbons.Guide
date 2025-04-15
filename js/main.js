@@ -1,5 +1,5 @@
 /* globals */
-var balls, games, gameOrder = {}, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default";
+var balls, changelog, games, gameOrder = {}, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default";
 // TODO: add tutorials
 /* get settings */
 if(!localStorage.settings){
@@ -1908,7 +1908,7 @@ function initRun(){
 	}).done(function(dataBalls, dataChangelog, dataGames, dataOrigins, dataPokemon, dataRibbons, dataTranslations){
 		/* set variables */
 		balls = dataBalls[0];
-		var changelog = dataChangelog[0];
+		changelog = dataChangelog[0];
 		games = dataGames[0];
 		origins = dataOrigins[0];
 		pokemon = dataPokemon[0];
@@ -2313,7 +2313,7 @@ function initRun(){
 		if(newChanges.length){
 			$(function(){
 				for(let i in newChanges){
-					$("#modalChangelog .list-group").prepend(newChanges[i]);
+					$("#modalChangelog .list-group").append(newChanges[i]);
 				}
 				new bootstrap.Modal("#modalChangelog").toggle();
 			});
@@ -2537,6 +2537,29 @@ $(function(){
 	});
 	$("#modalBoxesNew").click(function(){
 		createOrEditBox();
+	});
+	$("#modalAboutViewChangelog").click(function(){
+		var changeList = [];
+		$("#modalChangelog .list-group").html("");
+		for(let date in changelog){
+			let changeDate = new Date(date);
+			let $changeContainer = $("<div>", { "class": "list-group-item py-3" })
+				.append($("<h6>", { "class": "fw-bold" }).text(date));
+			let $changeList = $("<ul>", { "class": "mb-0" });
+			for(let change in changelog[date]){
+				$changeList.append($("<li>").html(changelog[date][change]));
+			}
+			$changeContainer.append($changeList);
+			changeList.push($changeContainer);
+		}
+		if(changeList.length){
+			$(function(){
+				for(let i in changeList){
+					$("#modalChangelog .list-group").append(changeList[i]);
+				}
+				new bootstrap.Modal("#modalChangelog").toggle();
+			});
+		}
 	});
 	modalRibbonChecklist = new bootstrap.Modal("#modalRibbonChecklist");
 	/* initial functions that run after all else */
