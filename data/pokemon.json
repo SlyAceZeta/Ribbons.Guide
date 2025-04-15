@@ -419,7 +419,8 @@
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "kadabra"
 	},
@@ -520,7 +521,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -674,7 +676,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "flaaffy"
 	},
@@ -761,7 +764,7 @@
 		"gender": "both",
 		"natdex": 840,
 		"evowarnmon": "dipplin",
-		"evowarngen": 8,
+		"evowarngen": 9,
 		"games": [
 			"sw",
 			"sh",
@@ -848,8 +851,7 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio",
-			"plza"
+			"vio"
 		],
 		"flags": [
 			"xdShadow"
@@ -1193,7 +1195,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "spritzee"
 	},
@@ -1649,7 +1652,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"baltoy": {
@@ -2522,7 +2526,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"bisharp": {
@@ -2539,6 +2544,8 @@
 		},
 		"gender": "both",
 		"natdex": 625,
+		"evowarnmon": "kingambit",
+		"evowarngen": 9,
 		"games": [
 			"black",
 			"white",
@@ -3227,7 +3234,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"buizel": {
@@ -3391,7 +3399,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"burmy-sandy": {
@@ -4156,7 +4165,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "lampent"
 	},
@@ -4278,7 +4288,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "charmeleon"
 	},
@@ -4662,7 +4673,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"chimchar": {
@@ -4965,7 +4977,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"clawitzer": {
@@ -4994,7 +5007,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "clauncher"
 	},
@@ -6664,7 +6678,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"deerling-autumn": {
@@ -7260,7 +7275,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "bunnelby"
 	},
@@ -7676,7 +7692,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "skrelp"
 	},
@@ -8380,6 +8397,8 @@
 		},
 		"gender": "both",
 		"natdex": 206,
+		"evowarnmon": "dudunsparce",
+		"evowarngen": 9,
 		"games": [
 			"gold",
 			"silver",
@@ -8468,7 +8487,7 @@
 		"gender": "both",
 		"natdex": 884,
 		"evowarnmon": "archaludon",
-		"evowarngen": 8,
+		"evowarngen": 9,
 		"games": [
 			"sw",
 			"sh",
@@ -8927,7 +8946,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"eldegoss": {
@@ -9511,7 +9531,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -10201,7 +10222,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -10381,7 +10403,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -10411,7 +10434,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "fletchling"
 	},
@@ -10577,7 +10601,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "flabebe"
 	},
@@ -10672,7 +10697,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "floette"
 	},
@@ -11326,7 +11352,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "kirlia"
 	},
@@ -11392,7 +11419,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"evolvesFrom": "trubbish"
 	},
@@ -11484,7 +11512,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "kirlia"
 	},
@@ -11705,7 +11734,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "haunter"
 	},
@@ -11869,6 +11899,8 @@
 		"gender": "both",
 		"femsprite": true,
 		"natdex": 203,
+		"evowarnmon": "farigiraf",
+		"evowarngen": 9,
 		"games": [
 			"gold",
 			"silver",
@@ -11985,7 +12017,8 @@
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -12660,7 +12693,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "sliggoo"
 	},
@@ -12693,7 +12727,8 @@
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"gorebyss": {
@@ -13988,7 +14023,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "gastly"
 	},
@@ -14353,7 +14389,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "hippopotas"
 	},
@@ -14652,7 +14689,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"hoopa-unbound": {
@@ -14914,7 +14952,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -14966,7 +15005,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -15341,7 +15381,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"inteleon": {
@@ -15649,7 +15690,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -16074,7 +16116,8 @@
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -16392,7 +16435,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "ralts"
 	},
@@ -16818,7 +16862,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "sandile"
 	},
@@ -17043,7 +17088,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "litwick"
 	},
@@ -17278,7 +17324,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"latias": {
@@ -18163,7 +18210,8 @@
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "riolu"
 	},
@@ -19344,7 +19392,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "inkay"
 	},
@@ -19766,7 +19815,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -22694,8 +22744,7 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio",
-			"plza"
+			"vio"
 		]
 	},
 	"noivern": {
@@ -23576,7 +23625,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"pansage": {
@@ -23605,7 +23655,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"pansear": {
@@ -23634,7 +23685,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"paras": {
@@ -23804,7 +23856,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"pawniard": {
@@ -24289,7 +24342,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "pidgeotto"
 	},
@@ -24344,7 +24398,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -24402,7 +24457,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"pidove": {
@@ -25819,6 +25875,8 @@
 		},
 		"gender": "both",
 		"natdex": 57,
+		"evowarnmon": "annihilape",
+		"evowarngen": 9,
 		"games": [
 			"red-eng",
 			"red-jpn",
@@ -26560,7 +26618,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "pikachu"
 	},
@@ -27808,7 +27867,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "roselia"
 	},
@@ -28049,7 +28109,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -28099,7 +28160,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -28574,7 +28636,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"sceptile": {
@@ -30374,7 +30437,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"skiploom": {
@@ -30537,8 +30601,7 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio",
-			"plza"
+			"vio"
 		]
 	},
 	"skuntank": {
@@ -30731,7 +30794,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "goomy"
 	},
@@ -30801,7 +30865,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "slowpoke"
 	},
@@ -30932,7 +30997,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"slugma": {
@@ -31010,7 +31076,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "swirlix"
 	},
@@ -31691,7 +31758,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "scatterbug"
 	},
@@ -31789,7 +31857,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -31948,7 +32017,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"squirtle": {
@@ -32260,7 +32330,8 @@
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -32372,7 +32443,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "onix"
 	},
@@ -32856,7 +32928,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -33146,7 +33219,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"swoobat": {
@@ -33794,7 +33868,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"terrakion": {
@@ -34420,7 +34495,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"toucannon": {
@@ -34816,7 +34892,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"trumbeak": {
@@ -35284,7 +35361,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -35906,7 +35984,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -36300,7 +36379,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "weepinbell"
 	},
@@ -36773,7 +36853,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "spewpa"
 	},
@@ -37447,7 +37528,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -39041,7 +39123,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"zygarde": {
@@ -39080,7 +39163,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"flags": [
 			"restricted"
