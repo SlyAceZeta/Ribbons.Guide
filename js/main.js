@@ -1074,7 +1074,7 @@ function createCard(p, id){
 
 	/* header */
 	var $cardHeaderLeft = $("<div>", { "class": "card-header-fullname" });
-	var $cardHeaderBallMain = $("<img>", { "class": "align-middle me-2", "src": "img/balls/"+p.ball+".png", "alt": balls[p.ball].eng, "title": balls[p.ball].eng });
+	var $cardHeaderBallMain = $("<img>", { "class": "align-middle me-2", "src": "img/balls/"+p.ball+".png", "alt": balls[p.ball]["eng"], "title": balls[p.ball]["eng"] });
 	var $cardHeaderBallStrange = "";
 	if(p.currentgame && ((p.currentgame !== "pla" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
 		if(p.strangeball !== "disabled"){
@@ -1650,7 +1650,7 @@ function selectCustomOption(o){
 			// TODO: reduce duplication: image holding area
 			var noneGens = [3, 4, 5];
 			var noneTypes = ["arabic", "arabic-outline", "roman", "roman-outline"];
-			var nonePlatforms = ["dsi", "gamecube", "gba"];
+			var nonePlatforms = ["gba", "gamecube", "dsi"];
 			for(var i in noneGens){
 				for(var t in noneTypes){
 					$mark.append($("<img>", { "class": selectIconClass + " select-icon-origin select-icon-origin-" + noneTypes[t], "src": "img/origins/custom/" + noneTypes[t] + "/" + noneGens[i] + ".svg" }));
@@ -1667,6 +1667,23 @@ function selectCustomOption(o){
 				.append($("<span>").text(origins[o.id].name));
 		}
 		return $mark;
+	} else if(result.indexOf("settingsExtraOriginMarks") > 0){
+		var $marks = $("<span>");
+		// TODO: reduce duplication: image holding area
+		if(o.id === "platforms"){
+			var nonePlatforms = ["gba", "gamecube", "dsi"];
+			for(var p in nonePlatforms){
+				$marks.append($("<img>", { "class": selectIconClass, "src": "img/origins/custom/platforms/" + nonePlatforms[p] + ".svg" }));
+			}
+		} else if(o.id !== "none"){
+			var noneGens = [3, 4, 5];
+			for(var i in noneGens){
+				$marks.append($("<img>", { "class": selectIconClass, "src": "img/origins/custom/" + o.id + "/" + noneGens[i] + ".svg" }));
+			}
+		}
+		$marks.append($("<span>").text(o.text));
+		console.log($marks.html());
+		return $marks;
 	} else if(result.indexOf("pokemonFormNature") > 0){
 		var $nature = $("<span>");
 		for(var oed in o.element.dataset){
@@ -2093,6 +2110,12 @@ function initRun(){
 			templateSelection: selectCustomOption,
 			templateResult: selectCustomOption,
 			dropdownParent: $("#modalFilterForm .modal-body")
+		});
+		$("#settingsExtraOriginMarks").select2({
+			matcher: selectCustomMatcher,
+			templateSelection: selectCustomOption,
+			templateResult: selectCustomOption,
+			dropdownParent: $("#modalSettings")
 		});
 		/* listeners */
 		$("input[name='pokemonFormGender'], input[name='pokemonFormShiny']").change(function(){

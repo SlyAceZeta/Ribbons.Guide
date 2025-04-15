@@ -608,7 +608,8 @@
 					</div>
 					<div class="modal-body px-2 px-sm-3">
 						<form>
-							<div class="form-floating mb-3">
+							<div class="mb-3">
+							<label for="settingsTheme">Theme</label>
 								<select class="form-select" id="settingsTheme" aria-label="Theme selection">
 									<option value="auto" selected>Automatic (Simple Dark/Simple Light)</option>
 									<optgroup label="Dark">
@@ -623,9 +624,9 @@
 										<option value="light">Simple Light</option>
 									</optgroup>
 								</select>
-								<label for="settingsTheme">Theme</label>
 							</div>
-							<div class="form-floating mb-3">
+							<div class="mb-3">
+							<label for="settingsLanguage">Language</label>
 								<select class="form-select" id="settingsLanguage" aria-label="Language selection">
 									<option value="en">English (English)</option>
 									<option value="es">Español (Spanish)</option>
@@ -637,18 +638,17 @@
 									<option value="zh-Hans">简体中文 (Simplified Chinese)</option>
 									<option value="zh-Hant">繁体中文 (Traditional Chinese)</option>
 								</select>
-								<label for="settingsLanguage">Language</label>
 							</div>
-							<div class="form-floating mb-3">
-								<select class="form-select" id="settingsExtraOriginMarks" aria-label="Gen III/IV/V origin marks">
-									<option value="none" selected>None (official)</option>
+							<div class="mb-3">
+								<label for="settingsExtraOriginMarks">Gen III/IV/V origin marks</label>
+								<select class="form-select" id="settingsExtraOriginMarks" aria-label="Gen III/IV/V origin marks" data-minimum-results-for-search="Infinity">
+									<option value="none">None (official)</option>
 									<option value="platforms">Platform icons</option>
 									<option value="roman">Roman numerals</option>
 									<option value="roman-outline">Roman numerals, outlined</option>
 									<option value="arabic">Arabic numerals</option>
 									<option value="arabic-outline">Arabic numerals, outlined</option>
 								</select>
-								<label for="settingsExtraOriginMarks">Gen III/IV/V origin marks</label>
 							</div>
 							<div class="form-check form-switch mb-2">
 								<input class="form-check-input" type="checkbox" role="switch" id="settingsShowWorldAbility">
