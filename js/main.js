@@ -356,6 +356,7 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	// TODO: reduce duplication: createCard
 	var earnableRibbons = {};
 	var earnableWarnings = [];
+	var evolutionWarning = {};
 	var currentGameStatus = "no-ribbons-left";
 	currentLevel = parseInt(currentLevel);
 
@@ -558,13 +559,21 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 		}
 	}
 
-	// TODO: add warning for evolutions (evowarnmon) but make it smart: check for the game differences and report them, unless there are no applicable ribbons
+	// TODO: make this smarter: check for the game differences and report them, unless there are no applicable ribbons
+	if(evoWarnMon && evoWarnGen){
+		var testGen = currentGen;
+		if(currentGame == "go") testGen = 7;
+		if(testGen <= parseInt(evoWarnGen)){
+			earnableWarnings.push("evolution-warning");
+			evolutionWarning.pokemon = evoWarnMon;
+		}
+	}
 
 	// remove duplicate warnings
 	earnableWarnings = [...new Set(earnableWarnings)];
 
 	// return
-	return {"remaining": earnableRibbons, "warnings": earnableWarnings, "currentGameStatus": currentGameStatus};
+	return {"remaining": earnableRibbons, "warnings": earnableWarnings, "currentGameStatus": currentGameStatus, "evolutionWarning": evolutionWarning};
 }
 
 function setFormValidAll(){
@@ -827,6 +836,27 @@ function ribbonChecklist(){
 			if(ribbonWarnings[w] == "footprint-gen4") warningText = cardData.name + " is currently Lv." + cardData.level + ". Leveling " + pronounObject + " above Lv.70 will make the Footprint Ribbon exclusive to Gen IV!";
 			if(ribbonWarnings[w] == "footprint-virtualconsole") warningText = cardData.name + " is currently Lv." + cardData.level + ". Leveling " + pronounObject + " above Lv.70 will make the Footprint Ribbon unavailable!";
 			if(ribbonWarnings[w] == "footprint-met-level") warningText = cardData.name + "'s Met Level has not been set. The availability of the Footprint Ribbon after Gen IV cannot be determined.";
+			if(ribbonWarnings[w] == "evolution-warning"){
+				var evoWarnName = getPokemonData(cardData.evolutionWarning, "names")["eng"];
+				var evoWarnForms = getPokemonData(cardData.evolutionWarning, "forms");
+				if(!evoWarnForms){
+					evoWarnForms = getPokemonData(cardData.evolutionWarning, "forms-all");
+					if(!evoWarnForms){
+						var pokemonFormSource = getPokemonData(cardData.evolutionWarning, "form-source");
+						if(pokemonFormSource){
+							evoWarnForms = translations.forms[pokemonFormSource];
+						}
+					}
+				}
+				if(evoWarnForms){
+					if(typeof evoWarnForms === "string"){
+						evoWarnName = evoWarnName + " (" + evoWarnForms + ")";
+					} else {
+						evoWarnName = evoWarnName + " (" + evoWarnForms["eng"] + ")";
+					}
+				}
+				warningText = "Evoloving " + cardData.name + " into " + evoWarnName + " may change the availability of certain Ribbons!";
+			}
 			$("#modalRibbonChecklistStatus-warnings").append($("<div>", { "class": "p-2 px-3 border-bottom border-2" }).text(warningText));
 		}
 		$("#modalRibbonChecklistStatus-warnings > div:last-child").removeClass("border-bottom border-2");
@@ -1030,6 +1060,9 @@ function createCard(p, id){
 		}
 		if(ribbonLists.warnings.length !== 0){
 			$cardCol.attr({ "data-ribbon-warnings": JSON.stringify(ribbonLists.warnings) });
+		}
+		if(ribbonLists.evolutionWarning.pokemon){
+			$cardCol.attr({ "data-evolution-warning": ribbonLists.evolutionWarning.pokemon });
 		}
 	}
 	var $cardContainer = $("<div>", { "class": "card border-0" });
