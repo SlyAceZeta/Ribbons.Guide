@@ -420,7 +420,7 @@ html[data-footerextrainfo="false"] .card-footer-top {
 .card-footer-level {
 	display: inline-flex;
 	flex-wrap: nowrap;
-	justify-content: space-around;
+	justify-content: space-between;
 	width: 50px;
 }
 .card-footer-language {

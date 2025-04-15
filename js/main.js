@@ -28,6 +28,30 @@ var aprilFoolsDay = new Date("1 Apr 2000");
 var todayDate = new Date();
 if(aprilFoolsDay.getMonth() == todayDate.getMonth() && aprilFoolsDay.getDate() == todayDate.getDate()){
 	aprilFools = true;
+	var wheelSpin = Math.floor(Math.random() * 100);
+	if(wheelSpin === 42){
+		var aprilFoolsStyleSheet = document.createElement("style");
+		aprilFoolsStyleSheet.innerText = `
+			@keyframes aprilfools {
+				from {
+					transform: rotate(0deg);
+				}
+				to {
+					transform: rotate(360deg);
+				}
+			}
+			.card-sprite {
+				animation: aprilfools 5s linear infinite;
+			}
+			@media (prefers-reduced-motion) {
+				.card-sprite {
+					animation: none;
+					transform: rotate(180deg);
+				}
+			}
+`
+		document.head.appendChild(aprilFoolsStyleSheet);
+	}
 }
 
 /* change setting */
@@ -505,11 +529,6 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 				}
 			}
 		}
-	}
-
-	if(aprilFools){
-		earnableRibbons["sleep"] = [];
-		earnableRibbons["sleep"].push("good-night-ribbon");
 	}
 
 	if(getGameData(currentGame, "storage")){
@@ -1024,18 +1043,14 @@ function createCard(p, id){
 	var $cardHeaderLeft = $("<div>", { "class": "card-header-fullname" });
 	var $cardHeaderBallMain = $("<img>", { "class": "align-middle me-2", "src": "img/balls/"+p.ball+".png", "alt": balls[p.ball].eng, "title": balls[p.ball].eng });
 	var $cardHeaderBallStrange = "";
-	if(aprilFools){
-		$cardHeaderBallMain = $("<img>", { "class": "align-middle me-2", "src": "img/balls/strange.png", "alt": "Strange Ball", "title": "Strange Ball" });
-	} else {
-		if(p.currentgame && ((p.currentgame !== "pla" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
-			if(p.strangeball !== "disabled"){
-				$cardHeaderBallStrange = $("<img>", { "class": "align-middle me-2", "src": "img/balls/strange.png", "alt": "Strange Ball", "title": "Strange Ball" });
-				if(p.strangeball == ""){
-					$cardHeaderBallMain.addClass("card-header-ball-selected");
-					$cardHeaderBallStrange.addClass("card-header-ball-strange");
-				} else if(p.strangeball == "enabled"){
-					$cardHeaderBallMain = $cardHeaderBallStrange;
-				}
+	if(p.currentgame && ((p.currentgame !== "pla" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
+		if(p.strangeball !== "disabled"){
+			$cardHeaderBallStrange = $("<img>", { "class": "align-middle me-2", "src": "img/balls/strange.png", "alt": "Strange Ball", "title": "Strange Ball" });
+			if(p.strangeball == ""){
+				$cardHeaderBallMain.addClass("card-header-ball-selected");
+				$cardHeaderBallStrange.addClass("card-header-ball-strange");
+			} else if(p.strangeball == "enabled"){
+				$cardHeaderBallMain = $cardHeaderBallStrange;
 			}
 		}
 	}
@@ -1099,13 +1114,15 @@ function createCard(p, id){
 	$cardHeader.append($cardHeaderButton);
 
 	/* body */
+	var speciesSprite = p.species;
 	if(aprilFools){
-		var genderDirectory = (p.gender === "female") ? "female/" : "";
-		$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + "bidoof.png", "alt": getPokemonData(p.species, "names")["eng"], "title": getPokemonData(p.species, "names")["eng"] }));
-	} else {
-		var genderDirectory = (getPokemonData(p.species, "femsprite") && p.gender === "female") ? "female/" : "";
-		$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + p.species + ".png", "alt": getPokemonData(p.species, "names")["eng"], "title": getPokemonData(p.species, "names")["eng"] }));
+		speciesSprite = "ditto";
+		if(p.species == "ditto"){
+			speciesSprite = "mew";
+		}
 	}
+	var genderDirectory = (!aprilFools && getPokemonData(speciesSprite, "femsprite") && p.gender === "female") ? "female/" : "";
+	$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + speciesSprite + ".png", "alt": getPokemonData(p.species, "names")["eng"], "title": getPokemonData(p.species, "names")["eng"] }));
 	var $cardRibbons = $("<div>", { "class": "card-ribbons flex-grow-1 d-flex flex-wrap p-1" });
 	var ribbonCount = 0, ribbonCountGen7Check = 0, markCount = 0, battleMemoryCount = 0, contestMemoryCount = 0, battleMemory = "", contestMemory = "";
 	for(let r in p.ribbons){
