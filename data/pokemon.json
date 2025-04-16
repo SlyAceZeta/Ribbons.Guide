@@ -96,7 +96,8 @@
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"absol": {
@@ -1778,7 +1779,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "binacle"
 	},
@@ -2036,7 +2038,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -4374,7 +4377,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"charmeleon": {
@@ -4432,7 +4436,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "charmander"
 	},
@@ -6186,7 +6191,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -7624,7 +7630,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "honedge"
 	},
@@ -7834,7 +7841,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow",
@@ -7982,7 +7990,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"drednaw": {
@@ -9297,7 +9306,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "pignite"
 	},
@@ -9562,7 +9572,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"eternatus": {
@@ -10070,7 +10081,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "croconaw"
 	},
@@ -11573,7 +11585,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"gastrodon-east": {
@@ -16003,7 +16016,8 @@
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "abra"
 	},
@@ -17460,7 +17474,8 @@
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -17988,7 +18003,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"lombre": {
@@ -20260,7 +20276,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "bayleef"
 	},
@@ -24288,7 +24305,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"pidgeot": {
@@ -24520,7 +24538,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "tepig"
 	},
@@ -26195,7 +26214,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "larvitar"
 	},
@@ -26721,7 +26741,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -27678,7 +27699,8 @@
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"rockruff": {
@@ -27823,7 +27845,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -29628,7 +29651,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "bagon"
 	},
@@ -30236,7 +30260,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "panpour"
 	},
@@ -30266,7 +30291,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "pansage"
 	},
@@ -30296,7 +30322,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "pansear"
 	},
@@ -30928,7 +30955,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "slowpoke"
 	},
@@ -37374,7 +37402,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "patrat"
 	},
