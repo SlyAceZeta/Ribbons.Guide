@@ -31,5 +31,6 @@
 	"orientation": "portrait",
 	"launch_handler": {
 		"client_mode": ["focus-existing", "auto"]
-	}
+	},
+	"edge_side_panel": {}
 }

@@ -1074,7 +1074,7 @@ function createCard(p, id){
 
 	/* header */
 	var $cardHeaderLeft = $("<div>", { "class": "card-header-fullname" });
-	var $cardHeaderBallMain = $("<img>", { "class": "align-middle me-2", "src": "img/balls/"+p.ball+".png", "alt": balls[p.ball]["eng"], "title": balls[p.ball]["eng"] });
+	var $cardHeaderBallMain = $("<img>", { "class": "align-text-top me-2", "src": "img/balls/"+p.ball+".png", "alt": balls[p.ball]["eng"], "title": balls[p.ball]["eng"] });
 	var $cardHeaderBallStrange = "";
 	if(p.currentgame && ((p.currentgame !== "pla" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
 		if(p.strangeball !== "disabled"){
@@ -1088,6 +1088,7 @@ function createCard(p, id){
 		}
 	}
 	$cardHeaderLeft.append($cardHeaderBallMain, $cardHeaderBallStrange);
+	var $cardHeaderLeftName = $("<span>", { "class": "align-baseline" });
 	var titleRibbon;
 	var titlePositions = {
 		"ger": "prefix",
@@ -1113,11 +1114,11 @@ function createCard(p, id){
 				if(p.title == "partner-ribbon"){
 					titleText = titleText.replace(/\[.*?\]/, p.trainername);
 				}
-				$cardHeaderLeft.append($("<span>", { "class": "align-middle me-1 card-header-title translation translation-" + tp, text: titleText }));
+				$cardHeaderLeftName.append($("<span>", { "class": "me-1 card-header-title translation translation-" + tp, text: titleText }));
 			}
 		}
 	}
-	$cardHeaderLeft.append($("<span>", { "class": "align-middle fw-bold d-inline-block card-header-name", text: displayName }));
+	$cardHeaderLeftName.append($("<span>", { "class": "fw-bold d-inline-block card-header-name", text: displayName }));
 	if(p.title && p.title !== "None"){
 		for(let tp in titlePositions){
 			if(titlePositions[tp] == "suffix"){
@@ -1125,20 +1126,21 @@ function createCard(p, id){
 				if(p.title == "partner-ribbon"){
 					titleText = titleText.replace(/\[.*?\]/, p.trainername);
 				}
-				$cardHeaderLeft.append($("<span>", { "class": "align-middle ms-1 card-header-title translation translation-" + tp, text: titleText }));
+				$cardHeaderLeftName.append($("<span>", { "class": "ms-1 card-header-title translation translation-" + tp, text: titleText }));
 			}
 		}
 	}
+	$cardHeaderLeft.append($cardHeaderLeftName);
 	if(p.gender && p.gender !== "unknown"){
 		var genderText = p.gender.charAt(0).toUpperCase() + p.gender.slice(1);
-		$cardHeaderLeft.append($("<img>", { "class": "align-middle card-header-gender ms-2", "src": "img/ui/gender-" + p.gender + ".png", "alt": genderText, "title": genderText }));
+		$cardHeaderLeft.append($("<img>", { "class": "align-text-top card-header-gender ms-2", "src": "img/ui/gender-" + p.gender + ".png", "alt": genderText, "title": genderText }));
 	}
 	if(p.shiny){
 		var shinyIcon = "shiny-star.png";
 		if(p.shiny == "square"){
 			shinyIcon = "shiny-square.svg";
 		}
-		$cardHeaderLeft.append($("<img>", { "class": "align-middle ms-2 card-header-shiny", "src": "img/ui/" + shinyIcon, "alt": "Shiny", "title": "Shiny" }));
+		$cardHeaderLeft.append($("<img>", { "class": "align-text-top ms-2 card-header-shiny", "src": "img/ui/" + shinyIcon, "alt": "Shiny", "title": "Shiny" }));
 	}
 	$cardHeader.append($cardHeaderLeft);
 	var $cardHeaderButton = $("<button>", { "type": "button", "class": "btn btn-link p-0 ms-1 position-relative", "onclick": "ribbonChecklist()" })

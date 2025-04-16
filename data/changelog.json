@@ -1,6 +1,7 @@
 {
 	"16 April 2025": [
-		"Fixed an issue introduced in the new update where old Battle and Contest Ribbons were showing even after the Pokémon moved to Gen VI (thanks Z!)"
+		"Fixed an issue introduced yesterday where old Battle and Contest Ribbons were showing even after the Pokémon moved to Gen VI (thanks Z and FireBolt PT!)",
+		"Fixed an issue introduced yesterday where Pokémon names and titles were not properly aligned at the top of their cards (thanks SadisticMystic!)"
 	],
 	"15 April 2025": [
 		"\\<strong>The long-awaited redesign is now live!</strong> If you spot any issues, please <a href='https://discord.gg/frv7dpWzDG'>let me know on Discord!</a> If you'd like to support my work, <a href='https://ko-fi.com/slyacezeta'>I have a Ko-fi</a> but Ribbons.Guide will always be FOSS (free and open-source software)!",
