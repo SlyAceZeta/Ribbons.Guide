@@ -2111,7 +2111,7 @@ function initRun(){
 			templateResult: selectCustomOption,
 			dropdownParent: $("#modalFilterForm .modal-body")
 		});
-		$("#settingsExtraOriginMarks").select2({
+		$("#settingsTheme, #settingsLanguage, #settingsExtraOriginMarks").select2({
 			matcher: selectCustomMatcher,
 			templateSelection: selectCustomOption,
 			templateResult: selectCustomOption,
