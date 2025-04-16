@@ -72,7 +72,7 @@
 			</div>
 		</header>
 		<!-- Tracker -->
-		<section id="sectionTracker" class="container-fluid">
+		<div id="sectionTracker" class="container-fluid">
 			<div id="sectionTrackerButtonRow" class="d-flex justify-content-between mt-4 px-3">
 				<button id="sectionTrackerButtonAdd" class="btn btn-primary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button">
 					<img src="img/ui/add.svg" alt="Add">
@@ -80,10 +80,10 @@
 				</button>
 				<div class="d-flex">
 					<div id="switchView" class="btn-group me-2" role="group" aria-label="Switch view">
-						<input type="radio" class="btn-check" name="switchViewBtn" id="switchViewBtn-condensed" autocomplete="off" value="condensed">
-						<label class="btn btn-outline-secondary" for="switchViewBtn-condensed"><img class="align-text-bottom" src="img/ui/condensed.svg"></label>
-						<input type="radio" class="btn-check" name="switchViewBtn" id="switchViewBtn-expanded" autocomplete="off" value="expanded" checked>
-						<label class="btn btn-outline-secondary" for="switchViewBtn-expanded"><img class="align-text-bottom" src="img/ui/expanded.svg"></label>
+						<input type="radio" class="btn-check" name="switchViewBtn" id="switchViewBtn-condensed" value="condensed">
+						<label class="btn btn-outline-secondary" for="switchViewBtn-condensed"><img class="align-text-bottom" src="img/ui/condensed.svg" alt="Condensed"></label>
+						<input type="radio" class="btn-check" name="switchViewBtn" id="switchViewBtn-expanded" value="expanded" checked>
+						<label class="btn btn-outline-secondary" for="switchViewBtn-expanded"><img class="align-text-bottom" src="img/ui/expanded.svg" alt="Expanded"></label>
 					</div>
 					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button" data-bs-toggle="modal" data-bs-target="#modalBoxes">
 						<img src="img/ui/box-closed.png" alt="Filter">
@@ -101,7 +101,7 @@
 				</div>
 			</div>
 			<div id="tracker-grid" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mt-2 mb-4"></div>
-		</section>
+		</div>
 		<!-- Add/Edit Pokemon Modal -->
 		<div class="modal fade" id="modalPokemonForm" tabindex="-1" aria-labelledby="modalPokemonFormLabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered">
@@ -129,7 +129,7 @@
 							<div class="tab-pane fade show active" id="pokemonFormSections-details" role="tabpanel" aria-labelledby="pokemonFormTabs-details" tabindex="0">
 								<div class="row g-2">
 									<div class="col-4 col-sm-3 col-lg-2 d-flex align-items-center justify-content-center">
-										<img src="img/ui/1x1.svg" id="pokemonFormSprite">
+										<img src="img/ui/1x1.svg" id="pokemonFormSprite" alt="Pokémon">
 									</div>
 									<div class="col-8 col-sm-9 col-lg-10">
 										<div class="row g-2">
@@ -139,37 +139,37 @@
 											</div>
 											<div class="col-lg-6">
 												<div id="pokemonFormGenderGroup" class="btn-group d-flex" role="group" aria-label="Gender">
-													<input type="radio" class="btn-check" name="pokemonFormGender" id="pokemonFormGender-male" autocomplete="off" value="male" checked>
+													<input type="radio" class="btn-check" name="pokemonFormGender" id="pokemonFormGender-male" value="male" checked>
 													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormGender-male">
-														<img class="align-middle" src="img/ui/gender-male.png" style="height:16px;">
+														<img class="align-middle" src="img/ui/gender-male.png" style="height:16px;" alt="Male">
 														<span class="align-middle">Male</span>
 													</label>
-													<input type="radio" class="btn-check" name="pokemonFormGender" id="pokemonFormGender-female" autocomplete="off" value="female">
+													<input type="radio" class="btn-check" name="pokemonFormGender" id="pokemonFormGender-female" value="female">
 													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormGender-female">
-														<img class="align-middle" src="img/ui/gender-female.png" style="height:16px;">
+														<img class="align-middle" src="img/ui/gender-female.png" style="height:16px;" alt="Female">
 														<span class="align-middle">Female</span>
 													</label>
-													<input type="radio" class="btn-check" name="pokemonFormGender" id="pokemonFormGender-unknown" autocomplete="off" value="unknown" disabled>
+													<input type="radio" class="btn-check" name="pokemonFormGender" id="pokemonFormGender-unknown" value="unknown" disabled>
 													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormGender-unknown">
-														<img class="align-middle" src="img/ui/gender-unknown.png" style="height:16px;">
+														<img class="align-middle" src="img/ui/gender-unknown.png" style="height:16px;" alt="Gender unknown">
 														<span class="align-middle">Gender unknown</span>
 													</label>
 												</div>
 											</div>
 											<div class="col-lg-6">
 												<div id="pokemonFormShinyGroup" class="btn-group d-flex align-items-center" role="group" aria-label="Shiny">
-													<input type="radio" class="btn-check" name="pokemonFormShiny" id="pokemonFormShiny-normal" autocomplete="off" value="" checked>
+													<input type="radio" class="btn-check" name="pokemonFormShiny" id="pokemonFormShiny-normal" value="" checked>
 													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormShiny-normal">
 														<span class="align-middle">Normal</span>
 													</label>
-													<input type="radio" class="btn-check" name="pokemonFormShiny" id="pokemonFormShiny-star" autocomplete="off" value="star">
+													<input type="radio" class="btn-check" name="pokemonFormShiny" id="pokemonFormShiny-star" value="star">
 													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormShiny-star">
-														<img class="align-middle light-invert" src="img/ui/shiny-star.png" style="height:16px;">
+														<img class="align-middle light-invert" src="img/ui/shiny-star.png" style="height:16px;" alt="Star Shiny">
 														<span class="align-middle d-none d-lg-inline" id="pokemonFormShiny-star-labelspecific">Star</span>
 													</label>
-													<input type="radio" class="btn-check" name="pokemonFormShiny" id="pokemonFormShiny-square" autocomplete="off" value="square">
+													<input type="radio" class="btn-check" name="pokemonFormShiny" id="pokemonFormShiny-square" value="square">
 													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormShiny-square">
-														<img class="align-middle light-invert" src="img/ui/shiny-square.svg" style="height:16px;">
+														<img class="align-middle light-invert" src="img/ui/shiny-square.svg" style="height:16px;" alt="Square Shiny">
 														<span class="align-middle d-none d-lg-inline">Square</span>
 													</label>
 													<img class="align-middle ms-2 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="Square Shiny Pokémon have a unique animation in <span class='text-nowrap'>Sword/Shield</span>. If the Pokémon is shiny and you're unsure which type, select Star.">
@@ -209,15 +209,15 @@
 													<img class="align-middle ms-1 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="If enabled, the Strange Ball will replace the selected Poké Ball depending on the Current Game. If disabled, the selected Poké Ball will always appear.">
 												</label>
 												<div id="pokemonFormStrangeBallGroup" class="btn-group d-flex align-items-center" role="group" aria-label="Strange Ball">
-													<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-global" autocomplete="off" value="" checked>
+													<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-global" value="" checked>
 													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormStrangeBall-global">
 														<span class="align-middle">Global Setting</span>
 													</label>
-													<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-enabled" autocomplete="off" value="enabled">
+													<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-enabled" value="enabled">
 													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormStrangeBall-enabled">
 														<span class="align-middle">Enabled</span>
 													</label>
-													<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-disabled" autocomplete="off" value="disabled">
+													<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-disabled" value="disabled">
 													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormStrangeBall-disabled">
 														<span class="align-middle">Disabled</span>
 													</label>
@@ -256,7 +256,7 @@
 													<input class="form-check-input" type="checkbox" id="pokemonFormGMax">
 													<label class="form-check-label" for="pokemonFormGMax">
 														<span>Gigantamax Factor (SwSh)</span>
-														<img src="img/ui/gigantamax.png" style="height:16px;">
+														<img src="img/ui/gigantamax.png" style="height:16px;" alt="Gigantamax">
 													</label>
 												</div>
 											</div>
@@ -353,18 +353,18 @@
 									<div class="col-6">
 										<div class="form-label">Pokérus</div>
 										<div id="pokemonFormPokerusGroup" class="btn-group d-flex align-items-center" role="group" aria-label="Pokerus">
-											<input type="radio" class="btn-check" name="pokemonFormPokerus" id="pokemonFormPokerus-none" autocomplete="off" value="" checked>
+											<input type="radio" class="btn-check" name="pokemonFormPokerus" id="pokemonFormPokerus-none" value="" checked>
 											<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormPokerus-none">
 												<span class="align-middle">None</span>
 											</label>
-											<input type="radio" class="btn-check" name="pokemonFormPokerus" id="pokemonFormPokerus-infected" autocomplete="off" value="infected">
+											<input type="radio" class="btn-check" name="pokemonFormPokerus" id="pokemonFormPokerus-infected" value="infected">
 											<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormPokerus-infected">
-												<img class="align-middle" src="img/ui/pokerus-infected.png" style="height:16px;">
+												<img class="align-middle" src="img/ui/pokerus-infected.png" style="height:16px;" alt="Infected">
 												<span class="align-middle d-none d-lg-inline">Infected</span>
 											</label>
-											<input type="radio" class="btn-check" name="pokemonFormPokerus" id="pokemonFormPokerus-cured" autocomplete="off" value="cured">
+											<input type="radio" class="btn-check" name="pokemonFormPokerus" id="pokemonFormPokerus-cured" value="cured">
 											<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormPokerus-cured">
-												<img class="align-middle" src="img/ui/pokerus-cured.png" style="height:16px;">
+												<img class="align-middle" src="img/ui/pokerus-cured.png" style="height:16px;" alt="Cured">
 												<span class="align-middle d-none d-lg-inline">Cured</span>
 											</label>
 										</div>
@@ -581,7 +581,7 @@
 						<div class="container-fluid">
 							<div id="modalRibbonChecklistInfo" class="row g-2 p-2 align-items-center justify-content-center">
 								<div id="modalRibbonChecklistInfo-sprite" class="col-auto">
-									<img src="img/ui/1x1.svg" style="width:64px;">
+									<img src="img/ui/1x1.svg" style="width:64px;" alt="Pokémon">
 								</div>
 								<div id="modalRibbonChecklistInfo-text" class="col-auto">
 									<div id="modalRibbonChecklistInfo-name"></div>
@@ -723,7 +723,7 @@
 			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h2 class="modal-title fs-6 fw-bold" id="modalChangellogLabel">Changelog</h2>
+						<h2 class="modal-title fs-6 fw-bold" id="modalChangelogLabel">Changelog</h2>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body p-0">
