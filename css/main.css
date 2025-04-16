@@ -64,7 +64,7 @@ body {
 #headerNav {
 	background: var(--rg-header-background);
 	color: var(--rg-header-text-active);
-	border-color: var(--rg-header-border, var(--bs-border-color));
+	border-color: var(--rg-header-border, var(--bs-border-color))!important;
 }
 
 /* buttons */
@@ -679,19 +679,162 @@ html[lang="zh-Hans"] .translation-chs {
 .card-ribbons .world-champion-ribbon {
 	order: 55;
 }
-/*
+.card-ribbons .cool-ribbon-hoenn {
+	order: 500;
+}
+.card-ribbons .cool-ribbon-super-hoenn {
+	order: 501;
+}
+.card-ribbons .cool-ribbon-hyper-hoenn {
+	order: 502;
+}
+.card-ribbons .cool-ribbon-master-hoenn {
+	order: 503;
+}
+.card-ribbons .beauty-ribbon-hoenn {
+	order: 504;
+}
+.card-ribbons .beauty-ribbon-super-hoenn {
+	order: 505;
+}
+.card-ribbons .beauty-ribbon-hyper-hoenn {
+	order: 506;
+}
+.card-ribbons .beauty-ribbon-master-hoenn {
+	order: 507;
+}
+.card-ribbons .cute-ribbon-hoenn {
+	order: 508;
+}
+.card-ribbons .cute-ribbon-super-hoenn {
+	order: 509;
+}
+.card-ribbons .cute-ribbon-hyper-hoenn {
+	order: 510;
+}
+.card-ribbons .cute-ribbon-master-hoenn {
+	order: 511;
+}
+.card-ribbons .smart-ribbon-hoenn {
+	order: 512;
+}
+.card-ribbons .smart-ribbon-super-hoenn {
+	order: 513;
+}
+.card-ribbons .smart-ribbon-hyper-hoenn {
+	order: 514;
+}
+.card-ribbons .smart-ribbon-master-hoenn {
+	order: 515;
+}
+.card-ribbons .tough-ribbon-hoenn {
+	order: 516;
+}
+.card-ribbons .tough-ribbon-super-hoenn {
+	order: 517;
+}
+.card-ribbons .tough-ribbon-hyper-hoenn {
+	order: 518;
+}
+.card-ribbons .tough-ribbon-master-hoenn {
+	order: 519;
+}
+.card-ribbons .cool-ribbon-sinnoh {
+	order: 520;
+}
+.card-ribbons .cool-ribbon-great-sinnoh {
+	order: 521;
+}
+.card-ribbons .cool-ribbon-ultra-sinnoh {
+	order: 522;
+}
+.card-ribbons .cool-ribbon-master-sinnoh {
+	order: 523;
+}
+.card-ribbons .beauty-ribbon-sinnoh {
+	order: 524;
+}
+.card-ribbons .beauty-ribbon-great-sinnoh {
+	order: 525;
+}
+.card-ribbons .beauty-ribbon-ultra-sinnoh {
+	order: 526;
+}
+.card-ribbons .beauty-ribbon-master-sinnoh {
+	order: 527;
+}
+.card-ribbons .cute-ribbon-sinnoh {
+	order: 528;
+}
+.card-ribbons .cute-ribbon-great-sinnoh {
+	order: 529;
+}
+.card-ribbons .cute-ribbon-ultra-sinnoh {
+	order: 530;
+}
+.card-ribbons .cute-ribbon-master-sinnoh {
+	order: 531;
+}
+.card-ribbons .smart-ribbon-sinnoh {
+	order: 532;
+}
+.card-ribbons .smart-ribbon-great-sinnoh {
+	order: 533;
+}
+.card-ribbons .smart-ribbon-ultra-sinnoh {
+	order: 534;
+}
+.card-ribbons .smart-ribbon-master-sinnoh {
+	order: 535;
+}
+.card-ribbons .tough-ribbon-sinnoh {
+	order: 536;
+}
+.card-ribbons .tough-ribbon-great-sinnoh {
+	order: 537;
+}
+.card-ribbons .tough-ribbon-ultra-sinnoh {
+	order: 538;
+}
+.card-ribbons .tough-ribbon-master-sinnoh {
+	order: 539;
+}
+.card-ribbons .winning-ribbon {
+	order: 560;
+}
+.card-ribbons .victory-ribbon {
+	order: 561;
+}
+.card-ribbons .ability-ribbon {
+	order: 562;
+}
+.card-ribbons .great-ability-ribbon {
+	order: 563;
+}
+.card-ribbons .double-ability-ribbon {
+	order: 564;
+}
+.card-ribbons .multi-ability-ribbon {
+	order: 565;
+}
+.card-ribbons .pair-ability-ribbon {
+	order: 566;
+}
+.card-ribbons .world-ability-ribbon {
+	order: 567;
+}
 .card-ribbons .contest-memory-ribbon {
-	order: ;
+	order: 568;
 }
 .card-ribbons .contest-memory-ribbon-gold {
-	order: ;
+	order: 569;
 }
 .card-ribbons .battle-memory-ribbon {
-	order: ;
+	order: 570;
 }
 .card-ribbons .battle-memory-ribbon-gold {
-	order: ;
-}*/
+	order: 571;
+}
 .card-ribbons .lunchtime-mark {
 	order: 1001;
 }
@@ -854,153 +997,5 @@ html[lang="zh-Hans"] .translation-chs {
 .card-ribbons .partner-ribbon {
 	order: 1054;
 }
-
-
-
-/* TODO: determine in what order these Ribbons are displayed in Gen V, start from 500
-.card-ribbons .cool-ribbon-hoenn {
-  order:200
-}
-.card-ribbons .cool-ribbon-super-hoenn {
-  order:199
-}
-.card-ribbons .cool-ribbon-hyper-hoenn {
-  order:198
-}
-.card-ribbons .cool-ribbon-master-hoenn {
-  order:197
-}
-.card-ribbons .beauty-ribbon-hoenn {
-  order:196
-}
-.card-ribbons .beauty-ribbon-super-hoenn {
-  order:195
-}
-.card-ribbons .beauty-ribbon-hyper-hoenn {
-  order:194
-}
-.card-ribbons .beauty-ribbon-master-hoenn {
-  order:193
-}
-.card-ribbons .cute-ribbon-hoenn {
-  order:192
-}
-.card-ribbons .cute-ribbon-super-hoenn {
-  order:191
-}
-.card-ribbons .cute-ribbon-hyper-hoenn {
-  order:190
-}
-.card-ribbons .cute-ribbon-master-hoenn {
-  order:189
-}
-.card-ribbons .smart-ribbon-hoenn {
-  order:188
-}
-.card-ribbons .smart-ribbon-super-hoenn {
-  order:187
-}
-.card-ribbons .smart-ribbon-hyper-hoenn {
-  order:186
-}
-.card-ribbons .smart-ribbon-master-hoenn {
-  order:185
-}
-.card-ribbons .tough-ribbon-hoenn {
-  order:184
-}
-.card-ribbons .tough-ribbon-super-hoenn {
-  order:183
-}
-.card-ribbons .tough-ribbon-hyper-hoenn {
-  order:182
-}
-.card-ribbons .tough-ribbon-master-hoenn {
-  order:181
-}
-.card-ribbons .winning-ribbon {
-  order:180
-}
-.card-ribbons .victory-ribbon {
-  order:179
-}
-.card-ribbons .cool-ribbon-sinnoh {
-  order:178
-}
-.card-ribbons .cool-ribbon-great-sinnoh {
-  order:177
-}
-.card-ribbons .cool-ribbon-ultra-sinnoh {
-  order:176
-}
-.card-ribbons .cool-ribbon-master-sinnoh {
-  order:175
-}
-.card-ribbons .beauty-ribbon-sinnoh {
-  order:174
-}
-.card-ribbons .beauty-ribbon-great-sinnoh {
-  order:173
-}
-.card-ribbons .beauty-ribbon-ultra-sinnoh {
-  order:172
-}
-.card-ribbons .beauty-ribbon-master-sinnoh {
-  order:171
-}
-.card-ribbons .cute-ribbon-sinnoh {
-  order:170
-}
-.card-ribbons .cute-ribbon-great-sinnoh {
-  order:169
-}
-.card-ribbons .cute-ribbon-ultra-sinnoh {
-  order:168
-}
-.card-ribbons .cute-ribbon-master-sinnoh {
-  order:167
-}
-.card-ribbons .smart-ribbon-sinnoh {
-  order:166
-}
-.card-ribbons .smart-ribbon-great-sinnoh {
-  order:165
-}
-.card-ribbons .smart-ribbon-ultra-sinnoh {
-  order:164
-}
-.card-ribbons .smart-ribbon-master-sinnoh {
-  order:163
-}
-.card-ribbons .tough-ribbon-sinnoh {
-  order:162
-}
-.card-ribbons .tough-ribbon-great-sinnoh {
-  order:161
-}
-.card-ribbons .tough-ribbon-ultra-sinnoh {
-  order:160
-}
-.card-ribbons .tough-ribbon-master-sinnoh {
-  order:159
-}
-.card-ribbons .ability-ribbon {
-  order:158
-}
-.card-ribbons .great-ability-ribbon {
-  order:157
-}
-.card-ribbons .double-ability-ribbon {
-  order:156
-}
-.card-ribbons .multi-ability-ribbon {
-  order:155
-}
-.card-ribbons .pair-ability-ribbon {
-  order:154
-}
-.card-ribbons .world-ability-ribbon {
-  order:153
-}*/
 
 /* TODO: change all Pokemon images to use a spritesheet */

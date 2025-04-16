@@ -2287,6 +2287,7 @@ function initRun(){
 		resetFilterForm(true);
 
 		/* changelog logic */
+		/* TODO: reduce duplication with full changelog behavior */
 		loadingBar(20);
 		$("#loading-spinner-info-text").text("Loading changelog");
 		var newChanges = [], initialRun = true;
@@ -2304,7 +2305,11 @@ function initRun(){
 					.append($("<h6>", { "class": "fw-bold" }).text(date));
 				let $changeList = $("<ul>", { "class": "mb-0" });
 				for(let change in changelog[date]){
-					$changeList.append($("<li>").html(changelog[date][change]));
+					if(changelog[date][change].startsWith("\\")){
+						$changeContainer.append($("<p>").html(changelog[date][change].substring(1)));
+					} else {
+						$changeList.append($("<li>").html(changelog[date][change]));
+					}
 				}
 				$changeContainer.append($changeList);
 				newChanges.push($changeContainer);
@@ -2538,6 +2543,7 @@ $(function(){
 	$("#modalBoxesNew").click(function(){
 		createOrEditBox();
 	});
+	/* TODO: reduce duplication with changelog updates */
 	$("#modalAboutViewChangelog").click(function(){
 		var changeList = [];
 		$("#modalChangelog .list-group").html("");
@@ -2547,7 +2553,11 @@ $(function(){
 				.append($("<h6>", { "class": "fw-bold" }).text(date));
 			let $changeList = $("<ul>", { "class": "mb-0" });
 			for(let change in changelog[date]){
-				$changeList.append($("<li>").html(changelog[date][change]));
+				if(changelog[date][change].startsWith("\\")){
+					$changeContainer.append($("<p>").html(changelog[date][change].substring(1)));
+				} else {
+					$changeList.append($("<li>").html(changelog[date][change]));
+				}
 			}
 			$changeContainer.append($changeList);
 			changeList.push($changeContainer);
