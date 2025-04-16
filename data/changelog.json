@@ -3,6 +3,7 @@
 		"On mobile devices, improved contrast of top-right menu icon for all themes (thanks BHC90210!)",
 		"Improved Ribbons and Marks alignment when two Pokémon are in the same row and one has a lot less Ribbons or Marks than the other (thanks Burnteye!)",
 		"Improved wording of Winning Ribbon and Footprint Ribbon warnings",
+		"Fixed an issue where Hisuian balls would appear as Strange Balls in HOME",
 		"Fixed an issue introduced yesterday where old Battle and Contest Ribbons were showing even after the Pokémon moved to Gen&nbsp;VI (thanks Z and FireBolt PT!) -- by popular request, this will be made into an option soon!",
 		"Fixed an issue introduced yesterday where Pokémon names and titles were not properly aligned at the top of their cards (thanks SadisticMystic!)"
 	],
