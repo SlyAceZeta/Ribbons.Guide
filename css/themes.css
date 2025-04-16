@@ -90,6 +90,9 @@ a:not(.btn) {
 	background: #eee;
 	color: #000;
 }
+[data-bs-theme="light"] .navbar {
+	--bs-navbar-toggler-border-color: #666;
+}
 
 /* dark overrides */
 [data-bs-theme="dark"] {
@@ -173,6 +176,13 @@ a:not(.btn) {
 }
 [data-bs-theme="dark"] .bg-danger-subtle {
 	background-color: #400!important;
+}
+[data-bs-theme="naranja"] .navbar,
+[data-bs-theme="uva"] .navbar,
+[data-bs-theme="sword"] .navbar,
+[data-bs-theme="shield"] .navbar {
+	--bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+	--bs-navbar-toggler-border-color: #fff;
 }
 
 /* Start Menu */
@@ -287,6 +297,10 @@ a:not(.btn) {
 }
 [data-bs-theme="start"] .btn-close {
 	filter: var(--bs-btn-close-white-filter);
+}
+[data-bs-theme="start"] .navbar {
+	--bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2894, 115, 144, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+	--bs-navbar-toggler-border-color: #5E7390;
 }
 
 /* Naranja Academy */

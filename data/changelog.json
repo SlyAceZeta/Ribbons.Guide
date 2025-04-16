@@ -1,5 +1,6 @@
 {
 	"16 April 2025": [
+		"On mobile devices, improved contrast of top-right menu icon for all themes (thanks BHC90210!)",
 		"Fixed an issue introduced yesterday where old Battle and Contest Ribbons were showing even after the Pokémon moved to Gen VI (thanks Z and FireBolt PT!)",
 		"Fixed an issue introduced yesterday where Pokémon names and titles were not properly aligned at the top of their cards (thanks SadisticMystic!)"
 	],
