@@ -1,4 +1,7 @@
 {
+	"16 April 2025": [
+		"Fixed an issue introduced in the new update where old Battle and Contest Ribbons were showing even after the Pokémon moved to Gen VI (thanks Z!)"
+	],
 	"15 April 2025": [
 		"\\<strong>The long-awaited redesign is now live!</strong> If you spot any issues, please <a href='https://discord.gg/frv7dpWzDG'>let me know on Discord!</a> If you'd like to support my work, <a href='https://ko-fi.com/slyacezeta'>I have a Ko-fi</a> but Ribbons.Guide will always be FOSS (free and open-source software)!",
 		"Replaced jQuery UI, jQuery UI Touch Punch, and jQuery Modal with <a href='https://getbootstrap.com/'>Bootstrap</a> and <a href='https://github.com/SortableJS/Sortable'>Sortable</a>",
