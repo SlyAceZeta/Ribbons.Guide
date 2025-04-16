@@ -832,10 +832,10 @@ function ribbonChecklist(){
 		$("#modalRibbonChecklistStatus").prepend($("<div>", { "id": "modalRibbonChecklistStatus-warnings", "class": "col-12 p-0 text-center bg-danger" }));
 		for(var w in ribbonWarnings){
 			var warningText = "unknown warning";
-			if(ribbonWarnings[w] == "winning-ribbon") warningText = cardData.name + " is currently Lv." + cardData.level + ". Leveling " + pronounObject + " above Lv.50 will make the Winning Ribbon unavailable!";
-			if(ribbonWarnings[w] == "footprint-gen4") warningText = cardData.name + " is currently Lv." + cardData.level + ". Leveling " + pronounObject + " above Lv.70 will make the Footprint Ribbon exclusive to Gen IV!";
-			if(ribbonWarnings[w] == "footprint-virtualconsole") warningText = cardData.name + " is currently Lv." + cardData.level + ". Leveling " + pronounObject + " above Lv.70 will make the Footprint Ribbon unavailable!";
-			if(ribbonWarnings[w] == "footprint-met-level") warningText = cardData.name + "'s Met Level has not been set. The availability of the Footprint Ribbon after Gen IV cannot be determined.";
+			if(ribbonWarnings[w] == "winning-ribbon") warningText = "If " + cardData.name + " reaches Lv.51, the Winning Ribbon will become unavailable!";
+			if(ribbonWarnings[w] == "footprint-gen4") warningText = "If " + cardData.name + " reaches Lv.71 before transferring to Gen&nbsp;V, the Footprint Ribbon will only be available in Gen&nbsp;IV!";
+			if(ribbonWarnings[w] == "footprint-virtualconsole") warningText = "If " + cardData.name + " reaches Lv.71 before transferring to Gen&nbsp;VII, the Footprint Ribbon will become unavailable!";
+			if(ribbonWarnings[w] == "footprint-met-level") warningText = cardData.name + "'s Met Level has not been set. The availability of the Footprint Ribbon after Gen&nbsp;IV cannot be determined.";
 			if(ribbonWarnings[w] == "evolution-warning"){
 				var evoWarnName = getPokemonData(cardData.evolutionWarning, "names")["eng"];
 				var evoWarnForms = getPokemonData(cardData.evolutionWarning, "forms");
@@ -857,7 +857,7 @@ function ribbonChecklist(){
 				}
 				warningText = "Evoloving " + cardData.name + " into " + evoWarnName + " may change the availability of certain Ribbons!";
 			}
-			$("#modalRibbonChecklistStatus-warnings").append($("<div>", { "class": "p-2 px-3 border-bottom border-2" }).text(warningText));
+			$("#modalRibbonChecklistStatus-warnings").append($("<div>", { "class": "p-2 px-3 border-bottom border-2" }).html(warningText));
 		}
 		$("#modalRibbonChecklistStatus-warnings > div:last-child").removeClass("border-bottom border-2");
 	}
@@ -1076,7 +1076,7 @@ function createCard(p, id){
 	var $cardHeaderLeft = $("<div>", { "class": "card-header-fullname" });
 	var $cardHeaderBallMain = $("<img>", { "class": "align-text-top me-2", "src": "img/balls/"+p.ball+".png", "alt": balls[p.ball]["eng"], "title": balls[p.ball]["eng"] });
 	var $cardHeaderBallStrange = "";
-	if(p.currentgame && ((p.currentgame !== "pla" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
+	if(p.currentgame && ((p.currentgame !== "pla" && p.currentgame !== "home" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
 		if(p.strangeball !== "disabled"){
 			$cardHeaderBallStrange = $("<img>", { "class": "align-middle me-2", "src": "img/balls/strange.png", "alt": "Strange Ball", "title": "Strange Ball" });
 			if(p.strangeball == ""){

@@ -403,7 +403,7 @@ html[data-autostrangeball="true"] .card-header-ball-strange {
 }
 .card-ribbons {
 	height: 100%;
-	align-content: space-evenly;
+	align-content: center;
 }
 .card-ribbons img {
 	width: auto;
@@ -471,11 +471,21 @@ html[data-cardview="condensed"] .card-footer-language,
 html[data-cardview="condensed"] .card-header-shiny {
 	display: none!important;
 }
-html[data-cardview="condensed"] .card-header-name {
+html[data-cardview="condensed"] .card-header-fullname .align-text-top {
+	vertical-align: middle!important;
+}
+html[data-cardview="condensed"] .card-header-fullname .align-baseline {
+	display: inline-block;
+	vertical-align: middle!important;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	max-width: 4.5em;
+	font-size: 1.15em;
+}
+html[data-cardview="condensed"] .card-header-name {
+	display: inline!important;
+	font-size: 1em;
 }
 html[data-cardview="condensed"] .card-body {
 	justify-content: center;
