@@ -1653,17 +1653,17 @@ function selectCustomOption(o){
 			var nonePlatforms = ["gba", "gamecube", "dsi"];
 			for(var i in noneGens){
 				for(var t in noneTypes){
-					$mark.append($("<img>", { "class": selectIconClass + " select-icon-origin select-icon-origin-" + noneTypes[t], "src": "img/origins/custom/" + noneTypes[t] + "/" + noneGens[i] + ".svg" }));
+					$mark.append($("<img>", { "class": selectIconClass + " light-invert select-icon-origin select-icon-origin-" + noneTypes[t], "src": "img/origins/custom/" + noneTypes[t] + "/" + noneGens[i] + ".svg" }));
 				}
 			}
 			for(var p in nonePlatforms){
-				$mark.append($("<img>", { "class": selectIconClass + " select-icon-origin select-icon-origin-platform", "src": "img/origins/custom/platforms/" + nonePlatforms[p] + ".svg" }));
+				$mark.append($("<img>", { "class": selectIconClass + " light-invert select-icon-origin select-icon-origin-platform", "src": "img/origins/custom/platforms/" + nonePlatforms[p] + ".svg" }));
 			}
 			for(var lang in translations.none){
 				$mark.append($("<span>", { "class": "translation translation-" + lang}).text(translations.none[lang]));
 			}
 		} else {
-			$mark.append($("<img>", { "class": selectIconClass, "src": "img/origins/" + o.id + ".png" }))
+			$mark.append($("<img>", { "class": selectIconClass + " light-invert", "src": "img/origins/" + o.id + ".png" }))
 				.append($("<span>").text(origins[o.id].name));
 		}
 		return $mark;
@@ -1673,12 +1673,12 @@ function selectCustomOption(o){
 		if(o.id === "platforms"){
 			var nonePlatforms = ["gba", "gamecube", "dsi"];
 			for(var p in nonePlatforms){
-				$marks.append($("<img>", { "class": selectIconClass, "src": "img/origins/custom/platforms/" + nonePlatforms[p] + ".svg" }));
+				$marks.append($("<img>", { "class": selectIconClass + " light-invert", "src": "img/origins/custom/platforms/" + nonePlatforms[p] + ".svg" }));
 			}
 		} else if(o.id !== "none"){
 			var noneGens = [3, 4, 5];
 			for(var i in noneGens){
-				$marks.append($("<img>", { "class": selectIconClass, "src": "img/origins/custom/" + o.id + "/" + noneGens[i] + ".svg" }));
+				$marks.append($("<img>", { "class": selectIconClass + " light-invert", "src": "img/origins/custom/" + o.id + "/" + noneGens[i] + ".svg" }));
 			}
 		}
 		$marks.append($("<span>").text(o.text));
@@ -1755,10 +1755,10 @@ function selectCustomOption(o){
 	} else if(result.indexOf("filterFormShiny") > 0){
 		var $shiny = $("<span>");
 		if(o.id === "shiny" || o.id === "star"){
-			$shiny.append($("<img>", { "class": selectIconClass, "src": "img/ui/shiny-star.png" }));
+			$shiny.append($("<img>", { "class": selectIconClass + " light-invert", "src": "img/ui/shiny-star.png" }));
 		}
 		if(o.id === "shiny" || o.id === "square"){
-			$shiny.append($("<img>", { "class": selectIconClass, "src": "img/ui/shiny-square.svg" }));
+			$shiny.append($("<img>", { "class": selectIconClass + " light-invert", "src": "img/ui/shiny-square.svg" }));
 		}
 		$shiny.append($("<span>").text(o.text));
 		return $shiny;

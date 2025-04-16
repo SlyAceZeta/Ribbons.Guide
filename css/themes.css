@@ -21,6 +21,10 @@
 a:not(.btn) {
 	color: #0148B1;
 }
+.ribbons-done {
+	--rg-card-bg: #cfc;
+	--rg-card-cap-bg: #bdb;
+}
 .form-floating > .form-control-plaintext ~ label,
 .form-floating > .form-control:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
@@ -47,6 +51,14 @@ a:not(.btn) {
 	--rg-header-text: #bbb;
 	--rg-header-text-active: #fff;
 }
+[data-bs-theme="sword"] .nav-tabs .nav-link, [data-bs-theme="sword"] .nav-tabs .nav-link.disabled, [data-bs-theme="sword"] .nav-tabs .nav-link:disabled,
+[data-bs-theme="shield"] .nav-tabs .nav-link, [data-bs-theme="shield"] .nav-tabs .nav-link.disabled, [data-bs-theme="shield"] .nav-tabs .nav-link:disabled {
+	color: #444;
+}
+[data-bs-theme="sword"] .nav-tabs .nav-link:focus, [data-bs-theme="sword"] .nav-tabs .nav-link:hover,
+[data-bs-theme="shield"] .nav-tabs .nav-link:focus, [data-bs-theme="shield"] .nav-tabs .nav-link:hover {
+	color: #000;
+}
 
 /* sword background */
 [data-bs-theme="sword"] body {
@@ -55,6 +67,28 @@ a:not(.btn) {
 /* shield background */
 [data-bs-theme="shield"] body {
 	background-image: linear-gradient(120deg, #e3313d 0%, #e3313d 20%, #c42835 20%, #c42835 30%, #fff 30%, #fff 100%);
+}
+
+/* light theme icon filters */
+[data-bs-theme="light"] #tracker-grid .col:not(.ribbons-done) .card-header button,
+[data-bs-theme="sword"] #tracker-grid .col:not(.ribbons-done) .card-header button,
+[data-bs-theme="shield"] #tracker-grid .col:not(.ribbons-done) .card-header button,
+[data-bs-theme="light"] .ribbon-checklist-warning-badge.bg-danger,
+[data-bs-theme="sword"] .ribbon-checklist-warning-badge.bg-danger,
+[data-bs-theme="shield"] .ribbon-checklist-warning-badge.bg-danger,
+[data-bs-theme="light"] .light-invert,
+[data-bs-theme="sword"] .light-invert,
+[data-bs-theme="shield"] .light-invert,
+[data-bs-theme="light"] #modalBoxesList .box-controls img,
+[data-bs-theme="sword"] #modalBoxesList .box-controls img,
+[data-bs-theme="shield"] #modalBoxesList .box-controls img {
+	filter: invert(1);
+}
+[data-bs-theme="light"] .select2-search__field,
+[data-bs-theme="sword"] .select2-search__field,
+[data-bs-theme="shield"] .select2-search__field {
+	background: #eee;
+	color: #000;
 }
 
 /* dark overrides */
