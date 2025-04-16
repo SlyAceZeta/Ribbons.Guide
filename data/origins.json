@@ -1,0 +1,101 @@
+{
+	"none": {
+		"name": "None",
+		"games": [
+			"black2",
+			"white2",
+			"black",
+			"white",
+			"hg",
+			"ss",
+			"diamond",
+			"pearl",
+			"platinum",
+			"fr",
+			"lg",
+			"colosseum",
+			"xd",
+			"ruby",
+			"sapphire",
+			"emerald"
+		]
+	},
+	"pentagon": {
+		"name": "Pentagon",
+		"games": [
+			"or",
+			"as",
+			"x",
+			"y",
+			"bank"
+		]
+	},
+	"clover": {
+		"name": "Clover",
+		"games": [
+			"usun",
+			"umoon",
+			"sun",
+			"moon",
+			"bank7"
+		]
+	},
+	"game-boy": {
+		"name": "Game Boy",
+		"games": [
+			"gold",
+			"silver",
+			"crystal",
+			"red-eng",
+			"red-jpn",
+			"blue-eng",
+			"blue-jpn",
+			"green",
+			"yellow"
+		]
+	},
+	"go": {
+		"name": "GO",
+		"games": [
+			"go"
+		]
+	},
+	"lets-go": {
+		"name": "Let's Go",
+		"games": [
+			"lgp",
+			"lge"
+		]
+	},
+	"galar": {
+		"name": "Galar",
+		"games": [
+			"sw",
+			"sh",
+			"home"
+		]
+	},
+	"bdsp": {
+		"name": "Sinnoh (BDSP)",
+		"games": [
+			"bd",
+			"sp",
+			"home"
+		]
+	},
+	"hisui": {
+		"name": "Hisui",
+		"games": [
+			"pla",
+			"home"
+		]
+	},
+	"paldea": {
+		"name": "Paldea",
+		"games": [
+			"scar",
+			"vio",
+			"home"
+		]
+	}
+}

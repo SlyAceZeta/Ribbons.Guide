@@ -1,0 +1,1001 @@
+/* animations */
+@keyframes pulse-animation {
+	0% {
+		box-shadow: 0 0 1px 0px rgba(var(--rg-pulse-rgb), 0.75);
+	}
+	100% {
+		box-shadow: 0 0 1px 10px rgba(var(--rg-pulse-rgb), 0);
+	}
+}
+
+/* variables */
+:root {
+	--bs-body-font-family: "Nunito Sans", sans-serif;
+}
+
+/* body */
+body {
+	background-attachment: fixed;
+}
+
+/* spinner */
+#loading-spinner {
+	z-index: 9999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: var(--bs-body-bg);
+}
+#loading-spinner-info-text {
+	text-transform: uppercase;
+}
+#loading-spinner-info-progress {
+	width: 200px;
+	height: 7px;
+}
+#loading-spinner-info-progress-bar {
+	width: 0%;
+}
+
+/* nav */
+.navbar-brand,
+.navbar-brand:hover {
+	color: var(--rg-header-text-active);
+}
+.navbar-brand img {
+	width: 32px;
+	height: 32px;
+}
+.nav-link,
+.nav-link.disabled, .nav-link:disabled {
+	color: var(--rg-header-text);
+}
+.nav-link:focus, .nav-link:hover,
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+	color: var(--rg-header-text-active);
+}
+@media (min-width: 992px){
+	#headerNav .active {
+		border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
+	}
+}
+#headerNav {
+	background: var(--rg-header-background);
+	color: var(--rg-header-text-active);
+	border-color: var(--rg-header-border, var(--bs-border-color))!important;
+}
+
+/* buttons */
+.btn-outline-secondary {
+	--bs-btn-border-color: var(--bs-border-color);
+	--bs-btn-active-border-color: var(--bs-border-color);
+}
+
+/* modals */
+.modal-content {
+	border: none;
+	background: var(--rg-card-bg);
+	color: var(--rg-card-color);
+}
+.modal-header,
+.modal-footer {
+	border: none;
+	background: var(--rg-card-cap-bg);
+	color: var(--rg-card-color);
+}
+.modal-header {
+	--bs-modal-header-padding: 0.75rem 1rem;
+}
+#modalAbout .btn img {
+	width: 20px;
+	height: 20px;
+}
+#modalAbout .btn span {
+	vertical-align: middle;
+	margin-left: 5px;
+}
+#modalSettings .form-check-label img {
+	width: auto;
+	height: 20px;
+}
+#modalSettings .form-check-label-info {
+	font-size: .75em;
+}
+#pokemonFormGenderGroup input:disabled:not(:checked),
+#pokemonFormGenderGroup input:disabled:not(:checked) + label,
+#pokemonFormShinyGroup input:disabled:not(:checked),
+#pokemonFormShinyGroup input:disabled:not(:checked) + label,
+#pokemonFormShiny-normal:disabled:checked ~ img {
+	display: none;
+}
+#pokemonFormGender-male:disabled:checked + label span:after,
+#pokemonFormGender-female:disabled:checked + label span:after,
+#pokemonFormShiny-normal:disabled:checked + label span:after {
+	content: " only";
+}
+label[for="pokemonFormGender-female"],
+label[for="pokemonFormShiny-square"] {
+	border-top-right-radius: var(--bs-btn-border-radius)!important;
+	border-bottom-right-radius: var(--bs-btn-border-radius)!important;
+}
+#pokemonFormGenderGroup input:disabled:checked + label,
+#pokemonFormShinyGroup input:disabled:checked + label {
+	border-radius: var(--bs-btn-border-radius)!important;
+}
+.form-label {
+	margin-bottom: 0.25rem;
+}
+#pokemonFormSprite {
+	max-width: 100%;
+	max-height: 100px;
+}
+.form-asterisk {
+	color: red;
+}
+.select2 {
+	display: block;
+	width: 100%;
+	padding: 0;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: var(--bs-body-color);
+	background: var(--bs-body-bg);
+	border: var(--bs-border-width) solid var(--bs-border-color);
+	border-radius: var(--bs-border-radius);
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.select2.select2-container--disabled {
+	background: transparent;
+}
+.select2 .selection .select2-selection {
+	--bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+	background-image: var(--bs-form-select-bg-img),var(--bs-form-select-bg-icon,none);
+	padding: .25rem 2.25rem .25rem .75rem;
+	background-repeat: no-repeat;
+	background-position: right .75rem center;
+	background-size: 16px 12px;
+	box-sizing: content-box;
+	border-radius: var(--bs-border-radius);
+}
+.select2 .selection .select2-selection.select2-selection--multiple {
+	padding: 0 2.25rem .25rem .25rem;
+}
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple,
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+	background-color: transparent;
+	border: none;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	color: var(--bs-body-color);
+	padding: 0;
+	line-height: 28px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+	background: var(--bs-secondary-bg);
+	border-color: var(--bs-border-color);
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+	color: var(--bs-body-color);
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover,
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:focus {
+	background: var(--bs-tertiary-bg);
+	color: var(--bs-body-color);
+}
+.select2-selection__arrow {
+	display: none;
+}
+.select2-dropdown {
+	background-color: var(--bs-body-bg);
+	border: var(--bs-border-width) solid #52525E!important;
+	border-radius: 0.25rem!important;
+	padding: 0.25rem;
+}
+.select2-container--default .select2-selection--single .select2-selection__clear {
+	margin-right: 5px;
+}
+.select2-results__option {
+	border-radius: 0.25rem;
+}
+.select2-container--default .select2-results__option--selected {
+	background: none;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+	background: var(--bs-secondary-bg);
+	color: var(--bs-body-color);
+}
+.select2-container--default.select2-container--disabled .select2-selection--single {
+	background-color: var(--bs-secondary-bg);
+	cursor: not-allowed;
+}
+.select2-hidden-accessible.is-invalid + .select2 {
+	border-color: var(--bs-form-invalid-border-color);
+}
+.select2-hidden-accessible.is-invalid + .select2 .selection .select2-selection {
+	--bs-form-select-bg-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+	padding-right: 4.125rem;
+	background-position: right .75rem center,center right 2rem;
+	background-size: 16px 12px,calc(.75em + .375rem) calc(.75em + .375rem);
+}
+#pokemonFormGender-male:checked + label {
+	background: #248;
+	color: #fff;
+}
+#pokemonFormGender-female:checked + label {
+	background: #824;
+	color: #fff;
+}
+.pokemonFormSelectIcon,
+.filterFormSelectIcon {
+	width: auto;
+	height: 24px;
+	margin-top: -2px;
+	margin-right: 5px;
+}
+#pokemonFormSections-ribbons .list-group-item {
+	--bs-list-group-item-padding-x: 0.5rem;
+	--bs-list-group-item-padding-y: 0.5rem;
+}
+#pokemonFormRibbons {
+	max-height: 500px;
+}
+#pokemonFormRibbons img {
+	width: 42px;
+	height: auto;
+}
+#pokemonFormRibbons input {
+	width: 18px;
+	height: 18px;
+}
+#pokemonFormRibbons img.pokemonFormRibbon-memory-sync {
+	width: 20px;
+	margin-right: 2px;
+}
+.form-check-input:disabled ~ .pokemonFormRibbon-memory-sync {
+	opacity: 0.5;
+}
+@media (min-width: 992px) {
+	#pokemonFormRibbons img.pokemonFormRibbon-memory-sync {
+		width: 23px;
+		margin-left: 2px;
+		margin-right: 5px;
+	}
+}
+.auto-memory-ribbon {
+	display: none;
+}
+html[data-automemoryribbons="true"] .pokemonFormRibbon-memory-sync,
+html[data-automemoryribbons="true"] .auto-memory-ribbon {
+	display: inline;
+}
+html[data-automemoryribbons="true"] #pokemonFormRibbon-contest-memory-ribbon:not(:checked),
+html[data-automemoryribbons="true"] #pokemonFormRibbon-contest-memory-ribbon-gold:not(:checked),
+html[data-automemoryribbons="true"] #pokemonFormRibbon-battle-memory-ribbon:not(:checked),
+html[data-automemoryribbons="true"] #pokemonFormRibbon-battle-memory-ribbon-gold:not(:checked),
+html[data-automemoryribbons="true"] #pokemonFormRibbon-contest-memory-ribbon:checked + .pokemonFormRibbon-memory-sync,
+html[data-automemoryribbons="true"] #pokemonFormRibbon-contest-memory-ribbon-gold:checked + .pokemonFormRibbon-memory-sync,
+html[data-automemoryribbons="true"] #pokemonFormRibbon-battle-memory-ribbon:checked + .pokemonFormRibbon-memory-sync,
+html[data-automemoryribbons="true"] #pokemonFormRibbon-battle-memory-ribbon-gold:checked + .pokemonFormRibbon-memory-sync,
+html[data-automemoryribbons="false"] .pokemonFormRibbon-memory-sync {
+	display: none;
+}
+#filterformTargetGamesLGPE {
+	display: none;
+}
+#modalBoxesList-none {
+	display: none;
+}
+#modalBoxesList-none:only-child {
+	display: list-item;
+}
+#modalBoxesList img {
+	width: auto;
+	height: 20px;
+}
+#modalBoxesList img.img-box {
+	height: 24px;
+}
+#modalBoxesList li {
+	border-width: 0;
+}
+#modalBoxesList li:not(:first-child):not(:last-child){
+	border-bottom-width: 1px;
+}
+#modalBoxesList .list-group-item,
+#tracker-grid button.card-sortable-handle {
+	cursor: grab;
+}
+#modalRibbonChecklistRows:empty {
+	display: none;
+}
+.modalRibbonChecklistRows-ribbon:not(:last-child) {
+	margin-right: .25rem;
+}
+
+/* links */
+a:not(:hover):not(:focus) {
+	text-decoration: none;
+}
+
+/* tracker buttons */
+#sectionTrackerButtonRow img {
+	width: auto;
+	height: 18px;
+}
+#sectionTrackerButtonRow #switchView img {
+	width: auto;
+	height: 22px;
+	filter: var(--rg-icon-filter);
+}
+@media (max-width: 767.98px){
+	#sectionTrackerButtonRow img {
+		height: 24px;
+	}
+}
+
+/* tracker cards */
+.card {
+	--bs-card-border-color: var(--bs-border-color);
+	--bs-card-bg: var(--rg-card-bg);
+	--bs-card-color: var(--rg-card-color);
+	height: 100%;
+}
+.card-header,
+.card-footer {
+	--bs-card-cap-bg: var(--rg-card-cap-bg);
+	--bs-card-cap-color: var(--rg-card-color);
+	border: none;
+}
+.card-header {
+	padding-right: 0.75em;
+}
+.card-header img,
+.card-footer img {
+	width: auto;
+	height: 20px;
+}
+.card-header button {
+	width: 28px;
+	background: url("../img/ui/clipboard.png") center center no-repeat;
+	background-size: 20px;
+}
+.no-ribbons-in-current-game .card-header button {
+	background-image: url("../img/ui/move-item.svg");
+	box-shadow: 0px 0px 1px 1px #ffffff00;
+	animation: pulse-animation 1s infinite;
+}
+.ribbons-done .card-header button {
+	background-image: url("../img/ui/check.svg");
+}
+.card-header-name {
+	font-size: 1.15em;
+}
+.card-header-ball-strange {
+	display: none;
+}
+html[data-autostrangeball="true"] .card-header-ball-selected {
+	display: none;
+}
+html[data-autostrangeball="true"] .card-header-ball-strange {
+	display: inline;
+}
+.card-header-shiny,
+.card-footer-origin,
+.card .btn-link img {
+	filter: var(--rg-icon-filter);
+}
+.ribbon-checklist-warning-badge {
+	display: none;
+	top: 25%;
+	left: 85%;
+	padding: 0.33rem;
+}
+.col[data-ribbon-warnings] .ribbon-checklist-warning-badge {
+	display: inline;
+}
+.card-sprite {
+	width: auto;
+	height: 100px;
+}
+.card-ribbons {
+	height: 100%;
+	align-content: space-evenly;
+}
+.card-ribbons img {
+	width: auto;
+	height: 32px;
+	margin: 1px;
+}
+html[data-cardview="condensed"] .card-footer,
+html[data-footerextrainfo="false"] .card-footer {
+	padding-top: .25rem !important;
+	padding-bottom: .25rem !important;
+}
+html[data-footerextrainfo="false"] .card-footer-top {
+	display: none!important;
+}
+.card-footer-level {
+	display: inline-flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	width: 50px;
+}
+.card-footer-language {
+	background: var(--rg-card-bg);
+	color: var(--rg-card-text);
+	width: 60px;
+	line-height: 1.35;
+}
+.card-footer-origin-arabic,
+.card-footer-origin-arabic-outline,
+.card-footer-origin-roman,
+.card-footer-origin-roman-outline,
+.card-footer-origin-platform,
+.select-icon-origin {
+	display: none;
+}
+html[data-extraoriginmarks="arabic"] .card-footer-origin-arabic,
+html[data-extraoriginmarks="arabic-outline"] .card-footer-origin-arabic-outline,
+html[data-extraoriginmarks="roman"] .card-footer-origin-roman,
+html[data-extraoriginmarks="roman-outline"] .card-footer-origin-roman-outline,
+html[data-extraoriginmarks="platforms"] .card-footer-origin-platform,
+html[data-extraoriginmarks="arabic"] .select-icon-origin-arabic,
+html[data-extraoriginmarks="arabic-outline"] .select-icon-origin-arabic-outline,
+html[data-extraoriginmarks="roman"] .select-icon-origin-roman,
+html[data-extraoriginmarks="roman-outline"] .select-icon-origin-roman-outline,
+html[data-extraoriginmarks="platforms"] .select-icon-origin-platform {
+	display: inline;
+}
+.sorting-disabled #tracker-grid .card-sortable-handle {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+/* condensed cards */
+@media (min-width: 1400px) {
+	html[data-cardview="condensed"] #tracker-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 230px);
+		justify-content: space-evenly;
+	}
+}
+html[data-cardview="condensed"] .card-ribbons,
+html[data-cardview="condensed"] .card-footer-top,
+html[data-cardview="condensed"] .card-header-title,
+html[data-cardview="condensed"] .card-header-gender,
+html[data-cardview="condensed"] .card-footer-level,
+html[data-cardview="condensed"] .card-footer-language,
+html[data-cardview="condensed"] .card-header-shiny {
+	display: none!important;
+}
+html[data-cardview="condensed"] .card-header-name {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 4.5em;
+}
+html[data-cardview="condensed"] .card-body {
+	justify-content: center;
+}
+html[data-cardview="condensed"] .card-footer-bottom button {
+	margin-left: 0.25em!important;
+}
+
+/* lists */
+.list-group {
+	--bs-list-group-bg: transparent;
+}
+
+/* translations */
+.translation {
+	display: none;
+}
+html[lang="en"] .translation-eng,
+html[lang="de"] .translation-ger,
+html[lang="es"] .translation-spa,
+html[lang="fr"] .translation-fre,
+html[lang="it"] .translation-ita,
+html[lang="ja"] .translation-jpn,
+html[lang="ko"] .translation-kor,
+html[lang="zh-Hant"] .translation-cht,
+html[lang="zh-Hans"] .translation-chs {
+	display: inline;
+}
+
+/* popovers */
+.popover {
+	--bs-popover-body-padding-y: 0.75rem;
+}
+.popover-body {
+	padding: calc(var(--bs-popover-body-padding-y) - 0.25rem) var(--bs-popover-body-padding-x) var(--bs-popover-body-padding-y);
+}
+
+/* ribbon order */
+.card-ribbons .paldea-champion-ribbon {
+	order: 1;
+}
+.card-ribbons .galar-champion-ribbon {
+	order: 2;
+}
+.card-ribbons .alola-champion-ribbon {
+	order: 3;
+}
+.card-ribbons .kalos-champion-ribbon {
+	order: 4;
+}
+.card-ribbons .hoenn-champion-ribbon {
+	order: 5;
+}
+.card-ribbons .sinnoh-champion-ribbon {
+	order: 6;
+}
+.card-ribbons .champion-ribbon {
+	order: 7;
+}
+.card-ribbons .master-rank-ribbon {
+	order: 8;
+}
+.card-ribbons .tower-master-ribbon {
+	order: 9;
+}
+.card-ribbons .battle-tree-great-ribbon {
+	order: 10;
+}
+.card-ribbons .battle-tree-master-ribbon {
+	order: 11;
+}
+.card-ribbons .battle-royal-master-ribbon {
+	order: 12;
+}
+.card-ribbons .skillful-battler-ribbon {
+	order: 13;
+}
+.card-ribbons .expert-battler-ribbon {
+	order: 14;
+}
+.card-ribbons .legend-ribbon {
+	order: 15;
+}
+.card-ribbons .national-ribbon {
+	order: 16;
+}
+.card-ribbons .earth-ribbon {
+	order: 17;
+}
+.card-ribbons .twinkling-star-ribbon {
+	order: 18;
+}
+.card-ribbons .contest-star-ribbon {
+	order: 19;
+}
+.card-ribbons .coolness-master-ribbon {
+	order: 20;
+}
+.card-ribbons .beauty-master-ribbon {
+	order: 21;
+}
+.card-ribbons .cuteness-master-ribbon {
+	order: 22;
+}
+.card-ribbons .cleverness-master-ribbon {
+	order: 23;
+}
+.card-ribbons .toughness-master-ribbon {
+	order: 24;
+}
+.card-ribbons .training-ribbon {
+	order: 25;
+}
+.card-ribbons .effort-ribbon {
+	order: 26;
+}
+.card-ribbons .best-friends-ribbon {
+	order: 27;
+}
+.card-ribbons .footprint-ribbon {
+	order: 28;
+}
+.card-ribbons .artist-ribbon {
+	order: 29;
+}
+.card-ribbons .hisui-ribbon {
+	order: 30;
+}
+.card-ribbons .once-in-a-lifetime-ribbon {
+	order: 31;
+}
+.card-ribbons .alert-ribbon {
+	order: 32;
+}
+.card-ribbons .shock-ribbon {
+	order: 33;
+}
+.card-ribbons .downcast-ribbon {
+	order: 34;
+}
+.card-ribbons .careless-ribbon {
+	order: 35;
+}
+.card-ribbons .relax-ribbon {
+	order: 36;
+}
+.card-ribbons .snooze-ribbon {
+	order: 37;
+}
+.card-ribbons .smile-ribbon {
+	order: 38;
+}
+.card-ribbons .gorgeous-ribbon {
+	order: 39;
+}
+.card-ribbons .royal-ribbon {
+	order: 40;
+}
+.card-ribbons .gorgeous-royal-ribbon {
+	order: 41;
+}
+.card-ribbons .record-ribbon {
+	order: 42;
+}
+.card-ribbons .country-ribbon {
+	order: 43;
+}
+.card-ribbons .world-ribbon {
+	order: 44;
+}
+.card-ribbons .classic-ribbon {
+	order: 45;
+}
+.card-ribbons .premier-ribbon {
+	order: 46;
+}
+.card-ribbons .event-ribbon {
+	order: 47;
+}
+.card-ribbons .birthday-ribbon {
+	order: 48;
+}
+.card-ribbons .special-ribbon {
+	order: 49;
+}
+.card-ribbons .souvenir-ribbon {
+	order: 50;
+}
+.card-ribbons .wishing-ribbon {
+	order: 51;
+}
+.card-ribbons .battle-champion-ribbon {
+	order: 52;
+}
+.card-ribbons .regional-champion-ribbon {
+	order: 53;
+}
+.card-ribbons .national-champion-ribbon {
+	order: 54;
+}
+.card-ribbons .world-champion-ribbon {
+	order: 55;
+}
+.card-ribbons .cool-ribbon-hoenn {
+	order: 500;
+}
+.card-ribbons .cool-ribbon-super-hoenn {
+	order: 501;
+}
+.card-ribbons .cool-ribbon-hyper-hoenn {
+	order: 502;
+}
+.card-ribbons .cool-ribbon-master-hoenn {
+	order: 503;
+}
+.card-ribbons .beauty-ribbon-hoenn {
+	order: 504;
+}
+.card-ribbons .beauty-ribbon-super-hoenn {
+	order: 505;
+}
+.card-ribbons .beauty-ribbon-hyper-hoenn {
+	order: 506;
+}
+.card-ribbons .beauty-ribbon-master-hoenn {
+	order: 507;
+}
+.card-ribbons .cute-ribbon-hoenn {
+	order: 508;
+}
+.card-ribbons .cute-ribbon-super-hoenn {
+	order: 509;
+}
+.card-ribbons .cute-ribbon-hyper-hoenn {
+	order: 510;
+}
+.card-ribbons .cute-ribbon-master-hoenn {
+	order: 511;
+}
+.card-ribbons .smart-ribbon-hoenn {
+	order: 512;
+}
+.card-ribbons .smart-ribbon-super-hoenn {
+	order: 513;
+}
+.card-ribbons .smart-ribbon-hyper-hoenn {
+	order: 514;
+}
+.card-ribbons .smart-ribbon-master-hoenn {
+	order: 515;
+}
+.card-ribbons .tough-ribbon-hoenn {
+	order: 516;
+}
+.card-ribbons .tough-ribbon-super-hoenn {
+	order: 517;
+}
+.card-ribbons .tough-ribbon-hyper-hoenn {
+	order: 518;
+}
+.card-ribbons .tough-ribbon-master-hoenn {
+	order: 519;
+}
+.card-ribbons .cool-ribbon-sinnoh {
+	order: 520;
+}
+.card-ribbons .cool-ribbon-great-sinnoh {
+	order: 521;
+}
+.card-ribbons .cool-ribbon-ultra-sinnoh {
+	order: 522;
+}
+.card-ribbons .cool-ribbon-master-sinnoh {
+	order: 523;
+}
+.card-ribbons .beauty-ribbon-sinnoh {
+	order: 524;
+}
+.card-ribbons .beauty-ribbon-great-sinnoh {
+	order: 525;
+}
+.card-ribbons .beauty-ribbon-ultra-sinnoh {
+	order: 526;
+}
+.card-ribbons .beauty-ribbon-master-sinnoh {
+	order: 527;
+}
+.card-ribbons .cute-ribbon-sinnoh {
+	order: 528;
+}
+.card-ribbons .cute-ribbon-great-sinnoh {
+	order: 529;
+}
+.card-ribbons .cute-ribbon-ultra-sinnoh {
+	order: 530;
+}
+.card-ribbons .cute-ribbon-master-sinnoh {
+	order: 531;
+}
+.card-ribbons .smart-ribbon-sinnoh {
+	order: 532;
+}
+.card-ribbons .smart-ribbon-great-sinnoh {
+	order: 533;
+}
+.card-ribbons .smart-ribbon-ultra-sinnoh {
+	order: 534;
+}
+.card-ribbons .smart-ribbon-master-sinnoh {
+	order: 535;
+}
+.card-ribbons .tough-ribbon-sinnoh {
+	order: 536;
+}
+.card-ribbons .tough-ribbon-great-sinnoh {
+	order: 537;
+}
+.card-ribbons .tough-ribbon-ultra-sinnoh {
+	order: 538;
+}
+.card-ribbons .tough-ribbon-master-sinnoh {
+	order: 539;
+}
+.card-ribbons .winning-ribbon {
+	order: 560;
+}
+.card-ribbons .victory-ribbon {
+	order: 561;
+}
+.card-ribbons .ability-ribbon {
+	order: 562;
+}
+.card-ribbons .great-ability-ribbon {
+	order: 563;
+}
+.card-ribbons .double-ability-ribbon {
+	order: 564;
+}
+.card-ribbons .multi-ability-ribbon {
+	order: 565;
+}
+.card-ribbons .pair-ability-ribbon {
+	order: 566;
+}
+.card-ribbons .world-ability-ribbon {
+	order: 567;
+}
+.card-ribbons .contest-memory-ribbon {
+	order: 568;
+}
+.card-ribbons .contest-memory-ribbon-gold {
+	order: 569;
+}
+.card-ribbons .battle-memory-ribbon {
+	order: 570;
+}
+.card-ribbons .battle-memory-ribbon-gold {
+	order: 571;
+}
+.card-ribbons .lunchtime-mark {
+	order: 1001;
+}
+.card-ribbons .sleepy-time-mark {
+	order: 1002;
+}
+.card-ribbons .dusk-mark {
+	order: 1003;
+}
+.card-ribbons .dawn-mark {
+	order: 1004;
+}
+.card-ribbons .cloudy-mark {
+	order: 1005;
+}
+.card-ribbons .rainy-mark {
+	order: 1006;
+}
+.card-ribbons .stormy-mark {
+	order: 1007;
+}
+.card-ribbons .snowy-mark {
+	order: 1008;
+}
+.card-ribbons .blizzard-mark {
+	order: 1009;
+}
+.card-ribbons .dry-mark {
+	order: 1010;
+}
+.card-ribbons .sandstorm-mark {
+	order: 1011;
+}
+.card-ribbons .misty-mark {
+	order: 1012;
+}
+.card-ribbons .destiny-mark {
+	order: 1013;
+}
+.card-ribbons .fishing-mark {
+	order: 1014;
+}
+.card-ribbons .curry-mark {
+	order: 1015;
+}
+.card-ribbons .uncommon-mark {
+	order: 1016;
+}
+.card-ribbons .rare-mark {
+	order: 1017;
+}
+.card-ribbons .rowdy-mark {
+	order: 1018;
+}
+.card-ribbons .absent-minded-mark {
+	order: 1019;
+}
+.card-ribbons .jittery-mark {
+	order: 1020;
+}
+.card-ribbons .excited-mark {
+	order: 1021;
+}
+.card-ribbons .charismatic-mark {
+	order: 1022;
+}
+.card-ribbons .calmness-mark {
+	order: 1023;
+}
+.card-ribbons .intense-mark {
+	order: 1024;
+}
+.card-ribbons .zoned-out-mark {
+	order: 1025;
+}
+.card-ribbons .joyful-mark {
+	order: 1026;
+}
+.card-ribbons .angry-mark {
+	order: 1027;
+}
+.card-ribbons .smiley-mark {
+	order: 1028;
+}
+.card-ribbons .teary-mark {
+	order: 1029;
+}
+.card-ribbons .upbeat-mark {
+	order: 1030;
+}
+.card-ribbons .peeved-mark {
+	order: 1031;
+}
+.card-ribbons .intellectual-mark {
+	order: 1032;
+}
+.card-ribbons .ferocious-mark {
+	order: 1033;
+}
+.card-ribbons .crafty-mark {
+	order: 1034;
+}
+.card-ribbons .scowling-mark {
+	order: 1035;
+}
+.card-ribbons .kindly-mark {
+	order: 1036;
+}
+.card-ribbons .flustered-mark {
+	order: 1037;
+}
+.card-ribbons .pumped-up-mark {
+	order: 1038;
+}
+.card-ribbons .zero-energy-mark {
+	order: 1039;
+}
+.card-ribbons .prideful-mark {
+	order: 1040;
+}
+.card-ribbons .unsure-mark {
+	order: 1041;
+}
+.card-ribbons .humble-mark {
+	order: 1042;
+}
+.card-ribbons .thorny-mark {
+	order: 1043;
+}
+.card-ribbons .vigor-mark {
+	order: 1044;
+}
+.card-ribbons .slump-mark {
+	order: 1045;
+}
+.card-ribbons .jumbo-mark {
+	order: 1046;
+}
+.card-ribbons .mini-mark {
+	order: 1047;
+}
+.card-ribbons .alpha-mark {
+	order: 1048;
+}
+.card-ribbons .itemfinder-mark {
+	order: 1049;
+}
+.card-ribbons .partner-mark {
+	order: 1050;
+}
+.card-ribbons .gourmand-mark {
+	order: 1051;
+}
+.card-ribbons .mightiest-mark {
+	order: 1052;
+}
+.card-ribbons .titan-mark {
+	order: 1053;
+}
+.card-ribbons .partner-ribbon {
+	order: 1054;
+}
+
+/* TODO: change all Pokemon images to use a spritesheet */

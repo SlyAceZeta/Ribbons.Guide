@@ -1,905 +1,777 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title>Ribbon Tracking and Guidance</title>
+		<title>Ribbons.Guide - Ribbon Tracking and Guidance</title>
 		<meta name="description" content="Keep track of your Pokémon and their Ribbons using Ribbons.Guide!">
-		<!--compatibility-->
+		<link rel="shortcut icon" href="favicon.ico">
+		<!-- compatibility -->
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!--PWA-->
-        <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#112028">
-        <link rel="shortcut icon" href="favicon.ico">
-        <meta name="msapplication-TileColor" content="#112028">
-        <meta name="msapplication-config" content="browserconfig.xml">
-        <meta name="theme-color" content="#112028">
-		<!-- Social Meta Tags -->
-		<meta property="og:url" content="https://ribbons.guide">
-		<meta property="og:type" content="website">
-		<meta property="og:title" content="Ribbon Tracking and Guidance">
-		<meta property="og:description" content="Keep track of your Pokémon and their Ribbons using Ribbons.Guide!">
-		<meta property="og:image" content="og-image.png">
-		<meta name="twitter:card" content="summary_large_image">
-		<meta property="twitter:domain" content="ribbons.guide">
-		<meta property="twitter:url" content="https://ribbons.guide">
-		<meta name="twitter:title" content="Ribbon Tracking and Guidance">
-		<meta name="twitter:description" content="Keep track of your Pokémon and their Ribbons using Ribbons.Guide!">
-		<meta name="twitter:image" content="og-image.png">
-		<!--CSS-->
-		<link href="css/jquery.modal.min.css" rel="stylesheet">
-		<link href="css/select2.min.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
-		<link href="css/themes.css" rel="stylesheet">
-		<!--Data-->
-		<script src="data/pokemon.js"></script>
-		<script src="data/ribbons.js"></script>
-		<script src="data/misc.js"></script>
-		<script src="data/changelog.js"></script>
-		<!--JS-->
-		<script src="js/jquery-3.6.1.min.js"></script>
-		<script src="js/jquery-ui.min.js"></script>
-		<script src="js/jquery-ui.touch-punch.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="color-scheme" content="light dark">
+		<meta name="darkreader-lock">
+		<!-- PWA -->
+		<link rel="manifest" href="manifest.json">
+		<script>if(navigator.serviceWorker) navigator.serviceWorker.register("sw.js");</script>
+		<!-- fonts -->
+		<link rel="preload" href="fonts/NunitoSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
+		<link rel="preload" href="fonts/NunitoSans-Bold.ttf" as="font" type="font/ttf" crossorigin>
+		<style type="text/css">
+		@font-face {
+			font-family: "Nunito Sans";
+			src: url("fonts/NunitoSans-Regular.ttf") format("truetype");
+			font-weight: 400;
+		}
+		@font-face {
+			font-family: "Nunito Sans";
+			src: url("fonts/NunitoSans-Bold.ttf") format("truetype");
+			font-weight: 700;
+		}
+		</style>
+		<!-- dependencies -->
+		<script src="js/jquery.min.js"></script>
 		<script src="js/select2.min.js"></script>
-		<script src="js/jquery.modal.js"></script>
-		<script src="js/functions.js"></script>
-		<script src="upup.min.js"></script>
-        <script>
-            UpUp.start({
-				'cache-version': '2025-03-31-1',
-                'content-url': 'index.html',
-                'assets': [
-                    'css/jquery.modal.min.css', 'css/select2.min.css', 'css/style.css', 'css/themes.css',
-                    'data/pokemon.js', 'data/ribbons.js', 'data/misc.js', 'data/changelog.js',
-                    'js/jquery-3.6.1.min.js', 'js/jquery-ui.min.js', 'js/jquery-ui.touch-punch.min.js', 'js/select2.min.js', 'js/jquery.modal.js', 'js/functions.js'
-                ]
-            });
-        </script>
+		<script src="js/sortable.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/select2.min.css">
+		<!-- R.G -->
+		<link rel="stylesheet" href="css/themes.css">
+		<link rel="stylesheet" href="css/main.css">
+		<script src="js/main.js"></script>
 	</head>
-	<body data-footer="collapsed">
-		<header>
-			<div id="header-logo">
-				<img src="img/ribbons/best-friends-ribbon.png" alt="Logo">
-				<span>Ribbons.Guide</span>
+	<body>
+		<!-- Spinner -->
+		<div id="loading-spinner" class="position-fixed">
+			<div id="loading-spinner-info" class="position-absolute top-50 start-50 translate-middle text-center">
+				<div class="spinner-grow mb-3" aria-hidden="true"></div>
+				<div id="loading-spinner-info-text" class="fw-bold mb-3" role="status">Loading app</div>
+				<div id="loading-spinner-info-progress" class="progress mx-auto" role="progressbar" aria-label="Loading progress bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+					<div id="loading-spinner-info-progress-bar" class="progress-bar"></div>
+				</div>
 			</div>
-			<div id="header-icons">
-				<a id="header-discord" href="https://discord.gg/frv7dpWzDG" target="_blank"><img src="img/ui/discord.svg" alt="Discord" title="Discord"></a>
-				<img src="img/ui/gear.svg" id="header-settings" alt="Settings" title="Settings">
+		</div>
+		<!-- Header -->
+		<header id="headerNav" class="navbar navbar-expand-lg sticky-top border-top border-3">
+			<div class="container-fluid">
+				<h1 class="navbar-brand my-0 py-0">
+					<img class="align-middle mx-1" src="img/ribbons/best-friends-ribbon.png" alt="Logo">
+					<span class="text-uppercase fw-bold align-middle">Ribbons.Guide</span>
+				</h1>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-between" id="navbarLinks">
+					<div class="navbar-nav">
+						<!--<button type="button" class="nav-link py-1 active" aria-current="page">Tracker</button>-->
+					</div>
+					<div class="navbar-nav">
+						<button type="button" class="nav-link py-1" id="headerNavSettingsLink">Settings</button>
+						<button type="button" class="nav-link py-1" data-bs-toggle="modal" data-bs-target="#modalAbout">About</button>
+					</div>
+				</div>
 			</div>
 		</header>
-		<div id="menu">
-			<button id="menu-boxes" title="Boxes"><img src="img/ui/box-closed.png" alt="Boxes"></button>
-			<button id="menu-filter" title="Filter"><img src="img/ui/filter.svg" alt="Filter"><span id="menu-filter-count" data-filters=""></span></button>
-		</div>
-		<div id="filterform" class="modal">
-			<h4>
-				<div>Filter/Sort Pokémon</div>
-			</h4>
-			<table>
-				<tr>
-					<th><label for="filterform-sort">⇵ Sort</label></th>
-					<td>
-						<select id="filterform-sort">
-							<option value="default">Default</option>
-							<option value="dexasc">National Pokédex ▲</option>
-							<option value="dexdesc">National Pokédex ▼</option>
-							<option value="levelasc">Current Level ▲</option>
-							<option value="leveldesc">Current Level ▼</option>
-							<option value="nameasc">Name (A-Z)</option>
-							<option value="namedesc">Name (Z-A)</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<th><label for="filterform-box">Current Box</label></th>
-					<td>
-						<select id="filterform-box">
-							<option value="-2">—</option>
-							<option value="-1">None</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<th><label for="filterform-gender">Gender</label></th>
-					<td>
-						<select id="filterform-gender">
-							<option value="-2">—</option>
-							<option>Male</option>
-							<option>Female</option>
-							<option value="unknown">Gender unknown</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<th><label for="filterform-shiny">Shiny</label></th>
-					<td>
-						<select id="filterform-shiny">
-							<option value="-2">—</option>
-							<option>Normal</option>
-							<option>Star</option>
-							<option>Square</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<th><label>Level</label></th>
-					<td>
-						<input id="filterform-level-min" type="number" placeholder="1" min="1" max="100"><span id="filterform-level-divider">–</span><input id="filterform-level-max" type="number" placeholder="100" min="1" max="100">
-					</td>
-				</tr>
-				<tr>
-					<th><label for="filterform-origin">Origin Game</label></th>
-					<td>
-						<select id="filterform-origin">
-							<option value="-2">—</option>
-							<optgroup id="filterform-origin-8" label="Gen VIII/IX"></optgroup>
-							<optgroup id="filterform-origin-7" label="Gen VII"></optgroup>
-							<optgroup id="filterform-origin-6" label="Gen VI"></optgroup>
-							<optgroup id="filterform-origin-5" label="Gen V"></optgroup>
-							<optgroup id="filterform-origin-4" label="Gen IV"></optgroup>
-							<optgroup id="filterform-origin-3" label="Gen III"></optgroup>
-							<optgroup id="filterform-origin-2" label="Gen II Virtual Console"></optgroup>
-							<optgroup id="filterform-origin-1" label="Gen I Virtual Console"></optgroup>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<th><label for="filterform-currentgame">Current Game</label></th>
-					<td>
-						<select id="filterform-currentgame">
-							<option value="-2">—</option>
-							<optgroup id="filterform-currentgame-storage" label="Storage"></optgroup>
-							<optgroup id="filterform-currentgame-8" label="Gen VIII/IX"></optgroup>
-							<optgroup id="filterform-currentgame-7" label="Gen VII"></optgroup>
-							<optgroup id="filterform-currentgame-6" label="Gen VI"></optgroup>
-							<optgroup id="filterform-currentgame-5" label="Gen V"></optgroup>
-							<optgroup id="filterform-currentgame-4" label="Gen IV"></optgroup>
-							<optgroup id="filterform-currentgame-3" label="Gen III"></optgroup>
-							<optgroup id="filterform-currentgame-2" label="Gen II Virtual Console"></optgroup>
-							<optgroup id="filterform-currentgame-1" label="Gen I Virtual Console"></optgroup>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<th><label for="filterform-games">Games it can<br> travel to</label></th>
-					<td>
-						<select id="filterform-games" multiple>
-							<optgroup id="filterform-games-8" label="Gen VIII/IX"></optgroup>
-							<optgroup id="filterform-games-7" label="Gen VII"></optgroup>
-							<optgroup id="filterform-games-6" label="Gen VI"></optgroup>
-							<optgroup id="filterform-games-5" label="Gen V"></optgroup>
-							<optgroup id="filterform-games-4" label="Gen IV"></optgroup>
-							<optgroup id="filterform-games-3" label="Gen III"></optgroup>
-							<optgroup id="filterform-games-2" label="Gen II Virtual Console"></optgroup>
-							<optgroup id="filterform-games-1" label="Gen I Virtual Console"></optgroup>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<th><label for="filterform-lang">Language</label></th>
-					<td>
-						<select id="filterform-lang">
-							<option value="-2">—</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<th><label for="filterform-ball">Poké Ball</label></th>
-					<td>
-						<select id="filterform-ball">
-							<option value="-2">—</option>
-							<optgroup id="filterform-ball-standard" label="Standard"></optgroup>
-							<optgroup id="filterform-ball-hisui" label="Hisui"></optgroup>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2">Pokémon will only be shown if they fulfill all conditions, including being able to travel to all of the selected games (which requires setting their current game). Pokémon stored in HOME are not considered able to travel to <em>Let's&nbsp;Go, Pikachu!</em> or <em>Let's&nbsp;Go, Eevee!</em>.</td>
-				</tr>
-			</table>
-			<h5>
-				<button id="filterform-reset" class="button">Reset</button>
-				<button class="button close">Close</button>
-			</h5>
-		</div>
-		<div id="boxform" class="modal">
-			<h4>
-				<div>
-					<span id="boxform-header-add">Add New</span>
-					<span id="boxform-header-edit">Edit</span>
-					<span>Box</span>
+		<!-- Tracker -->
+		<section id="sectionTracker" class="container-fluid">
+			<div id="sectionTrackerButtonRow" class="d-flex justify-content-between mt-4 px-3">
+				<button id="sectionTrackerButtonAdd" class="btn btn-primary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button">
+					<img src="img/ui/add.svg" alt="Add">
+					<span class="align-middle d-none d-md-inline">Add New Pokémon</span>
+				</button>
+				<div class="d-flex">
+					<div id="switchView" class="btn-group me-2" role="group" aria-label="Switch view">
+						<input type="radio" class="btn-check" name="switchViewBtn" id="switchViewBtn-condensed" autocomplete="off" value="condensed">
+						<label class="btn btn-outline-secondary" for="switchViewBtn-condensed"><img class="align-text-bottom" src="img/ui/condensed.svg"></label>
+						<input type="radio" class="btn-check" name="switchViewBtn" id="switchViewBtn-expanded" autocomplete="off" value="expanded" checked>
+						<label class="btn btn-outline-secondary" for="switchViewBtn-expanded"><img class="align-text-bottom" src="img/ui/expanded.svg"></label>
+					</div>
+					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button" data-bs-toggle="modal" data-bs-target="#modalBoxes">
+						<img src="img/ui/box-closed.png" alt="Filter">
+						<span class="align-middle d-none d-md-inline">Boxes</span>
+					</button>
+					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1 position-relative" type="button" data-bs-toggle="modal" data-bs-target="#modalFilterForm">
+						<img src="img/ui/filter.svg" alt="Filter">
+						<span class="align-middle d-none d-md-inline">Filters</span>
+						<span id="sectionTrackerFilterCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+							<span id="sectionTrackerFilterCount-num" class="align-middle">0</span>
+							<span class="visually-hidden">active filters</span>
+							<span id="sectionTrackerFilterCount-sort" class="align-middle">⇵</span>
+						</span>
+					</button>
 				</div>
-			</h4>
-			<table>
-				<tr>
-					<th><label for="boxform-name"><span class="asterisk">*</span>Name</label></th>
-					<td><input type="text" id="boxform-name"></td>
-				</tr>
-			</table>
-			<h5>
-				<button id="boxform-add" class="button">Add</button>
-				<button id="boxform-edit" class="button">Save</button>
-				<button class="button close">Cancel</button>
-			</h5>
-		</div>
-		<div id="boxsort" class="modal">
-			<h4>
-				<div>Edit Boxes</div>
-			</h4>
-			<table>
-				<tr>
-					<td id="boxsort-boxes"></td>
-				</tr>
-			</table>
-			<h5>
-				<button id="boxsort-add" class="button">New Box</button>
-				<button class="button close">Close</button>
-			</h5>
-		</div>
-		<div id="pokemon-list">
-			<div id="pokemon-list-nomatch">
-				<div>You have no Pokémon that match your current filters.</div>
 			</div>
-			<div id="pokemon-list-empty">
-				<div>You have no saved Pokémon. Click or tap the + button at the bottom-right to add one! If you have a backup file, click the ⛭ button at the top-right to restore the backup.</div>
-			</div>
-		</div>
-		<div id="add-pokemon-button" aria-label="Add New Pokémon"><img src="img/ui/add.svg" alt="Add" title="Add New Pokémon"></div>
-		<div id="pokeform" class="modal">
-			<h4>
-				<div>
-					<span id="pokeform-header-add">Add New</span>
-					<span id="pokeform-header-edit">Edit</span>
-					<span>Pokémon</span>
-				</div>
-			</h4>
-			<table>
-				<tr id="pokeform-tabs">
-					<th colspan="3">
-						<div>
-							<img src="img/ui/info.svg" class="pokeform-tab1-ctrl pokeform-tabs-active" alt="Summary" title="Summary">
-							<img src="img/ui/stats.png" class="pokeform-tab2-ctrl" alt="Stats" title="Stats">
-							<img src="img/ui/clock.svg" class="pokeform-tab3-ctrl" alt="Memories" title="Memories">
-							<img src="img/ui/star-pin.png" class="pokeform-tab4-ctrl" alt="Ribbons" title="Ribbons">
-							<img src="img/ui/details.svg" class="pokeform-tab5-ctrl" alt="Notes" title="Notes">
-						</div>
-					</th>
-				</tr>
-				<tr class="pokeform-tab1">
-					<th><label for="pokeform-nickname">Nickname</label></th>
-					<td colspan="2"><input type="text" id="pokeform-nickname" maxlength="12"></td>
-				</tr>
-				<tr class="pokeform-tab1">
-					<th><label for="pokeform-species"><span class="asterisk">*</span>Species</label></th>
-					<td>
-						<select id="pokeform-species" required>
-							<option></option>
-							<optgroup id="pokeform-species-I" label="Gen I"></optgroup>
-							<optgroup id="pokeform-species-II" label="Gen II"></optgroup>
-							<optgroup id="pokeform-species-III" label="Gen III"></optgroup>
-							<optgroup id="pokeform-species-IV" label="Gen IV"></optgroup>
-							<optgroup id="pokeform-species-V" label="Gen V"></optgroup>
-							<optgroup id="pokeform-species-VI" label="Gen VI"></optgroup>
-							<optgroup id="pokeform-species-VII" label="Gen VII"></optgroup>
-							<optgroup id="pokeform-species-VIII" label="Gen VIII"></optgroup>
-							<optgroup id="pokeform-species-IX" label="Gen IX"></optgroup>
-						</select>
-						<div id="pokeform-shiny-toggle">
-							<input type="radio" id="pokeform-shiny-none" name="pokeform-shiny" value="" checked="checked" />
-							<label for="pokeform-shiny-none"><img src="img/ui/pokeball.png" alt="Normal icon"><span>Normal</span></label>
-							<input type="radio" id="pokeform-shiny-star" name="pokeform-shiny" value="star" />
-							<label for="pokeform-shiny-star"><img src="img/ui/shiny-star.png" alt="Star shiny icon"><span>Star</span></label>
-							<input type="radio" id="pokeform-shiny-square" name="pokeform-shiny" value="square" />
-							<label for="pokeform-shiny-square"><img src="img/ui/shiny-square.svg" alt="Square shiny icon"><span>Square</span></label>
-						</div>
-						<div id="pokeform-gender-toggle">
-							<input type="radio" id="pokeform-gender-male" name="pokeform-gender" value="male" checked="checked" />
-							<label for="pokeform-gender-male"><img src="img/gender/male.png" alt="Male icon"><span>Male</span></label>
-							<input type="radio" id="pokeform-gender-female" name="pokeform-gender" value="female" />
-							<label for="pokeform-gender-female"><img src="img/gender/female.png" alt="Female icon"><span>Female</span></label>
-						</div>
-						<div id="pokeform-gender-unknown"><img src="img/gender/unknown.png" alt="Gender unknown icon"><span>Gender unknown</span></div>
-					</td>
-					<td id="pokeform-preview"><img src="img/ui/1x1.svg" alt="Pokémon preview"></td>
-				</tr>
-				<tr class="pokeform-tab1">
-					<th><label for="pokeform-ball"><span class="asterisk">*</span>Poké Ball</label></th>
-					<td colspan="2">
-						<select id="pokeform-ball" required>
-							<option></option>
-							<optgroup id="pokeform-ball-standard" label="Standard"></optgroup>
-							<optgroup id="pokeform-ball-hisui" label="Hisui"></optgroup>
-						</select>
-					</td>
-				</tr>
-				<tr class="pokeform-tab4">
-					<th><label for="pokeform-title">Title</label></th>
-					<td>
-						<select id="pokeform-title" required>
-							<option selected>None</option>
-						</select>
-					</td>
-				</tr>
-				<tr class="pokeform-tab1">
-					<th><label for="pokeform-lang"><span class="asterisk">*</span>Language</label></th>
-					<td colspan="2">
-						<select id="pokeform-lang" required>
-							<option></option>
-						</select>
-					</td>
-				</tr>
-				<tr class="pokeform-tab1">
-					<th><label for="pokeform-level"><span class="asterisk">*</span>Level</label></th>
-					<td colspan="2"><input id="pokeform-level" type="number" min="1" max="100" required></td>
-				</tr>
-				<tr class="pokeform-tab1">
-					<th><label for="pokeform-scale">Scale</label></th>
-					<td colspan="2">
-						<div class="pokeform-scale-row"><input type="checkbox" id="pokeform-scale"> <label for="pokeform-scale">Checked in Mesagoza <img class="pokeform-scale-icon" src="img/marks/jumbo-mark.png" alt="Jumbo Mark" title="Jumbo Mark"><img class="pokeform-scale-icon" src="img/marks/mini-mark.png" alt="Mini Mark" title="Mini Mark"></label></div>
-					</td>
-				</tr>
-				<tr class="pokeform-tab1">
-					<th><label for="pokeform-ot">Original Trainer</label></th>
-					<td colspan="2"><input type="text" id="pokeform-ot" maxlength="15"></td>
-				</tr>
-				<tr class="pokeform-tab1">
-					<th><label for="pokeform-idno">ID No.</label></th>
-					<td colspan="2"><input type="text" inputmode="numeric" id="pokeform-idno" maxlength="6"></td>
-				</tr>
-				<tr class="pokeform-tab3">
-					<th><label for="pokeform-nature">Nature</label></th>
-					<td>
-						<select id="pokeform-nature">
-							<option></option>
-						</select>
-					</td>
-				</tr>
-				<tr class="pokeform-tab2">
-					<th><label for="pokeform-mint">Mint</label></th>
-					<td>
-						<select id="pokeform-mint"></select>
-					</td>
-				</tr>
-				<tr class="pokeform-tab1">
-					<th><label for="pokeform-origin"><span class="asterisk">*</span>Origin Game</label></th>
-					<td colspan="2">
-						<select id="pokeform-origin" required>
-							<option></option>
-							<optgroup id="pokeform-origin-8" label="Gen VIII/IX"></optgroup>
-							<optgroup id="pokeform-origin-7" label="Gen VII"></optgroup>
-							<optgroup id="pokeform-origin-6" label="Gen VI"></optgroup>
-							<optgroup id="pokeform-origin-5" label="Gen V"></optgroup>
-							<optgroup id="pokeform-origin-4" label="Gen IV"></optgroup>
-							<optgroup id="pokeform-origin-3" label="Gen III"></optgroup>
-							<optgroup id="pokeform-origin-2" label="Gen II Virtual Console"></optgroup>
-							<optgroup id="pokeform-origin-1" label="Gen I Virtual Console"></optgroup>
-						</select>
-					</td>
-				</tr>
-				<tr class="pokeform-tab1">
-					<th><label for="pokeform-currentgame">Current Game</label></th>
-					<td colspan="2">
-						<select id="pokeform-currentgame">
-							<option></option>
-							<optgroup id="pokeform-currentgame-storage" label="Storage"></optgroup>
-							<optgroup id="pokeform-currentgame-8" label="Gen VIII/IX"></optgroup>
-							<optgroup id="pokeform-currentgame-7" label="Gen VII"></optgroup>
-							<optgroup id="pokeform-currentgame-6" label="Gen VI"></optgroup>
-							<optgroup id="pokeform-currentgame-5" label="Gen V"></optgroup>
-							<optgroup id="pokeform-currentgame-4" label="Gen IV"></optgroup>
-							<optgroup id="pokeform-currentgame-3" label="Gen III"></optgroup>
-							<optgroup id="pokeform-currentgame-2" label="Gen II Virtual Console"></optgroup>
-							<optgroup id="pokeform-currentgame-1" label="Gen I Virtual Console"></optgroup>
-						</select>
-					</td>
-				</tr>
-				<tr class="pokeform-tab1">
-					<th><label for="pokeform-box">Box</label></th>
-					<td colspan="2">
-						<select id="pokeform-box">
-							<option selected value="-1">None</option>
-						</select>
-					</td>
-				</tr>
-				<tr class="pokeform-ribbonrow pokeform-tab4">
-					<td id="add-ribbons" class="ribbons" colspan="2"></td>
-				</tr>
-				<tr class="pokeform-ribbonrow pokeform-tab5">
-					<td colspan="2"><textarea id="pokeform-notes" maxlength="50000" rows="10"></textarea></td>
-				</tr>
-				<tr class="pokeform-tab3">
-					<th><label for="pokeform-metlevel">Met Level</label></th>
-					<td><input id="pokeform-metlevel" type="number" min="1" max="100"></td>
-				</tr>
-				<tr class="pokeform-tab3">
-					<th><label for="pokeform-metdate">Met Date</label></th>
-					<td><input id="pokeform-metdate" type="date"></td>
-				</tr>
-				<tr class="pokeform-tab3">
-					<th><label for="pokeform-characteristic">Characteristic</label></th>
-					<td>
-						<select id="pokeform-characteristic">
-							<option></option>
-							<option>Loves to eat</option>
-							<option value="Takes plenty of siestas">Takes plenty of siestas *</option>
-							<option value="Nods off a lot">Nods off a lot *</option>
-							<option>Scatters things often</option>
-							<option>Likes to relax</option>
-							<option>Proud of its power</option>
-							<option>Likes to thrash about</option>
-							<option>A little quick tempered</option>
-							<option>Likes to fight</option>
-							<option>Quick tempered</option>
-							<option>Sturdy body</option>
-							<option>Capable of taking hits</option>
-							<option>Highly persistent</option>
-							<option>Good endurance</option>
-							<option>Good perseverance</option>
-							<option>Highly curious</option>
-							<option>Mischievous</option>
-							<option>Thoroughly cunning</option>
-							<option>Often lost in thought</option>
-							<option>Very finicky</option>
-							<option>Strong willed</option>
-							<option>Somewhat vain</option>
-							<option>Strongly defiant</option>
-							<option>Hates to lose</option>
-							<option>Somewhat stubborn</option>
-							<option>Likes to run</option>
-							<option>Alert to sounds</option>
-							<option>Impetuous and silly</option>
-							<option>Somewhat of a clown</option>
-							<option>Quick to flee</option>
-						</select>
-					</td>
-				</tr>
-				<tr class="pokeform-tab3">
-					<td colspan="2">* For Pokémon in Gen IV or Gen V games:
-						<ul>
-							<li>"Takes plenty of siestas" = "Often dozes off"</li>
-							<li>"Nods off a lot" = "Often scatters things"</li>
+			<div id="tracker-grid" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mt-2 mb-4"></div>
+		</section>
+		<!-- Add/Edit Pokemon Modal -->
+		<div class="modal fade" id="modalPokemonForm" tabindex="-1" aria-labelledby="modalPokemonFormLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalPokemonFormLabel">Add New Pokémon</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body p-0 pt-1">
+						<ul class="nav nav-tabs justify-content-center" id="pokemonFormTabs" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button class="nav-link active" id="pokemonFormTabs-details" data-bs-toggle="tab" data-bs-target="#pokemonFormSections-details" type="button" role="tab" aria-controls="pokemonFormSections-details" aria-selected="true">Details</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="pokemonFormTabs-ribbons" data-bs-toggle="tab" data-bs-target="#pokemonFormSections-ribbons" type="button" role="tab" aria-controls="pokemonFormSections-ribbons">Ribbons</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="pokemonFormTabs-memories" data-bs-toggle="tab" data-bs-target="#pokemonFormSections-memories" type="button" role="tab" aria-controls="pokemonFormSections-memories">Memories</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="pokemonFormTabs-notes" data-bs-toggle="tab" data-bs-target="#pokemonFormSections-notes" type="button" role="tab" aria-controls="pokemonFormSections-notes">Notes</button>
+							</li>
 						</ul>
-					</td>
-				</tr>
-				<tr class="pokeform-tab2">
-					<th><label>IVs</label></th>
-					<td>
-						<div class="pokeform-stats">
-							<div>HP<br><input type="number" id="pokeform-iv-hp" min="0" max="31"></div>
-							<div>Attack<br><input type="number" id="pokeform-iv-atk" min="0" max="31"></div>
-							<div>Defense<br><input type="number" id="pokeform-iv-def" min="0" max="31"></div>
-							<div>Sp.Atk<br><input type="number" id="pokeform-iv-spa" min="0" max="31"></div>
-							<div>Sp.Def<br><input type="number" id="pokeform-iv-spd" min="0" max="31"></div>
-							<div>Speed<br><input type="number" id="pokeform-iv-spe" min="0" max="31"></div>
+						<div class="tab-content p-3 pt-2" id="pokemonFormSections">
+							<div class="tab-pane fade show active" id="pokemonFormSections-details" role="tabpanel" aria-labelledby="pokemonFormTabs-details" tabindex="0">
+								<div class="row g-2">
+									<div class="col-4 col-sm-3 col-lg-2 d-flex align-items-center justify-content-center">
+										<img src="img/ui/1x1.svg" id="pokemonFormSprite">
+									</div>
+									<div class="col-8 col-sm-9 col-lg-10">
+										<div class="row g-2">
+											<div class="col-12">
+												<label for="pokemonFormSpecies" class="form-label">Species <span class="form-asterisk">*</span></label>
+												<select id="pokemonFormSpecies" class="form-select"></select>
+											</div>
+											<div class="col-lg-6">
+												<div id="pokemonFormGenderGroup" class="btn-group d-flex" role="group" aria-label="Gender">
+													<input type="radio" class="btn-check" name="pokemonFormGender" id="pokemonFormGender-male" autocomplete="off" value="male" checked>
+													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormGender-male">
+														<img class="align-middle" src="img/ui/gender-male.png" style="height:16px;">
+														<span class="align-middle">Male</span>
+													</label>
+													<input type="radio" class="btn-check" name="pokemonFormGender" id="pokemonFormGender-female" autocomplete="off" value="female">
+													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormGender-female">
+														<img class="align-middle" src="img/ui/gender-female.png" style="height:16px;">
+														<span class="align-middle">Female</span>
+													</label>
+													<input type="radio" class="btn-check" name="pokemonFormGender" id="pokemonFormGender-unknown" autocomplete="off" value="unknown" disabled>
+													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormGender-unknown">
+														<img class="align-middle" src="img/ui/gender-unknown.png" style="height:16px;">
+														<span class="align-middle">Gender unknown</span>
+													</label>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div id="pokemonFormShinyGroup" class="btn-group d-flex align-items-center" role="group" aria-label="Shiny">
+													<input type="radio" class="btn-check" name="pokemonFormShiny" id="pokemonFormShiny-normal" autocomplete="off" value="" checked>
+													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormShiny-normal">
+														<span class="align-middle">Normal</span>
+													</label>
+													<input type="radio" class="btn-check" name="pokemonFormShiny" id="pokemonFormShiny-star" autocomplete="off" value="star">
+													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormShiny-star">
+														<img class="align-middle light-invert" src="img/ui/shiny-star.png" style="height:16px;">
+														<span class="align-middle d-none d-lg-inline" id="pokemonFormShiny-star-labelspecific">Star</span>
+													</label>
+													<input type="radio" class="btn-check" name="pokemonFormShiny" id="pokemonFormShiny-square" autocomplete="off" value="square">
+													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormShiny-square">
+														<img class="align-middle light-invert" src="img/ui/shiny-square.svg" style="height:16px;">
+														<span class="align-middle d-none d-lg-inline">Square</span>
+													</label>
+													<img class="align-middle ms-2 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="Square Shiny Pokémon have a unique animation in <span class='text-nowrap'>Sword/Shield</span>. If the Pokémon is shiny and you're unsure which type, select Star.">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<label for="pokemonFormNickname" class="form-label">Nickname</label>
+										<input type="text" class="form-control" id="pokemonFormNickname" maxlength="12">
+									</div>
+									<div class="col-lg-6">
+										<label for="pokemonFormLanguage" class="form-label">Language <span class="form-asterisk">*</span></label>
+										<select class="form-select" id="pokemonFormLanguage" data-minimum-results-for-search="Infinity">
+											<option value="eng">ENG - English</option>
+											<option value="spa">SP-EU/SPA - Español (España)</option>
+											<option value="fre">FRE - Français</option>
+											<option value="ger">GER - Deutsch</option>
+											<option value="ita">ITA - Italiano</option>
+											<option value="jpn">JPN - 日本語</option>
+											<option value="kor">KOR - 한국어</option>
+											<option value="chs">CHS - 简体中文</option>
+											<option value="cht">CHT - 繁体中文</option>
+										</select>
+									</div>
+									<div class="col-12 col-lg-6">
+										<div class="row g-2">
+											<div class="col-12">
+												<label for="pokemonFormBall" class="form-label">Poké Ball <span class="form-asterisk">*</span></label>
+												<select class="form-select" id="pokemonFormBall" aria-label="Poké Ball" data-placeholder="">
+													<option></option>
+												</select>
+											</div>
+											<div class="col-12">
+												<label class="form-label">
+													<span class="align-middle">Strange Ball</span>
+													<img class="align-middle ms-1 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="If enabled, the Strange Ball will replace the selected Poké Ball depending on the Current Game. If disabled, the selected Poké Ball will always appear.">
+												</label>
+												<div id="pokemonFormStrangeBallGroup" class="btn-group d-flex align-items-center" role="group" aria-label="Strange Ball">
+													<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-global" autocomplete="off" value="" checked>
+													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormStrangeBall-global">
+														<span class="align-middle">Global Setting</span>
+													</label>
+													<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-enabled" autocomplete="off" value="enabled">
+													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormStrangeBall-enabled">
+														<span class="align-middle">Enabled</span>
+													</label>
+													<input type="radio" class="btn-check" name="pokemonFormStrangeBall" id="pokemonFormStrangeBall-disabled" autocomplete="off" value="disabled">
+													<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormStrangeBall-disabled">
+														<span class="align-middle">Disabled</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="row g-2">
+											<div class="col-6">
+												<label for="pokemonFormCurrentLevel" class="form-label">Current Level <span class="form-asterisk">*</span></label>
+												<input type="number" class="form-control" id="pokemonFormCurrentLevel" min="1" max="100">
+											</div>
+											<div class="col-6">
+												<label for="pokemonFormNature" class="form-label">Nature</label>
+												<select class="form-select" id="pokemonFormNature" aria-label="Nature" data-placeholder="">
+													<option></option>
+												</select>
+											</div>
+										</div>
+										<div class="row g-1 mt-2">
+											<div class="col-6">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" id="pokemonFormShadow">
+													<label class="form-check-label" for="pokemonFormShadow">Shadow (Colo/XD)</label>
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" id="pokemonFormTotem">
+													<label class="form-check-label" for="pokemonFormTotem">Totem (SM/USUM)</label>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" id="pokemonFormGMax">
+													<label class="form-check-label" for="pokemonFormGMax">
+														<span>Gigantamax Factor (SwSh)</span>
+														<img src="img/ui/gigantamax.png" style="height:16px;">
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormTrainerName" class="form-label">Original Trainer</label>
+										<input type="text" class="form-control" id="pokemonFormTrainerName" maxlength="15">
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormTrainerID" class="form-label">ID No.</label>
+										<input type="text" class="form-control" id="pokemonFormTrainerID" inputmode="numeric" maxlength="6">
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormOriginMark" class="form-label">Origin Mark <span class="form-asterisk">*</span></label>
+										<select class="form-select" id="pokemonFormOriginMark" data-placeholder="" data-minimum-results-for-search="Infinity">
+											<option></option>
+										</select>
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormOriginGame" class="form-label">Origin Game</label>
+										<select class="form-select" id="pokemonFormOriginGame" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true" disabled>
+											<option></option>
+										</select>
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormCurrentGame" class="form-label">Current Game</label>
+										<select class="form-select" id="pokemonFormCurrentGame" data-placeholder="">
+											<option></option>
+										</select>
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormBox" class="form-label">Box</label>
+										<select class="form-select" id="pokemonFormBox"></select>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="pokemonFormSections-ribbons" role="tabpanel" aria-labelledby="pokemonFormTabs-ribbons" tabindex="0">
+								<div class="row g-2">
+									<div class="col-lg-6">
+										<label for="pokemonFormTitle" class="form-label">Title</label>
+										<select class="form-select" id="pokemonFormTitle" data-placeholder="">
+											<option value="None">None</option>
+										</select>
+									</div>
+									<div class="col-lg-6">
+										<label for="pokemonFormScale" class="form-label">Scale</label>
+										<div class="form-check d-flex align-items-center mb-0" style="height:36px;">
+											<input class="form-check-input mt-0 me-2" type="checkbox" id="pokemonFormScale">
+											<label class="form-check-label" for="pokemonFormScale">
+												<span>Checked in Mesagoza (SV)</span>
+											</label>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="d-flex">
+											<input id="pokemonFormRibbonSearch" type="search" class="form-control w-100" placeholder="Search Ribbons/Marks..." aria-label="Search">
+											<div class="dropdown ms-3">
+												<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Toggle all...</button>
+												<ul id="pokemonFormRibbonToggle" class="dropdown-menu">
+													<li><button class="dropdown-item" type="button" data-gen="3">introduced in Gen III</button></li>
+													<li><button class="dropdown-item" type="button" data-gen="4">introduced in Gen IV</button></li>
+													<li><button class="dropdown-item" type="button" data-gen="6">introduced in Gen VI</button></li>
+													<li><button class="dropdown-item" type="button" data-gen="7">introduced in Gen VII</button></li>
+													<li><button class="dropdown-item" type="button" data-gen="8">introduced in Gen VIII</button></li>
+													<li><button class="dropdown-item" type="button" data-gen="9">introduced in Gen IX</button></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<ul id="pokemonFormRibbons" class="list-group overflow-y-scroll border">
+											<li id="pokemonFormRibbons-none" class="list-group-item border-0 text-center d-none">
+												<div>No results found</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="pokemonFormSections-memories" role="tabpanel" aria-labelledby="pokemonFormTabs-memories" tabindex="0">
+								<div class="row g-2">
+									<div class="col-6">
+										<label for="pokemonFormMetLevel" class="form-label">Met Level</label>
+										<input type="number" class="form-control" id="pokemonFormMetLevel" min="1" max="100">
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormMetDate" class="form-label">Met Date</label>
+										<input type="date" class="form-control" id="pokemonFormMetDate">
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormMetLocation" class="form-label">Met Location</label>
+										<input type="text" class="form-control" id="pokemonFormMetLocation">
+									</div>
+									<div class="col-6">
+										<div class="form-label">Pokérus</div>
+										<div id="pokemonFormPokerusGroup" class="btn-group d-flex align-items-center" role="group" aria-label="Pokerus">
+											<input type="radio" class="btn-check" name="pokemonFormPokerus" id="pokemonFormPokerus-none" autocomplete="off" value="" checked>
+											<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormPokerus-none">
+												<span class="align-middle">None</span>
+											</label>
+											<input type="radio" class="btn-check" name="pokemonFormPokerus" id="pokemonFormPokerus-infected" autocomplete="off" value="infected">
+											<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormPokerus-infected">
+												<img class="align-middle" src="img/ui/pokerus-infected.png" style="height:16px;">
+												<span class="align-middle d-none d-lg-inline">Infected</span>
+											</label>
+											<input type="radio" class="btn-check" name="pokemonFormPokerus" id="pokemonFormPokerus-cured" autocomplete="off" value="cured">
+											<label class="btn btn-outline-secondary py-2 px-2 px-lg-3 lh-1" for="pokemonFormPokerus-cured">
+												<img class="align-middle" src="img/ui/pokerus-cured.png" style="height:16px;">
+												<span class="align-middle d-none d-lg-inline">Cured</span>
+											</label>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-label">
+											<span class="align-middle">Optional Achievements</span>
+											<img class="align-middle ms-1 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="These achievements are not tracked by the games when transferring across generations.">
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-check">
+											<input class="form-check-input pokemonFormAchievements" type="checkbox" id="pokemonFormAchievements-LeafCrown">
+											<label class="form-check-label" for="pokemonFormAchievements-LeafCrown">
+												<span>Leaf Crown (HGSS)</span>
+												<img class="align-middle ms-1" src="img/ui/leaf-crown.png" style="height:16px;" alt="Leaf Crown" title="Leaf Crown">
+											</label>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-check">
+											<input class="form-check-input pokemonFormAchievements" type="checkbox" id="pokemonFormAchievements-PokestarShine">
+											<label class="form-check-label" for="pokemonFormAchievements-PokestarShine">
+												<span>Pokéstar Shine (B2W2)</span>
+												<img class="align-middle ms-1" src="img/ui/pokestar.svg" style="height:16px;" alt="PokéStar" title="PokéStar">
+											</label>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-check">
+											<input class="form-check-input pokemonFormAchievements" type="checkbox" id="pokemonFormAchievements-TimeTraveler">
+											<label class="form-check-label" for="pokemonFormAchievements-TimeTraveler">Time Travel Award (ORAS/BDSP)</label>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-check">
+											<input class="form-check-input pokemonFormAchievements" type="checkbox" id="pokemonFormAchievements-BestBuddyGO">
+											<label class="form-check-label" for="pokemonFormAchievements-BestBuddyGO">
+												<span>Best Buddy Ribbon (GO)</span>
+												<img class="align-middle ms-1" src="img/ui/pogo-buddy-ribbon.png" style="height:16px;" alt="Best Buddy Ribbon" title="Best Buddy Ribbon">
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="pokemonFormSections-notes" role="tabpanel" aria-labelledby="pokemonFormTabs-notes" tabindex="0">
+								<textarea class="form-control" id="pokemonFormNotes" rows="10"></textarea>
+							</div>
 						</div>
-					</td>
-				</tr>
-				<tr class="pokeform-tab2">
-					<th><label>EVs</label></th>
-					<td>
-						<div class="pokeform-stats">
-							<div>HP<br><input type="number" id="pokeform-ev-hp" min="0" max="255"></div>
-							<div>Attack<br><input type="number" id="pokeform-ev-atk" min="0" max="255"></div>
-							<div>Defense<br><input type="number" id="pokeform-ev-def" min="0" max="255"></div>
-							<div>Sp.Atk<br><input type="number" id="pokeform-ev-spa" min="0" max="255"></div>
-							<div>Sp.Def<br><input type="number" id="pokeform-ev-spd" min="0" max="255"></div>
-							<div>Speed<br><input type="number" id="pokeform-ev-spe" min="0" max="255"></div>
-						</div>
-					</td>
-				</tr>
-				<tr class="pokeform-tab2">
-					<th><label for="pokeform-ability">Ability</label></th>
-					<td>
-						<select id="pokeform-ability">
-							<option></option>
-							<option>Adaptability</option>
-							<option>Aerilate</option>
-							<option>Aftermath</option>
-							<option>Air Lock</option>
-							<option>Analytic</option>
-							<option>Anger Point</option>
-							<option>Anger Shell</option>
-							<option>Anticipation</option>
-							<option>Arena Trap</option>
-							<option>Armor Tail</option>
-							<option>Aroma Veil</option>
-							<option>As One (Ice Rider)</option>
-							<option>As One (Shadow Rider)</option>
-							<option>Aura Break</option>
-							<option>Bad Dreams</option>
-							<option>Ball Fetch</option>
-							<option>Battery</option>
-							<option>Battle Armor</option>
-							<option>Battle Bond</option>
-							<option>Beads of Ruin</option>
-							<option>Beast Boost</option>
-							<option>Berserk</option>
-							<option>Big Pecks</option>
-							<option>Blaze</option>
-							<option>Bulletproof</option>
-							<option>Cheek Pouch</option>
-							<option>Chilling Neigh</option>
-							<option>Chlorophyll</option>
-							<option>Clear Body</option>
-							<option>Cloud Nine</option>
-							<option>Color Change</option>
-							<option>Comatose</option>
-							<option>Commander</option>
-							<option>Competitive</option>
-							<option>Compound Eyes</option>
-							<option>Contrary</option>
-							<option>Corrosion</option>
-							<option>Costar</option>
-							<option>Cotton Down</option>
-							<option>Cud Chew</option>
-							<option>Curious Medicine</option>
-							<option>Cursed Body</option>
-							<option>Cute Charm</option>
-							<option>Damp</option>
-							<option>Dancer</option>
-							<option>Dark Aura</option>
-							<option>Dauntless Shield</option>
-							<option>Dazzling</option>
-							<option>Defeatist</option>
-							<option>Defiant</option>
-							<option>Delta Stream</option>
-							<option>Desolate Land</option>
-							<option>Disguise</option>
-							<option>Download</option>
-							<option>Dragon’s Maw</option>
-							<option>Drizzle</option>
-							<option>Drought</option>
-							<option>Dry Skin</option>
-							<option>Early Bird</option>
-							<option>Earth Eater</option>
-							<option>Effect Spore</option>
-							<option>Electric Surge</option>
-							<option>Electromorphosis</option>
-							<option>Emergency Exit</option>
-							<option>Fairy Aura</option>
-							<option>Filter</option>
-							<option>Flame Body</option>
-							<option>Flare Boost</option>
-							<option>Flash Fire</option>
-							<option>Flower Gift</option>
-							<option>Flower Veil</option>
-							<option>Fluffy</option>
-							<option>Forecast</option>
-							<option>Forewarn</option>
-							<option>Friend Guard</option>
-							<option>Frisk</option>
-							<option>Full Metal Body</option>
-							<option>Fur Coat</option>
-							<option>Gale Wings</option>
-							<option>Galvanize</option>
-							<option>Gluttony</option>
-							<option>Good as Gold</option>
-							<option>Gooey</option>
-							<option>Gorilla Tactics</option>
-							<option>Grass Pelt</option>
-							<option>Grassy Surge</option>
-							<option>Grim Neigh</option>
-							<option>Guard Dog</option>
-							<option>Gulp Missile</option>
-							<option>Guts</option>
-							<option>Hadron Engine</option>
-							<option>Harvest</option>
-							<option>Healer</option>
-							<option>Heatproof</option>
-							<option>Heavy Metal</option>
-							<option>Honey Gather</option>
-							<option>Huge Power</option>
-							<option>Hunger Switch</option>
-							<option>Hustle</option>
-							<option>Hydration</option>
-							<option>Hyper Cutter</option>
-							<option>Ice Body</option>
-							<option>Ice Face</option>
-							<option>Ice Scales</option>
-							<option>Illuminate</option>
-							<option>Illusion</option>
-							<option>Immunity</option>
-							<option>Imposter</option>
-							<option>Infiltrator</option>
-							<option>Innards Out</option>
-							<option>Inner Focus</option>
-							<option>Insomnia</option>
-							<option>Intimidate</option>
-							<option>Intrepid Sword</option>
-							<option>Iron Barbs</option>
-							<option>Iron Fist</option>
-							<option>Justified</option>
-							<option>Keen Eye</option>
-							<option>Klutz</option>
-							<option>Leaf Guard</option>
-							<option>Levitate</option>
-							<option>Libero</option>
-							<option>Light Metal</option>
-							<option>Lightning Rod</option>
-							<option>Limber</option>
-							<option>Lingering Aroma</option>
-							<option>Liquid Ooze</option>
-							<option>Liquid Voice</option>
-							<option>Long Reach</option>
-							<option>Magic Bounce</option>
-							<option>Magic Guard</option>
-							<option>Magician</option>
-							<option>Magma Armor</option>
-							<option>Magnet Pull</option>
-							<option>Marvel Scale</option>
-							<option>Mega Launcher</option>
-							<option>Merciless</option>
-							<option>Mimicry</option>
-							<option>Minus</option>
-							<option>Mirror Armor</option>
-							<option>Misty Surge</option>
-							<option>Mold Breaker</option>
-							<option>Moody</option>
-							<option>Motor Drive</option>
-							<option>Moxie</option>
-							<option>Multiscale</option>
-							<option>Multitype</option>
-							<option>Mummy</option>
-							<option>Mycelium Might</option>
-							<option>Natural Cure</option>
-							<option>Neuroforce</option>
-							<option>Neutralizing Gas</option>
-							<option>No Guard</option>
-							<option>Normalize</option>
-							<option>Oblivious</option>
-							<option>Opportunist</option>
-							<option>Orichalcum Pulse</option>
-							<option>Overcoat</option>
-							<option>Overgrow</option>
-							<option>Own Tempo</option>
-							<option>Parental Bond</option>
-							<option>Pastel Veil</option>
-							<option>Perish Body</option>
-							<option>Pickpocket</option>
-							<option>Pickup</option>
-							<option>Pixilate</option>
-							<option>Plus</option>
-							<option>Poison Heal</option>
-							<option>Poison Point</option>
-							<option>Poison Touch</option>
-							<option>Power Construct</option>
-							<option>Power of Alchemy</option>
-							<option>Power Spot</option>
-							<option>Prankster</option>
-							<option>Pressure</option>
-							<option>Primordial Sea</option>
-							<option>Prism Armor</option>
-							<option>Propeller Tail</option>
-							<option>Protean</option>
-							<option>Protosynthesis</option>
-							<option>Psychic Surge</option>
-							<option>Punk Rock</option>
-							<option>Pure Power</option>
-							<option>Purifying Salt</option>
-							<option>Quark Drive</option>
-							<option>Queenly Majesty</option>
-							<option>Quick Draw</option>
-							<option>Quick Feet</option>
-							<option>Rain Dish</option>
-							<option>Rattled</option>
-							<option>Receiver</option>
-							<option>Reckless</option>
-							<option>Refrigerate</option>
-							<option>Regenerator</option>
-							<option>Ripen</option>
-							<option>Rivalry</option>
-							<option>RKS System</option>
-							<option>Rock Head</option>
-							<option>Rocky Payload</option>
-							<option>Rough Skin</option>
-							<option>Run Away</option>
-							<option>Sand Force</option>
-							<option>Sand Rush</option>
-							<option>Sand Spit</option>
-							<option>Sand Stream</option>
-							<option>Sand Veil</option>
-							<option>Sap Sipper</option>
-							<option>Schooling</option>
-							<option>Scrappy</option>
-							<option>Screen Cleaner</option>
-							<option>Seed Sower</option>
-							<option>Serene Grace</option>
-							<option>Shadow Shield</option>
-							<option>Shadow Tag</option>
-							<option>Sharpness</option>
-							<option>Shed Skin</option>
-							<option>Sheer Force</option>
-							<option>Shell Armor</option>
-							<option>Shield Dust</option>
-							<option>Shields Down</option>
-							<option>Simple</option>
-							<option>Skill Link</option>
-							<option>Slow Start</option>
-							<option>Slush Rush</option>
-							<option>Sniper</option>
-							<option>Snow Cloak</option>
-							<option>Snow Warning</option>
-							<option>Solar Power</option>
-							<option>Solid Rock</option>
-							<option>Soul-Heart</option>
-							<option>Soundproof</option>
-							<option>Speed Boost</option>
-							<option>Stakeout</option>
-							<option>Stall</option>
-							<option>Stalwart</option>
-							<option>Stamina</option>
-							<option>Stance Change</option>
-							<option>Static</option>
-							<option>Steadfast</option>
-							<option>Steam Engine</option>
-							<option>Steelworker</option>
-							<option>Steely Spirit</option>
-							<option>Stench</option>
-							<option>Sticky Hold</option>
-							<option>Storm Drain</option>
-							<option>Strong Jaw</option>
-							<option>Sturdy</option>
-							<option>Suction Cups</option>
-							<option>Super Luck</option>
-							<option>Supreme Overlord</option>
-							<option>Surge Surfer</option>
-							<option>Swarm</option>
-							<option>Sweet Veil</option>
-							<option>Swift Swim</option>
-							<option>Sword of Ruin</option>
-							<option>Symbiosis</option>
-							<option>Synchronize</option>
-							<option>Tablets of Ruin</option>
-							<option>Tangled Feet</option>
-							<option>Tangling Hair</option>
-							<option>Technician</option>
-							<option>Telepathy</option>
-							<option>Teravolt</option>
-							<option>Thermal Exchange</option>
-							<option>Thick Fat</option>
-							<option>Tinted Lens</option>
-							<option>Torrent</option>
-							<option>Tough Claws</option>
-							<option>Toxic Boost</option>
-							<option>Toxic Debris</option>
-							<option>Trace</option>
-							<option>Transistor</option>
-							<option>Triage</option>
-							<option>Truant</option>
-							<option>Turboblaze</option>
-							<option>Unaware</option>
-							<option>Unburden</option>
-							<option>Unnerve</option>
-							<option>Unseen Fist</option>
-							<option>Vessel of Ruin</option>
-							<option>Victory Star</option>
-							<option>Vital Spirit</option>
-							<option>Volt Absorb</option>
-							<option>Wandering Spirit</option>
-							<option>Water Absorb</option>
-							<option>Water Bubble</option>
-							<option>Water Compaction</option>
-							<option>Water Veil</option>
-							<option>Weak Armor</option>
-							<option>Well-Baked Body</option>
-							<option>White Smoke</option>
-							<option>Wimp Out</option>
-							<option>Wind Power</option>
-							<option>Wind Rider</option>
-							<option>Wonder Guard</option>
-							<option>Wonder Skin</option>
-							<option>Zen Mode</option>
-							<option>Zero to Hero</option>
-						</select>
-					</td>
-				</tr>
-				<tr class="pokeform-tab2">
-					<td colspan="2">All Stats fields are optional for your own record-keeping. Stats info will not affect the site's Ribbon guidance for your Pokémon.</td>
-				</tr>
-			</table>
-			<h5>
-				<button id="pokeform-add" class="button">Add</button>
-				<button id="pokeform-edit" class="button">Save</button>
-				<span id="pokeform-cancel" class="button">Cancel</a>
-			</h5>
-		</div>
-		<div id="ribbonguide" class="modal">
-			<h4>
-				<div>Ribbon Guide</div>
-			</h4>
-			<div id="ribbonguide-info">
-				<img src="img/ui/1x1.svg" alt="Sprite">
-				<div>
-					<div><span class="name"></span></div>
-					<div><span>Level:</span> <span class="level"></span> <span class="metlevel"></span></div>
-					<div><span>Game:</span> <span class="game"></span> <span class="metgame"></span></div>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-primary" id="modalPokemonFormSave">Save</button>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Cancel">Cancel</button>
+					</div>
 				</div>
 			</div>
-			<div id="ribbonguide-warnings" class="active">
-				<div id="ribbonguide-warnings-toggle"><span>Warnings</span></div>
-				<ul>
-					<li id="ribbonguide-notice"></li>
-					<li id="ribbonguide-timelimited"></li>
-					<li id="ribbonguide-winning"></li>
-					<li id="ribbonguide-footprint"></li>
-					<li id="ribbonguide-evolution"></li>
-					<li id="ribbonguide-totem"></li>
-				</ul>
+		</div>
+		<!-- Filter Modal -->
+		<!-- TODO: add complete/incomplete/safe-to-move filter -->
+		<div class="modal fade" id="modalFilterForm" tabindex="-1" aria-labelledby="modalFilterFormLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalFilterFormLabel">Sort/Filter Pokémon</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body p-3 pt-2">
+						<div class="row g-2">
+							<div class="col-lg-6">
+								<label for="filterFormSort" class="form-label">Sort</label>
+								<select id="filterFormSort" class="form-select" data-minimum-results-for-search="Infinity">
+									<option value="default">Default</option>
+									<option value="dexasc">National Pokédex ▲ (0001-1025)</option>
+									<option value="dexdesc">National Pokédex ▼ (1025-0001)</option>
+									<option value="levelasc">Current Level ▲ (1-100)</option>
+									<option value="leveldesc">Current Level ▼ (100-1)</option>
+									<option value="nameasc">Name ▲ (A-Z)</option>
+									<option value="namedesc">Name ▼ (Z-A)</option>
+								</select>
+							</div>
+							<div class="col-6">
+								<label for="filterFormGender" class="form-label">Gender</label>
+								<select id="filterFormGender" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
+									<option></option>
+									<option value="male">Male</option>
+									<option value="female">Female</option>
+									<option value="unknown">Gender unknown</option>
+								</select>
+							</div>
+							<div class="col-6">
+								<label for="filterFormShiny" class="form-label">Shiny</label>
+								<select id="filterFormShiny" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
+									<option></option>
+									<option value="normal">Normal</option>
+									<option value="shiny">Shiny</option>
+									<option value="star">Star</option>
+									<option value="square">Square</option>
+								</select>
+							</div>
+							<div class="col-6">
+								<label for="filterFormLanguage" class="form-label">Language</label>
+								<select id="filterFormLanguage" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
+									<option></option>
+									<option value="eng">ENG - English</option>
+									<option value="spa">SP-EU/SPA - Español (España)</option>
+									<option value="fre">FRE - Français</option>
+									<option value="ger">GER - Deutsch</option>
+									<option value="ita">ITA - Italiano</option>
+									<option value="jpn">JPN - 日本語</option>
+									<option value="kor">KOR - 한국어</option>
+									<option value="chs">CHS - 简体中文</option>
+									<option value="cht">CHT - 繁体中文</option>
+								</select>
+							</div>
+							<div class="col-6">
+								<label for="filterFormBall" class="form-label">Poké Ball</label>
+								<select id="filterFormBall" class="form-select" data-placeholder="" data-allow-clear="true"></select>
+							</div>
+							<div class="col-6">
+								<label for="filterFormCurrentLevel-min" class="form-label">Current Level</label>
+								<div class="input-group">
+									<input id="filterFormCurrentLevel-min" class="form-control" type="number" min="1" max="100" placeholder="1" aria-label="Minimum Level">
+									<span class="input-group-text">–</span>
+									<input id="filterFormCurrentLevel-max" class="form-control" type="number" min="1" max="100" placeholder="100" aria-label="Maximum Level">
+								</div>
+							</div>
+							<div class="col-6">
+								<label for="filterFormGMax" class="form-label">Gigantamax Factor</label>
+								<select id="filterFormGMax" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
+									<option></option>
+									<option value="false">No</option>
+									<option value="true">Yes</option>
+								</select>
+							</div>
+							<div class="col-6">
+								<label for="filterFormPokerus" class="form-label">Pokérus</label>
+								<select id="filterFormPokerus" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
+									<option></option>
+									<option value="none">None</option>
+									<option value="any">Any</option>
+									<option value="infected">Infected</option>
+									<option value="cured">Cured</option>
+								</select>
+							</div>
+							<div class="col-6">
+								<label for="filterFormOriginMark" class="form-label">Origin Mark</label>
+								<select id="filterFormOriginMark" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true"></select>
+							</div>
+							<div class="col-6">
+								<label for="filterFormCurrentGame" class="form-label">Current Game</label>
+								<select id="filterFormCurrentGame" class="form-select" data-placeholder="" data-allow-clear="true"></select>
+							</div>
+							<div class="col-6">
+								<label for="filterFormBox" class="form-label">Box</label>
+								<select id="filterFormBox" class="form-select" data-placeholder="" data-allow-clear="true"></select>
+							</div>
+							<div class="col-lg-6">
+								<label for="filterFormTargetGames" class="form-label">Games it can travel to</label>
+								<select id="filterFormTargetGames" class="form-select" data-placeholder="" data-allow-clear="true"></select>
+								<div class="form-text" id="filterformTargetGamesLGPE">Pokémon currently in HOME are not considered able to travel to <em>Let's Go, Pikachu!/Eevee!</em>.</div>
+							</div>
+							<div class="col-lg-6">
+								<label for="filterFormEarnedRibbons" class="form-label">Earned Ribbons</label>
+								<select id="filterFormEarnedRibbons" class="form-select" multiple></select>
+							</div>
+							<div class="col-lg-6">
+								<label for="filterFormTargetRibbons" class="form-label">Ribbons it can earn</label>
+								<select id="filterFormTargetRibbons" class="form-select" multiple></select>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" id="modalFilterFormReset">Reset</button>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+				</div>
 			</div>
-			<div id="ribbonguide-transfer"></div>
-			<h5>
-				<span class="button close">Close</span>
-			</h5>
 		</div>
-		<div id="settings" class="modal">
-			<h4>
-				<div>Settings</div>
-			</h4>
-			<table id="settings-buttons">
-				<tr>
-					<th><label for="settings-theme">Theme</label></th>
-					<td>
-						<select id="settings-theme">
-							<optgroup label="Dark">
-								<option value="start">Start Menu</option>
-								<option value="naranja">Naranja Academy</option>
-								<option value="uva">Uva Academy</option>
-								<option value="dark">Classic Dark</option>
-							</optgroup>
-							<optgroup label="Light">
-								<option value="sword">Intrepid Sword</option>
-								<option value="shield">Dauntless Shield</option>
-								<option value="light">Classic Light</option>
-							</optgroup>
-						</select>
-					</td>
-				</tr>
-				<tr style="display:none;">
-					<th><label for="settings-language">Language</label></th>
-					<td>
-						<select id="settings-language"></select>
-					</td>
-				</tr>
-				<tr>
-					<th><label>Data</label></th>
-					<td>
-						<span class="button" id="backup">Backup</span>
-						<label class="button" id="restore">Restore<input type="file" id="restoreinput" accept="application/json"></label>
-					</td>
-				</tr>
-				<tr>
-					<th><label>Changes</label></th>
-					<td>
-						<span class="button" id="view-changelog">Changelog</span>
-						<a href="https://github.com/Azekthi/Ribbons.Guide/commits/main" class="button" target="_blank">Commits</a>
-					</td>
-				</tr>
-				<tr id="settings-about">
-					<td colspan="2">
-						<div>The images used in Ribbons.Guide were provided by <a href="https://pokejungle.net">PokéJungle</a>, <a href="https://pokemondb.net">Pokémon Database</a>, <a href="https://github.com/msikma/pokesprite">PokéSprite</a>, <a href="https://archives.bulbagarden.net/wiki/Main_Page">Bulbagarden Archives</a>, <a href="https://github.com/PokeMiners/pogo_assets">Pokémon GO Assets</a>, and <a href="https://github.com/google/material-design-icons">Material Symbols</a>. Ribbons.Guide also makes use of <a href="https://github.com/jquery/jquery">jQuery</a>, <a href="https://github.com/jquery/jquery-ui">jQuery UI</a>, <a href="https://github.com/RWAP/jquery-ui-touch-punch">jQuery UI Touch Punch</a>, <a href="https://github.com/kylefox/jquery-modal">jQuery Modal</a>, <a href="https://github.com/select2/select2">Select2</a>, <a href="https://github.com/TalAter/UpUp">UpUp</a>, and <a href="https://fonts.google.com/">Google Fonts</a>.</div>
-						<div>Pokémon, data, and images © Nintendo/Creatures Inc./Game Freak. This project is not affiliated with Nintendo, Creatures Inc., Game Freak, or The Pokémon Company. All original content and code is governed by the <a href="https://opensource.org/license/gpl-3-0/">GPL-3.0 license</a>.</div>
-					</td>
-				</tr>
-			</table>
-			<h5>
-				<span class="button close">Close</span>
-			</h5>
+		<!-- Boxes Modal -->
+		<div class="modal fade" id="modalBoxes" tabindex="-1" aria-labelledby="modalBoxesLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalBoxesLabel">Boxes</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body p-2">
+						<div class="row g-2">
+							<div class="col-12">
+								<ul id="modalBoxesList" class="list-group overflow-y-scroll">
+									<li id="modalBoxesList-none" class="list-group-item border-0 text-center">
+										<div>You don't have any boxes!</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-primary" id="modalBoxesNew">Add New Box</button>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div id="changelog" class="modal">
-			<h4>
-				<div>Changelog</div>
-			</h4>
-			<table>
-				<tr>
-					<td><a href="https://github.com/Azekthi/Ribbons.Guide/blob/main/data/changelog.js" target="_blank">Click here for the full changelog.</a><br>For all changes, <a href="https://github.com/Azekthi/Ribbons.Guide/commits/main" target="_blank">click here for the GitHub commit history.</a></td>
-				</tr>
-			</table>
-			<h5>
-				<span class="button close">Close</span>
-			</h5>
+		<!-- Ribbon Checklist Modal -->
+		<div class="modal fade" id="modalRibbonChecklist" tabindex="-1" aria-labelledby="modalRibbonChecklistLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalRibbonChecklistLabel">Ribbon Checklist</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body p-0">
+						<div class="container-fluid">
+							<div id="modalRibbonChecklistInfo" class="row g-2 p-2 align-items-center justify-content-center">
+								<div id="modalRibbonChecklistInfo-sprite" class="col-auto">
+									<img src="img/ui/1x1.svg" style="width:64px;">
+								</div>
+								<div id="modalRibbonChecklistInfo-text" class="col-auto">
+									<div id="modalRibbonChecklistInfo-name"></div>
+									<div id="modalRibbonChecklistInfo-currentgame" class="form-text"></div>
+								</div>
+							</div>
+							<div id="modalRibbonChecklistStatus" class="row"></div>
+							<div id="modalRibbonChecklistRows" class="row g-2 p-2"></div>
+						</div>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+				</div>
+			</div>
 		</div>
-		<footer><span id="footer-text">This open-source project is not affiliated with Nintendo, Creatures Inc., Game Freak, or The Pokémon Company. All data is stored in your browser. <a href="https://github.com/Azekthi/Ribbons.Guide">View the source code on GitHub.</a></span><span id="footer-icon">»</span></footer>
+		<!-- Settings Modal -->
+		<div class="modal fade" id="modalSettings" tabindex="-1" aria-labelledby="modalSettingsLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalSettingsLabel">Settings</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body px-2 px-sm-3">
+						<form>
+							<div class="mb-3">
+								<label class="form-label" for="settingsTheme">Theme</label>
+								<select class="form-select" id="settingsTheme" aria-label="Theme selection" data-minimum-results-for-search="Infinity">
+									<option value="auto" selected>Automatic (Simple Dark/Simple Light)</option>
+									<optgroup label="Dark">
+										<option value="start">Start Menu</option>
+										<option value="naranja">Naranja Academy</option>
+										<option value="uva">Uva Academy</option>
+										<option value="dark">Simple Dark</option>
+									</optgroup>
+									<optgroup label="Light">
+										<option value="sword">Intrepid Sword</option>
+										<option value="shield">Dauntless Shield</option>
+										<option value="light">Simple Light</option>
+									</optgroup>
+								</select>
+							</div>
+							<div class="mb-3">
+								<label class="form-label" for="settingsLanguage">Language</label>
+								<select class="form-select" id="settingsLanguage" aria-label="Language selection" data-minimum-results-for-search="Infinity">
+									<option value="en">English (English)</option>
+									<option value="es">Español (Spanish)</option>
+									<option value="fr">Français (French)</option>
+									<option value="de">Deutsch (German)</option>
+									<option value="it">Italiano (Italian)</option>
+									<option value="ja">日本語 (Japanese)</option>
+									<option value="ko">한국어 (Korean)</option>
+									<option value="zh-Hans">简体中文 (Simplified Chinese)</option>
+									<option value="zh-Hant">繁体中文 (Traditional Chinese)</option>
+								</select>
+							</div>
+							<div class="mb-3">
+								<label class="form-label" for="settingsExtraOriginMarks">Gen III/IV/V origin marks</label>
+								<select class="form-select" id="settingsExtraOriginMarks" aria-label="Gen III/IV/V origin marks" data-minimum-results-for-search="Infinity">
+									<option value="none">None (official)</option>
+									<option value="platforms">Platform icons</option>
+									<option value="roman">Roman numerals</option>
+									<option value="roman-outline">Roman numerals, outlined</option>
+									<option value="arabic">Arabic numerals</option>
+									<option value="arabic-outline">Arabic numerals, outlined</option>
+								</select>
+							</div>
+							<div class="form-check form-switch mb-2">
+								<input class="form-check-input" type="checkbox" role="switch" id="settingsShowWorldAbility">
+								<label class="form-check-label" for="settingsShowWorldAbility">
+									<div>
+										<span class="align-text-bottom">Show World Ability Ribbon in checklists</span>
+										<img class="align-text-top" src="img/ribbons/world-ability-ribbon.png" alt="World Ability Ribbon" title="World Ability Ribbon">
+									</div>
+									<div class="form-check-label-info">Earning this Ribbon requires connecting to unofficial servers.</div>
+								</label>
+							</div>
+							<div class="form-check form-switch mb-2">
+								<input class="form-check-input" type="checkbox" role="switch" id="settingsAutoMemoryRibbons" checked>
+								<label class="form-check-label" for="settingsAutoMemoryRibbons">
+									<div>
+										<span class="align-text-bottom">Automatic Memory Ribbons</span>
+										<span class="text-nowrap">
+											<img class="align-text-top" src="img/ribbons/battle-memory-ribbon.png" alt="Battle Memory Ribbon" title="Battle Memory Ribbon"><!--
+											--><img class="align-text-top" src="img/ribbons/contest-memory-ribbon.png" alt="Contest Memory Ribbon" title="Contest Memory Ribbon"><!--
+											--><img class="align-text-top" src="img/ribbons/battle-memory-ribbon-gold.png" alt="Battle Memory Ribbon (Gold)" title="Battle Memory Ribbon (Gold)"><!--
+											--><img class="align-text-top" src="img/ribbons/contest-memory-ribbon-gold.png" alt="Contest Memory Ribbon (Gold)" title="Contest Memory Ribbon (Gold)">
+										</span>
+									</div>
+									<div class="form-check-label-info">This is a global setting that can be disabled per-Pokémon.</div>
+								</label>
+							</div>
+							<div class="form-check form-switch mb-2">
+								<input class="form-check-input" type="checkbox" role="switch" id="settingsAutoStrangeBall" checked>
+								<label class="form-check-label" for="settingsAutoStrangeBall">
+									<div>
+										<span class="align-text-bottom">Automatically display Strange Ball</span>
+										<img class="align-text-top" src="img/balls/strange.png" alt="Strange Ball" title="Strange Ball">
+									</div>
+									<div class="form-check-label-info">This is a global setting that can be disabled per-Pokémon.</div>
+								</label>
+							</div>
+							<div class="form-check form-switch">
+								<input class="form-check-input" type="checkbox" role="switch" id="settingsFooterExtraInfo" checked>
+								<label class="form-check-label" for="settingsFooterExtraInfo">
+									<div>
+										<span class="align-text-bottom">Display Ribbon count and assigned Box</span>
+										<img class="align-text-top" src="img/ui/box-closed.png" alt="Box" title="Box">
+									</div>
+									<div class="form-check-label-info">This setting only affects the expanded card view.</div>
+								</label>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-primary" id="modalSettingsSaveBackup">Save Backup File</button>
+						<label class="btn btn-primary" role="button">Restore Backup<input type="file" id="modalSettingsLoadBackup" class="d-none" accept="application/json"></label>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Backup Reload Modal -->
+		<div class="modal" id="modalReloading" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalReloadingLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalReloadingLabel">Reloading</h2>
+					</div>
+					<div class="modal-body">
+						<div>Please wait...</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Changelog Modal -->
+		<div class="modal modal-lg fade" id="modalChangelog" tabindex="-1" aria-labelledby="modalChangelogLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalChangellogLabel">Changelog</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body p-0">
+						<div class="list-group list-group-flush"></div>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Samsung Internet Modal -->
+		<div class="modal fade" id="modalSamsungInternet" tabindex="-1" aria-labelledby="modalSamsungInternetLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalSamsungInternetLabel">Samsung Internet Warning</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>You appear to be using Samsung Internet. If you have dark mode enabled, please disable it or switch to a different browser. Samsung Internet's dark mode ruins the site's images and colors and violates web guidelines on dark modes. For more information on this issue, see the <a href="https://forum.developer.samsung.com/t/websites-dark-mode-gets-overridden-by-samsung-internets-dark-mode/22937">Samsung Developer Forums</a> and <a href="https://stackoverflow.com/questions/66094087/samsung-internet-forces-dark-mode">Stack Overflow</a>.</p>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Dismiss">Dismiss</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- About Modal -->
+		<div class="modal fade" id="modalAbout" tabindex="-1" aria-labelledby="modalAboutLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalAboutLabel">About Ribbons.Guide</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>Ribbons.Guide is a progressive web app that helps you keep track of your Pokémon and their Ribbons! Ribbons.Guide doesn't store or send any data anywhere—it's all saved on your device! <a href="https://github.com/SlyAceZeta/Ribbons.Guide">This is an open-source project hosted on GitHub using GitHub Pages.</a> It was developed as a love letter to the helpful and welcoming r/PokémonRibbons community.</p>
+						<p>The images used in Ribbons.Guide were provided by <a href="https://pokejungle.net">PokéJungle</a>, <a href="https://pokemondb.net">Pokémon Database</a>, <a href="https://github.com/msikma/pokesprite">PokéSprite</a>, <a href="https://archives.bulbagarden.net/wiki/Main_Page">Bulbagarden Archives</a>, <a href="https://github.com/PokeMiners/pogo_assets">Pokémon GO Assets</a>, and <a href="https://github.com/google/material-design-icons">Material Symbols</a>. Ribbons.Guide also makes use of <a href="https://github.com/jquery/jquery">jQuery</a>, <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://github.com/select2/select2">Select2</a>, <a href="https://github.com/SortableJS/Sortable">Sortable</a>, <a href="https://github.com/GoogleChrome/workbox">Workbox</a>, and <a href="https://fonts.google.com/">Google Fonts</a>.</p>
+						<p>Pokémon, data, and images © Nintendo/Creatures Inc./Game Freak. This project is not affiliated with Nintendo, Creatures Inc., Game Freak, or The Pokémon Company. All original content and code is governed by the <a href="https://opensource.org/license/gpl-3-0/">GPL-3.0 license</a>.</p>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="modalAboutViewChangelog">View Full Changelog</button>
+						<a class="btn btn-secondary" href="https://discord.gg/frv7dpWzDG"><img src="img/ui/discord.svg" alt="Discord"><span>Discord</span></a>
+						<a class="btn btn-secondary" href="https://github.com/SlyAceZeta/Ribbons.Guide"><img src="img/ui/github.svg" alt="GitHub"><span>GitHub</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

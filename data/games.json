@@ -1,0 +1,312 @@
+{
+	"home": {
+		"name": "HOME",
+		"gen": 8,
+		"storage": true
+	},
+	"bank7": {
+		"name": "Bank (Gen VII)",
+		"gen": 7,
+		"storage": true
+	},
+	"bank": {
+		"name": "Bank (Gen VI)",
+		"gen": 6,
+		"storage": true
+	},
+	"plza": {
+		"name": "Legends: Z-A",
+		"gen": 9,
+		"solo": true,
+		"ribbonGenOrder": 2
+	},
+	"sv": {
+		"name": "Scarlet/Violet",
+		"gen": 9,
+		"combo": true,
+		"ribbonGenOrder": 1
+	},
+	"scar": {
+		"name": "Scarlet",
+		"partOf": "sv"
+	},
+	"vio": {
+		"name": "Violet",
+		"partOf": "sv"
+	},
+	"pla": {
+		"name": "Legends: Arceus",
+		"gen": 8,
+		"solo": true,
+		"ribbonGenOrder": 3
+	},
+	"bdsp": {
+		"name": "Brilliant Diamond/Shining Pearl",
+		"gen": 8,
+		"combo": true,
+		"ribbonGenOrder": 2
+	},
+	"bd": {
+		"name": "Brilliant Diamond",
+		"partOf": "bdsp"
+	},
+	"sp": {
+		"name": "Shining Pearl",
+		"partOf": "bdsp"
+	},
+	"swsh": {
+		"name": "Sword/Shield",
+		"gen": 8,
+		"combo": true,
+		"ribbonGenOrder": 1
+	},
+	"sw": {
+		"name": "Sword",
+		"partOf": "swsh"
+	},
+	"sh": {
+		"name": "Shield",
+		"partOf": "swsh"
+	},
+	"lgpe": {
+		"name": "Let's Go, Pikachu!/Eevee!",
+		"gen": 7,
+		"combo": true
+	},
+	"lgp": {
+		"name": "Let's Go, Pikachu!",
+		"partOf": "lgpe"
+	},
+	"lge": {
+		"name": "Let's Go, Eevee!",
+		"partOf": "lgpe"
+	},
+	"usum": {
+		"name": "Ultra Sun/Ultra Moon",
+		"gen": 7,
+		"combo": true
+	},
+	"usun": {
+		"name": "Ultra Sun",
+		"partOf": "usum"
+	},
+	"umoon": {
+		"name": "Ultra Moon",
+		"partOf": "usum"
+	},
+	"sm": {
+		"name": "Sun/Moon",
+		"gen": 7,
+		"combo": true
+	},
+	"sun": {
+		"name": "Sun",
+		"partOf": "sm"
+	},
+	"moon": {
+		"name": "Moon",
+		"partOf": "sm"
+	},
+	"go": {
+		"name": "GO",
+		"gen": 6,
+		"solo": true
+	},
+	"oras": {
+		"name": "Omega Ruby/Alpha Sapphire",
+		"gen": 6,
+		"combo": true,
+		"ribbonGenOrder": 2
+	},
+	"or": {
+		"name": "Omega Ruby",
+		"partOf": "oras"
+	},
+	"as": {
+		"name": "Alpha Sapphire",
+		"partOf": "oras"
+	},
+	"xy": {
+		"name": "X/Y",
+		"gen": 6,
+		"combo": true,
+		"ribbonGenOrder": 1
+	},
+	"x": {
+		"name": "X",
+		"partOf": "xy"
+	},
+	"y": {
+		"name": "Y",
+		"partOf": "xy"
+	},
+	"b2w2": {
+		"name": "Black 2/White 2",
+		"gen": 5,
+		"combo": true
+	},
+	"black2": {
+		"name": "Black 2",
+		"partOf": "b2w2",
+		"platformIcon": "dsi"
+	},
+	"white2": {
+		"name": "White 2",
+		"partOf": "b2w2",
+		"platformIcon": "dsi"
+	},
+	"bw": {
+		"name": "Black/White",
+		"gen": 5,
+		"combo": true
+	},
+	"black": {
+		"name": "Black",
+		"partOf": "bw",
+		"platformIcon": "dsi"
+	},
+	"white": {
+		"name": "White",
+		"partOf": "bw",
+		"platformIcon": "dsi"
+	},
+	"hgss": {
+		"name": "HeartGold/SoulSilver",
+		"gen": 4,
+		"combo": true,
+		"ribbonGenOrder": 2
+	},
+	"hg": {
+		"name": "HeartGold",
+		"partOf": "hgss",
+		"platformIcon": "dsi"
+	},
+	"ss": {
+		"name": "SoulSilver",
+		"partOf": "hgss",
+		"platformIcon": "dsi"
+	},
+	"dppt": {
+		"name": "Diamond/Pearl/Platinum",
+		"gen": 4,
+		"combo": true,
+		"ribbonGenOrder": 1
+	},
+	"diamond": {
+		"name": "Diamond",
+		"partOf": "dppt",
+		"platformIcon": "dsi"
+	},
+	"pearl": {
+		"name": "Pearl",
+		"partOf": "dppt",
+		"platformIcon": "dsi"
+	},
+	"platinum": {
+		"name": "Platinum",
+		"partOf": "dppt",
+		"platformIcon": "dsi"
+	},
+	"frlg": {
+		"name": "FireRed/LeafGreen",
+		"gen": 3,
+		"combo": true,
+		"ribbonGenOrder": 2
+	},
+	"fr": {
+		"name": "FireRed",
+		"partOf": "frlg",
+		"platformIcon": "gba"
+	},
+	"lg": {
+		"name": "LeafGreen",
+		"partOf": "frlg",
+		"platformIcon": "gba"
+	},
+	"coloxd": {
+		"name": "Colosseum/XD: Gale of Darkness",
+		"gen": 3,
+		"combo": true,
+		"ribbonGenOrder": 3
+	},
+	"colosseum": {
+		"name": "Colosseum",
+		"partOf": "coloxd",
+		"platformIcon": "gamecube"
+	},
+	"xd": {
+		"name": "XD: Gale of Darkness",
+		"partOf": "coloxd",
+		"platformIcon": "gamecube"
+	},
+	"rse": {
+		"name": "Ruby/Sapphire/Emerald",
+		"gen": 3,
+		"combo": true,
+		"ribbonGenOrder": 1
+	},
+	"ruby": {
+		"name": "Ruby",
+		"partOf": "rse",
+		"platformIcon": "gba"
+	},
+	"sapphire": {
+		"name": "Sapphire",
+		"partOf": "rse",
+		"platformIcon": "gba"
+	},
+	"emerald": {
+		"name": "Emerald",
+		"partOf": "rse",
+		"platformIcon": "gba"
+	},
+	"vc": {
+		"name": "Virtual Console",
+		"combo": true
+	},
+	"gold": {
+		"name": "Gold",
+		"gen": 2,
+		"partOf": "vc"
+	},
+	"silver": {
+		"name": "Silver",
+		"gen": 2,
+		"partOf": "vc"
+	},
+	"crystal": {
+		"name": "Crystal",
+		"gen": 2,
+		"partOf": "vc"
+	},
+	"red-eng": {
+		"name": "Red (ENG)",
+		"gen": 1,
+		"partOf": "vc"
+	},
+	"red-jpn": {
+		"name": "Red (JPN)",
+		"gen": 1,
+		"partOf": "vc"
+	},
+	"blue-eng": {
+		"name": "Blue (ENG)",
+		"gen": 1,
+		"partOf": "vc"
+	},
+	"blue-jpn": {
+		"name": "Blue (JPN)",
+		"gen": 1,
+		"partOf": "vc"
+	},
+	"green": {
+		"name": "Green",
+		"gen": 1,
+		"partOf": "vc"
+	},
+	"yellow": {
+		"name": "Yellow",
+		"gen": 1,
+		"partOf": "vc"
+	}
+}
