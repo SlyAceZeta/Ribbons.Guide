@@ -417,6 +417,13 @@ html[data-autostrangeball="true"] .card-header-ball-strange {
 	height: 32px;
 	margin: 1px;
 }
+html[data-oldribbons="unmerged"] .col[data-current-gen="6"] .old-ribbon-to-merge,
+html[data-oldribbons="unmerged"] .col[data-current-gen="7"] .old-ribbon-to-merge,
+html[data-oldribbons="unmerged"] .col[data-current-gen="8"] .old-ribbon-to-merge,
+html[data-oldribbons="unmerged"] .col[data-current-gen="9"] .old-ribbon-to-merge,
+html[data-oldribbons="never"] .old-ribbon-to-merge {
+	display: none;
+}
 html[data-cardview="condensed"] .card-footer,
 html[data-footerextrainfo="false"] .card-footer {
 	padding-top: .25rem !important;

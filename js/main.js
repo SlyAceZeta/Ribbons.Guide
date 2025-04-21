@@ -121,6 +121,18 @@ if(settings.ChecklistButtons){
 	changeChecklistButtons("always");
 }
 
+/* change Old Ribbons */
+function changeOldRibbons(o){
+	changeSetting("OldRibbons", o);
+	$("html").attr("data-oldribbons", o);
+}
+/* initial Old Ribbons set */
+if(settings.OldRibbons){
+	changeOldRibbons(settings.OldRibbons);
+} else {
+	changeOldRibbons("unmerged");
+}
+
 /* change Gen III/IV/V origin marks */
 function changeExtraOriginMarks(o){
 	changeSetting("ExtraOriginMarks", o);
@@ -1201,9 +1213,11 @@ function createCard(p, id){
 			$cardRibbons.append($("<img>", { "class": p.ribbons[r], "src": "img/marks/" + p.ribbons[r] + ".png", "alt": ribbons[p.ribbons[r]].names["eng"], "title": ribbons[p.ribbons[r]].names["eng"] + " - " + ribbons[p.ribbons[r]].descs["eng"] }));
 			markCount++;
 		} else {
-			if(currentGen < 6 || !ribbons[p.ribbons[r]].merge){
-				$cardRibbons.append($("<img>", { "class": p.ribbons[r], "src": "img/ribbons/" + p.ribbons[r] + ".png", "alt": ribbons[p.ribbons[r]].names["eng"], "title": ribbons[p.ribbons[r]].names["eng"] + " - " + ribbons[p.ribbons[r]].descs["eng"] }));
+			var cardRibbonClass = p.ribbons[r];
+			if(ribbons[p.ribbons[r]].merge){
+				cardRibbonClass = cardRibbonClass + " old-ribbon-to-merge";
 			}
+			$cardRibbons.append($("<img>", { "class": cardRibbonClass, "src": "img/ribbons/" + p.ribbons[r] + ".png", "alt": ribbons[p.ribbons[r]].names["eng"], "title": ribbons[p.ribbons[r]].names["eng"] + " - " + ribbons[p.ribbons[r]].descs["eng"] }));
 			if(!p.ribbons[r].startsWith("battle-memory-ribbon") && !p.ribbons[r].startsWith("contest-memory-ribbon")){
 				ribbonCount++;
 				if(ribbons[p.ribbons[r]].merge == "battle"){
@@ -1336,6 +1350,10 @@ function presetSettings(change = false){
 	if(settings.ChecklistButtons){
 		$("#settingsChecklistButtons").val(settings.ChecklistButtons);
 		if(change) $("#settingsChecklistButtons").change();
+	}
+	if(settings.OldRibbons){
+		$("#settingsOldRibbons").val(settings.OldRibbons);
+		if(change) $("#settingsOldRibbons").change();
 	}
 	if(settings.ExtraOriginMarks){
 		$("#settingsExtraOriginMarks").val(settings.ExtraOriginMarks);
@@ -2158,7 +2176,7 @@ function initRun(){
 			templateResult: selectCustomOption,
 			dropdownParent: $("#modalFilterForm .modal-body")
 		});
-		$("#settingsTheme, #settingsLanguage, #settingsChecklistButtons, #settingsExtraOriginMarks").select2({
+		$("#settingsTheme, #settingsLanguage, #settingsChecklistButtons, #settingsOldRibbons, #settingsExtraOriginMarks").select2({
 			matcher: selectCustomMatcher,
 			templateSelection: selectCustomOption,
 			templateResult: selectCustomOption,
@@ -2540,6 +2558,9 @@ $(function(){
 	});
 	$("#settingsChecklistButtons").change(function(){
 		changeChecklistButtons($(this).val());
+	});
+	$("#settingsOldRibbons").change(function(){
+		changeOldRibbons($(this).val());
 	});
 	$("#settingsExtraOriginMarks").change(function(){
 		changeExtraOriginMarks($(this).val());
