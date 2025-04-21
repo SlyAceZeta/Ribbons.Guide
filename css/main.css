@@ -359,6 +359,12 @@ a:not(:hover):not(:focus) {
 	width: auto;
 	height: 20px;
 }
+.card-header-right {
+	height: 1.73rem;
+}
+.card-header .card-header-right * {
+	height: 100%;
+}
 .card-header button {
 	width: 28px;
 	background: url("../img/ui/clipboard.png") center center no-repeat;
@@ -467,6 +473,7 @@ html[data-cardview="condensed"] .card-ribbons,
 html[data-cardview="condensed"] .card-footer-top,
 html[data-cardview="condensed"] .card .card-header-title,
 html[data-cardview="condensed"] .card-header-gender,
+html[data-cardview="condensed"] .card-header-title-ribbon,
 html[data-cardview="condensed"] .card-footer-level,
 html[data-cardview="condensed"] .card-footer-language,
 html[data-cardview="condensed"] .card-header-shiny {

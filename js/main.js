@@ -1087,7 +1087,7 @@ function createCard(p, id){
 	var $cardHeaderBallStrange = "";
 	if(p.currentgame && ((p.currentgame !== "pla" && p.currentgame !== "home" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
 		if(p.strangeball !== "disabled"){
-			$cardHeaderBallStrange = $("<img>", { "class": "align-middle me-2", "src": "img/balls/strange.png", "alt": "Strange Ball", "title": "Strange Ball" });
+			$cardHeaderBallStrange = $("<img>", { "class": "align-text-top me-2", "src": "img/balls/strange.png", "alt": "Strange Ball", "title": "Strange Ball" });
 			if(p.strangeball == ""){
 				$cardHeaderBallMain.addClass("card-header-ball-selected");
 				$cardHeaderBallStrange.addClass("card-header-ball-strange");
@@ -1152,10 +1152,21 @@ function createCard(p, id){
 		$cardHeaderLeft.append($("<img>", { "class": "align-text-top ms-2 card-header-shiny", "src": "img/ui/" + shinyIcon, "alt": "Shiny", "title": "Shiny" }));
 	}
 	$cardHeader.append($cardHeaderLeft);
+	
+	var $cardHeaderRight = $("<div>", { "class": "card-header-right d-flex" });
+	var $cardHeaderTitle = "";
+	if(p.title && p.title !== "None"){
+		var titleRibbonDir = "ribbons/";
+		if(ribbons[p.title].mark){
+			titleRibbonDir = "marks/";
+		}
+		$cardHeaderTitle = $("<img>", { "class": "ms-2 card-header-title-ribbon", "src": "img/" + titleRibbonDir + p.title + ".png", "alt": ribbons[p.title].names["eng"], "title": ribbons[p.title].names["eng"] + " - " + ribbons[p.title].descs["eng"] });
+	}
 	var $cardHeaderButton = $("<button>", { "type": "button", "class": "btn btn-link p-0 ms-1 position-relative", "onclick": "ribbonChecklist()" })
 		.append($("<span>", { "class": "ribbon-checklist-warning-badge position-absolute translate-middle bg-danger rounded-circle" }).html($("<span>", {"class": "visually-hidden"}).text("Warnings")));
+	$cardHeaderRight.append($cardHeaderTitle, $cardHeaderButton);
 
-	$cardHeader.append($cardHeaderButton);
+	$cardHeader.append($cardHeaderRight);
 
 	/* body */
 	var speciesSprite = p.species;
