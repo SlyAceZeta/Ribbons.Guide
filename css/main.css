@@ -465,7 +465,7 @@ html[data-extraoriginmarks="platforms"] .select-icon-origin-platform {
 }
 html[data-cardview="condensed"] .card-ribbons,
 html[data-cardview="condensed"] .card-footer-top,
-html[data-cardview="condensed"] .card-header-title,
+html[data-cardview="condensed"] .card .card-header-title,
 html[data-cardview="condensed"] .card-header-gender,
 html[data-cardview="condensed"] .card-footer-level,
 html[data-cardview="condensed"] .card-footer-language,
@@ -484,7 +484,7 @@ html[data-cardview="condensed"] .card-header-fullname .align-baseline {
 	max-width: 4.5em;
 	font-size: 1.15em;
 }
-html[data-cardview="condensed"] .card-header-name {
+html[data-cardview="condensed"] .card .card-header-name {
 	display: inline!important;
 	font-size: 1em;
 }
