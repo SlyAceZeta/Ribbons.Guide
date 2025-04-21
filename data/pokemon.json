@@ -42288,6 +42288,28 @@
 			"shinyLocked"
 		]
 	},
+	"koraidon-ride": {
+		"data-source": "koraidon",
+		"forms": {
+			"eng": "Ride",
+			"spa": "Montura",
+			"fre": "Monture",
+			"ger": "Mobil",
+			"ita": "Passaggio",
+			"jpn": "ライド",
+			"kor": "라이드",
+			"chs": "坐骑",
+			"cht": "坐騎"
+		},
+		"games": [
+			"scar"
+		],
+		"flags": [
+			"restricted",
+			"sizeLocked",
+			"shinyLocked"
+		]
+	},
 	"miraidon": {
 		"names": {
 			"eng": "Miraidon",
@@ -42304,6 +42326,28 @@
 		"natdex": 1008,
 		"games": [
 			"scar",
+			"vio"
+		],
+		"flags": [
+			"restricted",
+			"sizeLocked",
+			"shinyLocked"
+		]
+	},
+	"miraidon-ride": {
+		"data-source": "miraidon",
+		"forms": {
+			"eng": "Ride",
+			"spa": "Montura",
+			"fre": "Monture",
+			"ger": "Mobil",
+			"ita": "Passaggio",
+			"jpn": "ライド",
+			"kor": "라이드",
+			"chs": "坐骑",
+			"cht": "坐騎"
+		},
+		"games": [
 			"vio"
 		],
 		"flags": [
