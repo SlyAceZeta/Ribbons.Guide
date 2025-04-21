@@ -170,6 +170,7 @@ var toggles = { // default settings
 	"AutoMemoryRibbons": true,
 	"AutoStrangeBall": true,
 	"FooterExtraInfo": true,
+	"RibbonEditList": true,
 	"CompleteColor": true,
 	"Reordering": true
 };
@@ -2100,7 +2101,7 @@ function initRun(){
 			if(ribbons[r].mark){
 				ribbonDir = "marks/";
 			}
-			var $ribbonRow = $("<li>", { "class": "list-group-item list-group-item-action d-flex align-items-center border-0" })
+			var $ribbonRow = $("<li>", { "class": "list-group-item list-group-item-action d-flex align-items-center border-0", "title": ribbons[r].names.eng + " - " + ribbons[r].descs.eng })
 				.append($("<input>", { "type": "checkbox", "value": "", "class": "form-check-input mt-0 ms-lg-1 me-1 me-lg-2", "id": "pokemonFormRibbon-" + r }));
 			if(r.startsWith("contest-memory-ribbon") || r.startsWith("battle-memory-ribbon")){
 				$ribbonRow.append($("<img>", { "src": "img/ui/sync.svg", "class": "pokemonFormRibbon-memory-sync" }));
