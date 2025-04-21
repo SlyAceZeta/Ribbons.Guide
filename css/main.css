@@ -523,6 +523,11 @@ html[lang="zh-Hans"] .translation-chs {
 .popover-body {
 	padding: calc(var(--bs-popover-body-padding-y) - 0.25rem) var(--bs-popover-body-padding-x) var(--bs-popover-body-padding-y);
 }
+.popover-ribbon-title {
+	font-size: 0.85em;
+	margin-top: 0.15em;
+	opacity: 0.85;
+}
 
 /* ribbon order */
 .card-ribbons .paldea-champion-ribbon {
