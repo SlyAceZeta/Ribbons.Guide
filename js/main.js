@@ -109,6 +109,18 @@ if(settings.language){
 	}
 }
 
+/* change Checklist Buttons */
+function changeChecklistButtons(o){
+	changeSetting("ChecklistButtons", o);
+	$("html").attr("data-checklistbuttons", o);
+}
+/* initial Checklist Buttons set */
+if(settings.ChecklistButtons){
+	changeChecklistButtons(settings.ChecklistButtons);
+} else {
+	changeChecklistButtons("always");
+}
+
 /* change Gen III/IV/V origin marks */
 function changeExtraOriginMarks(o){
 	changeSetting("ExtraOriginMarks", o);
@@ -1321,6 +1333,10 @@ function presetSettings(change = false){
 		$("#settingsLanguage").val(settings.language);
 		if(change) $("#settingsLanguage").change();
 	}
+	if(settings.ChecklistButtons){
+		$("#settingsChecklistButtons").val(settings.ChecklistButtons);
+		if(change) $("#settingsChecklistButtons").change();
+	}
 	if(settings.ExtraOriginMarks){
 		$("#settingsExtraOriginMarks").val(settings.ExtraOriginMarks);
 		if(change) $("#settingsExtraOriginMarks").change();
@@ -2142,7 +2158,7 @@ function initRun(){
 			templateResult: selectCustomOption,
 			dropdownParent: $("#modalFilterForm .modal-body")
 		});
-		$("#settingsTheme, #settingsLanguage, #settingsExtraOriginMarks").select2({
+		$("#settingsTheme, #settingsLanguage, #settingsChecklistButtons, #settingsExtraOriginMarks").select2({
 			matcher: selectCustomMatcher,
 			templateSelection: selectCustomOption,
 			templateResult: selectCustomOption,
@@ -2521,6 +2537,9 @@ $(function(){
 	});
 	$("#settingsLanguage").change(function(){
 		changeLanguage($(this).val());
+	});
+	$("#settingsChecklistButtons").change(function(){
+		changeChecklistButtons($(this).val());
 	});
 	$("#settingsExtraOriginMarks").change(function(){
 		changeExtraOriginMarks($(this).val());

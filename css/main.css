@@ -461,6 +461,10 @@ html[data-extraoriginmarks="platforms"] .select-icon-origin-platform {
 	opacity: 0.5;
 	cursor: not-allowed;
 }
+html[data-checklistbuttons="incomplete"] .ribbons-done .card-header button,
+html[data-checklistbuttons="never"] .card-header button {
+	display: none;
+}
 /* condensed cards */
 @media (min-width: 1400px) {
 	html[data-cardview="condensed"] #tracker-grid {
@@ -478,6 +482,10 @@ html[data-cardview="condensed"] .card-footer-level,
 html[data-cardview="condensed"] .card-footer-language,
 html[data-cardview="condensed"] .card-header-shiny {
 	display: none!important;
+}
+html[data-cardview="condensed"][data-checklistbuttons="incomplete"] .ribbons-done .card-header-title-ribbon,
+html[data-cardview="condensed"][data-checklistbuttons="never"] .card-header-title-ribbon {
+	display: inline!important;
 }
 html[data-cardview="condensed"] .card-header-fullname .align-text-top {
 	vertical-align: middle!important;
