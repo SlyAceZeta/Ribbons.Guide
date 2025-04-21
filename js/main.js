@@ -2655,6 +2655,23 @@ $(function(){
 		}
 	});
 	modalRibbonChecklist = new bootstrap.Modal("#modalRibbonChecklist");
+	
+	/* button to scroll to top */
+	window.onscroll = function(){
+		scrollFunction();
+	};
+	function scrollFunction(){
+		if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+			$(".button-to-top").fadeIn(250);
+		} else {
+			$(".button-to-top").fadeOut(250);
+		}
+	}
+	$(".button-to-top").click(function(){
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	});
+	
 	/* initial functions that run after all else */
 	initRun();
 });
