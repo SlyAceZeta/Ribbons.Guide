@@ -1,4 +1,10 @@
 {
+	"20 April 2025": [
+		"Added all Alcremie forms (thanks Z!)",
+		"Added \"Ride\" forms of Koraidon and Miraidon, which should be used if tracking the Koraidon/Miraidon that joins you at the start of the game",
+		"Fixed an issue where the site would partially load if at least one image failed to load for whatever reason (thanks SadisticMystic!)",
+		"Fixed an issue where Pa'u Style Oricorio didn't properly show the apostrophe in English"
+	],
 	"16 April 2025": [
 		"On mobile devices, improved contrast of top-right menu icon for all themes (thanks BHC90210!)",
 		"Improved Ribbons and Marks alignment when two Pokémon are in the same row and one has a lot less Ribbons or Marks than the other (thanks Burnteye!)",
