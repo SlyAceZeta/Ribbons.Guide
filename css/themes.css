@@ -21,7 +21,7 @@
 a:not(.btn) {
 	color: #0148B1;
 }
-.ribbons-done {
+[data-completecolor="true"] .ribbons-done {
 	--rg-card-bg: #cfc;
 	--rg-card-cap-bg: #bdb;
 }
@@ -113,7 +113,7 @@ a:not(.btn) {
 	--rg-icon-filter: none;
 	--rg-pulse-rgb: 255, 255, 255;
 }
-[data-bs-theme="dark"] .ribbons-done {
+[data-bs-theme="dark"][data-completecolor="true"] .ribbons-done {
 	--rg-card-bg: #020;
 	--rg-card-cap-bg: #030;
 }
@@ -213,7 +213,7 @@ a:not(.btn) {
 [data-bs-theme="start"] body {
 	background-image: linear-gradient(#111e34, #243a5b);
 }
-[data-bs-theme="start"] .ribbons-done {
+[data-bs-theme="start"][data-completecolor="true"] .ribbons-done {
 	--rg-card-bg: #020;
 	--rg-card-cap-bg: #030;
 }
@@ -331,7 +331,7 @@ a:not(.btn) {
 [data-bs-theme="naranja"] body {
 	background-image: linear-gradient(225deg, #001e4f, #0058ba);
 }
-[data-bs-theme="naranja"] .ribbons-done {
+[data-bs-theme="naranja"][data-completecolor="true"] .ribbons-done {
 	--rg-card-bg: #020;
 	--rg-card-cap-bg: #030;
 }
@@ -445,7 +445,7 @@ a:not(.btn) {
 [data-bs-theme="uva"] body {
 	background-image: linear-gradient(225deg, #001e4f, #0058ba);
 }
-[data-bs-theme="uva"] .ribbons-done {
+[data-bs-theme="uva"][data-completecolor="true"] .ribbons-done {
 	--rg-card-bg: #020;
 	--rg-card-cap-bg: #030;
 }

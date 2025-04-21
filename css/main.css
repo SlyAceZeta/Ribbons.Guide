@@ -468,6 +468,9 @@ html[data-extraoriginmarks="platforms"] .select-icon-origin-platform {
 	opacity: 0.5;
 	cursor: not-allowed;
 }
+html[data-reordering="false"] .card-sortable-handle {
+	display: none;
+}
 html[data-checklistbuttons="incomplete"] .ribbons-done .card-header button,
 html[data-checklistbuttons="never"] .card-header button {
 	display: none;

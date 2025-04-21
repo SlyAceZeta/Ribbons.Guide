@@ -169,7 +169,9 @@ var toggles = { // default settings
 	"ShowWorldAbility": false,
 	"AutoMemoryRibbons": true,
 	"AutoStrangeBall": true,
-	"FooterExtraInfo": true
+	"FooterExtraInfo": true,
+	"CompleteColor": true,
+	"Reordering": true
 };
 /* change toggle settings */
 function changeCheckToggle(name, value){
