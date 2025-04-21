@@ -437,6 +437,17 @@
 			"chs": "霜奶仙",
 			"cht": "霜奶仙"
 		},
+		"forms": {
+			"eng": "Vanilla Cream + Strawberry Sweet",
+			"spa": "Crema de Vainilla + Confite Fresa",
+			"fre": "Lait Vanille + Fraise en Sucre",
+			"ger": "Vanille-Creme + Zucker-Erdbeere",
+			"ita": "Lattevaniglia + Bonbonfragola",
+			"jpn": "ミルキィバニラ + いちごアメざいく",
+			"kor": "밀키바닐라 + 딸기사탕공예",
+			"chs": "奶香香草 + 草莓糖饰",
+			"cht": "奶香香草 + 草莓糖飾"
+		},
 		"gender": "female",
 		"natdex": 869,
 		"games": [
@@ -446,6 +457,874 @@
 			"vio"
 		],
 		"evolvesFrom": "milcery"
+	},
+	"alcremie-rubycream-strawberry": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Ruby Cream + Strawberry Sweet",
+			"spa": "Crema Rosa + Confite Fresa",
+			"fre": "Lait Ruby + Fraise en Sucre",
+			"ger": "Ruby-Creme + Zucker-Erdbeere",
+			"ita": "Latterosa + Bonbonfragola",
+			"jpn": "ミルキィルビー + いちごアメざいく",
+			"kor": "밀키루비 + 딸기사탕공예",
+			"chs": "奶香红钻 + 草莓糖饰",
+			"cht": "奶香紅鑽 + 草莓糖飾"
+		}
+	},
+	"alcremie-matcha-strawberry": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Matcha Cream + Strawberry Sweet",
+			"spa": "Crema de Té + Confite Fresa",
+			"fre": "Lait Matcha + Fraise en Sucre",
+			"ger": "Matcha-Creme + Zucker-Erdbeere",
+			"ita": "Lattematcha + Bonbonfragola",
+			"jpn": "ミルキィまっちゃ + いちごアメざいく",
+			"kor": "밀키말차 + 딸기사탕공예",
+			"chs": "奶香抹茶 + 草莓糖饰",
+			"cht": "奶香抹茶 + 草莓糖飾"
+		}
+	},
+	"alcremie-mint-strawberry": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Mint Cream + Strawberry Sweet",
+			"spa": "Crema de Menta + Confite Fresa",
+			"fre": "Lait Menthe + Fraise en Sucre",
+			"ger": "Minz-Creme + Zucker-Erdbeere",
+			"ita": "Lattementa + Bonbonfragola",
+			"jpn": "ミルキィミント + いちごアメざいく",
+			"kor": "밀키민트 + 딸기사탕공예",
+			"chs": "奶香薄荷 + 草莓糖饰",
+			"cht": "奶香薄荷 + 草莓糖飾"
+		}
+	},
+	"alcremie-lemon-strawberry": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Lemon Cream + Strawberry Sweet",
+			"spa": "Crema de Limón + Confite Fresa",
+			"fre": "Lait Citron + Fraise en Sucre",
+			"ger": "Zitronen-Creme + Zucker-Erdbeere",
+			"ita": "Lattelimone + Bonbonfragola",
+			"jpn": "ミルキィレモン + いちごアメざいく",
+			"kor": "밀키레몬 + 딸기사탕공예",
+			"chs": "奶香柠檬 + 草莓糖饰",
+			"cht": "奶香檸檬 + 草莓糖飾"
+		}
+	},
+	"alcremie-salted-strawberry": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Salted Cream + Strawberry Sweet",
+			"spa": "Crema Salada + Confite Fresa",
+			"fre": "Lait Salé + Fraise en Sucre",
+			"ger": "Salz-Creme + Zucker-Erdbeere",
+			"ita": "Lattesale + Bonbonfragola",
+			"jpn": "ミルキィソルト + いちごアメざいく",
+			"kor": "밀키솔트 + 딸기사탕공예",
+			"chs": "奶香雪盐 + 草莓糖饰",
+			"cht": "奶香雪鹽 + 草莓糖飾"
+		}
+	},
+	"alcremie-rubyswirl-strawberry": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Ruby Swirl + Strawberry Sweet",
+			"spa": "Mezcla Rosa + Confite Fresa",
+			"fre": "Mélange Ruby + Fraise en Sucre",
+			"ger": "Ruby-Mix + Zucker-Erdbeere",
+			"ita": "Rosamix + Bonbonfragola",
+			"jpn": "ルビーミックス + いちごアメざいく",
+			"kor": "루비믹스 + 딸기사탕공예",
+			"chs": "红钻综合 + 草莓糖饰",
+			"cht": "紅鑽綜合 + 草莓糖飾"
+		}
+	},
+	"alcremie-caramel-strawberry": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Caramel Swirl + Strawberry Sweet",
+			"spa": "Mezcla Caramelo + Confite Fresa",
+			"fre": "Mélange Caramel + Fraise en Sucre",
+			"ger": "Karamell-Mix + Zucker-Erdbeere",
+			"ita": "Caramelmix + Bonbonfragola",
+			"jpn": "キャラメルミックス + いちごアメざいく",
+			"kor": "캐러멜믹스 + 딸기사탕공예",
+			"chs": "焦糖綜合 + 草莓糖饰",
+			"cht": "焦糖綜合 + 草莓糖飾"
+		}
+	},
+	"alcremie-rainbow-strawberry": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Rainbow Swirl + Strawberry Sweet",
+			"spa": "Tres Sabores + Confite Fresa",
+			"fre": "Mélange Tricolore + Fraise en Sucre",
+			"ger": "Trio-Mix + Zucker-Erdbeere",
+			"ita": "Triplomix + Bonbonfragola",
+			"jpn": "トリプルミックス + いちごアメざいく",
+			"kor": "트리플믹스 + 딸기사탕공예",
+			"chs": "三色综合 + 草莓糖饰",
+			"cht": "三色綜合 + 草莓糖飾"
+		}
+	},
+	"alcremie-vanilla-berry": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Vanilla Cream + Berry Sweet",
+			"spa": "Crema de Vainilla + Confite Fruto",
+			"fre": "Lait Vanille + Baie en Sucre",
+			"ger": "Vanille-Creme + Zucker-Beere",
+			"ita": "Lattevaniglia + Bonbonbosco",
+			"jpn": "ミルキィバニラ + ベリーアメざいく",
+			"kor": "밀키바닐라 + 베리사탕공예",
+			"chs": "奶香香草 + 野莓糖饰",
+			"cht": "奶香香草 + 野莓糖飾"
+		}
+	},
+	"alcremie-rubycream-berry": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Ruby Cream + Berry Sweet",
+			"spa": "Crema Rosa + Confite Fruto",
+			"fre": "Lait Ruby + Baie en Sucre",
+			"ger": "Ruby-Creme + Zucker-Beere",
+			"ita": "Latterosa + Bonbonbosco",
+			"jpn": "ミルキィルビー + ベリーアメざいく",
+			"kor": "밀키루비 + 베리사탕공예",
+			"chs": "奶香红钻 + 野莓糖饰",
+			"cht": "奶香紅鑽 + 野莓糖飾"
+		}
+	},
+	"alcremie-matcha-berry": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Matcha Cream + Berry Sweet",
+			"spa": "Crema de Té + Confite Fruto",
+			"fre": "Lait Matcha + Baie en Sucre",
+			"ger": "Matcha-Creme + Zucker-Beere",
+			"ita": "Lattematcha + Bonbonbosco",
+			"jpn": "ミルキィまっちゃ + ベリーアメざいく",
+			"kor": "밀키말차 + 베리사탕공예",
+			"chs": "奶香抹茶 + 野莓糖饰",
+			"cht": "奶香抹茶 + 野莓糖飾"
+		}
+	},
+	"alcremie-mint-berry": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Mint Cream + Berry Sweet",
+			"spa": "Crema de Menta + Confite Fruto",
+			"fre": "Lait Menthe + Baie en Sucre",
+			"ger": "Minz-Creme + Zucker-Beere",
+			"ita": "Lattementa + Bonbonbosco",
+			"jpn": "ミルキィミント + ベリーアメざいく",
+			"kor": "밀키민트 + 베리사탕공예",
+			"chs": "奶香薄荷 + 野莓糖饰",
+			"cht": "奶香薄荷 + 野莓糖飾"
+		}
+	},
+	"alcremie-lemon-berry": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Lemon Cream + Berry Sweet",
+			"spa": "Crema de Limón + Confite Fruto",
+			"fre": "Lait Citron + Baie en Sucre",
+			"ger": "Zitronen-Creme + Zucker-Beere",
+			"ita": "Lattelimone + Bonbonbosco",
+			"jpn": "ミルキィレモン + ベリーアメざいく",
+			"kor": "밀키레몬 + 베리사탕공예",
+			"chs": "奶香柠檬 + 野莓糖饰",
+			"cht": "奶香檸檬 + 野莓糖飾"
+		}
+	},
+	"alcremie-salted-berry": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Salted Cream + Berry Sweet",
+			"spa": "Crema Salada + Confite Fruto",
+			"fre": "Lait Salé + Baie en Sucre",
+			"ger": "Salz-Creme + Zucker-Beere",
+			"ita": "Lattesale + Bonbonbosco",
+			"jpn": "ミルキィソルト + ベリーアメざいく",
+			"kor": "밀키솔트 + 베리사탕공예",
+			"chs": "奶香雪盐 + 野莓糖饰",
+			"cht": "奶香雪鹽 + 野莓糖飾"
+		}
+	},
+	"alcremie-rubyswirl-berry": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Ruby Swirl + Berry Sweet",
+			"spa": "Mezcla Rosa + Confite Fruto",
+			"fre": "Mélange Ruby + Baie en Sucre",
+			"ger": "Ruby-Mix + Zucker-Beere",
+			"ita": "Rosamix + Bonbonbosco",
+			"jpn": "ルビーミックス + ベリーアメざいく",
+			"kor": "루비믹스 + 베리사탕공예",
+			"chs": "红钻综合 + 野莓糖饰",
+			"cht": "紅鑽綜合 + 野莓糖飾"
+		}
+	},
+	"alcremie-caramel-berry": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Caramel Swirl + Berry Sweet",
+			"spa": "Mezcla Caramelo + Confite Fruto",
+			"fre": "Mélange Caramel + Baie en Sucre",
+			"ger": "Karamell-Mix + Zucker-Beere",
+			"ita": "Caramelmix + Bonbonbosco",
+			"jpn": "キャラメルミックス + ベリーアメざいく",
+			"kor": "캐러멜믹스 + 베리사탕공예",
+			"chs": "焦糖綜合 + 野莓糖饰",
+			"cht": "焦糖綜合 + 野莓糖飾"
+		}
+	},
+	"alcremie-rainbow-berry": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Rainbow Swirl + Berry Sweet",
+			"spa": "Tres Sabores + Confite Fruto",
+			"fre": "Mélange Tricolore + Baie en Sucre",
+			"ger": "Trio-Mix + Zucker-Beere",
+			"ita": "Triplomix + Bonbonbosco",
+			"jpn": "トリプルミックス + ベリーアメざいく",
+			"kor": "트리플믹스 + 베리사탕공예",
+			"chs": "三色综合 + 野莓糖饰",
+			"cht": "三色綜合 + 野莓糖飾"
+		}
+	},
+	"alcremie-vanilla-love": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Vanilla Cream + Love Sweet",
+			"spa": "Crema de Vainilla + Confite Corazón",
+			"fre": "Lait Vanille + Cœur en Sucre",
+			"ger": "Vanille-Creme + Zucker-Herz",
+			"ita": "Lattevaniglia + Bonboncuore",
+			"jpn": "ミルキィバニラ + ハートアメざいく",
+			"kor": "밀키바닐라 + 하트사탕공예",
+			"chs": "奶香香草 + 爱心糖饰",
+			"cht": "奶香香草 + 愛心糖飾"
+		}
+	},
+	"alcremie-rubycream-love": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Ruby Cream + Love Sweet",
+			"spa": "Crema Rosa + Confite Corazón",
+			"fre": "Lait Ruby + Cœur en Sucre",
+			"ger": "Ruby-Creme + Zucker-Herz",
+			"ita": "Latterosa + Bonboncuore",
+			"jpn": "ミルキィルビー + ハートアメざいく",
+			"kor": "밀키루비 + 하트사탕공예",
+			"chs": "奶香红钻 + 爱心糖饰",
+			"cht": "奶香紅鑽 + 愛心糖飾"
+		}
+	},
+	"alcremie-matcha-love": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Matcha Cream + Love Sweet",
+			"spa": "Crema de Té + Confite Corazón",
+			"fre": "Lait Matcha + Cœur en Sucre",
+			"ger": "Matcha-Creme + Zucker-Herz",
+			"ita": "Lattematcha + Bonboncuore",
+			"jpn": "ミルキィまっちゃ + ハートアメざいく",
+			"kor": "밀키말차 + 하트사탕공예",
+			"chs": "奶香抹茶 + 爱心糖饰",
+			"cht": "奶香抹茶 + 愛心糖飾"
+		}
+	},
+	"alcremie-mint-love": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Mint Cream + Love Sweet",
+			"spa": "Crema de Menta + Confite Corazón",
+			"fre": "Lait Menthe + Cœur en Sucre",
+			"ger": "Minz-Creme + Zucker-Herz",
+			"ita": "Lattementa + Bonboncuore",
+			"jpn": "ミルキィミント + ハートアメざいく",
+			"kor": "밀키민트 + 하트사탕공예",
+			"chs": "奶香薄荷 + 爱心糖饰",
+			"cht": "奶香薄荷 + 愛心糖飾"
+		}
+	},
+	"alcremie-lemon-love": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Lemon Cream + Love Sweet",
+			"spa": "Crema de Limón + Confite Corazón",
+			"fre": "Lait Citron + Cœur en Sucre",
+			"ger": "Zitronen-Creme + Zucker-Herz",
+			"ita": "Lattelimone + Bonboncuore",
+			"jpn": "ミルキィレモン + ハートアメざいく",
+			"kor": "밀키레몬 + 하트사탕공예",
+			"chs": "奶香柠檬 + 爱心糖饰",
+			"cht": "奶香檸檬 + 愛心糖飾"
+		}
+	},
+	"alcremie-salted-love": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Salted Cream + Love Sweet",
+			"spa": "Crema Salada + Confite Corazón",
+			"fre": "Lait Salé + Cœur en Sucre",
+			"ger": "Salz-Creme + Zucker-Herz",
+			"ita": "Lattesale + Bonboncuore",
+			"jpn": "ミルキィソルト + ハートアメざいく",
+			"kor": "밀키솔트 + 하트사탕공예",
+			"chs": "奶香雪盐 + 爱心糖饰",
+			"cht": "奶香雪鹽 + 愛心糖飾"
+		}
+	},
+	"alcremie-rubyswirl-love": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Ruby Swirl + Love Sweet",
+			"spa": "Mezcla Rosa + Confite Corazón",
+			"fre": "Mélange Ruby + Cœur en Sucre",
+			"ger": "Ruby-Mix + Zucker-Herz",
+			"ita": "Rosamix + Bonboncuore",
+			"jpn": "ルビーミックス + ハートアメざいく",
+			"kor": "루비믹스 + 하트사탕공예",
+			"chs": "红钻综合 + 爱心糖饰",
+			"cht": "紅鑽綜合 + 愛心糖飾"
+		}
+	},
+	"alcremie-caramel-love": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Caramel Swirl + Love Sweet",
+			"spa": "Mezcla Caramelo + Confite Corazón",
+			"fre": "Mélange Caramel + Cœur en Sucre",
+			"ger": "Karamell-Mix + Zucker-Herz",
+			"ita": "Caramelmix + Bonboncuore",
+			"jpn": "キャラメルミックス + ハートアメざいく",
+			"kor": "캐러멜믹스 + 하트사탕공예",
+			"chs": "焦糖綜合 + 爱心糖饰",
+			"cht": "焦糖綜合 + 愛心糖飾"
+		}
+	},
+	"alcremie-rainbow-love": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Rainbow Swirl + Love Sweet",
+			"spa": "Tres Sabores + Confite Corazón",
+			"fre": "Mélange Tricolore + Cœur en Sucre",
+			"ger": "Trio-Mix + Zucker-Herz",
+			"ita": "Triplomix + Bonboncuore",
+			"jpn": "トリプルミックス + ハートアメざいく",
+			"kor": "트리플믹스 + 하트사탕공예",
+			"chs": "三色综合 + 爱心糖饰",
+			"cht": "三色綜合 + 愛心糖飾"
+		}
+	},
+	"alcremie-vanilla-star": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Vanilla Cream + Star Sweet",
+			"spa": "Crema de Vainilla + Confite Estrella",
+			"fre": "Lait Vanille + Étoile en Sucre",
+			"ger": "Vanille-Creme + Zucker-Stern",
+			"ita": "Lattevaniglia + Bonbonstella",
+			"jpn": "ミルキィバニラ + スターアメざいく",
+			"kor": "밀키바닐라 + 스타사탕공예",
+			"chs": "奶香香草 + 星星糖饰",
+			"cht": "奶香香草 + 星星糖飾"
+		}
+	},
+	"alcremie-rubycream-star": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Ruby Cream + Star Sweet",
+			"spa": "Crema Rosa + Confite Estrella",
+			"fre": "Lait Ruby + Étoile en Sucre",
+			"ger": "Ruby-Creme + Zucker-Stern",
+			"ita": "Latterosa + Bonbonstella",
+			"jpn": "ミルキィルビー + スターアメざいく",
+			"kor": "밀키루비 + 스타사탕공예",
+			"chs": "奶香红钻 + 星星糖饰",
+			"cht": "奶香紅鑽 + 星星糖飾"
+		}
+	},
+	"alcremie-matcha-star": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Matcha Cream + Star Sweet",
+			"spa": "Crema de Té + Confite Estrella",
+			"fre": "Lait Matcha + Étoile en Sucre",
+			"ger": "Matcha-Creme + Zucker-Stern",
+			"ita": "Lattematcha + Bonbonstella",
+			"jpn": "ミルキィまっちゃ + スターアメざいく",
+			"kor": "밀키말차 + 스타사탕공예",
+			"chs": "奶香抹茶 + 星星糖饰",
+			"cht": "奶香抹茶 + 星星糖飾"
+		}
+	},
+	"alcremie-mint-star": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Mint Cream + Star Sweet",
+			"spa": "Crema de Menta + Confite Estrella",
+			"fre": "Lait Menthe + Étoile en Sucre",
+			"ger": "Minz-Creme + Zucker-Stern",
+			"ita": "Lattementa + Bonbonstella",
+			"jpn": "ミルキィミント + スターアメざいく",
+			"kor": "밀키민트 + 스타사탕공예",
+			"chs": "奶香薄荷 + 星星糖饰",
+			"cht": "奶香薄荷 + 星星糖飾"
+		}
+	},
+	"alcremie-lemon-star": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Lemon Cream + Star Sweet",
+			"spa": "Crema de Limón + Confite Estrella",
+			"fre": "Lait Citron + Étoile en Sucre",
+			"ger": "Zitronen-Creme + Zucker-Stern",
+			"ita": "Lattelimone + Bonbonstella",
+			"jpn": "ミルキィレモン + スターアメざいく",
+			"kor": "밀키레몬 + 스타사탕공예",
+			"chs": "奶香柠檬 + 星星糖饰",
+			"cht": "奶香檸檬 + 星星糖飾"
+		}
+	},
+	"alcremie-salted-star": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Salted Cream + Star Sweet",
+			"spa": "Crema Salada + Confite Estrella",
+			"fre": "Lait Salé + Étoile en Sucre",
+			"ger": "Salz-Creme + Zucker-Stern",
+			"ita": "Lattesale + Bonbonstella",
+			"jpn": "ミルキィソルト + スターアメざいく",
+			"kor": "밀키솔트 + 스타사탕공예",
+			"chs": "奶香雪盐 + 星星糖饰",
+			"cht": "奶香雪鹽 + 星星糖飾"
+		}
+	},
+	"alcremie-rubyswirl-star": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Ruby Swirl + Star Sweet",
+			"spa": "Mezcla Rosa + Confite Estrella",
+			"fre": "Mélange Ruby + Étoile en Sucre",
+			"ger": "Ruby-Mix + Zucker-Stern",
+			"ita": "Rosamix + Bonbonstella",
+			"jpn": "ルビーミックス + スターアメざいく",
+			"kor": "루비믹스 + 스타사탕공예",
+			"chs": "红钻综合 + 星星糖饰",
+			"cht": "紅鑽綜合 + 星星糖飾"
+		}
+	},
+	"alcremie-caramel-star": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Caramel Swirl + Star Sweet",
+			"spa": "Mezcla Caramelo + Confite Estrella",
+			"fre": "Mélange Caramel + Étoile en Sucre",
+			"ger": "Karamell-Mix + Zucker-Stern",
+			"ita": "Caramelmix + Bonbonstella",
+			"jpn": "キャラメルミックス + スターアメざいく",
+			"kor": "캐러멜믹스 + 스타사탕공예",
+			"chs": "焦糖綜合 + 星星糖饰",
+			"cht": "焦糖綜合 + 星星糖飾"
+		}
+	},
+	"alcremie-rainbow-star": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Rainbow Swirl + Star Sweet",
+			"spa": "Tres Sabores + Confite Estrella",
+			"fre": "Mélange Tricolore + Étoile en Sucre",
+			"ger": "Trio-Mix + Zucker-Stern",
+			"ita": "Triplomix + Bonbonstella",
+			"jpn": "トリプルミックス + スターアメざいく",
+			"kor": "트리플믹스 + 스타사탕공예",
+			"chs": "三色综合 + 星星糖饰",
+			"cht": "三色綜合 + 星星糖飾"
+		}
+	},
+	"alcremie-vanilla-clover": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Vanilla Cream + Clover Sweet",
+			"spa": "Crema de Vainilla + Confite Trébol",
+			"fre": "Lait Vanille + Trèfle en Sucre",
+			"ger": "Vanille-Creme + Zucker-Kleeblatt",
+			"ita": "Lattevaniglia + Bonbonfoglio",
+			"jpn": "ミルキィバニラ + よつばアメざいく",
+			"kor": "밀키바닐라 + 네잎사탕공예",
+			"chs": "奶香香草 + 幸运草糖饰",
+			"cht": "奶香香草 + 幸運草糖飾"
+		}
+	},
+	"alcremie-rubycream-clover": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Ruby Cream + Clover Sweet",
+			"spa": "Crema Rosa + Confite Trébol",
+			"fre": "Lait Ruby + Trèfle en Sucre",
+			"ger": "Ruby-Creme + Zucker-Kleeblatt",
+			"ita": "Latterosa + Bonbonfoglio",
+			"jpn": "ミルキィルビー + よつばアメざいく",
+			"kor": "밀키루비 + 네잎사탕공예",
+			"chs": "奶香红钻 + 幸运草糖饰",
+			"cht": "奶香紅鑽 + 幸運草糖飾"
+		}
+	},
+	"alcremie-matcha-clover": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Matcha Cream + Clover Sweet",
+			"spa": "Crema de Té + Confite Trébol",
+			"fre": "Lait Matcha + Trèfle en Sucre",
+			"ger": "Matcha-Creme + Zucker-Kleeblatt",
+			"ita": "Lattematcha + Bonbonfoglio",
+			"jpn": "ミルキィまっちゃ + よつばアメざいく",
+			"kor": "밀키말차 + 네잎사탕공예",
+			"chs": "奶香抹茶 + 幸运草糖饰",
+			"cht": "奶香抹茶 + 幸運草糖飾"
+		}
+	},
+	"alcremie-mint-clover": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Mint Cream + Clover Sweet",
+			"spa": "Crema de Menta + Confite Trébol",
+			"fre": "Lait Menthe + Trèfle en Sucre",
+			"ger": "Minz-Creme + Zucker-Kleeblatt",
+			"ita": "Lattementa + Bonbonfoglio",
+			"jpn": "ミルキィミント + よつばアメざいく",
+			"kor": "밀키민트 + 네잎사탕공예",
+			"chs": "奶香薄荷 + 幸运草糖饰",
+			"cht": "奶香薄荷 + 幸運草糖飾"
+		}
+	},
+	"alcremie-lemon-clover": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Lemon Cream + Clover Sweet",
+			"spa": "Crema de Limón + Confite Trébol",
+			"fre": "Lait Citron + Trèfle en Sucre",
+			"ger": "Zitronen-Creme + Zucker-Kleeblatt",
+			"ita": "Lattelimone + Bonbonfoglio",
+			"jpn": "ミルキィレモン + よつばアメざいく",
+			"kor": "밀키레몬 + 네잎사탕공예",
+			"chs": "奶香柠檬 + 幸运草糖饰",
+			"cht": "奶香檸檬 + 幸運草糖飾"
+		}
+	},
+	"alcremie-salted-clover": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Salted Cream + Clover Sweet",
+			"spa": "Crema Salada + Confite Trébol",
+			"fre": "Lait Salé + Trèfle en Sucre",
+			"ger": "Salz-Creme + Zucker-Kleeblatt",
+			"ita": "Lattesale + Bonbonfoglio",
+			"jpn": "ミルキィソルト + よつばアメざいく",
+			"kor": "밀키솔트 + 네잎사탕공예",
+			"chs": "奶香雪盐 + 幸运草糖饰",
+			"cht": "奶香雪鹽 + 幸運草糖飾"
+		}
+	},
+	"alcremie-rubyswirl-clover": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Ruby Swirl + Clover Sweet",
+			"spa": "Mezcla Rosa + Confite Trébol",
+			"fre": "Mélange Ruby + Trèfle en Sucre",
+			"ger": "Ruby-Mix + Zucker-Kleeblatt",
+			"ita": "Rosamix + Bonbonfoglio",
+			"jpn": "ルビーミックス + よつばアメざいく",
+			"kor": "루비믹스 + 네잎사탕공예",
+			"chs": "红钻综合 + 幸运草糖饰",
+			"cht": "紅鑽綜合 + 幸運草糖飾"
+		}
+	},
+	"alcremie-caramel-clover": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Caramel Swirl + Clover Sweet",
+			"spa": "Mezcla Caramelo + Confite Trébol",
+			"fre": "Mélange Caramel + Trèfle en Sucre",
+			"ger": "Karamell-Mix + Zucker-Kleeblatt",
+			"ita": "Caramelmix + Bonbonfoglio",
+			"jpn": "キャラメルミックス + よつばアメざいく",
+			"kor": "캐러멜믹스 + 네잎사탕공예",
+			"chs": "焦糖綜合 + 幸运草糖饰",
+			"cht": "焦糖綜合 + 幸運草糖飾"
+		}
+	},
+	"alcremie-rainbow-clover": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Rainbow Swirl + Clover Sweet",
+			"spa": "Tres Sabores + Confite Trébol",
+			"fre": "Mélange Tricolore + Trèfle en Sucre",
+			"ger": "Trio-Mix + Zucker-Kleeblatt",
+			"ita": "Triplomix + Bonbonfoglio",
+			"jpn": "トリプルミックス + よつばアメざいく",
+			"kor": "트리플믹스 + 네잎사탕공예",
+			"chs": "三色综合 + 幸运草糖饰",
+			"cht": "三色綜合 + 幸運草糖飾"
+		}
+	},
+	"alcremie-vanilla-flower": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Vanilla Cream + Flower Sweet",
+			"spa": "Crema de Vainilla + Confite Flor",
+			"fre": "Lait Vanille + Fleur en Sucre",
+			"ger": "Vanille-Creme + Zucker-Blume",
+			"ita": "Lattevaniglia + Bonbonfiore",
+			"jpn": "ミルキィバニラ + おはなアメざいく",
+			"kor": "밀키바닐라 + 꽃사탕공예",
+			"chs": "奶香香草 + 花朵糖饰",
+			"cht": "奶香香草 + 花朵糖飾"
+		}
+	},
+	"alcremie-rubycream-flower": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Ruby Cream + Flower Sweet",
+			"spa": "Crema Rosa + Confite Flor",
+			"fre": "Lait Ruby + Fleur en Sucre",
+			"ger": "Ruby-Creme + Zucker-Blume",
+			"ita": "Latterosa + Bonbonfiore",
+			"jpn": "ミルキィルビー + おはなアメざいく",
+			"kor": "밀키루비 + 꽃사탕공예",
+			"chs": "奶香红钻 + 花朵糖饰",
+			"cht": "奶香紅鑽 + 花朵糖飾"
+		}
+	},
+	"alcremie-matcha-flower": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Matcha Cream + Flower Sweet",
+			"spa": "Crema de Té + Confite Flor",
+			"fre": "Lait Matcha + Fleur en Sucre",
+			"ger": "Matcha-Creme + Zucker-Blume",
+			"ita": "Lattematcha + Bonbonfiore",
+			"jpn": "ミルキィまっちゃ + おはなアメざいく",
+			"kor": "밀키말차 + 꽃사탕공예",
+			"chs": "奶香抹茶 + 花朵糖饰",
+			"cht": "奶香抹茶 + 花朵糖飾"
+		}
+	},
+	"alcremie-mint-flower": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Mint Cream + Flower Sweet",
+			"spa": "Crema de Menta + Confite Flor",
+			"fre": "Lait Menthe + Fleur en Sucre",
+			"ger": "Minz-Creme + Zucker-Blume",
+			"ita": "Lattementa + Bonbonfiore",
+			"jpn": "ミルキィミント + おはなアメざいく",
+			"kor": "밀키민트 + 꽃사탕공예",
+			"chs": "奶香薄荷 + 花朵糖饰",
+			"cht": "奶香薄荷 + 花朵糖飾"
+		}
+	},
+	"alcremie-lemon-flower": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Lemon Cream + Flower Sweet",
+			"spa": "Crema de Limón + Confite Flor",
+			"fre": "Lait Citron + Fleur en Sucre",
+			"ger": "Zitronen-Creme + Zucker-Blume",
+			"ita": "Lattelimone + Bonbonfiore",
+			"jpn": "ミルキィレモン + おはなアメざいく",
+			"kor": "밀키레몬 + 꽃사탕공예",
+			"chs": "奶香柠檬 + 花朵糖饰",
+			"cht": "奶香檸檬 + 花朵糖飾"
+		}
+	},
+	"alcremie-salted-flower": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Salted Cream + Flower Sweet",
+			"spa": "Crema Salada + Confite Flor",
+			"fre": "Lait Salé + Fleur en Sucre",
+			"ger": "Salz-Creme + Zucker-Blume",
+			"ita": "Lattesale + Bonbonfiore",
+			"jpn": "ミルキィソルト + おはなアメざいく",
+			"kor": "밀키솔트 + 꽃사탕공예",
+			"chs": "奶香雪盐 + 花朵糖饰",
+			"cht": "奶香雪鹽 + 花朵糖飾"
+		}
+	},
+	"alcremie-rubyswirl-flower": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Ruby Swirl + Flower Sweet",
+			"spa": "Mezcla Rosa + Confite Flor",
+			"fre": "Mélange Ruby + Fleur en Sucre",
+			"ger": "Ruby-Mix + Zucker-Blume",
+			"ita": "Rosamix + Bonbonfiore",
+			"jpn": "ルビーミックス + おはなアメざいく",
+			"kor": "루비믹스 + 꽃사탕공예",
+			"chs": "红钻综合 + 花朵糖饰",
+			"cht": "紅鑽綜合 + 花朵糖飾"
+		}
+	},
+	"alcremie-caramel-flower": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Caramel Swirl + Flower Sweet",
+			"spa": "Mezcla Caramelo + Confite Flor",
+			"fre": "Mélange Caramel + Fleur en Sucre",
+			"ger": "Karamell-Mix + Zucker-Blume",
+			"ita": "Caramelmix + Bonbonfiore",
+			"jpn": "キャラメルミックス + おはなアメざいく",
+			"kor": "캐러멜믹스 + 꽃사탕공예",
+			"chs": "焦糖綜合 + 花朵糖饰",
+			"cht": "焦糖綜合 + 花朵糖飾"
+		}
+	},
+	"alcremie-rainbow-flower": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Rainbow Swirl + Flower Sweet",
+			"spa": "Tres Sabores + Confite Flor",
+			"fre": "Mélange Tricolore + Fleur en Sucre",
+			"ger": "Trio-Mix + Zucker-Blume",
+			"ita": "Triplomix + Bonbonfiore",
+			"jpn": "トリプルミックス + おはなアメざいく",
+			"kor": "트리플믹스 + 꽃사탕공예",
+			"chs": "三色综合 + 花朵糖饰",
+			"cht": "三色綜合 + 花朵糖飾"
+		}
+	},
+	"alcremie-vanilla-ribbon": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Vanilla Cream + Ribbon Sweet",
+			"spa": "Crema de Vainilla + Confite Lazo",
+			"fre": "Lait Vanille + Ruban en Sucre",
+			"ger": "Vanille-Creme + Zucker-Schleife",
+			"ita": "Lattevaniglia + Bonbonfiocco",
+			"jpn": "ミルキィバニラ + リボンアメざいく",
+			"kor": "밀키바닐라 + 리본사탕공예",
+			"chs": "奶香香草 + 蝴蝶结糖饰",
+			"cht": "奶香香草 + 蝴蝶結糖飾"
+		}
+	},
+	"alcremie-rubycream-ribbon": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Ruby Cream + Ribbon Sweet",
+			"spa": "Crema Rosa + Confite Lazo",
+			"fre": "Lait Ruby + Ruban en Sucre",
+			"ger": "Ruby-Creme + Zucker-Schleife",
+			"ita": "Latterosa + Bonbonfiocco",
+			"jpn": "ミルキィルビー + リボンアメざいく",
+			"kor": "밀키루비 + 리본사탕공예",
+			"chs": "奶香红钻 + 蝴蝶结糖饰",
+			"cht": "奶香紅鑽 + 蝴蝶結糖飾"
+		}
+	},
+	"alcremie-matcha-ribbon": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Matcha Cream + Ribbon Sweet",
+			"spa": "Crema de Té + Confite Lazo",
+			"fre": "Lait Matcha + Ruban en Sucre",
+			"ger": "Matcha-Creme + Zucker-Schleife",
+			"ita": "Lattematcha + Bonbonfiocco",
+			"jpn": "ミルキィまっちゃ + リボンアメざいく",
+			"kor": "밀키말차 + 리본사탕공예",
+			"chs": "奶香抹茶 + 蝴蝶结糖饰",
+			"cht": "奶香抹茶 + 蝴蝶結糖飾"
+		}
+	},
+	"alcremie-mint-ribbon": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Mint Cream + Ribbon Sweet",
+			"spa": "Crema de Menta + Confite Lazo",
+			"fre": "Lait Menthe + Ruban en Sucre",
+			"ger": "Minz-Creme + Zucker-Schleife",
+			"ita": "Lattementa + Bonbonfiocco",
+			"jpn": "ミルキィミント + リボンアメざいく",
+			"kor": "밀키민트 + 리본사탕공예",
+			"chs": "奶香薄荷 + 蝴蝶结糖饰",
+			"cht": "奶香薄荷 + 蝴蝶結糖飾"
+		}
+	},
+	"alcremie-lemon-ribbon": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Lemon Cream + Ribbon Sweet",
+			"spa": "Crema de Limón + Confite Lazo",
+			"fre": "Lait Citron + Ruban en Sucre",
+			"ger": "Zitronen-Creme + Zucker-Schleife",
+			"ita": "Lattelimone + Bonbonfiocco",
+			"jpn": "ミルキィレモン + リボンアメざいく",
+			"kor": "밀키레몬 + 리본사탕공예",
+			"chs": "奶香柠檬 + 蝴蝶结糖饰",
+			"cht": "奶香檸檬 + 蝴蝶結糖飾"
+		}
+	},
+	"alcremie-salted-ribbon": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Salted Cream + Ribbon Sweet",
+			"spa": "Crema Salada + Confite Lazo",
+			"fre": "Lait Salé + Ruban en Sucre",
+			"ger": "Salz-Creme + Zucker-Schleife",
+			"ita": "Lattesale + Bonbonfiocco",
+			"jpn": "ミルキィソルト + リボンアメざいく",
+			"kor": "밀키솔트 + 리본사탕공예",
+			"chs": "奶香雪盐 + 蝴蝶结糖饰",
+			"cht": "奶香雪鹽 + 蝴蝶結糖飾"
+		}
+	},
+	"alcremie-rubyswirl-ribbon": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Ruby Swirl + Ribbon Sweet",
+			"spa": "Mezcla Rosa + Confite Lazo",
+			"fre": "Mélange Ruby + Ruban en Sucre",
+			"ger": "Ruby-Mix + Zucker-Schleife",
+			"ita": "Rosamix + Bonbonfiocco",
+			"jpn": "ルビーミックス + リボンアメざいく",
+			"kor": "루비믹스 + 리본사탕공예",
+			"chs": "红钻综合 + 蝴蝶结糖饰",
+			"cht": "紅鑽綜合 + 蝴蝶結糖飾"
+		}
+	},
+	"alcremie-caramel-ribbon": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Caramel Swirl + Ribbon Sweet",
+			"spa": "Mezcla Caramelo + Confite Lazo",
+			"fre": "Mélange Caramel + Ruban en Sucre",
+			"ger": "Karamell-Mix + Zucker-Schleife",
+			"ita": "Caramelmix + Bonbonfiocco",
+			"jpn": "キャラメルミックス + リボンアメざいく",
+			"kor": "캐러멜믹스 + 리본사탕공예",
+			"chs": "焦糖綜合 + 蝴蝶结糖饰",
+			"cht": "焦糖綜合 + 蝴蝶結糖飾"
+		}
+	},
+	"alcremie-rainbow-ribbon": {
+		"data-source": "alcremie",
+		"forms": {
+			"eng": "Rainbow Swirl + Ribbon Sweet",
+			"spa": "Tres Sabores + Confite Lazo",
+			"fre": "Mélange Tricolore + Ruban en Sucre",
+			"ger": "Trio-Mix + Zucker-Schleife",
+			"ita": "Triplomix + Bonbonfiocco",
+			"jpn": "トリプルミックス + リボンアメざいく",
+			"kor": "트리플믹스 + 리본사탕공예",
+			"chs": "三色综合 + 蝴蝶结糖饰",
+			"cht": "三色綜合 + 蝴蝶結糖飾"
+		}
 	},
 	"alomomola": {
 		"names": {
@@ -23291,7 +24170,7 @@
 	"oricorio-pau": {
 		"data-source": "oricorio",
 		"forms": {
-			"eng": "Pa&#39;u Style",
+			"eng": "Pa'u Style",
 			"spa": "Estilo Plácido",
 			"fre": "Style Hula",
 			"ger": "Hula-Stil",

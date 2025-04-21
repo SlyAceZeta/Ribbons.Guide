@@ -891,9 +891,7 @@ function ribbonChecklist(){
 							}
 						}
 					}
-					console.log(plainGameName);
 					var formattedGameName = "<span class='text-nowrap'>" + plainGameName.replaceAll("/", "/</span><span class='text-nowrap'>") + "</span>";
-					console.log(formattedGameName);
 					$checklistRowTitle = $("<div>", { "class": "modalRibbonChecklistRows-gamename fw-bold mb-2" }).html(formattedGameName);
 					if(game == currentGame || game == getGameData(currentGame, "partOf", false) || (game == "sm" && getGameData(currentGame, "partOf", false) == "usum")){
 						$checklistRow.attr("data-order", "0");
@@ -1157,6 +1155,10 @@ function createCard(p, id){
 		}
 	}
 	var genderDirectory = (!aprilFools && getPokemonData(speciesSprite, "femsprite") && p.gender === "female") ? "female/" : "";
+	if(speciesSprite.startsWith("alcremie-") && p.shiny){
+		var alcremieRegex = /caramel|lemon|matcha|mint|rainbow|rubycream|rubyswirl|salted|vanilla/;
+		speciesSprite = speciesSprite.replace(alcremieRegex, "").replace("--", "-").replace("-strawberry", "");
+	}
 	$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + speciesSprite + ".png", "alt": getPokemonData(p.species, "names")["eng"], "title": getPokemonData(p.species, "names")["eng"] }));
 	var $cardRibbons = $("<div>", { "class": "card-ribbons flex-grow-1 d-flex flex-wrap p-1" });
 	var ribbonCount = 0, ribbonCountGen7Check = 0, markCount = 0, battleMemoryCount = 0, contestMemoryCount = 0, battleMemory = "", contestMemory = "";
@@ -1599,6 +1601,10 @@ function updateFormSprite(){
 		var species = $("#pokemonFormSpecies").val();
 		var shinyDir = $("#pokemonFormShiny-normal").prop("checked") ? "regular/" : "shiny/";
 		var femaleDir = $("#pokemonFormGender-female").prop("checked") && getPokemonData(species, "femsprite") ? "female/" : "";
+		if(species.startsWith("alcremie-") && shinyDir == "shiny/"){
+			var alcremieRegex = /caramel|lemon|matcha|mint|rainbow|rubycream|rubyswirl|salted|vanilla/;
+			species = species.replace(alcremieRegex, "").replace("--", "-").replace("-strawberry", "");
+		}
 		$("#pokemonFormSprite").attr("src", "img/pkmn/" + shinyDir + femaleDir + species + ".png");
 	}
 }
@@ -1686,7 +1692,6 @@ function selectCustomOption(o){
 			}
 		}
 		$marks.append($("<span>").text(o.text));
-		console.log($marks.html());
 		return $marks;
 	} else if(result.indexOf("pokemonFormNature") > 0){
 		var $nature = $("<span>");
@@ -2361,7 +2366,14 @@ function initRun(){
 		loadingBar(23);
 		$("#loading-spinner-info-text").text("Loading Pokémon list");
 		for(let p in userPokemon){
-			$("#tracker-grid").append(createCard(userPokemon[p], p));
+			try {
+				$("#tracker-grid").append(createCard(userPokemon[p], p));
+			} catch(err) {
+				var $errorimg = $("<img>", { "src": "./img/ui/cross.svg", "class": "mb-3" });
+				var $errortext = $("<div>", { "id": "loading-spinner-info-text", "class": "fw-bold", "role": "status" }).html("Pokémon list error on Pokémon #" + p + "<br>" + err);
+				$("#loading-spinner-info").html($errorimg).append($errortext);
+				return;
+			}
 		}
 		sortablePokemon = new Sortable($("#tracker-grid")[0], {
 			handle: ".card-sortable-handle",
@@ -2460,7 +2472,7 @@ function initRun(){
 		var imagesLoaded = 0;
 		var totalImages = $("img").length;
 		$("img").each(function(idx, img){
-			$("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
+			$("<img>").on("load error", imageLoaded).attr("src", $(img).attr("src"));
 		});
 		var imagesProgress = 0;
 		function imageLoaded(){
