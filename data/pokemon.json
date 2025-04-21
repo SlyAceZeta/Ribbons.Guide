@@ -4562,6 +4562,36 @@
 			"shinyLocked"
 		]
 	},
+	"calyrex-ice-rider": {
+		"data-source": "calyrex",
+		"forms": {
+			"eng": "Ice Rider",
+			"spa": "Jinete Glacial",
+			"fre": "Cavalier du Froid",
+			"ger": "Schimmelreiter",
+			"ita": "Cavaliere Glaciale",
+			"jpn": "はくばじょうのすがた",
+			"kor": "백마 탄 모습",
+			"chs": "骑白马的样子",
+			"cht": "騎白馬的樣子"
+		},
+		"cannotStore": true
+	},
+	"calyrex-shadow-rider": {
+		"data-source": "calyrex",
+		"forms": {
+			"eng": "Shadow Rider",
+			"spa": "Jinete Espectral",
+			"fre": "Cavalier d'Effroi",
+			"ger": "Rappenreiter",
+			"ita": "Cavaliere Spettrale",
+			"jpn": "Jinete Espectral",
+			"kor": "흑마 탄 모습",
+			"chs": "骑黑马的样子",
+			"cht": "騎黑馬的樣子"
+		},
+		"cannotStore": true
+	},
 	"camerupt": {
 		"names": {
 			"eng": "Camerupt",
@@ -17905,6 +17935,68 @@
 			"restricted"
 		]
 	},
+	"kyurem-black": {
+		"data-source": "kyurem",
+		"forms": {
+			"eng": "Black",
+			"spa": "Negro",
+			"fre": "Noir",
+			"ger": "Schwarzes",
+			"ita": "Nero",
+			"jpn": "ブラック",
+			"kor": "블랙",
+			"chs": "暗黑",
+			"cht": "闇黑"
+		},
+		"games": [
+			"black2",
+			"white2",
+			"x",
+			"y",
+			"or",
+			"as",
+			"sw",
+			"sh",
+			"sun",
+			"moon",
+			"usun",
+			"umoon",
+			"scar",
+			"vio"
+		],
+		"cannotStore": true
+	},
+	"kyurem-white": {
+		"data-source": "kyurem",
+		"forms": {
+			"eng": "White",
+			"spa": "Blanco",
+			"fre": "Blanc",
+			"ger": "Weißes",
+			"ita": "Bianco",
+			"jpn": "ホワイト",
+			"kor": "화이트",
+			"chs": "焰白",
+			"cht": "焰白"
+		},
+		"games": [
+			"black2",
+			"white2",
+			"x",
+			"y",
+			"or",
+			"as",
+			"sw",
+			"sh",
+			"sun",
+			"moon",
+			"usun",
+			"umoon",
+			"scar",
+			"vio"
+		],
+		"cannotStore": true
+	},
 	"lairon": {
 		"names": {
 			"eng": "Lairon",
@@ -23007,6 +23099,52 @@
 		"flags": [
 			"restricted"
 		]
+	},
+	"necrozma-dawn-wings": {
+		"data-source": "necrozma",
+		"forms": {
+			"eng": "Dawn Wings",
+			"spa": "Alas del Alba",
+			"fre": "Ailes de l'Aurore",
+			"ger": "Morgenschwingen",
+			"ita": "Ali dell'Aurora",
+			"jpn": "あかつきのつばさ",
+			"kor": "새벽의 날개",
+			"chs": "拂晓之翼",
+			"cht": "拂曉之翼"
+		},
+		"games": [
+			"usun",
+			"umoon",
+			"sw",
+			"sh",
+			"scar",
+			"vio"
+		],
+		"cannotStore": true
+	},
+	"necrozma-dusk-mane": {
+		"data-source": "necrozma",
+		"forms": {
+			"eng": "Dusk Mane",
+			"spa": "Melena Crepuscular",
+			"fre": "Crinière du Couchant",
+			"ger": "Abendmähne",
+			"ita": "Criniera del Vespro",
+			"jpn": "たそがれのたてがみ",
+			"kor": "황혼의 갈기",
+			"chs": "黄昏之鬃",
+			"cht": "黃昏之鬃"
+		},
+		"games": [
+			"usun",
+			"umoon",
+			"sw",
+			"sh",
+			"scar",
+			"vio"
+		],
+		"cannotStore": true
 	},
 	"nickit": {
 		"names": {

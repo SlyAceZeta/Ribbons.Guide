@@ -692,6 +692,14 @@ function savePokemon(edit = false){
 		continueForm = false;
 		setFormInvalid("OriginMark", "Please select an Origin Mark.");
 	}
+	if((newP.ribbons.includes("partner-ribbon") || newP.title == "partner-ribbon") && !newP.trainername){
+		continueForm = false;
+		setFormInvalid("TrainerName", "The Partner Ribbon requires an OT.");
+	}
+	if(getPokemonData(newP.species, "cannotStore") && getGameData(newP.currentgame, "storage", true)){
+		continueForm = false;
+		setFormInvalid("CurrentGame", "This Pokémon cannot be stored in Bank or HOME.");
+	}
 	if(continueForm){
 		if(edit){
 			userPokemon[modalPokemonEditing] = newP;
