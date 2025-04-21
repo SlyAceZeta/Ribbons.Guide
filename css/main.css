@@ -101,6 +101,7 @@ body {
 	height: 20px;
 }
 #modalSettings .form-check-label-info {
+	display: block;
 	font-size: .75em;
 }
 #pokemonFormGenderGroup input:disabled:not(:checked),

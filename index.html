@@ -8,7 +8,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="color-scheme" content="light dark">
-		<meta name="darkreader-lock">
+		<meta name="darkreader-lock" content="foo">
 		<!-- PWA -->
 		<link rel="manifest" href="manifest.json">
 		<script>if(navigator.serviceWorker) navigator.serviceWorker.register("sw.js");</script>
@@ -200,7 +200,7 @@
 											<div class="col-12">
 												<label for="pokemonFormBall" class="form-label">Poké Ball <span class="form-asterisk">*</span></label>
 												<select class="form-select" id="pokemonFormBall" aria-label="Poké Ball" data-placeholder="">
-													<option></option>
+													<option value="">&nbsp;</option>
 												</select>
 											</div>
 											<div class="col-12">
@@ -234,7 +234,7 @@
 											<div class="col-6">
 												<label for="pokemonFormNature" class="form-label">Nature</label>
 												<select class="form-select" id="pokemonFormNature" aria-label="Nature" data-placeholder="">
-													<option></option>
+													<option value="">&nbsp;</option>
 												</select>
 											</div>
 										</div>
@@ -273,19 +273,19 @@
 									<div class="col-6">
 										<label for="pokemonFormOriginMark" class="form-label">Origin Mark <span class="form-asterisk">*</span></label>
 										<select class="form-select" id="pokemonFormOriginMark" data-placeholder="" data-minimum-results-for-search="Infinity">
-											<option></option>
+											<option value="">&nbsp;</option>
 										</select>
 									</div>
 									<div class="col-6">
 										<label for="pokemonFormOriginGame" class="form-label">Origin Game</label>
 										<select class="form-select" id="pokemonFormOriginGame" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true" disabled>
-											<option></option>
+											<option value="">&nbsp;</option>
 										</select>
 									</div>
 									<div class="col-6">
 										<label for="pokemonFormCurrentGame" class="form-label">Current Game</label>
 										<select class="form-select" id="pokemonFormCurrentGame" data-placeholder="">
-											<option></option>
+											<option value="">&nbsp;</option>
 										</select>
 									</div>
 									<div class="col-6">
@@ -448,7 +448,7 @@
 							<div class="col-6">
 								<label for="filterFormGender" class="form-label">Gender</label>
 								<select id="filterFormGender" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
-									<option></option>
+									<option value="">&nbsp;</option>
 									<option value="male">Male</option>
 									<option value="female">Female</option>
 									<option value="unknown">Gender unknown</option>
@@ -457,7 +457,7 @@
 							<div class="col-6">
 								<label for="filterFormShiny" class="form-label">Shiny</label>
 								<select id="filterFormShiny" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
-									<option></option>
+									<option value="">&nbsp;</option>
 									<option value="normal">Normal</option>
 									<option value="shiny">Shiny</option>
 									<option value="star">Star</option>
@@ -467,7 +467,7 @@
 							<div class="col-6">
 								<label for="filterFormLanguage" class="form-label">Language</label>
 								<select id="filterFormLanguage" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
-									<option></option>
+									<option value="">&nbsp;</option>
 									<option value="eng">ENG - English</option>
 									<option value="spa">SP-EU/SPA - Español (España)</option>
 									<option value="fre">FRE - Français</option>
@@ -494,7 +494,7 @@
 							<div class="col-6">
 								<label for="filterFormGMax" class="form-label">Gigantamax Factor</label>
 								<select id="filterFormGMax" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
-									<option></option>
+									<option value="">&nbsp;</option>
 									<option value="false">No</option>
 									<option value="true">Yes</option>
 								</select>
@@ -502,7 +502,7 @@
 							<div class="col-6">
 								<label for="filterFormPokerus" class="form-label">Pokérus</label>
 								<select id="filterFormPokerus" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
-									<option></option>
+									<option value="">&nbsp;</option>
 									<option value="none">None</option>
 									<option value="any">Any</option>
 									<option value="infected">Infected</option>
@@ -653,53 +653,45 @@
 							<div class="form-check form-switch mb-2">
 								<input class="form-check-input" type="checkbox" role="switch" id="settingsShowWorldAbility">
 								<label class="form-check-label" for="settingsShowWorldAbility">
-									<div>
-										<span class="align-text-bottom">Show World Ability Ribbon in checklists</span>
-										<img class="align-text-top" src="img/ribbons/world-ability-ribbon.png" alt="World Ability Ribbon" title="World Ability Ribbon">
-									</div>
-									<div class="form-check-label-info">Earning this Ribbon requires connecting to unofficial servers.</div>
+									<span class="align-text-bottom">Show World Ability Ribbon in checklists</span>
+									<img class="align-text-top" src="img/ribbons/world-ability-ribbon.png" alt="World Ability Ribbon" title="World Ability Ribbon">
+									<span class="form-check-label-info">Earning this Ribbon requires connecting to unofficial servers.</span>
 								</label>
 							</div>
 							<div class="form-check form-switch mb-2">
 								<input class="form-check-input" type="checkbox" role="switch" id="settingsAutoMemoryRibbons" checked>
 								<label class="form-check-label" for="settingsAutoMemoryRibbons">
-									<div>
-										<span class="align-text-bottom">Automatic Memory Ribbons</span>
-										<span class="text-nowrap">
-											<img class="align-text-top" src="img/ribbons/battle-memory-ribbon.png" alt="Battle Memory Ribbon" title="Battle Memory Ribbon"><!--
-											--><img class="align-text-top" src="img/ribbons/contest-memory-ribbon.png" alt="Contest Memory Ribbon" title="Contest Memory Ribbon"><!--
-											--><img class="align-text-top" src="img/ribbons/battle-memory-ribbon-gold.png" alt="Battle Memory Ribbon (Gold)" title="Battle Memory Ribbon (Gold)"><!--
-											--><img class="align-text-top" src="img/ribbons/contest-memory-ribbon-gold.png" alt="Contest Memory Ribbon (Gold)" title="Contest Memory Ribbon (Gold)">
-										</span>
-									</div>
-									<div class="form-check-label-info">This is a global setting that can be disabled per-Pokémon.</div>
+									<span class="align-text-bottom">Automatic Memory Ribbons</span>
+									<span class="text-nowrap">
+										<img class="align-text-top" src="img/ribbons/battle-memory-ribbon.png" alt="Battle Memory Ribbon" title="Battle Memory Ribbon"><!--
+										--><img class="align-text-top" src="img/ribbons/contest-memory-ribbon.png" alt="Contest Memory Ribbon" title="Contest Memory Ribbon"><!--
+										--><img class="align-text-top" src="img/ribbons/battle-memory-ribbon-gold.png" alt="Battle Memory Ribbon (Gold)" title="Battle Memory Ribbon (Gold)"><!--
+										--><img class="align-text-top" src="img/ribbons/contest-memory-ribbon-gold.png" alt="Contest Memory Ribbon (Gold)" title="Contest Memory Ribbon (Gold)">
+									</span>
+									<span class="form-check-label-info">This is a global setting that can be disabled per-Pokémon.</span>
 								</label>
 							</div>
 							<div class="form-check form-switch mb-2">
 								<input class="form-check-input" type="checkbox" role="switch" id="settingsAutoStrangeBall" checked>
 								<label class="form-check-label" for="settingsAutoStrangeBall">
-									<div>
-										<span class="align-text-bottom">Automatically display Strange Ball</span>
-										<img class="align-text-top" src="img/balls/strange.png" alt="Strange Ball" title="Strange Ball">
-									</div>
-									<div class="form-check-label-info">This is a global setting that can be disabled per-Pokémon.</div>
+									<span class="align-text-bottom">Automatically display Strange Ball</span>
+									<img class="align-text-top" src="img/balls/strange.png" alt="Strange Ball" title="Strange Ball">
+									<span class="form-check-label-info">This is a global setting that can be disabled per-Pokémon.</span>
 								</label>
 							</div>
 							<div class="form-check form-switch">
 								<input class="form-check-input" type="checkbox" role="switch" id="settingsFooterExtraInfo" checked>
 								<label class="form-check-label" for="settingsFooterExtraInfo">
-									<div>
-										<span class="align-text-bottom">Display Ribbon count and assigned Box</span>
-										<img class="align-text-top" src="img/ui/box-closed.png" alt="Box" title="Box">
-									</div>
-									<div class="form-check-label-info">This setting only affects the expanded card view.</div>
+									<span class="align-text-bottom">Display Ribbon count and assigned Box</span>
+									<img class="align-text-top" src="img/ui/box-closed.png" alt="Box" title="Box">
+									<span class="form-check-label-info">This setting only affects the expanded card view.</span>
 								</label>
 							</div>
 						</form>
 					</div>
 					<div class="modal-footer justify-content-center">
 						<button type="button" class="btn btn-primary" id="modalSettingsSaveBackup">Save Backup File</button>
-						<label class="btn btn-primary" role="button">Restore Backup<input type="file" id="modalSettingsLoadBackup" class="d-none" accept="application/json"></label>
+						<button type="button" class="btn btn-primary" id="modalSettingsLoadBackupButton">Restore Backup</button><input type="file" id="modalSettingsLoadBackupFile" accept="application/json" hidden>
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
 					</div>
 				</div>

@@ -2527,7 +2527,10 @@ $(function(){
 	$("#modalSettingsSaveBackup").click(function(){
 		saveBackup();
 	});
-	$("#modalSettingsLoadBackup").change(function(){
+	$("#modalSettingsLoadBackupButton").click(function(){
+		$("#modalSettingsLoadBackupFile").click();
+	});
+	$("#modalSettingsLoadBackupFile").change(function(){
 		var file = $(this)[0].files[0];
 		if(file) loadBackup(file, $(this).val());
 	});
