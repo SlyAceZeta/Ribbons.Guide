@@ -379,7 +379,7 @@ function getPokemonData(dex, field, doNotSearch = false){
 	}
 }
 
-function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame, currentRibbons, checkedSize, totem = false, gmax = false, shadow = false){
+function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame, currentRibbons, checkedScale, totem = false, gmax = false, shadow = false){
 	// TODO: reduce duplication: createCard
 	var earnableRibbons = {};
 	var earnableWarnings = [];
@@ -487,11 +487,11 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 							}
 						}
 					} else if(ribbon == "jumbo-mark"){
-						if(checkedSize || currentRibbons.includes("mini-mark")){
+						if((checkedScale || currentRibbons.includes("mini-mark")) && !currentRibbons.includes("titan-mark") && !currentRibbons.includes("alpha-mark")){
 							continue;
 						}
 					} else if(ribbon == "mini-mark"){
-						if(checkedSize || currentRibbons.includes("jumbo-mark") || currentRibbons.includes("titan-mark")){
+						if(checkedScale || currentRibbons.includes("jumbo-mark") || currentRibbons.includes("titan-mark") || currentRibbons.includes("alpha-mark")){
 							continue;
 						}
 					} else if(ribbon == "footprint-ribbon"){
@@ -975,7 +975,7 @@ function ribbonChecklist(){
 							if(Number(g.dataset.gen) < lastChanceGen){
 								lastChanceGen = Number(g.dataset.gen);
 							}
-							if(allGameRibbons[r] == "mini-mark" || allGameRibbons[r] == "jumbo-mark"){
+							if((allGameRibbons[r] == "mini-mark" || allGameRibbons[r] == "jumbo-mark") && !cardData.scaleChecked){
 								if(!$(g).find(".scale-marks").length){
 									$sectionLabel = $("<div>", { "class": "fw-bold" }).text("Check scale in Mesagoza");
 									$sectionRibbons = $("<div>", { "class": "scale-marks-list" });
@@ -1084,7 +1084,7 @@ function createCard(p, id){
 	}
 
 	/* containers and filters */
-	var $cardCol = $("<div>", { "class": "col", "data-name": displayName, "data-national-dex": getPokemonData(p.species, "natdex"), "data-level": p.currentlevel, "data-origin-mark": p.originmark, "data-origin-game": p.origingame, "data-current-game": p.currentgame, "data-compatible-games": JSON.stringify(compatibleFiltered), "data-earned-ribbons": JSON.stringify(p.ribbons), "data-pokemon-id": id, "data-gender": p.gender, "data-species": p.species, "data-current-gen": currentGen });
+	var $cardCol = $("<div>", { "class": "col", "data-name": displayName, "data-national-dex": getPokemonData(p.species, "natdex"), "data-level": p.currentlevel, "data-origin-mark": p.originmark, "data-origin-game": p.origingame, "data-current-game": p.currentgame, "data-compatible-games": JSON.stringify(compatibleFiltered), "data-earned-ribbons": JSON.stringify(p.ribbons), "data-pokemon-id": id, "data-gender": p.gender, "data-species": p.species, "data-current-gen": currentGen, "data-scale-checked": p.scale ? p.scale : false });
 	if(ribbonLists){
 		if(Object.keys(ribbonLists.remaining).length == 0){
 			$cardCol.addClass("ribbons-done");
@@ -2094,7 +2094,6 @@ function initRun(){
 			}
 		}
 		for(var r in ribbons){
-			if(r === "good-night-ribbon") continue;
 			var $ribbonOption = $("<option>", { "value": r }).text(ribbons[r].names["eng"]);
 			var formRibbonSelect = "#filterFormEarnedRibbons";
 			var ribbonDir = "ribbons/";
@@ -2216,11 +2215,22 @@ function initRun(){
 		});
 		$("#pokemonFormRibbons input[type='checkbox']").change(function(){
 			var ribbon = this.id.replace("pokemonFormRibbon-", "");
-			if(ribbon == "mini-mark" || ribbon == "jumbo-mark"){
-				if($("#pokemonFormRibbon-mini-mark").prop("checked") || $("#pokemonFormRibbon-jumbo-mark").prop("checked")){
+			if(ribbon == "mini-mark" || ribbon == "jumbo-mark" || ribbon == "titan-mark" || ribbon == "alpha-mark"){
+				if($("#pokemonFormRibbon-mini-mark").prop("checked") || $("#pokemonFormRibbon-jumbo-mark").prop("checked") || $("#pokemonFormRibbon-titan-mark").prop("checked") || $("#pokemonFormRibbon-alpha-mark").prop("checked")){
 					$("#pokemonFormScale").prop({ "checked": true, "disabled": true });
+					if($("#pokemonFormRibbon-mini-mark").prop("checked")){
+						$("#pokemonFormRibbon-jumbo-mark").prop({ "checked": false, "disabled": true });
+					} else {
+						$("#pokemonFormRibbon-jumbo-mark").prop({ "disabled": false });
+					}
+					if($("#pokemonFormRibbon-jumbo-mark").prop("checked") || $("#pokemonFormRibbon-titan-mark").prop("checked") || $("#pokemonFormRibbon-alpha-mark").prop("checked")){
+						$("#pokemonFormRibbon-mini-mark").prop({ "checked": false, "disabled": true });
+					} else {
+						$("#pokemonFormRibbon-mini-mark").prop({ "disabled": false });
+					}
 				} else {
 					$("#pokemonFormScale").prop({ "checked": false, "disabled": false });
+					$("#pokemonFormRibbon-mini-mark, #pokemonFormRibbon-jumbo-mark").prop({ "disabled": false });
 				}
 			} else if(ribbon.startsWith("battle-memory-ribbon")){
 				if($("#pokemonFormRibbon-battle-memory-ribbon-gold").prop("checked")){
