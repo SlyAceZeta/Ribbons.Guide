@@ -453,13 +453,15 @@ html[data-autostrangeball="true"] .card-header-ball-strange {
 .card .btn-link img {
 	filter: var(--rg-icon-filter);
 }
-.ribbon-checklist-warning-badge {
+.card-header .card-header-right .ribbon-checklist-warning-badge {
 	display: none;
 	top: 25%;
 	left: 85%;
 	padding: 0.33rem;
+	width: 10px;
+	height: 10px;
 }
-.col[data-ribbon-warnings] .ribbon-checklist-warning-badge {
+.col[data-ribbon-warnings] .card-header .card-header-right .ribbon-checklist-warning-badge {
 	display: inline;
 }
 .card-sprite {

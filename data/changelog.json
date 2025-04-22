@@ -1,6 +1,26 @@
 {
+	"22 April 2025": [
+		"Added all fusions (Kyurem, Necrozma, Calyrex); a warning will appear when attempting to save them in Bank or HOME <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/99'>#99</a> (thanks Z!)",
+		"Added a scroll-to-top button that appears at the bottom-right when scrolled down <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/92'>#92</a>",
+		"Added a new setting to hide the Ribbon Checklist button from completed Pokémon or all Pokémon",
+		"Added a new setting to always show or always hide old Battle/Contest Ribbons <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/89'>#89</a> (thanks Kobaru The Kame and LookOutItsShadow!)",
+		"Added a new setting to disable completed colors for Pokémon cards <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/90'>#90</a>",
+		"Added a new setting to disable drag-and-drop reordering",
+		"Added a switch in the Add/Edit Pokémon form to display Ribbons in a grid, as they appeared prior to the redesign <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/87'>#87</a> (thanks thememester31 and Josh Lemmy!)",
+		"Added title conferred to the Ribbon Checklist tooltip <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/98'>#98</a>",
+		"Added a tooltip next to Met Level to explain the Gen V and Virtual Console replacement <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/97'>#97</a>",
+		"Restored the selected Ribbon for the Pokémon's title at the top-right of cards when using expanded view <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/96'>#96</a> (thanks SadisticMystic!)",
+		"Added a Footprint Ribbon warning for Beldum and Metang from Scarlet/Violet due to Beldum's high encounter level in the Terarium (thanks SadisticMystic!)",
+		"Improved the explanation text below some settings",
+		"Improved the loading bar colors on some themes",
+		"Selecting the Alpha Mark or Titan Mark will now disable the Mini Mark and add the Jumbo Mark to the checklist until it is also selected",
+		"Selecting the Mini Mark or Jumbo Mark will now disable the other one",
+		"Fixed an issue where Pokémon names were truncated and titles were hidden in the Ribbon Checklist when using condensed view <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/91'>#91</a>",
+		"Fixed an issue where the Strange Ball did not receive the improved vertical alignment with Pokémon names on 16&nbsp;April",
+		"Fixed an oversight introduced in the redesign where Pokémon could be saved with the Partner Ribbon selected without an Original Trainer"
+	],
 	"20 April 2025": [
-		"Added all Alcremie forms (thanks Z!)",
+		"Added all Alcremie forms <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/95'>#95</a> (thanks Z!)",
 		"Added \"Ride\" forms of Koraidon and Miraidon, which should be used if tracking the Koraidon/Miraidon that joins you at the start of the game",
 		"Fixed an issue where the site would partially load if at least one image failed to load for whatever reason (thanks SadisticMystic!)",
 		"Fixed an issue where Pa'u Style Oricorio didn't properly show the apostrophe in English"

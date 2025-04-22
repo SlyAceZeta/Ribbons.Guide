@@ -512,8 +512,9 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 						if(ribbonGen !== 4){
 							// if Pokemon is voiceless and can go to Gen VIII, it can always earn this
 							var voiceless = getPokemonData(dex, "voiceless");
-							if(!(ribbonGen == 8 && voiceless)){
+							if(!(ribbonGen == 8 && voiceless) || ((dex === "beldum" || dex === "metang") && (originGame === "scar" || originGame === "vio")) ){
 								// otherwise, Footprint relies on Met Level < 71
+								// Beldum and Metang are voiceless, but Metagross is not, and Beldum can be met as high as Lv.74 in SV DLC, so evolving to Metagross will also disqualify it
 								var currentLevelBelow71 = currentLevel < 71;
 								// Met Level changes upon entering Gen V or leaving Virtual Console
 								if(currentGen < 5 || virtualConsole){
@@ -537,7 +538,12 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 										// user has set Met Level
 										if(metLevel > 70){
 											// Pokemon was met at 71+, Footprint is unavailable
-											continue;
+											// Beldum and Metang can still get it, but they need a warning
+											if(dex === "beldum" || dex === "metang"){
+												earnableWarnings.push("footprint-beldum");
+											} else {
+												continue;
+											}
 										}
 									} else {
 										// user has not set Met Level, let's try to determine it automatically
@@ -545,9 +551,9 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 										if(originGame !== "go"){
 											// Pokemon in Gen V+ with Current Level < 71 must also have Met Level < 71 and can always earn Footprint
 											if(!currentLevelBelow71){
-												// we cannot automatically determine Met Level
+												// we cannot automatically determine Met Level, warn the user as such (including Beldum/Metang case)
 												// before we warn the user as such, let's check if the ribbon will appear for the Pokemon in BDSP--if so, no warning is necessary
-												if(!((compatibleGames.includes("bd") || compatibleGames.includes("sp")) && voiceless)){
+												if(!((compatibleGames.includes("bd") || compatibleGames.includes("sp")) && voiceless) || dex === "beldum" || dex === "metang"){
 													earnableWarnings.push("footprint-met-level");
 												}
 											}
@@ -883,7 +889,8 @@ function ribbonChecklist(){
 			if(ribbonWarnings[w] == "winning-ribbon") warningText = "If " + cardData.name + " reaches Lv.51, the Winning Ribbon will become unavailable!";
 			if(ribbonWarnings[w] == "footprint-gen4") warningText = "If " + cardData.name + " reaches Lv.71 before transferring to Gen&nbsp;V, the Footprint Ribbon will only be available in Gen&nbsp;IV!";
 			if(ribbonWarnings[w] == "footprint-virtualconsole") warningText = "If " + cardData.name + " reaches Lv.71 before transferring to Gen&nbsp;VII, the Footprint Ribbon will become unavailable!";
-			if(ribbonWarnings[w] == "footprint-met-level") warningText = cardData.name + "'s Met Level has not been set. The availability of the Footprint Ribbon after Gen&nbsp;IV cannot be determined.";
+			if(ribbonWarnings[w] == "footprint-met-level") warningText = cardData.name + "'s Met Level has not been set. The availability of the Footprint Ribbon cannot be determined.";
+			if(ribbonWarnings[w] == "footprint-beldum") warningText = "Evolving " + cardData.name + " into Metagross will make the Footprint Ribbon unavailable!";
 			if(ribbonWarnings[w] == "evolution-warning"){
 				var evoWarnName = getPokemonData(cardData.evolutionWarning, "names")["eng"];
 				var evoWarnForms = getPokemonData(cardData.evolutionWarning, "forms");
