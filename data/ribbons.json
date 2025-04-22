@@ -5762,31 +5762,5 @@
 			"ger": "suffix",
 			"eng": "prefix"
 		}
-	},
-	"good-night-ribbon": {
-		"gen": 9,
-		"available": null,
-		"names": {
-			"eng": "Good-Night Ribbon",
-			"spa": "Good-Night Ribbon",
-			"fre": "Good-Night Ribbon",
-			"ger": "Good-Night Ribbon",
-			"ita": "Good-Night Ribbon",
-			"jpn": "Good-Night Ribbon",
-			"kor": "Good-Night Ribbon",
-			"chs": "Good-Night Ribbon",
-			"cht": "Good-Night Ribbon"
-		},
-		"descs": {
-			"eng": "A special ribbon for that special Pokémon who's always by your side, day and night!",
-			"spa": "A special ribbon for that special Pokémon who's always by your side, day and night!",
-			"fre": "A special ribbon for that special Pokémon who's always by your side, day and night!",
-			"ger": "A special ribbon for that special Pokémon who's always by your side, day and night!",
-			"ita": "A special ribbon for that special Pokémon who's always by your side, day and night!",
-			"jpn": "A special ribbon for that special Pokémon who's always by your side, day and night!",
-			"kor": "A special ribbon for that special Pokémon who's always by your side, day and night!",
-			"chs": "A special ribbon for that special Pokémon who's always by your side, day and night!",
-			"cht": "A special ribbon for that special Pokémon who's always by your side, day and night!"
-		}
 	}
 }
