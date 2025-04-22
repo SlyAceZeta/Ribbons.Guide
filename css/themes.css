@@ -157,7 +157,7 @@ a:not(.btn) {
 [data-bs-theme="dark"] .btn-outline-secondary {
 	--bs-btn-active-bg: #333;
 }
-[data-bs-theme="dark"] .modal .btn-outline-secondary {
+[data-bs-theme="dark"] .modal .btn-outline-secondary:not([for^="switchRibbonFormViewBtn"]) {
 	--bs-btn-active-bg: #595959;
 	--bs-btn-border-color: #888;
 	--bs-btn-active-border-color: #888;
@@ -264,7 +264,7 @@ a:not(.btn) {
 [data-bs-theme="start"] .btn-outline-secondary {
 	--bs-btn-active-bg: #182840;
 }
-[data-bs-theme="start"] .modal .btn-outline-secondary {
+[data-bs-theme="start"] .modal .btn-outline-secondary:not([for^="switchRibbonFormViewBtn"]) {
 	--bs-btn-active-bg: #595959;
 	--bs-btn-border-color: #888;
 	--bs-btn-active-border-color: #888;
@@ -379,7 +379,7 @@ a:not(.btn) {
 [data-bs-theme="naranja"] .btn-outline-secondary {
 	--bs-btn-active-bg: #182840;
 }
-[data-bs-theme="naranja"] .modal .btn-outline-secondary {
+[data-bs-theme="naranja"] .modal .btn-outline-secondary:not([for^="switchRibbonFormViewBtn"]) {
 	--bs-btn-active-bg: #595959;
 	--bs-btn-border-color: #888;
 	--bs-btn-active-border-color: #888;
@@ -496,7 +496,7 @@ a:not(.btn) {
 [data-bs-theme="uva"] .btn-outline-secondary {
 	--bs-btn-active-bg: #182840;
 }
-[data-bs-theme="uva"] .modal .btn-outline-secondary {
+[data-bs-theme="uva"] .modal .btn-outline-secondary:not([for^="switchRibbonFormViewBtn"]) {
 	--bs-btn-active-bg: #595959;
 	--bs-btn-border-color: #888;
 	--bs-btn-active-border-color: #888;

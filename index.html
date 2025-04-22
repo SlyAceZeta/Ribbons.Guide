@@ -81,9 +81,9 @@
 				<div class="d-flex">
 					<div id="switchView" class="btn-group me-2" role="group" aria-label="Switch view">
 						<input type="radio" class="btn-check" name="switchViewBtn" id="switchViewBtn-condensed" value="condensed">
-						<label class="btn btn-outline-secondary" for="switchViewBtn-condensed"><img class="align-text-bottom" src="img/ui/condensed.svg" alt="Condensed"></label>
+						<label class="btn btn-outline-secondary border-end-0" for="switchViewBtn-condensed"><img class="align-text-bottom" src="img/ui/condensed.svg" alt="Condensed"></label>
 						<input type="radio" class="btn-check" name="switchViewBtn" id="switchViewBtn-expanded" value="expanded" checked>
-						<label class="btn btn-outline-secondary" for="switchViewBtn-expanded"><img class="align-text-bottom" src="img/ui/expanded.svg" alt="Expanded"></label>
+						<label class="btn btn-outline-secondary border-start-0" for="switchViewBtn-expanded"><img class="align-text-bottom" src="img/ui/expanded.svg" alt="Expanded"></label>
 					</div>
 					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button" data-bs-toggle="modal" data-bs-target="#modalBoxes">
 						<img src="img/ui/box-closed.png" alt="Filter">
@@ -315,16 +315,14 @@
 									<div class="col-lg-8">
 										<input id="pokemonFormRibbonSearch" type="search" class="form-control w-100" placeholder="Search Ribbons/Marks..." aria-label="Search">
 									</div>
-									<div class="col-3 col-lg-2 text-left text-lg-center">
+									<div class="col-lg-4 d-flex">
 										<div id="switchRibbonFormView" class="btn-group" role="group" aria-label="Switch Ribbon form view">
 											<input type="radio" class="btn-check" name="switchRibbonFormViewBtn" id="switchRibbonFormViewBtn-grid" value="grid">
-											<label class="btn btn-outline-secondary" for="switchRibbonFormViewBtn-grid"><img class="align-text-bottom" src="img/ui/condensed.svg" alt="Grid"></label>
+											<label class="btn btn-outline-secondary border-end-0" for="switchRibbonFormViewBtn-grid"><img class="align-text-bottom" src="img/ui/condensed.svg" alt="Grid"></label>
 											<input type="radio" class="btn-check" name="switchRibbonFormViewBtn" id="switchRibbonFormViewBtn-list" value="list" checked>
-											<label class="btn btn-outline-secondary" for="switchRibbonFormViewBtn-list"><img class="align-text-bottom" src="img/ui/expanded.svg" alt="List"></label>
+											<label class="btn btn-outline-secondary border-start-0" for="switchRibbonFormViewBtn-list"><img class="align-text-bottom" src="img/ui/expanded.svg" alt="List"></label>
 										</div>
-									</div>
-									<div class="col-9 col-lg-2">
-										<div class="dropdown">
+										<div class="dropdown ms-2 flex-grow-1">
 											<button class="btn btn-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">Toggle all...</button>
 											<ul id="pokemonFormRibbonToggle" class="dropdown-menu dropdown-menu-end	">
 												<li><button class="dropdown-item" type="button" data-gen="3">introduced in Gen III</button></li>
