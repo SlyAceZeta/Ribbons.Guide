@@ -328,12 +328,12 @@ html[data-automemoryribbons="false"] .pokemonFormRibbon-memory-sync {
 	margin-right: .25rem;
 }
 /* grid ribbon selection */
-html[data-ribboneditlist="false"] #pokemonFormRibbons {
+html[data-ribbonformview="grid"] #pokemonFormRibbons {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 }
-html[data-ribboneditlist="false"] #pokemonFormRibbons input {
+html[data-ribbonformview="grid"] #pokemonFormRibbons input {
 	width: 24px;
 	height: 24px;
 	position: absolute;
@@ -343,29 +343,29 @@ html[data-ribboneditlist="false"] #pokemonFormRibbons input {
 	margin: 0!important;
 	display: none;
 }
-html[data-ribboneditlist="false"] #pokemonFormRibbons input:checked {
+html[data-ribbonformview="grid"] #pokemonFormRibbons input:checked {
 	display: inline;
 }
-html[data-ribboneditlist="false"] #pokemonFormRibbons .w-100 {
+html[data-ribbonformview="grid"] #pokemonFormRibbons .w-100 {
 	display: none;
 }
-html[data-ribboneditlist="false"] #pokemonFormRibbons img.me-1 {
+html[data-ribbonformview="grid"] #pokemonFormRibbons img.me-1 {
 	margin-right: 0!important;
 }
-html[data-ribboneditlist="false"] #pokemonFormRibbons input:checked ~ label img,
+html[data-ribbonformview="grid"] #pokemonFormRibbons input:checked ~ label img,
 html[data-automemoryribbons="true"] .pokemonFormRibbon-memory-sync ~ label img {
 	opacity: 0.25;
 }
-html[data-ribboneditlist="false"] #pokemonFormRibbons li.d-flex {
+html[data-ribbonformview="grid"] #pokemonFormRibbons li.d-flex {
 	width: 50px;
 	padding: 10px 5px;
 	text-align: center;
 	border-radius: 0;
 }
-html[data-ribboneditlist="false"] #pokemonFormRibbons label.w-100 {
+html[data-ribbonformview="grid"] #pokemonFormRibbons label.w-100 {
 	display: block !important;
 }
-html[data-ribboneditlist="false"] #pokemonFormRibbons img.pokemonFormRibbon-memory-sync {
+html[data-ribbonformview="grid"] #pokemonFormRibbons img.pokemonFormRibbon-memory-sync {
 	width: 23px;
 	height: auto;
 	margin: 0;

@@ -312,20 +312,28 @@
 											</label>
 										</div>
 									</div>
-									<div class="col-12">
-										<div class="d-flex">
-											<input id="pokemonFormRibbonSearch" type="search" class="form-control w-100" placeholder="Search Ribbons/Marks..." aria-label="Search">
-											<div class="dropdown ms-3">
-												<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Toggle all...</button>
-												<ul id="pokemonFormRibbonToggle" class="dropdown-menu">
-													<li><button class="dropdown-item" type="button" data-gen="3">introduced in Gen III</button></li>
-													<li><button class="dropdown-item" type="button" data-gen="4">introduced in Gen IV</button></li>
-													<li><button class="dropdown-item" type="button" data-gen="6">introduced in Gen VI</button></li>
-													<li><button class="dropdown-item" type="button" data-gen="7">introduced in Gen VII</button></li>
-													<li><button class="dropdown-item" type="button" data-gen="8">introduced in Gen VIII</button></li>
-													<li><button class="dropdown-item" type="button" data-gen="9">introduced in Gen IX</button></li>
-												</ul>
-											</div>
+									<div class="col-lg-8">
+										<input id="pokemonFormRibbonSearch" type="search" class="form-control w-100" placeholder="Search Ribbons/Marks..." aria-label="Search">
+									</div>
+									<div class="col-3 col-lg-2 text-left text-lg-center">
+										<div id="switchRibbonFormView" class="btn-group" role="group" aria-label="Switch Ribbon form view">
+											<input type="radio" class="btn-check" name="switchRibbonFormViewBtn" id="switchRibbonFormViewBtn-grid" value="grid">
+											<label class="btn btn-outline-secondary" for="switchRibbonFormViewBtn-grid"><img class="align-text-bottom" src="img/ui/condensed.svg" alt="Grid"></label>
+											<input type="radio" class="btn-check" name="switchRibbonFormViewBtn" id="switchRibbonFormViewBtn-list" value="list" checked>
+											<label class="btn btn-outline-secondary" for="switchRibbonFormViewBtn-list"><img class="align-text-bottom" src="img/ui/expanded.svg" alt="List"></label>
+										</div>
+									</div>
+									<div class="col-9 col-lg-2">
+										<div class="dropdown">
+											<button class="btn btn-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">Toggle all...</button>
+											<ul id="pokemonFormRibbonToggle" class="dropdown-menu dropdown-menu-end	">
+												<li><button class="dropdown-item" type="button" data-gen="3">introduced in Gen III</button></li>
+												<li><button class="dropdown-item" type="button" data-gen="4">introduced in Gen IV</button></li>
+												<li><button class="dropdown-item" type="button" data-gen="6">introduced in Gen VI</button></li>
+												<li><button class="dropdown-item" type="button" data-gen="7">introduced in Gen VII</button></li>
+												<li><button class="dropdown-item" type="button" data-gen="8">introduced in Gen VIII</button></li>
+												<li><button class="dropdown-item" type="button" data-gen="9">introduced in Gen IX</button></li>
+											</ul>
 										</div>
 									</div>
 									<div class="col-12">
@@ -706,10 +714,6 @@
 									<img class="align-text-top" src="img/ui/box-closed.png" alt="Box" title="Box">
 									<span class="form-check-label-info">This only affects the expanded card view.</span>
 								</label>
-							</div>
-							<div class="form-check form-switch">
-								<input class="form-check-input" type="checkbox" role="switch" id="settingsRibbonEditList" checked>
-								<label class="form-check-label" for="settingsRibbonEditList">Show Ribbons in a vertical list in the Add/Edit form</label>
 							</div>
 							<div class="form-check form-switch">
 								<input class="form-check-input" type="checkbox" role="switch" id="settingsCompleteColor" checked>

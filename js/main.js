@@ -164,13 +164,26 @@ if(settings.CardView){
 	changeCardView("expanded");
 }
 
+/* change ribbon form view */
+function changeRibbonFormView(view){
+	changeSetting("RibbonFormView", view);
+	$(function(){
+		$("html").attr("data-ribbonformview", view);
+	});
+}
+/* initial card view set */
+if(settings.RibbonFormView){
+	changeRibbonFormView(settings.RibbonFormView);
+} else {
+	changeRibbonFormView("list");
+}
+
 /* toggle settings list */
 var toggles = { // default settings
 	"ShowWorldAbility": false,
 	"AutoMemoryRibbons": true,
 	"AutoStrangeBall": true,
 	"FooterExtraInfo": true,
-	"RibbonEditList": true,
 	"CompleteColor": true,
 	"Reordering": true
 };
@@ -1365,6 +1378,9 @@ function presetSettings(change = false){
 	if(settings.CardView){
 		$("#switchViewBtn-" + settings.CardView).prop("checked", true);
 	}
+	if(settings.RibbonFormView){
+		$("#switchRibbonFormViewBtn-" + settings.RibbonFormView).prop("checked", true);
+	}
 	for(let i in toggles){
 		if(toggles[i]){
 			// default is true
@@ -2225,6 +2241,7 @@ function initRun(){
 					}
 					if($("#pokemonFormRibbon-jumbo-mark").prop("checked") || $("#pokemonFormRibbon-titan-mark").prop("checked") || $("#pokemonFormRibbon-alpha-mark").prop("checked")){
 						$("#pokemonFormRibbon-mini-mark").prop({ "checked": false, "disabled": true });
+						$("#pokemonFormRibbon-jumbo-mark").prop({ "disabled": false });
 					} else {
 						$("#pokemonFormRibbon-mini-mark").prop({ "disabled": false });
 					}
@@ -2587,6 +2604,10 @@ $(function(){
 	/* card view listener */
 	$("#switchView label").click(function(){
 		changeCardView($(this).prev().val());
+	});
+	/* ribbon form view listener */
+	$("#switchRibbonFormView label").click(function(){
+		changeRibbonFormView($(this).prev().val());
 	});
 	/* checkbox listeners */
 	for(let i in toggles){
