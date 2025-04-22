@@ -74,10 +74,8 @@ body {
 	--bs-btn-active-border-color: var(--bs-border-color);
 }
 .button-to-top {
-	font-size: 2.5em;
-	width: 1.5em;
-	height: 1.5em;
-	padding: 0 0 0 1px;
+	width: 60px;
+	height: 60px;
 	left: unset;
 	right: 10px;
 	bottom: 20px;
