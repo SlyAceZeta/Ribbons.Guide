@@ -416,6 +416,9 @@ a:not(.btn) {
 [data-bs-theme="naranja"] #modalChangelog h6 {
 	color: #f7cd12;
 }
+[data-bs-theme="naranja"] #loading-spinner-info-progress {
+	--bs-progress-bar-bg: #b65726;
+}
 
 /* Uva Academy */
 [data-bs-theme="uva"] {
@@ -529,4 +532,7 @@ a:not(.btn) {
 }
 [data-bs-theme="uva"] #modalChangelog h6 {
 	color: #f7cd12;
+}
+[data-bs-theme="uva"] #loading-spinner-info-progress {
+	--bs-progress-bar-bg: #842EAF;
 }
