@@ -41,6 +41,15 @@ a:not(.btn) {
 .btn.btn-outline-secondary:hover {
 	color: var(--bs-body-color);
 }
+.bg-success-subtle {
+	background-color: #bfb!important;
+}
+.bg-warning-subtle {
+	background-color: #ffb!important;
+}
+.bg-danger-subtle {
+	background-color: #fbb!important;
+}
 
 /* sword/shield overrides */
 [data-bs-theme="sword"],
@@ -116,10 +125,6 @@ a:not(.btn) {
 [data-bs-theme="dark"][data-completecolor="true"] .ribbons-done {
 	--rg-card-bg: #020;
 	--rg-card-cap-bg: #030;
-}
-[data-bs-theme="dark"] .no-ribbons-in-current-game {
-	--rg-card-bg: #223;
-	--rg-card-cap-bg: #112;
 }
 [data-bs-theme="dark"] a:not(.btn) {
 	color: #9CC4FE;
@@ -216,10 +221,6 @@ a:not(.btn) {
 [data-bs-theme="start"][data-completecolor="true"] .ribbons-done {
 	--rg-card-bg: #020;
 	--rg-card-cap-bg: #030;
-}
-[data-bs-theme="start"] .no-ribbons-in-current-game {
-	--rg-card-bg: #223;
-	--rg-card-cap-bg: #112;
 }
 [data-bs-theme="start"] a:not(.btn) {
 	color: #9CC4FE;
@@ -335,10 +336,6 @@ a:not(.btn) {
 	--rg-card-bg: #020;
 	--rg-card-cap-bg: #030;
 }
-[data-bs-theme="naranja"] .no-ribbons-in-current-game {
-	--rg-card-bg: #223;
-	--rg-card-cap-bg: #112;
-}
 [data-bs-theme="naranja"] a:not(.btn) {
 	color: #add8e6;
 }
@@ -451,10 +448,6 @@ a:not(.btn) {
 [data-bs-theme="uva"][data-completecolor="true"] .ribbons-done {
 	--rg-card-bg: #020;
 	--rg-card-cap-bg: #030;
-}
-[data-bs-theme="uva"] .no-ribbons-in-current-game {
-	--rg-card-bg: #223;
-	--rg-card-cap-bg: #112;
 }
 [data-bs-theme="uva"] a:not(.btn) {
 	color: #add8e6;

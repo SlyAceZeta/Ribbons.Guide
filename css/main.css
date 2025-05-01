@@ -426,11 +426,6 @@ a:not(:hover):not(:focus) {
 	background: url("../img/ui/clipboard.png") center center no-repeat;
 	background-size: 20px;
 }
-.no-ribbons-in-current-game .card-header button {
-	background-image: url("../img/ui/move-item.svg");
-	box-shadow: 0px 0px 1px 1px #ffffff00;
-	animation: pulse-animation 1s infinite;
-}
 .ribbons-done .card-header button {
 	background-image: url("../img/ui/check.svg");
 }
@@ -531,6 +526,10 @@ html[data-reordering="false"] .card-sortable-handle {
 }
 html[data-checklistbuttons="incomplete"] .ribbons-done .card-header button,
 html[data-checklistbuttons="never"] .card-header button {
+	display: none;
+}
+html[data-titleribbon="completed"] .col:not(.ribbons-done) .card-header-title-ribbon,
+html[data-titleribbon="never"] .card-header-title-ribbon {
 	display: none;
 }
 /* condensed cards */
