@@ -13,8 +13,8 @@
 		<link rel="manifest" href="manifest.json">
 		<script>if(navigator.serviceWorker) navigator.serviceWorker.register("sw.js");</script>
 		<!-- fonts -->
-		<link rel="preload" href="fonts/NunitoSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
-		<link rel="preload" href="fonts/NunitoSans-Bold.ttf" as="font" type="font/ttf" crossorigin>
+		<link href="fonts/NunitoSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
+		<link href="fonts/NunitoSans-Bold.ttf" as="font" type="font/ttf" crossorigin>
 		<style type="text/css">
 		@font-face {
 			font-family: "Nunito Sans";
@@ -456,7 +456,7 @@
 								</select>
 							</div>
 							<div class="col-6">
-								<label for="filterFormName" class="form-label">Name / Species / National Pokédex #</label>
+								<label for="filterFormName" class="form-label">Name/Species/#</label>
 								<input id="filterFormName" class="form-control" type="text" placeholder="">
 							</div>
 							<div class="col-6">

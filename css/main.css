@@ -140,7 +140,7 @@ label[for="pokemonFormShiny-square"] {
 .form-asterisk {
 	color: red;
 }
-.form-check-input {
+#modalSettings .form-check-input {
 	margin-top: 0;
 	margin-right: 0.5em;
 }
@@ -172,6 +172,9 @@ label[for="pokemonFormShiny-square"] {
 }
 .form-floating .select2 .selection .select2-selection {
 	padding: 1.5rem 2.25rem .25rem 1rem;
+}
+.form-floating .select2-selection__clear {
+	margin-top: -10px;
 }
 .select2 .selection .select2-selection.select2-selection--multiple {
 	padding: 0 2.25rem .25rem .25rem;
@@ -245,7 +248,7 @@ label[for="pokemonFormShiny-square"] {
 .pokemonFormSelectIcon,
 .filterFormSelectIcon {
 	width: auto;
-	height: 24px;
+	height: 20px;
 	margin-top: -2px;
 	margin-right: 5px;
 }
