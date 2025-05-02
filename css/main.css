@@ -109,10 +109,6 @@ body {
 	width: auto;
 	height: 20px;
 }
-#modalSettings .form-check-label-info {
-	display: block;
-	font-size: .75em;
-}
 #pokemonFormGenderGroup input:disabled:not(:checked),
 #pokemonFormGenderGroup input:disabled:not(:checked) + label,
 #pokemonFormShinyGroup input:disabled:not(:checked),
@@ -144,6 +140,10 @@ label[for="pokemonFormShiny-square"] {
 .form-asterisk {
 	color: red;
 }
+.form-check-input {
+	margin-top: 0;
+	margin-right: 0.5em;
+}
 .select2 {
 	display: block;
 	width: 100%;
@@ -169,6 +169,9 @@ label[for="pokemonFormShiny-square"] {
 	background-size: 16px 12px;
 	box-sizing: content-box;
 	border-radius: var(--bs-border-radius);
+}
+.form-floating .select2 .selection .select2-selection {
+	padding: 1.5rem 2.25rem .25rem 1rem;
 }
 .select2 .selection .select2-selection.select2-selection--multiple {
 	padding: 0 2.25rem .25rem .25rem;

@@ -54,10 +54,27 @@ if(aprilFoolsDay.getMonth() == todayDate.getMonth() && aprilFoolsDay.getDate() =
 	}
 }
 
+/* set data modified date */
+function updateModifiedDate(newDate = true){
+	var modifiedDate = new Date();
+	if(newDate){
+		localStorage.lastModified = Number(modifiedDate);
+		$("#modalDataLastModified").text(modifiedDate.toLocaleDateString() + ", " + modifiedDate.toLocaleTimeString());
+	} else {
+		modifiedDate.setTime(localStorage.lastModified);
+		$("#modalDataLastModified").text(modifiedDate.toLocaleDateString() + ", " + modifiedDate.toLocaleTimeString());
+	}
+}
+
 /* change setting */
 function changeSetting(key, value){
 	settings[key] = value;
 	localStorage.settings = JSON.stringify(settings);
+	if(modalSettings){
+		if(modalSettings._isShown){
+			updateModifiedDate();
+		}
+	}
 }
 
 /* change site theme */
@@ -292,6 +309,7 @@ function updateOldPokemon(p){
 /* save backup */
 function saveBackup(){
 	var backupObj = {};
+	backupObj.lastModified = localStorage.lastModified;
 	backupObj.settings = JSON.parse(localStorage.settings);
 	backupObj.pokemon = localStorage.pokemon ? JSON.parse(localStorage.pokemon) : {};
 	backupObj.boxes = localStorage.boxes ? JSON.parse(localStorage.boxes) : {};
@@ -325,7 +343,7 @@ function loadBackup(file, filename){
 			var fileVersion = 0;
 			// check for the different backup file versions
 			var oldBoxPosition = contents.indexOf(',{"entries":[');
-			var backupPokemon = [], backupBoxes = [];
+			var backupPokemon = [], backupBoxes = [], backupLastModified = Number(new Date());
 			if(oldBoxPosition > -1){
 				fileVersion = 2;
 				backupPokemon = JSON.parse(contents.substring(0, oldBoxPosition));
@@ -339,6 +357,10 @@ function loadBackup(file, filename){
 					var backupObj = JSON.parse(contents);
 					if(backupObj.settings && backupObj.pokemon && backupObj.boxes){
 						fileVersion = 3;
+						if(backupObj.lastModified){
+							fileVersion = 4;
+							backupLastModified = backupObj.lastModified;
+						}
 						backupPokemon = backupObj.pokemon;
 						backupBoxes = backupObj.boxes;
 						settings = backupObj.settings;
@@ -355,9 +377,10 @@ function loadBackup(file, filename){
 				}
 				localStorage.pokemon = JSON.stringify(backupPokemon);
 				localStorage.boxes = JSON.stringify(backupBoxes);
-				modalSettings.toggle();
+				localStorage.lastModified = backupLastModified;
+				modalData.toggle();
 				new bootstrap.Modal("#modalReloading").toggle();
-				location.reload();
+				setTimeout(function(){ location.reload() }, 500);
 			} else {
 				alert("This is not a valid Ribbons.Guide backup. Your data has not changed.");
 			}
@@ -769,6 +792,7 @@ function savePokemon(edit = false){
 		sortPokemonList();
 		filterPokemonList();
 		localStorage.pokemon = JSON.stringify(userPokemon);
+		updateModifiedDate();
 		modalPokemonForm.toggle();
 	} else {
 		$("#pokemonFormTabs-details").click();
@@ -827,6 +851,7 @@ function copyPokemon(){
 		var pokemonToCopy = userPokemon[pokemonID];
 		userPokemon.splice(pokemonID, 0, pokemonToCopy);
 		localStorage.pokemon = JSON.stringify(userPokemon);
+		updateModifiedDate();
 		$("#tracker-grid .col").each(function(){
 			if(Number(this.dataset.pokemonId) > pokemonID){
 				$(this).attr("data-pokemon-id", Number(this.dataset.pokemonId)+1);
@@ -846,6 +871,7 @@ function deletePokemon(){
 		});
 		userPokemon.splice(pokemonID, 1);
 		localStorage.pokemon = JSON.stringify(userPokemon);
+		updateModifiedDate();
 		$("#tracker-grid .col").each(function(){
 			if(Number(this.dataset.pokemonId) > pokemonID){
 				$(this).attr("data-pokemon-id", Number(this.dataset.pokemonId)-1);
@@ -1958,6 +1984,7 @@ function createOrEditBox(edit = null, editID = -1){
 			}
 		}
 		localStorage.boxes = JSON.stringify(userBoxes);
+		updateModifiedDate();
 	}
 }
 
@@ -2001,6 +2028,7 @@ function deleteBox(){
 				$("#filterFormBox").val(activeFilters.box);
 			}
 		}
+		updateModifiedDate();
 	}
 }
 
@@ -2009,9 +2037,14 @@ function initRun(){
 		$("#loading-spinner-info-progress").attr("aria-valuenow", n);
 		$("#loading-spinner-info-progress-bar").css("width", n + "%");
 	}
-	/* initial preset of settings modal */
+	/* initial preset of settings and data modals */
 	$("#loading-spinner-info-text").text("Loading settings");
 	presetSettings();
+	if(localStorage.lastModified){
+		updateModifiedDate(false);
+	} else {
+		updateModifiedDate();
+	}
 
 	/* data load */
 	loadingBar(10);
@@ -2476,6 +2509,7 @@ function initRun(){
 				userBoxes = Object.assign([], userBoxes.entries.filter(Boolean));
 				localStorage.boxes = JSON.stringify(userBoxes);
 			}
+			updateModifiedDate();
 		}
 
 		/* create the Pokemon list */
@@ -2501,6 +2535,7 @@ function initRun(){
 					userPokemon.splice(evt.oldDraggableIndex, 1);
 					userPokemon.splice(evt.newDraggableIndex, 0, movedPokemon);
 					localStorage.pokemon = JSON.stringify(userPokemon);
+					updateModifiedDate();
 					$("#tracker-grid .col").each(function(i){
 						$(this).attr("data-pokemon-id", i);
 					});
@@ -2519,6 +2554,7 @@ function initRun(){
 					userBoxes.splice(oldBoxID, 1);
 					userBoxes.splice(newBoxID, 0, movedBox);
 					localStorage.boxes = JSON.stringify(userBoxes);
+					updateModifiedDate();
 					var pokemonChanges = false;
 					for(var p in userPokemon){
 						if(userPokemon[p].box || userPokemon[p].box == 0){
@@ -2650,16 +2686,20 @@ $(function(){
 	}
 	/* button listeners */
 	modalSettings = new bootstrap.Modal("#modalSettings");
+	modalData = new bootstrap.Modal("#modalData");
 	$("#headerNavSettingsLink").click(function(){
 		modalSettings.toggle();
 	});
-	$("#modalSettingsSaveBackup").click(function(){
+	$("#headerNavDataLink").click(function(){
+		modalData.toggle();
+	});
+	$("#modalDataSaveBackup").click(function(){
 		saveBackup();
 	});
-	$("#modalSettingsLoadBackupButton").click(function(){
-		$("#modalSettingsLoadBackupFile").click();
+	$("#modalDataLoadBackupButton").click(function(){
+		$("#modalDataLoadBackupFile").click();
 	});
-	$("#modalSettingsLoadBackupFile").change(function(){
+	$("#modalDataLoadBackupFile").change(function(){
 		var file = $(this)[0].files[0];
 		if(file) loadBackup(file, $(this).val());
 	});
