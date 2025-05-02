@@ -1244,7 +1244,7 @@ function createCard(p, id){
 		}
 		$cardHeaderTitle = $("<img>", { "class": "ms-2 card-header-title-ribbon", "src": "img/" + titleRibbonDir + p.title + ".png", "alt": ribbons[p.title].names["eng"], "title": ribbons[p.title].names["eng"] + " - " + ribbons[p.title].descs["eng"] });
 	}
-	var $cardHeaderButton = $("<button>", { "type": "button", "class": "btn btn-link p-0 ms-1 position-relative", "onclick": "ribbonChecklist()" })
+	var $cardHeaderButton = $("<button>", { "type": "button", "class": "btn btn-link p-0 ms-1 position-relative", "onclick": "ribbonChecklist()", "aria-label": "Ribbon Checklist", "title": "Ribbon Checklist" })
 		.append($("<span>", { "class": "ribbon-checklist-warning-badge position-absolute translate-middle bg-danger rounded-circle" }).html($("<span>", {"class": "visually-hidden"}).text("Warnings")));
 	$cardHeaderRight.append($cardHeaderTitle, $cardHeaderButton);
 
