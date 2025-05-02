@@ -1033,7 +1033,7 @@ function ribbonChecklist(){
 							if(Number(g.dataset.gen) < lastChanceGen){
 								lastChanceGen = Number(g.dataset.gen);
 							}
-							if((allGameRibbons[r] == "mini-mark" || allGameRibbons[r] == "jumbo-mark") && !cardData.scaleChecked){
+							if((allGameRibbons[r] == "mini-mark" || allGameRibbons[r] == "jumbo-mark") && cardData.scaleChecked == "false"){
 								if(!$(g).find(".scale-marks").length){
 									$sectionLabel = $("<div>", { "class": "fw-bold" }).text("Check scale in Mesagoza");
 									$sectionRibbons = $("<div>", { "class": "scale-marks-list" });
