@@ -1,4 +1,16 @@
 {
+	"2 May 2025": [
+		"\\This update adds some of the groundwork for online data syncing in the future!",
+		"Added setting to hide the Ribbon/Mark used for the assigned title <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/109'>#109</a>",
+		"Moved the backup save/restore buttons to a new Data Management modal",
+		"Data Management modal now tracks the date and time of your last modification <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/101'>#101</a>",
+		"Added a filter option for name, species, and National Pokédex # <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/94'>#94</a>",
+		"Added a filter option for completion status <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/104'>#104</a>",
+		"Changed filter and settings notes into question-mark tooltips",
+		"Fixed a bug introduced in the last update where the Mini Mark and Jumbo Mark would not appear in the correct section <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/113'>#113</a>",
+		"Fixed a typo in the species evolution warning (thanks LRZuKaTo!)",
+		"Removed the scrollbar from the Boxes list (thanks Z!)"
+	],
 	"22 April 2025": [
 		"Added all fusions (Kyurem, Necrozma, Calyrex); a warning will appear when attempting to save them in Bank or HOME <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/99'>#99</a> (thanks Z!)",
 		"Added a scroll-to-top button that appears at the bottom-right when scrolled down <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/92'>#92</a>",
