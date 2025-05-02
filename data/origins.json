@@ -64,7 +64,8 @@
 		"name": "Let's Go",
 		"games": [
 			"lgp",
-			"lge"
+			"lge",
+			"home"
 		]
 	},
 	"galar": {
