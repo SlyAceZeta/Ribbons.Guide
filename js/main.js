@@ -685,6 +685,18 @@ function setFormInvalid(id, message){
 	}
 }
 
+function updatePopovers(){
+	$("[data-bs-toggle='popover']").each(function(){
+		var $this = $(this);
+		$this.popover({
+			trigger: "focus",
+			html: true,
+			container: $this,
+			placement: "top"
+		});
+	})
+}
+
 function savePokemon(edit = false){
 	modalPokemonState = "saving";
 	var newRibbons = [];
@@ -797,7 +809,7 @@ function savePokemon(edit = false){
 		filterPokemonList();
 		localStorage.pokemon = JSON.stringify(userPokemon);
 		updateModifiedDate();
-		$("[data-bs-toggle='popover']").popover();
+		updatePopovers();
 		modalPokemonForm.toggle();
 	} else {
 		$("#pokemonFormTabs-details").click();
@@ -863,7 +875,7 @@ function copyPokemon(){
 			}
 		});
 		cardContainer.after(createCard(pokemonToCopy, pokemonID+1));
-		$("[data-bs-toggle='popover']").popover();
+		updatePopovers();
 	}
 }
 
@@ -1052,7 +1064,7 @@ function ribbonChecklist(){
 								$(g).find(".modalRibbonChecklistRows-gamename").after($("<div>", { "class": "last-chance px-3 mb-2" }).append($sectionLabel, $sectionRibbons));
 							}
 						}
-						var $ribbonBtn = $("<a>", { "class": "d-inline-block p-0 my-1 modalRibbonChecklistRows-ribbon", "tabindex": "0", "role": "button", "data-bs-html": "true", "data-bs-toggle": "popover", "data-bs-trigger": "hover focus", "title": ribbons[allGameRibbons[r]].names[translations.ietfToPokemon[settings.language]], "data-bs-content": ribbons[allGameRibbons[r]].descs[translations.ietfToPokemon[settings.language]] })
+						var $ribbonBtn = $("<a>", { "class": "d-inline-block p-0 my-1 modalRibbonChecklistRows-ribbon", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[allGameRibbons[r]].names[translations.ietfToPokemon[settings.language]], "data-bs-content": ribbons[allGameRibbons[r]].descs[translations.ietfToPokemon[settings.language]] })
 							.append($("<img>", { "src": "img/" + ribbonSrc + allGameRibbons[r] + ".png", "style": "width:32px;" }));
 						if(ribbons[allGameRibbons[r]].titles){
 							$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + ribbons[allGameRibbons[r]].titles[translations.ietfToPokemon[settings.language]] + ")</div>");
@@ -1082,8 +1094,7 @@ function ribbonChecklist(){
 		ribbonDisplay = "Ribbons or Marks";
 		$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").text("You must set " + cardData.name + "'s Current Game to determine which " + ribbonDisplay + " " + pronounSubject + " can earn.");
 	}
-	// TODO: add popovers to the main tracker lists and redo them whenever there's an add/edit/sort
-	$("[data-bs-toggle='popover']").popover();
+	updatePopovers();
 	modalRibbonChecklist.toggle();
 }
 
@@ -1248,7 +1259,7 @@ function createCard(p, id){
 		if(ribbons[p.title].mark){
 			titleRibbonDir = "marks/";
 		}
-		$cardHeaderTitle = $("<a>", { "class": "ms-2 card-header-title-ribbon", "tabindex": "0", "role": "button", "data-bs-html": "true", "data-bs-toggle": "popover", "data-bs-trigger": "hover focus", "title": ribbons[p.title].names[translations.ietfToPokemon[settings.language]], "data-bs-content": ribbons[p.title].descs[translations.ietfToPokemon[settings.language]] })
+		$cardHeaderTitle = $("<a>", { "class": "ms-2 card-header-title-ribbon", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[p.title].names[translations.ietfToPokemon[settings.language]], "data-bs-content": ribbons[p.title].descs[translations.ietfToPokemon[settings.language]] })
 			.append($("<img>", { "src": "img/" + titleRibbonDir + p.title + ".png" }));
 		if(ribbons[p.title].titles){
 			$cardHeaderTitle.attr("title", "<div>" + $cardHeaderTitle.attr("title") + "</div><div class='popover-ribbon-title'>(" + ribbons[p.title].titles[translations.ietfToPokemon[settings.language]] + ")</div>");
@@ -1299,7 +1310,7 @@ function createCard(p, id){
 				}
 			}
 		}
-		var $ribbonBtn = $("<a>", { "class": cardRibbonClass, "tabindex": "0", "role": "button", "data-bs-html": "true", "data-bs-toggle": "popover", "data-bs-trigger": "hover focus", "title": ribbons[p.ribbons[r]].names[translations.ietfToPokemon[settings.language]], "data-bs-content": ribbons[p.ribbons[r]].descs[translations.ietfToPokemon[settings.language]] })
+		var $ribbonBtn = $("<a>", { "class": cardRibbonClass, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[p.ribbons[r]].names[translations.ietfToPokemon[settings.language]], "data-bs-content": ribbons[p.ribbons[r]].descs[translations.ietfToPokemon[settings.language]] })
 			.append($("<img>", { "src": "img/" + cardRibbonFolder + p.ribbons[r] + ".png" }));
 		if(ribbons[p.ribbons[r]].titles){
 			$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + ribbons[p.ribbons[r]].titles[translations.ietfToPokemon[settings.language]] + ")</div>");
@@ -1323,10 +1334,10 @@ function createCard(p, id){
 				battleMemory = "-gold";
 			}
 		}
-		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon battle-memory-ribbon" + battleMemory, "tabindex": "0", "role": "button", "data-bs-html": "true", "data-bs-toggle": "popover", "data-bs-trigger": "hover focus", "title": "<div>" + ribbons["battle-memory-ribbon" + battleMemory].names[translations.ietfToPokemon[settings.language]] + " (" + battleMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["battle-memory-ribbon" + battleMemory].titles[translations.ietfToPokemon[settings.language]] + ")</div>", "data-bs-content": "</div>" + ribbons["battle-memory-ribbon" + battleMemory].descs[translations.ietfToPokemon[settings.language]] })
+		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon battle-memory-ribbon" + battleMemory, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + ribbons["battle-memory-ribbon" + battleMemory].names[translations.ietfToPokemon[settings.language]] + " (" + battleMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["battle-memory-ribbon" + battleMemory].titles[translations.ietfToPokemon[settings.language]] + ")</div>", "data-bs-content": "</div>" + ribbons["battle-memory-ribbon" + battleMemory].descs[translations.ietfToPokemon[settings.language]] })
 			.append($("<img>", { "src": "img/ribbons/battle-memory-ribbon" + battleMemory + ".png" }));
 		for(let m in battleMemories){
-			$ribbonBtn.attr("data-bs-content", "<img class='" + battleMemories[m] + "' src='img/ribbons/" + battleMemories[m] + ".png' width='24px'>" + $ribbonBtn.attr("data-bs-content"));
+			$ribbonBtn.attr("data-bs-content", "<img class='" + battleMemories[m] + "' src='img/ribbons/" + battleMemories[m] + ".png'>" + $ribbonBtn.attr("data-bs-content"));
 		}
 		$ribbonBtn.attr("data-bs-content", "<div class='card-ribbons-memories d-flex flex-wrap'>" + $ribbonBtn.attr("data-bs-content"));
 		$cardRibbons.append($ribbonBtn);
@@ -1341,10 +1352,10 @@ function createCard(p, id){
 				contestMemory = "gold";
 			}
 		}
-		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon contest-memory-ribbon" + contestMemory, "tabindex": "0", "role": "button", "data-bs-html": "true", "data-bs-toggle": "popover", "data-bs-trigger": "hover focus", "title": "<div>" + ribbons["contest-memory-ribbon" + contestMemory].names[translations.ietfToPokemon[settings.language]] + " (" + contestMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["contest-memory-ribbon" + contestMemory].titles[translations.ietfToPokemon[settings.language]] + ")</div>", "data-bs-content": "</div>" + ribbons["contest-memory-ribbon" + contestMemory].descs[translations.ietfToPokemon[settings.language]] })
+		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon contest-memory-ribbon" + contestMemory, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + ribbons["contest-memory-ribbon" + contestMemory].names[translations.ietfToPokemon[settings.language]] + " (" + contestMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["contest-memory-ribbon" + contestMemory].titles[translations.ietfToPokemon[settings.language]] + ")</div>", "data-bs-content": "</div>" + ribbons["contest-memory-ribbon" + contestMemory].descs[translations.ietfToPokemon[settings.language]] })
 			.append($("<img>", { "src": "img/ribbons/contest-memory-ribbon" + contestMemory + ".png" }));
 		for(let m in contestMemories){
-			$ribbonBtn.attr("data-bs-content", "<img class='" + contestMemories[m] + "' src='img/ribbons/" + contestMemories[m] + ".png' width='24px'>" + $ribbonBtn.attr("data-bs-content"));
+			$ribbonBtn.attr("data-bs-content", "<img class='" + contestMemories[m] + "' src='img/ribbons/" + contestMemories[m] + ".png'>" + $ribbonBtn.attr("data-bs-content"));
 		}
 		$ribbonBtn.attr("data-bs-content", "<div class='card-ribbons-memories d-flex flex-wrap'>" + $ribbonBtn.attr("data-bs-content"));
 		$cardRibbons.append($ribbonBtn);
@@ -2548,7 +2559,7 @@ function initRun(){
 				return;
 			}
 		}
-		$("[data-bs-toggle='popover']").popover();
+		updatePopovers();
 		sortablePokemon = new Sortable($("#tracker-grid")[0], {
 			handle: ".card-sortable-handle",
 			animation: 200,

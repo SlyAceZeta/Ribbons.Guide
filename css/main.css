@@ -418,7 +418,8 @@ a:not(:hover):not(:focus) {
 .card-header-right {
 	height: 1.73rem;
 }
-.card-header .card-header-right * {
+.card-header .card-header-right > a,
+.card-header .card-header-right > a > img {
 	height: 100%;
 }
 .card-header button {
@@ -602,6 +603,8 @@ html[lang="zh-Hans"] .translation-chs {
 .popover {
 	--bs-popover-max-width: 278px;
 	--bs-popover-body-padding-y: 0.75rem;
+	--bs-popover-header-color: var(--bs-body-color);
+	cursor: initial;
 }
 .popover-body {
 	padding: calc(var(--bs-popover-body-padding-y) - 0.25rem) var(--bs-popover-body-padding-x) var(--bs-popover-body-padding-y);
@@ -610,6 +613,11 @@ html[lang="zh-Hans"] .translation-chs {
 	font-size: 0.85em;
 	margin-top: 0.15em;
 	opacity: 0.85;
+}
+.popover .card-ribbons-memories img {
+	width: 24px;
+	height: auto;
+	margin: 0;
 }
 
 /* ribbon order */
