@@ -65,7 +65,7 @@
 						<!--<button type="button" class="nav-link py-1 active" aria-current="page">Tracker</button>-->
 					</div>
 					<div class="navbar-nav">
-					<button type="button" class="nav-link py-1" id="headerNavDataLink">Data</button>
+						<button type="button" class="nav-link py-1" id="headerNavDataLink">Data</button>
 						<button type="button" class="nav-link py-1" id="headerNavSettingsLink">Settings</button>
 						<button type="button" class="nav-link py-1" data-bs-toggle="modal" data-bs-target="#modalAbout">About</button>
 					</div>
@@ -650,7 +650,10 @@
 								</select>
 							</div>
 							<div class="mb-2">
-								<label class="form-label" for="settingsLanguage">Language</label>
+								<label class="form-label" for="settingsLanguage">
+									<span class="align-middle">Language</span>
+									<img class="align-middle ms-1 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" title="Changing this setting will reload the page.">
+								</label>
 								<select class="form-select" id="settingsLanguage" aria-label="Language selection" data-minimum-results-for-search="Infinity">
 									<option value="en">English</option>
 									<option value="es">Español (Spanish)</option>
@@ -691,7 +694,10 @@
 								</select>
 							</div>
 							<div class="mb-3">
-								<label class="form-label" for="settingsOldRibbons">Old Battle/Contest Ribbons</label>
+								<label class="form-label" for="settingsOldRibbons">
+									<span class="align-middle">Old Battle/Contest Ribbons</span>
+									<img class="align-middle ms-1 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="These merge into the Memory Ribbons in Gen&nbsp;VI.">
+								</label>
 								<select class="form-select" id="settingsOldRibbons" aria-label="Old Battle/Contest Ribbons" data-minimum-results-for-search="Infinity">
 									<option value="always">Always show</option>
 									<option value="unmerged">Only show for Pokémon in Gen III–V</option>

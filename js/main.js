@@ -115,7 +115,11 @@ if(settings.language){
 	changeLanguage(settings.language);
 } else {
 	const browserLocales = navigator.languages === undefined ? [navigator.language] : navigator.languages;
-	if(browserLocales){
+	if(typeof browserLocales === "string"){
+		if(supportedLanguages.includes(browserLocales)){
+			changeLanguage(browserLocales);
+		}
+	} else if(typeof browserLocales === "object"){
 		for(var i = 0; i < browserLocales.length; i++){
 			var locale = browserLocales[i].split(/-|_/)[0];
 			if(supportedLanguages.indexOf(locale) > -1){
@@ -2674,12 +2678,18 @@ function initRun(){
 
 /* init */
 $(function(){
+	/* set modals */
+	modalSettings = new bootstrap.Modal("#modalSettings");
+	modalData = new bootstrap.Modal("#modalData");
 	/* dropdown listeners */
 	$("#settingsTheme").change(function(){
 		changeTheme($(this).val());
 	});
 	$("#settingsLanguage").change(function(){
 		changeLanguage($(this).val());
+		modalSettings.toggle();
+		new bootstrap.Modal("#modalReloading").toggle();
+		setTimeout(function(){ location.reload() }, 500);
 	});
 	$("#settingsChecklistButtons").change(function(){
 		changeChecklistButtons($(this).val());
@@ -2714,8 +2724,6 @@ $(function(){
 		});
 	}
 	/* button listeners */
-	modalSettings = new bootstrap.Modal("#modalSettings");
-	modalData = new bootstrap.Modal("#modalData");
 	$("#headerNavSettingsLink").click(function(){
 		modalSettings.toggle();
 	});
