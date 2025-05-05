@@ -1275,28 +1275,25 @@ function createCard(p, id){
 	}
 	$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + speciesSprite + ".png", "alt": getPokemonData(p.species, "names")["eng"], "title": getPokemonData(p.species, "names")["eng"] }));
 	var $cardRibbons = $("<div>", { "class": "card-ribbons flex-grow-1 d-flex flex-wrap p-1" });
-	var ribbonCount = 0, ribbonCountGen7Check = 0, markCount = 0, battleMemoryCount = 0, contestMemoryCount = 0, battleMemory = "", contestMemory = "";
+	var ribbonCount = 0, ribbonCountGen7Check = 0, markCount = 0, battleMemory = "", contestMemory = "", battleMemories = [], contestMemories = [];
 	for(let r in p.ribbons){
 		var cardRibbonFolder = "ribbons/";
 		var cardRibbonClass = p.ribbons[r];
 		if(ribbons[p.ribbons[r]].mark){
 			cardRibbonFolder = "marks/";
-			//$cardRibbons.append($("<img>", { "class": p.ribbons[r], "src": "img/marks/" + p.ribbons[r] + ".png", "alt": ribbons[p.ribbons[r]].names["eng"], "title": ribbons[p.ribbons[r]].names["eng"] + " - " + ribbons[p.ribbons[r]].descs["eng"] }));
 			markCount++;
 		} else {
-			//var cardRibbonClass = p.ribbons[r];
 			if(ribbons[p.ribbons[r]].merge){
 				cardRibbonClass = cardRibbonClass + " old-ribbon-to-merge";
 			}
-			//$cardRibbons.append($("<img>", { "class": cardRibbonClass, "src": "img/ribbons/" + p.ribbons[r] + ".png", "alt": ribbons[p.ribbons[r]].names["eng"], "title": ribbons[p.ribbons[r]].names["eng"] + " - " + ribbons[p.ribbons[r]].descs["eng"] }));
 			if(!p.ribbons[r].startsWith("battle-memory-ribbon") && !p.ribbons[r].startsWith("contest-memory-ribbon")){
 				ribbonCount++;
 				if(ribbons[p.ribbons[r]].merge == "battle"){
-					if(!battleMemoryCount) ribbonCountGen7Check++;
-					battleMemoryCount++;
+					if(!battleMemories.length) ribbonCountGen7Check++;
+					battleMemories.push(p.ribbons[r]);
 				} else if(ribbons[p.ribbons[r]].merge == "contest"){
-					if(!contestMemoryCount) ribbonCountGen7Check++;
-					contestMemoryCount++;
+					if(!contestMemories.length) ribbonCountGen7Check++;
+					contestMemories.push(p.ribbons[r]);
 				} else {
 					ribbonCountGen7Check++;
 				}
@@ -1312,51 +1309,45 @@ function createCard(p, id){
 	if(ribbonCount == 0 && markCount == 0){
 		$cardRibbons.append($("<div>", { "class": "ms-2" }).text("This Pokémon has no ribbons."));
 	}
-	if(!p.ribbons.includes("battle-memory-ribbon") && !p.ribbons.includes("battle-memory-ribbon-gold") && battleMemoryCount > 0){
+	if(!p.ribbons.includes("battle-memory-ribbon") && !p.ribbons.includes("battle-memory-ribbon-gold") && battleMemories.length && currentGen >= 6){
 		if(p.currentgame === "scar" || p.currentgame === "vio" || p.currentgame === "home"){
-			if(battleMemoryCount >= 7){
-				battleMemory = "gold";
-			} else {
-				battleMemory = "blue";
+			if(battleMemories.length >= 7){
+				battleMemory = "-gold";
 			}
 		} else if(currentGen === 7){
 			if(ribbonCountGen7Check >= 8){
-				battleMemory = "gold";
-			} else {
-				battleMemory = "blue";
+				battleMemory = "-gold";
 			}
-		} else if(currentGen >= 6){
-			if(battleMemoryCount == 8){
-				battleMemory = "gold";
-			} else if(battleMemoryCount > 0){
-				battleMemory = "blue";
+		} else {
+			if(battleMemories.length == 8){
+				battleMemory = "-gold";
 			}
 		}
+		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon battle-memory-ribbon" + battleMemory, "tabindex": "0", "role": "button", "data-bs-html": "true", "data-bs-toggle": "popover", "data-bs-trigger": "hover focus", "title": "<div>" + ribbons["battle-memory-ribbon" + battleMemory].names[translations.ietfToPokemon[settings.language]] + " (" + battleMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["battle-memory-ribbon" + battleMemory].titles[translations.ietfToPokemon[settings.language]] + ")</div>", "data-bs-content": "</div>" + ribbons["battle-memory-ribbon" + battleMemory].descs[translations.ietfToPokemon[settings.language]] })
+			.append($("<img>", { "src": "img/ribbons/battle-memory-ribbon" + battleMemory + ".png" }));
+		for(let m in battleMemories){
+			$ribbonBtn.attr("data-bs-content", "<img class='" + battleMemories[m] + "' src='img/ribbons/" + battleMemories[m] + ".png' width='24px'>" + $ribbonBtn.attr("data-bs-content"));
+		}
+		$ribbonBtn.attr("data-bs-content", "<div class='card-ribbons-memories d-flex flex-wrap'>" + $ribbonBtn.attr("data-bs-content"));
+		$cardRibbons.append($ribbonBtn);
 	}
-	if(battleMemory == "gold"){
-		$cardRibbons.append($("<img>", { "class": "auto-memory-ribbon battle-memory-ribbon-gold", "src": "img/ribbons/battle-memory-ribbon-gold.png", "alt": ribbons["battle-memory-ribbon-gold"].names["eng"], "title": ribbons["battle-memory-ribbon-gold"].names["eng"] + " (" + battleMemoryCount + ") - " + ribbons["battle-memory-ribbon-gold"].descs["eng"] }));
-	} else if(battleMemory == "blue"){
-		$cardRibbons.append($("<img>", { "class": "auto-memory-ribbon battle-memory-ribbon", "src": "img/ribbons/battle-memory-ribbon.png", "alt": ribbons["battle-memory-ribbon"].names["eng"], "title": ribbons["battle-memory-ribbon"].names["eng"] + " (" + battleMemoryCount + ") - " + ribbons["battle-memory-ribbon"].descs["eng"] }));
-	}
-	if(!p.ribbons.includes("contest-memory-ribbon") && !p.ribbons.includes("contest-memory-ribbon-gold") && contestMemoryCount > 0){
+	if(!p.ribbons.includes("contest-memory-ribbon") && !p.ribbons.includes("contest-memory-ribbon-gold") && contestMemories.length && currentGen >= 6){
 		if(currentGen === 7){
 			if(ribbonCountGen7Check >= 40){
 				contestMemory = "gold";
-			} else {
-				contestMemory = "blue";
 			}
-		} else if(currentGen > 5){
-			if(contestMemoryCount == 40){
+		} else {
+			if(contestMemories.length == 40){
 				contestMemory = "gold";
-			} else {
-				contestMemory = "blue";
 			}
 		}
-	}
-	if(contestMemory == "gold"){
-		$cardRibbons.append($("<img>", { "class": "auto-memory-ribbon contest-memory-ribbon-gold", "src": "img/ribbons/contest-memory-ribbon-gold.png", "alt": ribbons["contest-memory-ribbon-gold"].names["eng"], "title": ribbons["contest-memory-ribbon-gold"].names["eng"] + " (" + contestMemoryCount + ") - " + ribbons["contest-memory-ribbon-gold"].descs["eng"] }));
-	} else if(contestMemory == "blue"){
-		$cardRibbons.append($("<img>", { "class": "auto-memory-ribbon contest-memory-ribbon", "src": "img/ribbons/contest-memory-ribbon.png", "alt": ribbons["contest-memory-ribbon"].names["eng"], "title": ribbons["contest-memory-ribbon"].names["eng"] + " (" + contestMemoryCount + ") - " + ribbons["contest-memory-ribbon"].descs["eng"] }));
+		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon contest-memory-ribbon" + contestMemory, "tabindex": "0", "role": "button", "data-bs-html": "true", "data-bs-toggle": "popover", "data-bs-trigger": "hover focus", "title": "<div>" + ribbons["contest-memory-ribbon" + contestMemory].names[translations.ietfToPokemon[settings.language]] + " (" + contestMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["contest-memory-ribbon" + contestMemory].titles[translations.ietfToPokemon[settings.language]] + ")</div>", "data-bs-content": "</div>" + ribbons["contest-memory-ribbon" + contestMemory].descs[translations.ietfToPokemon[settings.language]] })
+			.append($("<img>", { "src": "img/ribbons/contest-memory-ribbon" + contestMemory + ".png" }));
+		for(let m in contestMemories){
+			$ribbonBtn.attr("data-bs-content", "<img class='" + contestMemories[m] + "' src='img/ribbons/" + contestMemories[m] + ".png' width='24px'>" + $ribbonBtn.attr("data-bs-content"));
+		}
+		$ribbonBtn.attr("data-bs-content", "<div class='card-ribbons-memories d-flex flex-wrap'>" + $ribbonBtn.attr("data-bs-content"));
+		$cardRibbons.append($ribbonBtn);
 	}
 	$cardBody.append($cardRibbons);
 

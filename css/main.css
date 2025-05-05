@@ -600,6 +600,7 @@ html[lang="zh-Hans"] .translation-chs {
 
 /* popovers */
 .popover {
+	--bs-popover-max-width: 278px;
 	--bs-popover-body-padding-y: 0.75rem;
 }
 .popover-body {
@@ -777,148 +778,196 @@ html[lang="zh-Hans"] .translation-chs {
 .card-ribbons .world-champion-ribbon {
 	order: 55;
 }
-.card-ribbons .cool-ribbon-hoenn {
+.card-ribbons .cool-ribbon-hoenn,
+.card-ribbons-memories .cool-ribbon-hoenn {
 	order: 500;
 }
-.card-ribbons .cool-ribbon-super-hoenn {
+.card-ribbons .cool-ribbon-super-hoenn,
+.card-ribbons-memories .cool-ribbon-super-hoenn {
 	order: 501;
 }
-.card-ribbons .cool-ribbon-hyper-hoenn {
+.card-ribbons .cool-ribbon-hyper-hoenn,
+.card-ribbons-memories .cool-ribbon-hyper-hoenn {
 	order: 502;
 }
-.card-ribbons .cool-ribbon-master-hoenn {
+.card-ribbons .cool-ribbon-master-hoenn,
+.card-ribbons-memories .cool-ribbon-master-hoenn {
 	order: 503;
 }
-.card-ribbons .beauty-ribbon-hoenn {
+.card-ribbons .beauty-ribbon-hoenn,
+.card-ribbons-memories .beauty-ribbon-hoenn {
 	order: 504;
 }
-.card-ribbons .beauty-ribbon-super-hoenn {
+.card-ribbons .beauty-ribbon-super-hoenn,
+.card-ribbons-memories .beauty-ribbon-super-hoenn {
 	order: 505;
 }
-.card-ribbons .beauty-ribbon-hyper-hoenn {
+.card-ribbons .beauty-ribbon-hyper-hoenn,
+.card-ribbons-memories .beauty-ribbon-hyper-hoenn {
 	order: 506;
 }
-.card-ribbons .beauty-ribbon-master-hoenn {
+.card-ribbons .beauty-ribbon-master-hoenn,
+.card-ribbons-memories .beauty-ribbon-master-hoenn {
 	order: 507;
 }
-.card-ribbons .cute-ribbon-hoenn {
+.card-ribbons .cute-ribbon-hoenn,
+.card-ribbons-memories .cute-ribbon-hoenn {
 	order: 508;
 }
-.card-ribbons .cute-ribbon-super-hoenn {
+.card-ribbons .cute-ribbon-super-hoenn,
+.card-ribbons-memories .cute-ribbon-super-hoenn {
 	order: 509;
 }
-.card-ribbons .cute-ribbon-hyper-hoenn {
+.card-ribbons .cute-ribbon-hyper-hoenn,
+.card-ribbons-memories .cute-ribbon-hyper-hoenn {
 	order: 510;
 }
-.card-ribbons .cute-ribbon-master-hoenn {
+.card-ribbons .cute-ribbon-master-hoenn,
+.card-ribbons-memories .cute-ribbon-master-hoenn {
 	order: 511;
 }
-.card-ribbons .smart-ribbon-hoenn {
+.card-ribbons .smart-ribbon-hoenn,
+.card-ribbons-memories .smart-ribbon-hoenn {
 	order: 512;
 }
-.card-ribbons .smart-ribbon-super-hoenn {
+.card-ribbons .smart-ribbon-super-hoenn,
+.card-ribbons-memories .smart-ribbon-super-hoenn {
 	order: 513;
 }
-.card-ribbons .smart-ribbon-hyper-hoenn {
+.card-ribbons .smart-ribbon-hyper-hoenn,
+.card-ribbons-memories .smart-ribbon-hyper-hoenn {
 	order: 514;
 }
-.card-ribbons .smart-ribbon-master-hoenn {
+.card-ribbons .smart-ribbon-master-hoenn,
+.card-ribbons-memories .smart-ribbon-master-hoenn {
 	order: 515;
 }
-.card-ribbons .tough-ribbon-hoenn {
+.card-ribbons .tough-ribbon-hoenn,
+.card-ribbons-memories .tough-ribbon-hoenn {
 	order: 516;
 }
-.card-ribbons .tough-ribbon-super-hoenn {
+.card-ribbons .tough-ribbon-super-hoenn,
+.card-ribbons-memories .tough-ribbon-super-hoenn {
 	order: 517;
 }
-.card-ribbons .tough-ribbon-hyper-hoenn {
+.card-ribbons .tough-ribbon-hyper-hoenn,
+.card-ribbons-memories .tough-ribbon-hyper-hoenn {
 	order: 518;
 }
-.card-ribbons .tough-ribbon-master-hoenn {
+.card-ribbons .tough-ribbon-master-hoenn,
+.card-ribbons-memories .tough-ribbon-master-hoenn {
 	order: 519;
 }
-.card-ribbons .cool-ribbon-sinnoh {
+.card-ribbons .cool-ribbon-sinnoh,
+.card-ribbons-memories .cool-ribbon-sinnoh {
 	order: 520;
 }
-.card-ribbons .cool-ribbon-great-sinnoh {
+.card-ribbons .cool-ribbon-great-sinnoh,
+.card-ribbons-memories .cool-ribbon-great-sinnoh {
 	order: 521;
 }
-.card-ribbons .cool-ribbon-ultra-sinnoh {
+.card-ribbons .cool-ribbon-ultra-sinnoh,
+.card-ribbons-memories .cool-ribbon-ultra-sinnoh {
 	order: 522;
 }
-.card-ribbons .cool-ribbon-master-sinnoh {
+.card-ribbons .cool-ribbon-master-sinnoh,
+.card-ribbons-memories .cool-ribbon-master-sinnoh {
 	order: 523;
 }
-.card-ribbons .beauty-ribbon-sinnoh {
+.card-ribbons .beauty-ribbon-sinnoh,
+.card-ribbons-memories .beauty-ribbon-sinnoh {
 	order: 524;
 }
-.card-ribbons .beauty-ribbon-great-sinnoh {
+.card-ribbons .beauty-ribbon-great-sinnoh,
+.card-ribbons-memories .beauty-ribbon-great-sinnoh {
 	order: 525;
 }
-.card-ribbons .beauty-ribbon-ultra-sinnoh {
+.card-ribbons .beauty-ribbon-ultra-sinnoh,
+.card-ribbons-memories .beauty-ribbon-ultra-sinnoh {
 	order: 526;
 }
-.card-ribbons .beauty-ribbon-master-sinnoh {
+.card-ribbons .beauty-ribbon-master-sinnoh,
+.card-ribbons-memories .beauty-ribbon-master-sinnoh {
 	order: 527;
 }
-.card-ribbons .cute-ribbon-sinnoh {
+.card-ribbons .cute-ribbon-sinnoh,
+.card-ribbons-memories .cute-ribbon-sinnoh {
 	order: 528;
 }
-.card-ribbons .cute-ribbon-great-sinnoh {
+.card-ribbons .cute-ribbon-great-sinnoh,
+.card-ribbons-memories .cute-ribbon-great-sinnoh {
 	order: 529;
 }
-.card-ribbons .cute-ribbon-ultra-sinnoh {
+.card-ribbons .cute-ribbon-ultra-sinnoh,
+.card-ribbons-memories .cute-ribbon-ultra-sinnoh {
 	order: 530;
 }
-.card-ribbons .cute-ribbon-master-sinnoh {
+.card-ribbons .cute-ribbon-master-sinnoh,
+.card-ribbons-memories .cute-ribbon-master-sinnoh {
 	order: 531;
 }
-.card-ribbons .smart-ribbon-sinnoh {
+.card-ribbons .smart-ribbon-sinnoh,
+.card-ribbons-memories .smart-ribbon-sinnoh {
 	order: 532;
 }
-.card-ribbons .smart-ribbon-great-sinnoh {
+.card-ribbons .smart-ribbon-great-sinnoh,
+.card-ribbons-memories .smart-ribbon-great-sinnoh {
 	order: 533;
 }
-.card-ribbons .smart-ribbon-ultra-sinnoh {
+.card-ribbons .smart-ribbon-ultra-sinnoh,
+.card-ribbons-memories .smart-ribbon-ultra-sinnoh {
 	order: 534;
 }
-.card-ribbons .smart-ribbon-master-sinnoh {
+.card-ribbons .smart-ribbon-master-sinnoh,
+.card-ribbons-memories .smart-ribbon-master-sinnoh {
 	order: 535;
 }
-.card-ribbons .tough-ribbon-sinnoh {
+.card-ribbons .tough-ribbon-sinnoh,
+.card-ribbons-memories .tough-ribbon-sinnoh {
 	order: 536;
 }
-.card-ribbons .tough-ribbon-great-sinnoh {
+.card-ribbons .tough-ribbon-great-sinnoh,
+.card-ribbons-memories .tough-ribbon-great-sinnoh {
 	order: 537;
 }
-.card-ribbons .tough-ribbon-ultra-sinnoh {
+.card-ribbons .tough-ribbon-ultra-sinnoh,
+.card-ribbons-memories .tough-ribbon-ultra-sinnoh {
 	order: 538;
 }
-.card-ribbons .tough-ribbon-master-sinnoh {
+.card-ribbons .tough-ribbon-master-sinnoh,
+.card-ribbons-memories .tough-ribbon-master-sinnoh {
 	order: 539;
 }
-.card-ribbons .winning-ribbon {
+.card-ribbons .winning-ribbon,
+.card-ribbons-memories .winning-ribbon {
 	order: 560;
 }
-.card-ribbons .victory-ribbon {
+.card-ribbons .victory-ribbon,
+.card-ribbons-memories .victory-ribbon {
 	order: 561;
 }
-.card-ribbons .ability-ribbon {
+.card-ribbons .ability-ribbon,
+.card-ribbons-memories .ability-ribbon {
 	order: 562;
 }
-.card-ribbons .great-ability-ribbon {
+.card-ribbons .great-ability-ribbon,
+.card-ribbons-memories .great-ability-ribbon {
 	order: 563;
 }
-.card-ribbons .double-ability-ribbon {
+.card-ribbons .double-ability-ribbon,
+.card-ribbons-memories .double-ability-ribbon {
 	order: 564;
 }
-.card-ribbons .multi-ability-ribbon {
+.card-ribbons .multi-ability-ribbon,
+.card-ribbons-memories .multi-ability-ribbon {
 	order: 565;
 }
-.card-ribbons .pair-ability-ribbon {
+.card-ribbons .pair-ability-ribbon,
+.card-ribbons-memories .pair-ability-ribbon {
 	order: 566;
 }
-.card-ribbons .world-ability-ribbon {
+.card-ribbons .world-ability-ribbon,
+.card-ribbons-memories .world-ability-ribbon {
 	order: 567;
 }
 .card-ribbons .contest-memory-ribbon {
