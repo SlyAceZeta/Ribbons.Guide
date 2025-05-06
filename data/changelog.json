@@ -1,4 +1,15 @@
 {
+	"5 May 2025": [
+		"Added popovers to Ribbons and Marks in cards",
+		"Ribbons bundled into the Memory Ribbons will appear in their popovers",
+		"Popovers now render above the Ribbon or Mark, rather than to the side",
+		"Popovers no longer appear when hovering over Ribbons and Marks, matching mobile behavior and reducing animation bloat and potential bugs",
+		"Ribbons.Guide now reloads when changing the site's language",
+		"Added HOME origin game option for Let's Go origin mark to account for Shiny Meltan gift",
+		"Scale checkbox is now disabled when adding/editing a Pokémon that cannot have a non-average scale",
+		"Various input fields now trim trailing whitespace to account for mobile keyboards",
+		"Slightly reducing horizontal padding in card headers and footers"
+	],
 	"2 May 2025": [
 		"\\This update adds some of the groundwork for online data syncing in the future!",
 		"Added setting to hide the Ribbon/Mark used for the assigned title <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/109'>#109</a>",

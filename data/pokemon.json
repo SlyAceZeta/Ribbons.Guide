@@ -42513,7 +42513,8 @@
 			"vio"
 		],
 		"flags": [
-			"shinyLocked"
+			"shinyLocked",
+			"sizeLocked"
 		]
 	},
 	"iron-leaves": {
@@ -42535,7 +42536,8 @@
 			"vio"
 		],
 		"flags": [
-			"shinyLocked"
+			"shinyLocked",
+			"sizeLocked"
 		]
 	},
 	"dipplin": {

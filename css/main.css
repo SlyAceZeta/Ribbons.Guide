@@ -303,7 +303,7 @@ html[data-automemoryribbons="false"] .pokemonFormRibbon-memory-sync {
 	display: none;
 }
 #modalBoxesList-none:only-child {
-	display: list-item;
+	display: block;
 }
 #modalBoxesList img {
 	width: auto;
@@ -321,6 +321,9 @@ html[data-automemoryribbons="false"] .pokemonFormRibbon-memory-sync {
 #modalBoxesList .list-group-item,
 #tracker-grid button.card-sortable-handle {
 	cursor: grab;
+}
+#modalBoxesList .list-group-item {
+	border-radius: 0;
 }
 #modalRibbonChecklistRows:empty {
 	display: none;

@@ -1344,30 +1344,30 @@ function createCard(p, id){
 				battleMemory = "-gold";
 			}
 		}
-		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon battle-memory-ribbon" + battleMemory, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + ribbons["battle-memory-ribbon" + battleMemory].names[translations.ietfToPokemon[settings.language]] + " (" + battleMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["battle-memory-ribbon" + battleMemory].titles[translations.ietfToPokemon[settings.language]] + ")</div>", "data-bs-content": "</div>" + ribbons["battle-memory-ribbon" + battleMemory].descs[translations.ietfToPokemon[settings.language]] })
+		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon battle-memory-ribbon" + battleMemory, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + ribbons["battle-memory-ribbon" + battleMemory].names[translations.ietfToPokemon[settings.language]] + " (" + battleMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["battle-memory-ribbon" + battleMemory].titles[translations.ietfToPokemon[settings.language]] + ")</div>", "data-bs-content": ribbons["battle-memory-ribbon" + battleMemory].descs[translations.ietfToPokemon[settings.language]] + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" })
 			.append($("<img>", { "src": "img/ribbons/battle-memory-ribbon" + battleMemory + ".png" }));
 		for(let m in battleMemories){
-			$ribbonBtn.attr("data-bs-content", "<img class='" + battleMemories[m] + "' src='img/ribbons/" + battleMemories[m] + ".png'>" + $ribbonBtn.attr("data-bs-content"));
+			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<img class='" + battleMemories[m] + "' src='img/ribbons/" + battleMemories[m] + ".png'>");
 		}
-		$ribbonBtn.attr("data-bs-content", "<div class='card-ribbons-memories d-flex flex-wrap'>" + $ribbonBtn.attr("data-bs-content"));
+		$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "</div>");
 		$cardRibbons.append($ribbonBtn);
 	}
 	if(!p.ribbons.includes("contest-memory-ribbon") && !p.ribbons.includes("contest-memory-ribbon-gold") && contestMemories.length && currentGen >= 6){
 		if(currentGen === 7){
 			if(ribbonCountGen7Check >= 40){
-				contestMemory = "gold";
+				contestMemory = "-gold";
 			}
 		} else {
 			if(contestMemories.length == 40){
-				contestMemory = "gold";
+				contestMemory = "-gold";
 			}
 		}
-		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon contest-memory-ribbon" + contestMemory, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + ribbons["contest-memory-ribbon" + contestMemory].names[translations.ietfToPokemon[settings.language]] + " (" + contestMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["contest-memory-ribbon" + contestMemory].titles[translations.ietfToPokemon[settings.language]] + ")</div>", "data-bs-content": "</div>" + ribbons["contest-memory-ribbon" + contestMemory].descs[translations.ietfToPokemon[settings.language]] })
+		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon contest-memory-ribbon" + contestMemory, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + ribbons["contest-memory-ribbon" + contestMemory].names[translations.ietfToPokemon[settings.language]] + " (" + contestMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["contest-memory-ribbon" + contestMemory].titles[translations.ietfToPokemon[settings.language]] + ")</div>", "data-bs-content": ribbons["contest-memory-ribbon" + contestMemory].descs[translations.ietfToPokemon[settings.language]] + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" })
 			.append($("<img>", { "src": "img/ribbons/contest-memory-ribbon" + contestMemory + ".png" }));
 		for(let m in contestMemories){
-			$ribbonBtn.attr("data-bs-content", "<img class='" + contestMemories[m] + "' src='img/ribbons/" + contestMemories[m] + ".png'>" + $ribbonBtn.attr("data-bs-content"));
+			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<img class='" + contestMemories[m] + "' src='img/ribbons/" + contestMemories[m] + ".png'>");
 		}
-		$ribbonBtn.attr("data-bs-content", "<div class='card-ribbons-memories d-flex flex-wrap'>" + $ribbonBtn.attr("data-bs-content"));
+		$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "</div>");
 		$cardRibbons.append($ribbonBtn);
 	}
 	$cardBody.append($cardRibbons);
@@ -2341,9 +2341,14 @@ function initRun(){
 		});
 		$("#pokemonFormRibbons input[type='checkbox']").change(function(){
 			var ribbon = this.id.replace("pokemonFormRibbon-", "");
+			var pokemonFlags = getPokemonData($("#pokemonFormSpecies").val(), "flags");
+			var pokemonSizeLocked = false;
+			if(pokemonFlags && pokemonFlags.includes("sizeLocked")){
+				pokemonSizeLocked = true;
+			}
 			if(ribbon == "mini-mark" || ribbon == "jumbo-mark" || ribbon == "titan-mark" || ribbon == "alpha-mark"){
 				if($("#pokemonFormRibbon-mini-mark").prop("checked") || $("#pokemonFormRibbon-jumbo-mark").prop("checked") || $("#pokemonFormRibbon-titan-mark").prop("checked") || $("#pokemonFormRibbon-alpha-mark").prop("checked")){
-					$("#pokemonFormScale").prop({ "checked": true, "disabled": true });
+					if(!pokemonSizeLocked) $("#pokemonFormScale").prop({ "checked": true, "disabled": true });
 					if($("#pokemonFormRibbon-mini-mark").prop("checked")){
 						$("#pokemonFormRibbon-jumbo-mark").prop({ "checked": false, "disabled": true });
 					} else {
@@ -2356,7 +2361,7 @@ function initRun(){
 						$("#pokemonFormRibbon-mini-mark").prop({ "disabled": false });
 					}
 				} else {
-					$("#pokemonFormScale").prop({ "checked": false, "disabled": false });
+					if(!pokemonSizeLocked) $("#pokemonFormScale").prop({ "checked": false, "disabled": false });
 					$("#pokemonFormRibbon-mini-mark, #pokemonFormRibbon-jumbo-mark").prop({ "disabled": false });
 				}
 			} else if(ribbon.startsWith("battle-memory-ribbon")){
@@ -2410,6 +2415,11 @@ function initRun(){
 					$("#pokemonFormShiny-normal").prop("checked", true).change();
 				} else {
 					$("#pokemonFormShinyGroup input").prop("disabled", false);
+				}
+				if(pokemonFlags && pokemonFlags.includes("sizeLocked")){
+					$("#pokemonFormScale").prop({ "checked": true, "disabled": true }).change();
+				} else {
+					$("#pokemonFormScale").prop({ "checked": false, "disabled": false }).change();
 				}
 
 				updateFormSprite();
