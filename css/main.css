@@ -144,6 +144,9 @@ label[for="pokemonFormShiny-square"] {
 	margin-top: 0;
 	margin-right: 0.5em;
 }
+#modalSettings #settingsAprilFoolsContainer {
+	display: none;
+}
 .select2 {
 	display: block;
 	width: 100%;

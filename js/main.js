@@ -23,36 +23,6 @@ if(localStorage.changelog){
 }
 /* set sortable variables in advance */
 var sortablePokemon, sortableBoxes;
-var aprilFools = false;
-var aprilFoolsDay = new Date("1 Apr 2000");
-var todayDate = new Date();
-if(aprilFoolsDay.getMonth() == todayDate.getMonth() && aprilFoolsDay.getDate() == todayDate.getDate()){
-	aprilFools = true;
-	var wheelSpin = Math.floor(Math.random() * 100);
-	if(wheelSpin === 42){
-		var aprilFoolsStyleSheet = document.createElement("style");
-		aprilFoolsStyleSheet.innerText = `
-			@keyframes aprilfools {
-				from {
-					transform: rotate(0deg);
-				}
-				to {
-					transform: rotate(360deg);
-				}
-			}
-			.card-sprite {
-				animation: aprilfools 5s linear infinite;
-			}
-			@media (prefers-reduced-motion) {
-				.card-sprite {
-					animation: none;
-					transform: rotate(180deg);
-				}
-			}
-`
-		document.head.appendChild(aprilFoolsStyleSheet);
-	}
-}
 
 /* set data modified date */
 function updateModifiedDate(newDate = true){
@@ -218,12 +188,18 @@ var toggles = { // default settings
 	"AutoStrangeBall": true,
 	"FooterExtraInfo": true,
 	"CompleteColor": true,
-	"Reordering": true
+	"Reordering": true,
+	"AprilFools": true
 };
 /* change toggle settings */
-function changeCheckToggle(name, value){
+function changeCheckToggle(name, value, reload = false){
 	changeSetting(name, "" + value);
-	$("html").attr("data-" + name.toLowerCase(), "" + value);
+	if(name !== "AprilFools" && name !== "ShowWorldAbility") $("html").attr("data-" + name.toLowerCase(), "" + value);
+	if(reload && name == "AprilFools"){
+		modalSettings.toggle();
+		new bootstrap.Modal("#modalReloading").toggle();
+		setTimeout(function(){ location.reload() }, 500);
+	}
 }
 /* initial toggle set */
 for(let i in toggles){
@@ -240,6 +216,40 @@ for(let i in toggles){
 			changeCheckToggle(i, true);
 		} else {
 			changeCheckToggle(i, false);
+		}
+	}
+}
+
+/* April Fools */
+var aprilFools = false;
+var todayDate = new Date();
+if(todayDate.getMonth() == 3 && todayDate.getDate() == 1){
+	$("#settingsAprilFoolsContainer").addClass("d-flex");
+	if(settings["AprilFools"]){
+		aprilFools = true;
+		var wheelSpin = Math.floor(Math.random() * 100);
+		if(wheelSpin === 42){
+			var aprilFoolsStyleSheet = document.createElement("style");
+			aprilFoolsStyleSheet.innerText = `
+				@keyframes aprilfools {
+					from {
+						transform: rotate(0deg);
+					}
+					to {
+						transform: rotate(360deg);
+					}
+				}
+				.card-sprite {
+					animation: aprilfools 5s linear infinite;
+				}
+				@media (prefers-reduced-motion) {
+					.card-sprite {
+						animation: none;
+						transform: rotate(180deg);
+					}
+				}
+	`
+			document.head.appendChild(aprilFoolsStyleSheet);
 		}
 	}
 }
@@ -1273,13 +1283,13 @@ function createCard(p, id){
 
 	/* body */
 	var speciesSprite = p.species;
-	if(aprilFools){
+	if(aprilFools && settings["AprilFools"]){
 		speciesSprite = "ditto";
 		if(p.species == "ditto"){
 			speciesSprite = "mew";
 		}
 	}
-	var genderDirectory = (!aprilFools && getPokemonData(speciesSprite, "femsprite") && p.gender === "female") ? "female/" : "";
+	var genderDirectory = ((!aprilFools || !settings["AprilFools"]) && getPokemonData(speciesSprite, "femsprite") && p.gender === "female") ? "female/" : "";
 	if(speciesSprite.startsWith("alcremie-") && p.shiny){
 		var alcremieRegex = /caramel|lemon|matcha|mint|rainbow|rubycream|rubyswirl|salted|vanilla/;
 		speciesSprite = speciesSprite.replace(alcremieRegex, "").replace("--", "-").replace("-strawberry", "");
@@ -2722,7 +2732,7 @@ $(function(){
 	/* checkbox listeners */
 	for(let i in toggles){
 		$("#settings" + i).change(function(){
-			changeCheckToggle(i, $(this).prop("checked") ? "true" : "false");
+			changeCheckToggle(i, $(this).prop("checked") ? "true" : "false", true);
 		});
 	}
 	/* button listeners */
