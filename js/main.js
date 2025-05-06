@@ -2282,7 +2282,6 @@ function initRun(){
 			dropdownParent: $("#modalFilterForm .modal-body")
 		});
 		$("#settingsTheme, #settingsLanguage, #settingsChecklistButtons, #settingsTitleRibbon, #settingsOldRibbons, #settingsExtraOriginMarks").select2({
-			debug: true,
 			matcher: selectCustomMatcher,
 			templateSelection: selectCustomOption,
 			templateResult: selectCustomOption,
@@ -2428,7 +2427,7 @@ function initRun(){
 			if(filterSearch == "" || filterSearch === null){
 				delete activeFilters[filterName];
 			} else {
-				filterSearch = filterSearch.trim();
+				if(typeof filterSearch == "string") filterSearch.trim();
 				if(filterSearch == ""){
 					$(this).val("").change();
 				} else {

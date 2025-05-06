@@ -824,9 +824,12 @@
 						<p class="fw-bold">Last Modified</p>
 						<p id="modalDataLastModified">Unknown</p>
 						<hr>
-						<p class="fw-bold">Local Backup</p>
-						<button type="button" class="btn btn-primary btn-sm" id="modalDataSaveBackup">Save Backup File</button>
-						<button type="button" class="btn btn-primary btn-sm" id="modalDataLoadBackupButton">Restore Backup</button><input type="file" id="modalDataLoadBackupFile" accept="application/json" hidden>
+						<p id="modalDataLocal" class="fw-bold">Local Backup</p>
+						<div class="btn-group" role="group" aria-labelledby="modalDataLocal">
+							<button type="button" class="btn btn-primary btn-sm" id="modalDataSaveBackup">Save Backup File</button>
+							<button type="button" class="btn btn-primary btn-sm ms-1" id="modalDataLoadBackupButton">Restore Backup File</button>
+						</div>
+						<input type="file" id="modalDataLoadBackupFile" accept="application/json" hidden>
 					</div>
 					<div class="modal-footer justify-content-center">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>

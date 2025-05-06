@@ -70,6 +70,9 @@ body {
 }
 
 /* buttons */
+.btn-outline-primary {
+	--bs-btn-color: var(--bs-body-color);
+}
 .btn-outline-secondary {
 	--bs-btn-border-color: var(--bs-border-color);
 	--bs-btn-active-border-color: var(--bs-border-color);
