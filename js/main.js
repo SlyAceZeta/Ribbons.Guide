@@ -1039,10 +1039,6 @@ function ribbonChecklist(){
 								availableElsewhere = true;
 							}
 						});
-						var ribbonSrc = "ribbons/";
-						if(ribbons[allGameRibbons[r]].mark){
-							ribbonSrc = "marks/";
-						}
 						var addToList = ".last-chance-list";
 						if(availableElsewhere){
 							if(thisGameOrder === 0 && currentGameStatus !== "last-chance"){
@@ -1074,8 +1070,7 @@ function ribbonChecklist(){
 								$(g).find(".modalRibbonChecklistRows-gamename").after($("<div>", { "class": "last-chance px-3 mb-2" }).append($sectionLabel, $sectionRibbons));
 							}
 						}
-						var $ribbonBtn = $("<a>", { "class": "d-inline-block p-0 my-1 modalRibbonChecklistRows-ribbon", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[allGameRibbons[r]].names[translations.ietfToPokemon[settings.language]], "data-bs-content": ribbons[allGameRibbons[r]].descs[translations.ietfToPokemon[settings.language]] })
-							.append($("<img>", { "src": "img/" + ribbonSrc + allGameRibbons[r] + ".png", "style": "width:32px;" }));
+						var $ribbonBtn = $("<a>", { "class": "d-inline-block p-0 mt-1 modalRibbonChecklistRows-ribbon ribbonsprite " + allGameRibbons[r], "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[allGameRibbons[r]].names[translations.ietfToPokemon[settings.language]], "data-bs-content": ribbons[allGameRibbons[r]].descs[translations.ietfToPokemon[settings.language]] });
 						if(ribbons[allGameRibbons[r]].titles){
 							$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + ribbons[allGameRibbons[r]].titles[translations.ietfToPokemon[settings.language]] + ")</div>");
 						}
@@ -1265,12 +1260,7 @@ function createCard(p, id){
 	var $cardHeaderRight = $("<div>", { "class": "card-header-right d-flex" });
 	var $cardHeaderTitle = "";
 	if(p.title && p.title !== "None"){
-		var titleRibbonDir = "ribbons/";
-		if(ribbons[p.title].mark){
-			titleRibbonDir = "marks/";
-		}
-		$cardHeaderTitle = $("<a>", { "class": "ms-2 card-header-title-ribbon", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[p.title].names[translations.ietfToPokemon[settings.language]], "data-bs-content": ribbons[p.title].descs[translations.ietfToPokemon[settings.language]] })
-			.append($("<img>", { "src": "img/" + titleRibbonDir + p.title + ".png" }));
+		$cardHeaderTitle = $("<a>", { "class": "ms-2 card-header-title-ribbon ribbonsprite " + p.title, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[p.title].names[translations.ietfToPokemon[settings.language]], "data-bs-content": ribbons[p.title].descs[translations.ietfToPokemon[settings.language]] });
 		if(ribbons[p.title].titles){
 			$cardHeaderTitle.attr("title", "<div>" + $cardHeaderTitle.attr("title") + "</div><div class='popover-ribbon-title'>(" + ribbons[p.title].titles[translations.ietfToPokemon[settings.language]] + ")</div>");
 		}
@@ -1298,10 +1288,8 @@ function createCard(p, id){
 	var $cardRibbons = $("<div>", { "class": "card-ribbons flex-grow-1 d-flex flex-wrap p-1" });
 	var ribbonCount = 0, ribbonCountGen7Check = 0, markCount = 0, battleMemory = "", contestMemory = "", battleMemories = [], contestMemories = [];
 	for(let r in p.ribbons){
-		var cardRibbonFolder = "ribbons/";
-		var cardRibbonClass = p.ribbons[r];
+		var cardRibbonClass = p.ribbons[r] + " ribbonsprite";
 		if(ribbons[p.ribbons[r]].mark){
-			cardRibbonFolder = "marks/";
 			markCount++;
 		} else {
 			if(ribbons[p.ribbons[r]].merge){
@@ -1320,8 +1308,7 @@ function createCard(p, id){
 				}
 			}
 		}
-		var $ribbonBtn = $("<a>", { "class": cardRibbonClass, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[p.ribbons[r]].names[translations.ietfToPokemon[settings.language]], "data-bs-content": ribbons[p.ribbons[r]].descs[translations.ietfToPokemon[settings.language]] })
-			.append($("<img>", { "src": "img/" + cardRibbonFolder + p.ribbons[r] + ".png" }));
+		var $ribbonBtn = $("<a>", { "class": cardRibbonClass, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[p.ribbons[r]].names[translations.ietfToPokemon[settings.language]], "data-bs-content": ribbons[p.ribbons[r]].descs[translations.ietfToPokemon[settings.language]] });
 		if(ribbons[p.ribbons[r]].titles){
 			$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + ribbons[p.ribbons[r]].titles[translations.ietfToPokemon[settings.language]] + ")</div>");
 		}
@@ -1344,10 +1331,9 @@ function createCard(p, id){
 				battleMemory = "-gold";
 			}
 		}
-		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon battle-memory-ribbon" + battleMemory, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + ribbons["battle-memory-ribbon" + battleMemory].names[translations.ietfToPokemon[settings.language]] + " (" + battleMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["battle-memory-ribbon" + battleMemory].titles[translations.ietfToPokemon[settings.language]] + ")</div>", "data-bs-content": ribbons["battle-memory-ribbon" + battleMemory].descs[translations.ietfToPokemon[settings.language]] + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" })
-			.append($("<img>", { "src": "img/ribbons/battle-memory-ribbon" + battleMemory + ".png" }));
+		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon battle-memory-ribbon" + battleMemory + " ribbonsprite", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + ribbons["battle-memory-ribbon" + battleMemory].names[translations.ietfToPokemon[settings.language]] + " (" + battleMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["battle-memory-ribbon" + battleMemory].titles[translations.ietfToPokemon[settings.language]] + ")</div>", "data-bs-content": ribbons["battle-memory-ribbon" + battleMemory].descs[translations.ietfToPokemon[settings.language]] + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" });
 		for(let m in battleMemories){
-			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<img class='" + battleMemories[m] + "' src='img/ribbons/" + battleMemories[m] + ".png'>");
+			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<span class='" + battleMemories[m] + " ribbonsprite' role='img' aria-label='" + ribbons[battleMemories[m]].names[translations.ietfToPokemon[settings.language]] + "'></span>");
 		}
 		$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "</div>");
 		$cardRibbons.append($ribbonBtn);
@@ -1362,10 +1348,9 @@ function createCard(p, id){
 				contestMemory = "-gold";
 			}
 		}
-		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon contest-memory-ribbon" + contestMemory, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + ribbons["contest-memory-ribbon" + contestMemory].names[translations.ietfToPokemon[settings.language]] + " (" + contestMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["contest-memory-ribbon" + contestMemory].titles[translations.ietfToPokemon[settings.language]] + ")</div>", "data-bs-content": ribbons["contest-memory-ribbon" + contestMemory].descs[translations.ietfToPokemon[settings.language]] + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" })
-			.append($("<img>", { "src": "img/ribbons/contest-memory-ribbon" + contestMemory + ".png" }));
+		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon contest-memory-ribbon" + contestMemory + " ribbonsprite", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + ribbons["contest-memory-ribbon" + contestMemory].names[translations.ietfToPokemon[settings.language]] + " (" + contestMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["contest-memory-ribbon" + contestMemory].titles[translations.ietfToPokemon[settings.language]] + ")</div>", "data-bs-content": ribbons["contest-memory-ribbon" + contestMemory].descs[translations.ietfToPokemon[settings.language]] + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" });
 		for(let m in contestMemories){
-			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<img class='" + contestMemories[m] + "' src='img/ribbons/" + contestMemories[m] + ".png'>");
+			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<span class='" + contestMemories[m] + " ribbonsprite' role='img' aria-label='" + ribbons[contestMemories[m]].names[translations.ietfToPokemon[settings.language]] + "'></span>");
 		}
 		$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "</div>");
 		$cardRibbons.append($ribbonBtn);
@@ -1914,11 +1899,7 @@ function selectCustomOption(o){
 				$option.append($("<span>", { "class": "translation translation-" + lang}).text(translations.none[lang]));
 			}
 		} else {
-			var ribbonDir = "ribbons/";
-			if(ribbons[o.id].mark){
-				ribbonDir = "marks/";
-			}
-			$option.append($("<img>", { "class": selectIconClass, "src": "img/" + ribbonDir + o.id + ".png" }));
+			$option.append($("<span>", { "class": selectIconClass + " ribbonsprite " + o.id, "role": "img", "aria-label": ribbons[o.id].names["eng"] }));
 			for(var oed in o.element.dataset){
 				if(oed.indexOf("lang") == 0 && oed.indexOf("langRibbon") == -1){
 					lang = oed.substring(4).toLowerCase();
@@ -2219,17 +2200,13 @@ function initRun(){
 		for(var r in ribbons){
 			var $ribbonOption = $("<option>", { "value": r }).text(ribbons[r].names["eng"]);
 			var formRibbonSelect = "#filterFormEarnedRibbons";
-			var ribbonDir = "ribbons/";
-			if(ribbons[r].mark){
-				ribbonDir = "marks/";
-			}
 			var $ribbonRow = $("<li>", { "class": "list-group-item list-group-item-action d-flex align-items-center border-0", "title": ribbons[r].names.eng + " - " + ribbons[r].descs.eng })
 				.append($("<input>", { "type": "checkbox", "value": "", "class": "form-check-input mt-0 ms-lg-1 me-1 me-lg-2", "id": "pokemonFormRibbon-" + r }));
 			if(r.startsWith("contest-memory-ribbon") || r.startsWith("battle-memory-ribbon")){
 				$ribbonRow.append($("<img>", { "src": "img/ui/sync.svg", "class": "pokemonFormRibbon-memory-sync" }));
 			}
 			var $ribbonRowLabel = $("<label>", { "for": "pokemonFormRibbon-" + r, "class": "form-check-label stretched-link d-flex align-items-center w-100" })
-				.append($("<img>", { "src": "img/" + ribbonDir + r + ".png", "class": "me-1", "alt": ribbons[r].names.eng, "title": ribbons[r].names.eng }));
+				.append($("<span>", { "class": "me-2 ribbonsprite " + r, "title": ribbons[r].names.eng, "role": "img", "aria-label": ribbons[r].names.eng }));
 			var $ribbonRowInfo = $("<div>", { "class": "w-100" });
 			var $ribbonRowInfoName = $("<div>", { "class": "fw-bold lh-1 my-1 d-flex w-100 justify-content-between align-items-center" });
 			var $ribbonRowInfoDesc = $("<div>", { "class": "lh-1 mb-1" });
@@ -2275,6 +2252,7 @@ function initRun(){
 				$("#pokemonFormTitle").append($titleOption);
 			}
 		}
+		$("#imageHoldingArea").append($("<img>", { "src": "img/ribbons.png" }));
 		for(var n in natures){
 			var $natureOption = $("<option>", { "value": n }).text(natures[n]["eng"]);
 			for(var lang in natures[n]){

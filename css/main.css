@@ -35,6 +35,7 @@ body {
 #loading-spinner-info-progress {
 	width: 200px;
 	height: 7px;
+	--bs-progress-bar-transition: width 0.4s ease;
 }
 #loading-spinner-info-progress-bar {
 	width: 0%;
@@ -327,6 +328,9 @@ html[data-automemoryribbons="false"] .pokemonFormRibbon-memory-sync {
 #modalBoxesList .list-group-item {
 	border-radius: 0;
 }
+#modalRibbonChecklistInfo-name .ball {
+	display: none;
+}
 #modalRibbonChecklistRows:empty {
 	display: none;
 }
@@ -339,14 +343,17 @@ html[data-ribbonformview="grid"] #pokemonFormRibbons {
 	flex-wrap: wrap;
 	flex-direction: row;
 }
-html[data-ribbonformview="grid"] #pokemonFormRibbons input {
+html[data-ribbonformview="grid"] #pokemonFormRibbons input,
+html[data-ribbonformview="grid"] #pokemonFormRibbons img.pokemonFormRibbon-memory-sync {
 	width: 24px;
 	height: 24px;
 	position: absolute;
-	top: calc(50% - 12px);
-	right: calc(50% - 13px);
+	top: 17px;
+	right: 26px;
 	z-index: 1;
 	margin: 0!important;
+}
+html[data-ribbonformview="grid"] #pokemonFormRibbons input {
 	display: none;
 }
 html[data-ribbonformview="grid"] #pokemonFormRibbons input:checked {
@@ -355,30 +362,21 @@ html[data-ribbonformview="grid"] #pokemonFormRibbons input:checked {
 html[data-ribbonformview="grid"] #pokemonFormRibbons .w-100 {
 	display: none;
 }
-html[data-ribbonformview="grid"] #pokemonFormRibbons img.me-1 {
+html[data-ribbonformview="grid"] #pokemonFormRibbons label.w-100 {
+	display: flex !important;
+}
+html[data-ribbonformview="grid"] #pokemonFormRibbons .ribbonsprite.me-1 {
 	margin-right: 0!important;
 }
-html[data-ribbonformview="grid"] #pokemonFormRibbons input:checked ~ label img,
-html[data-automemoryribbons="true"] .pokemonFormRibbon-memory-sync ~ label img {
+html[data-ribbonformview="grid"] #pokemonFormRibbons input:checked ~ label .ribbonsprite,
+html[data-automemoryribbons="true"] .pokemonFormRibbon-memory-sync ~ label .ribbonsprite {
 	opacity: 0.25;
 }
 html[data-ribbonformview="grid"] #pokemonFormRibbons li.d-flex {
-	width: 50px;
-	padding: 10px 5px;
-	text-align: center;
-	border-radius: 0;
-}
-html[data-ribbonformview="grid"] #pokemonFormRibbons label.w-100 {
-	display: block !important;
-}
-html[data-ribbonformview="grid"] #pokemonFormRibbons img.pokemonFormRibbon-memory-sync {
-	width: 23px;
-	height: auto;
-	margin: 0;
-	position: absolute;
-	top: calc(50% - 12px);
-	right: calc(50% - 13px);
-	z-index: 1;
+	width: 40px;
+	box-sizing: content-box;
+	border-radius: inherit;
+	padding: 9px 18px;
 }
 
 /* links */
@@ -471,9 +469,7 @@ html[data-autostrangeball="true"] .card-header-ball-selected {
 	height: 100%;
 	align-content: center;
 }
-.card-ribbons img {
-	width: auto;
-	height: 32px;
+.card-ribbons a {
 	margin: 1px;
 }
 html[data-oldribbons="unmerged"] .col[data-current-gen="6"] .old-ribbon-to-merge,
@@ -617,11 +613,6 @@ html[lang="zh-Hans"] .translation-chs {
 	font-size: 0.85em;
 	margin-top: 0.15em;
 	opacity: 0.85;
-}
-.popover .card-ribbons-memories img {
-	width: 24px;
-	height: auto;
-	margin: 0;
 }
 
 /* ribbon order */
@@ -1274,4 +1265,509 @@ html[lang="zh-Hans"] .translation-chs {
 }
 .ball-wing {
 	background-position: -720px 0;
+}
+
+.ribbonsprite {
+	--background-adjust: 4;
+	background-image: url("../img/ribbons.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	flex-shrink: 0;
+}
+.card-header .ribbonsprite {
+	--background-adjust: 4.625;
+	width: 27.675px;
+	height: 27.675px;
+}
+.pokemonFormSelectIcon.ribbonsprite,
+.filterFormSelectIcon.ribbonsprite,
+.popover .card-ribbons-memories .ribbonsprite {
+	--background-adjust: 5.333;
+	width: 24px;
+	height: 24px;
+}
+#pokemonFormRibbons .ribbonsprite {
+	--background-adjust: 3.2;
+	width: 40px;
+	height: 40px;
+}
+#modalSettings .ribbonsprite {
+	--background-adjust: 6.4;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+.ribbonsprite.ability-ribbon {
+	background-position: 0 0;
+}
+.ribbonsprite.absent-minded-mark {
+	background-position: calc(-128px / var(--background-adjust)) 0;
+}
+.ribbonsprite.alert-ribbon {
+	background-position: calc(-256px / var(--background-adjust)) 0;
+}
+.ribbonsprite.alola-champion-ribbon {
+	background-position: calc(-384px / var(--background-adjust)) 0;
+}
+.ribbonsprite.alpha-mark {
+	background-position: calc(-512px / var(--background-adjust)) 0;
+}
+.ribbonsprite.angry-mark {
+	background-position: calc(-640px / var(--background-adjust)) 0;
+}
+.ribbonsprite.artist-ribbon {
+	background-position: calc(-768px / var(--background-adjust)) 0;
+}
+.ribbonsprite.battle-champion-ribbon {
+	background-position: calc(-896px / var(--background-adjust)) 0;
+}
+.ribbonsprite.battle-memory-ribbon {
+	background-position: calc(-1024px / var(--background-adjust)) 0;
+}
+.ribbonsprite.battle-memory-ribbon-gold {
+	background-position: calc(-1152px / var(--background-adjust)) 0;
+}
+.ribbonsprite.battle-royal-master-ribbon {
+	background-position: calc(-1280px / var(--background-adjust)) 0;
+}
+.ribbonsprite.battle-tree-great-ribbon {
+	background-position: calc(-1408px / var(--background-adjust)) 0;
+}
+.ribbonsprite.battle-tree-master-ribbon {
+	background-position: calc(-1536px / var(--background-adjust)) 0;
+}
+.ribbonsprite.beauty-master-ribbon {
+	background-position: calc(-1664px / var(--background-adjust)) 0;
+}
+.ribbonsprite.beauty-ribbon-great-sinnoh {
+	background-position: calc(-1792px / var(--background-adjust)) 0;
+}
+.ribbonsprite.beauty-ribbon-hoenn {
+	background-position: calc(-1920px / var(--background-adjust)) 0;
+}
+.ribbonsprite.beauty-ribbon-hyper-hoenn {
+	background-position: calc(-2048px / var(--background-adjust)) 0;
+}
+.ribbonsprite.beauty-ribbon-master-hoenn {
+	background-position: calc(-2176px / var(--background-adjust)) 0;
+}
+.ribbonsprite.beauty-ribbon-master-sinnoh {
+	background-position: calc(-2304px / var(--background-adjust)) 0;
+}
+.ribbonsprite.beauty-ribbon-sinnoh {
+	background-position: calc(-2432px / var(--background-adjust)) 0;
+}
+.ribbonsprite.beauty-ribbon-super-hoenn {
+	background-position: calc(-2560px / var(--background-adjust)) 0;
+}
+.ribbonsprite.beauty-ribbon-ultra-sinnoh {
+	background-position: calc(-2688px / var(--background-adjust)) 0;
+}
+.ribbonsprite.best-friends-ribbon {
+	background-position: calc(-2816px / var(--background-adjust)) 0;
+}
+.ribbonsprite.birthday-ribbon {
+	background-position: calc(-2944px / var(--background-adjust)) 0;
+}
+.ribbonsprite.blizzard-mark {
+	background-position: calc(-3072px / var(--background-adjust)) 0;
+}
+.ribbonsprite.calmness-mark {
+	background-position: calc(-3200px / var(--background-adjust)) 0;
+}
+.ribbonsprite.careless-ribbon {
+	background-position: calc(-3328px / var(--background-adjust)) 0;
+}
+.ribbonsprite.champion-ribbon {
+	background-position: calc(-3456px / var(--background-adjust)) 0;
+}
+.ribbonsprite.charismatic-mark {
+	background-position: calc(-3584px / var(--background-adjust)) 0;
+}
+.ribbonsprite.classic-ribbon {
+	background-position: calc(-3712px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cleverness-master-ribbon {
+	background-position: calc(-3840px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cloudy-mark {
+	background-position: calc(-3968px / var(--background-adjust)) 0;
+}
+.ribbonsprite.contest-memory-ribbon {
+	background-position: calc(-4096px / var(--background-adjust)) 0;
+}
+.ribbonsprite.contest-memory-ribbon-gold {
+	background-position: calc(-4224px / var(--background-adjust)) 0;
+}
+.ribbonsprite.contest-star-ribbon {
+	background-position: calc(-4352px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cool-ribbon-great-sinnoh {
+	background-position: calc(-4480px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cool-ribbon-hoenn {
+	background-position: calc(-4608px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cool-ribbon-hyper-hoenn {
+	background-position: calc(-4736px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cool-ribbon-master-hoenn {
+	background-position: calc(-4864px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cool-ribbon-master-sinnoh {
+	background-position: calc(-4992px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cool-ribbon-sinnoh {
+	background-position: calc(-5120px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cool-ribbon-super-hoenn {
+	background-position: calc(-5248px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cool-ribbon-ultra-sinnoh {
+	background-position: calc(-5376px / var(--background-adjust)) 0;
+}
+.ribbonsprite.coolness-master-ribbon {
+	background-position: calc(-5504px / var(--background-adjust)) 0;
+}
+.ribbonsprite.country-ribbon {
+	background-position: calc(-5632px / var(--background-adjust)) 0;
+}
+.ribbonsprite.crafty-mark {
+	background-position: calc(-5760px / var(--background-adjust)) 0;
+}
+.ribbonsprite.curry-mark {
+	background-position: calc(-5888px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cute-ribbon-great-sinnoh {
+	background-position: calc(-6016px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cute-ribbon-hoenn {
+	background-position: calc(-6144px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cute-ribbon-hyper-hoenn {
+	background-position: calc(-6272px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cute-ribbon-master-hoenn {
+	background-position: calc(-6400px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cute-ribbon-master-sinnoh {
+	background-position: calc(-6528px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cute-ribbon-sinnoh {
+	background-position: calc(-6656px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cute-ribbon-super-hoenn {
+	background-position: calc(-6784px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cute-ribbon-ultra-sinnoh {
+	background-position: calc(-6912px / var(--background-adjust)) 0;
+}
+.ribbonsprite.cuteness-master-ribbon {
+	background-position: calc(-7040px / var(--background-adjust)) 0;
+}
+.ribbonsprite.dawn-mark {
+	background-position: calc(-7168px / var(--background-adjust)) 0;
+}
+.ribbonsprite.destiny-mark {
+	background-position: calc(-7296px / var(--background-adjust)) 0;
+}
+.ribbonsprite.double-ability-ribbon {
+	background-position: calc(-7424px / var(--background-adjust)) 0;
+}
+.ribbonsprite.downcast-ribbon {
+	background-position: calc(-7552px / var(--background-adjust)) 0;
+}
+.ribbonsprite.dry-mark {
+	background-position: calc(-7680px / var(--background-adjust)) 0;
+}
+.ribbonsprite.dusk-mark {
+	background-position: calc(-7808px / var(--background-adjust)) 0;
+}
+.ribbonsprite.earth-ribbon {
+	background-position: calc(-7936px / var(--background-adjust)) 0;
+}
+.ribbonsprite.effort-ribbon {
+	background-position: calc(-8064px / var(--background-adjust)) 0;
+}
+.ribbonsprite.event-ribbon {
+	background-position: calc(-8192px / var(--background-adjust)) 0;
+}
+.ribbonsprite.excited-mark {
+	background-position: calc(-8320px / var(--background-adjust)) 0;
+}
+.ribbonsprite.expert-battler-ribbon {
+	background-position: calc(-8448px / var(--background-adjust)) 0;
+}
+.ribbonsprite.ferocious-mark {
+	background-position: calc(-8576px / var(--background-adjust)) 0;
+}
+.ribbonsprite.fishing-mark {
+	background-position: calc(-8704px / var(--background-adjust)) 0;
+}
+.ribbonsprite.flustered-mark {
+	background-position: calc(-8832px / var(--background-adjust)) 0;
+}
+.ribbonsprite.footprint-ribbon {
+	background-position: calc(-8960px / var(--background-adjust)) 0;
+}
+.ribbonsprite.galar-champion-ribbon {
+	background-position: calc(-9088px / var(--background-adjust)) 0;
+}
+.ribbonsprite.gorgeous-ribbon {
+	background-position: calc(-9216px / var(--background-adjust)) 0;
+}
+.ribbonsprite.gorgeous-royal-ribbon {
+	background-position: calc(-9344px / var(--background-adjust)) 0;
+}
+.ribbonsprite.gourmand-mark {
+	background-position: calc(-9472px / var(--background-adjust)) 0;
+}
+.ribbonsprite.great-ability-ribbon {
+	background-position: calc(-9600px / var(--background-adjust)) 0;
+}
+.ribbonsprite.hisui-ribbon {
+	background-position: calc(-9728px / var(--background-adjust)) 0;
+}
+.ribbonsprite.hoenn-champion-ribbon {
+	background-position: calc(-9856px / var(--background-adjust)) 0;
+}
+.ribbonsprite.humble-mark {
+	background-position: calc(-9984px / var(--background-adjust)) 0;
+}
+.ribbonsprite.intellectual-mark {
+	background-position: calc(-10112px / var(--background-adjust)) 0;
+}
+.ribbonsprite.intense-mark {
+	background-position: calc(-10240px / var(--background-adjust)) 0;
+}
+.ribbonsprite.itemfinder-mark {
+	background-position: calc(-10368px / var(--background-adjust)) 0;
+}
+.ribbonsprite.jittery-mark {
+	background-position: calc(-10496px / var(--background-adjust)) 0;
+}
+.ribbonsprite.joyful-mark {
+	background-position: calc(-10624px / var(--background-adjust)) 0;
+}
+.ribbonsprite.jumbo-mark {
+	background-position: calc(-10752px / var(--background-adjust)) 0;
+}
+.ribbonsprite.kalos-champion-ribbon {
+	background-position: calc(-10880px / var(--background-adjust)) 0;
+}
+.ribbonsprite.kindly-mark {
+	background-position: calc(-11008px / var(--background-adjust)) 0;
+}
+.ribbonsprite.legend-ribbon {
+	background-position: calc(-11136px / var(--background-adjust)) 0;
+}
+.ribbonsprite.lunchtime-mark {
+	background-position: calc(-11264px / var(--background-adjust)) 0;
+}
+.ribbonsprite.master-rank-ribbon {
+	background-position: calc(-11392px / var(--background-adjust)) 0;
+}
+.ribbonsprite.mightiest-mark {
+	background-position: calc(-11520px / var(--background-adjust)) 0;
+}
+.ribbonsprite.mini-mark {
+	background-position: calc(-11648px / var(--background-adjust)) 0;
+}
+.ribbonsprite.misty-mark {
+	background-position: calc(-11776px / var(--background-adjust)) 0;
+}
+.ribbonsprite.multi-ability-ribbon {
+	background-position: calc(-11904px / var(--background-adjust)) 0;
+}
+.ribbonsprite.national-ribbon {
+	background-position: calc(-12032px / var(--background-adjust)) 0;
+}
+.ribbonsprite.pair-ability-ribbon {
+	background-position: calc(-12160px / var(--background-adjust)) 0;
+}
+.ribbonsprite.paldea-champion-ribbon {
+	background-position: calc(-12288px / var(--background-adjust)) 0;
+}
+.ribbonsprite.partner-mark {
+	background-position: calc(-12416px / var(--background-adjust)) 0;
+}
+.ribbonsprite.partner-ribbon {
+	background-position: calc(-12544px / var(--background-adjust)) 0;
+}
+.ribbonsprite.peeved-mark {
+	background-position: calc(-12672px / var(--background-adjust)) 0;
+}
+.ribbonsprite.premier-ribbon {
+	background-position: calc(-12800px / var(--background-adjust)) 0;
+}
+.ribbonsprite.prideful-mark {
+	background-position: calc(-12928px / var(--background-adjust)) 0;
+}
+.ribbonsprite.pumped-up-mark {
+	background-position: calc(-13056px / var(--background-adjust)) 0;
+}
+.ribbonsprite.rainy-mark {
+	background-position: calc(-13184px / var(--background-adjust)) 0;
+}
+.ribbonsprite.rare-mark {
+	background-position: calc(-13312px / var(--background-adjust)) 0;
+}
+.ribbonsprite.relax-ribbon {
+	background-position: calc(-13440px / var(--background-adjust)) 0;
+}
+.ribbonsprite.rowdy-mark {
+	background-position: calc(-13568px / var(--background-adjust)) 0;
+}
+.ribbonsprite.royal-ribbon {
+	background-position: calc(-13696px / var(--background-adjust)) 0;
+}
+.ribbonsprite.sandstorm-mark {
+	background-position: calc(-13824px / var(--background-adjust)) 0;
+}
+.ribbonsprite.scowling-mark {
+	background-position: calc(-13952px / var(--background-adjust)) 0;
+}
+.ribbonsprite.shock-ribbon {
+	background-position: calc(-14080px / var(--background-adjust)) 0;
+}
+.ribbonsprite.sinnoh-champion-ribbon {
+	background-position: calc(-14208px / var(--background-adjust)) 0;
+}
+.ribbonsprite.skillful-battler-ribbon {
+	background-position: calc(-14336px / var(--background-adjust)) 0;
+}
+.ribbonsprite.sleepy-time-mark {
+	background-position: calc(-14464px / var(--background-adjust)) 0;
+}
+.ribbonsprite.slump-mark {
+	background-position: calc(-14592px / var(--background-adjust)) 0;
+}
+.ribbonsprite.smart-ribbon-great-sinnoh {
+	background-position: calc(-14720px / var(--background-adjust)) 0;
+}
+.ribbonsprite.smart-ribbon-hoenn {
+	background-position: calc(-14848px / var(--background-adjust)) 0;
+}
+.ribbonsprite.smart-ribbon-hyper-hoenn {
+	background-position: calc(-14976px / var(--background-adjust)) 0;
+}
+.ribbonsprite.smart-ribbon-master-hoenn {
+	background-position: calc(-15104px / var(--background-adjust)) 0;
+}
+.ribbonsprite.smart-ribbon-master-sinnoh {
+	background-position: calc(-15232px / var(--background-adjust)) 0;
+}
+.ribbonsprite.smart-ribbon-sinnoh {
+	background-position: calc(-15360px / var(--background-adjust)) 0;
+}
+.ribbonsprite.smart-ribbon-super-hoenn {
+	background-position: calc(-15488px / var(--background-adjust)) 0;
+}
+.ribbonsprite.smart-ribbon-ultra-sinnoh {
+	background-position: calc(-15616px / var(--background-adjust)) 0;
+}
+.ribbonsprite.smile-ribbon {
+	background-position: calc(-15744px / var(--background-adjust)) 0;
+}
+.ribbonsprite.smiley-mark {
+	background-position: calc(-15872px / var(--background-adjust)) 0;
+}
+.ribbonsprite.snooze-ribbon {
+	background-position: calc(-16000px / var(--background-adjust)) 0;
+}
+.ribbonsprite.snowy-mark {
+	background-position: calc(-16128px / var(--background-adjust)) 0;
+}
+.ribbonsprite.souvenir-ribbon {
+	background-position: calc(-16256px / var(--background-adjust)) 0;
+}
+.ribbonsprite.special-ribbon {
+	background-position: calc(-16384px / var(--background-adjust)) 0;
+}
+.ribbonsprite.stormy-mark {
+	background-position: calc(-16512px / var(--background-adjust)) 0;
+}
+.ribbonsprite.teary-mark {
+	background-position: calc(-16640px / var(--background-adjust)) 0;
+}
+.ribbonsprite.thorny-mark {
+	background-position: calc(-16768px / var(--background-adjust)) 0;
+}
+.ribbonsprite.titan-mark {
+	background-position: calc(-16896px / var(--background-adjust)) 0;
+}
+.ribbonsprite.tough-ribbon-great-sinnoh {
+	background-position: calc(-17024px / var(--background-adjust)) 0;
+}
+.ribbonsprite.tough-ribbon-hoenn {
+	background-position: calc(-17152px / var(--background-adjust)) 0;
+}
+.ribbonsprite.tough-ribbon-hyper-hoenn {
+	background-position: calc(-17280px / var(--background-adjust)) 0;
+}
+.ribbonsprite.tough-ribbon-master-hoenn {
+	background-position: calc(-17408px / var(--background-adjust)) 0;
+}
+.ribbonsprite.tough-ribbon-master-sinnoh {
+	background-position: calc(-17536px / var(--background-adjust)) 0;
+}
+.ribbonsprite.tough-ribbon-sinnoh {
+	background-position: calc(-17664px / var(--background-adjust)) 0;
+}
+.ribbonsprite.tough-ribbon-super-hoenn {
+	background-position: calc(-17792px / var(--background-adjust)) 0;
+}
+.ribbonsprite.tough-ribbon-ultra-sinnoh {
+	background-position: calc(-17920px / var(--background-adjust)) 0;
+}
+.ribbonsprite.toughness-master-ribbon {
+	background-position: calc(-18048px / var(--background-adjust)) 0;
+}
+.ribbonsprite.tower-master-ribbon {
+	background-position: calc(-18176px / var(--background-adjust)) 0;
+}
+.ribbonsprite.training-ribbon {
+	background-position: calc(-18304px / var(--background-adjust)) 0;
+}
+.ribbonsprite.twinkling-star-ribbon {
+	background-position: calc(-18432px / var(--background-adjust)) 0;
+}
+.ribbonsprite.uncommon-mark {
+	background-position: calc(-18560px / var(--background-adjust)) 0;
+}
+.ribbonsprite.unsure-mark {
+	background-position: calc(-18688px / var(--background-adjust)) 0;
+}
+.ribbonsprite.upbeat-mark {
+	background-position: calc(-18816px / var(--background-adjust)) 0;
+}
+.ribbonsprite.victory-ribbon {
+	background-position: calc(-18944px / var(--background-adjust)) 0;
+}
+.ribbonsprite.vigor-mark {
+	background-position: calc(-19072px / var(--background-adjust)) 0;
+}
+.ribbonsprite.winning-ribbon {
+	background-position: calc(-19200px / var(--background-adjust)) 0;
+}
+.ribbonsprite.wishing-ribbon {
+	background-position: calc(-19328px / var(--background-adjust)) 0;
+}
+.ribbonsprite.world-ability-ribbon {
+	background-position: calc(-19456px / var(--background-adjust)) 0;
+}
+.ribbonsprite.world-champion-ribbon {
+	background-position: calc(-19584px / var(--background-adjust)) 0;
+}
+.ribbonsprite.world-ribbon {
+	background-position: calc(-19712px / var(--background-adjust)) 0;
+}
+.ribbonsprite.zero-energy-mark {
+	background-position: calc(-19840px / var(--background-adjust)) 0;
+}
+.ribbonsprite.zoned-out-mark {
+	background-position: calc(-19968px / var(--background-adjust)) 0;
 }
