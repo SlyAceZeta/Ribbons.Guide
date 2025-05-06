@@ -1,7 +1,7 @@
 {
 	"5 May 2025": [
-		"Added popovers to Ribbons and Marks in cards",
-		"Ribbons bundled into the Memory Ribbons will appear in their popovers",
+		"Added popovers to Ribbons and Marks in cards <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/107'>#107</a> (thanks jherd95!)",
+		"Ribbons bundled into the Memory Ribbons will appear in their popovers <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/102'>#102</a> (thanks Kobaru The Kame!)",
 		"Popovers now render above the Ribbon or Mark, rather than to the side",
 		"Popovers no longer appear when hovering over Ribbons and Marks, matching mobile behavior and reducing animation bloat and potential bugs",
 		"Ribbons.Guide now reloads when changing the site's language",
