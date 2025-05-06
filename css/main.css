@@ -399,6 +399,7 @@ a:not(:hover):not(:focus) {
 	--bs-card-border-color: var(--bs-border-color);
 	--bs-card-bg: var(--rg-card-bg);
 	--bs-card-color: var(--rg-card-color);
+	--bs-card-cap-padding-x: 0.75em;
 	height: 100%;
 }
 .card-header,
@@ -406,9 +407,6 @@ a:not(:hover):not(:focus) {
 	--bs-card-cap-bg: var(--rg-card-cap-bg);
 	--bs-card-cap-color: var(--rg-card-color);
 	border: none;
-}
-.card-header {
-	padding-right: 0.75em;
 }
 .card-header img,
 .card-footer img {
@@ -480,8 +478,7 @@ html[data-oldribbons="never"] .old-ribbon-to-merge {
 }
 html[data-cardview="condensed"] .card-footer,
 html[data-footerextrainfo="false"] .card-footer {
-	padding-top: .25rem !important;
-	padding-bottom: .25rem !important;
+	--bs-card-cap-padding-y: 0.25rem;
 }
 html[data-footerextrainfo="false"] .card-footer-top {
 	display: none!important;
