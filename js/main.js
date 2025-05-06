@@ -1192,11 +1192,11 @@ function createCard(p, id){
 
 	/* header */
 	var $cardHeaderLeft = $("<div>", { "class": "card-header-fullname" });
-	var $cardHeaderBallMain = $("<img>", { "class": "align-text-top me-2", "src": "img/balls/"+p.ball+".png", "alt": balls[p.ball]["eng"], "title": balls[p.ball]["eng"] });
+	var $cardHeaderBallMain = $("<span>", { "class": "align-text-top me-2 ball ball-" + p.ball, "title": balls[p.ball]["eng"] });
 	var $cardHeaderBallStrange = "";
 	if(p.currentgame && ((p.currentgame !== "pla" && p.currentgame !== "home" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
 		if(p.strangeball !== "disabled"){
-			$cardHeaderBallStrange = $("<img>", { "class": "align-text-top me-2", "src": "img/balls/strange.png", "alt": "Strange Ball", "title": "Strange Ball" });
+			$cardHeaderBallStrange = $("<span>", { "class": "align-text-top me-2 ball ball-strange", "title": "Strange Ball" });
 			if(p.strangeball == ""){
 				$cardHeaderBallMain.addClass("card-header-ball-selected");
 				$cardHeaderBallStrange.addClass("card-header-ball-strange");
@@ -1821,7 +1821,7 @@ function selectCustomOption(o){
 	}
 	if(result.indexOf("pokemonFormBall") > 0 || result.indexOf("filterFormBall") > 0){
 		var $ball = $("<span>")
-			.append($("<img>", { "class": selectIconClass, "src": "img/balls/" + o.id + ".png" }));
+			.append($("<span>", { "class": selectIconClass + " ball ball-" + o.id }));
 		for(var oed in o.element.dataset){
 			if(oed.indexOf("lang") == 0){
 				lang = oed.substring(4).toLowerCase();
@@ -2128,8 +2128,8 @@ function initRun(){
 				$ballOption.attr("data-lang-" + lang, balls[b][lang]);
 			}
 			$("#pokemonFormBall, #filterFormBall").append($ballOption);
-			$("#imageHoldingArea").append($("<img>", { "src": "img/balls/" + b + ".png" }));
 		}
+		$("#imageHoldingArea").append($("<img>", { "src": "img/balls.png" }));
 		for(var g in games){
 			if(games[g].combo || games[g].solo){
 				$("#filterFormTargetGames").append(new Option(games[g].name, g));

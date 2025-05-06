@@ -248,6 +248,8 @@ label[for="pokemonFormShiny-square"] {
 	height: 24px;
 	margin-top: -2px;
 	margin-right: 5px;
+	display: inline-block;
+	vertical-align: middle;
 }
 #pokemonFormSections-ribbons .list-group-item {
 	--bs-list-group-item-padding-x: 0.5rem;
@@ -437,14 +439,13 @@ a:not(:hover):not(:focus) {
 .card-header-name {
 	font-size: 1.15em;
 }
-.card-header-ball-strange {
-	display: none;
+.card-header .ball,
+html[data-autostrangeball="true"] .card-header-ball-strange {
+	display: inline-block;
 }
+.card-header-ball-strange,
 html[data-autostrangeball="true"] .card-header-ball-selected {
 	display: none;
-}
-html[data-autostrangeball="true"] .card-header-ball-strange {
-	display: inline;
 }
 .card-header-shiny,
 .card-footer-origin,
@@ -1156,4 +1157,121 @@ html[lang="zh-Hans"] .translation-chs {
 	order: 1054;
 }
 
-/* TODO: change all Pokemon images to use a spritesheet */
+.ball {
+	background-image: url("../img/balls.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+}
+.ball-beast {
+	background-position: 0 0;
+}
+.ball-cherish {
+	background-position: -20px 0;
+}
+.ball-dive {
+	background-position: -40px 0;
+}
+.ball-dream {
+	background-position: -60px 0;
+}
+.ball-dusk {
+	background-position: -80px 0;
+}
+.ball-fast {
+	background-position: -100px 0;
+}
+.ball-feather {
+	background-position: -120px 0;
+}
+.ball-friend {
+	background-position: -140px 0;
+}
+.ball-gigaton {
+	background-position: -160px 0;
+}
+.ball-great {
+	background-position: -180px 0;
+}
+.ball-heal {
+	background-position: -200px 0;
+}
+.ball-heavy {
+	background-position: -220px 0;
+}
+.ball-hisuian-great {
+	background-position: -240px 0;
+}
+.ball-hisuian-heavy {
+	background-position: -260px 0;
+}
+.ball-hisuian-poke {
+	background-position: -280px 0;
+}
+.ball-hisuian-ultra {
+	background-position: -300px 0;
+}
+.ball-jet {
+	background-position: -320px 0;
+}
+.ball-leaden {
+	background-position: -340px 0;
+}
+.ball-level {
+	background-position: -360px 0;
+}
+.ball-love {
+	background-position: -380px 0;
+}
+.ball-lure {
+	background-position: -400px 0;
+}
+.ball-luxury {
+	background-position: -420px 0;
+}
+.ball-master {
+	background-position: -440px 0;
+}
+.ball-moon {
+	background-position: -460px 0;
+}
+.ball-nest {
+	background-position: -480px 0;
+}
+.ball-net {
+	background-position: -500px 0;
+}
+.ball-origin {
+	background-position: -520px 0;
+}
+.ball-poke {
+	background-position: -540px 0;
+}
+.ball-premier {
+	background-position: -560px 0;
+}
+.ball-quick {
+	background-position: -580px 0;
+}
+.ball-repeat {
+	background-position: -600px 0;
+}
+.ball-safari {
+	background-position: -620px 0;
+}
+.ball-sport {
+	background-position: -640px 0;
+}
+.ball-strange {
+	background-position: -660px 0;
+}
+.ball-timer {
+	background-position: -680px 0;
+}
+.ball-ultra {
+	background-position: -700px 0;
+}
+.ball-wing {
+	background-position: -720px 0;
+}
