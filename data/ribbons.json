@@ -550,12 +550,12 @@
 		],
 		"names": {
 			"eng": "Champion Ribbon",
-			"spa": "Cinta Campeón / Cinta de Campeón",
+			"spa": "Cinta Campeón",
 			"fre": "Ruban Maître",
 			"ger": "Band des Champs",
 			"ita": "Fiocco Campione",
-			"jpn": "チャンプリボン / ホウエン　チャンプリボン",
-			"kor": "챔피언리본 / 호연챔피언리본",
+			"jpn": "チャンプリボン",
+			"kor": "챔피언리본",
 			"chs": "冠军奖章",
 			"cht": "冠軍獎章"
 		},
@@ -711,8 +711,8 @@
 			"eng": "Effort Ribbon",
 			"spa": "Cinta Esfuerzo",
 			"fre": "Ruban Effort",
-			"ger": "Fleißband / Fleiß-Band",
-			"ita": "Fiocco Merito / Fiocco di Merito",
+			"ger": "Fleißband",
+			"ita": "Fiocco Merito",
 			"jpn": "がんばリボン",
 			"kor": "노력리본",
 			"chs": "努力奖章",
@@ -871,7 +871,6 @@
 			"kor": "월드리본",
 			"chs": "世界奖章",
 			"cht": "世界獎章"
-
 		},
 		"descs": {
 			"eng": "A Ribbon awarded to a Pokémon League Champion.",
@@ -906,10 +905,10 @@
 			"sp"
 		],
 		"names": {
-			"eng": "Sinnoh Champion Ribbon / Sinnoh Champ Ribbon",
+			"eng": "Sinnoh Champion Ribbon",
 			"spa": "Cinta Campeón de Sinnoh",
-			"fre": "Ruban Maître de Sinnoh / Ruban Maître Sinnoh",
-			"ger": "Band des Sinnoh-Champs / Band des Champs von Sinnoh",
+			"fre": "Ruban Maître de Sinnoh",
+			"ger": "Band des Sinnoh-Champs",
 			"ita": "Fiocco Campione Sinnoh",
 			"jpn": "シンオウ　チャンプリボン",
 			"kor": "신오챔피언리본",
@@ -1242,7 +1241,7 @@
 			"eng": "Downcast Ribbon",
 			"spa": "Cinta Abatimiento",
 			"fre": "Ruban Déprime",
-			"ger": "Band der Traurigkeit / Band des Niederschlags",
+			"ger": "Band der Traurigkeit",
 			"ita": "Fiocco Sconforto",
 			"jpn": "しょんぼリボン",
 			"kor": "풀죽기리본",
@@ -1489,7 +1488,6 @@
 			"kor": "고저스리본",
 			"chs": "豪华奖章",
 			"cht": "豪華獎章"
-
 		},
 		"descs": {
 			"eng": "An extraordinarily gorgeous and extravagant Ribbon.",
@@ -1625,7 +1623,7 @@
 			"eng": "Footprint Ribbon",
 			"spa": "Cinta Huella",
 			"fre": "Ruban Empreinte",
-			"ger": "Fußabdruckband / Fußabdruck-Band",
+			"ger": "Fußabdruckband",
 			"ita": "Fiocco Orma",
 			"jpn": "あしあとリボン",
 			"kor": "발자국리본",
