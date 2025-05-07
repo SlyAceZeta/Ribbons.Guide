@@ -1,6 +1,9 @@
 {
-	"6 May 2025": [
+	"7 May 2025": [
 		"\\Have you found Ribbons.Guide useful? If you wish to support me, <a href='https://ko-fi.com/slyacezeta'>I have a Ko-fi</a>!",
+		"Fixed display issues with Poké Ball, Ribbon, and Mark images in non-Firefox browsers (thanks Josh Lemmy, Skiametric, and Z!)"
+	],
+	"6 May 2025": [
 		"Poké Ball, Ribbon, and Mark images are all now contained in spritesheets, drastically reducing the number of HTTP requests <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/103'>#103</a>; if you run into any issues, please report them on <a href='https://discord.gg/frv7dpWzDG'>Discord</a> or <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a>!",
 		"Except for first load, page loading speed should be slightly increased for all users",
 		"Increased horizontal padding around Ribbons and Marks in the add/edit form when using the grid view",
