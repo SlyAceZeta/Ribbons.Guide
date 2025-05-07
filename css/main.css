@@ -618,6 +618,14 @@ html[lang="zh-Hans"] .translation-chs {
 	opacity: 0.85;
 }
 
+/* printing */
+@media print {
+	body {
+		print-color-adjust: exact;
+		-webkit-print-color-adjust: exact;
+	}
+}
+
 /* ribbon order */
 .card-ribbons .paldea-champion-ribbon {
 	order: 1;
@@ -1151,9 +1159,10 @@ html[lang="zh-Hans"] .translation-chs {
 	order: 1054;
 }
 
+/* ball spritesheet */
 .ball {
 	background-image: url("../img/balls.png");
-	background-size: cover;
+	background-size: auto 100%; /* https://stackoverflow.com/questions/34642434/when-zooming-on-chrome-image-sprite-becomes-misaligned */
 	background-repeat: no-repeat;
 	width: 20px;
 	height: 20px;
@@ -1270,11 +1279,12 @@ html[lang="zh-Hans"] .translation-chs {
 	background-position: -720px 0;
 }
 
+/* ribbon spritesheet */
 .ribbonsprite {
 	--background-adjust: 4;
 	background-image: url("../img/ribbons.png");
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: auto 100%; /* https://stackoverflow.com/questions/34642434/when-zooming-on-chrome-image-sprite-becomes-misaligned */
 	width: 32px;
 	height: 32px;
 	display: inline-block;
