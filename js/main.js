@@ -2236,6 +2236,9 @@ function initRun(){
 				}
 			} else {
 				$ribbonRowInfoName.append($("<span>", { "class": "badge text-bg-secondary rounded-pill" }).text("E"));
+				if(r == "jumbo-mark" || r== "mini-mark"){
+					formRibbonSelect = formRibbonSelect + ", #filterFormTargetRibbons";
+				}
 			}
 			if(!r.startsWith("contest-memory-ribbon") && !r.startsWith("battle-memory-ribbon")){
 				$(formRibbonSelect).append($ribbonOption);
