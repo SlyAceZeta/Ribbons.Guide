@@ -57,17 +57,31 @@
 					<span class="ribbonsprite best-friends-ribbon align-middle" role="img" aria-label="Logo"></span>
 					<span class="text-uppercase fw-bold align-middle">Ribbons.Guide</span>
 				</h1>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse justify-content-between" id="navbarLinks">
-					<div class="navbar-nav">
-						<!--<button type="button" class="nav-link py-1 active" aria-current="page">Tracker</button>-->
+				<div class="offcanvas offcanvas-end justify-content-between" tabindex="-1" id="navbarLinks" aria-label="navbarLinksLabel">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title text-uppercase fw-bold" id="navbarLinksLabel">Navigation</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 					</div>
-					<div class="navbar-nav">
-						<button type="button" class="nav-link py-1" id="headerNavDataLink">Data</button>
-						<button type="button" class="nav-link py-1" id="headerNavSettingsLink">Settings</button>
-						<button type="button" class="nav-link py-1" data-bs-toggle="modal" data-bs-target="#modalAbout">About</button>
+					<div class="offcanvas-body"><!--
+						<ul class="navbar-nav justify-content-start flex-grow-1">
+							<li class="nav-item">
+								<button type="button" class="nav-link active" aria-current="page">Tracker</button>
+							</li>
+						</ul>-->
+						<ul class="navbar-nav justify-content-end flex-grow-1">
+							<li class="nav-item">
+								<button type="button" class="nav-link" id="headerNavDataLink">Data</button>
+							</li>
+							<li class="nav-item">
+								<button type="button" class="nav-link" id="headerNavSettingsLink">Settings</button>
+							</li>
+							<li class="nav-item">
+								<button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#modalAbout">About</button>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -325,7 +339,7 @@
 										</div>
 										<div class="dropdown ms-2 flex-grow-1">
 											<button class="btn btn-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">Toggle all...</button>
-											<ul id="pokemonFormRibbonToggle" class="dropdown-menu dropdown-menu-end	">
+											<ul id="pokemonFormRibbonToggle" class="dropdown-menu dropdown-menu-end">
 												<li><button class="dropdown-item" type="button" data-gen="3">introduced in Gen III</button></li>
 												<li><button class="dropdown-item" type="button" data-gen="4">introduced in Gen IV</button></li>
 												<li><button class="dropdown-item" type="button" data-gen="6">introduced in Gen VI</button></li>
