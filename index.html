@@ -54,7 +54,7 @@
 		<header id="headerNav" class="navbar navbar-expand-lg sticky-top border-top border-3">
 			<div class="container-fluid">
 				<h1 class="navbar-brand my-0 py-0">
-					<span class="ribbonsprite best-friends-ribbon align-middle" role="img" aria-label="Logo"></span>
+					<span class="ribbonsprite best-friends-ribbon align-middle me-1" role="img" aria-label="Logo"></span>
 					<span class="text-uppercase fw-bold align-middle">Ribbons.Guide</span>
 				</h1>
 				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,18 +68,50 @@
 					<div class="offcanvas-body"><!--
 						<ul class="navbar-nav justify-content-start flex-grow-1">
 							<li class="nav-item">
-								<button type="button" class="nav-link active" aria-current="page">Tracker</button>
+								<button type="button" class="nav-link active" aria-current="page">
+									<img src="img/ui/pokeball.svg" alt="Tracker" class="align-middle me-2 light-invert"><span class="align-middle">Tracker</span>
+								</button>
+							</li>
+							<li class="nav-item">
+								<button type="button" class="nav-link">
+									<img src="img/ui/ribbons.svg" alt="Ribbons" class="align-text-bottom me-2 light-invert"><span>Ribbons</span>
+								</button>
+							</li>
+							<li class="nav-item">
+								<button type="button" class="nav-link">
+									<img src="img/origins/lets-go.png" alt="Pokémon" width="24" height="24" class="align-text-bottom me-2 light-invert"><span>Pokémon</span>
+								</button>
 							</li>
 						</ul>-->
 						<ul class="navbar-nav justify-content-end flex-grow-1">
 							<li class="nav-item">
-								<button type="button" class="nav-link" id="headerNavDataLink">Data</button>
+								<button type="button" class="nav-link" id="headerNavDataLink">
+									<img src="img/ui/data.svg" alt="Data" class="align-text-bottom me-2 light-invert"><!--
+									--><span>Data</span>
+								</button>
 							</li>
 							<li class="nav-item">
-								<button type="button" class="nav-link" id="headerNavSettingsLink">Settings</button>
+								<button type="button" class="nav-link" id="headerNavSettingsLink">
+									<img src="img/ui/settings.svg" alt="Settings" class="align-text-bottom me-2 light-invert"><!--
+									--><span>Settings</span>
+								</button>
 							</li>
 							<li class="nav-item">
-								<button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#modalAbout">About</button>
+								<button type="button" class="nav-link" id="modalAboutViewChangelog">
+									<img src="img/ui/changelog.svg" alt="Changelog" class="align-text-bottom me-2 light-invert"><!--
+									--><span>Changelog</span>
+								</button>
+							</li>
+							<li class="nav-item">
+								<button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#modalAbout">
+									<img src="img/ui/info.svg" alt="About" class="align-text-bottom me-2 light-invert"><!--
+									--><span>About</span>
+								</button>
+							</li>
+							<li class="nav-item d-flex justify-content-evenly my-3 d-lg-none">
+								<a href="https://discord.gg/frv7dpWzDG"><img src="img/ui/discord.svg" class="light-invert" width="28" height="28" alt="Discord"></a>
+								<a href="https://github.com/SlyAceZeta/Ribbons.Guide"><img src="img/ui/github.svg" class="light-invert" width="28" height="28" alt="GitHub"></a>
+								<a href="https://ko-fi.com/slyacezeta"><img src="img/ui/kofi.png" width="28" height="28" alt="Ko-fi"></a>
 							</li>
 						</ul>
 					</div>
@@ -865,9 +897,10 @@
 						<p>Pokémon, data, and images © Nintendo/Creatures Inc./Game Freak. This project is not affiliated with Nintendo, Creatures Inc., Game Freak, or The Pokémon Company. All original content and code is governed by the <a href="https://opensource.org/license/gpl-3-0/">GPL-3.0 license</a>.</p>
 					</div>
 					<div class="modal-footer justify-content-center">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="modalAboutViewChangelog">View Full Changelog</button>
-						<a class="btn btn-secondary" href="https://discord.gg/frv7dpWzDG"><img src="img/ui/discord.svg" alt="Discord"><span>Discord</span></a>
-						<a class="btn btn-secondary" href="https://github.com/SlyAceZeta/Ribbons.Guide"><img src="img/ui/github.svg" alt="GitHub"><span>GitHub</span></a>
+						<a class="btn btn-secondary d-none d-lg-inline" href="https://discord.gg/frv7dpWzDG"><img src="img/ui/discord.svg" alt="Discord"><span>Discord</span></a>
+						<a class="btn btn-secondary d-none d-lg-inline" href="https://github.com/SlyAceZeta/Ribbons.Guide"><img src="img/ui/github.svg" alt="GitHub"><span>GitHub</span></a>
+						<a class="btn btn-secondary d-none d-lg-inline" href="https://ko-fi.com/slyacezeta"><img src="img/ui/kofi.png" alt="Ko-fi"><span>Ko-fi</span></a>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
 					</div>
 				</div>
 			</div>
