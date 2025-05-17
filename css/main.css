@@ -82,6 +82,11 @@ body {
 	justify-content: space-between;
 	padding: 0 0 0.5rem 0;
 }
+@media (max-width: 400px){
+	.offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl {
+		--bs-offcanvas-width: 100%;
+	}
+}
 @media (min-width: 992px){
 	#headerNav .active {
 		border-bottom: var(--bs-border-width) var(--bs-border-style) var(--rg-header-text-active);
