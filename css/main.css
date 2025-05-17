@@ -473,6 +473,7 @@ a:not(:hover):not(:focus) {
 }
 .card-header-right {
 	height: 1.73rem;
+	align-items: flex-start;
 }
 .card-header .card-header-right > a,
 .card-header .card-header-right > a > img {
@@ -480,6 +481,7 @@ a:not(:hover):not(:focus) {
 }
 .card-header button {
 	width: 28px;
+	height: 28px;
 	background: url("../img/ui/clipboard.png") center center no-repeat;
 	background-size: 20px;
 }
@@ -520,6 +522,7 @@ html[data-autostrangeball="true"] .card-header-ball-selected {
 .card-ribbons {
 	height: 100%;
 	align-content: center;
+	align-items: flex-start;
 }
 .card-ribbons a {
 	margin: 1px;
