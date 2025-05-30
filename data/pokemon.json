@@ -15138,7 +15138,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"heracross": {
@@ -29777,7 +29778,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -31126,7 +31128,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"sigilyph": {
