@@ -1,6 +1,16 @@
 {
+	"4 July 2025": [
+		"Roaming Form Gimmighoul is no longer Shiny-locked (thanks patDX!)",
+		"Older Ribbon names are no longer displayed; all data will now be kept up-to-date with the latest main series game",
+		"Added Mini Mark and Jumbo Mark to \"Ribbons it can earn\" filter",
+		"Changelog has moved from the About modal back to the navigation menu",
+		"Mobile navigation menu is now a full-height menu, in preparation for future website sections",
+		"On mobile, social media links are moved from the About modal to the navigation menu",
+		"Attempting to fix some display issues with Ribbon and Mark images on iOS (thanks CeruleanSnake!)",
+		"Added Scizor, Helioptile, and Shuppet to Z-A filter per the key art",
+		"NOTE: Some themes may have some color issues, especially with the new mobile menu. This will be improved in a future update."
+	],
 	"7 May 2025": [
-		"\\Have you found Ribbons.Guide useful? If you wish to support me, <a href='https://ko-fi.com/slyacezeta'>I have a Ko-fi</a>!",
 		"Fixed display issues with Poké Ball, Ribbon, and Mark images in non-Firefox browsers (thanks Josh Lemmy, Skiametric, and Z!)"
 	],
 	"6 May 2025": [
