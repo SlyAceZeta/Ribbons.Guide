@@ -31,6 +31,8 @@ Ribbons.Guide also makes use of the following dependencies:
 - [Workbox](https://github.com/GoogleChrome/workbox)
 - [Google Fonts](https://fonts.google.com/)
 
+This project is tested with BrowserStack.
+
 ### License
 
 Pokémon, data, and images © Nintendo/Creatures Inc./Game Freak. This project is not affiliated with Nintendo, Creatures Inc., Game Freak, or The Pokémon Company.
