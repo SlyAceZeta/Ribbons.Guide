@@ -2112,12 +2112,12 @@ function initRun(){
 		}
 		$("#imageHoldingArea").append($("<img>", { "src": "img/balls.png" }));
 		for(var g in games){
-			if(games[g].combo || games[g].solo){
-				$("#filterFormTargetGames").append(new Option(games[g].name, g));
-			}
-			if(!games[g].combo){
-				// temporary until Legends: Z-A releases
-				if(g !== "plza"){
+			// temporary until Legends: Z-A releases
+			if(g !== "plza"){
+				if(games[g].combo || games[g].solo){
+					$("#filterFormTargetGames").append(new Option(games[g].name, g));
+				}
+				if(!games[g].combo){
 					$("#pokemonFormCurrentGame, #filterFormCurrentGame").append(new Option(games[g].name, g));
 				}
 			}
