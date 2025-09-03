@@ -613,7 +613,7 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 						}
 					} else if(ribbon == "master-rank-ribbon"){
 						// Mythicals can temporarily earn this in Gen 9, but not in Gen 8
-						if(mythical)
+						if(mythical){
 							if(ribbonGen == "8"){
 								continue;
 							} else {
