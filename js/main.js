@@ -611,6 +611,15 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 								}
 							}
 						}
+					} else if(ribbon == "master-rank-ribbon"){
+						// Mythicals can temporarily earn this in Gen 9, but not in Gen 8
+						if(mythical)
+							if(ribbonGen == "8"){
+								continue;
+							} else {
+								earnableWarnings.push("master-rank-sv");
+							}
+						}
 					}
 
 					// all checks passed
@@ -957,6 +966,7 @@ function ribbonChecklist(){
 			if(ribbonWarnings[w] == "footprint-virtualconsole") warningText = "If " + cardData.name + " reaches Lv.71 before transferring to Gen&nbsp;VII, the Footprint Ribbon will become unavailable!";
 			if(ribbonWarnings[w] == "footprint-met-level") warningText = cardData.name + "'s Met Level has not been set. The availability of the Footprint Ribbon cannot be determined.";
 			if(ribbonWarnings[w] == "footprint-beldum") warningText = "Evolving " + cardData.name + " into Metagross will make the Footprint Ribbon unavailable!";
+			if(ribbonWarnings[w] == "master-rank-sv") warningText = cardData.name + " can temporarily earn the Master Rank Ribbon during the current Scarlet/Violet regulation. This ends on January 3!";
 			if(ribbonWarnings[w] == "evolution-warning"){
 				var evoWarnName = getPokemonData(cardData.evolutionWarning, "names")["eng"];
 				var evoWarnForms = getPokemonData(cardData.evolutionWarning, "forms");

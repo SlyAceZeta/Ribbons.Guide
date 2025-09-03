@@ -3531,7 +3531,6 @@
 	"master-rank-ribbon": {
 		"gen": 8,
 		"banned": ["greninja-ash"],
-		"nomythical": true,
 		"available": [
 			"sw",
 			"sh",
