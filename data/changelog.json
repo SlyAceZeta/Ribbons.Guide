@@ -1,4 +1,8 @@
 {
+	"4 September 2025": [
+		"Removed Shiny locks from Wo-Chien, Chien-Pao, and Ting-Lu; the Shiny lock for Chi-Yu will be removed if and when it releases (thanks m283550!)",
+		"Fixed issue where fused Kyurem and Necrozma appeared to be able to earn the Battle Royal Master and Battle Tree Master Ribbons (thanks Tidbits!)"
+	],
 	"3 September 2025": [
 		"Mythical Pokémon that can travel to Scarlet/Violet can earn the Master Rank Ribbon until January 3",
 		"Z-A filter has been removed in advance of the game's release next month where it will return with the complete list",

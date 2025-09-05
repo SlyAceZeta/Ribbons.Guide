@@ -42148,8 +42148,7 @@
 			"vio"
 		],
 		"flags": [
-			"sizeLocked",
-			"shinyLocked"
+			"sizeLocked"
 		]
 	},
 	"chien-pao": {
@@ -42171,8 +42170,7 @@
 			"vio"
 		],
 		"flags": [
-			"sizeLocked",
-			"shinyLocked"
+			"sizeLocked"
 		]
 	},
 	"ting-lu": {
@@ -42194,8 +42192,7 @@
 			"vio"
 		],
 		"flags": [
-			"sizeLocked",
-			"shinyLocked"
+			"sizeLocked"
 		]
 	},
 	"chi-yu": {
