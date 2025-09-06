@@ -1,6 +1,6 @@
 {
 	"6 September 2025": [
-		"Resolved issue where certain browsers were using old cached versions of JSON data files"
+		"Resolved issue where certain browsers were using old cached versions of JSON data files (thanks DamienCain!)"
 	],
 	"4 September 2025": [
 		"Removed Shiny locks from Wo-Chien, Chien-Pao, and Ting-Lu; the Shiny lock for Chi-Yu will be removed if and when it releases (thanks m283550!)",
