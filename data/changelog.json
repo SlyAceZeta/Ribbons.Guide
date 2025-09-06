@@ -1,4 +1,7 @@
 {
+	"6 September 2025": [
+		"Resolved issue where certain browsers were using old cached versions of JSON data files"
+	],
 	"4 September 2025": [
 		"Removed Shiny locks from Wo-Chien, Chien-Pao, and Ting-Lu; the Shiny lock for Chi-Yu will be removed if and when it releases (thanks m283550!)",
 		"Fixed issue where fused Kyurem and Necrozma appeared to be able to earn the Battle Royal Master and Battle Tree Master Ribbons (thanks Tidbits!)"
