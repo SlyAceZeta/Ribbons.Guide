@@ -58,16 +58,19 @@
 				"abbrold": "SPA"
 			},
 			"es-es": {
-				"abbr": "",
-				"name": "Español (España)"
+				"abbr": "ES-ES",
+				"name": "Español (España)",
+				"abbrold": "ESP"
 			},
 			"fr": {
-				"abbr": "",
-				"name": "Espagnol (Espagne)"
+				"abbr": "ES-EU",
+				"name": "Espagnol (Espagne)",
+				"abbrold": "ESP"
 			},
 			"de": {
-				"abbr": "",
-				"name": "Spanisch (Spanien)"
+				"abbr": "SP-EU",
+				"name": "Spanisch (Spanien)",
+				"abbrold": "SPA"
 			},
 			"it": {
 				"abbr": "SPA-E",
@@ -98,15 +101,15 @@
 				"name": "French"
 			},
 			"es-es": {
-				"abbr": "",
+				"abbr": "FRA",
 				"name": "Francés"
 			},
 			"fr": {
-				"abbr": "",
+				"abbr": "FRA",
 				"name": "Français"
 			},
 			"de": {
-				"abbr": "",
+				"abbr": "FRA",
 				"name": "Französisch"
 			},
 			"it": {
@@ -137,15 +140,15 @@
 				"name": "German"
 			},
 			"es-es": {
-				"abbr": "",
+				"abbr": "ALE",
 				"name": "Alemán"
 			},
 			"fr": {
-				"abbr": "",
+				"abbr": "ALL",
 				"name": "Allemand"
 			},
 			"de": {
-				"abbr": "",
+				"abbr": "DEU",
 				"name": "Deutsch"
 			},
 			"it": {
@@ -176,15 +179,15 @@
 				"name": "Italian"
 			},
 			"es-es": {
-				"abbr": "",
+				"abbr": "ITA",
 				"name": "Italiano"
 			},
 			"fr": {
-				"abbr": "",
+				"abbr": "ITA",
 				"name": "Italien"
 			},
 			"de": {
-				"abbr": "",
+				"abbr": "ITA",
 				"name": "Italienisch"
 			},
 			"it": {
@@ -254,7 +257,7 @@
 				"name": "Korean"
 			},
 			"es-es": {
-				"abbr": "",
+				"abbr": "COR",
 				"name": "Coreano"
 			},
 			"fr": {
@@ -262,7 +265,7 @@
 				"name": "Coréen"
 			},
 			"de": {
-				"abbr": "",
+				"abbr": "KOR",
 				"name": "Koreanisch"
 			},
 			"it": {
@@ -293,15 +296,15 @@
 				"name": "Chinese (Simplified)"
 			},
 			"es-es": {
-				"abbr": "",
+				"abbr": "CHS",
 				"name": "Chino simplificado"
 			},
 			"fr": {
-				"abbr": "",
+				"abbr": "CHS",
 				"name": "Chinois simplifié"
 			},
 			"de": {
-				"abbr": "",
+				"abbr": "CHV",
 				"name": "Chinesisch (vereinfacht)"
 			},
 			"it": {
@@ -332,15 +335,15 @@
 				"name": "Chinese (Traditional)"
 			},
 			"es-es": {
-				"abbr": "",
+				"abbr": "CHT",
 				"name": "Chino tradicional"
 			},
 			"fr": {
-				"abbr": "",
+				"abbr": "CHT",
 				"name": "Chinois traditionnel"
 			},
 			"de": {
-				"abbr": "",
+				"abbr": "CHT",
 				"name": "Chinesisch (traditionell)"
 			},
 			"it": {
