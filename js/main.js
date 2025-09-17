@@ -459,6 +459,8 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 		currentGen = 8;
 	}
 	var compatibleGames = getPokemonData(dex, "games");
+	// temporary until Z-A HOME support when we add "plza" to pokemon.json
+	if(currentGame == "plza") compatibleGames.push("plza");
 	var mythical = getPokemonData(dex, "mythical");
 	var evoWarnMon = getPokemonData(dex, "evowarnmon", true);
 	var evoWarnGen = getPokemonData(dex, "evowarngen", true);
@@ -478,14 +480,18 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 		var ribbonGames = ribbons[ribbon].available;
 		for(let g in ribbonGames){
 			var ribbonGame = ribbonGames[g];
-			// skip if this game is part of a combo that already has this Ribbon
+			
 			var ribbonGameCombo = getGameData(ribbonGame, "partOf", true);
 			if(ribbonGameCombo){
+				// skip if this game is part of a combo that already has this Ribbon
 				if(earnableRibbons[ribbonGameCombo] && earnableRibbons[ribbonGameCombo].includes(ribbon)) continue;
+				
+				// skip if this game is SV and the Pokemon is in Z-A
+				if(ribbonGameCombo == "sv" && currentGame == "plza") continue;
 			}
 
 			var ribbonGen = parseInt(getGameData(ribbonGame, "gen"));
-			if(ribbonGen && (ribbonGen >= currentGen || (ribbonGen == 8 && currentGen == 9))){
+			if(ribbonGen && (ribbonGen >= currentGen || (ribbonGen == 8 && currentGen == 9 && currentGame !== "plza"))){
 				if(compatibleGames.includes(ribbonGame) && !((currentGame == "lgp" || currentGame == "lge") && ribbonGen == 7)){
 					// Pokemon-specific restrictions
 					if(dex == "nincada"){
@@ -1088,11 +1094,20 @@ function ribbonChecklist(){
 					}
 				});
 				if(currentGameStatus === "last-chance"){
-					$("#modalRibbonChecklistStatus-text").addClass("bg-danger-subtle").html(cardData.name + " still has " + ribbonDisplay + " to earn in <span class='text-nowrap'>" + games[currentGame].name + "</span>.");
+					$("#modalRibbonChecklistStatus-text").addClass("bg-danger-subtle").html(cardData.name + " still has " + ribbonDisplay + " to earn in <span class='text-nowrap'>" + games[currentGame].name + "</span>");
+					if(compatibleGames.includes("plza") && currentGame !== "plza"){
+						// if this Pokemon can travel to Z-A, warn that it shouldn't
+						$("#modalRibbonChecklistStatus-text").append(" and cannot enter Legends: Z-A yet.");
+					} else {
+						$("#modalRibbonChecklistStatus-text").append(".");
+					}
 				} else {
 					var moveTo = $(".last-chance").first().prev().html().toString();
 					if(lastChanceGen == Number(getGameData(currentGame, "gen")) && lastChanceGen < 8){
 						$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").html(cardData.name + " can safely move to " + moveTo + " but " + pronounSubject + " cannot leave Gen " + translations.arabicToRoman[lastChanceGen-1] + " yet.");
+					} else if((lastChanceGen == 8 || lastChanceGen == 9) && compatibleGames.includes("plza") && currentGame !== "plza"){
+						// if this Pokemon can travel to Z-A, warn that it shouldn't
+						$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").html(cardData.name + " can safely move to " + moveTo + " but " + pronounSubject + " cannot enter Legends: Z-A yet.");
 					} else {
 						$("#modalRibbonChecklistStatus-text").addClass("bg-success-subtle").html(cardData.name + " can safely move to " + moveTo + ".");
 					}
@@ -1147,6 +1162,8 @@ function createCard(p, id){
 		displayName = getPokemonData(p.species, "names")[displayNameLang];
 	}
 	var compatibleGames = getPokemonData(p.species, "games");
+	// temporary until Z-A HOME support when we add "plza" to pokemon.json
+	if(p.currentgame == "plza") compatibleGames.push("plza");
 	var compatibleFiltered = [];
 	if(currentGen < 1000){
 		for(var cg in compatibleGames){
@@ -1159,7 +1176,14 @@ function createCard(p, id){
 				} else {
 					var targetGen = parseInt(getGameData(compatibleGames[cg], "gen"));
 					if(targetGen >= currentGen || (virtualConsole && targetGen < 3) || (currentGen == 9 && targetGen == 8)){
-						compatibleTest = true;
+						if(p.currentgame == "plza"){
+							// Pokemon in Z-A can only travel to Z-A in Gen 9
+							if(compatibleGames[cg] == "plza"){
+								compatibleTest = true;
+							}
+						} else {
+							compatibleTest = true;
+						}
 					}
 				}
 				if(compatibleTest){
