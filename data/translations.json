@@ -10,371 +10,715 @@
 		"VIII",
 		"IX"
 	],
-	"ietfToPokemon": {
-		"en": "eng",
-		"es": "spa",
-		"fr": "fre",
-		"de": "ger",
-		"it": "ita",
-		"ja": "jpn",
-		"ko": "kor",
-		"zh-Hans": "chs",
-		"zh-Hant": "cht"
+	"languages": {
+		"en": {
+			"titlePosition": "suffix",
+			"en": {
+				"abbr": "ENG",
+				"name": "English"
+			},
+			"es-es": {
+				"abbr": "ING",
+				"name": "Inglés"
+			},
+			"fr": {
+				"abbr": "ANG",
+				"name": "Anglais"
+			},
+			"de": {
+				"abbr": "ENG",
+				"name": "Englisch"
+			},
+			"it": {
+				"abbr": "ING",
+				"name": "Inglese"
+			},
+			"ja": {
+				"abbr": "",
+				"name": "英語"
+			},
+			"ko": {
+				"abbr": "",
+				"name": "영어"
+			},
+			"zh-Hans": {
+				"abbr": "",
+				"name": "英语"
+			},
+			"zh-Hant": {
+				"abbr": "",
+				"name": "英語"
+			}
+		},
+		"es-es": {
+			"titlePosition": "suffix",
+			"en": {
+				"abbr": "SP-EU",
+				"name": "Spanish (Spain)",
+				"abbrold": "SPA"
+			},
+			"es-es": {
+				"abbr": "",
+				"name": "Español (España)"
+			},
+			"fr": {
+				"abbr": "",
+				"name": "Espagnol (Espagne)"
+			},
+			"de": {
+				"abbr": "",
+				"name": "Spanisch (Spanien)"
+			},
+			"it": {
+				"abbr": "SPA-E",
+				"name": "Spagnolo (Spagna)",
+				"abbrold": "SPA"
+			},
+			"ja": {
+				"abbr": "",
+				"name": "欧州スペイン語"
+			},
+			"ko": {
+				"abbr": "",
+				"name": "유럽 스페인어"
+			},
+			"zh-Hans": {
+				"abbr": "",
+				"name": "欧陆西班牙语"
+			},
+			"zh-Hant": {
+				"abbr": "",
+				"name": "歐陸西班牙語"
+			}
+		},
+		"fr": {
+			"titlePosition": "suffix",
+			"en": {
+				"abbr": "FRE",
+				"name": "French"
+			},
+			"es-es": {
+				"abbr": "",
+				"name": "Francés"
+			},
+			"fr": {
+				"abbr": "",
+				"name": "Français"
+			},
+			"de": {
+				"abbr": "",
+				"name": "Französisch"
+			},
+			"it": {
+				"abbr": "FRA",
+				"name": "Francese"
+			},
+			"ja": {
+				"abbr": "",
+				"name": "フランス語"
+			},
+			"ko": {
+				"abbr": "",
+				"name": "프랑스어"
+			},
+			"zh-Hans": {
+				"abbr": "",
+				"name": "法语"
+			},
+			"zh-Hant": {
+				"abbr": "",
+				"name": "法語"
+			}
+		},
+		"de": {
+			"titlePosition": "prefix",
+			"en": {
+				"abbr": "GER",
+				"name": "German"
+			},
+			"es-es": {
+				"abbr": "",
+				"name": "Alemán"
+			},
+			"fr": {
+				"abbr": "",
+				"name": "Allemand"
+			},
+			"de": {
+				"abbr": "",
+				"name": "Deutsch"
+			},
+			"it": {
+				"abbr": "TED",
+				"name": "Tedesco"
+			},
+			"ja": {
+				"abbr": "",
+				"name": "ドイツ語"
+			},
+			"ko": {
+				"abbr": "",
+				"name": "독일어"
+			},
+			"zh-Hans": {
+				"abbr": "",
+				"name": "德语"
+			},
+			"zh-Hant": {
+				"abbr": "",
+				"name": "德語"
+			}
+		},
+		"it": {
+			"titlePosition": "suffix",
+			"en": {
+				"abbr": "ITA",
+				"name": "Italian"
+			},
+			"es-es": {
+				"abbr": "",
+				"name": "Italiano"
+			},
+			"fr": {
+				"abbr": "",
+				"name": "Italien"
+			},
+			"de": {
+				"abbr": "",
+				"name": "Italienisch"
+			},
+			"it": {
+				"abbr": "ITA",
+				"name": "Italiano"
+			},
+			"ja": {
+				"abbr": "",
+				"name": "イタリア語"
+			},
+			"ko": {
+				"abbr": "",
+				"name": "이탈리아어"
+			},
+			"zh-Hans": {
+				"abbr": "",
+				"name": "意大利语"
+			},
+			"zh-Hant": {
+				"abbr": "",
+				"name": "義大利語"
+			}
+		},
+		"ja": {
+			"titlePosition": "prefix",
+			"en": {
+				"abbr": "JPN",
+				"name": "Japanese"
+			},
+			"es-es": {
+				"abbr": "",
+				"name": "Japonés"
+			},
+			"fr": {
+				"abbr": "",
+				"name": "Japonais"
+			},
+			"de": {
+				"abbr": "",
+				"name": "Japanisch"
+			},
+			"it": {
+				"abbr": "GPN",
+				"name": "Giapponese"
+			},
+			"ja": {
+				"abbr": "",
+				"name": "日本語"
+			},
+			"ko": {
+				"abbr": "",
+				"name": "일본어"
+			},
+			"zh-Hans": {
+				"abbr": "",
+				"name": "日语"
+			},
+			"zh-Hant": {
+				"abbr": "",
+				"name": "日語"
+			}
+		},
+		"ko": {
+			"titlePosition": "prefix",
+			"en": {
+				"abbr": "KOR",
+				"name": "Korean"
+			},
+			"es-es": {
+				"abbr": "",
+				"name": "Coreano"
+			},
+			"fr": {
+				"abbr": "",
+				"name": "Coréen"
+			},
+			"de": {
+				"abbr": "",
+				"name": "Koreanisch"
+			},
+			"it": {
+				"abbr": "COR",
+				"name": "Coreano"
+			},
+			"ja": {
+				"abbr": "",
+				"name": "韓国語"
+			},
+			"ko": {
+				"abbr": "",
+				"name": "한국어"
+			},
+			"zh-Hans": {
+				"abbr": "",
+				"name": "韩语"
+			},
+			"zh-Hant": {
+				"abbr": "",
+				"name": "韓語"
+			}
+		},
+		"zh-Hans": {
+			"titlePosition": "prefix",
+			"en": {
+				"abbr": "CHS",
+				"name": "Chinese (Simplified)"
+			},
+			"es-es": {
+				"abbr": "",
+				"name": "Chino simplificado"
+			},
+			"fr": {
+				"abbr": "",
+				"name": "Chinois simplifié"
+			},
+			"de": {
+				"abbr": "",
+				"name": "Chinesisch (vereinfacht)"
+			},
+			"it": {
+				"abbr": "CIN-S",
+				"name": "Cinese (semplificato)"
+			},
+			"ja": {
+				"abbr": "",
+				"name": "中国語（簡体字）"
+			},
+			"ko": {
+				"abbr": "",
+				"name": "중국어/간체자"
+			},
+			"zh-Hans": {
+				"abbr": "",
+				"name": "简体中文"
+			},
+			"zh-Hant": {
+				"abbr": "",
+				"name": "簡體中文"
+			}
+		},
+		"zh-Hant": {
+			"titlePosition": "prefix",
+			"en": {
+				"abbr": "CHT",
+				"name": "Chinese (Traditional)"
+			},
+			"es-es": {
+				"abbr": "",
+				"name": "Chino tradicional"
+			},
+			"fr": {
+				"abbr": "",
+				"name": "Chinois traditionnel"
+			},
+			"de": {
+				"abbr": "",
+				"name": "Chinesisch (traditionell)"
+			},
+			"it": {
+				"abbr": "CIN-T",
+				"name": "Cinese (tradizionale)"
+			},
+			"ja": {
+				"abbr": "",
+				"name": "中国語（繁体字）"
+			},
+			"ko": {
+				"abbr": "",
+				"name": "중국어/번체자"
+			},
+			"zh-Hans": {
+				"abbr": "",
+				"name": "繁体中文"
+			},
+			"zh-Hant": {
+				"abbr": "",
+				"name": "繁體中文"
+			}
+		}
 	},
 	"none": {
-		"eng": "None",
-		"spa": "Ninguna",
-		"fre": "Aucune",
-		"ger": "Keiner",
-		"ita": "Nessuno",
-		"jpn": "なし",
-		"kor": "없음",
-		"chs": "没有任何",
-		"cht": "沒有任何"
+		"en": "None",
+		"es-es": "Ninguna",
+		"fr": "Aucune",
+		"de": "Keiner",
+		"it": "Nessuno",
+		"ja": "なし",
+		"ko": "없음",
+		"zh-Hans": "没有任何",
+		"zh-Hant": "沒有任何"
 	},
 	"forms": {
 		"alola": {
-			"eng": "Alolan Form",
-			"spa": "Forma de Alola",
-			"fre": "Forme d'Alola",
-			"ger": "Alola-Form",
-			"ita": "Forma di Alola",
-			"jpn": "アローラのすがた",
-			"kor": "알로라의 모습",
-			"chs": "阿罗拉的样子",
-			"cht": "阿羅拉的樣子"
+			"en": "Alolan Form",
+			"es-es": "Forma de Alola",
+			"fr": "Forme d'Alola",
+			"de": "Alola-Form",
+			"it": "Forma di Alola",
+			"ja": "アローラのすがた",
+			"ko": "알로라의 모습",
+			"zh-Hans": "阿罗拉的样子",
+			"zh-Hant": "阿羅拉的樣子"
 		},
 		"galar": {
-			"eng": "Galarian Form",
-			"spa": "Forma de Galar",
-			"fre": "Forme de Galar",
-			"ger": "Galar-Form",
-			"ita": "Forma di Galar",
-			"jpn": "ガラルのすがた",
-			"kor": "가라르의 모습",
-			"chs": "伽勒尔的样子",
-			"cht": "伽勒爾的樣子"
+			"en": "Galarian Form",
+			"es-es": "Forma de Galar",
+			"fr": "Forme de Galar",
+			"de": "Galar-Form",
+			"it": "Forma di Galar",
+			"ja": "ガラルのすがた",
+			"ko": "가라르의 모습",
+			"zh-Hans": "伽勒尔的样子",
+			"zh-Hant": "伽勒爾的樣子"
 		},
 		"hisui": {
-			"eng": "Hisuian Form",
-			"spa": "Forma de Hisui",
-			"fre": "Forme de Hisui",
-			"ger": "Hisui-Form",
-			"ita": "Forma di Hisui",
-			"jpn": "ヒスイのすがた",
-			"kor": "히스이의 모습",
-			"chs": "洗翠的样子",
-			"cht": "洗翠的樣子"
+			"en": "Hisuian Form",
+			"es-es": "Forma de Hisui",
+			"fr": "Forme de Hisui",
+			"de": "Hisui-Form",
+			"it": "Forma di Hisui",
+			"ja": "ヒスイのすがた",
+			"ko": "히스이의 모습",
+			"zh-Hans": "洗翠的样子",
+			"zh-Hant": "洗翠的樣子"
 		},
 		"paldea": {
-			"eng": "Paldean Form",
-			"spa": "Forma de Paldea",
-			"fre": "Forme de Paldea",
-			"ger": "Paldea-Form",
-			"ita": "Forma di Paldea",
-			"jpn": "パルデアのすがた",
-			"kor": "팔데아 모습",
-			"chs": "帕底亚的样子",
-			"cht": "帕底亞的樣子"
+			"en": "Paldean Form",
+			"es-es": "Forma de Paldea",
+			"fr": "Forme de Paldea",
+			"de": "Paldea-Form",
+			"it": "Forma di Paldea",
+			"ja": "パルデアのすがた",
+			"ko": "팔데아 모습",
+			"zh-Hans": "帕底亚的样子",
+			"zh-Hant": "帕底亞的樣子"
 		},
 		"incarnate": {
-			"eng": "Incarnate Form",
-			"spa": "Forma Avatar",
-			"fre": "Forme Avatar",
-			"ger": "Inkarnationsform",
-			"ita": "Forma Incarnazione",
-			"jpn": "けしんフォルム",
-			"kor": "화신폼",
-			"chs": "化身形态",
-			"cht": "化身形態"
+			"en": "Incarnate Form",
+			"es-es": "Forma Avatar",
+			"fr": "Forme Avatar",
+			"de": "Inkarnationsform",
+			"it": "Forma Incarnazione",
+			"ja": "けしんフォルム",
+			"ko": "화신폼",
+			"zh-Hans": "化身形态",
+			"zh-Hant": "化身形態"
 		},
 		"therian": {
-			"eng": "Therian Form",
-			"spa": "Forma Tótem",
-			"fre": "Forme Totémique",
-			"ger": "Tiergeistform",
-			"ita": "Forma Totem",
-			"jpn": "れいじゅうフォルム",
-			"kor": "영물폼",
-			"chs": "灵兽形态",
-			"cht": "靈獸形態"
+			"en": "Therian Form",
+			"es-es": "Forma Tótem",
+			"fr": "Forme Totémique",
+			"de": "Tiergeistform",
+			"it": "Forma Totem",
+			"ja": "れいじゅうフォルム",
+			"ko": "영물폼",
+			"zh-Hans": "灵兽形态",
+			"zh-Hant": "靈獸形態"
 		}
 	},
 	"natures": {
 		"hardy": {
-			"eng": "Hardy",
-			"spa": "Fuerte",
-			"fre": "Hardi",
-			"ger": "Robust",
-			"ita": "Ardita",
-			"jpn": "がんばりや",
-			"kor": "노력",
-			"chs": "勤奋",
-			"cht": "勤奮"
+			"en": "Hardy",
+			"es-es": "Fuerte",
+			"fr": "Hardi",
+			"de": "Robust",
+			"it": "Ardita",
+			"ja": "がんばりや",
+			"ko": "노력",
+			"zh-Hans": "勤奋",
+			"zh-Hant": "勤奮"
 		},
 		"lonely": {
-			"eng": "Lonely",
-			"spa": "Huraña",
-			"fre": "Solo",
-			"ger": "Solo",
-			"ita": "Schiva",
-			"jpn": "さみしがり",
-			"kor": "외로움",
-			"chs": "怕寂寞",
-			"cht": "怕寂寞"
+			"en": "Lonely",
+			"es-es": "Huraña",
+			"fr": "Solo",
+			"de": "Solo",
+			"it": "Schiva",
+			"ja": "さみしがり",
+			"ko": "외로움",
+			"zh-Hans": "怕寂寞",
+			"zh-Hant": "怕寂寞"
 		},
 		"brave": {
-			"eng": "Brave",
-			"spa": "Audaz",
-			"fre": "Brave",
-			"ger": "Mutig",
-			"ita": "Audace",
-			"jpn": "ゆうかん",
-			"kor": "용감",
-			"chs": "勇敢",
-			"cht": "勇敢"
+			"en": "Brave",
+			"es-es": "Audaz",
+			"fr": "Brave",
+			"de": "Mutig",
+			"it": "Audace",
+			"ja": "ゆうかん",
+			"ko": "용감",
+			"zh-Hans": "勇敢",
+			"zh-Hant": "勇敢"
 		},
 		"adamant": {
-			"eng": "Adamant",
-			"spa": "Firme",
-			"fre": "Rigide",
-			"ger": "Hart",
-			"ita": "Decisa",
-			"jpn": "いじっぱり",
-			"kor": "고집",
-			"chs": "固执",
-			"cht": "固執"
+			"en": "Adamant",
+			"es-es": "Firme",
+			"fr": "Rigide",
+			"de": "Hart",
+			"it": "Decisa",
+			"ja": "いじっぱり",
+			"ko": "고집",
+			"zh-Hans": "固执",
+			"zh-Hant": "固執"
 		},
 		"naughty": {
-			"eng": "Naughty",
-			"spa": "Pícara",
-			"fre": "Mauvais",
-			"ger": "Frech",
-			"ita": "Birbona",
-			"jpn": "やんちゃ",
-			"kor": "개구쟁이",
-			"chs": "顽皮",
-			"cht": "頑皮"
+			"en": "Naughty",
+			"es-es": "Pícara",
+			"fr": "Mauvais",
+			"de": "Frech",
+			"it": "Birbona",
+			"ja": "やんちゃ",
+			"ko": "개구쟁이",
+			"zh-Hans": "顽皮",
+			"zh-Hant": "頑皮"
 		},
 		"bold": {
-			"eng": "Bold",
-			"spa": "Osada",
-			"fre": "Assuré",
-			"ger": "Kühn",
-			"ita": "Sicura",
-			"jpn": "ずぶとい",
-			"kor": "대담",
-			"chs": "大胆",
-			"cht": "大膽"
+			"en": "Bold",
+			"es-es": "Osada",
+			"fr": "Assuré",
+			"de": "Kühn",
+			"it": "Sicura",
+			"ja": "ずぶとい",
+			"ko": "대담",
+			"zh-Hans": "大胆",
+			"zh-Hant": "大膽"
 		},
 		"docile": {
-			"eng": "Docile",
-			"spa": "Dócil",
-			"fre": "Docile",
-			"ger": "Sanft",
-			"ita": "Docile",
-			"jpn": "すなお",
-			"kor": "온순",
-			"chs": "坦率",
-			"cht": "坦率"
+			"en": "Docile",
+			"es-es": "Dócil",
+			"fr": "Docile",
+			"de": "Sanft",
+			"it": "Docile",
+			"ja": "すなお",
+			"ko": "온순",
+			"zh-Hans": "坦率",
+			"zh-Hant": "坦率"
 		},
 		"relaxed": {
-			"eng": "Relaxed",
-			"spa": "Plácida",
-			"fre": "Relax",
-			"ger": "Locker",
-			"ita": "Placida",
-			"jpn": "のんき",
-			"kor": "무사태평",
-			"chs": "悠闲",
-			"cht": "悠閒"
+			"en": "Relaxed",
+			"es-es": "Plácida",
+			"fr": "Relax",
+			"de": "Locker",
+			"it": "Placida",
+			"ja": "のんき",
+			"ko": "무사태평",
+			"zh-Hans": "悠闲",
+			"zh-Hant": "悠閒"
 		},
 		"impish": {
-			"eng": "Impish",
-			"spa": "Agitada",
-			"fre": "Malin",
-			"ger": "Pfiffig",
-			"ita": "Scaltra",
-			"jpn": "わんぱく",
-			"kor": "장난꾸러기",
-			"chs": "淘气",
-			"cht": "淘氣"
+			"en": "Impish",
+			"es-es": "Agitada",
+			"fr": "Malin",
+			"de": "Pfiffig",
+			"it": "Scaltra",
+			"ja": "わんぱく",
+			"ko": "장난꾸러기",
+			"zh-Hans": "淘气",
+			"zh-Hant": "淘氣"
 		},
 		"lax": {
-			"eng": "Lax",
-			"spa": "Floja",
-			"fre": "Lâche",
-			"ger": "Lasch",
-			"ita": "Fiacca",
-			"jpn": "のうてんき",
-			"kor": "촐랑",
-			"chs": "乐天",
-			"cht": "樂天"
+			"en": "Lax",
+			"es-es": "Floja",
+			"fr": "Lâche",
+			"de": "Lasch",
+			"it": "Fiacca",
+			"ja": "のうてんき",
+			"ko": "촐랑",
+			"zh-Hans": "乐天",
+			"zh-Hant": "樂天"
 		},
 		"timid": {
-			"eng": "Timid",
-			"spa": "Miedosa",
-			"fre": "Timide",
-			"ger": "Scheu",
-			"ita": "Timida",
-			"jpn": "おくびょう",
-			"kor": "겁쟁이",
-			"chs": "胆小",
-			"cht": "膽小"
+			"en": "Timid",
+			"es-es": "Miedosa",
+			"fr": "Timide",
+			"de": "Scheu",
+			"it": "Timida",
+			"ja": "おくびょう",
+			"ko": "겁쟁이",
+			"zh-Hans": "胆小",
+			"zh-Hant": "膽小"
 		},
 		"hasty": {
-			"eng": "Hasty",
-			"spa": "Activa",
-			"fre": "Pressé",
-			"ger": "Hastig",
-			"ita": "Lesta",
-			"jpn": "せっかち",
-			"kor": "성급",
-			"chs": "急躁",
-			"cht": "急躁"
+			"en": "Hasty",
+			"es-es": "Activa",
+			"fr": "Pressé",
+			"de": "Hastig",
+			"it": "Lesta",
+			"ja": "せっかち",
+			"ko": "성급",
+			"zh-Hans": "急躁",
+			"zh-Hant": "急躁"
 		},
 		"serious": {
-			"eng": "Serious",
-			"spa": "Seria",
-			"fre": "Sérieux",
-			"ger": "Ernst",
-			"ita": "Seria",
-			"jpn": "まじめ",
-			"kor": "성실",
-			"chs": "认真",
-			"cht": "認真"
+			"en": "Serious",
+			"es-es": "Seria",
+			"fr": "Sérieux",
+			"de": "Ernst",
+			"it": "Seria",
+			"ja": "まじめ",
+			"ko": "성실",
+			"zh-Hans": "认真",
+			"zh-Hant": "認真"
 		},
 		"jolly": {
-			"eng": "Jolly",
-			"spa": "Alegre",
-			"fre": "Jovial",
-			"ger": "Froh",
-			"ita": "Allegra",
-			"jpn": "ようき",
-			"kor": "명랑",
-			"chs": "爽朗",
-			"cht": "爽朗"
+			"en": "Jolly",
+			"es-es": "Alegre",
+			"fr": "Jovial",
+			"de": "Froh",
+			"it": "Allegra",
+			"ja": "ようき",
+			"ko": "명랑",
+			"zh-Hans": "爽朗",
+			"zh-Hant": "爽朗"
 		},
 		"naive": {
-			"eng": "Naive",
-			"spa": "Ingenua",
-			"fre": "Naïf",
-			"ger": "Naiv",
-			"ita": "Ingenua",
-			"jpn": "むじゃき",
-			"kor": "천진난만",
-			"chs": "天真",
-			"cht": "天真"
+			"en": "Naive",
+			"es-es": "Ingenua",
+			"fr": "Naïf",
+			"de": "Naiv",
+			"it": "Ingenua",
+			"ja": "むじゃき",
+			"ko": "천진난만",
+			"zh-Hans": "天真",
+			"zh-Hant": "天真"
 		},
 		"modest": {
-			"eng": "Modest",
-			"spa": "Modesta",
-			"fre": "Modeste",
-			"ger": "Mäßig",
-			"ita": "Modesta",
-			"jpn": "ひかえめ",
-			"kor": "조심",
-			"chs": "内敛",
-			"cht": "內斂"
+			"en": "Modest",
+			"es-es": "Modesta",
+			"fr": "Modeste",
+			"de": "Mäßig",
+			"it": "Modesta",
+			"ja": "ひかえめ",
+			"ko": "조심",
+			"zh-Hans": "内敛",
+			"zh-Hant": "內斂"
 		},
 		"mild": {
-			"eng": "Mild",
-			"spa": "Afable",
-			"fre": "Doux",
-			"ger": "Mild",
-			"ita": "Mite",
-			"jpn": "おっとり",
-			"kor": "의젓",
-			"chs": "慢吞吞",
-			"cht": "慢吞吞"
+			"en": "Mild",
+			"es-es": "Afable",
+			"fr": "Doux",
+			"de": "Mild",
+			"it": "Mite",
+			"ja": "おっとり",
+			"ko": "의젓",
+			"zh-Hans": "慢吞吞",
+			"zh-Hant": "慢吞吞"
 		},
 		"quiet": {
-			"eng": "Quiet",
-			"spa": "Mansa",
-			"fre": "Discret",
-			"ger": "Ruhig",
-			"ita": "Quieta",
-			"jpn": "れいせい",
-			"kor": "냉정",
-			"chs": "冷静",
-			"cht": "冷靜"
+			"en": "Quiet",
+			"es-es": "Mansa",
+			"fr": "Discret",
+			"de": "Ruhig",
+			"it": "Quieta",
+			"ja": "れいせい",
+			"ko": "냉정",
+			"zh-Hans": "冷静",
+			"zh-Hant": "冷靜"
 		},
 		"bashful": {
-			"eng": "Bashful",
-			"spa": "Tímida",
-			"fre": "Pudique",
-			"ger": "Zaghaft",
-			"ita": "Ritrosa",
-			"jpn": "てれや",
-			"kor": "수줍음",
-			"chs": "害羞",
-			"cht": "害羞"
+			"en": "Bashful",
+			"es-es": "Tímida",
+			"fr": "Pudique",
+			"de": "Zaghaft",
+			"it": "Ritrosa",
+			"ja": "てれや",
+			"ko": "수줍음",
+			"zh-Hans": "害羞",
+			"zh-Hant": "害羞"
 		},
 		"rash": {
-			"eng": "Rash",
-			"spa": "Alocada",
-			"fre": "Foufou",
-			"ger": "Hitzig",
-			"ita": "Ardente",
-			"jpn": "うっかりや",
-			"kor": "덜렁",
-			"chs": "马虎",
-			"cht": "馬虎"
+			"en": "Rash",
+			"es-es": "Alocada",
+			"fr": "Foufou",
+			"de": "Hitzig",
+			"it": "Ardente",
+			"ja": "うっかりや",
+			"ko": "덜렁",
+			"zh-Hans": "马虎",
+			"zh-Hant": "馬虎"
 		},
 		"calm": {
-			"eng": "Calm",
-			"spa": "Serena",
-			"fre": "Calme",
-			"ger": "Still",
-			"ita": "Calma",
-			"jpn": "おだやか",
-			"kor": "차분",
-			"chs": "温和",
-			"cht": "溫和"
+			"en": "Calm",
+			"es-es": "Serena",
+			"fr": "Calme",
+			"de": "Still",
+			"it": "Calma",
+			"ja": "おだやか",
+			"ko": "차분",
+			"zh-Hans": "温和",
+			"zh-Hant": "溫和"
 		},
 		"gentle": {
-			"eng": "Gentle",
-			"spa": "Amable",
-			"fre": "Gentil",
-			"ger": "Zart",
-			"ita": "Gentile",
-			"jpn": "おとなしい",
-			"kor": "얌전",
-			"chs": "温顺",
-			"cht": "溫順"
+			"en": "Gentle",
+			"es-es": "Amable",
+			"fr": "Gentil",
+			"de": "Zart",
+			"it": "Gentile",
+			"ja": "おとなしい",
+			"ko": "얌전",
+			"zh-Hans": "温顺",
+			"zh-Hant": "溫順"
 		},
 		"sassy": {
-			"eng": "Sassy",
-			"spa": "Grosera",
-			"fre": "Malpoli",
-			"ger": "Forsch",
-			"ita": "Vivace",
-			"jpn": "なまいき",
-			"kor": "건방",
-			"chs": "自大",
-			"cht": "自大"
+			"en": "Sassy",
+			"es-es": "Grosera",
+			"fr": "Malpoli",
+			"de": "Forsch",
+			"it": "Vivace",
+			"ja": "なまいき",
+			"ko": "건방",
+			"zh-Hans": "自大",
+			"zh-Hant": "自大"
 		},
 		"careful": {
-			"eng": "Careful",
-			"spa": "Cauta",
-			"fre": "Prudent",
-			"ger": "Sacht",
-			"ita": "Cauta",
-			"jpn": "しんちょう",
-			"kor": "신중",
-			"chs": "慎重",
-			"cht": "慎重"
+			"en": "Careful",
+			"es-es": "Cauta",
+			"fr": "Prudent",
+			"de": "Sacht",
+			"it": "Cauta",
+			"ja": "しんちょう",
+			"ko": "신중",
+			"zh-Hans": "慎重",
+			"zh-Hant": "慎重"
 		},
 		"quirky": {
-			"eng": "Quirky",
-			"spa": "Rara",
-			"fre": "Bizarre",
-			"ger": "Kauzig",
-			"ita": "Furba",
-			"jpn": "きまぐれ",
-			"kor": "변덕",
-			"chs": "浮躁",
-			"cht": "浮躁"
+			"en": "Quirky",
+			"es-es": "Rara",
+			"fr": "Bizarre",
+			"de": "Kauzig",
+			"it": "Furba",
+			"ja": "きまぐれ",
+			"ko": "변덕",
+			"zh-Hans": "浮躁",
+			"zh-Hant": "浮躁"
 		}
 	}
 }

@@ -642,15 +642,15 @@ html[data-cardview="condensed"] .card-footer-bottom button {
 .translation {
 	display: none;
 }
-html[lang="en"] .translation-eng,
-html[lang="de"] .translation-ger,
-html[lang="es"] .translation-spa,
-html[lang="fr"] .translation-fre,
-html[lang="it"] .translation-ita,
-html[lang="ja"] .translation-jpn,
-html[lang="ko"] .translation-kor,
-html[lang="zh-Hant"] .translation-cht,
-html[lang="zh-Hans"] .translation-chs {
+html[lang="en"] .translation-en,
+html[lang="de"] .translation-de,
+html[lang="es-es"] .translation-es-es,
+html[lang="fr"] .translation-fr,
+html[lang="it"] .translation-it,
+html[lang="ja"] .translation-ja,
+html[lang="ko"] .translation-ko,
+html[lang="zh-Hant"] .translation-zh-Hant,
+html[lang="zh-Hans"] .translation-zh-Hans {
 	display: inline;
 }
 

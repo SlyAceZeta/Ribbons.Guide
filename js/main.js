@@ -75,14 +75,19 @@ if(settings.theme){
 }
 
 /* change site language */
-var supportedLanguages = ["en"];
+var supportedLanguages = ["en", "es-es", "fr", "de", "it", "ja", "ko", "zh-Hans", "zh-Hant"];
 function changeLanguage(l){
 	changeSetting("language", l)
 	$("html").attr("lang", l);
 }
 /* initial language set */
 if(settings.language){
-	changeLanguage(settings.language);
+	var languageToSet = settings.language;
+	// Spanish backward compatibility
+	if(languageToSet == "es"){
+		languageToSet = "es-es";
+	}
+	changeLanguage(languageToSet);
 } else {
 	const browserLocales = navigator.languages === undefined ? [navigator.language] : navigator.languages;
 	if(typeof browserLocales === "string"){
@@ -92,7 +97,7 @@ if(settings.language){
 	} else if(typeof browserLocales === "object"){
 		for(var i = 0; i < browserLocales.length; i++){
 			var locale = browserLocales[i].split(/-|_/)[0];
-			if(supportedLanguages.indexOf(locale) > -1){
+			if(supportedLanguages.includes(locale)){
 				changeLanguage(locale);
 				break;
 			}
@@ -261,7 +266,7 @@ function updateOldPokemon(p){
 		gender: p.gender ? p.gender : "male",
 		shiny: p.shiny ? p.shiny : "",
 		nickname: p.name ? p.name : "",
-		language: p.lang ? p.lang.toLowerCase() : "eng",
+		language: p.lang ? p.lang.toLowerCase() : "en",
 		ball: p.ball ? p.ball : "poke",
 		strangeball: "",
 		currentlevel: p.level ? Number(p.level) : 1,
@@ -974,7 +979,7 @@ function ribbonChecklist(){
 			if(ribbonWarnings[w] == "footprint-beldum") warningText = "Evolving " + cardData.name + " into Metagross will make the Footprint Ribbon unavailable!";
 			if(ribbonWarnings[w] == "master-rank-sv") warningText = cardData.name + " can temporarily earn the Master Rank Ribbon during the current Scarlet/Violet regulation. This ends on January 3!";
 			if(ribbonWarnings[w] == "evolution-warning"){
-				var evoWarnName = getPokemonData(cardData.evolutionWarning, "names")["eng"];
+				var evoWarnName = getPokemonData(cardData.evolutionWarning, "names")["en"];
 				var evoWarnForms = getPokemonData(cardData.evolutionWarning, "forms");
 				if(!evoWarnForms){
 					evoWarnForms = getPokemonData(cardData.evolutionWarning, "forms-all");
@@ -989,7 +994,7 @@ function ribbonChecklist(){
 					if(typeof evoWarnForms === "string"){
 						evoWarnName = evoWarnName + " (" + evoWarnForms + ")";
 					} else {
-						evoWarnName = evoWarnName + " (" + evoWarnForms["eng"] + ")";
+						evoWarnName = evoWarnName + " (" + evoWarnForms["en"] + ")";
 					}
 				}
 				warningText = "Evolving " + cardData.name + " into " + evoWarnName + " may change the availability of certain Ribbons!";
@@ -1086,9 +1091,10 @@ function ribbonChecklist(){
 								$(g).find(".modalRibbonChecklistRows-gamename").after($("<div>", { "class": "last-chance px-3 mb-2" }).append($sectionLabel, $sectionRibbons));
 							}
 						}
-						var $ribbonBtn = $("<a>", { "class": "d-inline-block p-0 mt-1 modalRibbonChecklistRows-ribbon ribbonsprite " + allGameRibbons[r], "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[allGameRibbons[r]].names[translations.ietfToPokemon[settings.language]], "data-bs-content": ribbons[allGameRibbons[r]].descs[translations.ietfToPokemon[settings.language]] });
+						// TODO: add handling for missing Chinese ribbon names and descriptions
+						var $ribbonBtn = $("<a>", { "class": "d-inline-block p-0 mt-1 modalRibbonChecklistRows-ribbon ribbonsprite " + allGameRibbons[r], "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[allGameRibbons[r]].names[settings.language], "data-bs-content": ribbons[allGameRibbons[r]].descs[settings.language] });
 						if(ribbons[allGameRibbons[r]].titles){
-							$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + ribbons[allGameRibbons[r]].titles[translations.ietfToPokemon[settings.language]] + ")</div>");
+							$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + ribbons[allGameRibbons[r]].titles[settings.language] + ")</div>");
 						}
 						$(g).find(addToList).append($ribbonBtn);
 					}
@@ -1158,7 +1164,7 @@ function createCard(p, id){
 	var displayName = p.nickname;
 	if(displayName.length === 0){
 		var displayNameLang = p.language;
-		if(!displayNameLang) displayNameLang = "eng";
+		if(!displayNameLang) displayNameLang = "en";
 		displayName = getPokemonData(p.species, "names")[displayNameLang];
 	}
 	var compatibleGames = getPokemonData(p.species, "games");
@@ -1221,7 +1227,7 @@ function createCard(p, id){
 
 	/* header */
 	var $cardHeaderLeft = $("<div>", { "class": "card-header-fullname" });
-	var $cardHeaderBallMain = $("<span>", { "class": "align-text-top me-2 ball ball-" + p.ball, "title": balls[p.ball]["eng"] });
+	var $cardHeaderBallMain = $("<span>", { "class": "align-text-top me-2 ball ball-" + p.ball, "title": balls[p.ball]["en"] });
 	var $cardHeaderBallStrange = "";
 	if(p.currentgame && ((p.currentgame !== "pla" && p.currentgame !== "home" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
 		if(p.strangeball !== "disabled"){
@@ -1237,23 +1243,15 @@ function createCard(p, id){
 	$cardHeaderLeft.append($cardHeaderBallMain, $cardHeaderBallStrange);
 	var $cardHeaderLeftName = $("<span>", { "class": "align-baseline" });
 	var titleRibbon;
-	var titlePositions = {
-		"ger": "prefix",
-		"eng": "suffix",
-		"spa": "suffix",
-		"fre": "suffix",
-		"ita": "suffix",
-		"jpn": "prefix",
-		"kor": "prefix",
-		"cht": "prefix",
-		"chs": "prefix"
-	}
+	var titlePositions = {};
 	if(p.title && p.title !== "None"){
 		titleRibbon = ribbons[p.title];
-		if(titleRibbon.titlePosition){
-			for(let tp in titleRibbon.titlePosition){
-				titlePositions[tp] = titleRibbon.titlePosition[tp];
+		for(var lang in translations.languages){
+			var titlePosition = translations.languages[lang].titlePosition;
+			if(titleRibbon.titlePositions && titleRibbon.titlePositions[lang]){
+				titlePosition = titleRibbon.titlePositions[lang];
 			}
+			titlePositions[lang] = titlePosition;
 		}
 		for(let tp in titlePositions){
 			if(titlePositions[tp] == "prefix"){
@@ -1294,9 +1292,10 @@ function createCard(p, id){
 	var $cardHeaderRight = $("<div>", { "class": "card-header-right d-flex" });
 	var $cardHeaderTitle = "";
 	if(p.title && p.title !== "None"){
-		$cardHeaderTitle = $("<a>", { "class": "ms-2 card-header-title-ribbon ribbonsprite " + p.title, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[p.title].names[translations.ietfToPokemon[settings.language]], "data-bs-content": ribbons[p.title].descs[translations.ietfToPokemon[settings.language]] });
+		// TODO: add handling for missing Chinese ribbon names and descriptions
+		$cardHeaderTitle = $("<a>", { "class": "ms-2 card-header-title-ribbon ribbonsprite " + p.title, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[p.title].names[settings.language], "data-bs-content": ribbons[p.title].descs[settings.language] });
 		if(ribbons[p.title].titles){
-			$cardHeaderTitle.attr("title", "<div>" + $cardHeaderTitle.attr("title") + "</div><div class='popover-ribbon-title'>(" + ribbons[p.title].titles[translations.ietfToPokemon[settings.language]] + ")</div>");
+			$cardHeaderTitle.attr("title", "<div>" + $cardHeaderTitle.attr("title") + "</div><div class='popover-ribbon-title'>(" + ribbons[p.title].titles[settings.language] + ")</div>");
 		}
 	}
 	var $cardHeaderButton = $("<button>", { "type": "button", "class": "btn btn-link p-0 ms-1 position-relative", "onclick": "ribbonChecklist()", "aria-label": "Ribbon Checklist", "title": "Ribbon Checklist" })
@@ -1318,7 +1317,7 @@ function createCard(p, id){
 		var alcremieRegex = /caramel|lemon|matcha|mint|rainbow|rubycream|rubyswirl|salted|vanilla/;
 		speciesSprite = speciesSprite.replace(alcremieRegex, "").replace("--", "-").replace("-strawberry", "");
 	}
-	$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + speciesSprite + ".png", "alt": getPokemonData(p.species, "names")["eng"], "title": getPokemonData(p.species, "names")["eng"] }));
+	$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + speciesSprite + ".png", "alt": getPokemonData(p.species, "names")["en"], "title": getPokemonData(p.species, "names")["en"] }));
 	var $cardRibbons = $("<div>", { "class": "card-ribbons flex-grow-1 d-flex flex-wrap p-1" });
 	var ribbonCount = 0, ribbonCountGen7Check = 0, markCount = 0, battleMemory = "", contestMemory = "", battleMemories = [], contestMemories = [];
 	for(let r in p.ribbons){
@@ -1342,9 +1341,10 @@ function createCard(p, id){
 				}
 			}
 		}
-		var $ribbonBtn = $("<a>", { "class": cardRibbonClass, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[p.ribbons[r]].names[translations.ietfToPokemon[settings.language]], "data-bs-content": ribbons[p.ribbons[r]].descs[translations.ietfToPokemon[settings.language]] });
+		// TODO: add handling for missing Chinese ribbon names and descriptions
+		var $ribbonBtn = $("<a>", { "class": cardRibbonClass, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[p.ribbons[r]].names[settings.language], "data-bs-content": ribbons[p.ribbons[r]].descs[settings.language] });
 		if(ribbons[p.ribbons[r]].titles){
-			$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + ribbons[p.ribbons[r]].titles[translations.ietfToPokemon[settings.language]] + ")</div>");
+			$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + ribbons[p.ribbons[r]].titles[settings.language] + ")</div>");
 		}
 		$cardRibbons.append($ribbonBtn);
 	}
@@ -1365,9 +1365,10 @@ function createCard(p, id){
 				battleMemory = "-gold";
 			}
 		}
-		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon battle-memory-ribbon" + battleMemory + " ribbonsprite", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + ribbons["battle-memory-ribbon" + battleMemory].names[translations.ietfToPokemon[settings.language]] + " (" + battleMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["battle-memory-ribbon" + battleMemory].titles[translations.ietfToPokemon[settings.language]] + ")</div>", "data-bs-content": ribbons["battle-memory-ribbon" + battleMemory].descs[translations.ietfToPokemon[settings.language]] + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" });
+		// TODO: add handling for missing Chinese ribbon names and descriptions
+		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon battle-memory-ribbon" + battleMemory + " ribbonsprite", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + ribbons["battle-memory-ribbon" + battleMemory].names[settings.language] + " (" + battleMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["battle-memory-ribbon" + battleMemory].titles[settings.language] + ")</div>", "data-bs-content": ribbons["battle-memory-ribbon" + battleMemory].descs[settings.language] + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" });
 		for(let m in battleMemories){
-			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<span class='" + battleMemories[m] + " ribbonsprite' role='img' aria-label='" + ribbons[battleMemories[m]].names[translations.ietfToPokemon[settings.language]] + "'></span>");
+			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<span class='" + battleMemories[m] + " ribbonsprite' role='img' aria-label='" + ribbons[battleMemories[m]].names[settings.language] + "'></span>");
 		}
 		$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "</div>");
 		$cardRibbons.append($ribbonBtn);
@@ -1382,9 +1383,10 @@ function createCard(p, id){
 				contestMemory = "-gold";
 			}
 		}
-		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon contest-memory-ribbon" + contestMemory + " ribbonsprite", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + ribbons["contest-memory-ribbon" + contestMemory].names[translations.ietfToPokemon[settings.language]] + " (" + contestMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["contest-memory-ribbon" + contestMemory].titles[translations.ietfToPokemon[settings.language]] + ")</div>", "data-bs-content": ribbons["contest-memory-ribbon" + contestMemory].descs[translations.ietfToPokemon[settings.language]] + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" });
+		// TODO: add handling for missing Chinese ribbon names and descriptions
+		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon contest-memory-ribbon" + contestMemory + " ribbonsprite", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + ribbons["contest-memory-ribbon" + contestMemory].names[settings.language] + " (" + contestMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["contest-memory-ribbon" + contestMemory].titles[settings.language] + ")</div>", "data-bs-content": ribbons["contest-memory-ribbon" + contestMemory].descs[settings.language] + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" });
 		for(let m in contestMemories){
-			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<span class='" + contestMemories[m] + " ribbonsprite' role='img' aria-label='" + ribbons[contestMemories[m]].names[translations.ietfToPokemon[settings.language]] + "'></span>");
+			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<span class='" + contestMemories[m] + " ribbonsprite' role='img' aria-label='" + ribbons[contestMemories[m]].names[settings.language] + "'></span>");
 		}
 		$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "</div>");
 		$cardRibbons.append($ribbonBtn);
@@ -1406,13 +1408,9 @@ function createCard(p, id){
 	var $cardFooterBottomLevel = $("<span>", { "class": "align-middle card-footer-level" } )
 		.append($("<span>").text("Lv."))
 		.append($("<span>").text(p.currentlevel));
-	var displayLang = p.language;
-	if(displayLang === "spa"){
-		displayLang === "sp-eu";
-	}
 	var $cardFooterBottomLeft = $("<div>")
 		.append($cardFooterBottomLevel,
-			$("<span>", { "class": "align-middle card-footer-language d-inline-block text-center rounded-pill fw-bold mx-2 text-uppercase" }).text(displayLang)
+			$("<span>", { "class": "align-middle card-footer-language d-inline-block text-center rounded-pill fw-bold mx-2" }).text(translations.languages[p.language][settings.language].abbr)
 		);
 	var originName = origins[p.originmark].name;
 	if(p.origingame){
@@ -1450,10 +1448,6 @@ function presetSettings(change = false){
 	if(settings.theme){
 		$("#settingsTheme").val(settings.theme);
 		if(change) $("#settingsTheme").change();
-	}
-	if(settings.language){
-		$("#settingsLanguage").val(settings.language);
-		if(change) $("#settingsLanguage").change();
 	}
 	if(settings.ChecklistButtons){
 		$("#settingsChecklistButtons").val(settings.ChecklistButtons);
@@ -1521,10 +1515,10 @@ function resetPokemonForm(edit = false){
 	$("#pokemonFormShiny-normal, #pokemonFormGender-male, #pokemonFormStrangeBall-global, #pokemonFormPokerus-none").prop("checked", true).change();
 	$("#pokemonFormNotes").val("");
 	$("#pokemonFormSprite").attr("src", "img/ui/1x1.svg");
-	$("#pokemonFormLanguage").val(translations.ietfToPokemon[settings.language]).change();
+	$("#pokemonFormLanguage").val(settings.language).change();
 
 	/* re-populate boxes dropdown */
-	var $boxNone = $("<option>", { "value": "-1" }).text(translations.none["eng"]);
+	var $boxNone = $("<option>", { "value": "-1" }).text(translations.none["en"]);
 	for(var lang in translations.none){
 		$boxNone.attr("data-lang-" + lang, translations.none[lang]);
 	}
@@ -1539,7 +1533,7 @@ function resetPokemonForm(edit = false){
 }
 
 function relistFilterBoxes(){
-	var $boxNone = $("<option>", { "value": "-1" }).text(translations.none["eng"]);
+	var $boxNone = $("<option>", { "value": "-1" }).text(translations.none["en"]);
 	for(var lang in translations.none){
 		$boxNone.attr("data-lang-" + lang, translations.none[lang]);
 	}
@@ -1933,7 +1927,7 @@ function selectCustomOption(o){
 				$option.append($("<span>", { "class": "translation translation-" + lang}).text(translations.none[lang]));
 			}
 		} else {
-			$option.append($("<span>", { "class": selectIconClass + " ribbonsprite " + o.id, "role": "img", "aria-label": ribbons[o.id].names["eng"] }));
+			$option.append($("<span>", { "class": selectIconClass + " ribbonsprite " + o.id, "role": "img", "aria-label": ribbons[o.id].names["en"] }));
 			for(var oed in o.element.dataset){
 				if(oed.indexOf("lang") == 0 && oed.indexOf("langRibbon") == -1){
 					lang = oed.substring(4).toLowerCase();
@@ -2137,7 +2131,7 @@ function initRun(){
 		$("body").append($("<div>", { "id": "imageHoldingArea", "class": "d-none" }));
 		/* add form options */
 		for(var b in balls){
-			var $ballOption = $("<option>", { "value": b }).text(balls[b]["eng"]);
+			var $ballOption = $("<option>", { "value": b }).text(balls[b]["en"]);
 			for(var lang in balls[b]){
 				if(lang === "hisui") continue;
 				$ballOption.attr("data-lang-" + lang, balls[b][lang]);
@@ -2155,6 +2149,21 @@ function initRun(){
 					$("#pokemonFormCurrentGame, #filterFormCurrentGame").append(new Option(games[g].name, g));
 				}
 			}
+		}
+		for(var l in translations.languages){
+			var langAbbr = translations.languages[l][settings.language].abbr;
+			if(translations.languages[l][settings.language].abbrold){
+				langAbbr = translations.languages[l][settings.language].abbrold + "/" + langAbbr;
+			}
+			$("#pokemonFormLanguage, #filterFormLanguage").append(new Option(langAbbr + " - " + translations.languages[l][settings.language].name, l));
+			if(l == settings.language){
+				$("#settingsLanguage").append(new Option(translations.languages[l][l].name, l));
+			} else {
+				$("#settingsLanguage").append(new Option(translations.languages[l][l].name + " / " + translations.languages[l][settings.language].name, l));
+			}
+		}
+		if(settings.language){
+			$("#settingsLanguage").val(settings.language);
 		}
 		for(var o in origins){
 			$("#pokemonFormOriginMark, #filterFormOriginMark").prepend(new Option(origins[o].name, o));
@@ -2200,7 +2209,7 @@ function initRun(){
 					pokemonFormDisplay = " (" + pokemonForms + ")";
 					$pokemon.attr("data-form-all", pokemonForms);
 				} else {
-					pokemonFormDisplay = " (" + pokemonForms["eng"] + ")";
+					pokemonFormDisplay = " (" + pokemonForms["en"] + ")";
 					for(var lang in pokemonForms){
 						$pokemon.attr("data-form-" + lang, pokemonForms[lang]);
 					}
@@ -2210,7 +2219,7 @@ function initRun(){
 			if(pokemonSort){
 				$pokemon.attr("data-sort", pokemonSort);
 			}
-			$pokemon.text(pokemonNames["eng"] + pokemonFormDisplay);
+			$pokemon.text(pokemonNames["en"] + pokemonFormDisplay);
 			$("#pokemonFormSpecies").append($pokemon);
 			if(pokemonCount === pokemonTotal){
 				var dexSort = function(a, b){
@@ -2232,15 +2241,15 @@ function initRun(){
 			}
 		}
 		for(var r in ribbons){
-			var $ribbonOption = $("<option>", { "value": r }).text(ribbons[r].names["eng"]);
+			var $ribbonOption = $("<option>", { "value": r }).text(ribbons[r].names["en"]);
 			var formRibbonSelect = "#filterFormEarnedRibbons";
-			var $ribbonRow = $("<li>", { "class": "list-group-item list-group-item-action d-flex align-items-center border-0", "aria-label": ribbons[r].names.eng + " - " + ribbons[r].descs.eng })
+			var $ribbonRow = $("<li>", { "class": "list-group-item list-group-item-action d-flex align-items-center border-0", "aria-label": ribbons[r].names.en + " - " + ribbons[r].descs.en })
 				.append($("<input>", { "type": "checkbox", "value": "", "class": "form-check-input mt-0 ms-lg-1 me-1 me-lg-2", "id": "pokemonFormRibbon-" + r }));
 			if(r.startsWith("contest-memory-ribbon") || r.startsWith("battle-memory-ribbon")){
 				$ribbonRow.append($("<img>", { "src": "img/ui/sync.svg", "class": "pokemonFormRibbon-memory-sync" }));
 			}
 			var $ribbonRowLabel = $("<label>", { "for": "pokemonFormRibbon-" + r, "class": "form-check-label stretched-link d-flex align-items-center w-100" })
-				.append($("<span>", { "class": "me-2 ribbonsprite " + r, "title": ribbons[r].names.eng, "role": "img", "aria-label": ribbons[r].names.eng }));
+				.append($("<span>", { "class": "me-2 ribbonsprite " + r, "title": ribbons[r].names.en, "role": "img", "aria-label": ribbons[r].names.en }));
 			var $ribbonRowInfo = $("<div>", { "class": "w-100" });
 			var $ribbonRowInfoName = $("<div>", { "class": "fw-bold lh-1 my-1 d-flex w-100 justify-content-between align-items-center" });
 			var $ribbonRowInfoDesc = $("<div>", { "class": "lh-1 mb-1" });
@@ -2282,7 +2291,7 @@ function initRun(){
 			$ribbonRow.append($ribbonRowLabel);
 			$("#pokemonFormRibbons").append($ribbonRow);
 			if(ribbons[r].titles){
-				var $titleOption = $("<option>", { "value": r }).text(ribbons[r].titles["eng"]);
+				var $titleOption = $("<option>", { "value": r }).text(ribbons[r].titles["en"]);
 				for(var lang in ribbons[r].names){
 					$titleOption.attr("data-lang-" + lang, ribbons[r].titles[lang]).attr("data-lang-ribbon-" + lang, ribbons[r].names[lang]);
 				}
@@ -2291,7 +2300,7 @@ function initRun(){
 		}
 		$("#imageHoldingArea").append($("<img>", { "src": "img/ribbons.png" }));
 		for(var n in natures){
-			var $natureOption = $("<option>", { "value": n }).text(natures[n]["eng"]);
+			var $natureOption = $("<option>", { "value": n }).text(natures[n]["en"]);
 			for(var lang in natures[n]){
 				$natureOption.attr("data-lang-" + lang, natures[n][lang]);
 			}
@@ -2564,7 +2573,7 @@ function initRun(){
 
 		/* data conversion from old app */
 		if((userPokemon.entries && typeof userPokemon.entries !== "function") || (userBoxes.entries && typeof userBoxes.entries !== "function")){
-			loadingBar(22);
+			loadingBar(21);
 			$("#loading-spinner-info-text").text("Converting old data");
 			if(userPokemon.entries && typeof userPokemon.entries !== "function"){
 				userPokemon = Object.assign([], userPokemon.entries.filter(Boolean));
@@ -2577,6 +2586,32 @@ function initRun(){
 				userBoxes = Object.assign([], userBoxes.entries.filter(Boolean));
 				localStorage.boxes = JSON.stringify(userBoxes);
 			}
+			updateModifiedDate();
+		}
+		
+		/* update all Pokemon languages */
+		loadingBar(22);
+		$("#loading-spinner-info-text").text("Updating Pokémon languages");
+		var languageConvert = {
+			"eng": "en",
+			"spa": "es-es",
+			"fre": "fr",
+			"ger": "de",
+			"ita": "it",
+			"jpn": "ja",
+			"kor": "ko",
+			"chs": "zh-Hans",
+			"cht": "zh-Hant"
+		};
+		var changedALanguage = false;
+		for(let p in userPokemon){
+			if(languageConvert[userPokemon[p].language]){
+				changedALanguage = true;
+				userPokemon[p].language = languageConvert[userPokemon[p].language];
+			}
+		}
+		if(changedALanguage){
+			localStorage.pokemon = JSON.stringify(userPokemon);
 			updateModifiedDate();
 		}
 
