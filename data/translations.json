@@ -34,19 +34,19 @@
 				"name": "Inglese"
 			},
 			"ja": {
-				"abbr": "",
+				"abbr": "ENG",
 				"name": "英語"
 			},
 			"ko": {
-				"abbr": "",
+				"abbr": "ENG",
 				"name": "영어"
 			},
 			"zh-Hans": {
-				"abbr": "",
+				"abbr": "ENG",
 				"name": "英语"
 			},
 			"zh-Hant": {
-				"abbr": "",
+				"abbr": "ENG",
 				"name": "英語"
 			}
 		},
@@ -78,20 +78,24 @@
 				"abbrold": "SPA"
 			},
 			"ja": {
-				"abbr": "",
-				"name": "欧州スペイン語"
+				"abbr": "SP-EU",
+				"name": "欧州スペイン語",
+				"abbrold": "SPA"
 			},
 			"ko": {
-				"abbr": "",
-				"name": "유럽 스페인어"
+				"abbr": "SP-EU",
+				"name": "유럽 스페인어",
+				"abbrold": "SPA"
 			},
 			"zh-Hans": {
-				"abbr": "",
-				"name": "欧陆西班牙语"
+				"abbr": "SP-EU",
+				"name": "欧陆西班牙语",
+				"abbrold": "SPA"
 			},
 			"zh-Hant": {
-				"abbr": "",
-				"name": "歐陸西班牙語"
+				"abbr": "SP-EU",
+				"name": "歐陸西班牙語",
+				"abbrold": "SPA"
 			}
 		},
 		"fr": {
@@ -117,19 +121,19 @@
 				"name": "Francese"
 			},
 			"ja": {
-				"abbr": "",
+				"abbr": "FRE",
 				"name": "フランス語"
 			},
 			"ko": {
-				"abbr": "",
+				"abbr": "FRE",
 				"name": "프랑스어"
 			},
 			"zh-Hans": {
-				"abbr": "",
+				"abbr": "FRE",
 				"name": "法语"
 			},
 			"zh-Hant": {
-				"abbr": "",
+				"abbr": "FRE",
 				"name": "法語"
 			}
 		},
@@ -156,19 +160,19 @@
 				"name": "Tedesco"
 			},
 			"ja": {
-				"abbr": "",
+				"abbr": "GER",
 				"name": "ドイツ語"
 			},
 			"ko": {
-				"abbr": "",
+				"abbr": "GER",
 				"name": "독일어"
 			},
 			"zh-Hans": {
-				"abbr": "",
+				"abbr": "GER",
 				"name": "德语"
 			},
 			"zh-Hant": {
-				"abbr": "",
+				"abbr": "GER",
 				"name": "德語"
 			}
 		},
@@ -195,19 +199,19 @@
 				"name": "Italiano"
 			},
 			"ja": {
-				"abbr": "",
+				"abbr": "ITA",
 				"name": "イタリア語"
 			},
 			"ko": {
-				"abbr": "",
+				"abbr": "ITA",
 				"name": "이탈리아어"
 			},
 			"zh-Hans": {
-				"abbr": "",
+				"abbr": "ITA",
 				"name": "意大利语"
 			},
 			"zh-Hant": {
-				"abbr": "",
+				"abbr": "ITA",
 				"name": "義大利語"
 			}
 		},
@@ -218,15 +222,15 @@
 				"name": "Japanese"
 			},
 			"es-es": {
-				"abbr": "",
+				"abbr": "JPN",
 				"name": "Japonés"
 			},
 			"fr": {
-				"abbr": "",
+				"abbr": "JPN",
 				"name": "Japonais"
 			},
 			"de": {
-				"abbr": "",
+				"abbr": "JPN",
 				"name": "Japanisch"
 			},
 			"it": {
@@ -234,19 +238,19 @@
 				"name": "Giapponese"
 			},
 			"ja": {
-				"abbr": "",
+				"abbr": "JPN",
 				"name": "日本語"
 			},
 			"ko": {
-				"abbr": "",
+				"abbr": "JPN",
 				"name": "일본어"
 			},
 			"zh-Hans": {
-				"abbr": "",
+				"abbr": "JPN",
 				"name": "日语"
 			},
 			"zh-Hant": {
-				"abbr": "",
+				"abbr": "JPN",
 				"name": "日語"
 			}
 		},
@@ -261,7 +265,7 @@
 				"name": "Coreano"
 			},
 			"fr": {
-				"abbr": "",
+				"abbr": "COR",
 				"name": "Coréen"
 			},
 			"de": {
@@ -273,19 +277,19 @@
 				"name": "Coreano"
 			},
 			"ja": {
-				"abbr": "",
+				"abbr": "KOR",
 				"name": "韓国語"
 			},
 			"ko": {
-				"abbr": "",
+				"abbr": "KOR",
 				"name": "한국어"
 			},
 			"zh-Hans": {
-				"abbr": "",
+				"abbr": "KOR",
 				"name": "韩语"
 			},
 			"zh-Hant": {
-				"abbr": "",
+				"abbr": "KOR",
 				"name": "韓語"
 			}
 		},
@@ -312,19 +316,19 @@
 				"name": "Cinese (semplificato)"
 			},
 			"ja": {
-				"abbr": "",
+				"abbr": "CHS",
 				"name": "中国語（簡体字）"
 			},
 			"ko": {
-				"abbr": "",
+				"abbr": "CHS",
 				"name": "중국어/간체자"
 			},
 			"zh-Hans": {
-				"abbr": "",
+				"abbr": "CHS",
 				"name": "简体中文"
 			},
 			"zh-Hant": {
-				"abbr": "",
+				"abbr": "CHS",
 				"name": "簡體中文"
 			}
 		},
@@ -351,19 +355,19 @@
 				"name": "Cinese (tradizionale)"
 			},
 			"ja": {
-				"abbr": "",
+				"abbr": "CHT",
 				"name": "中国語（繁体字）"
 			},
 			"ko": {
-				"abbr": "",
+				"abbr": "CHT",
 				"name": "중국어/번체자"
 			},
 			"zh-Hans": {
-				"abbr": "",
+				"abbr": "CHT",
 				"name": "繁体中文"
 			},
 			"zh-Hant": {
-				"abbr": "",
+				"abbr": "CHT",
 				"name": "繁體中文"
 			}
 		}

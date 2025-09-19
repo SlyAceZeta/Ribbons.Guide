@@ -29,11 +29,10 @@ function updateModifiedDate(newDate = true){
 	var modifiedDate = new Date();
 	if(newDate){
 		localStorage.lastModified = Number(modifiedDate);
-		$("#modalDataLastModified").text(modifiedDate.toLocaleDateString() + ", " + modifiedDate.toLocaleTimeString());
 	} else {
 		modifiedDate.setTime(localStorage.lastModified);
-		$("#modalDataLastModified").text(modifiedDate.toLocaleDateString() + ", " + modifiedDate.toLocaleTimeString());
 	}
+	$("#modalDataLastModified").text(modifiedDate.toLocaleDateString() + ", " + modifiedDate.toLocaleTimeString());
 }
 
 /* change setting */
@@ -2605,9 +2604,9 @@ function initRun(){
 		};
 		var changedALanguage = false;
 		for(let p in userPokemon){
-			if(languageConvert[userPokemon[p].language]){
+			if(languageConvert[userPokemon[p].language.toLowerCase()]){
 				changedALanguage = true;
-				userPokemon[p].language = languageConvert[userPokemon[p].language];
+				userPokemon[p].language = languageConvert[userPokemon[p].language.toLowerCase()];
 			}
 		}
 		if(changedALanguage){

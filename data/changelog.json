@@ -1,4 +1,11 @@
 {
+	"18 September 2025": [
+		"Removed Shiny lock from Chi-Yu",
+		"The GitHub README and the in-app About popup have been slightly updated to be a little more readable",
+		"Warnings have been added regarding Z-A and its lack of backward compatibility; they will go live when HOME support for Z-A goes live in 2026",
+		"Languages have had a massive backend overhaul! All Pokémon will be automatically migrated to match the updates, and Pokémon language tags will now adapt to the language you set Ribbons.Guide to, matching HOME and game behavior. This will help with future efforts to translate Ribbons.Guide as well as the upcoming addition of Latin American Spanish!",
+		"Known bug: When Ribbons.Guide is set to either version of Chinese, certain older Ribbons do not display anything when clicked/tapped on because they were not available in games with Chinese localizations. This will be resolved in the future to make them simply display English as a default."
+	],
 	"6 September 2025": [
 		"Resolved issue where certain browsers were using old cached versions of JSON data files (thanks DamienCain!)"
 	],
@@ -272,7 +279,7 @@
 	"2 January 2023": [
 		"Added Boxes to group your Pokémon <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/16'>#16</a>",
 		"Added ability to drag and re-order Pokémon <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/21'>#21</a>",
-		"Updated data backup/restore to include Boxes; Pokémon order is also saved; restore is backwards compatible with older files",
+		"Updated data backup/restore to include Boxes; Pokémon order is also saved; restore is backward compatible with older files",
 		"Added new theme \"Start Menu\"; updated Naranja and Uva themes to appear closer to the game",
 		"Replaced add/edit form tab labels with icons",
 		"Added Pokémon sprite preview to add/edit form",
