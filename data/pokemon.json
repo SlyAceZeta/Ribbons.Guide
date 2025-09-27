@@ -42275,8 +42275,7 @@
 		],
 		"flags": [
 			"restricted",
-			"sizeLocked",
-			"shinyLocked"
+			"sizeLocked"
 		]
 	},
 	"koraidon-ride": {
@@ -42321,8 +42320,7 @@
 		],
 		"flags": [
 			"restricted",
-			"sizeLocked",
-			"shinyLocked"
+			"sizeLocked"
 		]
 	},
 	"miraidon-ride": {
