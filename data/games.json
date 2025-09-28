@@ -1,311 +1,885 @@
 {
 	"home": {
-		"name": "HOME",
+		"names": {
+			"en": "HOME (Gen VIII/Scarlet/Violet)",
+			"es-es": "HOME (Gen VIII/Escarlata/Púrpura)",
+			"fr": "HOME (Gen VIII/Écarlate/Violet)",
+			"de": "HOME (Gen VIII/Karmesin/Purpur)",
+			"it": "HOME (Gen VIII/Scarlatto/Violetto)",
+			"ja": "HOME (Gen VIII/スカーレット/バイオレット)",
+			"ko": "HOME (Gen VIII/스칼렛/바이올렛)",
+			"zh-Hans": "HOME (Gen VIII/朱/紫)",
+			"zh-Hant": "HOME (Gen VIII/朱/紫)"
+		},
 		"gen": 8,
 		"storage": true
 	},
 	"bank7": {
-		"name": "Bank (Gen VII)",
+		"names": {
+			"en": "Bank (Gen VII)",
+			"es-es": "Banco (Gen VII)",
+			"fr": "Banque (Gen VII)",
+			"it": "Banca (Gen VII)",
+			"ja": "バンク (Gen VII)",
+			"ko": "뱅크 (Gen VII)",
+			"zh-Hans": "宝可梦虚拟银行 (Gen VII)",
+			"zh-Hant": "寶可夢虛擬銀行 (Gen VII)"
+		},
 		"gen": 7,
 		"storage": true
 	},
 	"bank": {
-		"name": "Bank (Gen VI)",
+		"names": {
+			"en": "Bank (Gen VI)",
+			"es-es": "Banco (Gen VI)",
+			"fr": "Banque (Gen VI)",
+			"it": "Banca (Gen VI)",
+			"ja": "バンク (Gen VI)",
+			"ko": "뱅크 (Gen VI)",
+			"zh-Hans": "宝可梦虚拟银行 (Gen VI)",
+			"zh-Hant": "寶可夢虛擬銀行 (Gen VI)"
+		},
 		"gen": 6,
 		"storage": true
 	},
 	"plza": {
-		"name": "Legends: Z-A",
+		"names": {
+			"en": "Legends: Z-A",
+			"es-es": "Leyendas: Z-A",
+			"fr": "Légendes : Z-A",
+			"de": "Legenden: Z-A",
+			"it": "Leggende: Z-A",
+			"ja": "LEGENDS Z-A",
+			"ko": "레전즈 제트에이",
+			"zh-Hans": "传说 Z-A",
+			"zh-Hant": "傳說 Z-A"
+		},
 		"gen": 9,
 		"solo": true,
 		"ribbonGenOrder": 2
 	},
 	"sv": {
-		"name": "Scarlet/Violet",
+		"names": {
+			"en": "Scarlet/Violet",
+			"es-es": "Escarlata/Púrpura",
+			"fr": "Écarlate/Violet",
+			"de": "Karmesin/Purpur",
+			"it": "Scarlatto/Violetto",
+			"ja": "スカーレット/バイオレット",
+			"ko": "스칼렛/바이올렛",
+			"zh-Hans": "朱/紫",
+			"zh-Hant": "朱/紫"
+		},
 		"gen": 9,
 		"combo": true,
 		"ribbonGenOrder": 1
 	},
 	"scar": {
-		"name": "Scarlet",
+		"names": {
+			"en": "Scarlet",
+			"es-es": "Escarlata",
+			"fr": "Écarlate",
+			"de": "Karmesin",
+			"it": "Scarlatto",
+			"ja": "スカーレット",
+			"ko": "스칼렛",
+			"zh-Hans": "朱",
+			"zh-Hant": "朱"
+		},
 		"partOf": "sv"
 	},
 	"vio": {
-		"name": "Violet",
+		"names": {
+			"en": "Violet",
+			"es-es": "Púrpura",
+			"de": "Purpur",
+			"it": "Violetto",
+			"ja": "バイオレット",
+			"ko": "바이올렛",
+			"zh-Hans": "紫",
+			"zh-Hant": "紫"
+		},
 		"partOf": "sv"
 	},
 	"pla": {
-		"name": "Legends: Arceus",
+		"names": {
+			"en": "Legends: Arceus",
+			"es-es": "Leyendas: Arceus",
+			"fr": "Légendes: Arceus",
+			"de": "Legenden: Arceus",
+			"it": "Leggende: Arceus",
+			"ja": "LEGENDS アルセウス",
+			"ko": "LEGENDS 아르세우스",
+			"zh-Hans": "传说 阿尔宙斯",
+			"zh-Hant": "傳說：阿爾宙斯"
+		},
 		"gen": 8,
 		"solo": true,
 		"ribbonGenOrder": 3
 	},
 	"bdsp": {
-		"name": "Brilliant Diamond/Shining Pearl",
+		"names": {
+			"en": "Brilliant Diamond/Shining Pearl",
+			"es-es": "Diamante Brillante/Perla Reluciente",
+			"fr": "Diamant Étincelant/Perle Scintillante",
+			"de": "Strahlender Diamant/Leuchtende Perle",
+			"it": "Diamante Lucente/Perla Splendente",
+			"ja": "ブリリアントダイヤモンド/シャイニングパール",
+			"ko": "브릴리언트 다이아몬드/샤이닝 펄",
+			"zh-Hans": "晶灿钻石/明亮珍珠",
+			"zh-Hant": "晶燦鑽石/明亮珍珠"
+		},
 		"gen": 8,
 		"combo": true,
 		"ribbonGenOrder": 2
 	},
 	"bd": {
-		"name": "Brilliant Diamond",
+		"names": {
+			"en": "Brilliant Diamond",
+			"es-es": "Diamante Brillante",
+			"fr": "Diamant Étincelant",
+			"de": "Strahlender Diamant",
+			"it": "Diamante Lucente",
+			"ja": "ブリリアントダイヤモンド",
+			"ko": "브릴리언트 다이아몬드",
+			"zh-Hans": "晶灿钻石",
+			"zh-Hant": "晶燦鑽石"
+		},
 		"partOf": "bdsp"
 	},
 	"sp": {
-		"name": "Shining Pearl",
+		"names": {
+			"en": "Shining Pearl",
+			"es-es": "Perla Reluciente",
+			"fr": "Perle Scintillante",
+			"de": "Leuchtende Perle",
+			"it": "Perla Splendente",
+			"ja": "シャイニングパール",
+			"ko": "샤이닝 펄",
+			"zh-Hans": "明亮珍珠",
+			"zh-Hant": "明亮珍珠"
+		},
 		"partOf": "bdsp"
 	},
 	"swsh": {
-		"name": "Sword/Shield",
+		"names": {
+			"en": "Sword/Shield",
+			"es-es": "Espada/Escudo",
+			"fr": "Épée/Bouclier",
+			"de": "Schwert/Schild",
+			"it": "Spada/Scudo",
+			"ja": "ソード/シールド",
+			"ko": "소드/실드",
+			"zh-Hans": "剑/盾",
+			"zh-Hant": "劍/盾"
+		},
 		"gen": 8,
 		"combo": true,
 		"ribbonGenOrder": 1
 	},
 	"sw": {
-		"name": "Sword",
+		"names": {
+			"en": "Sword",
+			"es-es": "Espada",
+			"fr": "Épée",
+			"de": "Schwert",
+			"it": "Spada",
+			"ja": "ソード",
+			"ko": "소드",
+			"zh-Hans": "剑",
+			"zh-Hant": "劍"
+		},
 		"partOf": "swsh"
 	},
 	"sh": {
-		"name": "Shield",
+		"names": {
+			"en": "Shield",
+			"es-es": "Escudo",
+			"fr": "Bouclier",
+			"de": "Schild",
+			"it": "Scudo",
+			"ja": "シールド",
+			"ko": "실드",
+			"zh-Hans": "盾",
+			"zh-Hant": "盾"
+		},
 		"partOf": "swsh"
 	},
 	"lgpe": {
-		"name": "Let's Go, Pikachu!/Eevee!",
+		"names": {
+			"en": "Let's Go, Pikachu!/Eevee!",
+			"fr": "Let's Go, Pikachu/Évoli",
+			"de": "Let's Go, Pikachu!/Evoli!",
+			"ja": "Let's Go! ピカチュウ/イーブイ",
+			"ko": "레츠고! 피카츄/이브이",
+			"zh-Hans": "Let's Go！皮卡丘/伊布",
+			"zh-Hant": "Let's Go！皮卡丘/伊布"
+		},
 		"gen": 7,
 		"combo": true
 	},
 	"lgp": {
-		"name": "Let's Go, Pikachu!",
+		"names": {
+			"en": "Let's Go, Pikachu!",
+			"fr": "Let's Go, Pikachu",
+			"ja": "Let's Go! ピカチュウ",
+			"ko": "레츠고! 피카츄",
+			"zh-Hans": "Let's Go！皮卡丘",
+			"zh-Hant": "Let's Go！皮卡丘"
+		},
 		"partOf": "lgpe"
 	},
 	"lge": {
-		"name": "Let's Go, Eevee!",
+		"names": {
+			"en": "Let's Go, Eevee!",
+			"fr": "Let's Go, Évoli",
+			"de": "Let's Go, Evoli!",
+			"ja": "Let's Go! イーブイ",
+			"ko": "레츠고! 이브이",
+			"zh-Hans": "Let's Go！伊布",
+			"zh-Hant": "Let's Go！伊布"
+		},
 		"partOf": "lgpe"
 	},
 	"usum": {
-		"name": "Ultra Sun/Ultra Moon",
+		"names": {
+			"en": "Ultra Sun/Ultra Moon",
+			"es-es": "Ultrasol/Ultraluna",
+			"fr": "Ultra-Soleil/Ultra-Lune",
+			"de": "Ultrasonne/Ultramond",
+			"it": "Ultrasole/Ultraluna",
+			"ja": "ウルトラサン/ウルトラムーン",
+			"ko": "울트라썬/울트라문",
+			"zh-Hans": "究极之日/究极之月",
+			"zh-Hant": "究極之日/究極之月"
+		},
 		"gen": 7,
 		"combo": true
 	},
 	"usun": {
-		"name": "Ultra Sun",
+		"names": {
+			"en": "Ultra Sun",
+			"es-es": "Ultrasol",
+			"fr": "Ultra-Soleil",
+			"de": "Ultrasonne",
+			"it": "Ultrasole",
+			"ja": "ウルトラサン",
+			"ko": "울트라썬",
+			"zh-Hans": "究极之日",
+			"zh-Hant": "究極之日"
+		},
 		"partOf": "usum"
 	},
 	"umoon": {
-		"name": "Ultra Moon",
+		"names": {
+			"en": "Ultra Moon",
+			"es-es": "Ultraluna",
+			"fr": "Ultra-Lune",
+			"de": "Ultramond",
+			"it": "Ultraluna",
+			"ja": "ウルトラムーン",
+			"ko": "울트라문",
+			"zh-Hans": "究极之月",
+			"zh-Hant": "究極之月"
+		},
 		"partOf": "usum"
 	},
 	"sm": {
-		"name": "Sun/Moon",
+		"names": {
+			"en": "Sun/Moon",
+			"es-es": "Sol/Luna",
+			"fr": "Soleil/Lune",
+			"de": "Sonne/Mond",
+			"it": "Sole/Luna",
+			"ja": "サン/ムーン",
+			"ko": "썬/문",
+			"zh-Hans": "太阳/月亮",
+			"zh-Hant": "太陽/月亮"
+		},
 		"gen": 7,
 		"combo": true
 	},
 	"sun": {
-		"name": "Sun",
+		"names": {
+			"en": "Sun",
+			"es-es": "Sol",
+			"fr": "Soleil",
+			"de": "Sonne",
+			"it": "Sole",
+			"ja": "サン",
+			"ko": "썬",
+			"zh-Hans": "太阳",
+			"zh-Hant": "太陽"
+		},
 		"partOf": "sm"
 	},
 	"moon": {
-		"name": "Moon",
+		"names": {
+			"en": "Moon",
+			"es-es": "Luna",
+			"fr": "Lune",
+			"de": "Mond",
+			"it": "Luna",
+			"ja": "ムーン",
+			"ko": "문",
+			"zh-Hans": "月亮",
+			"zh-Hant": "月亮"
+		},
 		"partOf": "sm"
 	},
 	"go": {
-		"name": "GO",
+		"names": {
+			"en": "GO",
+			"ko": "고"
+		},
 		"gen": 6,
 		"solo": true
 	},
 	"oras": {
-		"name": "Omega Ruby/Alpha Sapphire",
+		"names": {
+			"en": "Omega Ruby/Alpha Sapphire",
+			"es-es": "Rubí Omega/Zafiro Alfa",
+			"fr": "Rubis Oméga/Saphir Alpha",
+			"de": "Omega Rubin/Alpha Saphir",
+			"it": "Rubino Omega/Zaffiro Alpha",
+			"ja": "オメガルビー/アルファサファイア",
+			"ko": "오메가루비/알파사파이어",
+			"zh-Hans": "欧米伽红宝石/阿尔法蓝宝石",
+			"zh-Hant": "歐米加紅寶石/阿爾法藍寶石"
+		},
 		"gen": 6,
 		"combo": true,
 		"ribbonGenOrder": 2
 	},
 	"or": {
-		"name": "Omega Ruby",
+		"names": {
+			"en": "Omega Ruby",
+			"es-es": "Rubí Omega",
+			"fr": "Rubis Oméga",
+			"de": "Omega Rubin",
+			"it": "Rubino Omega",
+			"ja": "オメガルビー",
+			"ko": "오메가루비",
+			"zh-Hans": "欧米伽红宝石",
+			"zh-Hant": "歐米加紅寶石"
+		},
 		"partOf": "oras"
 	},
 	"as": {
-		"name": "Alpha Sapphire",
+		"names": {
+			"en": "Alpha Sapphire",
+			"es-es": "Zafiro Alfa",
+			"fr": "Saphir Alpha",
+			"de": "Alpha Saphir",
+			"it": "Zaffiro Alpha",
+			"ja": "アルファサファイア",
+			"ko": "알파사파이어",
+			"zh-Hans": "阿尔法蓝宝石",
+			"zh-Hant": "阿爾法藍寶石"
+		},
 		"partOf": "oras"
 	},
 	"xy": {
-		"name": "X/Y",
+		"names": {
+			"en": "X/Y"
+		},
 		"gen": 6,
 		"combo": true,
 		"ribbonGenOrder": 1
 	},
 	"x": {
-		"name": "X",
+		"names": {
+			"en": "X"
+		},
 		"partOf": "xy"
 	},
 	"y": {
-		"name": "Y",
+		"names": {
+			"en": "Y"
+		},
 		"partOf": "xy"
 	},
 	"b2w2": {
-		"name": "Black 2/White 2",
+		"names": {
+			"en": "Black 2/White 2",
+			"es-es": "Negra 2/Blanca 2",
+			"fr": "Noire 2/Blanche 2",
+			"de": "Schwarz 2/Weiß 2",
+			"it": "Nera 2/Bianca 2",
+			"ja": "ブラック 2/ホワイト 2",
+			"ko": "블랙 2/화이트 2",
+			"zh-Hans": "黑 2/白 2",
+			"zh-Hant": "黑 2/白 2"
+		},
 		"gen": 5,
 		"combo": true
 	},
 	"black2": {
-		"name": "Black 2",
+		"names": {
+			"en": "Black 2",
+			"es-es": "Negra 2",
+			"fr": "Noire 2",
+			"de": "Schwarz 2",
+			"it": "Nera 2",
+			"ja": "ブラック 2",
+			"ko": "블랙 2",
+			"zh-Hans": "黑 2",
+			"zh-Hant": "黑 2"
+		},
 		"partOf": "b2w2",
 		"platformIcon": "dsi"
 	},
 	"white2": {
-		"name": "White 2",
+		"names": {
+			"en": "White 2",
+			"es-es": "Blanca 2",
+			"fr": "Blanche 2",
+			"de": "Weiß 2",
+			"it": "Bianca 2",
+			"ja": "ホワイト 2",
+			"ko": "화이트 2",
+			"zh-Hans": "白 2",
+			"zh-Hant": "白 2"
+		},
 		"partOf": "b2w2",
 		"platformIcon": "dsi"
 	},
 	"bw": {
-		"name": "Black/White",
+		"names": {
+			"en": "Black/White",
+			"es-es": "Negra/Blanca",
+			"fr": "Noire/Blanche",
+			"de": "Schwarz/Weiß",
+			"it": "Nera/Bianca",
+			"ja": "ブラック/ホワイト",
+			"ko": "블랙/화이트",
+			"zh-Hans": "黑/白",
+			"zh-Hant": "黑/白"
+		},
 		"gen": 5,
 		"combo": true
 	},
 	"black": {
-		"name": "Black",
+		"names": {
+			"en": "Black",
+			"es-es": "Negra",
+			"fr": "Noire",
+			"de": "Schwarz",
+			"it": "Nera",
+			"ja": "ブラック",
+			"ko": "블랙",
+			"zh-Hans": "黑",
+			"zh-Hant": "黑"
+		},
 		"partOf": "bw",
 		"platformIcon": "dsi"
 	},
 	"white": {
-		"name": "White",
+		"names": {
+			"en": "White",
+			"es-es": "Blanca",
+			"fr": "Blanche",
+			"de": "Weiß",
+			"it": "Bianca",
+			"ja": "ホワイト",
+			"ko": "화이트",
+			"zh-Hans": "白",
+			"zh-Hant": "白"
+		},
 		"partOf": "bw",
 		"platformIcon": "dsi"
 	},
 	"hgss": {
-		"name": "HeartGold/SoulSilver",
+		"names": {
+			"en": "HeartGold/SoulSilver",
+			"es-es": "Oro HeartGold/Plata SoulSilver",
+			"fr": "Or HeartGold/Argent SoulSilver",
+			"ja": "ハートゴールド/ソウルシルバー",
+			"ko": "하트골드/소울실버",
+			"zh-Hans": "心金/魂银",
+			"zh-Hant": "心金/魂銀"
+		},
 		"gen": 4,
 		"combo": true,
 		"ribbonGenOrder": 2
 	},
 	"hg": {
-		"name": "HeartGold",
+		"names": {
+			"en": "HeartGold",
+			"es-es": "Oro HeartGold",
+			"fr": "Or HeartGold",
+			"ja": "ハートゴールド",
+			"ko": "하트골드",
+			"zh-Hans": "心金",
+			"zh-Hant": "心金"
+		},
 		"partOf": "hgss",
 		"platformIcon": "dsi"
 	},
 	"ss": {
-		"name": "SoulSilver",
+		"names": {
+			"en": "SoulSilver",
+			"es-es": "Plata SoulSilver",
+			"fr": "Argent SoulSilver",
+			"ja": "ソウルシルバー",
+			"ko": "소울실버",
+			"zh-Hans": "魂银",
+			"zh-Hant": "魂銀"
+		},
 		"partOf": "hgss",
 		"platformIcon": "dsi"
 	},
 	"dppt": {
-		"name": "Diamond/Pearl/Platinum",
+		"names": {
+			"en": "Diamond/Pearl/Platinum",
+			"es-es": "Diamante/Perla/Platino",
+			"fr": "Diamant/Perle/Platine",
+			"de": "Diamant/Perl/Platin",
+			"it": "Diamante/Perla/Platino",
+			"ja": "ダイヤモンド/パール/プラチナ",
+			"ko": "디아루가/펄기아/Pt기라티나",
+			"zh-Hans": "钻石/珍珠/白金",
+			"zh-Hant": "鑽石/珍珠/白金"
+		},
 		"gen": 4,
 		"combo": true,
 		"ribbonGenOrder": 1
 	},
 	"diamond": {
-		"name": "Diamond",
+		"names": {
+			"en": "Diamond",
+			"es-es": "Diamante",
+			"fr": "Diamant",
+			"de": "Diamant",
+			"it": "Diamante",
+			"ja": "ダイヤモンド",
+			"ko": "디아루가",
+			"zh-Hans": "钻石",
+			"zh-Hant": "鑽石"
+		},
 		"partOf": "dppt",
 		"platformIcon": "dsi"
 	},
 	"pearl": {
-		"name": "Pearl",
+		"names": {
+			"en": "Pearl",
+			"es-es": "Perla",
+			"fr": "Perle",
+			"de": "Perl",
+			"it": "Perla",
+			"ja": "パール",
+			"ko": "펄기아",
+			"zh-Hans": "珍珠",
+			"zh-Hant": "珍珠"
+		},
 		"partOf": "dppt",
 		"platformIcon": "dsi"
 	},
 	"platinum": {
-		"name": "Platinum",
+		"names": {
+			"en": "Platinum",
+			"es-es": "Platino",
+			"fr": "Platine",
+			"de": "Platin",
+			"it": "Platino",
+			"ja": "プラチナ",
+			"ko": "Pt기라티나",
+			"zh-Hans": "白金",
+			"zh-Hant": "白金"
+		},
 		"partOf": "dppt",
 		"platformIcon": "dsi"
 	},
 	"frlg": {
-		"name": "FireRed/LeafGreen",
+		"names": {
+			"en": "FireRed/LeafGreen",
+			"es-es": "RojoFuego/VerdeHoja",
+			"fr": "Rouge Feu/Vert Feuille",
+			"de": "Feuerrot/Blattgrün",
+			"it": "RossoFuoco/VerdeFoglia",
+			"ja": "ファイアレッド/リーフグリーン",
+			"ko": "파이어레드/리프그린",
+			"zh-Hans": "火红/叶绿",
+			"zh-Hant": "火紅/葉綠"
+		},
 		"gen": 3,
 		"combo": true,
 		"ribbonGenOrder": 2
 	},
 	"fr": {
-		"name": "FireRed",
+		"names": {
+			"en": "FireRed",
+			"es-es": "RojoFuego",
+			"fr": "Rouge Feu",
+			"de": "Feuerrot",
+			"it": "RossoFuoco",
+			"ja": "ファイアレッド",
+			"ko": "파이어레드",
+			"zh-Hans": "火红",
+			"zh-Hant": "火紅"
+		},
 		"partOf": "frlg",
 		"platformIcon": "gba"
 	},
 	"lg": {
-		"name": "LeafGreen",
+		"names": {
+			"en": "LeafGreen",
+			"es-es": "VerdeHoja",
+			"fr": "Vert Feuille",
+			"de": "Blattgrün",
+			"it": "VerdeFoglia",
+			"ja": "リーフグリーン",
+			"ko": "리프그린",
+			"zh-Hans": "叶绿",
+			"zh-Hant": "葉綠"
+		},
 		"partOf": "frlg",
 		"platformIcon": "gba"
 	},
 	"coloxd": {
-		"name": "Colosseum/XD: Gale of Darkness",
+		"names": {
+			"en": "Colosseum/XD: Gale of Darkness",
+			"es-es": "Colosseum/XD: Tempestad Oscura",
+			"fr": "Colosseum/XD : Le Souffle des Ténèbres",
+			"de": "Kolosseum/XD: Der Dunkle Sturm",
+			"it": "Colosseo/XD: Tempesta Oscura",
+			"ja": "コロシアム/ＸＤ 闇の旋風ダーク・ルギア",
+			"ko": "콜로세움/XD 어둠의 선풍 다크루기아",
+			"zh-Hans": "竞技场/XD: Gale of Darkness",
+			"zh-Hant": "圓形競技場/XD: Gale of Darkness"
+		},
 		"gen": 3,
 		"combo": true,
 		"ribbonGenOrder": 3
 	},
 	"colosseum": {
-		"name": "Colosseum",
+		"names": {
+			"en": "Colosseum",
+			"de": "Kolosseum",
+			"it": "Colosseo",
+			"ja": "コロシアム",
+			"ko": "콜로세움",
+			"zh-Hans": "竞技场",
+			"zh-Hant": "圓形競技場"
+		},
 		"partOf": "coloxd",
 		"platformIcon": "gamecube"
 	},
 	"xd": {
-		"name": "XD: Gale of Darkness",
+		"names": {
+			"en": "XD: Gale of Darkness",
+			"es-es": "XD: Tempestad Oscura",
+			"fr": "XD : Le Souffle des Ténèbres",
+			"de": "XD: Der Dunkle Sturm",
+			"it": "XD: Tempesta Oscura",
+			"ja": "ＸＤ 闇の旋風ダーク・ルギア",
+			"ko": "XD 어둠의 선풍 다크루기아"
+		},
 		"partOf": "coloxd",
 		"platformIcon": "gamecube"
 	},
 	"rse": {
-		"name": "Ruby/Sapphire/Emerald",
+		"names": {
+			"en": "Ruby/Sapphire/Emerald",
+			"es-es": "Rubí/Zafiro/Esmeralda",
+			"fr": "Rubis/Saphir/Émeraude",
+			"de": "Rubin/Saphir/Smaragd",
+			"it": "Rubino/Zaffiro/Smeraldo",
+			"ja": "ルビー/サファイア/エメラルド",
+			"ko": "루비/사파이어/에메랄드",
+			"zh-Hans": "红宝石/蓝宝石/绿宝石",
+			"zh-Hant": "紅寶石/藍寶石/綠寶石"
+		},
 		"gen": 3,
 		"combo": true,
 		"ribbonGenOrder": 1
 	},
 	"ruby": {
-		"name": "Ruby",
+		"names": {
+			"en": "Ruby",
+			"es-es": "Rubí",
+			"fr": "Rubis",
+			"de": "Rubin",
+			"it": "Rubino",
+			"ja": "ルビー",
+			"ko": "루비",
+			"zh-Hans": "红宝石",
+			"zh-Hant": "紅寶石"
+		},
 		"partOf": "rse",
 		"platformIcon": "gba"
 	},
 	"sapphire": {
-		"name": "Sapphire",
+		"names": {
+			"en": "Sapphire",
+			"es-es": "Zafiro",
+			"fr": "Saphir",
+			"de": "Saphir",
+			"it": "Zaffiro",
+			"ja": "サファイア",
+			"ko": "사파이어",
+			"zh-Hans": "蓝宝石",
+			"zh-Hant": "藍寶石"
+		},
 		"partOf": "rse",
 		"platformIcon": "gba"
 	},
 	"emerald": {
-		"name": "Emerald",
+		"names": {
+			"en": "Emerald",
+			"es-es": "Esmeralda",
+			"fr": "Émeraude",
+			"de": "Smaragd",
+			"it": "Smeraldo",
+			"ja": "エメラルド",
+			"ko": "에메랄드",
+			"zh-Hans": "绿宝石",
+			"zh-Hant": "綠寶石"
+		},
 		"partOf": "rse",
 		"platformIcon": "gba"
 	},
 	"vc": {
-		"name": "Virtual Console",
+		"names": {
+			"en": "Virtual Console",
+			"es-es": "Consola Virtual",
+			"fr": "Console virtuelle",
+			"ja": "バーチャルコンソール",
+			"ko": "버추얼 콘솔"
+		},
 		"combo": true
 	},
 	"gold": {
-		"name": "Gold",
+		"names": {
+			"en": "Gold",
+			"es-es": "Oro",
+			"fr": "Or",
+			"it": "Oro",
+			"ja": "金",
+			"ko": "금",
+			"zh-Hans": "金",
+			"zh-Hant": "金"
+		},
 		"gen": 2,
 		"partOf": "vc"
 	},
 	"silver": {
-		"name": "Silver",
+		"names": {
+			"en": "Silver",
+			"es-es": "Plata",
+			"fr": "Argent",
+			"de": "Silber",
+			"it": "Argento",
+			"ja": "銀",
+			"ko": "은",
+			"zh-Hans": "银",
+			"zh-Hant": "銀"
+		},
 		"gen": 2,
 		"partOf": "vc"
 	},
 	"crystal": {
-		"name": "Crystal",
+		"names": {
+			"en": "Crystal",
+			"es-es": "Cristal",
+			"fr": "Cristal",
+			"de": "Kristall",
+			"it": "Cristallo",
+			"ja": "クリスタル",
+			"ko": "크리스탈",
+			"zh-Hans": "水晶",
+			"zh-Hant": "水晶"
+		},
 		"gen": 2,
 		"partOf": "vc"
 	},
 	"red-eng": {
-		"name": "Red (ENG)",
+		"names": {
+			"en": "Red (ENG)",
+			"es-es": "Roja (ING)",
+			"fr": "Rouge (ANG)",
+			"de": "Rot (ENG)",
+			"it": "Rossa (ING)",
+			"ja": "赤 (ENG)",
+			"ko": "레드 (ENG)",
+			"zh-Hans": "红 (ENG)",
+			"zh-Hant": "紅 (ENG)"
+		},
 		"gen": 1,
 		"partOf": "vc"
 	},
 	"red-jpn": {
-		"name": "Red (JPN)",
+		"names": {
+			"en": "Red (JPN)",
+			"es-es": "Roja (JAP)",
+			"fr": "Rouge (JAP)",
+			"de": "Rot (JPN)",
+			"it": "Rossa (GPN)",
+			"ja": "赤 (JPN)",
+			"ko": "레드 (JPN)",
+			"zh-Hans": "红 (JPN)",
+			"zh-Hant": "紅 (JPN)"
+		},
 		"gen": 1,
 		"partOf": "vc"
 	},
 	"blue-eng": {
-		"name": "Blue (ENG)",
+		"names": {
+			"en": "Blue (ENG)",
+			"es-es": "Azul (ING)",
+			"fr": "Bleue (ANG)",
+			"de": "Blau (ENG)",
+			"it": "Blu (ING)",
+			"ja": "青 (ENG)",
+			"ko": "블루 (ENG)",
+			"zh-Hans": "蓝 (ENG)",
+			"zh-Hant": "藍 (ENG)"
+		},
 		"gen": 1,
 		"partOf": "vc"
 	},
 	"blue-jpn": {
-		"name": "Blue (JPN)",
+		"names": {
+			"en": "Blue (JPN)",
+			"es-es": "Azul (JAP)",
+			"fr": "Bleue (JAP)",
+			"de": "Blau (JPN)",
+			"it": "Blu (GPN)",
+			"ja": "青 (JPN)",
+			"ko": "블루 (JPN)",
+			"zh-Hans": "蓝 (JPN)",
+			"zh-Hant": "藍 (JPN)"
+		},
 		"gen": 1,
 		"partOf": "vc"
 	},
 	"green": {
-		"name": "Green",
+		"names": {
+			"en": "Green",
+			"es-es": "Verde",
+			"fr": "Vert",
+			"de": "Grün",
+			"it": "Verde",
+			"ja": "緑",
+			"ko": "그린",
+			"zh-Hans": "绿",
+			"zh-Hant": "綠"
+		},
 		"gen": 1,
 		"partOf": "vc"
 	},
 	"yellow": {
-		"name": "Yellow",
+		"names": {
+			"en": "Yellow",
+			"es-es": "Amarilla",
+			"fr": "Jaune",
+			"de": "Gelb",
+			"it": "Gialla",
+			"ja": "黄",
+			"ko": "피카츄",
+			"zh-Hans": "黄",
+			"zh-Hant": "皮卡丘"
+		},
 		"gen": 1,
 		"partOf": "vc"
 	}

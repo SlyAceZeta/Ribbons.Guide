@@ -79,7 +79,8 @@
 	},
 	"go": {
 		"names": {
-			"en": "GO"
+			"en": "GO",
+			"ko": "고"
 		},
 		"games": [
 			"go"

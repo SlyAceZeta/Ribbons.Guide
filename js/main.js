@@ -465,6 +465,8 @@ function getLanguage(data, language = settings.language){
 	if(typeof data === "object"){
 		if(data[language]){
 			return data[language];
+		} else if(language == "es-419" && data["es-es"]){
+			return data["es-es"];
 		} else if(data["en"]){
 			return data["en"];
 		} else {
@@ -984,7 +986,7 @@ function ribbonChecklist(){
 	var currentGame;
 	if(cardData.currentGame){
 		currentGame = cardData.currentGame;
-		$("#modalRibbonChecklistInfo-currentgame").text("Currently in " + getGameData(currentGame, "name", false));
+		$("#modalRibbonChecklistInfo-currentgame").text("Currently in " + getLanguage(getGameData(currentGame, "names", true)));
 	}
 	var ribbonDisplay = "Ribbons";
 	if(currentGame === "scar" || currentGame === "vio"){
@@ -1006,7 +1008,7 @@ function ribbonChecklist(){
 			if(ribbonWarnings[w] == "footprint-virtualconsole") warningText = "If " + cardData.name + " reaches Lv.71 before transferring to Gen&nbsp;VII, the Footprint Ribbon will become unavailable!";
 			if(ribbonWarnings[w] == "footprint-met-level") warningText = cardData.name + "'s Met Level has not been set. The availability of the Footprint Ribbon cannot be determined.";
 			if(ribbonWarnings[w] == "footprint-beldum") warningText = "Evolving " + cardData.name + " into Metagross will make the Footprint Ribbon unavailable!";
-			if(ribbonWarnings[w] == "master-rank-sv") warningText = cardData.name + " can temporarily earn the Master Rank Ribbon during the current Scarlet/Violet regulation. This ends on January 3!";
+			if(ribbonWarnings[w] == "master-rank-sv") warningText = cardData.name + " can temporarily earn the Master Rank Ribbon during the current " + getLanguage(getGameData("sv", "names", true)) + " regulation. This ends on January 3!";
 			if(ribbonWarnings[w] == "evolution-warning"){
 				var evoWarnName = getLanguage(getPokemonData(cardData.evolutionWarning, "names"));
 				var evoWarnForms = getPokemonData(cardData.evolutionWarning, "forms");
@@ -1051,20 +1053,20 @@ function ribbonChecklist(){
 						}
 					}
 					$checklistRow = $("<div>", { "class": "col-12 border-bottom border-2 pb-2", "data-gen": getGameData(game, "gen"), "data-ribbons": JSON.stringify(gameRemainingRibbons) });
-					var plainGameName = games[game].name;
+					var plainGameName = getLanguage(games[game].names);
 					if(game == "sm" || game == "usum"){
 						if($("#modalRibbonChecklistRows .alola").length){
 							continue;
 						} else {
 							$checklistRow.addClass("alola");
 							if((game == "sm" && Object.keys(remainingRibbons).includes("usum")) || (game == "usum" && Object.keys(remainingRibbons).includes("sm"))){
-								plainGameName = games["sm"].name + "/" + games["usum"].name;
+								plainGameName = getLanguage(games["sm"].names) + "/" + getLanguage(games["usum"].names);
 							}
 						}
 					}
 					var formattedGameName = "<span class='text-nowrap'>" + plainGameName.replaceAll("/", "/</span><span class='text-nowrap'>") + "</span>";
 					$checklistRowTitle = $("<div>", { "class": "modalRibbonChecklistRows-gamename fw-bold mb-2" }).html(formattedGameName);
-					if(game == currentGame || game == getGameData(currentGame, "partOf", false) || (game == "sm" && getGameData(currentGame, "partOf", false) == "usum")){
+					if(game == currentGame || game == getGameData(currentGame, "partOf", true) || (game == "sm" && getGameData(currentGame, "partOf", true) == "usum")){
 						$checklistRow.attr("data-order", "0");
 					} else {
 						$checklistRow.attr("data-order", gameOrder[game]);
@@ -1128,7 +1130,7 @@ function ribbonChecklist(){
 					}
 				});
 				if(currentGameStatus === "last-chance"){
-					$("#modalRibbonChecklistStatus-text").addClass("bg-danger-subtle").html(cardData.name + " still has " + ribbonDisplay + " to earn in <span class='text-nowrap'>" + games[currentGame].name + "</span>");
+					$("#modalRibbonChecklistStatus-text").addClass("bg-danger-subtle").html(cardData.name + " still has " + ribbonDisplay + " to earn in <span class='text-nowrap'>" + getLanguage(games[currentGame].names) + "</span>");
 					if(compatibleGames.includes("plza") && currentGame !== "plza"){
 						// if this Pokemon can travel to Z-A, warn that it shouldn't
 						$("#modalRibbonChecklistStatus-text").append(" and cannot enter Legends: Z-A yet.");
@@ -1436,7 +1438,10 @@ function createCard(p, id){
 		);
 	var originName;
 	if(p.origingame){
-		originName = getGameData(p.origingame, "name");
+		originName = getLanguage(getGameData(p.origingame, "names"));
+		if(getGameData(p.origingame, "storage", true)){
+			originName = originName.replace(/ \(.*\)/, "");
+		}
 	} else if(p.originmark === "none"){
 		originName = getLanguage(translations.none);
 	} else {
@@ -2152,10 +2157,10 @@ function initRun(){
 			// temporary until Legends: Z-A releases
 			if(g !== "plza"){
 				if(games[g].combo || games[g].solo){
-					$("#filterFormTargetGames").append(new Option(games[g].name, g));
+					$("#filterFormTargetGames").append(new Option(getLanguage(games[g].names), g));
 				}
 				if(!games[g].combo){
-					$("#pokemonFormCurrentGame, #filterFormCurrentGame").append(new Option(games[g].name, g));
+					$("#pokemonFormCurrentGame, #filterFormCurrentGame").append(new Option(getLanguage(games[g].names), g));
 				}
 			}
 		}
@@ -2471,13 +2476,21 @@ function initRun(){
 				var matchingGames = origins[$(this).val()].games;
 				if(matchingGames.length == 1){
 					$("#pokemonFormOriginGame").html("<option></option>").prop("disabled", true);
-					$("#pokemonFormOriginGame").append(new Option(games[matchingGames[0]].name, matchingGames[0]));
+					var gameName = getLanguage(games[matchingGames[0]].names);
+					if(getGameData(gameKey, "storage", true)){
+						gameName = gameName.replace(/ \(.*\)/, "");
+					}
+					$("#pokemonFormOriginGame").append(new Option(gameName, matchingGames[0]));
 					$("#pokemonFormOriginGame").val(matchingGames[0]).change();
 				} else {
 					$("#pokemonFormOriginGame").html("<option></option>").prop("disabled", false);
 					for(var g in matchingGames){
 						var gameKey = matchingGames[g];
-						$("#pokemonFormOriginGame").append(new Option(games[gameKey].name, gameKey));
+						var gameName = getLanguage(games[gameKey].names);
+						if(getGameData(gameKey, "storage", true)){
+							gameName = gameName.replace(/ \(.*\)/, "");
+						}
+						$("#pokemonFormOriginGame").append(new Option(gameName, gameKey));
 					}
 					$("#pokemonFormOriginGame").val("").change();
 				}
