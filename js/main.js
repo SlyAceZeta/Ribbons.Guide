@@ -468,10 +468,10 @@ function getLanguage(data, language = settings.language){
 		} else if(data["en"]){
 			return data["en"];
 		} else {
-			console.log("getLanguage error: data does not have values for en or " + language);
+			console.error("getLanguage error: data does not have values for en or " + language);
 		}
 	} else {
-		console.log("getLanguage error: provided data is not of type object");
+		console.error("getLanguage error: provided data is not of type object");
 	}
 }
 
@@ -1434,9 +1434,13 @@ function createCard(p, id){
 		.append($cardFooterBottomLevel,
 			$("<span>", { "class": "align-middle card-footer-language d-inline-block text-center rounded-pill fw-bold mx-2" }).text(getLanguage(translations.languages[p.language]).abbr)
 		);
-	var originName = origins[p.originmark].name;
+	var originName;
 	if(p.origingame){
 		originName = getGameData(p.origingame, "name");
+	} else if(p.originmark === "none"){
+		originName = getLanguage(translations.none);
+	} else {
+		originName = getLanguage(origins[p.originmark].names);
 	}
 	if(p.originmark == "none"){
 		if(p.origingame){
@@ -1877,7 +1881,7 @@ function selectCustomOption(o){
 			$mark.append($("<span>").text(getLanguage(translations.none)));
 		} else {
 			$mark.append($("<img>", { "class": selectIconClass + " light-invert", "src": "img/origins/" + o.id + ".png" }))
-				.append($("<span>").text(origins[o.id].name));
+				.append($("<span>").text(getLanguage(origins[o.id].names)));
 		}
 		return $mark;
 	} else if(result.indexOf("settingsExtraOriginMarks") > 0){
@@ -2172,9 +2176,17 @@ function initRun(){
 			$("#settingsLanguage").val(settings.language);
 		}
 		for(var o in origins){
-			$("#pokemonFormOriginMark, #filterFormOriginMark").prepend(new Option(origins[o].name, o));
+			// temporary until Legends: Z-A releases
+			if(o == "plza") continue;
+			var optionText;
+			if(o === "none"){
+				optionText = getLanguage(translations.none);
+			} else {
+				optionText = getLanguage(origins[o].names);
+			}
+			$("#pokemonFormOriginMark, #filterFormOriginMark").prepend(new Option(optionText, o));
 			// TODO: reduce duplication: selectCustomOption
-			if(origins[o].name == "None"){
+			if(o == "none"){
 				var noneGens = [3, 4, 5];
 				var noneTypes = ["arabic", "arabic-outline", "roman", "roman-outline"];
 				var nonePlatforms = ["dsi", "gamecube", "gba"];
