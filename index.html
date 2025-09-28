@@ -390,7 +390,10 @@
 										<input type="number" class="form-control" id="pokemonFormMetLevel" min="1" max="100">
 									</div>
 									<div class="col-6">
-										<label for="pokemonFormMetDate" class="form-label">Met Date</label>
+										<label for="pokemonFormMetDate" class="form-label">
+											<span class="align-middle">Met Date</span><!--
+											--><img class="align-middle ms-2 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="When a Pokémon enters <span class='text-nowrap'>Gen IV</span> or <span class='text-nowrap'>Gen V</span> or leaves Virtual Console, the DS/3DS system date becomes the Pokémon's Met Date.">
+										</label>
 										<input type="date" class="form-control" id="pokemonFormMetDate">
 									</div>
 									<div class="col-6">
@@ -728,7 +731,7 @@
 									--><span class="ribbonsprite world-ability-ribbon" title="World Ability Ribbon" role="img" aria-label="World Ability Ribbon"></span><!--
 									--><span>&nbsp;World Ability Ribbon in checklists</span>
 								</label>
-								<img class="ms-2 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" title="Since the shutdown of DS Wi-Fi Connection, earning the World Ability Ribbon requires connecting to unofficial servers.">
+								<img class="ms-2 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="Since the shutdown of DS <span class='text-nowrap'>Wi-Fi</span> Connection, earning the World Ability Ribbon requires connecting to unofficial servers.">
 							</div>
 							<div class="form-check form-switch mb-2 d-flex align-items-center">
 								<input class="form-check-input" type="checkbox" role="switch" id="settingsAutoMemoryRibbons" checked>
