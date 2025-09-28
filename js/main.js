@@ -73,11 +73,26 @@ if(settings.theme){
 	}
 }
 
+/* normalize languages */
+function normalizeLang(lang){
+	if(lang === "eses"){
+		return "es-es";
+	} else if(lang === "zhhans"){
+		return "zh-Hans";
+	} else if(lang === "zhhant"){
+		return "zh-Hant";
+	} else {
+		return lang;
+	}
+}
+
 /* change site language */
 var supportedLanguages = ["en", "es-es", "fr", "de", "it", "ja", "ko", "zh-Hans", "zh-Hant"];
-function changeLanguage(l){
-	changeSetting("language", l)
-	$("html").attr("lang", l);
+function changeLanguage(l, page = true){
+	changeSetting("language", l);
+	if(page){
+		$("html").attr("lang", l);
+	}
 }
 /* initial language set */
 if(settings.language){
@@ -442,6 +457,21 @@ function getPokemonData(dex, field, doNotSearch = false){
 		return data;
 	} else {
 		return false;
+	}
+}
+
+function getLanguage(data, language = settings.language){
+	if(!language) language = "en";
+	if(typeof data === "object"){
+		if(data[language]){
+			return data[language];
+		} else if(data["en"]){
+			return data["en"];
+		} else {
+			console.log("getLanguage error: data does not have values for en or " + language);
+		}
+	} else {
+		console.log("getLanguage error: provided data is not of type object");
 	}
 }
 
@@ -978,7 +1008,7 @@ function ribbonChecklist(){
 			if(ribbonWarnings[w] == "footprint-beldum") warningText = "Evolving " + cardData.name + " into Metagross will make the Footprint Ribbon unavailable!";
 			if(ribbonWarnings[w] == "master-rank-sv") warningText = cardData.name + " can temporarily earn the Master Rank Ribbon during the current Scarlet/Violet regulation. This ends on January 3!";
 			if(ribbonWarnings[w] == "evolution-warning"){
-				var evoWarnName = getPokemonData(cardData.evolutionWarning, "names")["en"];
+				var evoWarnName = getLanguage(getPokemonData(cardData.evolutionWarning, "names"));
 				var evoWarnForms = getPokemonData(cardData.evolutionWarning, "forms");
 				if(!evoWarnForms){
 					evoWarnForms = getPokemonData(cardData.evolutionWarning, "forms-all");
@@ -993,7 +1023,7 @@ function ribbonChecklist(){
 					if(typeof evoWarnForms === "string"){
 						evoWarnName = evoWarnName + " (" + evoWarnForms + ")";
 					} else {
-						evoWarnName = evoWarnName + " (" + evoWarnForms["en"] + ")";
+						evoWarnName = evoWarnName + " (" + getLanguage(evoWarnForms) + ")";
 					}
 				}
 				warningText = "Evolving " + cardData.name + " into " + evoWarnName + " may change the availability of certain Ribbons!";
@@ -1090,10 +1120,9 @@ function ribbonChecklist(){
 								$(g).find(".modalRibbonChecklistRows-gamename").after($("<div>", { "class": "last-chance px-3 mb-2" }).append($sectionLabel, $sectionRibbons));
 							}
 						}
-						// TODO: add handling for missing Chinese ribbon names and descriptions
-						var $ribbonBtn = $("<a>", { "class": "d-inline-block p-0 mt-1 modalRibbonChecklistRows-ribbon ribbonsprite " + allGameRibbons[r], "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[allGameRibbons[r]].names[settings.language], "data-bs-content": ribbons[allGameRibbons[r]].descs[settings.language] });
+						var $ribbonBtn = $("<a>", { "class": "d-inline-block p-0 mt-1 modalRibbonChecklistRows-ribbon ribbonsprite " + allGameRibbons[r], "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": getLanguage(ribbons[allGameRibbons[r]].names), "data-bs-content": getLanguage(ribbons[allGameRibbons[r]].descs) });
 						if(ribbons[allGameRibbons[r]].titles){
-							$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + ribbons[allGameRibbons[r]].titles[settings.language] + ")</div>");
+							$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons[allGameRibbons[r]].titles) + ")</div>");
 						}
 						$(g).find(addToList).append($ribbonBtn);
 					}
@@ -1162,9 +1191,7 @@ function createCard(p, id){
 	}
 	var displayName = p.nickname;
 	if(displayName.length === 0){
-		var displayNameLang = p.language;
-		if(!displayNameLang) displayNameLang = "en";
-		displayName = getPokemonData(p.species, "names")[displayNameLang];
+		displayName = getLanguage(getPokemonData(p.species, "names"), p.language);
 	}
 	var compatibleGames = getPokemonData(p.species, "games");
 	// temporary until Z-A HOME support when we add "plza" to pokemon.json
@@ -1226,7 +1253,7 @@ function createCard(p, id){
 
 	/* header */
 	var $cardHeaderLeft = $("<div>", { "class": "card-header-fullname" });
-	var $cardHeaderBallMain = $("<span>", { "class": "align-text-top me-2 ball ball-" + p.ball, "title": balls[p.ball]["en"] });
+	var $cardHeaderBallMain = $("<span>", { "class": "align-text-top me-2 ball ball-" + p.ball, "title": getLanguage(balls[p.ball]) });
 	var $cardHeaderBallStrange = "";
 	if(p.currentgame && ((p.currentgame !== "pla" && p.currentgame !== "home" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
 		if(p.strangeball !== "disabled"){
@@ -1291,10 +1318,9 @@ function createCard(p, id){
 	var $cardHeaderRight = $("<div>", { "class": "card-header-right d-flex" });
 	var $cardHeaderTitle = "";
 	if(p.title && p.title !== "None"){
-		// TODO: add handling for missing Chinese ribbon names and descriptions
-		$cardHeaderTitle = $("<a>", { "class": "ms-2 card-header-title-ribbon ribbonsprite " + p.title, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[p.title].names[settings.language], "data-bs-content": ribbons[p.title].descs[settings.language] });
+		$cardHeaderTitle = $("<a>", { "class": "ms-2 card-header-title-ribbon ribbonsprite " + p.title, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": getLanguage(ribbons[p.title].names), "data-bs-content": getLanguage(ribbons[p.title].descs) });
 		if(ribbons[p.title].titles){
-			$cardHeaderTitle.attr("title", "<div>" + $cardHeaderTitle.attr("title") + "</div><div class='popover-ribbon-title'>(" + ribbons[p.title].titles[settings.language] + ")</div>");
+			$cardHeaderTitle.attr("title", "<div>" + $cardHeaderTitle.attr("title") + "</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons[p.title].titles) + ")</div>");
 		}
 	}
 	var $cardHeaderButton = $("<button>", { "type": "button", "class": "btn btn-link p-0 ms-1 position-relative", "onclick": "ribbonChecklist()", "aria-label": "Ribbon Checklist", "title": "Ribbon Checklist" })
@@ -1316,7 +1342,7 @@ function createCard(p, id){
 		var alcremieRegex = /caramel|lemon|matcha|mint|rainbow|rubycream|rubyswirl|salted|vanilla/;
 		speciesSprite = speciesSprite.replace(alcremieRegex, "").replace("--", "-").replace("-strawberry", "");
 	}
-	$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + speciesSprite + ".png", "alt": getPokemonData(p.species, "names")["en"], "title": getPokemonData(p.species, "names")["en"] }));
+	$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + speciesSprite + ".png", "alt": getLanguage(getPokemonData(p.species, "names")), "title": getLanguage(getPokemonData(p.species, "names")) }));
 	var $cardRibbons = $("<div>", { "class": "card-ribbons flex-grow-1 d-flex flex-wrap p-1" });
 	var ribbonCount = 0, ribbonCountGen7Check = 0, markCount = 0, battleMemory = "", contestMemory = "", battleMemories = [], contestMemories = [];
 	for(let r in p.ribbons){
@@ -1340,10 +1366,9 @@ function createCard(p, id){
 				}
 			}
 		}
-		// TODO: add handling for missing Chinese ribbon names and descriptions
-		var $ribbonBtn = $("<a>", { "class": cardRibbonClass, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": ribbons[p.ribbons[r]].names[settings.language], "data-bs-content": ribbons[p.ribbons[r]].descs[settings.language] });
+		var $ribbonBtn = $("<a>", { "class": cardRibbonClass, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": getLanguage(ribbons[p.ribbons[r]].names), "data-bs-content": getLanguage(ribbons[p.ribbons[r]].descs) });
 		if(ribbons[p.ribbons[r]].titles){
-			$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + ribbons[p.ribbons[r]].titles[settings.language] + ")</div>");
+			$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons[p.ribbons[r]].titles) + ")</div>");
 		}
 		$cardRibbons.append($ribbonBtn);
 	}
@@ -1364,10 +1389,9 @@ function createCard(p, id){
 				battleMemory = "-gold";
 			}
 		}
-		// TODO: add handling for missing Chinese ribbon names and descriptions
-		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon battle-memory-ribbon" + battleMemory + " ribbonsprite", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + ribbons["battle-memory-ribbon" + battleMemory].names[settings.language] + " (" + battleMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["battle-memory-ribbon" + battleMemory].titles[settings.language] + ")</div>", "data-bs-content": ribbons["battle-memory-ribbon" + battleMemory].descs[settings.language] + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" });
+		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon battle-memory-ribbon" + battleMemory + " ribbonsprite", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + getLanguage(ribbons["battle-memory-ribbon" + battleMemory].names) + " (" + battleMemories.length + ")</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons["battle-memory-ribbon" + battleMemory].titles) + ")</div>", "data-bs-content": getLanguage(ribbons["battle-memory-ribbon" + battleMemory].descs) + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" });
 		for(let m in battleMemories){
-			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<span class='" + battleMemories[m] + " ribbonsprite' role='img' aria-label='" + ribbons[battleMemories[m]].names[settings.language] + "'></span>");
+			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<span class='" + battleMemories[m] + " ribbonsprite' role='img' aria-label='" + getLanguage(ribbons[battleMemories[m]].names) + "'></span>");
 		}
 		$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "</div>");
 		$cardRibbons.append($ribbonBtn);
@@ -1382,10 +1406,9 @@ function createCard(p, id){
 				contestMemory = "-gold";
 			}
 		}
-		// TODO: add handling for missing Chinese ribbon names and descriptions
-		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon contest-memory-ribbon" + contestMemory + " ribbonsprite", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + ribbons["contest-memory-ribbon" + contestMemory].names[settings.language] + " (" + contestMemories.length + ")</div><div class='popover-ribbon-title'>(" + ribbons["contest-memory-ribbon" + contestMemory].titles[settings.language] + ")</div>", "data-bs-content": ribbons["contest-memory-ribbon" + contestMemory].descs[settings.language] + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" });
+		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon contest-memory-ribbon" + contestMemory + " ribbonsprite", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + getLanguage(ribbons["contest-memory-ribbon" + contestMemory].names) + " (" + contestMemories.length + ")</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons["contest-memory-ribbon" + contestMemory].titles) + ")</div>", "data-bs-content": getLanguage(ribbons["contest-memory-ribbon" + contestMemory].descs) + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" });
 		for(let m in contestMemories){
-			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<span class='" + contestMemories[m] + " ribbonsprite' role='img' aria-label='" + ribbons[contestMemories[m]].names[settings.language] + "'></span>");
+			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<span class='" + contestMemories[m] + " ribbonsprite' role='img' aria-label='" + getLanguage(ribbons[contestMemories[m]].names) + "'></span>");
 		}
 		$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "</div>");
 		$cardRibbons.append($ribbonBtn);
@@ -1409,7 +1432,7 @@ function createCard(p, id){
 		.append($("<span>").text(p.currentlevel));
 	var $cardFooterBottomLeft = $("<div>")
 		.append($cardFooterBottomLevel,
-			$("<span>", { "class": "align-middle card-footer-language d-inline-block text-center rounded-pill fw-bold mx-2" }).text(translations.languages[p.language][settings.language].abbr)
+			$("<span>", { "class": "align-middle card-footer-language d-inline-block text-center rounded-pill fw-bold mx-2" }).text(getLanguage(translations.languages[p.language]).abbr)
 		);
 	var originName = origins[p.originmark].name;
 	if(p.origingame){
@@ -1517,7 +1540,7 @@ function resetPokemonForm(edit = false){
 	$("#pokemonFormLanguage").val(settings.language).change();
 
 	/* re-populate boxes dropdown */
-	var $boxNone = $("<option>", { "value": "-1" }).text(translations.none["en"]);
+	var $boxNone = $("<option>", { "value": "-1" }).text(getLanguage(translations.none));
 	for(var lang in translations.none){
 		$boxNone.attr("data-lang-" + lang, translations.none[lang]);
 	}
@@ -1532,7 +1555,7 @@ function resetPokemonForm(edit = false){
 }
 
 function relistFilterBoxes(){
-	var $boxNone = $("<option>", { "value": "-1" }).text(translations.none["en"]);
+	var $boxNone = $("<option>", { "value": "-1" }).text(getLanguage(translations.none));
 	for(var lang in translations.none){
 		$boxNone.attr("data-lang-" + lang, translations.none[lang]);
 	}
@@ -1833,13 +1856,8 @@ function selectCustomOption(o){
 	}
 	if(result.indexOf("pokemonFormBall") > 0 || result.indexOf("filterFormBall") > 0){
 		var $ball = $("<span>")
-			.append($("<span>", { "class": selectIconClass + " ball ball-" + o.id }));
-		for(var oed in o.element.dataset){
-			if(oed.indexOf("lang") == 0){
-				lang = oed.substring(4).toLowerCase();
-				$ball.append($("<span>", { "class": "translation translation-" + lang}).text(balls[o.id][lang]));
-			}
-		}
+			.append($("<span>", { "class": selectIconClass + " ball ball-" + o.id }))
+			.append($("<span>").text(getLanguage(balls[o.id])));
 		return $ball;
 	} else if(result.indexOf("pokemonFormOriginMark") > 0 || result.indexOf("filterFormOriginMark") > 0){
 		var $mark = $("<span>");
@@ -1856,9 +1874,7 @@ function selectCustomOption(o){
 			for(var p in nonePlatforms){
 				$mark.append($("<img>", { "class": selectIconClass + " light-invert select-icon-origin select-icon-origin-platform", "src": "img/origins/custom/platforms/" + nonePlatforms[p] + ".svg" }));
 			}
-			for(var lang in translations.none){
-				$mark.append($("<span>", { "class": "translation translation-" + lang}).text(translations.none[lang]));
-			}
+			$mark.append($("<span>").text(getLanguage(translations.none)));
 		} else {
 			$mark.append($("<img>", { "class": selectIconClass + " light-invert", "src": "img/origins/" + o.id + ".png" }))
 				.append($("<span>").text(origins[o.id].name));
@@ -1881,13 +1897,7 @@ function selectCustomOption(o){
 		$marks.append($("<span>").text(o.text));
 		return $marks;
 	} else if(result.indexOf("pokemonFormNature") > 0){
-		var $nature = $("<span>");
-		for(var oed in o.element.dataset){
-			if(oed.indexOf("lang") == 0){
-				lang = oed.substring(4).toLowerCase();
-				$nature.append($("<span>", { "class": "translation translation-" + lang}).text(natures[o.id][lang]));
-			}
-		}
+		var $nature = $("<span>").text(getLanguage(natures[o.id]));
 		return $nature;
 	} else if(result.indexOf("pokemonFormBox") > 0 || result.indexOf("filterFormBox") > 0){
 		var $box = $("<span>");
@@ -1897,9 +1907,7 @@ function selectCustomOption(o){
 		}
 		$box.append($("<img>", { "class": selectIconClass, "src": "img/ui/box-" + boxImage + ".png" }));
 		if(o.id == "-1"){
-			for(var lang in translations.none){
-				$box.append($("<span>", { "class": "translation translation-" + lang}).text(translations.none[lang]));
-			}
+			$box.append($("<span>").text(getLanguage(translations.none)));
 		} else {
 			$box.append($("<span>").text(userBoxes[o.id]));
 		}
@@ -1915,25 +1923,23 @@ function selectCustomOption(o){
 				} else if(o.element.dataset["formAll"]){
 					form = " (" + o.element.dataset["formAll"] + ")";
 				}
-				$pokemon.append($("<span>", { "class": "translation translation-" + lang.toLowerCase() }).text(o.element.dataset["name" + lang] + form));
+				$pokemon.append($("<span>", { "class": "translation translation-" + normalizeLang(lang.toLowerCase()) }).text(o.element.dataset["name" + lang] + form));
 			}
 		}
 		return $pokemon;
 	} else if(result.indexOf("pokemonFormTitle") > 0 || result.indexOf("filterFormEarnedRibbons") > 0 || result.indexOf("filterFormTargetRibbons") > 0){
 		$option = $("<span>");
 		if(o.id === "None"){
-			for(var lang in translations.none){
-				$option.append($("<span>", { "class": "translation translation-" + lang}).text(translations.none[lang]));
-			}
+			$option.append($("<span>").text(getLanguage(translations.none)));
 		} else {
-			$option.append($("<span>", { "class": selectIconClass + " ribbonsprite " + o.id, "role": "img", "aria-label": ribbons[o.id].names["en"] }));
+			$option.append($("<span>", { "class": selectIconClass + " ribbonsprite " + o.id, "role": "img", "aria-label": getLanguage(ribbons[o.id].names) }));
 			for(var oed in o.element.dataset){
 				if(oed.indexOf("lang") == 0 && oed.indexOf("langRibbon") == -1){
 					lang = oed.substring(4).toLowerCase();
 					if(result.indexOf("pokemonFormTitle") > 0){
-						$option.append($("<span>", { "class": "translation translation-" + lang}).text(ribbons[o.id].titles[lang]));
+						$option.append($("<span>", { "class": "translation translation-" + normalizeLang(lang) }).text(ribbons[o.id].titles[lang]));
 					} else if(result.indexOf("filterFormEarnedRibbons") > 0 || result.indexOf("filterFormTargetRibbons") > 0){
-						$option.append($("<span>", { "class": "translation translation-" + lang}).text(ribbons[o.id].names[lang]));
+						$option.append($("<span>", { "class": "translation translation-" + normalizeLang(lang) }).text(ribbons[o.id].names[lang]));
 					}
 				}
 			}
@@ -2130,7 +2136,7 @@ function initRun(){
 		$("body").append($("<div>", { "id": "imageHoldingArea", "class": "d-none" }));
 		/* add form options */
 		for(var b in balls){
-			var $ballOption = $("<option>", { "value": b }).text(balls[b]["en"]);
+			var $ballOption = $("<option>", { "value": b }).text(getLanguage(balls[b]));
 			for(var lang in balls[b]){
 				if(lang === "hisui") continue;
 				$ballOption.attr("data-lang-" + lang, balls[b][lang]);
@@ -2150,15 +2156,16 @@ function initRun(){
 			}
 		}
 		for(var l in translations.languages){
-			var langAbbr = translations.languages[l][settings.language].abbr;
-			if(translations.languages[l][settings.language].abbrold){
-				langAbbr = translations.languages[l][settings.language].abbrold + "/" + langAbbr;
+			var langTrans = getLanguage(translations.languages[l]);
+			var langAbbr = langTrans.abbr;
+			if(langTrans.abbrold){
+				langAbbr = langTrans.abbrold + "/" + langAbbr;
 			}
-			$("#pokemonFormLanguage, #filterFormLanguage").append(new Option(langAbbr + " - " + translations.languages[l][settings.language].name, l));
+			$("#pokemonFormLanguage, #filterFormLanguage").append(new Option(langAbbr + " - " + langTrans.name, l));
 			if(l == settings.language){
 				$("#settingsLanguage").append(new Option(translations.languages[l][l].name, l));
 			} else {
-				$("#settingsLanguage").append(new Option(translations.languages[l][l].name + " / " + translations.languages[l][settings.language].name, l));
+				$("#settingsLanguage").append(new Option(translations.languages[l][l].name + " / " + langTrans.name, l));
 			}
 		}
 		if(settings.language){
@@ -2204,11 +2211,11 @@ function initRun(){
 				}
 			}
 			if(pokemonForms){
-				if(typeof pokemonForms === 'string'){
+				if(typeof pokemonForms === "string"){
 					pokemonFormDisplay = " (" + pokemonForms + ")";
 					$pokemon.attr("data-form-all", pokemonForms);
 				} else {
-					pokemonFormDisplay = " (" + pokemonForms["en"] + ")";
+					pokemonFormDisplay = " (" + getLanguage(pokemonForms) + ")";
 					for(var lang in pokemonForms){
 						$pokemon.attr("data-form-" + lang, pokemonForms[lang]);
 					}
@@ -2218,7 +2225,7 @@ function initRun(){
 			if(pokemonSort){
 				$pokemon.attr("data-sort", pokemonSort);
 			}
-			$pokemon.text(pokemonNames["en"] + pokemonFormDisplay);
+			$pokemon.text(getLanguage(pokemonNames) + pokemonFormDisplay);
 			$("#pokemonFormSpecies").append($pokemon);
 			if(pokemonCount === pokemonTotal){
 				var dexSort = function(a, b){
@@ -2240,22 +2247,22 @@ function initRun(){
 			}
 		}
 		for(var r in ribbons){
-			var $ribbonOption = $("<option>", { "value": r }).text(ribbons[r].names["en"]);
+			var $ribbonOption = $("<option>", { "value": r }).text(getLanguage(ribbons[r].names));
 			var formRibbonSelect = "#filterFormEarnedRibbons";
-			var $ribbonRow = $("<li>", { "class": "list-group-item list-group-item-action d-flex align-items-center border-0", "aria-label": ribbons[r].names.en + " - " + ribbons[r].descs.en })
+			var $ribbonRow = $("<li>", { "class": "list-group-item list-group-item-action d-flex align-items-center border-0", "aria-label": getLanguage(ribbons[r].names) + " - " + getLanguage(ribbons[r].descs) })
 				.append($("<input>", { "type": "checkbox", "value": "", "class": "form-check-input mt-0 ms-lg-1 me-1 me-lg-2", "id": "pokemonFormRibbon-" + r }));
 			if(r.startsWith("contest-memory-ribbon") || r.startsWith("battle-memory-ribbon")){
 				$ribbonRow.append($("<img>", { "src": "img/ui/sync.svg", "class": "pokemonFormRibbon-memory-sync" }));
 			}
 			var $ribbonRowLabel = $("<label>", { "for": "pokemonFormRibbon-" + r, "class": "form-check-label stretched-link d-flex align-items-center w-100" })
-				.append($("<span>", { "class": "me-2 ribbonsprite " + r, "title": ribbons[r].names.en, "role": "img", "aria-label": ribbons[r].names.en }));
+				.append($("<span>", { "class": "me-2 ribbonsprite " + r, "title": ribbons[r].names.en, "role": "img", "aria-label": getLanguage(ribbons[r].names) }));
 			var $ribbonRowInfo = $("<div>", { "class": "w-100" });
-			var $ribbonRowInfoName = $("<div>", { "class": "fw-bold lh-1 my-1 d-flex w-100 justify-content-between align-items-center" });
-			var $ribbonRowInfoDesc = $("<div>", { "class": "lh-1 mb-1" });
+			var $ribbonRowInfoName = $("<div>", { "class": "fw-bold lh-1 my-1 d-flex w-100 justify-content-between align-items-center" }).append($("<span>").text(getLanguage(ribbons[r].names)));
+			var $ribbonRowInfoDesc = $("<div>", { "class": "lh-1 mb-1" }).append($("<small>").text(getLanguage(ribbons[r].descs)));
 			for(var lang in ribbons[r].names){
 				$ribbonOption.attr("data-lang-" + lang, ribbons[r].names[lang]);
-				$ribbonRowInfoName.append($("<span>", { "class": "translation translation-" + lang }).text(ribbons[r].names[lang]));
-				$ribbonRowInfoDesc.append($("<small>", { "class": "translation translation-" + lang }).text(ribbons[r].descs[lang]));
+				$ribbonRowInfoName.append($("<span>", { "class": "d-none" }).text(ribbons[r].names[lang]));
+				$ribbonRowInfoDesc.append($("<small>", { "class": "d-none" }).text(ribbons[r].descs[lang]));
 			}
 			var ribbonGen = ribbons[r].gen;
 			var ribbonGenText = translations.arabicToRoman[ribbonGen-1];
@@ -2290,7 +2297,7 @@ function initRun(){
 			$ribbonRow.append($ribbonRowLabel);
 			$("#pokemonFormRibbons").append($ribbonRow);
 			if(ribbons[r].titles){
-				var $titleOption = $("<option>", { "value": r }).text(ribbons[r].titles["en"]);
+				var $titleOption = $("<option>", { "value": r }).text(getLanguage(ribbons[r].titles));
 				for(var lang in ribbons[r].names){
 					$titleOption.attr("data-lang-" + lang, ribbons[r].titles[lang]).attr("data-lang-ribbon-" + lang, ribbons[r].names[lang]);
 				}
@@ -2299,7 +2306,7 @@ function initRun(){
 		}
 		$("#imageHoldingArea").append($("<img>", { "src": "img/ribbons.png" }));
 		for(var n in natures){
-			var $natureOption = $("<option>", { "value": n }).text(natures[n]["en"]);
+			var $natureOption = $("<option>", { "value": n }).text(getLanguage(natures[n]));
 			for(var lang in natures[n]){
 				$natureOption.attr("data-lang-" + lang, natures[n][lang]);
 			}
@@ -2756,7 +2763,7 @@ $(function(){
 		changeTheme($(this).val());
 	});
 	$("#settingsLanguage").change(function(){
-		changeLanguage($(this).val());
+		changeLanguage($(this).val(), false);
 		modalSettings.toggle();
 		new bootstrap.Modal("#modalReloading").toggle();
 		setTimeout(function(){ location.reload() }, 500);
