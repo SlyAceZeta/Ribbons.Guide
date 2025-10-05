@@ -984,6 +984,7 @@ function ribbonChecklist(){
 
 	// top info - sprite
 	var cardSprite = $cardContainer.find(".card-sprite").attr("src");
+	$("#modalRibbonChecklistInfo-sprite img").attr("src", "img/ui/1x1.svg"); // initial reset
 	$("#modalRibbonChecklistInfo-sprite img").attr("src", cardSprite);
 
 	// top info - name
@@ -1842,6 +1843,7 @@ function filterPokemonList(){
 
 function updateFormSprite(){
 	if($("#pokemonFormSpecies").val()){
+		$("#pokemonFormSprite").attr("src", "img/ui/1x1.svg"); // initial reset
 		var species = $("#pokemonFormSpecies").val();
 		var shinyDir = $("#pokemonFormShiny-normal").prop("checked") ? "regular/" : "shiny/";
 		var femaleDir = $("#pokemonFormGender-female").prop("checked") && getPokemonData(species, "femsprite") ? "female/" : "";
