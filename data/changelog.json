@@ -1,4 +1,16 @@
 {
+	"5 October 2025": [
+		"Switched order of changelog entries when showing new entries after multiple updates",
+		"Added a setting to control showing new changelog entries after an update",
+		"Added a temporary alert regarding the Master Rank Ribbon's current eligibility for Mythical Pokémon to the top of the page; this alert can be dismissed and will remain dismissed",
+		"Added special handling for the Battle Tree Great Ribbon: if a Pokémon can earn it in Ultra Sun/Ultra Moon but <em>not</em> in Sun/Moon, then the four games will be split; if a Pokémon has it or can earn it in all Alola games, then the games will be combined as they already were (thanks TheNYMankeys!)",
+		"Poké Ball, Ribbon, and Mark images are now separated and no longer in spritesheets because there were too many visual glitches with the latter",
+		"Fixed issue where 10% Forme Zygarde appeared to be able to earn the Battle Royal Master and Battle Tree Master Ribbons",
+		"Fixed issue where Strange Balls would appear next to the Pokémon's selected Poké Ball if the global setting was disabled and the Pokémon was set to the global setting",
+		"Attempted to fix issue where Pokémon sprites would not immediately update upon opening the Ribbon Checklist or Edit Pokémon form",
+		"Fixed issue where selections for title and Ribbon filters were <em>still</em> blank while Ribbons.Guide was set to Spanish or Chinese",
+		"Updated older changelog entries to remove unnecessary links and fix a mistake in yesterday's changelog"
+	],
 	"4 October 2025": [
 		"Added help text that explains when a Pokémon's Met Date changes",
 		"Changed \"HOME\" to \"HOME (Gen VIII/Scarlet/Violet)\" due to the lack of backward compatibility after moving to Z-A",
@@ -7,7 +19,7 @@
 		"Updated evolution warnings and sprite hovers in cards to display in the user's selected language instead of English",
 		"Fixed issue where changing the language would change the titles and names on cards before reloading the page",
 		"Fixed Japanese Pokémon language tag while Ribbons.Guide is set to Spanish or French",
-		"Fixed issue where selections for species, Poke Ball, nature, Ribbons, and title were blank while Ribbons.Guide was set to Spanish or French",
+		"Fixed issue where selections for species, Poké Ball, nature, Ribbons, and title were blank while Ribbons.Guide was set to Spanish or Chinese",
 		"Fixed issue where older Ribbons would not display anything when clicked/tapped on while Ribbons.Guide was set to Chinese"
 	],
 	"26 September 2025": [
@@ -47,15 +59,15 @@
 		"Fixed display issues with Poké Ball, Ribbon, and Mark images in non-Firefox browsers (thanks Josh Lemmy, Skiametric, and Z!)"
 	],
 	"6 May 2025": [
-		"Poké Ball, Ribbon, and Mark images are all now contained in spritesheets, drastically reducing the number of HTTP requests <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/103'>#103</a>; if you run into any issues, please report them on <a href='https://discord.gg/frv7dpWzDG'>Discord</a> or <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a>!",
+		"Poké Ball, Ribbon, and Mark images are all now contained in spritesheets, drastically reducing the number of HTTP requests; if you run into any issues, please report them on <a href='https://discord.gg/frv7dpWzDG'>Discord</a> or <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a>!",
 		"Except for first load, page loading speed should be slightly increased for all users",
 		"Increased horizontal padding around Ribbons and Marks in the add/edit form when using the grid view",
 		"Changed style of backup restore button to discern it better from the backup save button",
 		"Fixed a bug in the previous update where filtering by Ribbons was not functioning"
 	],
 	"5 May 2025": [
-		"Added popovers to Ribbons and Marks in cards <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/107'>#107</a> (thanks jherd95!)",
-		"Ribbons bundled into the Memory Ribbons will appear in their popovers <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/102'>#102</a> (thanks Kobaru The Kame!)",
+		"Added popovers to Ribbons and Marks in cards (thanks jherd95!)",
+		"Ribbons bundled into the Memory Ribbons will appear in their popovers (thanks Kobaru The Kame!)",
 		"Popovers now render above the Ribbon or Mark, rather than to the side",
 		"Popovers no longer appear when hovering over Ribbons and Marks, matching mobile behavior and reducing animation bloat and potential bugs",
 		"Ribbons.Guide now reloads when changing the site's language",
@@ -66,38 +78,38 @@
 	],
 	"2 May 2025": [
 		"\\This update adds some of the groundwork for online data syncing in the future!",
-		"Added setting to hide the Ribbon/Mark used for the assigned title <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/109'>#109</a>",
+		"Added setting to hide the Ribbon/Mark used for the assigned title",
 		"Moved the backup save/restore buttons to a new Data Management modal",
-		"Data Management modal now tracks the date and time of your last modification <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/101'>#101</a>",
-		"Added a filter option for name, species, and National Pokédex # <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/94'>#94</a>",
-		"Added a filter option for completion status <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/104'>#104</a>",
+		"Data Management modal now tracks the date and time of your last modification",
+		"Added a filter option for name, species, and National Pokédex #",
+		"Added a filter option for completion status",
 		"Changed filter and settings notes into question-mark tooltips",
-		"Fixed a bug introduced in the last update where the Mini Mark and Jumbo Mark would not appear in the correct section <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/113'>#113</a>",
+		"Fixed a bug introduced in the last update where the Mini Mark and Jumbo Mark would not appear in the correct section",
 		"Fixed a typo in the species evolution warning (thanks LRZuKaTo!)",
 		"Removed the scrollbar from the Boxes list (thanks Z!)"
 	],
 	"22 April 2025": [
-		"Added all fusions (Kyurem, Necrozma, Calyrex); a warning will appear when attempting to save them in Bank or HOME <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/99'>#99</a> (thanks Z!)",
-		"Added a scroll-to-top button that appears at the bottom-right when scrolled down <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/92'>#92</a>",
+		"Added all fusions (Kyurem, Necrozma, Calyrex); a warning will appear when attempting to save them in Bank or HOME (thanks Z!)",
+		"Added a scroll-to-top button that appears at the bottom-right when scrolled down",
 		"Added a new setting to hide the Ribbon Checklist button from completed Pokémon or all Pokémon",
-		"Added a new setting to always show or always hide old Battle/Contest Ribbons <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/89'>#89</a> (thanks Kobaru The Kame and LookOutItsShadow!)",
-		"Added a new setting to disable completed colors for Pokémon cards <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/90'>#90</a>",
+		"Added a new setting to always show or always hide old Battle/Contest Ribbons (thanks Kobaru The Kame and LookOutItsShadow!)",
+		"Added a new setting to disable completed colors for Pokémon cards",
 		"Added a new setting to disable drag-and-drop reordering",
-		"Added a switch in the Add/Edit Pokémon form to display Ribbons in a grid, as they appeared prior to the redesign <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/87'>#87</a> (thanks thememester31 and Josh Lemmy!)",
-		"Added title conferred to the Ribbon Checklist tooltip <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/98'>#98</a>",
-		"Added a tooltip next to Met Level to explain the Gen V and Virtual Console replacement <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/97'>#97</a>",
-		"Restored the selected Ribbon for the Pokémon's title at the top-right of cards when using expanded view <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/96'>#96</a> (thanks SadisticMystic!)",
+		"Added a switch in the Add/Edit Pokémon form to display Ribbons in a grid, as they appeared prior to the redesign (thanks thememester31 and Josh Lemmy!)",
+		"Added title conferred to the Ribbon Checklist tooltip",
+		"Added a tooltip next to Met Level to explain the Gen V and Virtual Console replacement",
+		"Restored the selected Ribbon for the Pokémon's title at the top-right of cards when using expanded view (thanks SadisticMystic!)",
 		"Added a Footprint Ribbon warning for Beldum and Metang from Scarlet/Violet due to Beldum's high encounter level in the Terarium (thanks SadisticMystic!)",
 		"Improved the explanation text below some settings",
 		"Improved the loading bar colors on some themes",
 		"Selecting the Alpha Mark or Titan Mark will now disable the Mini Mark and add the Jumbo Mark to the checklist until it is also selected",
 		"Selecting the Mini Mark or Jumbo Mark will now disable the other one",
-		"Fixed an issue where Pokémon names were truncated and titles were hidden in the Ribbon Checklist when using condensed view <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/91'>#91</a>",
+		"Fixed an issue where Pokémon names were truncated and titles were hidden in the Ribbon Checklist when using condensed view",
 		"Fixed an issue where the Strange Ball did not receive the improved vertical alignment with Pokémon names on 16&nbsp;April",
 		"Fixed an oversight introduced in the redesign where Pokémon could be saved with the Partner Ribbon selected without an Original Trainer"
 	],
 	"20 April 2025": [
-		"Added all Alcremie forms <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/95'>#95</a> (thanks Z!)",
+		"Added all Alcremie forms (thanks Z!)",
 		"Added \"Ride\" forms of Koraidon and Miraidon, which should be used if tracking the Koraidon/Miraidon that joins you at the start of the game",
 		"Fixed an issue where the site would partially load if at least one image failed to load for whatever reason (thanks SadisticMystic!)",
 		"Fixed an issue where Pa'u Style Oricorio didn't properly show the apostrophe in English"
@@ -114,35 +126,35 @@
 		"\\<strong>The long-awaited redesign is now live!</strong> If you spot any issues, please <a href='https://discord.gg/frv7dpWzDG'>let me know on Discord!</a> If you'd like to support my work, <a href='https://ko-fi.com/slyacezeta'>I have a Ko-fi</a> but Ribbons.Guide will always be FOSS (free and open-source software)!",
 		"Replaced jQuery UI, jQuery UI Touch Punch, and jQuery Modal with <a href='https://getbootstrap.com/'>Bootstrap</a> and <a href='https://github.com/SortableJS/Sortable'>Sortable</a>",
 		"Replaced UpUp with <a href='https://github.com/GoogleChrome/workbox'>Workbox</a>; this may result in PWA functionality being wonky for a bit",
-		"Added a loading screen to ensure all required assets are loaded due to lack of GH Pages caching <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/25'>#25</a>",
-		"Redesigned modals to be more uniform and much more mobile-friendly <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/58'>#58</a>",
-		"Removed Mints, IVs, EVs, Abilities, and Characteristics; existing data automatically moves to notes <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/62'>#62</a>",
-		"Added: Shiny locks; automatic Strange Ball handling <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/75'>#75</a> (thanks autumn!) which can be disabled; toggle and handling for Gigantamax <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/54'>#54</a> (thanks ThomasHineXYZ!), Shadow, and Totem Pokémon; Met Location <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/59'>#59</a> (thanks Firescratcher!); and Pokérus <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/56'>#56</a>",
-		"Separated Origin Mark from Origin Game, allowing for situations where players receive Pokémon in trades without knowing which game they came from <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/60'>#60</a> (thanks Josh Lemmy!)",
+		"Added a loading screen to ensure all required assets are loaded due to lack of GH Pages caching",
+		"Redesigned modals to be more uniform and much more mobile-friendly",
+		"Removed Mints, IVs, EVs, Abilities, and Characteristics; existing data automatically moves to notes",
+		"Added: Shiny locks; automatic Strange Ball handling (thanks autumn!) which can be disabled; toggle and handling for Gigantamax (thanks ThomasHineXYZ!), Shadow, and Totem Pokémon; Met Location (thanks Firescratcher!); and Pokérus",
+		"Separated Origin Mark from Origin Game, allowing for situations where players receive Pokémon in trades without knowing which game they came from (thanks Josh Lemmy!)",
 		"Reworked Ribbon and Mark selection: added searching; added available generations; displaying name and description of each Ribbon and Mark; ordering by introduction",
-		"Added mass-toggle buttons for all Ribbons introduced per-generation <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/64'>#64</a> (thanks Q8yShadow!)",
-		"Added optional achievements from specific games <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/50'>#50</a> (thanks BrdKeeperAaron and ProfessorMor!)",
-		"Added filters for Gigantamax Factor <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/54'>#54</a> (thanks ThomasHineXYZ!), Pokérus <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/56'>#56</a>, earned Ribbons, and Ribbons a Pokémon can earn <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/76'>#76</a>",
+		"Added mass-toggle buttons for all Ribbons introduced per-generation (thanks Q8yShadow!)",
+		"Added optional achievements from specific games (thanks BrdKeeperAaron and ProfessorMor!)",
+		"Added filters for Gigantamax Factor (thanks ThomasHineXYZ!), Pokérus, earned Ribbons, and Ribbons a Pokémon can earn",
 		"Removed (pre-)evolutions from Z-A filter if they did not appear in a trailer or promotional material",
 		"Updated order of Ribbons and Marks per Scarlet/Violet",
 		"Renamed \"Ribbon Guide\" to \"Ribbon Checklist\" and improved to show per-game guidance",
 		"Added a red dot to the Ribbon Checklist button if the Pokémon has an active warning",
-		"Added a condensed Pokémon display option <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/40'>#40</a>",
+		"Added a condensed Pokémon display option",
 		"Moved the Add New Pokémon button to the top-left of the page instead of floating",
-		"Added a \"completed\" display for Pokémon that have no more earnable Ribbons <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/15'>#15</a>",
-		"Added a toggleable counter for a Pokémon's Ribbons and Marks <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/61'>#61</a> (thanks CeruleanSnake!)",
-		"Added a button to duplicate a Pokémon <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/72'>#72</a> (thanks King Capy!)",
+		"Added a \"completed\" display for Pokémon that have no more earnable Ribbons",
+		"Added a toggleable counter for a Pokémon's Ribbons and Marks (thanks CeruleanSnake!)",
+		"Added a button to duplicate a Pokémon (thanks King Capy!)",
 		"Added an automatic theme option to change the site's colors based on the system",
 		"Added a warning for Samsung Internet users due to the app's dark mode violating dark mode guidelines (thanks Anna and Pizzaleader!)",
-		"Added a language setting <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/20'>#20</a>; this currently only changes the Species, Title, and Ribbon displays, including changing the order of Titles <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/43'>#43</a> (thanks SadisticMystic!)",
-		"Added optional origin marks for Pokémon from Gen&nbsp;III, Gen&nbsp;IV, and Gen&nbsp;V <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/69'>#69</a> (thanks ProfessorMor!)",
-		"World Ability Ribbon is now hidden from the Ribbon Checklist by default but can be re-enabled <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/46'>#46</a>",
-		"Memory Ribbons are now handled automatically by default; this behavior can be overriden globally in the settings or on a per-Pokémon basis <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/66'>#66</a>",
-		"JSON backup files are now properly formatted <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/53'>#53</a> (thanks ThomasHineXYZ!)",
+		"Added a language setting (thanks SadisticMystic!)",
+		"Added optional origin marks for Pokémon from Gen&nbsp;III, Gen&nbsp;IV, and Gen&nbsp;V (thanks ProfessorMor!)",
+		"World Ability Ribbon is now hidden from the Ribbon Checklist by default but can be re-enabled",
+		"Memory Ribbons are now handled automatically by default; this behavior can be overriden globally in the settings or on a per-Pokémon basis",
+		"JSON backup files are now properly formatted (thanks ThomasHineXYZ!)",
 		"Returning users now see all changes since their last visit instead of the last 5 changes",
 		"Entire changelog can now be displayed at any time by visiting the About section",
-		"Fixed a bug where Pokémon in VC games did not appear able to transfer to other VC games <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/80'>#80</a>",
-		"Fixed a bug where editing a box name did not update the Pokémon list <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/81'>#81</a>"
+		"Fixed a bug where Pokémon in VC games did not appear able to transfer to other VC games",
+		"Fixed a bug where editing a box name did not update the Pokémon list"
 	],
 	"31 March 2025": [
 		"Added more Pokémon to Z-A filter per the latest trailer"
@@ -200,18 +212,18 @@
 	],
 	"14 November 2023": [
 		"Fixed issue where Johtonian Typhlosion and Unovan Samurott were mistakenly able to transfer to Legends: Arceus and earn the Hisui Ribbon (thanks AuronWarcrest!)",
-		"Fixed issue where Ditto and Unown were mistakenly able to earn Contest Ribbons in Gen IV <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/73'>#73</a> (thanks Rusher, autumn, and SadisticMystic!)"
+		"Fixed issue where Ditto and Unown were mistakenly able to earn Contest Ribbons in Gen IV (thanks Rusher, autumn, and SadisticMystic!)"
 	],
 	"22 October 2023": [
 		"Fixed issue where Bloodmoon Ursaluna was mistakenly able to transfer to Legends: Arceus and earn the Hisui Ribbon (thanks AuronWarcrest!)"
 	],
 	"23 September 2023": [
 		"Updated sprites for new Pokémon in The Teal Mask",
-		"Added a checkbox to indicate that you've checked the Pokémon's scale in Mesagoza to hide the Jumbo and Mini Marks from the guide <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/67'>#67</a> (thanks Fanriya!)"
+		"Added a checkbox to indicate that you've checked the Pokémon's scale in Mesagoza to hide the Jumbo and Mini Marks from the guide (thanks Fanriya!)"
 	],
 	"15 September 2023": [
 		"Fixed issue introduced in the previous update where no Ribbons were suggested for Alolan Marowak, Ribombee, Araquanid, and Togedemaru if they originated from games other than USUM (thanks autumn!)",
-		"Fixed remaining cases where apostrophes were not being properly escaped <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/70'>#70</a> (thanks FlitPix!)"
+		"Fixed remaining cases where apostrophes were not being properly escaped (thanks FlitPix!)"
 	],
 	"13 September 2023": [
 		"Added support for new & returning Pokémon in The Teal Mask",
@@ -219,7 +231,7 @@
 		"Replaced pixel sprites with HOME renders, resolving the SV fan art requirement and matching the app's overall style",
 		"Added Hoopa (Unbound), Zygarde (10% Forme), Cosplay Pikachu's outfits, and Urshifu (Rapid Strike Style); <strong>all existing Urshifus display as Single Strike Style until edited</strong>",
 		"Added handling for Spinda and Nincada's BDSP restrictions",
-		"Added warnings for Totem-sized Pokémon from USUM <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/52'>#52</a>",
+		"Added warnings for Totem-sized Pokémon from USUM",
 		"Removed Footprint Ribbon warning for Pokémon from GO, since their Met Level must be ≤50 (thanks Josh Lemmy!)",
 		"Removed 5-or-6-digit requirement from ID No. field (thanks Randomdice101!)",
 		"Improved Pikachu and Furfrou sorting in the dropdown menu",
@@ -243,10 +255,10 @@
 		"More updates coming soon!"
 	],
 	"11 March 2023": [
-		"Expanded height of Pokémon card headers; on mobile, if the name and title do not fit, the title will move to a second line <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/51'>#51</a> (thanks Pikapal52!)",
+		"Expanded height of Pokémon card headers; on mobile, if the name and title do not fit, the title will move to a second line (thanks Pikapal52!)",
 		"Improved handling of box names in Pokémon card footers to ensure they are properly truncated across all mobile devices",
 		"Improved positioning of the New Pokémon button at the bottom-right on mobile devices",
-		"Ribbon Guide warnings are now in a single section and can be collapsed after viewing them <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/49'>#49</a>",
+		"Ribbon Guide warnings are now in a single section and can be collapsed after viewing them",
 		"Fixed the swapped colors of Intrepid Sword and Dauntless Shield (thanks Vamp1836!)"
 	],
 	"9 March 2023": [
@@ -256,12 +268,12 @@
 	],
 	"6 March 2023": [
 		"Ribbons.Guide is now a progressive web app! Visit the site using a <a href='https://en.wikipedia.org/wiki/Progressive_web_app' target='_blank'>supported browser</a> to install it directly to your device!",
-		"Your list of Pokémon can now be filtered by the games they can travel to, their Poké Ball, and more <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/18'>#18</a>&nbsp;&&nbsp;<a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/32'>#32</a> (thanks Noaxzl!)",
-		"Your list of Pokémon can now be sorted by their National Pokédex number, their current level, and their (nick)name <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/17'>#17</a> (thanks Noaxzl!)",
-		"The tooltips for the Battle and Contest Memory Ribbons now include how many Ribbons were merged into them <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/30'>#30</a> (thanks SadisticMystic!)",
+		"Your list of Pokémon can now be filtered by the games they can travel to, their Poké Ball, and more (thanks Noaxzl!)",
+		"Your list of Pokémon can now be sorted by their National Pokédex number, their current level, and their (nick)name (thanks Noaxzl!)",
+		"The tooltips for the Battle and Contest Memory Ribbons now include how many Ribbons were merged into them (thanks SadisticMystic!)",
 		"The World Ability and Once-in-a-Lifetime Ribbons are now displayed like other special-case Ribbons in the Ribbon Guide",
 		"Spiky-eared Pichu and Cosplay Pikachu are now available as separate forms",
-		"The footer can now be collapsed <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/33'>#33</a>"
+		"The footer can now be collapsed"
 	],
 	"1 March 2023": [
 		"We've moved to ribbons.guide! Name is updated everywhere",
@@ -278,21 +290,21 @@
 		"Fixed an issue where Pokémon caught in Scarlet or Violet were not showing Ribbon guidance if they were not National #906 or above"
 	],
 	"9 January 2023": [
-		"Added the long-awaited Ribbon Master Guide! Click the clipboard icon on a Pokémon's summary to see the remaining Ribbons available to them! <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/8'>#8</a>",
+		"Added the long-awaited Ribbon Master Guide! Click the clipboard icon on a Pokémon's summary to see the remaining Ribbons available to them!",
 		"Bank is now split into Gen VI and Gen VII because Pokémon sent to Gen VII cannot go back to Gen VI; all Pokémon currently in Bank are set to Gen VI until edited",
 		"Warnings appear in the Ribbon Master Guide for cross-generation evolutions and level-locked Ribbons where applicable",
 		"Battle and Contest Ribbons are now hidden from the main display if the Pokémon is in Gen V or above",
 		"Box names are no longer limited to 12 characters and can be edited from the edit window"
 	],
 	"6 January 2023": [
-		"Added support for Square shinies <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/10'>#10</a>",
+		"Added support for Square shinies",
 		"Updated gender toggle similar to new shiny toggle",
 		"Ribbon categories can now be collapsed in the form (Event and Marks are collapsed by default)",
 		"Fixed various mobile issues; Pokémon can now be dragged and re-ordered on mobile, and certain Pokémon will no longer overflow the add/edit form"
 	],
 	"2 January 2023": [
-		"Added Boxes to group your Pokémon <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/16'>#16</a>",
-		"Added ability to drag and re-order Pokémon <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/21'>#21</a>",
+		"Added Boxes to group your Pokémon",
+		"Added ability to drag and re-order Pokémon",
 		"Updated data backup/restore to include Boxes; Pokémon order is also saved; restore is backward compatible with older files",
 		"Added new theme \"Start Menu\"; updated Naranja and Uva themes to appear closer to the game",
 		"Replaced add/edit form tab labels with icons",
@@ -305,7 +317,7 @@
 		"Downloaded version of website can now be run fully offline"
 	],
 	"12 December 2022": [
-		"Added Scarlet/Violet Pokémon, forms, and origin mark <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/22'>#22</a>",
+		"Added Scarlet/Violet Pokémon, forms, and origin mark",
 		"Updated SPA language tag to SP-EU as per Scarlet/Violet"
 	],
 	"21 November 2022": [
@@ -314,7 +326,7 @@
 		"Updated Timer Ball sprite"
 	],
 	"17 November 2022": [
-		"Add/edit form now supports Current Game, IVs, EVs, Ability, Met Level, Met Date, and Characteristic <a href='https://github.com/SlyAceZeta/Ribbons.Guide/issues/11'>#11</a>",
+		"Add/edit form now supports Current Game, IVs, EVs, Ability, Met Level, Met Date, and Characteristic",
 		"Updated ball and mint sprites to match their HOME/PLA sprites"
 	],
 	"14 November 2022": [
