@@ -1953,9 +1953,9 @@ function selectCustomOption(o){
 				if(oed.indexOf("lang") == 0 && oed.indexOf("langRibbon") == -1){
 					lang = oed.substring(4).toLowerCase();
 					if(result.indexOf("pokemonFormTitle") > 0){
-						$option.append($("<span>", { "class": "translation translation-" + normalizeLang(lang) }).text(ribbons[o.id].titles[lang]));
+						$option.append($("<span>", { "class": "translation translation-" + normalizeLang(lang) }).text(getLanguage(ribbons[o.id].titles, normalizeLang(lang))));
 					} else if(result.indexOf("filterFormEarnedRibbons") > 0 || result.indexOf("filterFormTargetRibbons") > 0){
-						$option.append($("<span>", { "class": "translation translation-" + normalizeLang(lang) }).text(ribbons[o.id].names[lang]));
+						$option.append($("<span>", { "class": "translation translation-" + normalizeLang(lang) }).text(getLanguage(ribbons[o.id].names, normalizeLang(lang))));
 					}
 				}
 			}
@@ -2153,9 +2153,9 @@ function initRun(){
 		/* add form options */
 		for(var b in balls){
 			var $ballOption = $("<option>", { "value": b }).text(getLanguage(balls[b]));
-			for(var lang in balls[b]){
+			for(var lang in translations.languages){
 				if(lang === "hisui") continue;
-				$ballOption.attr("data-lang-" + lang, balls[b][lang]);
+				$ballOption.attr("data-lang-" + lang, getLanguage(balls[b], lang));
 			}
 			$("#pokemonFormBall, #filterFormBall").append($ballOption);
 			$("#imageHoldingArea").append($("<img>", { "src": "img/balls/" + b + ".png" }));
@@ -2172,17 +2172,17 @@ function initRun(){
 				}
 			}
 		}
-		for(var l in translations.languages){
-			var langTrans = getLanguage(translations.languages[l]);
+		for(var lang in translations.languages){
+			var langTrans = getLanguage(translations.languages[lang]);
 			var langAbbr = langTrans.abbr;
 			if(langTrans.abbrold){
 				langAbbr = langTrans.abbrold + "/" + langAbbr;
 			}
-			$("#pokemonFormLanguage, #filterFormLanguage").append(new Option(langAbbr + " - " + langTrans.name, l));
-			if(l == settings.language){
-				$("#settingsLanguage").append(new Option(translations.languages[l][l].name, l));
+			$("#pokemonFormLanguage, #filterFormLanguage").append(new Option(langAbbr + " - " + langTrans.name, lang));
+			if(lang == settings.language){
+				$("#settingsLanguage").append(new Option(translations.languages[lang][lang].name, lang));
 			} else {
-				$("#settingsLanguage").append(new Option(translations.languages[l][l].name + " / " + langTrans.name, l));
+				$("#settingsLanguage").append(new Option(translations.languages[lang][lang].name + " / " + langTrans.name, lang));
 			}
 		}
 		if(settings.language){
@@ -2221,8 +2221,8 @@ function initRun(){
 			pokemonCount++;
 			var $pokemon = $("<option>", { "value": p, "data-natdex": getPokemonData(p, "natdex") });
 			var pokemonNames = getPokemonData(p, "names");
-			for(var lang in pokemonNames){
-				$pokemon.attr("data-name-" + lang, pokemonNames[lang]);
+			for(var lang in translations.languages){
+				$pokemon.attr("data-name-" + lang, getLanguage(pokemonNames, lang));
 			}
 			var pokemonForms = getPokemonData(p, "forms");
 			var pokemonFormDisplay = "";
@@ -2241,8 +2241,8 @@ function initRun(){
 					$pokemon.attr("data-form-all", pokemonForms);
 				} else {
 					pokemonFormDisplay = " (" + getLanguage(pokemonForms) + ")";
-					for(var lang in pokemonForms){
-						$pokemon.attr("data-form-" + lang, pokemonForms[lang]);
+					for(var lang in translations.languages){
+						$pokemon.attr("data-form-" + lang, getLanguage(pokemonForms, lang));
 					}
 				}
 			}
@@ -2284,10 +2284,10 @@ function initRun(){
 			var $ribbonRowInfo = $("<div>", { "class": "w-100" });
 			var $ribbonRowInfoName = $("<div>", { "class": "fw-bold lh-1 my-1 d-flex w-100 justify-content-between align-items-center" }).append($("<span>").text(getLanguage(ribbons[r].names)));
 			var $ribbonRowInfoDesc = $("<div>", { "class": "lh-1 mb-1" }).append($("<small>").text(getLanguage(ribbons[r].descs)));
-			for(var lang in ribbons[r].names){
-				$ribbonOption.attr("data-lang-" + lang, ribbons[r].names[lang]);
-				$ribbonRowInfoName.append($("<span>", { "class": "d-none" }).text(ribbons[r].names[lang]));
-				$ribbonRowInfoDesc.append($("<small>", { "class": "d-none" }).text(ribbons[r].descs[lang]));
+			for(var lang in translations.languages){
+				$ribbonOption.attr("data-lang-" + lang, getLanguage(ribbons[r].names, lang));
+				$ribbonRowInfoName.append($("<span>", { "class": "d-none" }).text(getLanguage(ribbons[r].names, lang)));
+				$ribbonRowInfoDesc.append($("<small>", { "class": "d-none" }).text(getLanguage(ribbons[r].descs, lang)));
 			}
 			var ribbonGen = ribbons[r].gen;
 			var ribbonGenText = translations.arabicToRoman[ribbonGen-1];
@@ -2323,8 +2323,8 @@ function initRun(){
 			$("#pokemonFormRibbons").append($ribbonRow);
 			if(ribbons[r].titles){
 				var $titleOption = $("<option>", { "value": r }).text(getLanguage(ribbons[r].titles));
-				for(var lang in ribbons[r].names){
-					$titleOption.attr("data-lang-" + lang, ribbons[r].titles[lang]).attr("data-lang-ribbon-" + lang, ribbons[r].names[lang]);
+				for(var lang in translations.languages){
+					$titleOption.attr("data-lang-" + lang, getLanguage(ribbons[r].titles, lang)).attr("data-lang-ribbon-" + lang, getLanguage(ribbons[r].names, lang));
 				}
 				$("#pokemonFormTitle").append($titleOption);
 			}
@@ -2332,8 +2332,8 @@ function initRun(){
 		}
 		for(var n in natures){
 			var $natureOption = $("<option>", { "value": n }).text(getLanguage(natures[n]));
-			for(var lang in natures[n]){
-				$natureOption.attr("data-lang-" + lang, natures[n][lang]);
+			for(var lang in translations.languages){
+				$natureOption.attr("data-lang-" + lang, getLanguage(natures[n], lang));
 			}
 			$("#pokemonFormNature").append($natureOption);
 		}
