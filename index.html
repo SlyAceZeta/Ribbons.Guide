@@ -774,13 +774,18 @@
 								<input class="form-check-input" type="checkbox" role="switch" id="settingsCompleteColor" checked>
 								<label class="form-check-label" for="settingsCompleteColor">Change color for completed Pokémon</label>
 							</div>
-							<div class="form-check form-switch d-flex align-items-center">
+							<div class="form-check form-switch mb-2 d-flex align-items-center">
 								<input class="form-check-input" type="checkbox" role="switch" id="settingsReordering" checked>
 								<label class="form-check-label" for="settingsReordering">Enable drag-and-drop reordering</label>
 							</div>
-							<div class="form-check form-switch mt-2 align-items-center" id="settingsAprilFoolsContainer">
+							<div class="form-check form-switch d-flex align-items-center">
+								<input class="form-check-input" type="checkbox" role="switch" id="settingsNewChangelogs" checked>
+								<label class="form-check-label" for="settingsNewChangelogs">Show new changelogs after an update</label>
+							</div>
+							<div class="form-check form-switch d-none mt-2 align-items-center" id="settingsAprilFoolsContainer">
 								<input class="form-check-input" type="checkbox" role="switch" id="settingsAprilFools">
 								<label class="form-check-label" for="settingsAprilFools"><img src="img/pkmn/regular/ditto.png" alt="Ditto" title="April Fools" class="align-top"></label>
+								<img class="align-middle ms-1 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" title="Changing this setting will reload the page.">
 							</div>
 						</form>
 					</div>
@@ -812,6 +817,7 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body p-0">
+						<p id="modalChangelogNew" class="p-3 m-0 text-center border-bottom d-none">This is a list of changes to Ribbons.Guide since you last visited. This list is in chronological order; if you open the full changelog later, it will be in reverse-chronological order.</p>
 						<div class="list-group list-group-flush"></div>
 					</div>
 					<div class="modal-footer justify-content-center">

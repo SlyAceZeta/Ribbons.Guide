@@ -216,6 +216,7 @@ var toggles = { // default settings
 	"FooterExtraInfo": true,
 	"CompleteColor": true,
 	"Reordering": true,
+	"NewChangelogs": true,
 	"AprilFools": true
 };
 /* change toggle settings */
@@ -252,8 +253,8 @@ for(let i in toggles){
 var aprilFools = false;
 var todayDate = new Date();
 if(todayDate.getMonth() == 3 && todayDate.getDate() == 1){
-	$("#settingsAprilFoolsContainer").addClass("d-flex");
-	if(settings["AprilFools"]){
+	$(document).ready(function(){ $("#settingsAprilFoolsContainer").removeClass("d-none").addClass("d-flex"); });
+	if(settings["AprilFools"] == "true"){
 		aprilFools = true;
 		var wheelSpin = Math.floor(Math.random() * 100);
 		if(wheelSpin === 42){
@@ -1358,13 +1359,13 @@ function createCard(p, id){
 
 	/* body */
 	var speciesSprite = p.species;
-	if(aprilFools && settings["AprilFools"]){
+	if(aprilFools && settings["AprilFools"] == "true"){
 		speciesSprite = "ditto";
 		if(p.species == "ditto"){
 			speciesSprite = "mew";
 		}
 	}
-	var genderDirectory = ((!aprilFools || !settings["AprilFools"]) && getPokemonData(speciesSprite, "femsprite") && p.gender === "female") ? "female/" : "";
+	var genderDirectory = ((!aprilFools || settings["AprilFools"] == "false") && getPokemonData(speciesSprite, "femsprite") && p.gender === "female") ? "female/" : "";
 	if(speciesSprite.startsWith("alcremie-") && p.shiny){
 		var alcremieRegex = /caramel|lemon|matcha|mint|rainbow|rubycream|rubyswirl|salted|vanilla/;
 		speciesSprite = speciesSprite.replace(alcremieRegex, "").replace("--", "-").replace("-strawberry", "");
@@ -2585,38 +2586,43 @@ function initRun(){
 		/* TODO: reduce duplication with full changelog behavior */
 		loadingBar(20);
 		$("#loading-spinner-info-text").text("Loading changelog");
-		var newChanges = [], initialRun = true;
-		for(let date in changelog){
-			if(initialRun){
-				initialRun = false;
-				localStorage.changelog = date;
-				if(!lastChangeDate){
-					break;
-				}
-			}
-			let changeDate = new Date(date);
-			if(changeDate > lastChangeDate){
-				let $changeContainer = $("<div>", { "class": "list-group-item py-3" })
-					.append($("<h6>", { "class": "fw-bold" }).text(date));
-				let $changeList = $("<ul>", { "class": "mb-0" });
-				for(let change in changelog[date]){
-					if(changelog[date][change].startsWith("\\")){
-						$changeContainer.append($("<p>").html(changelog[date][change].substring(1)));
-					} else {
-						$changeList.append($("<li>").html(changelog[date][change]));
+		if(settings.NewChangelogs === "true"){
+			var newChanges = [], initialRun = true;
+			for(let date in changelog){
+				if(initialRun){
+					initialRun = false;
+					localStorage.changelog = date;
+					if(!lastChangeDate){
+						break;
 					}
 				}
-				$changeContainer.append($changeList);
-				newChanges.push($changeContainer);
-			}
-		}
-		if(newChanges.length){
-			$(function(){
-				for(let i in newChanges){
-					$("#modalChangelog .list-group").append(newChanges[i]);
+				let changeDate = new Date(date);
+				if(changeDate > lastChangeDate){
+					let $changeContainer = $("<div>", { "class": "list-group-item py-3" })
+						.append($("<h6>", { "class": "fw-bold" }).text(date));
+					let $changeList = $("<ul>", { "class": "mb-0" });
+					for(let change in changelog[date]){
+						if(changelog[date][change].startsWith("\\")){
+							$changeContainer.append($("<p>").html(changelog[date][change].substring(1)));
+						} else {
+							$changeList.append($("<li>").html(changelog[date][change]));
+						}
+					}
+					$changeContainer.append($changeList);
+					newChanges.push($changeContainer);
 				}
-				new bootstrap.Modal("#modalChangelog").toggle();
-			});
+			}
+			if(newChanges.length){
+				$(function(){
+					for(let i in newChanges){
+						$("#modalChangelog .list-group").prepend(newChanges[i]);
+					}
+					if(newChanges.length > 1){
+						$("#modalChangelog #modalChangelogNew").removeClass("d-none").addClass("d-block");
+					}
+					new bootstrap.Modal("#modalChangelog").toggle();
+				});
+			}
 		}
 
 		/* Samsung Internet detection */
@@ -2918,7 +2924,12 @@ $(function(){
 	$("#modalAboutViewChangelog").click(function(){
 		var changeList = [];
 		$("#modalChangelog .list-group").html("");
+		var stillToUpdate = true;
 		for(let date in changelog){
+			if(stillToUpdate){
+				stillToUpdate = false;
+				localStorage.changelog = date;
+			}
 			let changeDate = new Date(date);
 			let $changeContainer = $("<div>", { "class": "list-group-item py-3" })
 				.append($("<h6>", { "class": "fw-bold" }).text(date));
@@ -2938,6 +2949,7 @@ $(function(){
 				for(let i in changeList){
 					$("#modalChangelog .list-group").append(changeList[i]);
 				}
+				$("#modalChangelog #modalChangelogNew").removeClass("d-block").addClass("d-none");
 				new bootstrap.Modal("#modalChangelog").toggle();
 			});
 		}
