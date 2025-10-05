@@ -1124,7 +1124,8 @@ function ribbonChecklist(){
 								$(g).find(".modalRibbonChecklistRows-gamename").after($("<div>", { "class": "last-chance px-3 mb-2" }).append($sectionLabel, $sectionRibbons));
 							}
 						}
-						var $ribbonBtn = $("<a>", { "class": "d-inline-block p-0 mt-1 modalRibbonChecklistRows-ribbon ribbonsprite " + allGameRibbons[r], "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": getLanguage(ribbons[allGameRibbons[r]].names), "data-bs-content": getLanguage(ribbons[allGameRibbons[r]].descs) });
+						var $ribbonBtn = $("<a>", { "class": "d-inline-block p-0 my-1 modalRibbonChecklistRows-ribbon", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": getLanguage(ribbons[allGameRibbons[r]].names), "data-bs-content": getLanguage(ribbons[allGameRibbons[r]].descs) })
+							.append($("<img>", { "src": "img/ribbons-and-marks/" + allGameRibbons[r] + ".png", "style": "width:32px;" }));
 						if(ribbons[allGameRibbons[r]].titles){
 							$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons[allGameRibbons[r]].titles) + ")</div>");
 						}
@@ -1322,7 +1323,8 @@ function createCard(p, id){
 	var $cardHeaderRight = $("<div>", { "class": "card-header-right d-flex" });
 	var $cardHeaderTitle = "";
 	if(p.title && p.title !== "None"){
-		$cardHeaderTitle = $("<a>", { "class": "ms-2 card-header-title-ribbon ribbonsprite " + p.title, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": getLanguage(ribbons[p.title].names), "data-bs-content": getLanguage(ribbons[p.title].descs) });
+		$cardHeaderTitle = $("<a>", { "class": "ms-2 card-header-title-ribbon", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": getLanguage(ribbons[p.title].names), "data-bs-content": getLanguage(ribbons[p.title].descs) })
+			.append($("<img>", { "src": "img/ribbons-and-marks/" + p.title + ".png" }));
 		if(ribbons[p.title].titles){
 			$cardHeaderTitle.attr("title", "<div>" + $cardHeaderTitle.attr("title") + "</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons[p.title].titles) + ")</div>");
 		}
@@ -1350,7 +1352,7 @@ function createCard(p, id){
 	var $cardRibbons = $("<div>", { "class": "card-ribbons flex-grow-1 d-flex flex-wrap p-1" });
 	var ribbonCount = 0, ribbonCountGen7Check = 0, markCount = 0, battleMemory = "", contestMemory = "", battleMemories = [], contestMemories = [];
 	for(let r in p.ribbons){
-		var cardRibbonClass = p.ribbons[r] + " ribbonsprite";
+		var cardRibbonClass = p.ribbons[r];
 		if(ribbons[p.ribbons[r]].mark){
 			markCount++;
 		} else {
@@ -1370,7 +1372,8 @@ function createCard(p, id){
 				}
 			}
 		}
-		var $ribbonBtn = $("<a>", { "class": cardRibbonClass, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": getLanguage(ribbons[p.ribbons[r]].names), "data-bs-content": getLanguage(ribbons[p.ribbons[r]].descs) });
+		var $ribbonBtn = $("<a>", { "class": cardRibbonClass, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": getLanguage(ribbons[p.ribbons[r]].names), "data-bs-content": getLanguage(ribbons[p.ribbons[r]].descs) })
+			.append($("<img>", { "src": "img/ribbons-and-marks/" + p.ribbons[r] + ".png" }));
 		if(ribbons[p.ribbons[r]].titles){
 			$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons[p.ribbons[r]].titles) + ")</div>");
 		}
@@ -1393,9 +1396,10 @@ function createCard(p, id){
 				battleMemory = "-gold";
 			}
 		}
-		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon battle-memory-ribbon" + battleMemory + " ribbonsprite", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + getLanguage(ribbons["battle-memory-ribbon" + battleMemory].names) + " (" + battleMemories.length + ")</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons["battle-memory-ribbon" + battleMemory].titles) + ")</div>", "data-bs-content": getLanguage(ribbons["battle-memory-ribbon" + battleMemory].descs) + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" });
+		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon battle-memory-ribbon" + battleMemory, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + getLanguage(ribbons["battle-memory-ribbon" + battleMemory].names) + " (" + battleMemories.length + ")</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons["battle-memory-ribbon" + battleMemory].titles) + ")</div>", "data-bs-content": getLanguage(ribbons["battle-memory-ribbon" + battleMemory].descs) + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" })
+			.append($("<img>", { "src": "img/ribbons-and-marks/battle-memory-ribbon" + battleMemory + ".png" }));
 		for(let m in battleMemories){
-			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<span class='" + battleMemories[m] + " ribbonsprite' role='img' aria-label='" + getLanguage(ribbons[battleMemories[m]].names) + "'></span>");
+			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<img class='" + battleMemories[m] + "' src='img/ribbons-and-marks/" + battleMemories[m] + ".png' alt='" + getLanguage(ribbons[battleMemories[m]].names) + "'>");
 		}
 		$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "</div>");
 		$cardRibbons.append($ribbonBtn);
@@ -1410,9 +1414,10 @@ function createCard(p, id){
 				contestMemory = "-gold";
 			}
 		}
-		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon contest-memory-ribbon" + contestMemory + " ribbonsprite", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + getLanguage(ribbons["contest-memory-ribbon" + contestMemory].names) + " (" + contestMemories.length + ")</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons["contest-memory-ribbon" + contestMemory].titles) + ")</div>", "data-bs-content": getLanguage(ribbons["contest-memory-ribbon" + contestMemory].descs) + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" });
+		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon contest-memory-ribbon" + contestMemory, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + getLanguage(ribbons["contest-memory-ribbon" + contestMemory].names) + " (" + contestMemories.length + ")</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons["contest-memory-ribbon" + contestMemory].titles) + ")</div>", "data-bs-content": getLanguage(ribbons["contest-memory-ribbon" + contestMemory].descs) + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" })
+			.append($("<img>", { "src": "img/ribbons-and-marks/contest-memory-ribbon" + contestMemory + ".png" }));
 		for(let m in contestMemories){
-			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<span class='" + contestMemories[m] + " ribbonsprite' role='img' aria-label='" + getLanguage(ribbons[contestMemories[m]].names) + "'></span>");
+			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<img class='" + contestMemories[m] + "' src='img/ribbons-and-marks/" + contestMemories[m] + ".png' alt='" + getLanguage(ribbons[contestMemories[m]].names) + "'></span>");
 		}
 		$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "</div>");
 		$cardRibbons.append($ribbonBtn);
@@ -1943,7 +1948,7 @@ function selectCustomOption(o){
 		if(o.id === "None"){
 			$option.append($("<span>").text(getLanguage(translations.none)));
 		} else {
-			$option.append($("<span>", { "class": selectIconClass + " ribbonsprite " + o.id, "role": "img", "aria-label": getLanguage(ribbons[o.id].names) }));
+			$option.append($("<img>", { "class": selectIconClass, "src": "img/ribbons-and-marks/" + o.id + ".png", "alt": getLanguage(ribbons[o.id].names) }));
 			for(var oed in o.element.dataset){
 				if(oed.indexOf("lang") == 0 && oed.indexOf("langRibbon") == -1){
 					lang = oed.substring(4).toLowerCase();
@@ -2275,7 +2280,7 @@ function initRun(){
 				$ribbonRow.append($("<img>", { "src": "img/ui/sync.svg", "class": "pokemonFormRibbon-memory-sync" }));
 			}
 			var $ribbonRowLabel = $("<label>", { "for": "pokemonFormRibbon-" + r, "class": "form-check-label stretched-link d-flex align-items-center w-100" })
-				.append($("<span>", { "class": "me-2 ribbonsprite " + r, "title": ribbons[r].names.en, "role": "img", "aria-label": getLanguage(ribbons[r].names) }));
+				.append($("<img>", { "src": "img/ribbons-and-marks/" + r + ".png", "class": "me-2", "alt": getLanguage(ribbons[r].names), "title": getLanguage(ribbons[r].names) }));
 			var $ribbonRowInfo = $("<div>", { "class": "w-100" });
 			var $ribbonRowInfoName = $("<div>", { "class": "fw-bold lh-1 my-1 d-flex w-100 justify-content-between align-items-center" }).append($("<span>").text(getLanguage(ribbons[r].names)));
 			var $ribbonRowInfoDesc = $("<div>", { "class": "lh-1 mb-1" }).append($("<small>").text(getLanguage(ribbons[r].descs)));
@@ -2323,8 +2328,8 @@ function initRun(){
 				}
 				$("#pokemonFormTitle").append($titleOption);
 			}
+			$("#imageHoldingArea").append($("<img>", { "src": "img/ribbons-and-marks/" + r + ".png" }));
 		}
-		$("#imageHoldingArea").append($("<img>", { "src": "img/ribbons.png" }));
 		for(var n in natures){
 			var $natureOption = $("<option>", { "value": n }).text(getLanguage(natures[n]));
 			for(var lang in natures[n]){
