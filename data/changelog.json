@@ -1,4 +1,15 @@
 {
+	"4 October 2025": [
+		"Added help text that explains when a Pokémon's Met Date changes",
+		"Changed \"HOME\" to \"HOME (Gen VIII/Scarlet/Violet)\" due to the lack of backward compatibility after moving to Z-A",
+		"Bank and HOME will no longer display (parentheticals) when used as origin games",
+		"Added translations for games and origin marks",
+		"Updated evolution warnings and sprite hovers in cards to display in the user's selected language instead of English",
+		"Fixed issue where changing the language would change the titles and names on cards before reloading the page",
+		"Fixed Japanese Pokémon language tag while Ribbons.Guide is set to Spanish or French",
+		"Fixed issue where selections for species, Poke Ball, nature, Ribbons, and title were blank while Ribbons.Guide was set to Spanish or French",
+		"Fixed issue where older Ribbons would not display anything when clicked/tapped on while Ribbons.Guide was set to Chinese"
+	],
 	"26 September 2025": [
 		"Removed Shiny locks from Koraidon and Miraidon"
 	],
