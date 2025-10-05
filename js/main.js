@@ -608,6 +608,14 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 						if(checkedScale || currentRibbons.includes("jumbo-mark") || currentRibbons.includes("titan-mark") || currentRibbons.includes("alpha-mark")){
 							continue;
 						}
+					} else if(ribbon == "battle-tree-great-ribbon"){
+						// Legendaries and Mythicals can earn this in USUM, but not in SM
+						// the banlist is identical to the Battle Tree Master Ribbon
+						if(ribbonGame == "sun" || ribbonGame == "moon"){
+							if(mythical || ribbons["battle-tree-master-ribbon"].banned.includes(dex)){
+								continue;
+							}
+						}
 					} else if(ribbon == "footprint-ribbon"){
 						// if Pokemon can to go to Gen IV, it can always earn this
 						if(ribbonGen !== 4){
@@ -1064,7 +1072,12 @@ function ribbonChecklist(){
 					}
 					$checklistRow = $("<div>", { "class": "col-12 border-bottom border-2 pb-2", "data-gen": getGameData(game, "gen"), "data-ribbons": JSON.stringify(gameRemainingRibbons) });
 					var plainGameName = getLanguage(games[game].names);
-					if(game == "sm" || game == "usum"){
+					// SM/USUM Battle Tree Great check
+					var combineGen7 = true;
+					if(remainingRibbons["usum"] && remainingRibbons["usum"].includes("battle-tree-great-ribbon") && (getPokemonData(cardData.species, "mythical") || ribbons["battle-tree-master-ribbon"]["banned"].includes(cardData.species))){
+						combineGen7 = false;
+					}
+					if(combineGen7 && (game == "sm" || game == "usum")){
 						if($("#modalRibbonChecklistRows .alola").length){
 							continue;
 						} else {
@@ -1076,7 +1089,7 @@ function ribbonChecklist(){
 					}
 					var formattedGameName = "<span class='text-nowrap'>" + plainGameName.replaceAll("/", "/</span><span class='text-nowrap'>") + "</span>";
 					$checklistRowTitle = $("<div>", { "class": "modalRibbonChecklistRows-gamename fw-bold mb-2" }).html(formattedGameName);
-					if(game == currentGame || game == getGameData(currentGame, "partOf", true) || (game == "sm" && getGameData(currentGame, "partOf", true) == "usum")){
+					if(game == currentGame || game == getGameData(currentGame, "partOf", true) || (combineGen7 && game == "sm" && getGameData(currentGame, "partOf", true) == "usum")){
 						$checklistRow.attr("data-order", "0");
 					} else {
 						$checklistRow.attr("data-order", gameOrder[game]);
@@ -2772,7 +2785,12 @@ function initRun(){
 			var $masterRankAlert = $("#master-rank-sv-2025-alert");
 			$masterRankAlert.removeClass("d-none").addClass("d-flex show");
 			$masterRankAlert[0].addEventListener("close.bs.alert", event => {
-				localStorage["master-rank-sv-2025"] = "dismissed";
+				if(confirm("Are you sure you want to permanently dismiss this alert?")){
+					localStorage["master-rank-sv-2025"] = "dismissed";
+					$("#headerNavDataLink").focus();
+				} else {
+					event.preventDefault();
+				}
 			});
 		}
 

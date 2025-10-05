@@ -254,7 +254,8 @@
 			"zh-Hant": "究極之日/究極之月"
 		},
 		"gen": 7,
-		"combo": true
+		"combo": true,
+		"ribbonGenOrder": 2
 	},
 	"usun": {
 		"names": {
@@ -297,7 +298,8 @@
 			"zh-Hant": "太陽/月亮"
 		},
 		"gen": 7,
-		"combo": true
+		"combo": true,
+		"ribbonGenOrder": 1
 	},
 	"sun": {
 		"names": {

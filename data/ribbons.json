@@ -3317,7 +3317,7 @@
 	},
 	"battle-royal-master-ribbon": {
 		"gen": 7,
-		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "kyurem-black", "kyurem-white", "xerneas", "yveltal", "zygarde", "cosmog", "cosmoem", "solgaleo", "lunala", "necrozma", "necrozma-dawn-wings", "necrozma-dusk-mane"],
+		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "kyurem-black", "kyurem-white", "xerneas", "yveltal", "zygarde", "zygarde-10", "cosmog", "cosmoem", "solgaleo", "lunala", "necrozma", "necrozma-dawn-wings", "necrozma-dusk-mane"],
 		"nomythical": true,
 		"available": [
 			"sun",
@@ -3403,7 +3403,7 @@
 	},
 	"battle-tree-master-ribbon": {
 		"gen": 7,
-		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "kyurem-black", "kyurem-white", "xerneas", "yveltal", "zygarde", "cosmog", "cosmoem", "solgaleo", "lunala", "necrozma", "necrozma-dawn-wings", "necrozma-dusk-mane"],
+		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "kyurem-black", "kyurem-white", "xerneas", "yveltal", "zygarde", "zygarde-10", "cosmog", "cosmoem", "solgaleo", "lunala", "necrozma", "necrozma-dawn-wings", "necrozma-dusk-mane"],
 		"nomythical": true,
 		"available": [
 			"sun",
