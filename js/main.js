@@ -2790,9 +2790,8 @@ function initRun(){
 		
 		/* show temporary Master Rank Ribbon warning */
 		if(!localStorage["master-rank-sv-2025"]){
-			var $masterRankAlert = $("#master-rank-sv-2025-alert");
-			$masterRankAlert.removeClass("d-none").addClass("d-flex show");
-			$masterRankAlert[0].addEventListener("close.bs.alert", event => {
+			$("#master-rank-sv-2025-alert").removeClass("d-none").addClass("d-flex show");
+			document.getElementById("master-rank-sv-2025-alert").addEventListener("close.bs.alert", event => {
 				if(confirm("Are you sure you want to permanently dismiss this alert?")){
 					localStorage["master-rank-sv-2025"] = "dismissed";
 					$("#headerNavDataLink").focus();
