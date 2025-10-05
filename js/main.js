@@ -217,6 +217,7 @@ function changeCheckToggle(name, value, reload = false){
 	if(reload && name == "AprilFools"){
 		modalSettings.toggle();
 		new bootstrap.Modal("#modalReloading").toggle();
+		console.log("reload A: name = " + name + ", value = " + value + ", reload = " + reload);
 		setTimeout(function(){ location.reload() }, 500);
 	}
 }
@@ -413,6 +414,7 @@ function loadBackup(file, filename){
 				localStorage.lastModified = backupLastModified;
 				modalData.toggle();
 				new bootstrap.Modal("#modalReloading").toggle();
+				console.log("reload B: fileversion = " + fileversion);
 				setTimeout(function(){ location.reload() }, 500);
 			} else {
 				alert("This is not a valid Ribbons.Guide backup. Your data has not changed.");
@@ -2791,6 +2793,7 @@ $(function(){
 		changeLanguage($(this).val(), false);
 		modalSettings.toggle();
 		new bootstrap.Modal("#modalReloading").toggle();
+		console.log("reload C: " + $(this).val());
 		setTimeout(function(){ location.reload() }, 500);
 	});
 	$("#settingsChecklistButtons").change(function(){
