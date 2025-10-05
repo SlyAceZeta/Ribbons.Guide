@@ -1257,11 +1257,11 @@ function createCard(p, id){
 
 	/* header */
 	var $cardHeaderLeft = $("<div>", { "class": "card-header-fullname" });
-	var $cardHeaderBallMain = $("<span>", { "class": "align-text-top me-2 ball ball-" + p.ball, "title": getLanguage(balls[p.ball]) });
+	var $cardHeaderBallMain = $("<img>", { "class": "align-text-top me-2", "src": "img/balls/" + p.ball + ".png", "alt": getLanguage(balls[p.ball]), "title": getLanguage(balls[p.ball]) });
 	var $cardHeaderBallStrange = "";
 	if(p.currentgame && ((p.currentgame !== "pla" && p.currentgame !== "home" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
 		if(p.strangeball !== "disabled"){
-			$cardHeaderBallStrange = $("<span>", { "class": "align-text-top me-2 ball ball-strange", "title": "Strange Ball" });
+			$cardHeaderBallStrange = $("<img>", { "class": "align-text-top me-2", "src": "img/balls/strange.png", "alt": getLanguage(translations["strange-ball"]), "title": getLanguage(translations["strange-ball"]) });
 			if(p.strangeball == ""){
 				$cardHeaderBallMain.addClass("card-header-ball-selected");
 				$cardHeaderBallStrange.addClass("card-header-ball-strange");
@@ -1867,7 +1867,7 @@ function selectCustomOption(o){
 	}
 	if(result.indexOf("pokemonFormBall") > 0 || result.indexOf("filterFormBall") > 0){
 		var $ball = $("<span>")
-			.append($("<span>", { "class": selectIconClass + " ball ball-" + o.id }))
+			.append($("<img>", { "class": selectIconClass, "src": "img/balls/" + o.id + ".png" }))
 			.append($("<span>").text(getLanguage(balls[o.id])));
 		return $ball;
 	} else if(result.indexOf("pokemonFormOriginMark") > 0 || result.indexOf("filterFormOriginMark") > 0){
@@ -2153,8 +2153,9 @@ function initRun(){
 				$ballOption.attr("data-lang-" + lang, balls[b][lang]);
 			}
 			$("#pokemonFormBall, #filterFormBall").append($ballOption);
+			$("#imageHoldingArea").append($("<img>", { "src": "img/balls/" + b + ".png" }));
 		}
-		$("#imageHoldingArea").append($("<img>", { "src": "img/balls.png" }));
+		$("#imageHoldingArea").append($("<img>", { "src": "img/balls/strange.png" }));
 		for(var g in games){
 			// temporary until Legends: Z-A releases
 			if(g !== "plza"){

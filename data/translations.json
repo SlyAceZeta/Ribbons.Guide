@@ -727,5 +727,15 @@
 			"zh-Hans": "浮躁",
 			"zh-Hant": "浮躁"
 		}
+	},
+	"strange-ball": {
+		"en": "Strange Ball",
+		"es-es": "Extraña Ball",
+		"fr": "Étrange Ball",
+		"de": "Rätselball",
+		"ja": "ストレンジボール",
+		"ko": "스트레인지볼",
+		"zh-Hans": "奇异球",
+		"zh-Hant": "奇異球"
 	}
 }
