@@ -1,4 +1,4 @@
-const CACHE = "2025-10-04-1";
+const CACHE = "2025-10-04-2";
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js");
 self.addEventListener("install", (event) => {
 	self.skipWaiting();

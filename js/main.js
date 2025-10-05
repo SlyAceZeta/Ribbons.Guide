@@ -414,7 +414,7 @@ function loadBackup(file, filename){
 				localStorage.lastModified = backupLastModified;
 				modalData.toggle();
 				new bootstrap.Modal("#modalReloading").toggle();
-				console.log("reload B: fileversion = " + fileversion);
+				console.log("reload B: fileVersion = " + fileVersion);
 				setTimeout(function(){ location.reload() }, 500);
 			} else {
 				alert("This is not a valid Ribbons.Guide backup. Your data has not changed.");
