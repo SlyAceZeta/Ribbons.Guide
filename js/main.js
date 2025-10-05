@@ -1,6 +1,14 @@
 /* globals */
 var balls, changelog, games, gameOrder = {}, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default";
 // TODO: add tutorials
+/* clear old local storage properties if still present */
+/* except theme which gets special handling */
+var oldProps = ["site-update-warning"];
+for(var o in oldProps){
+	if(localStorage[oldProps[o]]){
+		localStorage.removeItem(oldProps[o]);
+	}
+}
 /* get settings */
 if(!localStorage.settings){
 	localStorage.settings = "{}";
@@ -661,7 +669,7 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 							if(ribbonGen == "8"){
 								continue;
 							} else {
-								earnableWarnings.push("master-rank-sv");
+								earnableWarnings.push("master-rank-sv-2025");
 							}
 						}
 					}
@@ -1010,7 +1018,7 @@ function ribbonChecklist(){
 			if(ribbonWarnings[w] == "footprint-virtualconsole") warningText = "If " + cardData.name + " reaches Lv.71 before transferring to Gen&nbsp;VII, the Footprint Ribbon will become unavailable!";
 			if(ribbonWarnings[w] == "footprint-met-level") warningText = cardData.name + "'s Met Level has not been set. The availability of the Footprint Ribbon cannot be determined.";
 			if(ribbonWarnings[w] == "footprint-beldum") warningText = "Evolving " + cardData.name + " into Metagross will make the Footprint Ribbon unavailable!";
-			if(ribbonWarnings[w] == "master-rank-sv") warningText = cardData.name + " can temporarily earn the Master Rank Ribbon during the current " + getLanguage(getGameData("sv", "names", true)) + " regulation. This ends on January 3!";
+			if(ribbonWarnings[w] == "master-rank-sv-2025") warningText = cardData.name + " can temporarily earn the Master Rank Ribbon during the current " + getLanguage(getGameData("sv", "names", true)) + " regulation. This ends on January&nbsp;3!";
 			if(ribbonWarnings[w] == "evolution-warning"){
 				var evoWarnName = getLanguage(getPokemonData(cardData.evolutionWarning, "names"));
 				var evoWarnForms = getPokemonData(cardData.evolutionWarning, "forms");
@@ -2758,6 +2766,15 @@ function initRun(){
 		/* initialize tooltips */
 		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 		const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+		
+		/* show temporary Master Rank Ribbon warning */
+		if(!localStorage["master-rank-sv-2025"]){
+			var $masterRankAlert = $("#master-rank-sv-2025-alert");
+			$masterRankAlert.removeClass("d-none").addClass("d-flex show");
+			$masterRankAlert[0].addEventListener("close.bs.alert", event => {
+				localStorage["master-rank-sv-2025"] = "dismissed";
+			});
+		}
 
 		/* image check */
 		loadingBar(25);

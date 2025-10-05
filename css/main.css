@@ -467,7 +467,8 @@ a:not(:hover):not(:focus) {
 	border: none;
 }
 .card-header img,
-.card-footer img {
+.card-footer img,
+.alert img {
 	width: auto;
 	height: 20px;
 }
