@@ -13,17 +13,19 @@
 		<link rel="manifest" href="manifest.json">
 		<script>if(navigator.serviceWorker) navigator.serviceWorker.register("sw.js");</script>
 		<!-- fonts -->
-		<link rel="preload" href="fonts/NunitoSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
-		<link rel="preload" href="fonts/NunitoSans-Bold.ttf" as="font" type="font/ttf" crossorigin>
+		<link rel="preload" href="fonts/NunitoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="fonts/NunitoSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
 		<style type="text/css">
 		@font-face {
 			font-family: "Nunito Sans";
-			src: url("fonts/NunitoSans-Regular.ttf") format("truetype");
+			src: url("fonts/NunitoSans-Regular.woff2") format("woff2"),
+				url("fonts/NunitoSans-Regular.ttf") format("truetype");
 			font-weight: 400;
 		}
 		@font-face {
 			font-family: "Nunito Sans";
-			src: url("fonts/NunitoSans-Bold.ttf") format("truetype");
+			src: url("fonts/NunitoSans-Bold.woff2") format("woff2"),
+				url("fonts/NunitoSans-Bold.ttf") format("truetype");
 			font-weight: 700;
 		}
 		</style>
@@ -313,7 +315,7 @@
 										<label for="pokemonFormTrainerID" class="form-label">ID No.</label>
 										<input type="text" class="form-control" id="pokemonFormTrainerID" inputmode="numeric" maxlength="6">
 									</div>
-									<div class="col-6">
+									<div class="col-6 d-flex flex-column justify-content-between">
 										<label for="pokemonFormOriginMark" class="form-label">Origin Mark <span class="form-asterisk">*</span></label>
 										<select class="form-select" id="pokemonFormOriginMark" data-placeholder="" data-minimum-results-for-search="Infinity">
 											<option value="">&nbsp;</option>

@@ -50,6 +50,9 @@ a:not(.btn) {
 .bg-danger-subtle {
 	background-color: #fbb!important;
 }
+.list-group {
+	--bs-list-group-action-color: var(--bs-list-group-color);
+}
 
 /* sword/shield overrides */
 [data-bs-theme="sword"],
@@ -200,6 +203,7 @@ a:not(.btn) {
 	--bs-tertiary-bg: #5e7390;
 	--bs-tertiary-color: #fff;
 	--bs-emphasis-color: #fff;
+	--bs-btn-close-filter: invert(1) grayscale(1) brightness(2);
 
 	--rg-header-background: #112028;
 	--rg-header-text: #bbb;
@@ -296,9 +300,6 @@ a:not(.btn) {
 [data-bs-theme="start"] .bg-danger-subtle {
 	background-color: #400!important;
 }
-[data-bs-theme="start"] .btn-close {
-	filter: var(--bs-btn-close-white-filter);
-}
 [data-bs-theme="start"] .navbar {
 	--bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2894, 115, 144, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 	--bs-navbar-toggler-border-color: #5E7390;
@@ -314,6 +315,7 @@ a:not(.btn) {
 	--bs-tertiary-bg: #004393;
 	--bs-tertiary-color: #fff;
 	--bs-emphasis-color: #fff;
+	--bs-btn-close-filter: invert(1) grayscale(1) brightness(2);
 
 	--rg-header-background: #b65726;
 	--rg-header-text: #fff;
@@ -407,9 +409,6 @@ a:not(.btn) {
 [data-bs-theme="naranja"] .bg-danger-subtle {
 	background-color: #400!important;
 }
-[data-bs-theme="naranja"] .btn-close {
-	filter: var(--bs-btn-close-white-filter);
-}
 [data-bs-theme="naranja"] #modalChangelog h6 {
 	color: #f7cd12;
 }
@@ -427,6 +426,7 @@ a:not(.btn) {
 	--bs-tertiary-bg: #004393;
 	--bs-tertiary-color: #fff;
 	--bs-emphasis-color: #fff;
+	--bs-btn-close-filter: invert(1) grayscale(1) brightness(2);
 
 	--rg-header-background: #842EAF;
 	--rg-header-text: #fff;
@@ -519,9 +519,6 @@ a:not(.btn) {
 }
 [data-bs-theme="uva"] .bg-danger-subtle {
 	background-color: #400!important;
-}
-[data-bs-theme="uva"] .btn-close {
-	filter: var(--bs-btn-close-white-filter);
 }
 [data-bs-theme="uva"] #modalChangelog h6 {
 	color: #f7cd12;
