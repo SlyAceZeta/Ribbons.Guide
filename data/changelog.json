@@ -266,6 +266,9 @@
 		"Fixed an issue where Ribbons from the Battle Tower were showing in the Ribbon Guide for Spiky-eared Pichu",
 		"Added a Discord invite link"
 	],
+	"8 March 2023": [
+		"Full public release!"
+	],
 	"6 March 2023": [
 		"Ribbons.Guide is now a progressive web app! Visit the site using a <a href='https://en.wikipedia.org/wiki/Progressive_web_app' target='_blank'>supported browser</a> to install it directly to your device!",
 		"Your list of Pokémon can now be filtered by the games they can travel to, their Poké Ball, and more (thanks Noaxzl!)",
@@ -336,7 +339,12 @@
 		"You can now add notes to each Pokémon (thanks lovelycoris!)"
 	],
 	"13 November 2022": [
-		"Added a changelog! This will automatically appear when there's a new update.",
-		"Changes before this date can be viewed in GitHub's commit history"
+		"Added a changelog! This will automatically appear when there's a new update."
+	],
+	"7 November 2022": [
+		"Public beta launched"
+	],
+	"26 October 2022": [
+		"First version deployed"
 	]
 }
