@@ -364,7 +364,7 @@ function saveBackup(){
 	ele.download = "RibbonBackup.json";
 
 	document.body.appendChild(ele);
-	ele.click();
+	ele.trigger("click");
 	document.body.removeChild(ele);
 }
 
@@ -892,7 +892,7 @@ function savePokemon(edit = false){
 		updatePopovers();
 		modalPokemonForm.toggle();
 	} else {
-		$("#pokemonFormTabs-details").click();
+		$("#pokemonFormTabs-details").trigger("click");
 	}
 }
 
@@ -903,38 +903,38 @@ function editPokemon(){
 	modalPokemonState = "editing";
 	modalPokemonEditing = pokemonID;
 	var pokemonToEdit = userPokemon[pokemonID];
-	$("#pokemonFormSpecies").val(pokemonToEdit.species).change();
-	if(pokemonToEdit.gender === "female") $("#pokemonFormGender-female").prop("checked", true).change();
+	$("#pokemonFormSpecies").val(pokemonToEdit.species).trigger("change");
+	if(pokemonToEdit.gender === "female") $("#pokemonFormGender-female").prop("checked", true).trigger("change");
 	if(pokemonToEdit.shiny.length){
 		var shinyType = (pokemonToEdit.shiny === "square") ? "square" : "star";
-		$("#pokemonFormShiny-" + shinyType).prop("checked", true).change();
+		$("#pokemonFormShiny-" + shinyType).prop("checked", true).trigger("change");
 	}
 	$("#pokemonFormNickname").val(pokemonToEdit.nickname);
-	$("#pokemonFormLanguage").val(pokemonToEdit.language).change();
-	$("#pokemonFormBall").val(pokemonToEdit.ball).change();
-	if(pokemonToEdit.strangeball.length) $("#pokemonFormStrangeBall-" + pokemonToEdit.strangeball).prop("checked", true).change();
+	$("#pokemonFormLanguage").val(pokemonToEdit.language).trigger("change");
+	$("#pokemonFormBall").val(pokemonToEdit.ball).trigger("change");
+	if(pokemonToEdit.strangeball.length) $("#pokemonFormStrangeBall-" + pokemonToEdit.strangeball).prop("checked", true).trigger("change");
 	$("#pokemonFormCurrentLevel").val(pokemonToEdit.currentlevel);
-	$("#pokemonFormNature").val(pokemonToEdit.nature).change();
-	if(pokemonToEdit.totem) $("#pokemonFormTotem").prop("checked", true).change();
-	if(pokemonToEdit.gmax) $("#pokemonFormGMax").prop("checked", true).change();
-	if(pokemonToEdit.shadow) $("#pokemonFormShadow").prop("checked", true).change();
+	$("#pokemonFormNature").val(pokemonToEdit.nature).trigger("change");
+	if(pokemonToEdit.totem) $("#pokemonFormTotem").prop("checked", true).trigger("change");
+	if(pokemonToEdit.gmax) $("#pokemonFormGMax").prop("checked", true).trigger("change");
+	if(pokemonToEdit.shadow) $("#pokemonFormShadow").prop("checked", true).trigger("change");
 	$("#pokemonFormTrainerName").val(pokemonToEdit.trainername);
 	$("#pokemonFormTrainerID").val(pokemonToEdit.trainerid);
-	$("#pokemonFormOriginMark").val(pokemonToEdit.originmark).change();
-	$("#pokemonFormOriginGame").val(pokemonToEdit.origingame).change();
-	$("#pokemonFormCurrentGame").val(pokemonToEdit.currentgame).change();
-	if(pokemonToEdit.box || pokemonToEdit.box == 0) $("#pokemonFormBox").val(pokemonToEdit.box).change();
-	$("#pokemonFormTitle").val(pokemonToEdit.title).change();
-	if(pokemonToEdit.scale) $("#pokemonFormScale").prop("checked", true).change();
+	$("#pokemonFormOriginMark").val(pokemonToEdit.originmark).trigger("change");
+	$("#pokemonFormOriginGame").val(pokemonToEdit.origingame).trigger("change");
+	$("#pokemonFormCurrentGame").val(pokemonToEdit.currentgame).trigger("change");
+	if(pokemonToEdit.box || pokemonToEdit.box == 0) $("#pokemonFormBox").val(pokemonToEdit.box).trigger("change");
+	$("#pokemonFormTitle").val(pokemonToEdit.title).trigger("change");
+	if(pokemonToEdit.scale) $("#pokemonFormScale").prop("checked", true).trigger("change");
 	for(var r in pokemonToEdit.ribbons){
-		$("#pokemonFormRibbon-" + pokemonToEdit.ribbons[r]).prop("checked", true).change();
+		$("#pokemonFormRibbon-" + pokemonToEdit.ribbons[r]).prop("checked", true).trigger("change");
 	}
 	if(pokemonToEdit.metlevel) $("#pokemonFormMetLevel").val(pokemonToEdit.metlevel);
-	$("#pokemonFormMetDate").val(pokemonToEdit.metdate).change();
+	$("#pokemonFormMetDate").val(pokemonToEdit.metdate).trigger("change");
 	$("#pokemonFormMetLocation").val(pokemonToEdit.metlocation);
-	if(pokemonToEdit.pokerus.length) $("#pokemonFormPokerus-" + pokemonToEdit.pokerus).prop("checked", true).change();
+	if(pokemonToEdit.pokerus.length) $("#pokemonFormPokerus-" + pokemonToEdit.pokerus).prop("checked", true).trigger("change");
 	for(var a in pokemonToEdit.achievements){
-		$("#pokemonFormAchievements-" + pokemonToEdit.achievements[a]).prop("checked", true).change();
+		$("#pokemonFormAchievements-" + pokemonToEdit.achievements[a]).prop("checked", true).trigger("change");
 	}
 	$("#pokemonFormNotes").val(pokemonToEdit.notes);
 	modalPokemonForm.toggle();
@@ -1258,7 +1258,7 @@ function createCard(p, id){
 	}
 
 	/* containers and filters */
-	var $cardCol = $("<div>", { "class": "col", "data-name": displayName, "data-national-dex": getPokemonData(p.species, "natdex"), "data-level": p.currentlevel, "data-origin-mark": p.originmark, "data-origin-game": p.origingame, "data-current-game": p.currentgame, "data-compatible-games": JSON.stringify(compatibleFiltered), "data-earned-ribbons": JSON.stringify(p.ribbons), "data-pokemon-id": id, "data-gender": p.gender, "data-species": p.species, "data-current-gen": currentGen, "data-scale-checked": p.scale ? p.scale : false });
+	var $cardCol = $("<div>", { "class": "col", "data-name": displayName, "data-national-dex": getPokemonData(p.species, "natdex"), "data-level": p.currentlevel, "data-origin-mark": p.originmark, "data-origin-game": p.origingame, "data-current-game": p.currentgame, "data-compatible-games": JSON.stringify(compatibleFiltered), "data-earned-ribbons": JSON.stringify(p.ribbons), "data-pokemon-id": id, "data-gender": p.gender, "data-species": p.species, "data-current-gen": currentGen, "data-scale-checked": p.scale ? "" + p.scale : "false" });
 	if(ribbonLists){
 		if(Object.keys(ribbonLists.remaining).length == 0){
 			$cardCol.addClass("ribbons-done");
@@ -1508,23 +1508,23 @@ function createCard(p, id){
 function presetSettings(change = false){
 	if(settings.theme){
 		$("#settingsTheme").val(settings.theme);
-		if(change) $("#settingsTheme").change();
+		if(change) $("#settingsTheme").trigger("change");
 	}
 	if(settings.ChecklistButtons){
 		$("#settingsChecklistButtons").val(settings.ChecklistButtons);
-		if(change) $("#settingsChecklistButtons").change();
+		if(change) $("#settingsChecklistButtons").trigger("change");
 	}
 	if(settings.TitleRibbon){
 		$("#settingsTitleRibbon").val(settings.TitleRibbon);
-		if(change) $("#settingsTitleRibbon").change();
+		if(change) $("#settingsTitleRibbon").trigger("change");
 	}
 	if(settings.OldRibbons){
 		$("#settingsOldRibbons").val(settings.OldRibbons);
-		if(change) $("#settingsOldRibbons").change();
+		if(change) $("#settingsOldRibbons").trigger("change");
 	}
 	if(settings.ExtraOriginMarks){
 		$("#settingsExtraOriginMarks").val(settings.ExtraOriginMarks);
-		if(change) $("#settingsExtraOriginMarks").change();
+		if(change) $("#settingsExtraOriginMarks").trigger("change");
 	}
 	if(settings.CardView){
 		$("#switchViewBtn-" + settings.CardView).prop("checked", true);
@@ -1548,7 +1548,7 @@ function presetSettings(change = false){
 				$("#settings" + i).prop("checked", false);
 			}
 		}
-		if(change) $("#settings" + i).change();
+		if(change) $("#settings" + i).trigger("change");
 	}
 }
 
@@ -1560,23 +1560,23 @@ function resetPokemonForm(edit = false){
 	} else {
 		$("#modalPokemonFormLabel").text("Add New Pokémon");
 	}
-	$("#pokemonFormTabs-details").click();
+	$("#pokemonFormTabs-details").trigger("click");
 	$("#modalPokemonForm input").each(function(){
 		if($(this).attr("type") === "text" || $(this).attr("type") === "number" || $(this).attr("type") === "date" || $(this).attr("type") === "search"){
-			$(this).val("").change();
+			$(this).val("").trigger("change");
 		} else if($(this).attr("type") === "checkbox"){
-			$(this).prop("checked", false).change();
+			$(this).prop("checked", false).trigger("change");
 		}
 	});
 	$("#modalPokemonForm select").each(function(){
-		$(this).val(null).change();
+		$(this).val(null).trigger("change");
 	});
 	$("#pokemonFormShinyGroup input, #pokemonFormGenderGroup input").prop("disabled", false);
 	$("#pokemonFormGender-unknown").prop("disabled", true);
-	$("#pokemonFormShiny-normal, #pokemonFormGender-male, #pokemonFormStrangeBall-global, #pokemonFormPokerus-none").prop("checked", true).change();
+	$("#pokemonFormShiny-normal, #pokemonFormGender-male, #pokemonFormStrangeBall-global, #pokemonFormPokerus-none").prop("checked", true).trigger("change");
 	$("#pokemonFormNotes").val("");
 	$("#pokemonFormSprite").attr("src", "img/ui/1x1.svg");
-	$("#pokemonFormLanguage").val(settings.language).change();
+	$("#pokemonFormLanguage").val(settings.language).trigger("change");
 
 	/* re-populate boxes dropdown */
 	var $boxNone = $("<option>", { "value": "-1" }).text(getLanguage(translations.none));
@@ -1587,8 +1587,8 @@ function resetPokemonForm(edit = false){
 	for(var b in userBoxes){
 		$("#pokemonFormBox").append(new Option(userBoxes[b], b));
 	}
-	$("#pokemonFormBox").val("-1").change();
-	$("#pokemonFormTitle").val("None").change();
+	$("#pokemonFormBox").val("-1").trigger("change");
+	$("#pokemonFormTitle").val("None").trigger("change");
 	$("#pokemonFormRibbons li").removeClass("d-none");
 	$("#pokemonFormRibbons-none").addClass("d-none");
 }
@@ -1616,9 +1616,9 @@ function resetFilterForm(relistBoxes = false){
 	/* reset all options */
 	$("#modalFilterForm select, #modalFilterForm input").each(function(){
 		if(this.id === "filterFormSort"){
-			$(this).val("default").change();
+			$(this).val("default").trigger("change");
 		} else {
-			$(this).val("").change();
+			$(this).val("").trigger("change");
 		}
 	});
 	$("#tracker-grid .col").show();
@@ -2112,7 +2112,7 @@ function deleteBox(){
 		relistFilterBoxes();
 		if(activeFilters.box){
 			if(activeFilters.box == boxID){
-				$("#filterFormBox").val("").change();
+				$("#filterFormBox").val("").trigger("change");
 			} else {
 				$("#filterFormBox").val(activeFilters.box);
 			}
@@ -2389,7 +2389,7 @@ function initRun(){
 			dropdownParent: $("#modalSettings")
 		});
 		/* listeners */
-		$("input[name='pokemonFormGender'], input[name='pokemonFormShiny']").change(function(){
+		$("input[name='pokemonFormGender'], input[name='pokemonFormShiny']").on("change", function(){
 			updateFormSprite();
 		});
 		$("#pokemonFormRibbonSearch").on("input", function(){
@@ -2417,7 +2417,7 @@ function initRun(){
 				$("#pokemonFormRibbons-none").addClass("d-none");
 			}
 		});
-		$("#pokemonFormRibbons input[type='checkbox']").change(function(){
+		$("#pokemonFormRibbons input[type='checkbox']").on("change", function(){
 			var ribbon = this.id.replace("pokemonFormRibbon-", "");
 			var pokemonFlags = getPokemonData($("#pokemonFormSpecies").val(), "flags");
 			var pokemonSizeLocked = false;
@@ -2466,13 +2466,13 @@ function initRun(){
 				}
 			}
 		});
-		$("#pokemonFormRibbonToggle button").click(function(){
+		$("#pokemonFormRibbonToggle button").on("click", function(){
 			var toggleGen = this.dataset.gen;
 			$("#pokemonFormRibbons .ribbon-gen-" + toggleGen + " input[type='checkbox']").each(function(i, c){
 				$(c).prop("checked", !$(c).prop("checked"));
 			});
 		});
-		$("#pokemonFormSpecies").change(function(){
+		$("#pokemonFormSpecies").on("change", function(){
 			var species = $(this).val();
 			if(species){
 				var pokemonGender = getPokemonData(species, "gender");
@@ -2480,30 +2480,30 @@ function initRun(){
 					$("#pokemonFormGender-unknown").prop("disabled", true);
 					$("#pokemonFormGender-male, #pokemonFormGender-female").prop("disabled", false);
 					if(!$("#pokemonFormGender-female").prop("checked")){
-						$("#pokemonFormGender-male").prop("checked", true).change();
+						$("#pokemonFormGender-male").prop("checked", true).trigger("change");
 					}
 				} else {
 					$("#pokemonFormGenderGroup input").prop("disabled", true);
-					$("#pokemonFormGender-" + pokemonGender).prop("checked", true).change();
+					$("#pokemonFormGender-" + pokemonGender).prop("checked", true).trigger("change");
 				}
 
 				var pokemonFlags = getPokemonData(species, "flags");
 				if(pokemonFlags && pokemonFlags.includes("shinyLocked")){
 					$("#pokemonFormShinyGroup input").prop("disabled", true);
-					$("#pokemonFormShiny-normal").prop("checked", true).change();
+					$("#pokemonFormShiny-normal").prop("checked", true).trigger("change");
 				} else {
 					$("#pokemonFormShinyGroup input").prop("disabled", false);
 				}
 				if(pokemonFlags && pokemonFlags.includes("sizeLocked")){
-					$("#pokemonFormScale").prop({ "checked": true, "disabled": true }).change();
+					$("#pokemonFormScale").prop({ "checked": true, "disabled": true }).trigger("change");
 				} else {
-					$("#pokemonFormScale").prop({ "checked": false, "disabled": false }).change();
+					$("#pokemonFormScale").prop({ "checked": false, "disabled": false }).trigger("change");
 				}
 
 				updateFormSprite();
 			}
 		});
-		$("#pokemonFormOriginMark").change(function(){
+		$("#pokemonFormOriginMark").on("change", function(){
 			if($(this).val()){
 				var matchingGames = origins[$(this).val()].games;
 				if(matchingGames.length == 1){
@@ -2513,7 +2513,7 @@ function initRun(){
 						gameName = gameName.replace(/ \(.*\)/, "");
 					}
 					$("#pokemonFormOriginGame").append(new Option(gameName, matchingGames[0]));
-					$("#pokemonFormOriginGame").val(matchingGames[0]).change();
+					$("#pokemonFormOriginGame").val(matchingGames[0]).trigger("change");
 				} else {
 					$("#pokemonFormOriginGame").html("<option></option>").prop("disabled", false);
 					for(var g in matchingGames){
@@ -2524,13 +2524,13 @@ function initRun(){
 						}
 						$("#pokemonFormOriginGame").append(new Option(gameName, gameKey));
 					}
-					$("#pokemonFormOriginGame").val("").change();
+					$("#pokemonFormOriginGame").val("").trigger("change");
 				}
 			} else {
 				$("#pokemonFormOriginGame").html("<option></option>").prop("disabled", true);
 			}
 		});
-		$("#modalFilterForm select:not(#filterFormSort), #modalFilterForm input[type='number'], #modalFilterForm input[type='text']").change(function(){
+		$("#modalFilterForm select:not(#filterFormSort), #modalFilterForm input[type='number'], #modalFilterForm input[type='text']").on("change", function(){
 			var filterName = this.id.replace("filterForm", "").toLowerCase();
 			var filterSearch = $(this).val();
 			if(filterSearch == "" || filterSearch === null){
@@ -2538,22 +2538,22 @@ function initRun(){
 			} else {
 				if(typeof filterSearch == "string") filterSearch.trim();
 				if(filterSearch == ""){
-					$(this).val("").change();
+					$(this).val("").trigger("change");
 				} else {
 					var filterLevel = Number(filterSearch);
 					if(filterName == "currentlevel-max" && filterLevel > 99){
-						$(this).val("").change();
+						$(this).val("").trigger("change");
 					} else if(filterName == "currentlevel-max" && filterLevel < 1){
-						$(this).val(1).change();
+						$(this).val(1).trigger("change");
 					} else if(filterName == "currentlevel-min" && filterLevel < 2){
-						$(this).val("").change();
+						$(this).val("").trigger("change");
 					} else if(filterName == "currentlevel-min" && filterLevel > 100){
-						$(this).val(100).change();
+						$(this).val(100).trigger("change");
 					} else {
 						if(filterName == "currentlevel-min" && $("#filterFormCurrentLevel-max").val().length && filterLevel > Number($("#filterFormCurrentLevel-max").val())){
-							$("#filterFormCurrentLevel-max").val(filterLevel).change();
+							$("#filterFormCurrentLevel-max").val(filterLevel).trigger("change");
 						} else if(filterName == "currentlevel-max" && $("#filterFormCurrentLevel-min").val().length && filterLevel < Number($("#filterFormCurrentLevel-min").val())){
-							$("#filterFormCurrentLevel-min").val(filterLevel).change();
+							$("#filterFormCurrentLevel-min").val(filterLevel).trigger("change");
 						}
 						activeFilters[filterName] = filterSearch;
 					}
@@ -2568,7 +2568,7 @@ function initRun(){
 			}
 			filterBubble();
 		});
-		$("#filterFormSort").change(function(){
+		$("#filterFormSort").on("change", function(){
 			activeSort = $(this).val();
 			sortPokemonList();
 		});
@@ -2762,20 +2762,20 @@ function initRun(){
 					relistFilterBoxes();
 					if(activeFilters.box){
 						if(activeFilters.box == oldBoxID){
-							$("#filterFormBox").val(newBoxID).change();
+							$("#filterFormBox").val(newBoxID).trigger("change");
 						} else {
 							var oldBoxFilter = Number(activeFilters.box);
 							if(oldBoxID < newBoxID){
 								if(oldBoxFilter > oldBoxID && oldBoxFilter <= newBoxID){
-									$("#filterFormBox").val(oldBoxFilter-1).change();
+									$("#filterFormBox").val(oldBoxFilter-1).trigger("change");
 								} else {
-									$("#filterFormBox").val(oldBoxFilter).change();
+									$("#filterFormBox").val(oldBoxFilter).trigger("change");
 								}
 							} else if(oldBoxID > newBoxID){
 								if(oldBoxFilter < oldBoxID && oldBoxFilter >= newBoxID){
-									$("#filterFormBox").val(oldBoxFilter+1).change();
+									$("#filterFormBox").val(oldBoxFilter+1).trigger("change");
 								} else {
-									$("#filterFormBox").val(oldBoxFilter).change();
+									$("#filterFormBox").val(oldBoxFilter).trigger("change");
 								}
 							}
 						}
@@ -2834,26 +2834,26 @@ $(function(){
 	modalSettings = new bootstrap.Modal("#modalSettings");
 	modalData = new bootstrap.Modal("#modalData");
 	/* dropdown listeners */
-	$("#settingsTheme").change(function(){
+	$("#settingsTheme").on("change", function(){
 		changeTheme($(this).val());
 	});
-	$("#settingsLanguage").change(function(){
+	$("#settingsLanguage").on("change", function(){
 		changeLanguage($(this).val(), false);
 		modalSettings.toggle();
 		new bootstrap.Modal("#modalReloading").toggle();
 		console.log("reload C: " + $(this).val());
 		setTimeout(function(){ location.reload() }, 500);
 	});
-	$("#settingsChecklistButtons").change(function(){
+	$("#settingsChecklistButtons").on("change", function(){
 		changeChecklistButtons($(this).val());
 	});
-	$("#settingsTitleRibbon").change(function(){
+	$("#settingsTitleRibbon").on("change", function(){
 		changeTitleRibbon($(this).val());
 	});
-	$("#settingsOldRibbons").change(function(){
+	$("#settingsOldRibbons").on("change", function(){
 		changeOldRibbons($(this).val());
 	});
-	$("#settingsExtraOriginMarks").change(function(){
+	$("#settingsExtraOriginMarks").on("change", function(){
 		changeExtraOriginMarks($(this).val());
 	});
 	/* device theme change listener */
@@ -2863,33 +2863,33 @@ $(function(){
 		}
 	});
 	/* card view listener */
-	$("#switchView label").click(function(){
+	$("#switchView label").on("click", function(){
 		changeCardView($(this).prev().val());
 	});
 	/* ribbon form view listener */
-	$("#switchRibbonFormView label").click(function(){
+	$("#switchRibbonFormView label").on("click", function(){
 		changeRibbonFormView($(this).prev().val());
 	});
 	/* checkbox listeners */
 	for(let i in toggles){
-		$("#settings" + i).change(function(){
+		$("#settings" + i).on("change", function(){
 			changeCheckToggle(i, $(this).prop("checked") ? "true" : "false", true);
 		});
 	}
 	/* button listeners */
-	$("#headerNavSettingsLink").click(function(){
+	$("#headerNavSettingsLink").on("click", function(){
 		modalSettings.toggle();
 	});
-	$("#headerNavDataLink").click(function(){
+	$("#headerNavDataLink").on("click", function(){
 		modalData.toggle();
 	});
-	$("#modalDataSaveBackup").click(function(){
+	$("#modalDataSaveBackup").on("click", function(){
 		saveBackup();
 	});
-	$("#modalDataLoadBackupButton").click(function(){
-		$("#modalDataLoadBackupFile").click();
+	$("#modalDataLoadBackupButton").on("click", function(){
+		$("#modalDataLoadBackupFile").trigger("click");
 	});
-	$("#modalDataLoadBackupFile").change(function(){
+	$("#modalDataLoadBackupFile").on("change", function(){
 		var file = $(this)[0].files[0];
 		if(file) loadBackup(file, $(this).val());
 	});
@@ -2905,24 +2905,24 @@ $(function(){
 		modalPokemonState = "default";
 		modalPokemonEditing = -1;
 	});
-	$("#sectionTrackerButtonAdd").click(function(){
+	$("#sectionTrackerButtonAdd").on("click", function(){
 		resetPokemonForm();
 		modalPokemonForm.toggle();
 	});
-	$("#modalPokemonFormSave").click(function(){
+	$("#modalPokemonFormSave").on("click", function(){
 		savePokemon(modalPokemonState === "editing");
 	});
-	$("#modalFilterFormReset").click(function(){
+	$("#modalFilterFormReset").on("click", function(){
 		resetFilterForm();
 	});
 	$("#modalBoxes").on("show.bs.modal", function(e){
 		populateBoxes();
 	});
-	$("#modalBoxesNew").click(function(){
+	$("#modalBoxesNew").on("click", function(){
 		createOrEditBox();
 	});
 	/* TODO: reduce duplication with changelog updates */
-	$("#modalAboutViewChangelog").click(function(){
+	$("#modalAboutViewChangelog").on("click", function(){
 		var changeList = [];
 		$("#modalChangelog .list-group").html("");
 		var stillToUpdate = true;
@@ -2968,7 +2968,7 @@ $(function(){
 			$(".button-to-top").fadeOut(250);
 		}
 	}
-	$(".button-to-top").click(function(){
+	$(".button-to-top").on("click", function(){
 		document.body.scrollTop = 0;
 		document.documentElement.scrollTop = 0;
 	});
