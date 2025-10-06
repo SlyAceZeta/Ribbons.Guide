@@ -1,5 +1,5 @@
-const CACHE = "2025-10-05-1";
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js");
+const CACHE = "2025-10-06-0";
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/7.3.0/workbox-sw.js");
 self.addEventListener("install", (event) => {
 	self.skipWaiting();
 });

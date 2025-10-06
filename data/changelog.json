@@ -1,4 +1,7 @@
 {
+	"6 October 2025": [
+		"Added help text to explain the Origin Game selection"
+	],
 	"5 October 2025": [
 		"Switched order of changelog entries when showing new entries after multiple updates",
 		"Added a setting to control showing new changelog entries after an update",
