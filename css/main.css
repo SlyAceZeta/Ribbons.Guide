@@ -8,11 +8,6 @@
 	}
 }
 
-/* variables */
-:root {
-	--bs-body-font-family: "Nunito Sans", sans-serif;
-}
-
 /* body */
 body {
 	background-attachment: fixed;
