@@ -364,7 +364,7 @@ function saveBackup(){
 	ele.download = "RibbonBackup.json";
 
 	document.body.appendChild(ele);
-	ele.trigger("click");
+	ele.click();
 	document.body.removeChild(ele);
 }
 

@@ -1,4 +1,7 @@
 {
+	"7 October 2025": [
+		"Fixed issue where attempting to save a local backup wouldn't work (thanks Andeluc and Livole!)"
+	],
 	"6 October 2025": [
 		"Added help text to explain the Origin Game selection"
 	],
