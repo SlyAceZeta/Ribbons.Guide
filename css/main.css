@@ -129,6 +129,9 @@ body {
 	bottom: 20px;
 	display: none;
 }
+.btn-group > .btn:hover {
+	z-index: auto;
+}
 
 /* modals */
 .modal-content {
@@ -279,14 +282,6 @@ label[for="pokemonFormShiny-square"] {
 	background-position: right .75rem center,center right 2rem;
 	background-size: 16px 12px,calc(.75em + .375rem) calc(.75em + .375rem);
 }
-#pokemonFormGender-male:checked + label {
-	background: #248;
-	color: #fff;
-}
-#pokemonFormGender-female:checked + label {
-	background: #824;
-	color: #fff;
-}
 .pokemonFormSelectIcon,
 .filterFormSelectIcon {
 	width: auto;
@@ -433,7 +428,8 @@ a:not(:hover):not(:focus) {
 	width: auto;
 	height: 18px;
 }
-#sectionTrackerButtonRow #switchView img {
+#sectionTrackerButtonRow #switchView img,
+#switchRibbonFormView img {
 	width: auto;
 	height: 22px;
 	filter: var(--rg-icon-filter);

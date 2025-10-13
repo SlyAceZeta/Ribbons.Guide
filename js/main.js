@@ -59,9 +59,9 @@ function changeTheme(t){
 	if(t == "auto"){
 		changeSetting("theme", "auto");
 		if(window.matchMedia("(prefers-color-scheme: dark)").matches){
-			$("html").attr("data-bs-theme", "dark");
+			$("html").attr("data-bs-theme", "lumiosenight");
 		} else {
-			$("html").attr("data-bs-theme", "light");
+			$("html").attr("data-bs-theme", "lumioseday");
 		}
 	} else {
 		changeSetting("theme", t);
