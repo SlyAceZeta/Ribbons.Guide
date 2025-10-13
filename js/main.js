@@ -2186,14 +2186,16 @@ function initRun(){
 		}
 		$("#imageHoldingArea").append($("<img>", { "src": "img/balls/strange.png" }));
 		for(var g in games){
-			// temporary until Legends: Z-A releases
-			if(g !== "plza"){
-				if(games[g].combo || games[g].solo){
+			if(games[g].combo || games[g].solo){
+				// temporary until Z-A HOME support when we add "plza" to pokemon.json
+				if(g == "plza"){
+					$("#filterFormTargetGames").append(new Option(getLanguage(games[g].names) + " (disabled until HOME support)", g)).children(":last").prop("disabled", true);
+				} else {
 					$("#filterFormTargetGames").append(new Option(getLanguage(games[g].names), g));
 				}
-				if(!games[g].combo){
-					$("#pokemonFormCurrentGame, #filterFormCurrentGame").append(new Option(getLanguage(games[g].names), g));
-				}
+			}
+			if(!games[g].combo){
+				$("#pokemonFormCurrentGame, #filterFormCurrentGame").append(new Option(getLanguage(games[g].names), g));
 			}
 		}
 		for(var lang in translations.languages){
@@ -2213,8 +2215,6 @@ function initRun(){
 			$("#settingsLanguage").val(settings.language);
 		}
 		for(var o in origins){
-			// temporary until Legends: Z-A releases
-			if(o == "plza") continue;
 			var optionText;
 			if(o === "none"){
 				optionText = getLanguage(translations.none);
