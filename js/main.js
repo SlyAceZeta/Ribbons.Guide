@@ -1164,7 +1164,7 @@ function ribbonChecklist(){
 						$("#modalRibbonChecklistStatus-text").append(".");
 					}
 				} else {
-					var moveTo = $(".last-chance").first().prev().html().toString();
+					var moveTo = $(".last-chance, .scale-marks").first().prev().html().toString();
 					if(lastChanceGen == Number(getGameData(currentGame, "gen")) && lastChanceGen < 8){
 						$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").html(cardData.name + " can safely move to " + moveTo + " but " + pronounSubject + " cannot leave Gen " + translations.arabicToRoman[lastChanceGen-1] + " yet.");
 					} else if((lastChanceGen == 8 || lastChanceGen == 9) && compatibleGames.includes("plza") && currentGame !== "plza"){
