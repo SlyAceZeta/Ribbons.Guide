@@ -1827,8 +1827,12 @@ function filterPokemon(p, classes, data){
 				break;
 			}
 		} else if(f == "status"){
-			if(activeFilters[f] === "incomplete"){
+			if(activeFilters[f] === "incomplete" || activeFilters[f] === "warning"){
 				if(classes.length !== 1){
+					pass = false;
+					break;
+				}
+				if(activeFilters[f] === "warning" && !data.ribbonWarnings){
 					pass = false;
 					break;
 				}
