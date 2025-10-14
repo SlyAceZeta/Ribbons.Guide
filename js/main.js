@@ -872,10 +872,22 @@ function savePokemon(edit = false){
 	if((newP.ribbons.includes("partner-ribbon") || newP.title == "partner-ribbon") && !newP.trainername){
 		continueForm = false;
 		setFormInvalid("TrainerName", "The Partner Ribbon requires an OT.");
+	} else {
+		setFormValid("TrainerName");
 	}
 	if(getPokemonData(newP.species, "cannotStore") && getGameData(newP.currentgame, "storage", true)){
 		continueForm = false;
 		setFormInvalid("CurrentGame", "This Pokémon cannot be stored in Bank or HOME.");
+	} else if(!getGameData(newP.currentgame, "storage", true) && newP.currentgame !== "plza" && !getPokemonData(newP.species, "games").includes(newP.currentgame)) {
+		// temporary until Z-A HOME support when we add "plza" to pokemon.json
+		if(newP.currentgame == "plza"){
+			setFormValid("CurrentGame");
+		} else {
+			continueForm = false;
+			setFormInvalid("CurrentGame", "This Pokémon cannot go to this game.");
+		}
+	} else {
+		setFormValid("CurrentGame");
 	}
 	if(continueForm){
 		if(edit){
