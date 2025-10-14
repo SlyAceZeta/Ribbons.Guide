@@ -1,5 +1,5 @@
 /* globals */
-var balls, changelog, games, gameOrder = {}, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default";
+var balls, changelog, games, gameOrder = {}, importmap, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default";
 // TODO: add tutorials
 /* clear old local storage properties if still present */
 /* except theme which gets special handling */
@@ -2158,6 +2158,7 @@ function initRun(){
 		$.getJSON("./data/balls.json"),
 		$.getJSON("./data/changelog.json"),
 		$.getJSON("./data/games.json"),
+		$.getJSON("./data/importmap.json"),
 		$.getJSON("./data/origins.json"),
 		$.getJSON("./data/pokemon.json"),
 		$.getJSON("./data/ribbons.json"),
@@ -2166,11 +2167,12 @@ function initRun(){
 		var $errorimg = $("<img>", { "src": "./img/ui/cross.svg", "class": "mb-3" });
 		var $errortext = $("<div>", { "id": "loading-spinner-info-text", "class": "fw-bold", "role": "status" }).text("Data loading error: " + error);
 		$("#loading-spinner-info").html($errorimg).append($errortext);
-	}).done(function(dataBalls, dataChangelog, dataGames, dataOrigins, dataPokemon, dataRibbons, dataTranslations){
+	}).done(function(dataBalls, dataChangelog, dataGames, dataImportMap, dataOrigins, dataPokemon, dataRibbons, dataTranslations){
 		/* set variables */
 		balls = dataBalls[0];
 		changelog = dataChangelog[0];
 		games = dataGames[0];
+		importmap = dataImportMap[0];
 		origins = dataOrigins[0];
 		pokemon = dataPokemon[0];
 		ribbons = dataRibbons[0];
