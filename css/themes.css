@@ -58,9 +58,12 @@ a:not(.btn) {
 /* lumioseday overrides */
 [data-bs-theme="lumioseday"] {
 	--bs-body-bg: #f6f6f6;
+	--bs-color: #000;
 	--bs-border-color: #00435a;
 	--bs-danger-rgb: 174, 14, 83;
 	--bs-alert-color: #fff;
+	--bs-secondary-bg: #d3ebf3;
+	--bs-secondary-color: #000;
 	
 	--rg-card-bg: #e9f5f8;
 	--rg-card-cap-bg: #cde3ec;
