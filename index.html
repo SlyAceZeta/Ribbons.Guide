@@ -34,6 +34,7 @@
 		<script src="js/select2.min.js"></script>
 		<script src="js/sortable.min.js"></script>
 		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/Dropbox-sdk.min.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/select2.min.css">
 		<!-- R.G -->
@@ -128,10 +129,16 @@
 				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 			</div>
 			<div id="sectionTrackerButtonRow" class="d-flex justify-content-between mt-4 px-3">
-				<button id="sectionTrackerButtonAdd" class="btn btn-primary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button">
-					<img src="img/ui/add.svg" alt="Add">
-					<span class="align-middle d-none d-md-inline">Add New Pokémon</span>
-				</button>
+				<div>
+					<button id="sectionTrackerButtonAdd" class="btn btn-primary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button">
+						<img src="img/ui/add.svg" alt="Add">
+						<span class="align-middle d-none d-md-inline">Add New Pokémon</span>
+					</button>
+					<button id="sectionTrackerButtonImport" class="btn btn-secondary py-1 px-2 me-2 lh-1 d-none" type="button">
+						<img src="img/ui/import.svg" alt="Import" style="height:26px;">
+						<span class="align-middle d-none">Import</span>
+					</button>
+				</div>
 				<div class="d-flex">
 					<div id="switchView" class="btn-group me-2" role="group" aria-label="Switch view">
 						<input type="radio" class="btn-check" name="switchViewBtn" id="switchViewBtn-condensed" value="condensed">
@@ -663,6 +670,25 @@
 				</div>
 			</div>
 		</div>
+		<!-- Import Pokémon Modal -->
+		<div class="modal fade" id="modalImport" tabindex="-1" aria-labelledby="modalImportLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalImportLabel">Import Pokémon</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<button type="button" class="btn btn-primary btn-sm" id="modalImportButton">Select Files</button>
+						<input type="file" id="modalImportFiles" accept=".pk9,.pa8,.pk8,.pb8,.pk7,.pk6" hidden multiple>
+						<div id="modalImportPokemonList"></div>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- Settings Modal -->
 		<div class="modal fade" id="modalSettings" tabindex="-1" aria-labelledby="modalSettingsLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
@@ -869,6 +895,20 @@
 							<button type="button" class="btn btn-outline-primary btn-sm ms-1" id="modalDataLoadBackupButton">Restore Backup File</button>
 						</div>
 						<input type="file" id="modalDataLoadBackupFile" accept="application/json,text/plain" hidden>
+						<div id="dropboxTest" class="d-none">
+							<hr>
+							<p id="modalDataOnline" class="fw-bold">Online Backup (Dropbox)</p>
+							<a href="" role="button" class="btn btn-primary btn-sm d-none" id="modalDataOnlineLogin">Login to Dropbox</a>
+							<div id="modalDataOnlineLoggedIn" class="btn-group d-none" role="group" aria-labelledby="modalDataOnline">
+								<button type="button" class="btn btn-primary btn-sm" id="modalDataOnlineSave">Upload to Dropbox</button>
+								<button type="button" class="btn btn-outline-primary btn-sm mx-1" id="modalDataOnlineLoad">Download from Dropbox</button>
+								<button type="button" class="btn btn-danger btn-sm" id="modalDataOnlineLogout">Logout</button>
+							</div>
+							<div id="modalDataOnlineError" class="d-none" aria-label="Dropbox error">
+								<p>Error: <span id="modalDataOnlineErrorText"></span></p>
+								<button type="button" class="btn btn-danger btn-sm" id="modalDataOnlineLogout">Logout</button>
+							</div>
+						</div>
 					</div>
 					<div class="modal-footer justify-content-center">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>

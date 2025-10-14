@@ -249,6 +249,118 @@ for(let i in toggles){
 	}
 }
 
+/* Dropbox */
+(function (window) {
+	window.utils = {
+		parseQueryString(str) {
+			const ret = Object.create(null);
+			
+			if (typeof str !== 'string') {
+				return ret;
+			}
+			
+			str = str.trim().replace(/^(\?|#|&)/, '');
+			
+			if (!str) {
+				return ret;
+			}
+			
+			str.split('&').forEach((param) => {
+				const parts = param.replace(/\+/g, ' ').split('=');
+				// Firefox (pre 40) decodes `%3D` to `=`
+				// https://github.com/sindresorhus/query-string/pull/37
+				let key = parts.shift();
+				let val = parts.length > 0 ? parts.join('=') : undefined;
+				
+				key = decodeURIComponent(key);
+				
+				// missing `=` should be `null`:
+				// http://w3.org/TR/2012/WD-url-20120524/#collect-url-parameters
+				val = val === undefined ? null : decodeURIComponent(val);
+				
+				if (ret[key] === undefined) {
+					ret[key] = val;
+				} else if (Array.isArray(ret[key])) {
+					ret[key].push(val);
+				} else {
+					ret[key] = [ret[key], val];
+				}
+			});
+			
+			return ret;
+		},
+	};
+}(window));
+
+var DROPBOX_CLIENT_ID = 'xxvozybw2lp9ycy';
+// Parses the url and gets the access token if it is in the urls hash
+function getDropboxTokenFromUrl() {
+	return utils.parseQueryString(window.location.hash).access_token;
+}
+function setDropboxTokenToLocalStorage(t) {
+	localStorage.DropboxToken = t;
+}
+function getDropboxTokenFromLocalStorage() {
+	return localStorage.DropboxToken;
+}
+function getDropboxToken() {
+	var DropboxToken = getDropboxTokenFromUrl();
+	if(DropboxToken){
+		return DropboxToken;
+	} else {
+		return getDropboxTokenFromLocalStorage();
+	}
+}
+// If the user was just redirected from authenticating, the urls hash will
+// contain the access token.
+function isAuthenticatedDropbox() {
+	return !!getDropboxToken();
+}
+// Render a list of items to #files
+/*function renderItems(items) {
+	var filesContainer = document.getElementById('files');
+	items.forEach(function(item) {
+		var li = document.createElement('li');
+		li.innerHTML = item.name;
+		filesContainer.appendChild(li);
+	});
+}*/
+$(function(){
+	if(localStorage.dropboxTest){
+		$("#dropboxTest").removeClass("d-none");
+		if (isAuthenticatedDropbox()) {
+			var DropboxToken = getDropboxTokenFromLocalStorage();
+			if(!DropboxToken){
+				DropboxToken = getDropboxTokenFromUrl();
+				setDropboxTokenToLocalStorage(DropboxToken);
+			}
+			
+			// Create an instance of Dropbox with the access token and use it to
+			// fetch and render the files in the users root directory.
+			var dbx = new Dropbox.Dropbox({ accessToken: DropboxToken });
+			dbx.filesListFolder({path: ''})
+			.then(function(response) {
+				$('#modalDataOnlineLoggedIn').removeClass("d-none");
+				//renderItems(response.result.entries);
+			})
+			.catch(function(error) {
+				console.error(error?.error || error);
+				$("#modalDataOnlineErrorText").text(error?.error?.error_summary || error?.error || error);
+				$("#modalDataOnlineError").removeClass("d-none");
+			});
+		} else {
+			$('#modalDataOnlineLogin').removeClass("d-none");
+			
+			// Set the login anchors href using dbx.getAuthenticationUrl()
+			var dbx = new Dropbox.Dropbox({ clientId: DROPBOX_CLIENT_ID });
+			var dbxAuthUrl = dbx.auth.getAuthenticationUrl('http://127.0.0.1:3000')
+			.then((dbxAuthUrl) => {
+				document.getElementById('modalDataOnlineLogin').href = dbxAuthUrl;
+			})
+		}
+	}
+});
+
 /* April Fools */
 var aprilFools = false;
 var todayDate = new Date();
@@ -431,6 +543,256 @@ function loadBackup(file, filename){
 		}
 	}
 	reader.readAsText(file);
+}
+
+/* import Pokémon files */
+/* massive credit to https://github.com/PSWiFi/PSWiFi.github.io/tree/master/misc/pkparse */
+function getStringFromBuffer(data) {
+	var res = "";
+	for (var i = 0; i < 26; i += 2) {
+		var char = data.getUint16(i, true);
+		if (char == 0) break;
+		res += String.fromCharCode(char);
+	}
+	return res;
+}
+
+var gen9First = 917;
+var gen9Table = [
+  65, -1, -1, -1, -1, 31, 31, 47, 47, 29, 29, 53, 31, 31, 46, 44, 30, 30, -7,
+  -7, -7, 13, 13, -2, -2, 23, 23, 24, -21, -21, 27, 27, 47, 47, 47, 26, 14, -33,
+  -33, -33, -17, -17, 3, -29, 12, -12, -31, -31, -31, 3, 3, -24, -24, -44, -44,
+  -30, -30, -28, -28, 23, 23, 6, 7, 29, 8, 3, 4, 4, 20, 4, 23, 6, 3, 3, 4, -1,
+  13, 9, 7, 5, 7, 9, 9, -43, -43, -43, -68, -68, -68, -58, -58, -25, -29, -31,
+  6, -1, 6, 0, 0, 0, 3, 3, 4, 2, 3, 3, -5, -12, -12,
+];
+function getSpecies9(id) {
+	return importmap.species[getNational9(id)];
+}
+function getNational9(raw) {
+	if (raw < gen9First) return raw;
+	return raw + gen9Table[raw - gen9First];
+}
+
+function importFiles(files, delay = 150, i = 0){
+	if(i >= files.length){ return; }
+	
+	var file = files[i];
+	var filename = file.name;
+	var ext = filename.substring(filename.lastIndexOf("."));
+	
+	var speciesloc, idsloc, gmaxloc, pidloc, natureloc, fatefulloc, genderloc, formloc, nicknameloc, ogloc, formargloc, otloc, ballloc, gen;
+	
+	switch(ext){
+		case ".pk9": // SV
+			if (file.size != 344) return alert("Incorrect file size!\nExpected: 344\nGot: " + file.size);
+			speciesloc = 0x08;
+			idsloc = 0x0c;
+			pidloc = 0x1c;
+			natureloc = 0x20;
+			fatefulloc = 0x22;
+			genderloc = 0x22;
+			formloc = 0x24;
+			nicknameloc = 0x58;
+			ogloc = 0xce;
+			formargloc = 0xd0;
+			otloc = 0xf8;
+			ballloc = 0x124;
+			gen = 9;
+			break;
+			
+		case ".pa8": // PLA
+			if (file.size != 376) return alert("Incorrect file size!\nExpected: 376\nGot: " + file.size);
+			speciesloc = 0x08;
+			idsloc = 0x0c;
+			pidloc = 0x1c;
+			natureloc = 0x20;
+			fatefulloc = 0x22;
+			genderloc = 0x22;
+			formloc = 0x24;
+			nicknameloc = 0x60;
+			ogloc = 0xee;
+			formargloc = 0xf4;
+			otloc = 0x110;
+			ballloc = 0x137;
+			gen = 8;
+			break;
+			
+		case ".pk8": // SwSh
+		case ".pb8": // BDSP
+			if(file.size != 344) return alert("Incorrect file size!\nExpected: 344\nGot: " + file.size);
+			speciesloc = 0x08;
+			idsloc = 0x0c;
+			gmaxloc = 0x16;
+			pidloc = 0x1c;
+			natureloc = 0x20;
+			fatefulloc = 0x22;
+			genderloc = 0x22;
+			formloc = 0x24;
+			nicknameloc = 0x58;
+			ogloc = 0xde;
+			formargloc = 0xe4;
+			otloc = 0xf8;
+			ballloc = 0x124;
+			gen = 8;
+			break;
+			
+		case ".pk7": // SM/USUM
+			if (file.size != 206) return alert("Incorrect file size!\nExpected: 206\nGot: " + file.size);
+			speciesloc = 0x08;
+			idsloc = 0x0c;
+			pidloc = 0x18;
+			natureloc = 0x1c;
+			fatefulloc = 0x1d;
+			genderloc = 0x1d;
+			formloc = 0x1d;
+			formargloc = 0x3c;
+			nicknameloc = 0x40;
+			otloc = 0xb0;
+			ballloc = 0xdc;
+			ogloc = 0xdf;
+			gen = 7;
+			break;
+			
+		case ".pk6": // XY/ORAS
+			if (file.size != 206) return alert("Incorrect file size!\nExpected: 206\nGot: " + file.size);
+			speciesloc = 0x08;
+			idsloc = 0x0c;
+			pidloc = 0x18;
+			natureloc = 0x1c;
+			fatefulloc = 0x1d;
+			genderloc = 0x1d;
+			formloc = 0x1d;
+			formargloc = 0x3c;
+			nicknameloc = 0x40;
+			otloc = 0xb0;
+			ballloc = 0xdc;
+			ogloc = 0xdf;
+			gen = 6;
+			break;
+			
+		default:
+			return alert("Unsupported file type provided: " + filename);
+	}
+	
+	file.arrayBuffer().then((buf) => {
+		var newP = {
+			//species:		DONE
+			//gender:		DONE
+			//shiny:		DONE
+			//nickname:		DONE
+			//language:
+			//ball:			DONE
+			//strangeball:	DONE
+			//currentlevel:
+			//nature:		DONE
+			//totem:		DONE
+			//gmax:			DONE
+			//shadow:
+			//trainername:	DONE
+			//trainerid:	DONE
+			//originmark:	DONE
+			//origingame:	DONE
+			//currentgame:	LET USER SELECT
+			//box:			DONE
+			//title:
+			//scale:		DONE
+			//ribbons:
+			//metlevel:
+			//metdate:
+			//metlocation:
+			//pokerus:
+			//achievements: DONE
+			//notes:		DONE
+		};
+		
+		var data = new DataView(buf);
+		var devid = data.getUint16(speciesloc, true);
+		var species = gen === 9 ? getSpecies9(devid) : importmap.species[devid];
+		var formdata = data.getUint8(formloc);
+		var formval = gen <= 7 ? formdata >>> 3 : formdata;
+		var form =
+			formval > 0 || devid === 666 || devid === 774 // Vivillon and Minior need special handling because of course they do
+			? importmap.forms[String(getNational9(devid))][formval].replace(species, "")
+			: "";
+		var formarg = data.getUint32(formargloc, true);
+		if (devid === 869) form += importmap["alcremie-sweets"][formarg]; // Special handling for Alcremie Sweets
+		var totem = false;
+		if(form == "-totem"){
+			totem = true;
+			form = "";
+		}
+		newP.species = species + form;
+		
+		var genderID = (data.getUint8(genderloc) >>> (gen === 8 ? 2 : 1)) & 0x3;
+		if(genderID == 0){
+			newP.gender = "male";
+		} else if(genderID == 1){
+			newP.gender = "female";
+		} else {
+			newP.gender = "unknown";
+		}
+		
+		var ogval = data.getUint8(ogloc);
+		var pid = data.getUint32(pidloc, true);
+		var ids = data.getUint32(idsloc, true);
+		var tid5 = ids & 0xffff;
+		var sid5 = ids >>> 16;
+		var fullid = sid5 * 65536 + tid5;
+		var tid7 = fullid % 1000000;
+		var sid7 = ~~(fullid / 1000000);
+		var tid =
+			(ogval >= 30 && ogval <= 34) || ogval >= 42 // Exclude VC
+			? tid7.toString().padStart(6, "0")
+			: tid5.toString().padStart(5, "0");
+		var fateful = (data.getUint8(fatefulloc) & 1) === 1;
+		var shinyxor = (pid >>> 16) ^ (pid & 0xffff) ^ tid5 ^ sid5;
+		newP.shiny =
+			(shinyxor < 16 && fateful) || shinyxor === 0
+			? "square"
+			: shinyxor < 16
+			? "star"
+			: "";
+			
+		var nickarrbuf = buf.slice(nicknameloc, nicknameloc + 26);
+		var nickname = getStringFromBuffer(new DataView(nickarrbuf));
+		// TODO: remove nickname if it equates to the Pokémon species name in the Pokémon's language
+		newP.nickname = nickname;
+		
+		newP.ball = importmap.balls[data.getUint8(ballloc)];
+		newP.strangeball = "";
+		
+		newP.nature = importmap.natures[data.getUint8(natureloc)];
+		
+		newP.totem = totem;
+		newP.gmax = gmaxloc ? (data.getUint8(gmaxloc) & 16) !== 0 : false;
+		
+		var otarrbuf = buf.slice(otloc, otloc + 26);
+		newP.trainername = getStringFromBuffer(new DataView(otarrbuf));
+		newP.trainerid = tid;
+		
+		if(importmap.originmarks[ogval]){
+			newP.originmark = importmap.originmarks[ogval];
+		}
+		if(importmap.origingames[ogval]){
+			newP.origingame = importmap.origingames[ogval];
+		} else {
+			newP.origingame = "";
+		}
+		newP.currentgame = "";
+		newP.box = -1;
+		newP.scale = false;
+		newP.achievements = [];
+		newP.notes = "";
+		
+		$("#modalImportPokemonList").append("<div class='my-1 py-1 border-top text-break'>" + JSON.stringify(newP) + "</div>");
+	});
+	
+	i++;
+	
+	setTimeout(() => {
+		importFiles(files, delay, i);
+    }, delay);
 }
 
 function getGameData(game, field, doNotSearch = false){
@@ -2851,6 +3213,7 @@ $(function(){
 	/* set modals */
 	modalSettings = new bootstrap.Modal("#modalSettings");
 	modalData = new bootstrap.Modal("#modalData");
+	modalImport = new bootstrap.Modal("#modalImport");
 	/* dropdown listeners */
 	$("#settingsTheme").on("change", function(){
 		changeTheme($(this).val());
@@ -2926,6 +3289,19 @@ $(function(){
 	$("#sectionTrackerButtonAdd").on("click", function(){
 		resetPokemonForm();
 		modalPokemonForm.toggle();
+	});
+	if(localStorage.importTest){
+		$("#sectionTrackerButtonImport").removeClass("d-none");
+	}
+	$("#sectionTrackerButtonImport").on("click", function(){
+		modalImport.toggle();
+	});
+	$("#modalImportButton").on("click", function(){
+		$("#modalImportFiles").trigger("click");
+	});
+	$("#modalImportFiles").on("change", function(){
+		var files = $(this)[0].files;
+		if(files && files.length) importFiles(files);
 	});
 	$("#modalPokemonFormSave").on("click", function(){
 		savePokemon(modalPokemonState === "editing");
