@@ -1,4 +1,16 @@
 {
+	"15 October 2025": [
+		"Note on spoilers: Any updates with new forms or Pokémon will be obfuscated like this ##### until November 1; no new content is being added in this update",
+		"The Legends Z-A mark can now be selected as a Pokémon's Origin Mark",
+		"Legends Z-A can now be selected as a Pokémon's Origin Game and Current Game",
+		"Not one, not two, but <em>three</em> new themes have been added! Lumiose Day and Lumiose Night are based on the official Legends Z-A website, while Power Construct is based on our favorite Kalos defender and with thanks to Anna and Tropical_Fluff for inspiration",
+		"Automatic theme switching will now switch between Lumiose Day and Lumiose Night instead of Simple Light and Simple Dark",
+		"Pokémon list can now be filtered to only show Pokémon with active warnings",
+		"Pokémon can no longer be saved with their Current Game set to a game they definitely cannot travel to; this is slightly forgiving and does not account for every possibility",
+		"Fixed issue where Ribbon Checklist would fail to load if a Pokémon had all Ribbons and Marks it could earn but did not yet check its size in Mesagoza",
+		"Fixed issue where resolving the add/edit form errors of a missing OT for the Partner Ribbon or a species not being storable in Bank or HOME did not actually resolve the form error",
+		"Fixed issue where mobile menu in Intrepid Sword and Dauntless Shield themes was not readable"
+	],
 	"7 October 2025": [
 		"Fixed issue where attempting to save a local backup wouldn't work (thanks Andeluc and Livole!)"
 	],
