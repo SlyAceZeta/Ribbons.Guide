@@ -867,7 +867,11 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	} else if(currentGame == "go"){
 		currentGen = 8;
 	}
-	var compatibleGames = getPokemonData(dex, "games");
+	var compatibleGames = [];
+	var getCompatibleGames = getPokemonData(dex, "games");
+	for(var g in getCompatibleGames){
+		compatibleGames.push(getCompatibleGames[g]);
+	}
 	// temporary until Z-A HOME support when we add "plza" to pokemon.json
 	if(currentGame == "plza") compatibleGames.push("plza");
 	var mythical = getPokemonData(dex, "mythical");
@@ -1240,10 +1244,15 @@ function savePokemon(edit = false){
 	if(getPokemonData(newP.species, "cannotStore") && getGameData(newP.currentgame, "storage", true)){
 		continueForm = false;
 		setFormInvalid("CurrentGame", "This Pokémon cannot be stored in Bank or HOME.");
-	} else if(!getGameData(newP.currentgame, "storage", true) && newP.currentgame !== "plza" && !getPokemonData(newP.species, "games").includes(newP.currentgame)) {
+	} else if(!getGameData(newP.currentgame, "storage", true) && !getPokemonData(newP.species, "games").includes(newP.currentgame)) {
 		// temporary until Z-A HOME support when we add "plza" to pokemon.json
 		if(newP.currentgame == "plza"){
-			setFormValid("CurrentGame");
+			if(newP.originmark == "plza"){
+				setFormValid("CurrentGame");
+			} else {
+				continueForm = false;
+				setFormInvalid("CurrentGame", "HOME does not yet support Z-A.");
+			}
 		} else {
 			continueForm = false;
 			setFormInvalid("CurrentGame", "This Pokémon cannot go to this game.");
@@ -1595,7 +1604,11 @@ function createCard(p, id){
 	if(displayName.length === 0){
 		displayName = getLanguage(getPokemonData(p.species, "names"), p.language);
 	}
-	var compatibleGames = getPokemonData(p.species, "games");
+	var compatibleGames = [];
+	var getCompatibleGames = getPokemonData(p.species, "games");
+	for(var g in getCompatibleGames){
+		compatibleGames.push(getCompatibleGames[g]);
+	}
 	// temporary until Z-A HOME support when we add "plza" to pokemon.json
 	if(p.currentgame == "plza") compatibleGames.push("plza");
 	var compatibleFiltered = [];
