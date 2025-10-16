@@ -1241,21 +1241,25 @@ function savePokemon(edit = false){
 	} else {
 		setFormValid("TrainerName");
 	}
-	if(getPokemonData(newP.species, "cannotStore") && getGameData(newP.currentgame, "storage", true)){
-		continueForm = false;
-		setFormInvalid("CurrentGame", "This Pokémon cannot be stored in Bank or HOME.");
-	} else if(!getGameData(newP.currentgame, "storage", true) && !getPokemonData(newP.species, "games").includes(newP.currentgame)) {
-		// temporary until Z-A HOME support when we add "plza" to pokemon.json
-		if(newP.currentgame == "plza"){
-			if(newP.originmark == "plza"){
-				setFormValid("CurrentGame");
+	if(newP.currentgame){
+		if(getPokemonData(newP.species, "cannotStore") && getGameData(newP.currentgame, "storage", true)){
+			continueForm = false;
+			setFormInvalid("CurrentGame", "This Pokémon cannot be stored in Bank or HOME.");
+		} else if(!getGameData(newP.currentgame, "storage", true) && !getPokemonData(newP.species, "games").includes(newP.currentgame)) {
+			// temporary until Z-A HOME support when we add "plza" to pokemon.json
+			if(newP.currentgame == "plza"){
+				if(newP.originmark == "plza"){
+					setFormValid("CurrentGame");
+				} else {
+					continueForm = false;
+					setFormInvalid("CurrentGame", "HOME does not yet support Z-A.");
+				}
 			} else {
 				continueForm = false;
-				setFormInvalid("CurrentGame", "HOME does not yet support Z-A.");
+				setFormInvalid("CurrentGame", "This Pokémon cannot go to this game.");
 			}
 		} else {
-			continueForm = false;
-			setFormInvalid("CurrentGame", "This Pokémon cannot go to this game.");
+			setFormValid("CurrentGame");
 		}
 	} else {
 		setFormValid("CurrentGame");
@@ -1276,6 +1280,7 @@ function savePokemon(edit = false){
 		modalPokemonForm.toggle();
 	} else {
 		$("#pokemonFormTabs-details").trigger("click");
+		modalPokemonState = edit ? "editing" : "default";
 	}
 }
 
