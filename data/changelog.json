@@ -1,4 +1,9 @@
 {
+	"16 October 2025": [
+		"Improved new themes (Lumiose Day, Lumiose Night, and Power Construct) with background imagesLoaded",
+		"Fixed issue where saving an edit to a Pokémon after encountering an error would duplicate the Pokémon",
+		"Fixed issue where Pokémon could not be saved if the Current Game was not set"
+	],
 	"15 October 2025": [
 		"Note on spoilers: Any updates with new forms or Pokémon will be obfuscated like this ##### until November 1; no new content is being added in this update",
 		"The Legends Z-A mark can now be selected as a Pokémon's Origin Mark",
