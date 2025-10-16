@@ -1,6 +1,6 @@
 {
 	"16 October 2025": [
-		"Improved new themes (Lumiose Day, Lumiose Night, and Power Construct) with background imagesLoaded",
+		"Improved new themes (Lumiose Day, Lumiose Night, and Power Construct) with background images",
 		"Fixed issue where saving an edit to a Pokémon after encountering an error would duplicate the Pokémon",
 		"Fixed issue where Pokémon could not be saved if the Current Game was not set"
 	],
