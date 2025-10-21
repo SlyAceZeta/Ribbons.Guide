@@ -32700,6 +32700,27 @@
 			"zh-Hant": "黃花"
 		}
 	},
+	"floette-eternal": {
+		"data-source": "floette",
+		"forms": {
+			"en": "Eternal Flower",
+			"es-es": "Flor Eterna",
+			"fr": "Fleur Éternelle",
+			"de": "Ewigblütler",
+			"it": "Fiore Eterno",
+			"ja": "えいえんのはな",
+			"ko": "영원의 꽃",
+			"zh-Hans": "永恒之花",
+			"zh-Hant": "永恆之花"
+		},
+		"games": [
+			"plza"
+		],
+		"evolvesFrom": null,
+		"flags": [
+			"shinyLocked"
+		]
+	},
 	"florges": {
 		"names": {
 			"en": "Florges",
@@ -34058,7 +34079,7 @@
 			"zh-Hant": "南瓜精"
 		},
 		"forms": {
-			"en": "Average Size",
+			"en": "Medium Variety (Average)",
 			"es-es": "Tamaño Normal",
 			"fr": "Taille Normale",
 			"de": "Größe M",
@@ -34087,7 +34108,7 @@
 	"pumpkaboo-large": {
 		"data-source": "pumpkaboo",
 		"forms": {
-			"en": "Large Size",
+			"en": "Large Variety",
 			"es-es": "Tamaño Grande",
 			"fr": "Taille Maxi",
 			"de": "Größe L",
@@ -34102,7 +34123,7 @@
 	"pumpkaboo-small": {
 		"data-source": "pumpkaboo",
 		"forms": {
-			"en": "Small Size",
+			"en": "Small Variety",
 			"es-es": "Tamaño Pequeño",
 			"fr": "Taille Mini",
 			"de": "Größe S",
@@ -34117,7 +34138,7 @@
 	"pumpkaboo-super": {
 		"data-source": "pumpkaboo",
 		"forms": {
-			"en": "Super Size",
+			"en": "Jumbo Variety (Super)",
 			"es-es": "Tamaño Extragrande",
 			"fr": "Taille Ultra",
 			"de": "Größe XL",
@@ -34142,7 +34163,7 @@
 			"zh-Hant": "南瓜怪人"
 		},
 		"forms": {
-			"en": "Average Size",
+			"en": "Medium Variety (Average)",
 			"es-es": "Tamaño Normal",
 			"fr": "Taille Normale",
 			"de": "Größe M",
@@ -34172,7 +34193,7 @@
 	"gourgeist-large": {
 		"data-source": "gourgeist",
 		"forms": {
-			"en": "Large Size",
+			"en": "Large Variety",
 			"es-es": "Tamaño Grande",
 			"fr": "Taille Maxi",
 			"de": "Größe L",
@@ -34187,7 +34208,7 @@
 	"gourgeist-small": {
 		"data-source": "gourgeist",
 		"forms": {
-			"en": "Small Size",
+			"en": "Small Variety",
 			"es-es": "Tamaño Pequeño",
 			"fr": "Taille Mini",
 			"de": "Größe S",
@@ -34202,7 +34223,7 @@
 	"gourgeist-super": {
 		"data-source": "gourgeist",
 		"forms": {
-			"en": "Super Size",
+			"en": "Jumbo Variety (Super)",
 			"es-es": "Tamaño Extragrande",
 			"fr": "Taille Ultra",
 			"de": "Größe XL",
