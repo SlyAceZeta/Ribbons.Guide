@@ -32547,7 +32547,8 @@
 			"moon",
 			"scar",
 			"vio"
-		]
+		],
+		"sort": 1
 	},
 	"flabebe-blue": {
 		"data-source": "flabebe",
@@ -32561,7 +32562,8 @@
 			"ko": "파란 꽃",
 			"zh-Hans": "蓝花",
 			"zh-Hant": "藍花"
-		}
+		},
+		"sort": 4
 	},
 	"flabebe-orange": {
 		"data-source": "flabebe",
@@ -32575,7 +32577,8 @@
 			"ko": "오렌지색 꽃",
 			"zh-Hans": "橙花",
 			"zh-Hant": "橙花"
-		}
+		},
+		"sort": 3
 	},
 	"flabebe-white": {
 		"data-source": "flabebe",
@@ -32589,7 +32592,8 @@
 			"ko": "하얀 꽃",
 			"zh-Hans": "白花",
 			"zh-Hant": "白花"
-		}
+		},
+		"sort": 5
 	},
 	"flabebe-yellow": {
 		"data-source": "flabebe",
@@ -32603,7 +32607,8 @@
 			"ko": "노란 꽃",
 			"zh-Hans": "黄花",
 			"zh-Hant": "黃花"
-		}
+		},
+		"sort": 2
 	},
 	"floette": {
 		"names": {
@@ -32642,7 +32647,8 @@
 			"scar",
 			"vio"
 		],
-		"evolvesFrom": "flabebe"
+		"evolvesFrom": "flabebe",
+		"sort": 1
 	},
 	"floette-blue": {
 		"data-source": "floette",
@@ -32656,7 +32662,8 @@
 			"ko": "파란 꽃",
 			"zh-Hans": "蓝花",
 			"zh-Hant": "藍花"
-		}
+		},
+		"sort": 4
 	},
 	"floette-orange": {
 		"data-source": "floette",
@@ -32670,7 +32677,8 @@
 			"ko": "오렌지색 꽃",
 			"zh-Hans": "橙花",
 			"zh-Hant": "橙花"
-		}
+		},
+		"sort": 3
 	},
 	"floette-white": {
 		"data-source": "floette",
@@ -32684,7 +32692,8 @@
 			"ko": "하얀 꽃",
 			"zh-Hans": "白花",
 			"zh-Hant": "白花"
-		}
+		},
+		"sort": 5
 	},
 	"floette-yellow": {
 		"data-source": "floette",
@@ -32698,7 +32707,8 @@
 			"ko": "노란 꽃",
 			"zh-Hans": "黄花",
 			"zh-Hant": "黃花"
-		}
+		},
+		"sort": 2
 	},
 	"floette-eternal": {
 		"data-source": "floette",
@@ -32719,7 +32729,8 @@
 		"evolvesFrom": null,
 		"flags": [
 			"shinyLocked"
-		]
+		],
+		"sort": 6
 	},
 	"florges": {
 		"names": {
@@ -32758,7 +32769,8 @@
 			"scar",
 			"vio"
 		],
-		"evolvesFrom": "floette"
+		"evolvesFrom": "floette",
+		"sort": 1
 	},
 	"florges-blue": {
 		"data-source": "florges",
@@ -32772,7 +32784,8 @@
 			"ko": "파란 꽃",
 			"zh-Hans": "蓝花",
 			"zh-Hant": "藍花"
-		}
+		},
+		"sort": 4
 	},
 	"florges-orange": {
 		"data-source": "florges",
@@ -32786,7 +32799,8 @@
 			"ko": "오렌지색 꽃",
 			"zh-Hans": "橙花",
 			"zh-Hant": "橙花"
-		}
+		},
+		"sort": 3
 	},
 	"florges-white": {
 		"data-source": "florges",
@@ -32800,7 +32814,8 @@
 			"ko": "하얀 꽃",
 			"zh-Hans": "白花",
 			"zh-Hant": "白花"
-		}
+		},
+		"sort": 5
 	},
 	"florges-yellow": {
 		"data-source": "florges",
@@ -32814,7 +32829,8 @@
 			"ko": "노란 꽃",
 			"zh-Hans": "黄花",
 			"zh-Hant": "黃花"
-		}
+		},
+		"sort": 2
 	},
 	"skiddo": {
 		"names": {
