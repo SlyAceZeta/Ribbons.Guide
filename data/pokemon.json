@@ -8343,6 +8343,7 @@
 		"forms": {
 			"en": "Blaze Breed",
 			"es-es": "Variedad Ardiente",
+			"es-419": "Variedad Abrasadora",
 			"fr": "Race Flamboyante",
 			"de": "Flammenvariante",
 			"it": "Varietà Infuocata",
@@ -25623,6 +25624,7 @@
 		"forms": {
 			"en": "Mow Rotom",
 			"es-es": "Rotom Corte",
+			"es-419": "Rotom Podadora",
 			"fr": "Motisma Tonte",
 			"de": "Schneid-Rotom",
 			"it": "Rotom Taglio",
@@ -32359,6 +32361,7 @@
 		"forms": {
 			"en": "Poké Ball Pattern",
 			"es-es": "Motivo Poké Ball",
+			"es-419": "Motivo Pokébola",
 			"fr": "Motif Poké Ball",
 			"de": "Pokéball-Muster",
 			"it": "Motivo Poké Ball",
@@ -34095,15 +34098,15 @@
 			"zh-Hant": "南瓜精"
 		},
 		"forms": {
-			"en": "Medium Variety (Average)",
-			"es-es": "Tamaño Normal",
-			"fr": "Taille Normale",
-			"de": "Größe M",
-			"it": "Normale",
-			"ja": "ふつうのサイズ",
-			"ko": "보통 사이즈",
-			"zh-Hans": "普通尺寸",
-			"zh-Hant": "普通尺寸"
+			"en": "Medium Variety",
+			"es-es": "Variante Mediana",
+			"fr": "Variété Moyenne",
+			"de": "Mittelgroße Sorte",
+			"it": "Varietà Media",
+			"ja": "ちゅうだましゅ",
+			"ko": "중과종",
+			"zh-Hans": "中颗种",
+			"zh-Hant": "中顆種"
 		},
 		"gender": "both",
 		"natdex": 710,
@@ -34125,14 +34128,14 @@
 		"data-source": "pumpkaboo",
 		"forms": {
 			"en": "Large Variety",
-			"es-es": "Tamaño Grande",
-			"fr": "Taille Maxi",
-			"de": "Größe L",
-			"it": "Grande",
-			"ja": "おおきいサイズ",
-			"ko": "큰 사이즈",
-			"zh-Hans": "大尺寸",
-			"zh-Hant": "大尺寸"
+			"es-es": "Variante Grande",
+			"fr": "Variété Grande",
+			"de": "Große Sorte",
+			"it": "Varietà Grande",
+			"ja": "おおだましゅ",
+			"ko": "대과종",
+			"zh-Hans": "大颗种",
+			"zh-Hant": "大顆種"
 		},
 		"sort": 3
 	},
@@ -34140,29 +34143,29 @@
 		"data-source": "pumpkaboo",
 		"forms": {
 			"en": "Small Variety",
-			"es-es": "Tamaño Pequeño",
-			"fr": "Taille Mini",
-			"de": "Größe S",
-			"it": "Mini",
-			"ja": "ちいさいサイズ",
-			"ko": "작은 사이즈",
-			"zh-Hans": "小尺寸",
-			"zh-Hant": "小尺寸"
+			"es-es": "Variante Pequeña",
+			"fr": "Variété Petite",
+			"de": "Kleine Sorte",
+			"it": "Varietà Piccola",
+			"ja": "こだましゅ",
+			"ko": "소과종",
+			"zh-Hans": "小颗种",
+			"zh-Hant": "小顆種"
 		},
 		"sort": 1
 	},
 	"pumpkaboo-super": {
 		"data-source": "pumpkaboo",
 		"forms": {
-			"en": "Jumbo Variety (Super)",
-			"es-es": "Tamaño Extragrande",
-			"fr": "Taille Ultra",
-			"de": "Größe XL",
-			"it": "Maxi",
-			"ja": "とくだいサイズ",
-			"ko": "특대 사이즈",
-			"zh-Hans": "特大尺寸",
-			"zh-Hant": "特大尺寸"
+			"en": "Jumbo Variety",
+			"es-es": "Variante Enorme",
+			"fr": "Variété Giga",
+			"de": "Extragroße Sorte",
+			"it": "Varietà Gigante",
+			"ja": "ギガだましゅ",
+			"ko": "특대과종",
+			"zh-Hans": "巨颗种",
+			"zh-Hant": "巨顆種"
 		},
 		"sort": 4
 	},
@@ -34179,15 +34182,15 @@
 			"zh-Hant": "南瓜怪人"
 		},
 		"forms": {
-			"en": "Medium Variety (Average)",
-			"es-es": "Tamaño Normal",
-			"fr": "Taille Normale",
-			"de": "Größe M",
-			"it": "Normale",
-			"ja": "ふつうのサイズ",
-			"ko": "보통 사이즈",
-			"zh-Hans": "普通尺寸",
-			"zh-Hant": "普通尺寸"
+			"en": "Medium Variety",
+			"es-es": "Variante Mediana",
+			"fr": "Variété Moyenne",
+			"de": "Mittelgroße Sorte",
+			"it": "Varietà Media",
+			"ja": "ちゅうだましゅ",
+			"ko": "중과종",
+			"zh-Hans": "中颗种",
+			"zh-Hant": "中顆種"
 		},
 		"gender": "both",
 		"natdex": 711,
@@ -34210,14 +34213,14 @@
 		"data-source": "gourgeist",
 		"forms": {
 			"en": "Large Variety",
-			"es-es": "Tamaño Grande",
-			"fr": "Taille Maxi",
-			"de": "Größe L",
-			"it": "Grande",
-			"ja": "おおきいサイズ",
-			"ko": "큰 사이즈",
-			"zh-Hans": "大尺寸",
-			"zh-Hant": "大尺寸"
+			"es-es": "Variante Grande",
+			"fr": "Variété Grande",
+			"de": "Große Sorte",
+			"it": "Varietà Grande",
+			"ja": "おおだましゅ",
+			"ko": "대과종",
+			"zh-Hans": "大颗种",
+			"zh-Hant": "大顆種"
 		},
 		"sort": 3
 	},
@@ -34225,29 +34228,29 @@
 		"data-source": "gourgeist",
 		"forms": {
 			"en": "Small Variety",
-			"es-es": "Tamaño Pequeño",
-			"fr": "Taille Mini",
-			"de": "Größe S",
-			"it": "Mini",
-			"ja": "ちいさいサイズ",
-			"ko": "작은 사이즈",
-			"zh-Hans": "小尺寸",
-			"zh-Hant": "小尺寸"
+			"es-es": "Variante Pequeña",
+			"fr": "Variété Petite",
+			"de": "Kleine Sorte",
+			"it": "Varietà Piccola",
+			"ja": "こだましゅ",
+			"ko": "소과종",
+			"zh-Hans": "小颗种",
+			"zh-Hant": "小顆種"
 		},
 		"sort": 1
 	},
 	"gourgeist-super": {
 		"data-source": "gourgeist",
 		"forms": {
-			"en": "Jumbo Variety (Super)",
-			"es-es": "Tamaño Extragrande",
-			"fr": "Taille Ultra",
-			"de": "Größe XL",
-			"it": "Maxi",
-			"ja": "とくだいサイズ",
-			"ko": "특대 사이즈",
-			"zh-Hans": "特大尺寸",
-			"zh-Hant": "特大尺寸"
+			"en": "Jumbo Variety",
+			"es-es": "Variante Enorme",
+			"fr": "Variété Giga",
+			"de": "Extragroße Sorte",
+			"it": "Varietà Gigante",
+			"ja": "ギガだましゅ",
+			"ko": "특대과종",
+			"zh-Hans": "巨颗种",
+			"zh-Hant": "巨顆種"
 		},
 		"sort": 4
 	},
@@ -34555,6 +34558,7 @@
 		"forms": {
 			"en": "Confined",
 			"es-es": "Contenido",
+			"es-419": "Vinculado",
 			"fr": "Enchaîné",
 			"de": "Gebanntes",
 			"it": "Vincolato",
@@ -35133,6 +35137,7 @@
 		"forms": {
 			"en": "Baile Style",
 			"es-es": "Estilo Apasionado",
+			"es-419": "Estilo Baile",
 			"fr": "Style Flamenco",
 			"de": "Flamenco-Stil",
 			"it": "Stile Flamenco",
@@ -35171,6 +35176,7 @@
 		"forms": {
 			"en": "Pom-Pom Style",
 			"es-es": "Estilo Animado",
+			"es-419": "Estilo Pompones",
 			"fr": "Style Pom-Pom",
 			"de": "Cheerleading-Stil",
 			"it": "Stile Cheerdance",
@@ -42133,6 +42139,7 @@
 		"forms": {
 			"en": "Roaming Form",
 			"es-es": "Forma Andante",
+			"es-es": "Forma Ambulante",
 			"fr": "Forme Marche",
 			"de": "Wanderform",
 			"it": "Forma Ambulante",

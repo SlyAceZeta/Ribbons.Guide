@@ -2,6 +2,7 @@
 	"poke": {
 		"en": "Poké Ball",
 		"es-es": "Poké Ball",
+		"es-419": "Pokébola",
 		"fr": "Poké Ball",
 		"de": "Pokéball",
 		"it": "Poké Ball",
@@ -13,6 +14,7 @@
 	"great": {
 		"en": "Great Ball",
 		"es-es": "Superball",
+		"es-419": "Superbola",
 		"fr": "Super Ball",
 		"de": "Superball",
 		"it": "Mega Ball",
@@ -24,6 +26,7 @@
 	"ultra": {
 		"en": "Ultra Ball",
 		"es-es": "Ultraball",
+		"es-419": "Ultrabola",
 		"fr": "Hyper Ball",
 		"de": "Hyperball",
 		"it": "Ultra Ball",
@@ -35,6 +38,7 @@
 	"master": {
 		"en": "Master Ball",
 		"es-es": "Master Ball",
+		"es-419": "Masterbola",
 		"fr": "Master Ball",
 		"de": "Meisterball",
 		"it": "Master Ball",
@@ -46,6 +50,7 @@
 	"safari": {
 		"en": "Safari Ball",
 		"es-es": "Safari Ball",
+		"es-419": "Safaribola",
 		"fr": "Safari Ball",
 		"de": "Safariball",
 		"it": "Safari Ball",
@@ -57,6 +62,7 @@
 	"fast": {
 		"en": "Fast Ball",
 		"es-es": "Rapid Ball",
+		"es-419": "Rapibola",
 		"fr": "Speed Ball",
 		"de": "Turboball",
 		"it": "Rapid Ball",
@@ -68,6 +74,7 @@
 	"level": {
 		"en": "Level Ball",
 		"es-es": "Nivel Ball",
+		"es-419": "Nivelabola",
 		"fr": "Niveau Ball",
 		"de": "Levelball",
 		"it": "Level Ball",
@@ -79,6 +86,7 @@
 	"lure": {
 		"en": "Lure Ball",
 		"es-es": "Cebo Ball",
+		"es-419": "Señuelobola",
 		"fr": "Appat Ball",
 		"de": "Köderball",
 		"it": "Esca Ball",
@@ -90,6 +98,7 @@
 	"heavy": {
 		"en": "Heavy Ball",
 		"es-es": "Peso Ball",
+		"es-419": "Pesabola",
 		"fr": "Masse Ball",
 		"de": "Schwerball",
 		"it": "Peso Ball",
@@ -101,6 +110,7 @@
 	"love": {
 		"en": "Love Ball",
 		"es-es": "Amor Ball",
+		"es-419": "Amorbola",
 		"fr": "Love Ball",
 		"de": "Sympaball",
 		"it": "Love Ball",
@@ -112,6 +122,7 @@
 	"friend": {
 		"en": "Friend Ball",
 		"es-es": "Amigo Ball",
+		"es-419": "Amigobola",
 		"fr": "Copain Ball",
 		"de": "Freundesball",
 		"it": "Friend Ball",
@@ -123,6 +134,7 @@
 	"moon": {
 		"en": "Moon Ball",
 		"es-es": "Luna Ball",
+		"es-419": "Lunabola",
 		"fr": "Lune Ball",
 		"de": "Mondball",
 		"it": "Luna Ball",
@@ -134,6 +146,7 @@
 	"sport": {
 		"en": "Sport Ball",
 		"es-es": "Competi Ball",
+		"es-419": "Competibola",
 		"fr": "Compét'Ball",
 		"de": "Turnierball",
 		"it": "Gara Ball",
@@ -145,6 +158,7 @@
 	"net": {
 		"en": "Net Ball",
 		"es-es": "Malla Ball",
+		"es-419": "Mallabola",
 		"fr": "Filet Ball",
 		"de": "Netzball",
 		"it": "Rete Ball",
@@ -156,6 +170,7 @@
 	"dive": {
 		"en": "Dive Ball",
 		"es-es": "Buceo Ball",
+		"es-419": "Buceobola",
 		"fr": "Scuba Ball",
 		"de": "Tauchball",
 		"it": "Sub Ball",
@@ -167,6 +182,7 @@
 	"nest": {
 		"en": "Nest Ball",
 		"es-es": "Nido Ball",
+		"es-419": "Nidobola",
 		"fr": "Faiblo Ball",
 		"de": "Nestball",
 		"it": "Minor Ball",
@@ -178,6 +194,7 @@
 	"repeat": {
 		"en": "Repeat Ball",
 		"es-es": "Acopio Ball",
+		"es-419": "Acopiobola",
 		"fr": "Bis Ball",
 		"de": "Wiederball",
 		"it": "Bis Ball",
@@ -189,6 +206,7 @@
 	"timer": {
 		"en": "Timer Ball",
 		"es-es": "Turno Ball",
+		"es-419": "Turnobola",
 		"fr": "Chrono Ball",
 		"de": "Timerball",
 		"it": "Timer Ball",
@@ -200,6 +218,7 @@
 	"luxury": {
 		"en": "Luxury Ball",
 		"es-es": "Lujo Ball",
+		"es-419": "Lujobola",
 		"fr": "Luxe Ball",
 		"de": "Luxusball",
 		"it": "Chic Ball",
@@ -211,6 +230,7 @@
 	"premier": {
 		"en": "Premier Ball",
 		"es-es": "Honor Ball",
+		"es-419": "Honorbola",
 		"fr": "Honor Ball",
 		"de": "Premierball",
 		"it": "Premier Ball",
@@ -222,6 +242,7 @@
 	"dusk": {
 		"en": "Dusk Ball",
 		"es-es": "Ocaso Ball",
+		"es-419": "Ocasobola",
 		"fr": "Sombre Ball",
 		"de": "Finsterball",
 		"it": "Scuro Ball",
@@ -233,6 +254,7 @@
 	"heal": {
 		"en": "Heal Ball",
 		"es-es": "Sana Ball",
+		"es-419": "Sanabola",
 		"fr": "Soin Ball",
 		"de": "Heilball",
 		"it": "Cura Ball",
@@ -244,6 +266,7 @@
 	"quick": {
 		"en": "Quick Ball",
 		"es-es": "Veloz Ball",
+		"es-419": "Velozbola",
 		"fr": "Rapide Ball",
 		"de": "Flottball",
 		"it": "Velox Ball",
@@ -255,6 +278,7 @@
 	"cherish": {
 		"en": "Cherish Ball",
 		"es-es": "Gloria Ball",
+		"es-419": "Gloriabola",
 		"fr": "Mémoire Ball",
 		"de": "Jubelball",
 		"it": "Pregio Ball",
@@ -266,6 +290,7 @@
 	"dream": {
 		"en": "Dream Ball",
 		"es-es": "Ensueño Ball",
+		"es-419": "Ensueñobola",
 		"fr": "Rêve Ball",
 		"de": "Traumball",
 		"it": "Dream Ball",
@@ -277,6 +302,7 @@
 	"beast": {
 		"en": "Beast Ball",
 		"es-es": "Ente Ball",
+		"es-419": "Entebola",
 		"fr": "Ultra Ball",
 		"de": "Ultraball",
 		"it": "UC Ball",
@@ -289,6 +315,7 @@
 		"hisui": true,
 		"en": "Hisuian Poké Ball",
 		"es-es": "Poké Ball de Hisui",
+		"es-419": "Pokébola de Hisui",
 		"fr": "Poké Ball de Hisui",
 		"de": "Hisui-Pokéball",
 		"it": "Poké Ball di Hisui",
@@ -301,6 +328,7 @@
 		"hisui": true,
 		"en": "Hisuian Great Ball",
 		"es-es": "Super Ball de Hisui",
+		"es-419": "Superbola de Hisui",
 		"fr": "Super Ball de Hisui",
 		"de": "Hisui-Superball",
 		"it": "Mega Ball di Hisui",
@@ -313,6 +341,7 @@
 		"hisui": true,
 		"en": "Hisuian Ultra Ball",
 		"es-es": "Ultra Ball de Hisui",
+		"es-419": "Ultrabola de Hisui",
 		"fr": "Hyper Ball de Hisui",
 		"de": "Hisui-Hyperball",
 		"it": "Ultra Ball di Hisui",
@@ -325,6 +354,7 @@
 		"hisui": true,
 		"en": "Hisuian Heavy Ball",
 		"es-es": "Peso Ball de Hisui",
+		"es-419": "Pesabola de Hisui",
 		"fr": "Masse Ball de Hisui",
 		"de": "Hisui-Schwerball",
 		"it": "Peso Ball di Hisui",
@@ -337,6 +367,7 @@
 		"hisui": true,
 		"en": "Leaden Ball",
 		"es-es": "Kilo Ball",
+		"es-419": "Kilobola",
 		"fr": "Mégamasse Ball",
 		"de": "Zentnerball",
 		"it": "Megaton Ball",
@@ -349,6 +380,7 @@
 		"hisui": true,
 		"en": "Gigaton Ball",
 		"es-es": "Quintal Ball",
+		"es-419": "Quintalbola",
 		"fr": "Gigamasse Ball",
 		"de": "Tonnenball",
 		"it": "Gigaton Ball",
@@ -361,6 +393,7 @@
 		"hisui": true,
 		"en": "Feather Ball",
 		"es-es": "Pluma Ball",
+		"es-419": "Plumabola",
 		"fr": "Plume Ball",
 		"de": "Federball",
 		"it": "Piuma Ball",
@@ -373,6 +406,7 @@
 		"hisui": true,
 		"en": "Wing Ball",
 		"es-es": "Ala Ball",
+		"es-419": "Alabola",
 		"fr": "Envol Ball",
 		"de": "Flügelball",
 		"it": "Wing Ball",
@@ -385,6 +419,7 @@
 		"hisui": true,
 		"en": "Jet Ball",
 		"es-es": "Aero Ball",
+		"es-419": "Aerobola",
 		"fr": "Propulse Ball",
 		"de": "Düsenball",
 		"it": "Jet Ball",
@@ -397,6 +432,7 @@
 		"hisui": true,
 		"en": "Origin Ball",
 		"es-es": "Origen Ball",
+		"es-419": "Origenbola",
 		"fr": "Origine Ball",
 		"de": "Urball",
 		"it": "Origin Ball",

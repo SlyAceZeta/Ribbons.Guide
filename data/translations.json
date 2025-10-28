@@ -41,6 +41,22 @@
 				"zh-Hant": "歐陸西班牙語"
 			}
 		},
+		"es-419": {
+			"titlePosition": "suffix",
+			"abbr": "ES-LA",
+			"name": {
+				"en": "Spanish (Latin America)",
+				"es-es": "Español (América Latina)",
+				"es-419": "Español (Latinoamérica)",
+				"fr": "Espagnol (Amérique latine)",
+				"de": "Spanisch (Lateinamerika)",
+				"it": "Spagnolo (America Latina)",
+				"ja": "ラテンアメリカスペイン語",
+				"ko": "라틴아메리카 스페인어",
+				"zh-Hans": "拉丁美洲西班牙语",
+				"zh-Hant": "拉丁美洲西班牙語"
+			}
+		},
 		"fr": {
 			"titlePosition": "suffix",
 			"abbr": "FRA",
@@ -150,6 +166,7 @@
 	"none": {
 		"en": "None",
 		"es-es": "Ninguna",
+		"es-419": "Ninguno",
 		"fr": "Aucune",
 		"de": "Keiner",
 		"it": "Nessuno",
@@ -206,6 +223,7 @@
 		"incarnate": {
 			"en": "Incarnate Form",
 			"es-es": "Forma Avatar",
+			"es-419": "Forma Encarnada",
 			"fr": "Forme Avatar",
 			"de": "Inkarnationsform",
 			"it": "Forma Incarnazione",
@@ -307,6 +325,7 @@
 		"relaxed": {
 			"en": "Relaxed",
 			"es-es": "Plácida",
+			"es-419": "Relajada",
 			"fr": "Relax",
 			"de": "Locker",
 			"it": "Placida",
@@ -329,6 +348,7 @@
 		"lax": {
 			"en": "Lax",
 			"es-es": "Floja",
+			"es-419": "Descuidada",
 			"fr": "Lâche",
 			"de": "Lasch",
 			"it": "Fiacca",
@@ -406,6 +426,7 @@
 		"mild": {
 			"en": "Mild",
 			"es-es": "Afable",
+			"es-419": "Cordial",
 			"fr": "Doux",
 			"de": "Mild",
 			"it": "Mite",
@@ -417,6 +438,7 @@
 		"quiet": {
 			"en": "Quiet",
 			"es-es": "Mansa",
+			"es-419": "Apacible",
 			"fr": "Discret",
 			"de": "Ruhig",
 			"it": "Quieta",
@@ -494,6 +516,7 @@
 		"quirky": {
 			"en": "Quirky",
 			"es-es": "Rara",
+			"es-419": "Extravagante",
 			"fr": "Bizarre",
 			"de": "Kauzig",
 			"it": "Furba",
@@ -506,6 +529,7 @@
 	"strange-ball": {
 		"en": "Strange Ball",
 		"es-es": "Extraña Ball",
+		"es-419": "Extrañabola",
 		"fr": "Étrange Ball",
 		"de": "Rätselball",
 		"ja": "ストレンジボール",

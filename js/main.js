@@ -85,6 +85,8 @@ if(settings.theme){
 function normalizeLang(lang){
 	if(lang === "eses"){
 		return "es-es";
+	} else if(lang === "es419"){
+		return "es-419";
 	} else if(lang === "zhhans"){
 		return "zh-Hans";
 	} else if(lang === "zhhant"){
@@ -95,7 +97,7 @@ function normalizeLang(lang){
 }
 
 /* change site language */
-var supportedLanguages = ["en", "es-es", "fr", "de", "it", "ja", "ko", "zh-Hans", "zh-Hant"];
+var supportedLanguages = ["en", "es-es", "es-419", "fr", "de", "it", "ja", "ko", "zh-Hans", "zh-Hant"];
 function changeLanguage(l, page = true){
 	changeSetting("language", l);
 	if(page){
@@ -3184,7 +3186,7 @@ function initRun(){
 		
 		/* show temporary Master Rank Ribbon warning */
 		if(!localStorage["master-rank-sv-2025"]){
-			$("#master-rank-sv-2025-alert").removeClass("d-none").addClass("d-flex show");
+			$("#master-rank-sv-2025-alert").removeClass("d-none").addClass("d-flex show").find("#master-rank-sv-2025-alert-game").text(getLanguage(getGameData("sv", "names", true)));
 			document.getElementById("master-rank-sv-2025-alert").addEventListener("close.bs.alert", event => {
 				if(confirm("Are you sure you want to permanently dismiss this alert?")){
 					localStorage["master-rank-sv-2025"] = "dismissed";
