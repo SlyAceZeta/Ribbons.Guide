@@ -985,6 +985,20 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 								continue;
 							}
 						}
+					} else if(ribbon == "gorgeous-ribbon"){
+						// Pokémon with the Royal or Gorgeous Royal Ribbon cannot earn this Ribbon in BDSP
+						if(ribbonGame == "bd" || ribbonGame == "sp"){
+							if(currentRibbons.includes("royal-ribbon") || currentRibbons.includes("gorgeous-royal-ribbon")){
+								continue;
+							}
+						}
+					} else if(ribbon == "royal-ribbon"){
+						// Pokémon with the Gorgeous Royal Ribbon cannot earn this Ribbon in BDSP
+						if(ribbonGame == "bd" || ribbonGame == "sp"){
+							if(currentRibbons.includes("gorgeous-royal-ribbon")){
+								continue;
+							}
+						}
 					} else if(ribbon == "footprint-ribbon"){
 						// if Pokemon can to go to Gen IV, it can always earn this
 						if(ribbonGen !== 4){
