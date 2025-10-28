@@ -562,6 +562,7 @@
 		"descs": {
 			"en": "A Ribbon awarded for clearing the Pokémon League and entering the Hall of Fame somewhere long ago.",
 			"es-es": "Cinta obtenida por superar la Liga Pokémon de otra región y entrar en su Hall de la Fama.",
+			"es-419": "Cinta obtenida por superar la Liga Pokémon de otra región y entrar en su Salón de la Fama.",
 			"fr": "Ruban reçu il y a longtemps pour une victoire contre la Ligue Pokémon d'une certaine région.",
 			"de": "Band für einen alten Sieg über den Champ einer anderen Region und den Einzug in die Ruhmeshalle.",
 			"it": "Fiocco conferito a chi in passato ha sconfitto il Campione di un'altra regione ed è entrato nella Sala d'Onore.",
@@ -732,6 +733,7 @@
 		"titles": {
 			"en": "the Once Well-Trained",
 			"es-es": "el Afanado",
+			"es-419": "el Diligente",
 			"fr": "le Déterminé",
 			"de": "Ranklotzer",
 			"it": "dieci e lode",
@@ -838,6 +840,7 @@
 		"descs": {
 			"en": "A Ribbon awarded to a Pokémon League Champion.",
 			"es-es": "Cinta obtenida por vencer en la Liga Pokémon.",
+			"es-419": "Cinta obtenida por vencer la Liga Pokémon.",
 			"fr": "Ruban récompensant la victoire à la Ligue Pokémon.",
 			"de": "Band zur Ehrung des Champs der Pokémon-Liga.",
 			"it": "Fiocco consegnato al Campione della Lega Pokémon.",
@@ -875,6 +878,7 @@
 		"descs": {
 			"en": "A Ribbon awarded to a Pokémon League Champion.",
 			"es-es": "Cinta obtenida por vencer en la Liga Pokémon.",
+			"es-419": "Cinta obtenida por vencer la Liga Pokémon.",
 			"fr": "Ruban récompensant la victoire à la Ligue Pokémon.",
 			"de": "Band zur Ehrung des Champs der Pokémon-Liga.",
 			"it": "Fiocco consegnato al Campione della Lega Pokémon.",
@@ -918,6 +922,7 @@
 		"descs": {
 			"en": "A Ribbon awarded for beating the Sinnoh Champion and entering the Sinnoh Hall of Fame.",
 			"es-es": "Cinta obtenida por vencer a la Campeona de Sinnoh y entrar en el Hall de la Fama.",
+			"es-419": "Cinta obtenida por vencer a la Campeona de Sinnoh y entrar en el Salón de la Fama.",
 			"fr": "Ruban commémorant la victoire contre la Maîtresse de Sinnoh et l'entrée au Panthéon.",
 			"de": "Band für den Sieg über den Champ von Sinnoh und den Einzug in die Ruhmeshalle.",
 			"it": "Fiocco conferito a chi sconfigge la Campionessa di Sinnoh ed entra nella Sala d'Onore.",
@@ -1153,6 +1158,7 @@
 		"descs": {
 			"en": "A Ribbon for recalling an invigorating event that created life energy.",
 			"es-es": "Cinta que revigoriza tu energía vital al recordarte un suceso estimulante.",
+			"es-419": "Cinta que revigoriza la energía vital al evocar un suceso alentador.",
 			"fr": "Ruban rappelant un évènement vivifiant qui a créé de l'énergie vitale.",
 			"de": "Band zur Erinnerung an ein stärkendes, Lebensenergie gebendes Ereignis.",
 			"it": "Fiocco per ricordare un evento che ha creato energia vitale.",
@@ -1251,6 +1257,7 @@
 		"descs": {
 			"en": "A Ribbon for recalling feelings of sadness that added spice to life.",
 			"es-es": "Cinta que te anima al recordar tiempos pasados que fueron peores.",
+			"es-419": "Cinta que evoca momentos de tristeza, pero que le añaden sabor a la vida.",
 			"fr": "Ruban rappelant des moments de tristesse ayant ajouté un peu de piment à la vie.",
 			"de": "Band zur Erinnerung an die Traurigkeit, die dem Leben Würze gab.",
 			"it": "Fiocco per ricordare sentimenti tristi che, tuttavia, hanno aggiunto sapore alla vita.",
@@ -1338,6 +1345,7 @@
 		"names": {
 			"en": "Relax Ribbon",
 			"es-es": "Cinta Relax",
+			"es-419": "Cinta Relajación",
 			"fr": "Ruban Détente",
 			"de": "Band der Entspannung",
 			"it": "Fiocco Relax",
@@ -1387,6 +1395,7 @@
 		"names": {
 			"en": "Snooze Ribbon",
 			"es-es": "Cinta Cabezada",
+			"es-419": "Cinta Siesta",
 			"fr": "Ruban Sieste",
 			"de": "Band des Schlafens",
 			"it": "Fiocco Pisolino",
@@ -1398,6 +1407,7 @@
 		"descs": {
 			"en": "A Ribbon for recalling a deep slumber that made life soothing.",
 			"es-es": "Cinta que te da tranquilidad al recordarte lo bueno de un sueño reconfortante.",
+			"es-419": "Cinta que da tranquilidad al evocar un sueño reconfortante.",
 			"fr": "Ruban rappelant un évènement ensommeillé qui a rendu la vie plus reposante.",
 			"de": "Band zur Erinnerung an einen tiefen Schlaf, der den Fluss des Lebens beruhigte.",
 			"it": "Fiocco per ricordare una dormita ristoratrice che ha trasmesso una sensazione rassicurante.",
@@ -1409,6 +1419,7 @@
 		"titles": {
 			"en": "the Once Sleepy",
 			"es-es": "el Reposado",
+			"es-419": "el Siestero",
 			"fr": "le Somnolent",
 			"de": "Tiefschläfer",
 			"it": "ben riposato",
@@ -1548,6 +1559,7 @@
 		"titles": {
 			"en": "the Royal",
 			"es-es": "el Regio",
+			"es-419": "el Noble",
 			"fr": "le Royal",
 			"de": "Blaublut",
 			"it": "regale",
@@ -1593,6 +1605,7 @@
 		"titles": {
 			"en": "the Gorgeous Royal",
 			"es-es": "el Regio Maravilloso",
+			"es-419": "el Noble Maravilloso",
 			"fr": "le Royalement Sublime",
 			"de": "Blaublütiger Blickfang",
 			"it": "meraviglioso e regale",
@@ -1633,6 +1646,7 @@
 		"descs": {
 			"en": "A Ribbon awarded to a Pokémon deemed to have a top-quality footprint.",
 			"es-es": "Cinta concedida a un Pokémon que deja huellas de primera.",
+			"es-419": "Cinta concedida a un Pokémon que deja huellas de calidad excepcional.",
 			"fr": "Ruban récompensant un Pokémon pour la qualité exceptionnelle de son empreinte.",
 			"de": "Band für ein Pokémon, das einen besonders guten Fußabdruck hinterlässt.",
 			"it": "Fiocco assegnato a un Pokémon con impronte di qualità sopraffina.",
@@ -2429,6 +2443,7 @@
 		"titles": {
 			"en": "the Premium",
 			"es-es": "el Inimitable",
+			"es-419": "el Inigualable",
 			"fr": "le Spécial",
 			"de": "Unikat",
 			"it": "speciale",
@@ -2466,6 +2481,7 @@
 		"titles": {
 			"en": "the Cherished",
 			"es-es": "el Memorable",
+			"es-419": "el Inolvidable",
 			"fr": "le Bien-Aimé",
 			"de": "Traumpartner",
 			"it": "dai bei ricordi",
@@ -2492,6 +2508,7 @@
 		"descs": {
 			"en": "A Ribbon said to make your wish come true.",
 			"es-es": "Cinta que supuestamente hace que se cumplan los deseos.",
+			"es-419": "Cinta que supuestamente concede deseos.",
 			"fr": "Ruban supposé exaucer les vœux.",
 			"de": "Band, das angeblich Wünsche erfüllt.",
 			"it": "Fiocco che sembra essere in grado di esaudire i desideri.",
@@ -2529,6 +2546,7 @@
 		"descs": {
 			"en": "A Ribbon awarded to a Battle Competition Champion.",
 			"es-es": "Cinta obtenida por vencer en un torneo.",
+			"es-419": "Cinta obtenida por ganar un torneo.",
 			"fr": "Ruban récompensant la victoire à une compétition.",
 			"de": "Band des Siegers eines Kampfturniers.",
 			"it": "Fiocco conferito per aver vinto una Gara di Lotta.",
@@ -2619,6 +2637,7 @@
 		"titles": {
 			"en": "the Treasured Memory",
 			"es-es": "el Concursante Memorable",
+			"es-419": "el Concursante Inolvidable",
 			"fr": "le Compétiteur Inoubliable",
 			"de": "Wettbewerbsglanz",
 			"it": "dalle virtù memorabili",
@@ -2662,6 +2681,7 @@
 		"titles": {
 			"en": "the Treasured Memory",
 			"es-es": "el Concursante Memorable",
+			"es-419": "el Concursante Inolvidable",
 			"fr": "le Compétiteur Inoubliable",
 			"de": "Wettbewerbsglanz",
 			"it": "dalle virtù memorabili",
@@ -2706,6 +2726,7 @@
 		"titles": {
 			"en": "the Exciting Memory",
 			"es-es": "el Combatiente Memorable",
+			"es-419": "el Combatiente Inolvidable",
 			"fr": "le Combattant Inoubliable",
 			"de": "Kämpfernatur",
 			"it": "dalle capacità memorabili",
@@ -2750,6 +2771,7 @@
 		"titles": {
 			"en": "the Exciting Memory",
 			"es-es": "el Combatiente Memorable",
+			"es-419": "el Combatiente Inolvidable",
 			"fr": "le Combattant Inoubliable",
 			"de": "Kämpfernatur",
 			"it": "dalle capacità memorabili",
@@ -2779,6 +2801,7 @@
 		"descs": {
 			"en": "A Ribbon awarded for beating the Kalos Champion and entering the Kalos Hall of Fame.",
 			"es-es": "Cinta obtenida por vencer a la Campeona de Kalos y entrar en el Hall de la Fama.",
+			"es-419": "Cinta obtenida por vencer a la Campeona de Kalos y entrar en el Salón de la Fama.",
 			"fr": "Ruban commémorant la victoire contre la Maîtresse de Kalos et l'entrée au Panthéon.",
 			"de": "Band für den Sieg über den Champ von Kalos und den Einzug in die Ruhmeshalle.",
 			"it": "Fiocco conferito a chi sconfigge la Campionessa di Kalos ed entra nella Sala d'Onore.",
@@ -2842,6 +2865,7 @@
 		"titles": {
 			"en": "the Great Friend",
 			"es-es": "el Colega",
+			"es-419": "el Compa",
 			"fr": "le Bon Ami",
 			"de": "Herzensfreund",
 			"it": "fedele partner",
@@ -2862,6 +2886,7 @@
 		"names": {
 			"en": "Training Ribbon",
 			"es-es": "Cinta Ejercicio",
+			"es-419": "Cinta Entrenamiento",
 			"fr": "Ruban Perfectionnement",
 			"de": "Trainingsband",
 			"it": "Fiocco Training",
@@ -2873,6 +2898,7 @@
 		"descs": {
 			"en": "A Ribbon that can be given to a Pokémon that has overcome rigorous trials and training.",
 			"es-es": "Cinta que se concede a un Pokémon que haya superado pruebas y entrenamientos muy duros.",
+			"es-419": "Cinta que se concede a un Pokémon que superó pruebas y entrenamientos muy duros.",
 			"fr": "Ruban pour récompenser un Pokémon ayant réussi un entraînement sans pitié.",
 			"de": "Band zur Ehrung eines Pokémon, das schwere Prüfungen gemeistert hat.",
 			"it": "Fiocco da regalare a un Pokémon che ha sostenuto con successo un duro allenamento.",
@@ -2906,6 +2932,7 @@
 		"names": {
 			"en": "Skillful Battler Ribbon",
 			"es-es": "Cinta Figura del Combate",
+			"es-419": "Cinta Élite del Combate",
 			"fr": "Ruban Élite du Combat",
 			"de": "Profikampfband",
 			"it": "Fiocco Asso della Lotta",
@@ -2917,6 +2944,7 @@
 		"descs": {
 			"en": "A Ribbon that can be given to a Pokémon that has achieved victory in difficult battles.",
 			"es-es": "Cinta que se concede a un Pokémon que haya obtenido la victoria en combates complicados.",
+			"es-419": "Cinta que se concede a un Pokémon que obtuvo la victoria en combates complicados.",
 			"fr": "Ruban pour récompenser un Pokémon ayant remporté de difficiles combats.",
 			"de": "Band zur Ehrung eines Pokémon, das selbst aus dem härtesten Kampf als Sieger hervorgegangen ist.",
 			"it": "Fiocco da regalare a un Pokémon che è uscito vittorioso da lotte difficili.",
@@ -2928,6 +2956,7 @@
 		"titles": {
 			"en": "the Veteran",
 			"es-es": "el Figura",
+			"es-419": "el Élite",
 			"fr": "le Vétéran",
 			"de": "Kampfveteran",
 			"it": "asso della lotta",
@@ -2961,6 +2990,7 @@
 		"descs": {
 			"en": "A Ribbon that can be given to a brave Pokémon that has honed its battle skills to an art.",
 			"es-es": "Cinta que se concede a un Pokémon valiente que ha dominado con maestría el arte de combatir.",
+			"es-419": "Cinta que se concede a un Pokémon valiente que dominó con maestría el arte de combatir.",
 			"fr": "Ruban pour récompenser un Pokémon s'étant surpassé au cours des combats.",
 			"de": "Band zur Ehrung eines heldenhaften Pokémon, das die Kunst des Kämpfens perfektioniert hat.",
 			"it": "Fiocco da regalare a un Pokémon che ha superato se stesso nella lotta.",
@@ -3001,6 +3031,7 @@
 		"descs": {
 			"en": "A Ribbon awarded for beating the Hoenn Champion and entering the Hoenn Hall of Fame.",
 			"es-es": "Cinta obtenida por vencer al Campeón de Hoenn y entrar en el Hall de la Fama.",
+			"es-419": "Cinta obtenida por vencer al Campeón de Hoenn y entrar en el Salón de la Fama.",
 			"fr": "Ruban commémorant la victoire contre le Maître de Hoenn et l'entrée au Panthéon.",
 			"de": "Band für den Sieg über den Champ von Hoenn und den Einzug in die Ruhmeshalle.",
 			"it": "Fiocco conferito a chi sconfigge il Campione di Hoenn ed entra nella Sala d'Onore.",
@@ -3054,6 +3085,7 @@
 		"titles": {
 			"en": "the Former Star",
 			"es-es": "la Vieja Gloria",
+			"es-419": "la Exestrella",
 			"fr": "l'Ancienne Star",
 			"de": "Star",
 			"it": "di gran classe",
@@ -3200,6 +3232,7 @@
 		"names": {
 			"en": "Toughness Master Ribbon",
 			"es-es": "Cinta Estrella de la Dureza",
+			"es-419": "Cinta Estrella de la Solidez",
 			"fr": "Ruban Maître Robustesse",
 			"de": "Stärkemeisterband",
 			"it": "Fiocco Grinta Suprema",
@@ -3211,6 +3244,7 @@
 		"descs": {
 			"en": "A Ribbon awarded to a Pokémon that has perfectly embodied Toughness in Pokémon Contests.",
 			"es-es": "Cinta que se concede a un Pokémon por exhibir su dureza en un concurso.",
+			"es-419": "Cinta que se concede a un Pokémon por exhibir su solidez en un concurso.",
 			"fr": "Ruban commémorant une incroyable démonstration de Robustesse durant un concours.",
 			"de": "Band zur Auszeichnung eines Pokémon, das im Wettbewerb seine Stärke bewiesen hat.",
 			"it": "Fiocco conferito per la Grinta travolgente dimostrata nelle gare.",
@@ -3295,6 +3329,7 @@
 		"descs": {
 			"en": "A Ribbon awarded for becoming the Alola Champion and entering the Alola Hall of Fame.",
 			"es-es": "Cinta que se recibe al formar parte del equipo campeón de Alola y entrar en el Hall de la Fama.",
+			"es-419": "Cinta que se recibe al formar parte del equipo campeón de Alola y entrar en el Salón de la Fama.",
 			"fr": "Ruban commémorant l'accession au rang de Maître d'Alola et l'entrée au Panthéon.",
 			"de": "Band zur Ehrung des Champs in Alola und für den Einzug in die Ruhmeshalle.",
 			"it": "Fiocco conferito a un Pokémon che diventa Campione di Alola ed entra nella Sala d'Onore.",
@@ -3328,6 +3363,7 @@
 		"names": {
 			"en": "Battle Royal Master Ribbon",
 			"es-es": "Cinta Maestro Battle Royale",
+			"es-419": "Cinta Maestro Batalla Royale",
 			"fr": "Ruban Champion Royal",
 			"de": "Battle-Royale-Meisterband",
 			"it": "Fiocco Asso Royale",
@@ -3339,6 +3375,7 @@
 		"descs": {
 			"en": "A Ribbon that can be given to a Pokémon that has achieved victory in the Battle Royal.",
 			"es-es": "Cinta que se concede a un Pokémon por resultar vencedor en un Battle Royale.",
+			"es-419": "Cinta que se concede a un Pokémon por alcanzar la victoria en una Batalla Royale.",
 			"fr": "Ruban offert à un Pokémon étant sorti grand vainqueur de la Bataille Royale.",
 			"de": "Band zur Auszeichnung eines Pokémon, das beim Battle Royale gesiegt hat.",
 			"it": "Fiocco conferito per le vittorie nelle Battle Royale.",
@@ -3350,6 +3387,7 @@
 		"titles": {
 			"en": "the Royal Master",
 			"es-es": "el Maestro del Battle Royale",
+			"es-419": "el Maestro de la Batalla Royale",
 			"fr": "le Champion Royal",
 			"de": "Battle-Royale-Meister",
 			"it": "asso Royale",
@@ -3465,6 +3503,7 @@
 		"descs": {
 			"en": "A Ribbon awarded for becoming the Galar Champion and entering the Galar Hall of Fame.",
 			"es-es": "Cinta que se recibe al formar parte del equipo campeón de Galar y entrar en el Hall de la Fama.",
+			"es-419": "Cinta que se recibe al formar parte del equipo campeón de Galar y entrar en el Salón de la Fama.",
 			"fr": "Ruban commémorant l'accession au rang de Maître de Galar et l'entrée au Panthéon.",
 			"de": "Band zur Ehrung des Champs von Galar und für den Einzug in die Ruhmeshalle.",
 			"it": "Fiocco conferito a un Pokémon che diventa Campione di Galar ed entra nella Sala d'Onore.",
@@ -3508,6 +3547,7 @@
 		"descs": {
 			"en": "A Ribbon awarded for winning against a champion in the Battle Tower.",
 			"es-es": "Cinta que se concede al vencer al Maestro de la Torre Batalla.",
+			"es-419": "Cinta que se concede al vencer al Maestro de la Torre de Batalla.",
 			"fr": "Ruban commémorant la victoire contre le maître de la Tour de Combat.",
 			"de": "Band für den Sieg über den Meister des Kampfturms.",
 			"it": "Fiocco conferito per aver battuto il campione della Torre Lotta.",
@@ -3580,6 +3620,7 @@
 		"names": {
 			"en": "Twinkling Star Ribbon",
 			"es-es": "Cinta Estrella Rutilante",
+			"es-419": "Cinta Estrella Resplandeciente",
 			"fr": "Ruban Étoile Brillante",
 			"de": "Glitzersternband",
 			"it": "Fiocco Stella Brillante",
@@ -3602,6 +3643,7 @@
 		"titles": {
 			"en": "the Twinkling Star",
 			"es-es": "el Rutilante",
+			"es-419": "el Resplandeciente",
 			"fr": "l'Étoile Brillante",
 			"de": "Glitzerstern",
 			"it": "Stella Brillante",
@@ -3630,6 +3672,7 @@
 		"descs": {
 			"en": "A Ribbon awarded to a Pokémon that posed for a photograph in Hisui in the distant past.",
 			"es-es": "Cinta concedida a un Pokémon que hizo de modelo para una fotografía tiempo ha en la región de Hisui.",
+			"es-419": "Cinta concedida a un Pokémon que hizo de modelo para una fotografía hace tiempo en la región de Hisui.",
 			"fr": "Ruban commémorant une séance photo effectuée à Hisui dans un passé lointain.",
 			"de": "Band zur Auszeichnung eines Pokémon, das in der fernen Vergangenheit in Hisui für ein Foto posiert hat.",
 			"it": "Fiocco conferito per essere stati scelti come modelli di scatti fotografici a Hisui in un lontano passato.",
@@ -3934,6 +3977,7 @@
 		"descs": {
 			"en": "A mark for a snow-frolicking Pokémon.",
 			"es-es": "Emblema que distingue a un Pokémon níveo.",
+			"es-419": "Emblema que distingue a un Pokémon invernal.",
 			"fr": "L'insigne d'un Pokémon enneigé.",
 			"de": "Zeichen eines Pokémon, das im Schnee herumtollt.",
 			"it": "Emblema che contraddistingue un Pokémon che si rotola nella neve.",
@@ -3945,6 +3989,7 @@
 		"titles": {
 			"en": "the Snow Frolicker",
 			"es-es": "el Níveo",
+			"es-419": "el Invernal",
 			"fr": "l'Enneigé",
 			"de": "Schneetänzer",
 			"it": "delle nevi",
@@ -3972,6 +4017,7 @@
 		"descs": {
 			"en": "A mark for a shivering Pokémon.",
 			"es-es": "Emblema que distingue a un Pokémon aterido.",
+			"es-419": "Emblema que distingue a un Pokémon congelado.",
 			"fr": "L'insigne d'un Pokémon grelottant.",
 			"de": "Zeichen eines Pokémon, das vor Kälte zittert.",
 			"it": "Emblema che contraddistingue un Pokémon che trema dal freddo.",
@@ -3983,6 +4029,7 @@
 		"titles": {
 			"en": "the Shivering",
 			"es-es": "el Aterido",
+			"es-419": "el Congelado",
 			"fr": "le Grelottant",
 			"de": "Frostbeule",
 			"it": "tremante",
@@ -4075,6 +4122,7 @@
 		"names": {
 			"en": "Misty Mark",
 			"es-es": "Emblema Niebla",
+			"es-419": "Emblema Bruma",
 			"fr": "Insigne Brume",
 			"de": "Nebel-Zeichen",
 			"it": "Emblema Nebbia",
@@ -4189,6 +4237,7 @@
 		"names": {
 			"en": "Curry Mark",
 			"es-es": "Emblema Curri",
+			"es-419": "Emblema Curry",
 			"fr": "Insigne Curry",
 			"de": "Curry-Zeichen",
 			"it": "Emblema Curry",
@@ -4200,6 +4249,7 @@
 		"descs": {
 			"en": "A mark for a curry-connoisseur Pokémon.",
 			"es-es": "Emblema que distingue a un Pokémon entusiasta del curri.",
+			"es-419": "Emblema que distingue a un Pokémon entusiasta del curry.",
 			"fr": "L'insigne d'un Pokémon gastronome.",
 			"de": "Zeichen eines Pokémon, das gerne Curry isst.",
 			"it": "Emblema che contraddistingue un Pokémon amante del curry.",
@@ -4211,6 +4261,7 @@
 		"titles": {
 			"en": "the Curry Connoisseur",
 			"es-es": "el Entusiasta del Curri",
+			"es-419": "el Entusiasta del Curry",
 			"fr": "le Gastronome",
 			"de": "Currykenner",
 			"it": "amante del curry",
@@ -4265,6 +4316,7 @@
 		"names": {
 			"en": "Rare Mark",
 			"es-es": "Emblema Rareza",
+			"es-419": "Emblema Introspección",
 			"fr": "Insigne Rareté",
 			"de": "Raritäts-Zeichen",
 			"it": "Emblema Rarità",
@@ -4645,6 +4697,7 @@
 		"names": {
 			"en": "Angry Mark",
 			"es-es": "Emblema Cólera",
+			"es-419": "Emblema Ira",
 			"fr": "Insigne Colère",
 			"de": "Wut-Zeichen",
 			"it": "Emblema Collera",
@@ -4656,6 +4709,7 @@
 		"descs": {
 			"en": "A mark for a furious Pokémon.",
 			"es-es": "Emblema que distingue a un Pokémon colérico.",
+			"es-419": "Emblema que distingue a un Pokémon iracundo.",
 			"fr": "L'insigne d'un Pokémon contrarié.",
 			"de": "Zeichen eines Pokémon, das ziemlich sauer ist.",
 			"it": "Emblema che contraddistingue un Pokémon furioso.",
@@ -4667,6 +4721,7 @@
 		"titles": {
 			"en": "the Furious",
 			"es-es": "el Colérico",
+			"es-419": "el Iracundo",
 			"fr": "le Contrarié",
 			"de": "Choleriker",
 			"it": "furioso",
@@ -5036,6 +5091,7 @@
 		"descs": {
 			"en": "A mark for an easily flustered Pokémon.",
 			"es-es": "Emblema que distingue a un Pokémon aturullado.",
+			"es-419": "Emblema que distingue a un Pokémon desconcertado.",
 			"fr": "L'insigne d'un Pokémon paniqué.",
 			"de": "Zeichen eines Pokémon, das leicht in Panik gerät.",
 			"it": "Emblema che contraddistingue un Pokémon frettoloso.",
@@ -5047,6 +5103,7 @@
 		"titles": {
 			"en": "the Easily Flustered",
 			"es-es": "el Aturullado",
+			"es-419": "el Desconcertado",
 			"fr": "le Paniqué",
 			"de": "Hektiker",
 			"it": "frettoloso",
@@ -5101,6 +5158,7 @@
 		"names": {
 			"en": "Zero Energy Mark",
 			"es-es": "Emblema Desgana",
+			"es-419": "Emblema Desgano",
 			"fr": "Insigne Nonchalance",
 			"de": "Lustlos-Zeichen",
 			"it": "Emblema Pigrizia",
@@ -5215,6 +5273,7 @@
 		"names": {
 			"en": "Humble Mark",
 			"es-es": "Emblema Sencillez",
+			"es-419": "Emblema Modestia",
 			"fr": "Insigne Discrétion",
 			"de": "Arglos-Zeichen",
 			"it": "Emblema Ingenuità",
@@ -5302,6 +5361,7 @@
 		"descs": {
 			"en": "A mark for a lively Pokémon.",
 			"es-es": "Emblema que distingue a un Pokémon vigoroso.",
+			"es-419": "Emblema que distingue a un Pokémon fortachón.",
 			"fr": "L'insigne d'un Pokémon énergique.",
 			"de": "Zeichen eines Pokémon, das voller Energie steckt.",
 			"it": "Emblema che contraddistingue un Pokémon pieno di energia.",
@@ -5313,6 +5373,7 @@
 		"titles": {
 			"en": "the Lively",
 			"es-es": "el Vigoroso",
+			"es-419": "el Fortachón",
 			"fr": "l'Énergique",
 			"de": "Energiebündel",
 			"it": "vivace",
@@ -5340,6 +5401,7 @@
 		"descs": {
 			"en": "A mark for a worn-out Pokémon.",
 			"es-es": "Emblema que distingue a un Pokémon extenuado.",
+			"es-419": "Emblema que distingue a un Pokémon agotado.",
 			"fr": "L'insigne d'un Pokémon blessé.",
 			"de": "Zeichen eines Pokémon, das irgendwie einen Durchhänger hat.",
 			"it": "Emblema che contraddistingue un Pokémon stanco morto.",
@@ -5351,6 +5413,7 @@
 		"titles": {
 			"en": "the Worn-Out",
 			"es-es": "el Extenuado",
+			"es-419": "el Agotado",
 			"fr": "le Blessé",
 			"de": "Durchhänger",
 			"it": "sfinito",
@@ -5380,6 +5443,7 @@
 		"descs": {
 			"en": "A Ribbon awarded for becoming a Paldea Champion and entering the Paldea Hall of Fame.",
 			"es-es": "Cinta que se recibe al formar parte del equipo campeón de Paldea y entrar en el Hall de la Fama.",
+			"es-419": "Cinta que se recibe al formar parte del equipo campeón de Paldea y entrar en el Salón de la Fama.",
 			"fr": "Ruban commémorant l'accession au rang de Maître de Paldea et un exploit digne d'entrer au Panthéon.",
 			"de": "Band zur Ehrung eines Champs von Paldea und für den Einzug in die Ruhmeshalle.",
 			"it": "Fiocco conferito a un Pokémon che diventa Campione di Paldea ed entra nella Sala d'Onore.",
@@ -5421,6 +5485,7 @@
 		"descs": {
 			"en": "A mark for a Pokémon that likes to pick things up.",
 			"es-es": "Emblema que distingue a un Pokémon al que le gusta recoger cosas.",
+			"es-419": "Emblema que distingue a un Pokémon al que le gusta recoger cosas del suelo.",
 			"fr": "L'insigne d'un Pokémon qui ramasse des objets.",
 			"de": "Zeichen eines Pokémon, das gerne Gegenstände aufsammelt.",
 			"it": "Emblema che contraddistingue un Pokémon bravo nella raccolta.",
@@ -5432,6 +5497,7 @@
 		"titles": {
 			"en": "the Treasure Hunter",
 			"es-es": "el Recolector",
+			"es-419": "el Buscatesoros",
 			"fr": "le Chasseur de Trésors",
 			"de": "Schatzsucher",
 			"it": "cacciatore di tesori",
@@ -5462,6 +5528,7 @@
 		"descs": {
 			"en": "A mark for a friendly Pokémon.",
 			"es-es": "Emblema que distingue a un Pokémon afable.",
+			"es-419": "Emblema que distingue a un Pokémon cordial.",
 			"fr": "L'insigne d'un Pokémon avec lequel vous avez noué une amitié.",
 			"de": "Zeichen eines zutraulichen Pokémon.",
 			"it": "Emblema che contraddistingue un Pokémon con cui è nata un'amicizia.",
@@ -5473,6 +5540,7 @@
 		"titles": {
 			"en": "the Reliable Partner",
 			"es-es": "el Compañero Leal",
+			"es-419": "el Amigo Fiel",
 			"fr": "le Partenaire Fiable",
 			"de": "Herzenspartner",
 			"it": "compagno fidato",
@@ -5492,6 +5560,7 @@
 		"names": {
 			"en": "Gourmand Mark",
 			"es-es": "Emblema Sibaritismo",
+			"es-419": "Emblema Gourmet",
 			"fr": "Insigne Gourmet",
 			"de": "Gourmet-Zeichen",
 			"it": "Emblema Gourmet",
@@ -5503,6 +5572,7 @@
 		"descs": {
 			"en": "A mark for a Pokémon gourmet.",
 			"es-es": "Emblema que distingue a un Pokémon sibarita.",
+			"es-419": "Emblema que distingue a un Pokémon gourmet.",
 			"fr": "L'insigne d'un Pokémon gourmet.",
 			"de": "Zeichen eines Pokémon, das ein Feinschmecker ist.",
 			"it": "Emblema che contraddistingue un Pokémon amante del buon cibo.",
@@ -5514,6 +5584,7 @@
 		"titles": {
 			"en": "the Gourmet",
 			"es-es": "el Sibarita",
+			"es-419": "el Gourmet",
 			"fr": "le Gourmet",
 			"de": "Gourmet",
 			"it": "gourmet",
@@ -5688,6 +5759,7 @@
 		"names": {
 			"en": "Titan Mark",
 			"es-es": "Emblema Dominancia",
+			"es-419": "Emblema Dominio",
 			"fr": "Insigne Dominant",
 			"de": "Herrscher-Zeichen",
 			"it": "Emblema del dominante",
