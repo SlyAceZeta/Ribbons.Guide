@@ -32726,9 +32726,7 @@
 			"zh-Hans": "永恒之花",
 			"zh-Hant": "永恆之花"
 		},
-		"games": [
-			"plza"
-		],
+		"games": [],
 		"evolvesFrom": null,
 		"flags": [
 			"shinyLocked"
