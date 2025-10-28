@@ -906,174 +906,182 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 			}
 
 			var ribbonGen = parseInt(getGameData(ribbonGame, "gen"));
-			if(ribbonGen && (ribbonGen >= currentGen || (ribbonGen == 8 && currentGen == 9 && currentGame !== "plza"))){
-				if(compatibleGames.includes(ribbonGame) && !((currentGame == "lgp" || currentGame == "lge") && ribbonGen == 7)){
-					// Pokemon-specific restrictions
-					if(dex == "nincada"){
-						// Nincada originally from BDSP cannot enter SwSh
-						if(originGame == "bd" || originGame == "sp"){
-							if(ribbonGame == "sw" || ribbonGame == "sh"){
-								continue;
+			// verify this game has a gen
+			if(ribbonGen){
+				// verify one of the following:
+				// A) this game's gen is the same as, or above, the Pokémon's current gen
+				// B) this game's gen is Gen 8 but the Pokémon is currently in a Gen 9 game other than Z-A
+				if( (ribbonGen >= currentGen) || (ribbonGen == 8 && currentGen == 9 && currentGame !== "plza") ){
+					// verify that the Pokémon can even go to this game
+					// if this game is a Gen 7 game, also verify that this Pokémon is not currently in LGPE
+					if(compatibleGames.includes(ribbonGame) && !((currentGame == "lgp" || currentGame == "lge") && ribbonGen == 7)){
+						// Pokemon-specific restrictions
+						if(dex == "nincada"){
+							// Nincada originally from BDSP cannot enter SwSh
+							if(originGame == "bd" || originGame == "sp"){
+								if(ribbonGame == "sw" || ribbonGame == "sh"){
+									continue;
+								}
+							// all other Nincada cannot enter BDSP
+							} else {
+								if(ribbonGame == "bd" || ribbonGame == "sp"){
+									continue;
+								}
 							}
-						// all other Nincada cannot enter BDSP
-						} else {
-							if(ribbonGame == "bd" || ribbonGame == "sp"){
-								continue;
+						} else if(dex == "spinda"){
+							// Spinda in BDSP cannot leave BDSP
+							if(currentGame == "bd" || currentGame == "sp"){
+								if(ribbonGame !== "bd" && ribbonGame !== "sp"){
+									continue;
+								}
+							// all other Spinda cannot enter BDSP
+							} else {
+								if(ribbonGame == "bd" || ribbonGame == "sp"){
+									continue;
+								}
+							}
+						} else if(dex === "marowak-alola" || dex === "ribombee" || dex === "araquanid" || dex === "togedemaru"){
+							// Totem-sized versions of these Pokemon cannot leave USUM
+							if(totem){
+								if(ribbonGame !== "usun" && ribbonGame !== "umoon"){
+									continue;
+								}
+							}
+						} else if(dex === "pikachu" || dex === "eevee" || dex === "meowth" || dex == "duraludon"){
+							// if these Pokemon have GMax, they cannot leave SwSh
+							if(gmax){
+								if(ribbonGame !== "sw" && ribbonGame !== "sh"){
+									continue;
+								}
 							}
 						}
-					} else if(dex == "spinda"){
-						// Spinda in BDSP cannot leave BDSP
-						if(currentGame == "bd" || currentGame == "sp"){
-							if(ribbonGame !== "bd" && ribbonGame !== "sp"){
-								continue;
-							}
-						// all other Spinda cannot enter BDSP
-						} else {
-							if(ribbonGame == "bd" || ribbonGame == "sp"){
-								continue;
-							}
-						}
-					} else if(dex === "marowak-alola" || dex === "ribombee" || dex === "araquanid" || dex === "togedemaru"){
-						// Totem-sized versions of these Pokemon cannot leave USUM
-						if(totem){
-							if(ribbonGame !== "usun" && ribbonGame !== "umoon"){
-								continue;
-							}
-						}
-					} else if(dex === "pikachu" || dex === "eevee" || dex === "meowth" || dex == "duraludon"){
-						// if these Pokemon have GMax, they cannot leave SwSh
-						if(gmax){
-							if(ribbonGame !== "sw" && ribbonGame !== "sh"){
-								continue;
-							}
-						}
-					}
 
-					// Ribbon-specific restrictions
-					if(ribbon == "winning-ribbon"){
-						// can only be earned under Level 51
-						if(currentLevel < 51){
-							earnableWarnings.push("winning-ribbon");
-						} else {
-							continue;
-						}
-					} else if(ribbon == "national-ribbon"){
-						// can only be earned by Shadow Pokemon in Colo/XD
-						if(!shadow || (currentGame !== "colosseum" && currentGame !== "xd")){
-							continue;
-						}
-					} else if(ribbon == "tower-master-ribbon"){
-						// banlist and Mythicals cannot earn this, but only in BDSP
-						if(ribbonGame == "bd" || ribbonGame == "sp"){
-							if(mythical || ribbons[ribbon].bannedBDSP.includes(dex)){
+						// Ribbon-specific restrictions
+						if(ribbon == "winning-ribbon"){
+							// can only be earned under Level 51
+							if(currentLevel < 51){
+								earnableWarnings.push("winning-ribbon");
+							} else {
 								continue;
 							}
-						}
-					} else if(ribbon == "jumbo-mark"){
-						if((checkedScale || currentRibbons.includes("mini-mark")) && !currentRibbons.includes("titan-mark") && !currentRibbons.includes("alpha-mark")){
-							continue;
-						}
-					} else if(ribbon == "mini-mark"){
-						if(checkedScale || currentRibbons.includes("jumbo-mark") || currentRibbons.includes("titan-mark") || currentRibbons.includes("alpha-mark")){
-							continue;
-						}
-					} else if(ribbon == "battle-tree-great-ribbon"){
-						// Legendaries and Mythicals can earn this in USUM, but not in SM
-						// the banlist is identical to the Battle Tree Master Ribbon
-						if(ribbonGame == "sun" || ribbonGame == "moon"){
-							if(mythical || ribbons["battle-tree-master-ribbon"].banned.includes(dex)){
+						} else if(ribbon == "national-ribbon"){
+							// can only be earned by Shadow Pokemon in Colo/XD
+							if(!shadow || (currentGame !== "colosseum" && currentGame !== "xd")){
 								continue;
 							}
-						}
-					} else if(ribbon == "gorgeous-ribbon"){
-						// Pokémon with the Royal or Gorgeous Royal Ribbon cannot earn this Ribbon in BDSP
-						if(ribbonGame == "bd" || ribbonGame == "sp"){
-							if(currentRibbons.includes("royal-ribbon") || currentRibbons.includes("gorgeous-royal-ribbon")){
+						} else if(ribbon == "tower-master-ribbon"){
+							// banlist and Mythicals cannot earn this, but only in BDSP
+							if(ribbonGame == "bd" || ribbonGame == "sp"){
+								if(mythical || ribbons[ribbon].bannedBDSP.includes(dex)){
+									continue;
+								}
+							}
+						} else if(ribbon == "jumbo-mark"){
+							if((checkedScale || currentRibbons.includes("mini-mark")) && !currentRibbons.includes("titan-mark") && !currentRibbons.includes("alpha-mark")){
 								continue;
 							}
-						}
-					} else if(ribbon == "royal-ribbon"){
-						// Pokémon with the Gorgeous Royal Ribbon cannot earn this Ribbon in BDSP
-						if(ribbonGame == "bd" || ribbonGame == "sp"){
-							if(currentRibbons.includes("gorgeous-royal-ribbon")){
+						} else if(ribbon == "mini-mark"){
+							if(checkedScale || currentRibbons.includes("jumbo-mark") || currentRibbons.includes("titan-mark") || currentRibbons.includes("alpha-mark")){
 								continue;
 							}
-						}
-					} else if(ribbon == "footprint-ribbon"){
-						// if Pokemon can to go to Gen IV, it can always earn this
-						if(ribbonGen !== 4){
-							// if Pokemon is voiceless and can go to Gen VIII, it can always earn this
-							var voiceless = getPokemonData(dex, "voiceless");
-							if(!(ribbonGen == 8 && voiceless) || ((dex === "beldum" || dex === "metang") && (originGame === "scar" || originGame === "vio")) ){
-								// otherwise, Footprint relies on Met Level < 71
-								// Beldum and Metang are voiceless, but Metagross is not, and Beldum can be met as high as Lv.74 in SV DLC, so evolving to Metagross will also disqualify it
-								var currentLevelBelow71 = currentLevel < 71;
-								// Met Level changes upon entering Gen V or leaving Virtual Console
-								if(currentGen < 5 || virtualConsole){
-									if(currentLevelBelow71){
-										// Pokemon's current level is < 71
-										// if it transfers now, its Met Level will also be < 71
-										// therefore it will always be able to earn Footprint
-										// BUT if the player levels to 71+ before transferring, Footprint will be blocked
-										if(currentGen < 5){
-											earnableWarnings.push("footprint-gen4");
-										} else if(virtualConsole){
-											earnableWarnings.push("footprint-virtualconsole");
-										}
-									} else {
-										// Pokemon has already leveled to 71+, Footprint is unavailable
-										continue;
-									}
-								} else {
-									// Pokemon has left Gen V and Virtual Console, so Met Level is now permanently set
-									if(metLevel){
-										// user has set Met Level
-										if(metLevel > 70){
-											// Pokemon was met at 71+, Footprint is unavailable
-											// Beldum and Metang can still get it, but they need a warning
-											if(dex === "beldum" || dex === "metang"){
-												earnableWarnings.push("footprint-beldum");
-											} else {
-												continue;
+						} else if(ribbon == "battle-tree-great-ribbon"){
+							// Legendaries and Mythicals can earn this in USUM, but not in SM
+							// the banlist is identical to the Battle Tree Master Ribbon
+							if(ribbonGame == "sun" || ribbonGame == "moon"){
+								if(mythical || ribbons["battle-tree-master-ribbon"].banned.includes(dex)){
+									continue;
+								}
+							}
+						} else if(ribbon == "gorgeous-ribbon"){
+							// Pokémon with the Royal or Gorgeous Royal Ribbon cannot earn this Ribbon in BDSP
+							if(ribbonGame == "bd" || ribbonGame == "sp"){
+								if(currentRibbons.includes("royal-ribbon") || currentRibbons.includes("gorgeous-royal-ribbon")){
+									continue;
+								}
+							}
+						} else if(ribbon == "royal-ribbon"){
+							// Pokémon with the Gorgeous Royal Ribbon cannot earn this Ribbon in BDSP
+							if(ribbonGame == "bd" || ribbonGame == "sp"){
+								if(currentRibbons.includes("gorgeous-royal-ribbon")){
+									continue;
+								}
+							}
+						} else if(ribbon == "footprint-ribbon"){
+							// if Pokemon can to go to Gen IV, it can always earn this
+							if(ribbonGen !== 4){
+								// if Pokemon is voiceless and can go to Gen VIII, it can always earn this
+								var voiceless = getPokemonData(dex, "voiceless");
+								if(!(ribbonGen == 8 && voiceless) || ((dex === "beldum" || dex === "metang") && (originGame === "scar" || originGame === "vio")) ){
+									// otherwise, Footprint relies on Met Level < 71
+									// Beldum and Metang are voiceless, but Metagross is not, and Beldum can be met as high as Lv.74 in SV DLC, so evolving to Metagross will also disqualify it
+									var currentLevelBelow71 = currentLevel < 71;
+									// Met Level changes upon entering Gen V or leaving Virtual Console
+									if(currentGen < 5 || virtualConsole){
+										if(currentLevelBelow71){
+											// Pokemon's current level is < 71
+											// if it transfers now, its Met Level will also be < 71
+											// therefore it will always be able to earn Footprint
+											// BUT if the player levels to 71+ before transferring, Footprint will be blocked
+											if(currentGen < 5){
+												earnableWarnings.push("footprint-gen4");
+											} else if(virtualConsole){
+												earnableWarnings.push("footprint-virtualconsole");
 											}
+										} else {
+											// Pokemon has already leveled to 71+, Footprint is unavailable
+											continue;
 										}
 									} else {
-										// user has not set Met Level, let's try to determine it automatically
-										// Pokemon from GO must have Met Level < 50 and can always earn Footprint
-										if(originGame !== "go"){
-											// Pokemon in Gen V+ with Current Level < 71 must also have Met Level < 71 and can always earn Footprint
-											if(!currentLevelBelow71){
-												// we cannot automatically determine Met Level, warn the user as such (including Beldum/Metang case)
-												// before we warn the user as such, let's check if the ribbon will appear for the Pokemon in BDSP--if so, no warning is necessary
-												if(!((compatibleGames.includes("bd") || compatibleGames.includes("sp")) && voiceless) || dex === "beldum" || dex === "metang"){
-													earnableWarnings.push("footprint-met-level");
+										// Pokemon has left Gen V and Virtual Console, so Met Level is now permanently set
+										if(metLevel){
+											// user has set Met Level
+											if(metLevel > 70){
+												// Pokemon was met at 71+, Footprint is unavailable
+												// Beldum and Metang can still get it, but they need a warning
+												if(dex === "beldum" || dex === "metang"){
+													earnableWarnings.push("footprint-beldum");
+												} else {
+													continue;
+												}
+											}
+										} else {
+											// user has not set Met Level, let's try to determine it automatically
+											// Pokemon from GO must have Met Level < 50 and can always earn Footprint
+											if(originGame !== "go"){
+												// Pokemon in Gen V+ with Current Level < 71 must also have Met Level < 71 and can always earn Footprint
+												if(!currentLevelBelow71){
+													// we cannot automatically determine Met Level, warn the user as such (including Beldum/Metang case)
+													// before we warn the user as such, let's check if the ribbon will appear for the Pokemon in BDSP--if so, no warning is necessary
+													if(!((compatibleGames.includes("bd") || compatibleGames.includes("sp")) && voiceless) || dex === "beldum" || dex === "metang"){
+														earnableWarnings.push("footprint-met-level");
+													}
 												}
 											}
 										}
 									}
 								}
 							}
-						}
-					} else if(ribbon == "master-rank-ribbon"){
-						// Mythicals can temporarily earn this in Gen 9, but not in Gen 8
-						if(mythical){
-							if(ribbonGen == "8"){
-								continue;
-							} else {
-								earnableWarnings.push("master-rank-sv-2025");
+						} else if(ribbon == "master-rank-ribbon"){
+							// Mythicals can temporarily earn this in Gen 9, but not in Gen 8
+							if(mythical){
+								if(ribbonGen == "8"){
+									continue;
+								} else {
+									earnableWarnings.push("master-rank-sv-2025");
+								}
 							}
 						}
-					}
 
-					// all checks passed
-					var ribbonGameKey = ribbonGame;
-					if(ribbonGameCombo){
-						ribbonGameKey = ribbonGameCombo;
+						// all checks passed
+						var ribbonGameKey = ribbonGame;
+						if(ribbonGameCombo){
+							ribbonGameKey = ribbonGameCombo;
+						}
+						if(!earnableRibbons[ribbonGameKey]){
+							earnableRibbons[ribbonGameKey] = [];
+						}
+						earnableRibbons[ribbonGameKey].push(ribbon);
 					}
-					if(!earnableRibbons[ribbonGameKey]){
-						earnableRibbons[ribbonGameKey] = [];
-					}
-					earnableRibbons[ribbonGameKey].push(ribbon);
 				}
 			}
 		}
@@ -1644,7 +1652,7 @@ function createCard(p, id){
 				} else {
 					var targetGen = parseInt(getGameData(compatibleGames[cg], "gen"));
 					if(targetGen >= currentGen || (virtualConsole && targetGen < 3) || (currentGen == 9 && targetGen == 8)){
-						if(p.currentgame == "plza"){
+						if(p.currentgame == "plza" && targetGen == 9){
 							// Pokemon in Z-A can only travel to Z-A in Gen 9
 							if(compatibleGames[cg] == "plza"){
 								compatibleTest = true;
