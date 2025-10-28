@@ -239,12 +239,15 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-6">
+									<div class="col-lg-6 d-flex flex-column justify-content-between">
 										<label for="pokemonFormNickname" class="form-label">Nickname</label>
 										<input type="text" class="form-control" id="pokemonFormNickname" maxlength="12">
 									</div>
 									<div class="col-lg-6">
-										<label for="pokemonFormLanguage" class="form-label">Language <span class="form-asterisk">*</span></label>
+										<label for="pokemonFormLanguage" class="form-label">
+											<span class="align-middle">Language <span class="form-asterisk">*</span></span>
+											<img class="align-middle ms-1 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="Abbreviations use the updated values from Legends: Z-A and may display differently in previous games.">
+										</label>
 										<select class="form-select" id="pokemonFormLanguage" data-minimum-results-for-search="Infinity"></select>
 									</div>
 									<div class="col-12 col-lg-6">

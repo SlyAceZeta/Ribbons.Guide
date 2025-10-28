@@ -1856,7 +1856,7 @@ function createCard(p, id){
 		.append($("<span>").text(p.currentlevel));
 	var $cardFooterBottomLeft = $("<div>")
 		.append($cardFooterBottomLevel,
-			$("<span>", { "class": "align-middle card-footer-language d-inline-block text-center rounded-pill fw-bold mx-2" }).text(getLanguage(translations.languages[p.language]).abbr)
+			$("<span>", { "class": "align-middle card-footer-language d-inline-block text-center rounded-pill fw-bold mx-2" }).text(translations.languages[p.language].abbr)
 		);
 	var originName;
 	if(p.origingame){
@@ -2576,7 +2576,6 @@ function initRun(){
 		for(var b in balls){
 			var $ballOption = $("<option>", { "value": b }).text(getLanguage(balls[b]));
 			for(var lang in translations.languages){
-				if(lang === "hisui") continue;
 				$ballOption.attr("data-lang-" + lang, getLanguage(balls[b], lang));
 			}
 			$("#pokemonFormBall, #filterFormBall").append($ballOption);
@@ -2597,16 +2596,13 @@ function initRun(){
 			}
 		}
 		for(var lang in translations.languages){
-			var langTrans = getLanguage(translations.languages[lang]);
-			var langAbbr = langTrans.abbr;
-			if(langTrans.abbrold){
-				langAbbr = langTrans.abbrold + "/" + langAbbr;
-			}
-			$("#pokemonFormLanguage, #filterFormLanguage").append(new Option(langAbbr + " - " + langTrans.name, lang));
+			var langTrans = getLanguage(translations.languages[lang].name);
+			var langAbbr = translations.languages[lang].abbr;
+			$("#pokemonFormLanguage, #filterFormLanguage").append(new Option(langAbbr + " - " + langTrans, lang));
 			if(lang == settings.language){
-				$("#settingsLanguage").append(new Option(translations.languages[lang][lang].name, lang));
+				$("#settingsLanguage").append(new Option(translations.languages[lang].name[lang], lang));
 			} else {
-				$("#settingsLanguage").append(new Option(translations.languages[lang][lang].name + " / " + langTrans.name, lang));
+				$("#settingsLanguage").append(new Option(translations.languages[lang].name[lang] + " / " + langTrans, lang));
 			}
 		}
 		if(settings.language){

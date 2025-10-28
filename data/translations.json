@@ -13,362 +13,137 @@
 	"languages": {
 		"en": {
 			"titlePosition": "suffix",
-			"en": {
-				"abbr": "ENG",
-				"name": "English"
-			},
-			"es-es": {
-				"abbr": "ING",
-				"name": "Inglés"
-			},
-			"fr": {
-				"abbr": "ANG",
-				"name": "Anglais"
-			},
-			"de": {
-				"abbr": "ENG",
-				"name": "Englisch"
-			},
-			"it": {
-				"abbr": "ING",
-				"name": "Inglese"
-			},
-			"ja": {
-				"abbr": "ENG",
-				"name": "英語"
-			},
-			"ko": {
-				"abbr": "ENG",
-				"name": "영어"
-			},
-			"zh-Hans": {
-				"abbr": "ENG",
-				"name": "英语"
-			},
-			"zh-Hant": {
-				"abbr": "ENG",
-				"name": "英語"
+			"abbr": "ENG",
+			"name": {
+				"en": "English",
+				"es-es": "Inglés",
+				"fr": "Anglais",
+				"de": "Englisch",
+				"it": "Inglese",
+				"ja": "英語",
+				"ko": "영어",
+				"zh-Hans": "英语",
+				"zh-Hant": "英語"
 			}
 		},
 		"es-es": {
 			"titlePosition": "suffix",
-			"en": {
-				"abbr": "SP-EU",
-				"name": "Spanish (Spain)",
-				"abbrold": "SPA"
-			},
-			"es-es": {
-				"abbr": "ES-ES",
-				"name": "Español (España)",
-				"abbrold": "ESP"
-			},
-			"fr": {
-				"abbr": "ES-EU",
-				"name": "Espagnol (Espagne)",
-				"abbrold": "ESP"
-			},
-			"de": {
-				"abbr": "SP-EU",
-				"name": "Spanisch (Spanien)",
-				"abbrold": "SPA"
-			},
-			"it": {
-				"abbr": "SPA-E",
-				"name": "Spagnolo (Spagna)",
-				"abbrold": "SPA"
-			},
-			"ja": {
-				"abbr": "SP-EU",
-				"name": "欧州スペイン語",
-				"abbrold": "SPA"
-			},
-			"ko": {
-				"abbr": "SP-EU",
-				"name": "유럽 스페인어",
-				"abbrold": "SPA"
-			},
-			"zh-Hans": {
-				"abbr": "SP-EU",
-				"name": "欧陆西班牙语",
-				"abbrold": "SPA"
-			},
-			"zh-Hant": {
-				"abbr": "SP-EU",
-				"name": "歐陸西班牙語",
-				"abbrold": "SPA"
+			"abbr": "ES-ES",
+			"name": {
+				"en": "Spanish (Spain)",
+				"es-es": "Español (España)",
+				"fr": "Espagnol (Espagne)",
+				"de": "Spanisch (Spanien)",
+				"it": "Spagnolo (Spagna)",
+				"ja": "欧州スペイン語",
+				"ko": "유럽 스페인어",
+				"zh-Hans": "欧陆西班牙语",
+				"zh-Hant": "歐陸西班牙語"
 			}
 		},
 		"fr": {
 			"titlePosition": "suffix",
-			"en": {
-				"abbr": "FRE",
-				"name": "French"
-			},
-			"es-es": {
-				"abbr": "FRA",
-				"name": "Francés"
-			},
-			"fr": {
-				"abbr": "FRA",
-				"name": "Français"
-			},
-			"de": {
-				"abbr": "FRA",
-				"name": "Französisch"
-			},
-			"it": {
-				"abbr": "FRA",
-				"name": "Francese"
-			},
-			"ja": {
-				"abbr": "FRE",
-				"name": "フランス語"
-			},
-			"ko": {
-				"abbr": "FRE",
-				"name": "프랑스어"
-			},
-			"zh-Hans": {
-				"abbr": "FRE",
-				"name": "法语"
-			},
-			"zh-Hant": {
-				"abbr": "FRE",
-				"name": "法語"
+			"abbr": "FRA",
+			"name": {
+				"en": "French",
+				"es-es": "Francés",
+				"fr": "Français",
+				"de": "Französisch",
+				"it": "Francese",
+				"ja": "フランス語",
+				"ko": "프랑스어",
+				"zh-Hans": "法语",
+				"zh-Hant": "法語"
 			}
 		},
 		"de": {
 			"titlePosition": "prefix",
-			"en": {
-				"abbr": "GER",
-				"name": "German"
-			},
-			"es-es": {
-				"abbr": "ALE",
-				"name": "Alemán"
-			},
-			"fr": {
-				"abbr": "ALL",
-				"name": "Allemand"
-			},
-			"de": {
-				"abbr": "DEU",
-				"name": "Deutsch"
-			},
-			"it": {
-				"abbr": "TED",
-				"name": "Tedesco"
-			},
-			"ja": {
-				"abbr": "GER",
-				"name": "ドイツ語"
-			},
-			"ko": {
-				"abbr": "GER",
-				"name": "독일어"
-			},
-			"zh-Hans": {
-				"abbr": "GER",
-				"name": "德语"
-			},
-			"zh-Hant": {
-				"abbr": "GER",
-				"name": "德語"
+			"abbr": "DEU",
+			"name": {
+				"en": "German",
+				"es-es": "Alemán",
+				"fr": "Allemand",
+				"de": "Deutsch",
+				"it": "Tedesco",
+				"ja": "ドイツ語",
+				"ko": "독일어",
+				"zh-Hans": "德语",
+				"zh-Hant": "德語"
 			}
 		},
 		"it": {
 			"titlePosition": "suffix",
-			"en": {
-				"abbr": "ITA",
-				"name": "Italian"
-			},
-			"es-es": {
-				"abbr": "ITA",
-				"name": "Italiano"
-			},
-			"fr": {
-				"abbr": "ITA",
-				"name": "Italien"
-			},
-			"de": {
-				"abbr": "ITA",
-				"name": "Italienisch"
-			},
-			"it": {
-				"abbr": "ITA",
-				"name": "Italiano"
-			},
-			"ja": {
-				"abbr": "ITA",
-				"name": "イタリア語"
-			},
-			"ko": {
-				"abbr": "ITA",
-				"name": "이탈리아어"
-			},
-			"zh-Hans": {
-				"abbr": "ITA",
-				"name": "意大利语"
-			},
-			"zh-Hant": {
-				"abbr": "ITA",
-				"name": "義大利語"
+			"abbr": "ITA",
+			"name": {
+				"en": "Italian",
+				"es-es": "Italiano",
+				"fr": "Italien",
+				"de": "Italienisch",
+				"it": "Italiano",
+				"ja": "イタリア語",
+				"ko": "이탈리아어",
+				"zh-Hans": "意大利语",
+				"zh-Hant": "義大利語"
 			}
 		},
 		"ja": {
 			"titlePosition": "prefix",
-			"en": {
-				"abbr": "JPN",
-				"name": "Japanese"
-			},
-			"es-es": {
-				"abbr": "JAP",
-				"name": "Japonés"
-			},
-			"fr": {
-				"abbr": "JAP",
-				"name": "Japonais"
-			},
-			"de": {
-				"abbr": "JPN",
-				"name": "Japanisch"
-			},
-			"it": {
-				"abbr": "GPN",
-				"name": "Giapponese"
-			},
-			"ja": {
-				"abbr": "JPN",
-				"name": "日本語"
-			},
-			"ko": {
-				"abbr": "JPN",
-				"name": "일본어"
-			},
-			"zh-Hans": {
-				"abbr": "JPN",
-				"name": "日语"
-			},
-			"zh-Hant": {
-				"abbr": "JPN",
-				"name": "日語"
+			"abbr": "JPN",
+			"name": {
+				"en": "Japanese",
+				"es-es": "Japonés",
+				"fr": "Japonais",
+				"de": "Japanisch",
+				"it": "Giapponese",
+				"ja": "日本語",
+				"ko": "일본어",
+				"zh-Hans": "日语",
+				"zh-Hant": "日語"
 			}
 		},
 		"ko": {
 			"titlePosition": "prefix",
-			"en": {
-				"abbr": "KOR",
-				"name": "Korean"
-			},
-			"es-es": {
-				"abbr": "COR",
-				"name": "Coreano"
-			},
-			"fr": {
-				"abbr": "COR",
-				"name": "Coréen"
-			},
-			"de": {
-				"abbr": "KOR",
-				"name": "Koreanisch"
-			},
-			"it": {
-				"abbr": "COR",
-				"name": "Coreano"
-			},
-			"ja": {
-				"abbr": "KOR",
-				"name": "韓国語"
-			},
-			"ko": {
-				"abbr": "KOR",
-				"name": "한국어"
-			},
-			"zh-Hans": {
-				"abbr": "KOR",
-				"name": "韩语"
-			},
-			"zh-Hant": {
-				"abbr": "KOR",
-				"name": "韓語"
+			"abbr": "KOR",
+			"name": {
+				"en": "Korean",
+				"es-es": "Coreano",
+				"fr": "Coréen",
+				"de": "Koreanisch",
+				"it": "Coreano",
+				"ja": "韓国語",
+				"ko": "한국어",
+				"zh-Hans": "韩语",
+				"zh-Hant": "韓語"
 			}
 		},
 		"zh-Hans": {
 			"titlePosition": "prefix",
-			"en": {
-				"abbr": "CHS",
-				"name": "Chinese (Simplified)"
-			},
-			"es-es": {
-				"abbr": "CHS",
-				"name": "Chino simplificado"
-			},
-			"fr": {
-				"abbr": "CHS",
-				"name": "Chinois simplifié"
-			},
-			"de": {
-				"abbr": "CHV",
-				"name": "Chinesisch (vereinfacht)"
-			},
-			"it": {
-				"abbr": "CIN-S",
-				"name": "Cinese (semplificato)"
-			},
-			"ja": {
-				"abbr": "CHS",
-				"name": "中国語（簡体字）"
-			},
-			"ko": {
-				"abbr": "CHS",
-				"name": "중국어/간체자"
-			},
-			"zh-Hans": {
-				"abbr": "CHS",
-				"name": "简体中文"
-			},
-			"zh-Hant": {
-				"abbr": "CHS",
-				"name": "簡體中文"
+			"abbr": "CHS",
+			"name": {
+				"en": "Chinese (Simplified)",
+				"es-es": "Chino simplificado",
+				"fr": "Chinois simplifié",
+				"de": "Chinesisch (vereinfacht)",
+				"it": "Cinese (semplificato)",
+				"ja": "中国語（簡体字）",
+				"ko": "중국어/간체자",
+				"zh-Hans": "简体中文",
+				"zh-Hant": "簡體中文"
 			}
 		},
 		"zh-Hant": {
 			"titlePosition": "prefix",
-			"en": {
-				"abbr": "CHT",
-				"name": "Chinese (Traditional)"
-			},
-			"es-es": {
-				"abbr": "CHT",
-				"name": "Chino tradicional"
-			},
-			"fr": {
-				"abbr": "CHT",
-				"name": "Chinois traditionnel"
-			},
-			"de": {
-				"abbr": "CHT",
-				"name": "Chinesisch (traditionell)"
-			},
-			"it": {
-				"abbr": "CIN-T",
-				"name": "Cinese (tradizionale)"
-			},
-			"ja": {
-				"abbr": "CHT",
-				"name": "中国語（繁体字）"
-			},
-			"ko": {
-				"abbr": "CHT",
-				"name": "중국어/번체자"
-			},
-			"zh-Hans": {
-				"abbr": "CHT",
-				"name": "繁体中文"
-			},
-			"zh-Hant": {
-				"abbr": "CHT",
-				"name": "繁體中文"
+			"abbr": "CHT",
+			"name": {
+				"en": "Chinese (Traditional)",
+				"es-es": "Chino tradicional",
+				"fr": "Chinois traditionnel",
+				"de": "Chinesisch (traditionell)",
+				"it": "Cinese (tradizionale)",
+				"ja": "中国語（繁体字）",
+				"ko": "중국어/번체자",
+				"zh-Hans": "繁体中文",
+				"zh-Hant": "繁體中文"
 			}
 		}
 	},
