@@ -2567,6 +2567,81 @@
 			"zh-Hant": "對戰冠軍"
 		}
 	},
+	"regional-champion-ribbon": {
+		"gen": 5,
+		"available": null,
+		"names": {
+			"en": "Regional Champion Ribbon",
+			"es-es": "Cinta Campeón Regional",
+			"fr": "Ruban Champion Régional",
+			"de": "Regionalmeisterband",
+			"it": "Fiocco Campione Locale",
+			"ja": "エリアチャンプリボン",
+			"ko": "에리어챔피언리본",
+			"zh-Hans": "地区冠军奖章",
+			"zh-Hant": "地區冠軍獎章"
+		},
+		"descs": {
+			"en": "A Ribbon awarded to a Regional Champion in the Pokémon World Championships.",
+			"es-es": "Cinta de campeón regional del Pokémon World Championships.",
+			"fr": "Ruban récompensant la victoire au Championnat Régional.",
+			"de": "Siegerband für die Regionalmeisterschaft der Pokémon World Championships.",
+			"it": "Fiocco conferito per aver vinto il titolo di Campione Locale al Pokémon World Championships.",
+			"ja": "ポケモンワールドチャンピオンシップスエリア大会　優勝記念リボン",
+			"ko": "포켓몬 월드 챔피언십 에리어 대회 우승 기념리본",
+			"zh-Hans": "Pokémon World Championships（宝可梦世界锦标赛） 地区大赛冠军纪念奖章。",
+			"zh-Hant": "Pokémon World Championships（寶可夢世界錦標賽） 地區大賽冠軍紀念獎章。"
+		},
+		"titles": {
+			"en": "the Regional Champion",
+			"es-es": "el Campeón de Área",
+			"es-419": "el Campeón Regional",
+			"fr": "le Champion Régional",
+			"de": "Regionalmeister",
+			"it": "Campione Locale",
+			"ja": "エリアチャンピオン",
+			"ko": "에리어 챔피언",
+			"zh-Hans": "地区冠军",
+			"zh-Hant": "地區冠軍"
+		}
+	},
+	"national-champion-ribbon": {
+		"gen": 5,
+		"available": null,
+		"names": {
+			"en": "National Champion Ribbon",
+			"es-es": "Cinta Campeón Nacional",
+			"fr": "Ruban Champion National",
+			"de": "Nationalmeisterband",
+			"it": "Fiocco Campione Nazionale",
+			"ja": "ナショナルチャンプリボン",
+			"ko": "내셔널챔피언리본",
+			"zh-Hans": "国家冠军奖章",
+			"zh-Hant": "國家冠軍獎章"
+		},
+		"descs": {
+			"en": "A Ribbon awarded to a National Champion in the Pokémon World Championships.",
+			"es-es": "Cinta de campeón nacional del Pokémon World Championships.",
+			"fr": "Ruban récompensant la victoire au Championnat National.",
+			"de": "Siegerband für die Nationalmeisterschaft der Pokémon World Championships.",
+			"it": "Fiocco conferito per aver vinto il titolo di Campione Nazionale al Pokémon World Championships.",
+			"ja": "ポケモンワールドチャンピオンシップス国内大会　優勝記念リボン",
+			"ko": "포켓몬 월드 챔피언십 국내 대회 우승 기념리본",
+			"zh-Hans": "Pokémon World Championships（宝可梦世界锦标赛） 国内大赛冠军纪念奖章。",
+			"zh-Hant": "Pokémon World Championships（寶可夢世界錦標賽） 國內大賽冠軍紀念獎章。"
+		},
+		"titles": {
+			"en": "the National Champion",
+			"es-es": "el Campeón Nacional",
+			"fr": "le Champion National",
+			"de": "Nationalmeister",
+			"it": "Campione Nazionale",
+			"ja": "ナショナルチャンピオン",
+			"ko": "내셔널 챔피언",
+			"zh-Hans": "国家冠军",
+			"zh-Hant": "國家冠軍"
+		}
+	},
 	"world-champion-ribbon": {
 		"gen": 5,
 		"available": null,
