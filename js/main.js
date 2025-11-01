@@ -3008,7 +3008,8 @@ function initRun(){
 		$("#loading-spinner-info-text").text("Loading changelog");
 		if(settings.NewChangelogs === "true"){
 			var newChanges = [], initialRun = true;
-			for(let date in changelog){
+			for(let c in changelog){
+				var date = changelog[c].date;
 				if(initialRun){
 					initialRun = false;
 					localStorage.changelog = date;
@@ -3020,13 +3021,12 @@ function initRun(){
 				if(changeDate > lastChangeDate){
 					let $changeContainer = $("<div>", { "class": "list-group-item py-3" })
 						.append($("<h6>", { "class": "fw-bold" }).text(date));
+					if(changelog[c].header){
+						$changeContainer.append($("<p>").html(changelog[c].header));
+					}
 					let $changeList = $("<ul>", { "class": "mb-0" });
-					for(let change in changelog[date]){
-						if(changelog[date][change].startsWith("\\")){
-							$changeContainer.append($("<p>").html(changelog[date][change].substring(1)));
-						} else {
-							$changeList.append($("<li>").html(changelog[date][change]));
-						}
+					for(let change in changelog[c].changes){
+						$changeList.append($("<li>").html(changelog[c].changes[change]));
 					}
 					$changeContainer.append($changeList);
 					newChanges.push($changeContainer);
@@ -3358,7 +3358,8 @@ $(function(){
 		var changeList = [];
 		$("#modalChangelog .list-group").html("");
 		var stillToUpdate = true;
-		for(let date in changelog){
+		for(let c in changelog){
+			var date = changelog[c].date;
 			if(stillToUpdate){
 				stillToUpdate = false;
 				localStorage.changelog = date;
@@ -3366,13 +3367,12 @@ $(function(){
 			let changeDate = new Date(date);
 			let $changeContainer = $("<div>", { "class": "list-group-item py-3" })
 				.append($("<h6>", { "class": "fw-bold" }).text(date));
+			if(changelog[c].header){
+				$changeContainer.append($("<p>").html(changelog[c].header));
+			}
 			let $changeList = $("<ul>", { "class": "mb-0" });
-			for(let change in changelog[date]){
-				if(changelog[date][change].startsWith("\\")){
-					$changeContainer.append($("<p>").html(changelog[date][change].substring(1)));
-				} else {
-					$changeList.append($("<li>").html(changelog[date][change]));
-				}
+			for(let change in changelog[c].changes){
+				$changeList.append($("<li>").html(changelog[c].changes[change]));
 			}
 			$changeContainer.append($changeList);
 			changeList.push($changeContainer);

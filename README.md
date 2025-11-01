@@ -1,4 +1,4 @@
-[![Last Updated](https://img.shields.io/badge/updated-October%2020%2C%202025-1d90be)](#)
+[![Last Updated](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FSlyAceZeta%2FRibbons.Guide%2Fmain%2Fdata%2Fchangelog.json&query=%24%5B0%5D.date&label=updated&color=1d90be)](#)
 [![GPL-3.0 license](https://img.shields.io/github/license/SlyAceZeta/Ribbons.Guide)](https://opensource.org/license/gpl-3-0/) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/SlyAceZeta/Ribbons.Guide/deploy.yml)](https://github.com/SlyAceZeta/Ribbons.Guide/actions/workflows/deploy.yml)
 
 Ribbons.Guide is an open-source [progressive web app](https://en.wikipedia.org/wiki/Progressive_web_app) that allows you to keep track of your Pokémon and their Ribbons!
