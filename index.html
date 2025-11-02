@@ -128,7 +128,7 @@
 				<span>Mythical Pokémon can temporarily earn the Master Rank Ribbon during the current <span id="master-rank-sv-2025-alert-game">Scarlet/Violet</span> regulation. <span class="fw-bold">This ends on January&nbsp;3!</span></span>
 				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 			</div>
-			<div id="sectionTrackerButtonRow" class="d-flex justify-content-between mt-4 px-3">
+			<div class="sectionTrackerButtonRow d-flex justify-content-between mt-4 px-3">
 				<div>
 					<button id="sectionTrackerButtonAdd" class="btn btn-primary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button">
 						<img src="img/ui/add.svg" alt="Add">
@@ -150,7 +150,13 @@
 						<img src="img/ui/box-closed.png" alt="Filter">
 						<span class="align-middle d-none d-md-inline">Boxes</span>
 					</button>
-					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1 position-relative" type="button" data-bs-toggle="modal" data-bs-target="#modalFilterForm">
+				</div>
+			</div>
+			<div class="sectionTrackerButtonRow d-flex justify-content-between mt-2 px-3">
+				<div>
+				</div>
+				<div class="d-flex align-items-center">
+					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 mx-2 lh-1 position-relative" type="button" data-bs-toggle="modal" data-bs-target="#modalFilterForm">
 						<img src="img/ui/filter.svg" alt="Filter">
 						<span class="align-middle d-none d-md-inline">Filters</span>
 						<span id="sectionTrackerFilterCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">

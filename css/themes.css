@@ -409,7 +409,7 @@ a:not(.btn) {
 	--bs-btn-disabled-color: #000;
 	--bs-btn-disabled-border-color: #ecbf0c;
 }
-[data-bs-theme="start"] #sectionTrackerButtonRow .btn-primary img {
+[data-bs-theme="start"] .sectionTrackerButtonRow .btn-primary img {
 	filter: invert(1);
 }
 [data-bs-theme="start"] .form-check-input:checked {

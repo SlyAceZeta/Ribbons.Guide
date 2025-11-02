@@ -422,18 +422,18 @@ a:not(:hover):not(:focus) {
 }
 
 /* tracker buttons */
-#sectionTrackerButtonRow img {
+.sectionTrackerButtonRow img {
 	width: auto;
 	height: 18px;
 }
-#sectionTrackerButtonRow #switchView img,
+.sectionTrackerButtonRow #switchView img,
 #switchRibbonFormView img {
 	width: auto;
 	height: 22px;
 	filter: var(--rg-icon-filter);
 }
 @media (max-width: 767.98px){
-	#sectionTrackerButtonRow img {
+	.sectionTrackerButtonRow img {
 		height: 24px;
 	}
 }
