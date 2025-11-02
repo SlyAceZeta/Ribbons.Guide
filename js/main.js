@@ -1255,6 +1255,30 @@ function savePokemon(edit = false){
 	}
 	if(newP.originmark){
 		setFormValid("OriginMark");
+		var failOrigins = [];
+		if(newP.language == "es-419"){
+			failOrigins = ["none", "pentagon", "clover", "game-boy", "go", "lets-go", "galar", "bdsp", "hisui", "paldea"];
+		} else if(newP.language == "zh-Hans" || newP.language == "zh-Hant"){
+			failOrigins = ["none", "pentagon"];
+		} else if(newP.language == "ko"){
+			if(newP.origingame){
+				var failGames = ["fr", "lg", "colosseum", "xd", "ruby", "sapphire", "emerald"];
+				if(failGames.includes(newP.origingame)){
+					continueForm = false;
+					setFormInvalid("Language", "Korean Pokémon cannot originate from this game.");
+				} else {
+					setFormValid("Language");
+				}
+			} else {
+				setFormValid("Language");
+			}
+		}
+		if(failOrigins.length > 0 && failOrigins.includes(newP.originmark)){
+			continueForm = false;
+			setFormInvalid("Language", "Pokémon with this language cannot have this Origin Mark.");
+		} else if(newP.language !== "ko") {
+			setFormValid("Language");
+		}
 	} else {
 		continueForm = false;
 		setFormInvalid("OriginMark", "Please select an Origin Mark.");
