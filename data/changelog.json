@@ -3,8 +3,9 @@
 		"date": "2 November 2025",
 		"changes": [
 			"Improved error messages when loading the app",
+			"Added error messages when trying to save a Pokémon with a language of origin it cannot have",
 			"Edit, copy, and delete buttons are now in a dropdown to prevent accidental clicks/taps and to free up space for a card button in the future",
-			"Added error messages when trying to save a Pokémon with a language of origin it cannot have"
+			"This update was re-released to fix some style issues with the dropdowns"
 		]
 	},
 	{
