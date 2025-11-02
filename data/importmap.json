@@ -118,7 +118,8 @@
 		"bd",
 		"sp",
 		"scar",
-		"vio"
+		"vio",
+		"plza"
 	],
 	"originmarks": [
 		null,
@@ -172,7 +173,8 @@
 		"bdsp",
 		"bdsp",
 		"paldea",
-		"paldea"
+		"paldea",
+		"plza"
 	],
 	"forms": {
 		"3": ["venusaur", "venusaur"],

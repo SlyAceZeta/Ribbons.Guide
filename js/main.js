@@ -587,6 +587,7 @@ function importFiles(files, delay = 150, i = 0){
 	
 	switch(ext){
 		case ".pk9": // SV
+		case ".pa9": // Z-A
 			if (file.size != 344) return alert("Incorrect file size!\nExpected: 344\nGot: " + file.size);
 			speciesloc = 0x08;
 			idsloc = 0x0c;
