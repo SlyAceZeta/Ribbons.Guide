@@ -569,6 +569,9 @@ html[data-extraoriginmarks="platforms"] .select-icon-origin-platform {
 html[data-reordering="false"] .card-sortable-handle {
 	display: none;
 }
+.card-footer-dropdown .dropdown-toggle::after {
+	display: none;
+}
 html[data-checklistbuttons="incomplete"] .ribbons-done .card-header button,
 html[data-checklistbuttons="never"] .card-header button {
 	display: none;

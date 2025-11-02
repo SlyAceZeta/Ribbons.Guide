@@ -1931,10 +1931,16 @@ function createCard(p, id){
 		$cardFooterBottomLeft.append($("<img>", { "class": "align-middle card-footer-origin", "src": "img/origins/" + p.originmark + ".png", "alt": originName, "title": originName }));
 	}
 	var $cardFooterBottomRight = $("<div>")
-		.append($("<button>", { "class": "btn btn-link p-0 ms-2 align-text-bottom card-sortable-handle" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/move.svg", "alt": "Move", "title": "Drag to re-order" })))
-		.append($("<button>", { "class": "btn btn-link p-0 ms-2 align-text-bottom", "onclick": "editPokemon()" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/edit.svg", "alt": "Edit", "title": "Edit" })))
-		.append($("<button>", { "class": "btn btn-link p-0 ms-2 align-text-bottom", "onclick": "copyPokemon()" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/copy.svg", "alt": "Copy", "title": "Copy" })))
-		.append($("<button>", { "class": "btn btn-link p-0 ms-2 align-text-bottom", "onclick": "deletePokemon()" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/delete.svg", "alt": "Delete", "title": "Delete" })));
+		.append($("<button>", { "class": "btn btn-link p-0 ms-2 lh-1 align-text-bottom card-sortable-handle" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/move.svg", "alt": "Move", "title": "Drag to re-order" })))
+		.append($("<div>", { "class": "card-footer-dropdown dropdown d-inline ms-2 align-text-bottom" })
+			.append($("<button>", { "class": "btn btn-link dropdown-toggle p-0 border-0", "type": "button", "data-bs-toggle": "dropdown", "aria-expanded": "false" }).html($("<img>", { "src": "img/ui/more.svg", "alt": "More", "title": "More actions" })))
+			.append($("<ul>", { "class": "dropdown-menu dropdown-menu-end" })
+				.append($("<li>").html($("<button>", { "class": "dropdown-item", "type": "button", "onclick": "editPokemon()" }).html("<img src='/img/ui/edit.svg' class='me-2' style='height:18px'><span class='align-middle'>Edit " + displayName + "</span>")))
+				.append($("<li>").html($("<button>", { "class": "dropdown-item", "type": "button", "onclick": "copyPokemon()" }).html("<img src='/img/ui/copy.svg' class='me-2' style='height:18px'><span class='align-middle'>Copy " + displayName + "</span>")))
+				.append($("<hr>", { "class": "dropdown-divider" }))
+				.append($("<li>").html($("<button>", { "class": "dropdown-item", "type": "button", "onclick": "deletePokemon()" }).html("<img src='/img/ui/delete.svg' class='me-2' style='height:18px'><span class='align-middle'>Delete " + displayName + "</span>")))
+			)
+		);
 	$cardFooterBottom.append($cardFooterBottomLeft, $cardFooterBottomRight);
 	$cardFooter.append($cardFooterTop, $cardFooterBottom);
 

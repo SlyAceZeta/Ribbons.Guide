@@ -59,6 +59,10 @@ a:not(.btn) {
 .list-group {
 	--bs-list-group-action-color: var(--bs-list-group-color);
 }
+.dropdown-menu {
+	--bs-dropdown-divider-bg: var(--bs-border-color);
+	--bs-dropdown-border-color: var(--bs-border-color);
+}
 
 /* lumioseday overrides */
 [data-bs-theme="lumioseday"] {
