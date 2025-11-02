@@ -704,7 +704,7 @@ function importFiles(files, delay = 150, i = 0){
 			//metdate:
 			//metlocation:
 			//pokerus:
-			//achievements: DONE
+			//achievements:
 			//notes:		DONE
 		};
 		
@@ -787,7 +787,24 @@ function importFiles(files, delay = 150, i = 0){
 		newP.achievements = [];
 		newP.notes = "";
 		
-		$("#modalImportPokemonList").append("<div class='my-1 py-1 border-top text-break'>" + JSON.stringify(newP) + "</div>");
+		var speciesSprite = newP.species;
+		var genderDirectory = (getPokemonData(speciesSprite, "femsprite") && newP.gender === "female") ? "female/" : "";
+		if(speciesSprite.startsWith("alcremie-") && newP.shiny){
+			var alcremieRegex = /caramel|lemon|matcha|mint|rainbow|rubycream|rubyswirl|salted|vanilla/;
+			speciesSprite = speciesSprite.replace(alcremieRegex, "").replace("--", "-").replace("-strawberry", "");
+		}
+		
+		$("#modalImportPokemonList").append("<div class='my-1 py-1 border-top d-flex'>" +
+			"<img src='img/pkmn/" + (newP.shiny ? "shiny" : "regular") + "/" + genderDirectory + speciesSprite + ".png' class='me-2' style='height:80px'>" + 
+			"<div>" + 
+				"<div class='fs-5'>" +
+					"<img src='img/balls/" + newP.ball + ".png' style='height:24px'>" +
+					"<span class='ms-2 fw-bold align-middle'>" + newP.nickname + "</span>" +
+				"</div>" +
+				"<div>OT: " + newP.trainername + "&nbsp;&nbsp;&nbsp;ID: " + newP.trainerid + "</div>" +
+				"<div>Origin Game: " + (newP.origingame ? getLanguage(getGameData(newP.origingame, "names")) : "<em>unknown</em>") + "</div>" +
+			"</div>" +
+		"</div>");
 	});
 	
 	i++;
