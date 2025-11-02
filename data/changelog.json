@@ -1,5 +1,13 @@
 [
 	{
+		"date": "2 November 2025",
+		"changes": [
+			"Improved error messages when loading the app",
+			"Edit, copy, and delete buttons are now in a dropdown to prevent accidental clicks/taps and to free up space for a card button in the future",
+			"Added error messages when trying to save a Pokémon with a language of origin it cannot have"
+		]
+	},
+	{
 		"date": "1 November 2025",
 		"changes": [
 			"Added Latin American Spanish support! Any term that does not have an official translation will display the European Spanish term instead",
