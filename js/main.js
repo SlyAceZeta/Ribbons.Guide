@@ -1766,7 +1766,7 @@ function createCard(p, id){
 		}
 		for(let tp in titlePositions){
 			if(titlePositions[tp] == "prefix"){
-				var titleText = titleRibbon.titles[tp];
+				var titleText = getLanguage(titleRibbon.titles, tp);
 				if(p.title == "partner-ribbon"){
 					titleText = titleText.replace(/\[.*?\]/, p.trainername);
 				}
@@ -1778,7 +1778,7 @@ function createCard(p, id){
 	if(p.title && p.title !== "None"){
 		for(let tp in titlePositions){
 			if(titlePositions[tp] == "suffix"){
-				var titleText = titleRibbon.titles[tp];
+				var titleText = getLanguage(titleRibbon.titles, tp);
 				if(p.title == "partner-ribbon"){
 					titleText = titleText.replace(/\[.*?\]/, p.trainername);
 				}
