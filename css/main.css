@@ -11,7 +11,7 @@
 /* body */
 body {
 	background-attachment: fixed;
-	margin-bottom: 6em;
+	margin-bottom: 7em;
 }
 
 /* spinner */
@@ -125,6 +125,7 @@ body {
 	right: 10px;
 	bottom: 20px;
 	display: none;
+	z-index: 999;
 }
 .btn-group > .btn:hover {
 	z-index: auto;

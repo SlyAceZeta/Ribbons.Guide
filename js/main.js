@@ -1934,10 +1934,10 @@ function createCard(p, id){
 		.append($("<button>", { "class": "btn btn-link p-0 ms-2 lh-1 align-text-bottom card-sortable-handle" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/move.svg", "alt": "Move", "title": "Drag to re-order" })))
 		.append($("<div>", { "class": "card-footer-dropdown dropdown d-inline ms-2 align-text-bottom" })
 			.append($("<button>", { "class": "btn btn-link dropdown-toggle p-0 border-0", "type": "button", "data-bs-toggle": "dropdown", "aria-expanded": "false" }).html($("<img>", { "src": "img/ui/more.svg", "alt": "More", "title": "More actions" })))
-			.append($("<ul>", { "class": "dropdown-menu dropdown-menu-end" })
+			.append($("<ul>", { "class": "dropdown-menu dropdown-menu-end py-1" })
 				.append($("<li>").html($("<button>", { "class": "dropdown-item", "type": "button", "onclick": "editPokemon()" }).html("<img src='/img/ui/edit.svg' class='me-2' style='height:18px'><span class='align-middle'>Edit " + displayName + "</span>")))
 				.append($("<li>").html($("<button>", { "class": "dropdown-item", "type": "button", "onclick": "copyPokemon()" }).html("<img src='/img/ui/copy.svg' class='me-2' style='height:18px'><span class='align-middle'>Copy " + displayName + "</span>")))
-				.append($("<hr>", { "class": "dropdown-divider" }))
+				.append($("<hr>", { "class": "dropdown-divider my-1" }))
 				.append($("<li>").html($("<button>", { "class": "dropdown-item", "type": "button", "onclick": "deletePokemon()" }).html("<img src='/img/ui/delete.svg' class='me-2' style='height:18px'><span class='align-middle'>Delete " + displayName + "</span>")))
 			)
 		);
