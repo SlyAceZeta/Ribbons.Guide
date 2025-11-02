@@ -7,7 +7,7 @@
 			"Moved the filter button to its own row in preparation for future updates to the new row",
 			"Edit, copy, and delete buttons are now in a dropdown to prevent accidental clicks/taps and to free up space for a card button in the future",
 			"This update was re-released to fix some style issues with the dropdowns",
-			"This update was re-re-released to fix a critical bug with a Pokémon's selected title"
+			"This update was re-re-released to fix a critical bug with a Pokémon's selected title (thanks Nexus and Einar!)"
 		]
 	},
 	{
