@@ -1602,7 +1602,7 @@ function ribbonChecklist(){
 				} else {
 					var moveTo = $(".last-chance, .scale-marks").first().prev().html().toString();
 					if(lastChanceGen == Number(getGameData(currentGame, "gen")) && lastChanceGen < 8){
-						$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").html(cardData.name + " can safely move to " + moveTo + " but " + pronounSubject + " cannot leave Gen " + translations.arabicToRoman[lastChanceGen-1] + " yet.");
+						$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").html(cardData.name + " can safely move to " + moveTo + " but " + pronounSubject + " cannot leave Gen " + lastChanceGen + " yet.");
 					} else if((lastChanceGen == 8 || lastChanceGen == 9) && compatibleGames.includes("plza") && currentGame !== "plza"){
 						// if this Pokemon can travel to Z-A, warn that it shouldn't
 						$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").html(cardData.name + " can safely move to " + moveTo + " but " + pronounSubject + " cannot enter Legends: Z-A yet.");
@@ -2774,7 +2774,7 @@ function initRun(){
 				$ribbonRowInfoDesc.append($("<small>", { "class": "d-none" }).text(getLanguage(ribbons[r].descs, lang)));
 			}
 			var ribbonGen = ribbons[r].gen;
-			var ribbonGenText = translations.arabicToRoman[ribbonGen-1];
+			var ribbonGenText = "Gen " + ribbonGen;
 			if(ribbons[r].available && r !== "jumbo-mark" && r !== "mini-mark"){
 				formRibbonSelect = formRibbonSelect + ", #filterFormTargetRibbons";
 				var ribbonGenMax = ribbonGen;
@@ -2786,16 +2786,20 @@ function initRun(){
 					}
 				}
 				if(ribbonGenMax > ribbonGen){
-					ribbonGenText = ribbonGenText + " – " + translations.arabicToRoman[ribbonGenMax-1];
+					ribbonGenText = "Gens " + ribbonGen + " – " + ribbonGenMax;
 				}
 				$ribbonRowInfoName.append($("<span>", { "class": "badge text-bg-primary rounded-pill ms-2" }).text(ribbonGenText));
 				if(!r.startsWith("contest-memory-ribbon") && !r.startsWith("battle-memory-ribbon")){
 					$ribbonRow.addClass("ribbon-gen-" + ribbonGen);
 				}
 			} else {
-				$ribbonRowInfoName.append($("<span>", { "class": "badge text-bg-secondary rounded-pill" }).text("E"));
-				if(r == "jumbo-mark" || r== "mini-mark"){
-					formRibbonSelect = formRibbonSelect + ", #filterFormTargetRibbons";
+				if(ribbons[r].mark && r !== "mightiest-mark"){
+					$ribbonRowInfoName.append($("<span>", { "class": "badge text-bg-secondary rounded-pill" }).text("Encounter"));
+					if(r == "jumbo-mark" || r== "mini-mark"){
+						formRibbonSelect = formRibbonSelect + ", #filterFormTargetRibbons";
+					}
+				} else {
+					$ribbonRowInfoName.append($("<span>", { "class": "badge text-bg-secondary rounded-pill" }).text("Event"));
 				}
 			}
 			if(!r.startsWith("contest-memory-ribbon") && !r.startsWith("battle-memory-ribbon")){

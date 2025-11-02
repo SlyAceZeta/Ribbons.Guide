@@ -382,12 +382,12 @@
 										<div class="dropdown ms-2 flex-grow-1">
 											<button class="btn btn-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">Toggle all...</button>
 											<ul id="pokemonFormRibbonToggle" class="dropdown-menu dropdown-menu-end">
-												<li><button class="dropdown-item" type="button" data-gen="3">introduced in Gen III</button></li>
-												<li><button class="dropdown-item" type="button" data-gen="4">introduced in Gen IV</button></li>
-												<li><button class="dropdown-item" type="button" data-gen="6">introduced in Gen VI</button></li>
-												<li><button class="dropdown-item" type="button" data-gen="7">introduced in Gen VII</button></li>
-												<li><button class="dropdown-item" type="button" data-gen="8">introduced in Gen VIII</button></li>
-												<li><button class="dropdown-item" type="button" data-gen="9">introduced in Gen IX</button></li>
+												<li><button class="dropdown-item" type="button" data-gen="3">introduced in Gen 3</button></li>
+												<li><button class="dropdown-item" type="button" data-gen="4">introduced in Gen 4</button></li>
+												<li><button class="dropdown-item" type="button" data-gen="6">introduced in Gen 5</button></li>
+												<li><button class="dropdown-item" type="button" data-gen="7">introduced in Gen 6</button></li>
+												<li><button class="dropdown-item" type="button" data-gen="8">introduced in Gen 7</button></li>
+												<li><button class="dropdown-item" type="button" data-gen="9">introduced in Gen 8</button></li>
 											</ul>
 										</div>
 									</div>
@@ -405,14 +405,14 @@
 									<div class="col-6">
 										<label for="pokemonFormMetLevel" class="form-label">
 											<span class="align-middle">Met Level</span><!--
-											--><img class="align-middle ms-2 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="When a Pokémon enters <span class='text-nowrap'>Gen V</span> or leaves Virtual Console, its Current Level becomes its Met Level.">
+											--><img class="align-middle ms-2 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="When a Pokémon enters <span class='text-nowrap'>Gen 5</span> or leaves Virtual Console, its Current Level becomes its Met Level.">
 										</label>
 										<input type="number" class="form-control" id="pokemonFormMetLevel" min="1" max="100">
 									</div>
 									<div class="col-6">
 										<label for="pokemonFormMetDate" class="form-label">
 											<span class="align-middle">Met Date</span><!--
-											--><img class="align-middle ms-2 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="When a Pokémon enters <span class='text-nowrap'>Gen IV</span> or <span class='text-nowrap'>Gen V</span> or leaves Virtual Console, the DS/3DS system date becomes the Pokémon's Met Date.">
+											--><img class="align-middle ms-2 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="When a Pokémon enters <span class='text-nowrap'>Gen 4</span> or <span class='text-nowrap'>Gen 5</span> or leaves Virtual Console, the DS/3DS system date becomes the Pokémon's Met Date.">
 										</label>
 										<input type="date" class="form-control" id="pokemonFormMetDate">
 									</div>
@@ -730,8 +730,8 @@
 								<select class="form-select" id="settingsLanguage" aria-label="Language selection" data-minimum-results-for-search="Infinity"></select>
 							</div>
 							<div class="mb-2">
-								<label class="form-label" for="settingsExtraOriginMarks">Gen III/IV/V origin marks</label>
-								<select class="form-select" id="settingsExtraOriginMarks" aria-label="Gen III/IV/V origin marks" data-minimum-results-for-search="Infinity">
+								<label class="form-label" for="settingsExtraOriginMarks">Gen 3/4/5 origin marks</label>
+								<select class="form-select" id="settingsExtraOriginMarks" aria-label="Gen 3/4/5 origin marks" data-minimum-results-for-search="Infinity">
 									<option value="none">None (official)</option>
 									<option value="platforms">Platform icons</option>
 									<option value="roman">Roman numerals</option>
@@ -759,11 +759,11 @@
 							<div class="mb-3">
 								<label class="form-label" for="settingsOldRibbons">
 									<span class="align-middle">Old Battle/Contest Ribbons</span>
-									<img class="align-middle ms-1 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="These merge into the Memory Ribbons in Gen&nbsp;VI.">
+									<img class="align-middle ms-1 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="These merge into the Memory Ribbons in Gen&nbsp;6.">
 								</label>
 								<select class="form-select" id="settingsOldRibbons" aria-label="Old Battle/Contest Ribbons" data-minimum-results-for-search="Infinity">
 									<option value="always">Always show</option>
-									<option value="unmerged">Only show for Pokémon in Gen III–V</option>
+									<option value="unmerged">Only show for Pokémon in Gen 3/4/5</option>
 									<option value="never">Never show</option>
 								</select>
 							</div>
