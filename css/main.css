@@ -24,9 +24,6 @@ body {
 	height: 100vh;
 	background: var(--bs-body-bg);
 }
-#loading-spinner-info-text {
-	text-transform: uppercase;
-}
 #loading-spinner-info-progress {
 	width: 200px;
 	height: 7px;

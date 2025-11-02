@@ -464,7 +464,7 @@ function updateOldPokemon(p){
 }
 
 /* save backup */
-function saveBackup(){
+function saveBackup(name = "RibbonBackup"){
 	var backupObj = {};
 	backupObj.lastModified = localStorage.lastModified;
 	backupObj.settings = JSON.parse(localStorage.settings);
@@ -475,7 +475,7 @@ function saveBackup(){
 	var ele = document.createElement('a');
 	ele.href = URL.createObjectURL(blob);
 	ele.target = "_blank";
-	ele.download = "RibbonBackup.json";
+	ele.download = name + ".json";
 
 	document.body.appendChild(ele);
 	ele.click();
@@ -2568,8 +2568,20 @@ function initRun(){
 		$.getJSON("./data/ribbons.json"),
 		$.getJSON("./data/translations.json")
 	).fail(function(response, status, error){
-		var $errorimg = $("<img>", { "src": "./img/ui/cross.svg", "class": "mb-3" });
-		var $errortext = $("<div>", { "id": "loading-spinner-info-text", "class": "fw-bold", "role": "status" }).text("Data loading error: " + error);
+		var responseHTML = response.responseText;
+		var responseRegex = /<body[^>]*>([\s\S]*?)<\/body>/i;
+		var responseBody = responseHTML.match(responseRegex);
+		var responseText = "";
+		if(responseBody && responseBody.length > 1){
+			responseText = responseBody[1].trim();
+		}
+		var $errorimg = $("<img>", { "src": "./img/ui/cross.svg" });
+		var $errortext = $("<div>", { "class": "fw-bold", "role": "status" })
+			.append($("<div>", { "class": "my-3" }).html("<span class='text-uppercase'>Data loading error: " + error));
+		if(responseText.length > 1){
+			$errortext.append($("<div>", { "class": "mb-3" }).html(responseText));
+		}
+		$errortext.append($("<div>").html("Please inform Sly on <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a> or <a href='https://discord.gg/frv7dpWzDG'>Discord</a>."));
 		$("#loading-spinner-info").html($errorimg).append($errortext);
 	}).done(function(dataBalls, dataChangelog, dataGames, dataImportMap, dataOrigins, dataPokemon, dataRibbons, dataTranslations){
 		/* set variables */
@@ -3108,8 +3120,11 @@ function initRun(){
 			try {
 				$("#tracker-grid").append(createCard(userPokemon[p], p));
 			} catch(err) {
-				var $errorimg = $("<img>", { "src": "./img/ui/cross.svg", "class": "mb-3" });
-				var $errortext = $("<div>", { "id": "loading-spinner-info-text", "class": "fw-bold", "role": "status" }).html("Pokémon list error on Pokémon #" + p + "<br>" + err);
+				var $errorimg = $("<img>", { "src": "./img/ui/cross.svg" });
+				var $errortext = $("<div>", { "class": "fw-bold", "role": "status" })
+					.append($("<div>", { "class": "my-3" }).html("<span class='text-uppercase'>Pokémon list error on Pokémon #" + p + "</span><br>" + err))
+					.append($("<div>").html("Please inform Sly on <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a> or <a href='https://discord.gg/frv7dpWzDG'>Discord</a>."))
+					.append($("<div>").html("Attach the following file with your report (tap or left-click to download): <button type='button' class='btn btn-link p-0 fw-bold align-baseline' onclick='saveBackup(\"RibbonError\")'>RibbonError.json</button>"));
 				$("#loading-spinner-info").html($errorimg).append($errortext);
 				return;
 			}
