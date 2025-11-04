@@ -517,6 +517,83 @@
 				</div>
 			</div>
 		</div>
+		<!-- Multi-Edit Pokemon Modals -->
+		<div class="modal fade" id="modalPokemonFormMulti" tabindex="-1" aria-labelledby="modalPokemonFormMultiLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalPokemonFormMultiLabel">Edit Multiple Pokémon</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body p-3 pt-2">
+						<div class="row g-2">
+							<div class="col-6">
+								<label for="pokemonFormMultiCurrentGame" class="form-label">Current Game</label>
+								<select class="form-select" id="pokemonFormMultiCurrentGame" data-placeholder="">
+									<option value="nochange">No change</option>
+								</select>
+							</div>
+							<div class="col-6">
+								<label for="pokemonFormMultiBox" class="form-label">Box</label>
+								<select class="form-select" id="pokemonFormMultiBox"></select>
+							</div>
+						</div>
+						<div class="row g-2">
+							<div class="col-lg-6 mt-3 my-lg-3 order-1 order-lg-2">Please note that the Scale checkbox and any Ribbon checkboxes will <em>add</em> them to your selected Pokémon.</div>
+							<div class="col-lg-6 my-3 my-lg-auto order-2 order-lg-1">
+								<label for="pokemonFormMultiScale" class="form-label mb-lg-0">Scale</label>
+								<div class="form-check d-flex align-items-center">
+									<input class="form-check-input mt-0 me-2" type="checkbox" id="pokemonFormMultiScale">
+									<label class="form-check-label" for="pokemonFormMultiScale">
+										<span>Checked in Mesagoza (SV)</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="row g-2">
+							<div class="w-auto flex-grow-1">
+								<input id="pokemonFormMultiRibbonSearch" type="search" class="form-control w-100" placeholder="Search Ribbons/Marks..." aria-label="Search">
+							</div>
+							<div class="w-auto d-flex">
+								<div id="switchRibbonFormMultiView" class="btn-group" role="group" aria-label="Switch Ribbon form view">
+									<input type="radio" class="btn-check" name="switchRibbonFormMultiViewBtn" id="switchRibbonFormMultiViewBtn-grid" value="grid">
+									<label class="btn btn-outline-secondary border-end-0" for="switchRibbonFormMultiViewBtn-grid"><img class="align-text-bottom" src="img/ui/condensed.svg" alt="Grid"></label>
+									<input type="radio" class="btn-check" name="switchRibbonFormMultiViewBtn" id="switchRibbonFormMultiViewBtn-list" value="list" checked>
+									<label class="btn btn-outline-secondary border-start-0" for="switchRibbonFormMultiViewBtn-list"><img class="align-text-bottom" src="img/ui/expanded.svg" alt="List"></label>
+								</div>
+							</div>
+						</div>
+						<div class="row g-2">
+							<div class="col-12 mt-3">
+								<ul id="pokemonFormMultiRibbons" class="list-group overflow-y-scroll border">
+									<li id="pokemonFormMultiRibbons-none" class="list-group-item border-0 text-center d-none">
+										<div>No results found</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-primary" id="modalPokemonFormMultiSave">Save</button>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Cancel">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="modalPokemonMultiOutcome" tabindex="-1" aria-labelledby="modalPokemonMultiOutcomeLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalPokemonMultiOutcomeLabel">Saved Multiple Pokémon</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body"></div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- Filter Modal -->
 		<div class="modal fade" id="modalFilterForm" tabindex="-1" aria-labelledby="modalFilterFormLabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered">

@@ -812,7 +812,7 @@ function importFiles(files, delay = 150, i = 0){
 	
 	setTimeout(() => {
 		importFiles(files, delay, i);
-    }, delay);
+	}, delay);
 }
 
 function getGameData(game, field, doNotSearch = false){
@@ -1187,9 +1187,9 @@ function updatePopovers(){
 
 function selectPokemon(event){
 	if($(event.target).closest(".popover").length){
-        event.stopPropagation();
-        return;
-    }
+		event.stopPropagation();
+		return;
+	}
 	
 	if(selectState == "selecting"){
 		var $cardContainer = $(event.target).parents(".col");
@@ -1217,7 +1217,7 @@ function selectPokemon(event){
 			}
 		}
 		
-		var selectedPokemonNum = $(".card-header-checkbox:checked").length;
+		var selectedPokemonNum = $("#tracker-grid .col.selected").length;
 		$("#offcanvasSelectEditNum").text(selectedPokemonNum);
 		var selectDisabled = (selectedPokemonNum === 0);
 		$("#offcanvasSelectEdit, #offcanvasSelectDelete").prop("disabled", selectDisabled);
@@ -1390,6 +1390,116 @@ function savePokemon(edit = false){
 	}
 }
 
+function saveMultiplePokemon(){
+	selectState = "saving";
+	var newRibbons = [];
+	$("#pokemonFormMultiRibbons input:checked").each(function(){
+		newRibbons.push($(this).attr("id").replace("pokemonFormMultiRibbon-", ""));
+	});
+	var selectedPokemonNum = $("#tracker-grid .col.selected").length;
+	var saveConfirmInitial = "Are you sure you want to make all of the following changes to " + selectedPokemonNum + " Pokémon?\n"
+	var saveConfirm = saveConfirmInitial;
+	var newCurrentGame = $("#pokemonFormMultiCurrentGame").val();
+	var newCurrentGameLabel = $("#pokemonFormMultiCurrentGame option[value="+newCurrentGame+"]").text();
+	if(newCurrentGame !== "nochange"){
+		saveConfirm = saveConfirm + "\n- Moved to " + newCurrentGameLabel;
+	}
+	var newBox = $("#pokemonFormMultiBox").val();
+	if(newBox !== "nochange"){
+		if(newBox == "-1"){
+			saveConfirm = saveConfirm + "\n- Removed from box";
+		} else {
+			saveConfirm = saveConfirm + "\n- Changed box to " + $("#pokemonFormMultiBox option[value="+newBox+"]").text();
+		}
+	}
+	var scaleChecked = $("#pokemonFormMultiScale").prop("checked");
+	if(scaleChecked){
+		saveConfirm = saveConfirm + "\n- Checked scale in Mesagoza";
+	}
+	if(newRibbons.length){
+		saveConfirm = saveConfirm + "\n- Up to " + newRibbons.length + " new Ribbon";
+		if(newRibbons.length > 1){
+			saveConfirm = saveConfirm + "s";
+		}
+	}
+	if(saveConfirm == saveConfirmInitial){
+		alert("You didn't make any changes!");
+		return;
+	}
+	if(confirm(saveConfirm)){
+		multiSaveSuccess = 0;
+		multiSaveWarn = 0;
+		multiSaveFail = 0;
+		$("#tracker-grid .col.selected").each(function(){
+			var pokemonID = Number($(this)[0].dataset.pokemonId);
+			var newP = JSON.parse(JSON.stringify(userPokemon[pokemonID]));
+			if(newCurrentGame !== "nochange"){
+				var gameChangeValid = true;
+				var originalgame = newP.currentgame;
+				newP.currentgame = newCurrentGame;
+				if(getPokemonData(newP.species, "cannotStore") && getGameData(newP.currentgame, "storage", true)){
+					gameChangeValid = false;
+				} else if(!getGameData(newP.currentgame, "storage", true) && !getPokemonData(newP.species, "games").includes(newP.currentgame)) {
+					// temporary until Z-A HOME support when we add "plza" to pokemon.json
+					if(newP.currentgame == "plza"){
+						if(newP.originmark !== "plza"){
+							gameChangeValid = false;
+						}
+					} else {
+						gameChangeValid = false;
+					}
+				}
+				if(gameChangeValid){
+					multiSaveSuccess++;
+				} else {
+					newP.currentgame = originalgame;
+					if(newBox !== "nochange" || scaleChecked || newRibbons.length){
+						multiSaveWarn++;
+					} else {
+						multiSaveFail++;
+					}
+				}
+			} else {
+				multiSaveSuccess++;
+			}
+			if(newBox !== "nochange"){
+				newP.box = newBox;
+			}
+			if(scaleChecked){
+				newP.scale = true;
+			}
+			if(newRibbons.length){
+				for(var r in newRibbons){
+					if(!newP.ribbons.includes(newRibbons[r])){
+						newP.ribbons.push(newRibbons[r]);
+					}
+				}
+			}
+			userPokemon[pokemonID] = newP;
+			$("#tracker-grid .col[data-pokemon-id='" + pokemonID + "']").replaceWith(createCard(newP, pokemonID));
+		});
+		$("#offcanvasSelectEditNum").text("0");
+		$("#offcanvasSelectEdit, #offcanvasSelectDelete").prop("disabled", true);
+		sortPokemonList();
+		filterPokemonList();
+		localStorage.pokemon = JSON.stringify(userPokemon);
+		updateModifiedDate();
+		updatePopovers();
+		modalPokemonFormMulti.toggle();
+		$("#modalPokemonMultiOutcome .modal-body").html("");
+		if(multiSaveSuccess){
+			$("#modalPokemonMultiOutcome .modal-body").append($("<p>").text("Successfully updated " + multiSaveSuccess + " Pokémon!"));
+		}
+		if(multiSaveWarn){
+			$("#modalPokemonMultiOutcome .modal-body").append($("<p>").text(multiSaveWarn + " Pokémon were updated, but their Current Game was not changed because they cannot travel to " + newCurrentGameLabel + "."));
+		}
+		if(multiSaveFail){
+			$("#modalPokemonMultiOutcome .modal-body").append($("<p>").text(multiSaveFail + " Pokémon were not updated because they cannot travel to " + newCurrentGameLabel + "."));
+		}
+		new bootstrap.Modal("#modalPokemonMultiOutcome").toggle();
+	}
+}
+
 function editPokemon(event){
 	resetPokemonForm(true);
 	var cardContainer = $(event.target).parents(".col");
@@ -1471,6 +1581,29 @@ function deletePokemon(event){
 			}
 		});
 		$("#sectionTrackerCountTotal").text(userPokemon.length);
+	}
+}
+
+function deleteMultiplePokemon(){
+	var selectedPokemonNum = $("#tracker-grid .col.selected").length;
+	if(confirm("Are you sure you want to delete " + selectedPokemonNum + " Pokémon? This is permanent!")){
+		$("#tracker-grid .col.selected").each(function(){
+			var pokemonID = Number($(this)[0].dataset.pokemonId);
+			$(this).fadeOut(250, function(){
+				$(this).remove();
+			});
+			userPokemon.splice(pokemonID, 1);
+			$("#tracker-grid .col").each(function(){
+				if(Number(this.dataset.pokemonId) > pokemonID){
+					$(this).attr("data-pokemon-id", Number(this.dataset.pokemonId)-1);
+				}
+			});
+		});
+		localStorage.pokemon = JSON.stringify(userPokemon);
+		updateModifiedDate();
+		$("#sectionTrackerCountTotal").text(userPokemon.length);
+		$("#offcanvasSelectEditNum").text("0");
+		$("#offcanvasSelectEdit, #offcanvasSelectDelete").prop("disabled", true);
 	}
 }
 
@@ -2037,7 +2170,7 @@ function presetSettings(change = false){
 		$("#switchViewBtn-" + settings.CardView).prop("checked", true);
 	}
 	if(settings.RibbonFormView){
-		$("#switchRibbonFormViewBtn-" + settings.RibbonFormView).prop("checked", true);
+		$("#switchRibbonFormViewBtn-" + settings.RibbonFormView + ", #switchRibbonFormMultiViewBtn-" + settings.RibbonFormView).prop("checked", true);
 	}
 	for(let i in toggles){
 		if(toggles[i]){
@@ -2098,6 +2231,36 @@ function resetPokemonForm(edit = false){
 	$("#pokemonFormTitle").val("None").trigger("change");
 	$("#pokemonFormRibbons li").removeClass("d-none");
 	$("#pokemonFormRibbons-none").addClass("d-none");
+}
+
+function resetPokemonFormMulti(){
+	$("#modalPokemonFormMulti input").each(function(){
+		if($(this).attr("type") === "search"){
+			$(this).val("").trigger("change");
+		} else if($(this).attr("type") === "checkbox"){
+			$(this).prop("checked", false).trigger("change");
+		}
+	});
+	$("#modalPokemonFormMulti select").each(function(){
+		$(this).val("nochange").trigger("change");
+	});
+	$("#pokemonFormMultiRibbons li").removeClass("d-none");
+	$("#pokemonFormMultiRibbons-none").addClass("d-none");
+
+	/* re-populate boxes dropdown */
+	var $boxNoChange = $("<option>", { "value": "nochange" }).text("No change");
+	$("#pokemonFormMultiBox").html($boxNoChange);
+	
+	var $boxNone = $("<option>", { "value": "-1" }).text(getLanguage(translations.none));
+	for(var lang in translations.none){
+		$boxNone.attr("data-lang-" + lang, translations.none[lang]);
+	}
+	$("#pokemonFormMultiBox").append($boxNone);
+	
+	for(var b in userBoxes){
+		$("#pokemonFormMultiBox").append(new Option(userBoxes[b], b));
+	}
+	$("#pokemonFormMultiBox").val("nochange").trigger("change");
 }
 
 function relistFilterBoxes(){
@@ -2459,15 +2622,17 @@ function selectCustomOption(o){
 	} else if(result.indexOf("pokemonFormNature") > 0){
 		var $nature = $("<span>").text(getLanguage(natures[o.id]));
 		return $nature;
-	} else if(result.indexOf("pokemonFormBox") > 0 || result.indexOf("filterFormBox") > 0){
+	} else if(result.indexOf("pokemonFormBox") > 0 || result.indexOf("pokemonFormMultiBox") > 0 || result.indexOf("filterFormBox") > 0){
 		var $box = $("<span>");
 		var boxImage = "closed";
 		if(o.id == "-1"){
 			boxImage = "ball";
 		}
-		$box.append($("<img>", { "class": selectIconClass, "src": "img/ui/box-" + boxImage + ".png" }));
+		if(o.id !== "nochange") $box.append($("<img>", { "class": selectIconClass, "src": "img/ui/box-" + boxImage + ".png" }));
 		if(o.id == "-1"){
 			$box.append($("<span>").text(getLanguage(translations.none)));
+		} else if(o.id == "nochange") {
+			$box.append($("<span>").text("No change"));
 		} else {
 			$box.append($("<span>").text(userBoxes[o.id]));
 		}
@@ -2728,7 +2893,7 @@ function initRun(){
 				}
 			}
 			if(!games[g].combo){
-				$("#pokemonFormCurrentGame, #filterFormCurrentGame").append(new Option(getLanguage(games[g].names), g));
+				$("#pokemonFormCurrentGame, #pokemonFormMultiCurrentGame, #filterFormCurrentGame").append(new Option(getLanguage(games[g].names), g));
 			}
 		}
 		for(var lang in translations.languages){
@@ -2879,6 +3044,14 @@ function initRun(){
 			$ribbonRowLabel.append($ribbonRowInfo);
 			$ribbonRow.append($ribbonRowLabel);
 			$("#pokemonFormRibbons").append($ribbonRow);
+			
+			/* multi edit form */
+			var $ribbonRowMulti = $ribbonRow.clone(true);
+			var ribbonRowMultiHtml = $ribbonRowMulti[0].outerHTML;
+			ribbonRowMultiHtml = ribbonRowMultiHtml.replaceAll("pokemonFormRibbon", "pokemonFormMultiRibbon");
+			$ribbonRowMulti = $(ribbonRowMultiHtml);
+			$("#pokemonFormMultiRibbons").append($ribbonRowMulti);
+			
 			if(ribbons[r].titles){
 				var $titleOption = $("<option>", { "value": r }).text(getLanguage(ribbons[r].titles));
 				for(var lang in translations.languages){
@@ -2896,6 +3069,16 @@ function initRun(){
 			$("#pokemonFormNature").append($natureOption);
 		}
 		/* apply select2 dropdowns */
+		$("#pokemonFormMultiCurrentGame").select2({
+			matcher: selectCustomMatcher,
+			dropdownParent: $("#modalPokemonFormMulti")
+		});
+		$("#pokemonFormMultiBox").select2({
+			matcher: selectCustomMatcher,
+			templateSelection: selectCustomOption,
+			templateResult: selectCustomOption,
+			dropdownParent: $("#modalPokemonFormMulti")
+		});
 		$("#pokemonFormLanguage, #pokemonFormOriginGame, #pokemonFormCurrentGame").select2({
 			matcher: selectCustomMatcher,
 			dropdownParent: $("#pokemonFormSections")
@@ -2926,11 +3109,13 @@ function initRun(){
 		$("input[name='pokemonFormGender'], input[name='pokemonFormShiny']").on("change", function(){
 			updateFormSprite();
 		});
-		$("#pokemonFormRibbonSearch").on("input", function(){
+		$("#pokemonFormRibbonSearch, #pokemonFormMultiRibbonSearch").on("input", function(){
+			var openForm = "pokemonFormRibbons";
+			if(this.id == "pokemonFormMultiRibbonSearch") openForm = "pokemonFormMultiRibbons";
 			var searchText = $(this).val().normalize("NFC").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim();
 			if(searchText){
 				var matchedRibbons = 0;
-				$("#pokemonFormRibbons li").each(function(i, e){
+				$("#" + openForm + " li").each(function(i, e){
 					if(i !== 0){
 						var ribbonText = $(this).text().normalize("NFC").replace(/[\u0300-\u036f]/g, "").toUpperCase();
 						if(ribbonText.indexOf(searchText) > -1){
@@ -2942,13 +3127,13 @@ function initRun(){
 					}
 				});
 				if(matchedRibbons == 0){
-					$("#pokemonFormRibbons-none").removeClass("d-none");
+					$("#" + openForm + "-none").removeClass("d-none");
 				} else {
-					$("#pokemonFormRibbons-none").addClass("d-none");
+					$("#" + openForm + "-none").addClass("d-none");
 				}
 			} else {
-				$("#pokemonFormRibbons li").removeClass("d-none");
-				$("#pokemonFormRibbons-none").addClass("d-none");
+				$("#" + openForm + " li").removeClass("d-none");
+				$("#" + openForm + "-none").addClass("d-none");
 			}
 		});
 		$("#pokemonFormRibbons input[type='checkbox']").on("change", function(){
@@ -3403,8 +3588,10 @@ $(function(){
 		changeCardView($(this).prev().val());
 	});
 	/* ribbon form view listener */
-	$("#switchRibbonFormView label").on("click", function(){
-		changeRibbonFormView($(this).prev().val());
+	$("#switchRibbonFormView label, #switchRibbonFormMultiView label").on("click", function(){
+		var selectedValue = $(this).prev().val();
+		changeRibbonFormView(selectedValue);
+		$("#switchRibbonFormView input[value='" + selectedValue + "'], #switchRibbonFormMultiView input[value='" + selectedValue + "']").prop("checked", true);
 	});
 	/* checkbox listeners */
 	for(let i in toggles){
@@ -3414,6 +3601,10 @@ $(function(){
 	}
 	/* offcanvas listeners */
 	$("#offcanvasSelect").on("show.bs.offcanvas", function(){
+		// ensure buttons are disabled, prevent edge cases
+		$("#offcanvasSelectEditNum").text("0");
+		$("#offcanvasSelectEdit, #offcanvasSelectDelete").prop("disabled", true);
+		
 		$("#sectionTrackerButtonSelect").addClass("active").prop("aria-pressed", true);
 		$(".card-header-checkbox").prop({ "disabled": false }).removeClass("d-none");
 		$(".card-header img[src*='/balls']").addClass("d-none");
@@ -3438,6 +3629,13 @@ $(function(){
 		} else {
 			offcanvasSelect.show();
 		}
+	});
+	$("#offcanvasSelectEdit").on("click", function(){
+		resetPokemonFormMulti();
+		modalPokemonFormMulti.toggle();
+	});
+	$("#offcanvasSelectDelete").on("click", function(){
+		deleteMultiplePokemon();
 	});
 	$("#headerNavSettingsLink").on("click", function(){
 		modalSettings.toggle();
@@ -3467,6 +3665,15 @@ $(function(){
 		modalPokemonState = "default";
 		modalPokemonEditing = -1;
 	});
+	modalPokemonFormMulti = new bootstrap.Modal("#modalPokemonFormMulti");
+	$("#modalPokemonFormMulti").on("hide.bs.modal", function(e){
+		if(selectState !== "saving"){
+			if(!confirm("Are you sure you wish to cancel? All of your changes will be lost!")){
+				e.preventDefault();
+			}
+		}
+		selectState = "selecting";
+	});
 	$("#sectionTrackerButtonAdd").on("click", function(){
 		resetPokemonForm();
 		modalPokemonForm.toggle();
@@ -3486,6 +3693,9 @@ $(function(){
 	});
 	$("#modalPokemonFormSave").on("click", function(){
 		savePokemon(modalPokemonState === "editing");
+	});
+	$("#modalPokemonFormMultiSave").on("click", function(){
+		saveMultiplePokemon();
 	});
 	$("#modalFilterFormReset").on("click", function(){
 		resetFilterForm();

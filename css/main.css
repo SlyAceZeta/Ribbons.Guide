@@ -303,30 +303,37 @@ label[for="pokemonFormShiny-square"] {
 	display: inline-block;
 	vertical-align: middle;
 }
-#pokemonFormSections-ribbons .list-group-item {
+#pokemonFormSections-ribbons .list-group-item,
+#pokemonFormMultiRibbons .list-group-item {
 	--bs-list-group-item-padding-x: 0.5rem;
 	--bs-list-group-item-padding-y: 0.5rem;
 }
-#pokemonFormRibbons {
+#pokemonFormRibbons,
+#pokemonFormMultiRibbons {
 	max-height: 400px;
 }
-#pokemonFormRibbons img {
+#pokemonFormRibbons img,
+#pokemonFormMultiRibbons img {
 	width: 42px;
 	height: auto;
 }
-#pokemonFormRibbons input {
+#pokemonFormRibbons input,
+#pokemonFormMultiRibbons input {
 	width: 18px;
 	height: 18px;
 }
-#pokemonFormRibbons img.pokemonFormRibbon-memory-sync {
+#pokemonFormRibbons img.pokemonFormRibbon-memory-sync,
+#pokemonFormMultiRibbons img.pokemonFormMultiRibbon-memory-sync {
 	width: 20px;
 	margin-right: 2px;
 }
-.form-check-input:disabled ~ .pokemonFormRibbon-memory-sync {
+.form-check-input:disabled ~ .pokemonFormRibbon-memory-sync,
+.form-check-input:disabled ~ .pokemonFormMultiRibbon-memory-sync {
 	opacity: 0.5;
 }
 @media (min-width: 992px) {
-	#pokemonFormRibbons img.pokemonFormRibbon-memory-sync {
+	#pokemonFormRibbons img.pokemonFormRibbon-memory-sync,
+	#pokemonFormMultiRibbons img.pokemonFormMultiRibbon-memory-sync {
 		width: 23px;
 		margin-left: 2px;
 		margin-right: 5px;
@@ -336,6 +343,7 @@ label[for="pokemonFormShiny-square"] {
 	display: none;
 }
 html[data-automemoryribbons="true"] .pokemonFormRibbon-memory-sync,
+html[data-automemoryribbons="true"] .pokemonFormMultiRibbon-memory-sync,
 html[data-automemoryribbons="true"] .auto-memory-ribbon {
 	display: inline;
 }
@@ -347,7 +355,16 @@ html[data-automemoryribbons="true"] #pokemonFormRibbon-contest-memory-ribbon:che
 html[data-automemoryribbons="true"] #pokemonFormRibbon-contest-memory-ribbon-gold:checked + .pokemonFormRibbon-memory-sync,
 html[data-automemoryribbons="true"] #pokemonFormRibbon-battle-memory-ribbon:checked + .pokemonFormRibbon-memory-sync,
 html[data-automemoryribbons="true"] #pokemonFormRibbon-battle-memory-ribbon-gold:checked + .pokemonFormRibbon-memory-sync,
-html[data-automemoryribbons="false"] .pokemonFormRibbon-memory-sync {
+html[data-automemoryribbons="false"] .pokemonFormRibbon-memory-sync,
+html[data-automemoryribbons="true"] #pokemonFormMultiRibbon-contest-memory-ribbon:not(:checked),
+html[data-automemoryribbons="true"] #pokemonFormMultiRibbon-contest-memory-ribbon-gold:not(:checked),
+html[data-automemoryribbons="true"] #pokemonFormMultiRibbon-battle-memory-ribbon:not(:checked),
+html[data-automemoryribbons="true"] #pokemonFormMultiRibbon-battle-memory-ribbon-gold:not(:checked),
+html[data-automemoryribbons="true"] #pokemonFormMultiRibbon-contest-memory-ribbon:checked + .pokemonFormMultiRibbon-memory-sync,
+html[data-automemoryribbons="true"] #pokemonFormMultiRibbon-contest-memory-ribbon-gold:checked + .pokemonFormMultiRibbon-memory-sync,
+html[data-automemoryribbons="true"] #pokemonFormMultiRibbon-battle-memory-ribbon:checked + .pokemonFormMultiRibbon-memory-sync,
+html[data-automemoryribbons="true"] #pokemonFormMultiRibbon-battle-memory-ribbon-gold:checked + .pokemonFormMultiRibbon-memory-sync,
+html[data-automemoryribbons="false"] .pokemonFormMultiRibbon-memory-sync {
 	display: none;
 }
 #filterformTargetGamesLGPE {
@@ -389,13 +406,16 @@ html[data-automemoryribbons="false"] .pokemonFormRibbon-memory-sync {
 	margin-right: .25rem;
 }
 /* grid ribbon selection */
-html[data-ribbonformview="grid"] #pokemonFormRibbons {
+html[data-ribbonformview="grid"] #pokemonFormRibbons,
+html[data-ribbonformview="grid"] #pokemonFormMultiRibbons {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 }
 html[data-ribbonformview="grid"] #pokemonFormRibbons input,
-html[data-ribbonformview="grid"] #pokemonFormRibbons img.pokemonFormRibbon-memory-sync {
+html[data-ribbonformview="grid"] #pokemonFormRibbons img.pokemonFormRibbon-memory-sync,
+html[data-ribbonformview="grid"] #pokemonFormMultiRibbons input,
+html[data-ribbonformview="grid"] #pokemonFormMultiRibbons img.pokemonFormMultiRibbon-memory-sync {
 	width: 24px;
 	height: 24px;
 	position: absolute;
@@ -404,26 +424,34 @@ html[data-ribbonformview="grid"] #pokemonFormRibbons img.pokemonFormRibbon-memor
 	z-index: 1;
 	margin: 0!important;
 }
-html[data-ribbonformview="grid"] #pokemonFormRibbons input {
+html[data-ribbonformview="grid"] #pokemonFormRibbons input,
+html[data-ribbonformview="grid"] #pokemonFormMultiRibbons input {
 	display: none;
 }
-html[data-ribbonformview="grid"] #pokemonFormRibbons input:checked {
+html[data-ribbonformview="grid"] #pokemonFormRibbons input:checked,
+html[data-ribbonformview="grid"] #pokemonFormMultiRibbons input:checked {
 	display: inline;
 }
-html[data-ribbonformview="grid"] #pokemonFormRibbons .w-100 {
+html[data-ribbonformview="grid"] #pokemonFormRibbons .w-100,
+html[data-ribbonformview="grid"] #pokemonFormMultiRibbons .w-100 {
 	display: none;
 }
-html[data-ribbonformview="grid"] #pokemonFormRibbons label.w-100 {
+html[data-ribbonformview="grid"] #pokemonFormRibbons label.w-100,
+html[data-ribbonformview="grid"] #pokemonFormMultiRibbons label.w-100 {
 	display: flex !important;
 }
-html[data-ribbonformview="grid"] #pokemonFormRibbons img.me-1 {
+html[data-ribbonformview="grid"] #pokemonFormRibbons img.me-1,
+html[data-ribbonformview="grid"] #pokemonFormMultiRibbons img.me-1 {
 	margin-right: 0!important;
 }
 html[data-ribbonformview="grid"] #pokemonFormRibbons input:checked ~ label img,
-html[data-automemoryribbons="true"] .pokemonFormRibbon-memory-sync ~ label img {
+html[data-automemoryribbons="true"] .pokemonFormRibbon-memory-sync ~ label img,
+html[data-ribbonformview="grid"] #pokemonFormMultiRibbons input:checked ~ label img,
+html[data-automemoryribbons="true"] .pokemonFormMultiRibbon-memory-sync ~ label img {
 	opacity: 0.25;
 }
-html[data-ribbonformview="grid"] #pokemonFormRibbons li.d-flex {
+html[data-ribbonformview="grid"] #pokemonFormRibbons li.d-flex,
+html[data-ribbonformview="grid"] #pokemonFormMultiRibbons li.d-flex {
 	width: 40px;
 	box-sizing: content-box;
 	border-radius: inherit;
