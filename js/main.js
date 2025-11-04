@@ -1475,9 +1475,7 @@ function saveMultiplePokemon(){
 					multiSaveFail++;
 				}
 			} else {
-				if(newCurrentGame == "nochange"){
-					multiSaveSuccess++;
-				} else if(gameChangeValid){
+				if(newCurrentGame == "nochange" || gameChangeValid){
 					multiSaveSuccess++;
 				} else {
 					multiSaveWarn++;
@@ -1505,7 +1503,11 @@ function saveMultiplePokemon(){
 			$("#modalPokemonMultiOutcome .modal-body").append($("<p>").text(multiSaveWarn + " Pokémon were updated, but their Current Game was not changed because they cannot travel to " + newCurrentGameLabel + "."));
 		}
 		if(multiSaveFail){
-			$("#modalPokemonMultiOutcome .modal-body").append($("<p>").text(multiSaveFail + " Pokémon were not updated because they cannot travel to " + newCurrentGameLabel + "."));
+			if(newRibbons.length){
+				$("#modalPokemonMultiOutcome .modal-body").append($("<p>").text(multiSaveFail + " Pokémon were not updated because they already had every selected Ribbon <em>and</em> cannot travel to " + newCurrentGameLabel + "."));
+			} else {
+				$("#modalPokemonMultiOutcome .modal-body").append($("<p>").text(multiSaveFail + " Pokémon were not updated because they cannot travel to " + newCurrentGameLabel + "."));
+			}
 		}
 		new bootstrap.Modal("#modalPokemonMultiOutcome").toggle();
 	}
