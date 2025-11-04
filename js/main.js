@@ -1,5 +1,5 @@
 /* globals */
-var balls, changelog, games, gameOrder = {}, importmap, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default";
+var balls, changelog, games, gameOrder = {}, importmap, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off";
 // TODO: add tutorials
 /* clear old local storage properties if still present */
 /* except theme which gets special handling */
@@ -1185,6 +1185,45 @@ function updatePopovers(){
 	})
 }
 
+function selectPokemon(event){
+	if($(event.target).closest(".popover").length){
+        event.stopPropagation();
+        return;
+    }
+	
+	if(selectState == "selecting"){
+		var $cardContainer = $(event.target).parents(".col");
+		var $cardCheckbox = $cardContainer.find(".card-header-checkbox");
+		
+		var isCheckboxClick = event.target.classList.contains("card-header-checkbox");
+		var tagWhitelist = ["div", "span"];
+		if(!isCheckboxClick && !tagWhitelist.includes(event.target.tagName.toLowerCase())){
+			return;
+		}
+		
+		if(isCheckboxClick){
+			if($cardCheckbox.prop("checked")){
+				$cardContainer.addClass("selected");
+			} else {
+				$cardContainer.removeClass("selected");
+			}
+		} else {
+			var newCheckboxState = !$cardCheckbox.prop("checked");
+			$cardCheckbox.prop("checked", newCheckboxState);
+			if(newCheckboxState){
+				$cardContainer.addClass("selected");
+			} else {
+				$cardContainer.removeClass("selected");
+			}
+		}
+		
+		var selectedPokemonNum = $(".card-header-checkbox:checked").length;
+		$("#offcanvasSelectEditNum").text(selectedPokemonNum);
+		var selectDisabled = (selectedPokemonNum === 0);
+		$("#offcanvasSelectEdit, #offcanvasSelectDelete").prop("disabled", selectDisabled);
+	}
+}
+
 function savePokemon(edit = false){
 	modalPokemonState = "saving";
 	var newRibbons = [];
@@ -1351,7 +1390,7 @@ function savePokemon(edit = false){
 	}
 }
 
-function editPokemon(){
+function editPokemon(event){
 	resetPokemonForm(true);
 	var cardContainer = $(event.target).parents(".col");
 	var pokemonID = cardContainer[0].dataset.pokemonId;
@@ -1395,7 +1434,7 @@ function editPokemon(){
 	modalPokemonForm.toggle();
 }
 
-function copyPokemon(){
+function copyPokemon(event){
 	var cardContainer = $(event.target).parents(".col");
 	var pokemonID = Number(cardContainer[0].dataset.pokemonId);
 	var pokemonName = cardContainer.find(".card-header-name").text();
@@ -1415,7 +1454,7 @@ function copyPokemon(){
 	}
 }
 
-function deletePokemon(){
+function deletePokemon(event){
 	var cardContainer = $(event.target).parents(".col");
 	var pokemonID = Number(cardContainer[0].dataset.pokemonId);
 	var pokemonName = cardContainer[0].dataset.name;
@@ -1435,7 +1474,7 @@ function deletePokemon(){
 	}
 }
 
-function ribbonChecklist(){
+function ribbonChecklist(event){
 	var $cardContainer = $(event.target).parents(".col");
 	var cardData = $cardContainer[0].dataset;
 
@@ -1446,7 +1485,7 @@ function ribbonChecklist(){
 
 	// top info - name
 	var $cardName = $("<div>").html($cardContainer.find(".card-header-fullname").html());
-	$cardName.find("img").remove();
+	$cardName.find("img, input").remove();
 	$("#modalRibbonChecklistInfo-name").html($cardName.html());
 
 	// for alerts
@@ -1733,7 +1772,7 @@ function createCard(p, id){
 			$cardCol.attr({ "data-evolution-warning": ribbonLists.evolutionWarning.pokemon });
 		}
 	}
-	var $cardContainer = $("<div>", { "class": "card border-0" });
+	var $cardContainer = $("<div>", { "class": "card border-0", "onclick": "selectPokemon(event)" });
 
 	/* sections */
 	var $cardHeader = $("<div>", { "class": "card-header d-flex justify-content-between" });
@@ -1742,6 +1781,7 @@ function createCard(p, id){
 
 	/* header */
 	var $cardHeaderLeft = $("<div>", { "class": "card-header-fullname" });
+	var $cardHeaderCheckbox = $("<input>", { "type": "checkbox", "class": "card-header-checkbox form-check-input me-2 d-none", "aria-label": "Select " + displayName, "disabled": true });
 	var $cardHeaderBallMain = $("<img>", { "class": "align-text-top me-2", "src": "img/balls/" + p.ball + ".png", "alt": getLanguage(balls[p.ball]), "title": getLanguage(balls[p.ball]) });
 	var $cardHeaderBallStrange = "";
 	if(p.currentgame && ((p.currentgame !== "pla" && p.currentgame !== "home" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
@@ -1755,7 +1795,7 @@ function createCard(p, id){
 			}
 		}
 	}
-	$cardHeaderLeft.append($cardHeaderBallMain, $cardHeaderBallStrange);
+	$cardHeaderLeft.append($cardHeaderCheckbox, $cardHeaderBallMain, $cardHeaderBallStrange);
 	var $cardHeaderLeftName = $("<span>", { "class": "align-baseline" });
 	var titleRibbon;
 	var titlePositions = {};
@@ -1813,7 +1853,7 @@ function createCard(p, id){
 			$cardHeaderTitle.attr("title", "<div>" + $cardHeaderTitle.attr("title") + "</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons[p.title].titles) + ")</div>");
 		}
 	}
-	var $cardHeaderButton = $("<button>", { "type": "button", "class": "btn btn-link p-0 ms-1 position-relative", "onclick": "ribbonChecklist()", "aria-label": "Ribbon Checklist", "title": "Ribbon Checklist" })
+	var $cardHeaderButton = $("<button>", { "type": "button", "class": "btn btn-link p-0 ms-1 position-relative", "onclick": "ribbonChecklist(event)", "aria-label": "Ribbon Checklist", "title": "Ribbon Checklist" })
 		.append($("<span>", { "class": "ribbon-checklist-warning-badge position-absolute translate-middle bg-danger rounded-circle" }).html($("<span>", {"class": "visually-hidden"}).text("Warnings")));
 	$cardHeaderRight.append($cardHeaderTitle, $cardHeaderButton);
 
@@ -1956,10 +1996,10 @@ function createCard(p, id){
 		.append($("<div>", { "class": "card-footer-dropdown dropdown d-inline ms-2 align-text-bottom" })
 			.append($("<button>", { "class": "btn btn-link dropdown-toggle p-0 border-0", "type": "button", "data-bs-toggle": "dropdown", "data-bs-display": "static", "aria-expanded": "false" }).html($("<img>", { "src": "img/ui/more.svg", "alt": "More", "title": "More actions" })))
 			.append($("<ul>", { "class": "dropdown-menu dropdown-menu-end py-1" })
-				.append($("<li>").html($("<button>", { "class": "dropdown-item", "type": "button", "onclick": "editPokemon()" }).html("<img src='/img/ui/edit.svg' class='me-2' style='height:18px'><span class='align-middle'>Edit " + displayName + "</span>")))
-				.append($("<li>").html($("<button>", { "class": "dropdown-item", "type": "button", "onclick": "copyPokemon()" }).html("<img src='/img/ui/copy.svg' class='me-2' style='height:18px'><span class='align-middle'>Copy " + displayName + "</span>")))
+				.append($("<li>").html($("<button>", { "class": "dropdown-item", "type": "button", "onclick": "editPokemon(event)" }).html("<img src='/img/ui/edit.svg' class='me-2' style='height:18px'><span class='align-middle'>Edit " + displayName + "</span>")))
+				.append($("<li>").html($("<button>", { "class": "dropdown-item", "type": "button", "onclick": "copyPokemon(event)" }).html("<img src='/img/ui/copy.svg' class='me-2' style='height:18px'><span class='align-middle'>Copy " + displayName + "</span>")))
 				.append($("<hr>", { "class": "dropdown-divider my-1" }))
-				.append($("<li>").html($("<button>", { "class": "dropdown-item", "type": "button", "onclick": "deletePokemon()" }).html("<img src='/img/ui/delete.svg' class='me-2' style='height:18px'><span class='align-middle'>Delete " + displayName + "</span>")))
+				.append($("<li>").html($("<button>", { "class": "dropdown-item", "type": "button", "onclick": "deletePokemon(event)" }).html("<img src='/img/ui/delete.svg' class='me-2' style='height:18px'><span class='align-middle'>Delete " + displayName + "</span>")))
 			)
 		);
 	$cardFooterBottom.append($cardFooterBottomLeft, $cardFooterBottomRight);
@@ -2509,8 +2549,8 @@ function boxRow(name){
 		.append($("<img>", { "class": "ms-1 align-middle img-box", "src": "img/ui/box-closed.png", "alt": "Box", "title": "Box" }))
 		.append($("<span>", { "class": "ms-2 align-middle" }).text(name));
 	var $boxRowRight = $("<div>", { "class": "box-controls" })
-		.append($("<button>", { "class": "btn btn-link p-0 lh-1 align-middle", "onclick": "editBox()" }).html($("<img>", { "class": "align-middle", "src": "img/ui/edit.svg", "alt": "Edit", "title": "Edit" })))
-		.append($("<button>", { "class": "ms-2 btn btn-link p-0 lh-1 align-middle", "onclick": "deleteBox()" }).html($("<img>", { "class": "align-middle", "src": "img/ui/delete.svg", "alt": "Delete", "title": "Delete" })));
+		.append($("<button>", { "class": "btn btn-link p-0 lh-1 align-middle", "onclick": "editBox(event)" }).html($("<img>", { "class": "align-middle", "src": "img/ui/edit.svg", "alt": "Edit", "title": "Edit" })))
+		.append($("<button>", { "class": "ms-2 btn btn-link p-0 lh-1 align-middle", "onclick": "deleteBox(event)" }).html($("<img>", { "class": "align-middle", "src": "img/ui/delete.svg", "alt": "Delete", "title": "Delete" })));
 	$boxRowInner.append($boxRowLeft, $boxRowRight);
 	$boxRow.append($boxRowInner);
 	return $boxRow;
@@ -2557,13 +2597,13 @@ function createOrEditBox(edit = null, editID = -1){
 	}
 }
 
-function editBox(){
+function editBox(event){
 	var listContainer = $(event.target).parents(".list-group-item");
 	var boxID = listContainer.index() - 1;
 	createOrEditBox(userBoxes[boxID], boxID);
 }
 
-function deleteBox(){
+function deleteBox(event){
 	var listContainer = $(event.target).parents(".list-group-item");
 	var boxID = listContainer.index() - 1;
 	if(confirm("Are you sure you want to delete " + userBoxes[boxID] + "? All of the Pokémon in " + userBoxes[boxID] + " will become unsorted.")){
@@ -3323,6 +3363,8 @@ function initRun(){
 
 /* init */
 $(function(){
+	/* set offcanvas */
+	offcanvasSelect = new bootstrap.Offcanvas("#offcanvasSelect");
 	/* set modals */
 	modalSettings = new bootstrap.Modal("#modalSettings");
 	modalData = new bootstrap.Modal("#modalData");
@@ -3370,7 +3412,33 @@ $(function(){
 			changeCheckToggle(i, $(this).prop("checked") ? "true" : "false", true);
 		});
 	}
+	/* offcanvas listeners */
+	$("#offcanvasSelect").on("show.bs.offcanvas", function(){
+		$("#sectionTrackerButtonSelect").addClass("active").prop("aria-pressed", true);
+		$(".card-header-checkbox").prop({ "disabled": false }).removeClass("d-none");
+		$(".card-header img[src*='/balls']").addClass("d-none");
+		selectState = "selecting";
+	});
+	$("#offcanvasSelect").on("hide.bs.offcanvas", function(){
+		$("#sectionTrackerButtonSelect").removeClass("active").prop("aria-pressed", false);
+		$(".card-header-checkbox").addClass("d-none");
+		$(".card-header img[src*='/balls']").removeClass("d-none");
+		$("#tracker-grid .col.selected").removeClass("selected");
+		selectState = "off";
+	});
+	$("#offcanvasSelect").on("hidden.bs.offcanvas", function(){
+		$(".card-header-checkbox").prop({ "checked": false, "disabled": true });
+		$("#offcanvasSelectEditNum").text("0");
+		$("#offcanvasSelectEdit, #offcanvasSelectDelete").prop("disabled", true);
+	});
 	/* button listeners */
+	$("#sectionTrackerButtonSelect").on("click", function(){
+		if($(this).hasClass("active")){
+			offcanvasSelect.hide();
+		} else {
+			offcanvasSelect.show();
+		}
+	});
 	$("#headerNavSettingsLink").on("click", function(){
 		modalSettings.toggle();
 	});

@@ -131,6 +131,20 @@ body {
 	z-index: auto;
 }
 
+/* offcanvas */
+#offcanvasSelect {
+	--bs-offcanvas-height: 3.5rem;
+	box-shadow: -0.5em -0.5em 1em var(--bs-body-color);
+}
+#offcanvasSelect .offcanvas-body {
+	overflow-y: hidden;
+}
+@media (max-width: 991.98px){
+	#offcanvasSelect {
+		--bs-offcanvas-height: 3.75rem;
+	}
+}
+
 /* modals */
 .modal-content {
 	border: none;
@@ -450,11 +464,18 @@ a:not(:hover):not(:focus) {
 	--bs-card-cap-padding-x: 0.75em;
 	height: 100%;
 }
+#tracker-grid .selected .card {
+	box-shadow: 0px 0px 7px var(--bs-body-color);
+}
 .card-header,
 .card-footer {
 	--bs-card-cap-bg: var(--rg-card-cap-bg);
 	--bs-card-cap-color: var(--rg-card-color);
 	border: none;
+}
+.card-header-checkbox {
+	width: 20px;
+	height: 20px;
 }
 .card-header img,
 .card-footer img,

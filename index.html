@@ -154,6 +154,10 @@
 			</div>
 			<div class="sectionTrackerButtonRow d-flex justify-content-between mt-2 px-3">
 				<div>
+					<button id="sectionTrackerButtonSelect" class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button">
+						<img src="img/ui/select.svg" alt="Select" class="p-1 p-md-0">
+						<span class="align-middle d-none d-md-inline">Select Pokémon</span>
+					</button>
 				</div>
 				<div class="d-flex align-items-center">
 					<div id="sectionTrackerCount">
@@ -175,6 +179,16 @@
 			<div id="tracker-grid" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mt-2 mb-4"></div>
 		</div>
 		<button type="button" class="btn btn-primary rounded-circle button-to-top fixed-bottom"><img src="img/ui/arrow-up.svg" alt="Scroll to Top"></button>
+		<!-- Select Pokémon offcanvas -->
+		<div class="offcanvas offcanvas-top" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasSelect" aria-label="Selected Pokémon">
+			<div class="offcanvas-body d-flex justify-content-between align-items-center py-2">
+				<div class="btn-group mx-auto" role="group" aria-label="Selected Pokémon controls">
+					<button type="button" class="btn btn-primary btn-sm" id="offcanvasSelectEdit" disabled>Edit <span id="offcanvasSelectEditNum">0</span> Pokémon</button>
+					<button type="button" class="btn btn-outline-danger btn-sm ms-1" id="offcanvasSelectDelete" disabled>Delete</button>
+				</div>
+				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+		</div>
 		<!-- Add/Edit Pokemon Modal -->
 		<div class="modal fade" id="modalPokemonForm" tabindex="-1" aria-labelledby="modalPokemonFormLabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered">
