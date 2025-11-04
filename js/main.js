@@ -1397,7 +1397,7 @@ function saveMultiplePokemon(){
 		newRibbons.push($(this).attr("id").replace("pokemonFormMultiRibbon-", ""));
 	});
 	var selectedPokemonNum = $("#tracker-grid .col.selected").length;
-	var saveConfirmInitial = "Are you sure you want to make all of the following changes to " + selectedPokemonNum + " Pokémon?\n"
+	var saveConfirmInitial = "Are you sure you want to make all of the following changes to " + selectedPokemonNum + " Pokémon?\n";
 	var saveConfirm = saveConfirmInitial;
 	var newCurrentGame = $("#pokemonFormMultiCurrentGame").val();
 	var newCurrentGameLabel = $("#pokemonFormMultiCurrentGame option[value="+newCurrentGame+"]").text();
@@ -1427,7 +1427,7 @@ function saveMultiplePokemon(){
 		return;
 	}
 	if(confirm(saveConfirm)){
-		var multiSaveSuccess = 0, multiSaveWarn = 0, multiSaveFail = 0, multiSaveNone = 0;
+		var multiSaveSuccess = 0, multiSaveSome = 0, multiSaveFail = 0, multiSaveNone = 0;
 		$("#tracker-grid .col.selected").each(function(){
 			var pokemonID = Number($(this)[0].dataset.pokemonId);
 			var newP = JSON.parse(JSON.stringify(userPokemon[pokemonID]));
@@ -1451,11 +1451,15 @@ function saveMultiplePokemon(){
 					newP.currentgame = originalgame;
 				}
 			}
-			if(newBox !== "nochange"){
+			var changedBox = false;
+			if(newBox !== "nochange" && newP.box !== newBox){
 				newP.box = newBox;
+				changedBox = true;
 			}
-			if(scaleChecked){
+			var changedScale = false;
+			if(scaleChecked && newP.scale != true){
 				newP.scale = true;
+				changedScale = true;
 			}
 			var changedAnyRibbons = false;
 			if(newRibbons.length){
@@ -1466,49 +1470,77 @@ function saveMultiplePokemon(){
 					}
 				}
 			}
-			if(newBox == "nochange" && !scaleChecked && !changedAnyRibbons){
+			var changedAnything = false;
+			if(!changedBox && !changedScale && !changedAnyRibbons){
+				// no changes were made, except for the game, let's check that now
 				if(newCurrentGame == "nochange"){
+					// game change was not even requested
+					// but in order to reach this, another change had to have been requested
 					multiSaveNone++;
 				} else if(gameChangeValid){
+					// game change was requested and valid, success
 					multiSaveSuccess++;
+					changedAnything = true;
 				} else {
+					// game change was requested and failed
+					// we will check whether other requests were made (and failed) in the error message
 					multiSaveFail++;
 				}
 			} else {
+				// box, scale, or ribbons were changed
+				changedAnything = true;
 				if(newCurrentGame == "nochange" || gameChangeValid){
+					// if a game change was not requested, or was requested and was valid, success
 					multiSaveSuccess++;
 				} else {
-					multiSaveWarn++;
+					// if a game change was requested and failed
+					multiSaveSome++;
 				}
 			}
-			userPokemon[pokemonID] = newP;
-			$("#tracker-grid .col[data-pokemon-id='" + pokemonID + "']").replaceWith(createCard(newP, pokemonID));
+			if(changedAnything){
+				userPokemon[pokemonID] = newP;
+				$("#tracker-grid .col[data-pokemon-id='" + pokemonID + "']").replaceWith(createCard(newP, pokemonID));
+			}
 		});
-		$("#offcanvasSelectEditNum").text("0");
-		$("#offcanvasSelectEdit, #offcanvasSelectDelete").prop("disabled", true);
-		sortPokemonList();
-		filterPokemonList();
-		localStorage.pokemon = JSON.stringify(userPokemon);
-		updateModifiedDate();
-		updatePopovers();
+		
+		if(multiSaveSuccess || multiSaveSome){
+			$("#offcanvasSelectEditNum").text("0");
+			$("#offcanvasSelectEdit, #offcanvasSelectDelete").prop("disabled", true);
+			
+			sortPokemonList();
+			filterPokemonList();
+			localStorage.pokemon = JSON.stringify(userPokemon);
+			updateModifiedDate();
+			updatePopovers();
+			offcanvasSelect.hide(); // because of card overwrites
+		}
+		
 		modalPokemonFormMulti.toggle();
+		
 		$("#modalPokemonMultiOutcome .modal-body").html("");
+		var outcomeHTML = [];
 		if(multiSaveSuccess){
-			$("#modalPokemonMultiOutcome .modal-body").append($("<p>").text("Successfully updated " + multiSaveSuccess + " Pokémon!"));
+			outcomeHTML.push($("<p>").text("Successfully updated " + multiSaveSuccess + " Pokémon!"));
 		}
 		if(multiSaveNone){
-			$("#modalPokemonMultiOutcome .modal-body").append($("<p>").text(multiSaveNone + " Pokémon were not updated because they already had every selected Ribbon."));
+			var pluralOne = multiSaveNone === 1 ? "was" : "were";
+			var pluralTwo = multiSaveNone === 1 ? "it" : "they";
+			outcomeHTML.push($("<p>").text(multiSaveNone + " Pokémon " + pluralOne + " not updated because " + pluralTwo + " already had every selected change."));
 		}
-		if(multiSaveWarn){
-			$("#modalPokemonMultiOutcome .modal-body").append($("<p>").text(multiSaveWarn + " Pokémon were updated, but their Current Game was not changed because they cannot travel to " + newCurrentGameLabel + "."));
+		if(multiSaveSome){
+			var pluralOne = multiSaveSome === 1 ? "was" : "were";
+			var pluralTwo = multiSaveSome === 1 ? "its" : "their";
+			outcomeHTML.push($("<p>").text(multiSaveSome + " Pokémon " + pluralOne + " updated, but " + pluralTwo + " Current Game was not changed because they cannot travel to " + newCurrentGameLabel + "."));
 		}
 		if(multiSaveFail){
-			if(newRibbons.length){
-				$("#modalPokemonMultiOutcome .modal-body").append($("<p>").text(multiSaveFail + " Pokémon were not updated because they already had every selected Ribbon <em>and</em> cannot travel to " + newCurrentGameLabel + "."));
-			} else {
-				$("#modalPokemonMultiOutcome .modal-body").append($("<p>").text(multiSaveFail + " Pokémon were not updated because they cannot travel to " + newCurrentGameLabel + "."));
-			}
+			var pluralOne = multiSaveFail === 1 ? "was" : "were";
+			var pluralTwo = multiSaveFail === 1 ? "it" : "they";
+			var changesAddon = (newBox == "nochange" || !scaleChecked && !newRibbons.length)
+				? pluralTwo + " already had every selected change, except the Current Game; "
+				: "";
+			outcomeHTML.push($("<p>").html(multiSaveFail + " Pokémon " + pluralOne + " not updated because " + changesAddon + pluralTwo + " cannot travel to " + newCurrentGameLabel + "."));
 		}
+		$("#modalPokemonMultiOutcome .modal-body").append(outcomeHTML);
 		new bootstrap.Modal("#modalPokemonMultiOutcome").toggle();
 	}
 }
@@ -3680,12 +3712,11 @@ $(function(){
 	});
 	modalPokemonFormMulti = new bootstrap.Modal("#modalPokemonFormMulti");
 	$("#modalPokemonFormMulti").on("hide.bs.modal", function(e){
-		if(selectState !== "saving"){
+		if(selectState == "selecting"){
 			if(!confirm("Are you sure you wish to cancel? All of your changes will be lost!")){
 				e.preventDefault();
 			}
 		}
-		selectState = "selecting";
 	});
 	$("#sectionTrackerButtonAdd").on("click", function(){
 		resetPokemonForm();
