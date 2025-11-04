@@ -432,9 +432,13 @@ a:not(:hover):not(:focus) {
 	height: 22px;
 	filter: var(--rg-icon-filter);
 }
+.sectionTrackerButtonRow #sectionTrackerButtonImport img {
+	height: 26px;
+}
 @media (max-width: 767.98px){
-	.sectionTrackerButtonRow img {
-		height: 24px;
+	.sectionTrackerButtonRow img,
+	.sectionTrackerButtonRow #sectionTrackerButtonImport img {
+		height: 26px;
 	}
 }
 
