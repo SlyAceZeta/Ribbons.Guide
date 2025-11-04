@@ -1337,6 +1337,7 @@ function savePokemon(edit = false){
 		} else {
 			userPokemon.push(newP);
 			$("#tracker-grid").append(createCard(newP, userPokemon.length-1));
+			$("#sectionTrackerCountTotal").text(userPokemon.length);
 		}
 		sortPokemonList();
 		filterPokemonList();
@@ -1409,6 +1410,7 @@ function copyPokemon(){
 			}
 		});
 		cardContainer.after(createCard(pokemonToCopy, pokemonID+1));
+		$("#sectionTrackerCountTotal").text(userPokemon.length);
 		updatePopovers();
 	}
 }
@@ -1429,6 +1431,7 @@ function deletePokemon(){
 				$(this).attr("data-pokemon-id", Number(this.dataset.pokemonId)-1);
 			}
 		});
+		$("#sectionTrackerCountTotal").text(userPokemon.length);
 	}
 }
 
@@ -2085,8 +2088,7 @@ function resetFilterForm(relistBoxes = false){
 			$(this).val("").trigger("change");
 		}
 	});
-	$("#tracker-grid .col").show();
-	filterBubble();
+	filterPokemonList();
 	filterState = "default";
 }
 
@@ -2298,14 +2300,24 @@ function filterPokemon(p, classes, data){
 }
 
 function filterPokemonList(){
-	$("#tracker-grid .col").each(function(){
-		var pokemonToFilter = userPokemon[this.dataset.pokemonId];
-		if(filterPokemon(pokemonToFilter, this.classList, this.dataset)){
-			$(this).show();
-		} else {
-			$(this).hide();
-		}
-	});
+	if(filterState == "default" && Object.keys(activeFilters).length){
+		var pokemonNumFiltered = 0;
+		$("#tracker-grid .col").each(function(){
+			var pokemonToFilter = userPokemon[this.dataset.pokemonId];
+			if(filterPokemon(pokemonToFilter, this.classList, this.dataset)){
+				$(this).show();
+				pokemonNumFiltered++;
+			} else {
+				$(this).hide();
+			}
+		});
+		$("#sectionTrackerCountAll").addClass("d-none");
+		$("#sectionTrackerCountNotAll").removeClass("d-none").find("#sectionTrackerCountNotAllNum").text(pokemonNumFiltered);
+	} else {
+		$("#tracker-grid .col").show();
+		$("#sectionTrackerCountAll").removeClass("d-none");
+		$("#sectionTrackerCountNotAll").addClass("d-none");
+	}
 	filterBubble();
 }
 
@@ -3042,13 +3054,8 @@ function initRun(){
 				}
 			}
 			if(filterState == "default"){
-				if(Object.keys(activeFilters).length){
-					filterPokemonList();
-				} else {
-					$("#tracker-grid .col").show();
-				}
+				filterPokemonList();
 			}
-			filterBubble();
 		});
 		$("#filterFormSort").on("change", function(){
 			activeSort = $(this).val();
@@ -3181,6 +3188,7 @@ function initRun(){
 				return;
 			}
 		}
+		$("#sectionTrackerCountTotal").text(userPokemon.length);
 		updatePopovers();
 		sortablePokemon = new Sortable($("#tracker-grid")[0], {
 			handle: ".card-sortable-handle",
