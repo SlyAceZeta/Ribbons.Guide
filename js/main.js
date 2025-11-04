@@ -1427,14 +1427,12 @@ function saveMultiplePokemon(){
 		return;
 	}
 	if(confirm(saveConfirm)){
-		multiSaveSuccess = 0;
-		multiSaveWarn = 0;
-		multiSaveFail = 0;
+		var multiSaveSuccess = 0, multiSaveWarn = 0, multiSaveFail = 0, multiSaveNone = 0;
 		$("#tracker-grid .col.selected").each(function(){
 			var pokemonID = Number($(this)[0].dataset.pokemonId);
 			var newP = JSON.parse(JSON.stringify(userPokemon[pokemonID]));
+			var gameChangeValid = true;
 			if(newCurrentGame !== "nochange"){
-				var gameChangeValid = true;
 				var originalgame = newP.currentgame;
 				newP.currentgame = newCurrentGame;
 				if(getPokemonData(newP.species, "cannotStore") && getGameData(newP.currentgame, "storage", true)){
@@ -1449,18 +1447,9 @@ function saveMultiplePokemon(){
 						gameChangeValid = false;
 					}
 				}
-				if(gameChangeValid){
-					multiSaveSuccess++;
-				} else {
+				if(!gameChangeValid){
 					newP.currentgame = originalgame;
-					if(newBox !== "nochange" || scaleChecked || newRibbons.length){
-						multiSaveWarn++;
-					} else {
-						multiSaveFail++;
-					}
 				}
-			} else {
-				multiSaveSuccess++;
 			}
 			if(newBox !== "nochange"){
 				newP.box = newBox;
@@ -1468,11 +1457,30 @@ function saveMultiplePokemon(){
 			if(scaleChecked){
 				newP.scale = true;
 			}
+			var changedAnyRibbons = false;
 			if(newRibbons.length){
 				for(var r in newRibbons){
 					if(!newP.ribbons.includes(newRibbons[r])){
 						newP.ribbons.push(newRibbons[r]);
+						changedAnyRibbons = true;
 					}
+				}
+			}
+			if(newBox == "nochange" && !scaleChecked && !changedAnyRibbons){
+				if(newCurrentGame == "nochange"){
+					multiSaveNone++;
+				} else if(gameChangeValid){
+					multiSaveSuccess++;
+				} else {
+					multiSaveFail++;
+				}
+			} else {
+				if(newCurrentGame == "nochange"){
+					multiSaveSuccess++;
+				} else if(gameChangeValid){
+					multiSaveSuccess++;
+				} else {
+					multiSaveWarn++;
 				}
 			}
 			userPokemon[pokemonID] = newP;
@@ -1489,6 +1497,9 @@ function saveMultiplePokemon(){
 		$("#modalPokemonMultiOutcome .modal-body").html("");
 		if(multiSaveSuccess){
 			$("#modalPokemonMultiOutcome .modal-body").append($("<p>").text("Successfully updated " + multiSaveSuccess + " Pokémon!"));
+		}
+		if(multiSaveNone){
+			$("#modalPokemonMultiOutcome .modal-body").append($("<p>").text(multiSaveNone + " Pokémon were not updated because they already had every selected Ribbon."));
 		}
 		if(multiSaveWarn){
 			$("#modalPokemonMultiOutcome .modal-body").append($("<p>").text(multiSaveWarn + " Pokémon were updated, but their Current Game was not changed because they cannot travel to " + newCurrentGameLabel + "."));
