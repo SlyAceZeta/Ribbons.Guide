@@ -1,43 +1,43 @@
 {
 	"home": {
 		"names": {
-			"en": "HOME (Gen VIII/Scarlet/Violet)",
-			"es-es": "HOME (Gen VIII/Escarlata/Púrpura)",
-			"fr": "HOME (Gen VIII/Écarlate/Violet)",
-			"de": "HOME (Gen VIII/Karmesin/Purpur)",
-			"it": "HOME (Gen VIII/Scarlatto/Violetto)",
-			"ja": "HOME (Gen VIII/スカーレット/バイオレット)",
-			"ko": "HOME (Gen VIII/스칼렛/바이올렛)",
-			"zh-Hans": "HOME (Gen VIII/朱/紫)",
-			"zh-Hant": "HOME (Gen VIII/朱/紫)"
+			"en": "HOME (Gen 8/Scarlet/Violet)",
+			"es-es": "HOME (Gen 8/Escarlata/Púrpura)",
+			"fr": "HOME (Gen 8/Écarlate/Violet)",
+			"de": "HOME (Gen 8/Karmesin/Purpur)",
+			"it": "HOME (Gen 8/Scarlatto/Violetto)",
+			"ja": "HOME (Gen 8/スカーレット/バイオレット)",
+			"ko": "HOME (Gen 8/스칼렛/바이올렛)",
+			"zh-Hans": "HOME (Gen 8/朱/紫)",
+			"zh-Hant": "HOME (Gen 8/朱/紫)"
 		},
 		"gen": 8,
 		"storage": true
 	},
 	"bank7": {
 		"names": {
-			"en": "Bank (Gen VII)",
-			"es-es": "Banco (Gen VII)",
-			"fr": "Banque (Gen VII)",
-			"it": "Banca (Gen VII)",
-			"ja": "バンク (Gen VII)",
-			"ko": "뱅크 (Gen VII)",
-			"zh-Hans": "宝可梦虚拟银行 (Gen VII)",
-			"zh-Hant": "寶可夢虛擬銀行 (Gen VII)"
+			"en": "Bank (Gen 7)",
+			"es-es": "Banco (Gen 7)",
+			"fr": "Banque (Gen 7)",
+			"it": "Banca (Gen 7)",
+			"ja": "バンク (Gen 7)",
+			"ko": "뱅크 (Gen 7)",
+			"zh-Hans": "宝可梦虚拟银行 (Gen 7)",
+			"zh-Hant": "寶可夢虛擬銀行 (Gen 7)"
 		},
 		"gen": 7,
 		"storage": true
 	},
 	"bank": {
 		"names": {
-			"en": "Bank (Gen VI)",
-			"es-es": "Banco (Gen VI)",
-			"fr": "Banque (Gen VI)",
-			"it": "Banca (Gen VI)",
-			"ja": "バンク (Gen VI)",
-			"ko": "뱅크 (Gen VI)",
-			"zh-Hans": "宝可梦虚拟银行 (Gen VI)",
-			"zh-Hant": "寶可夢虛擬銀行 (Gen VI)"
+			"en": "Bank (Gen 6)",
+			"es-es": "Banco (Gen 6)",
+			"fr": "Banque (Gen 6)",
+			"it": "Banca (Gen 6)",
+			"ja": "バンク (Gen 6)",
+			"ko": "뱅크 (Gen 6)",
+			"zh-Hans": "宝可梦虚拟银行 (Gen 6)",
+			"zh-Hant": "寶可夢虛擬銀行 (Gen 6)"
 		},
 		"gen": 6,
 		"storage": true

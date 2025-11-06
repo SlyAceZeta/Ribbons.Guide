@@ -165,7 +165,7 @@ if(settings.OldRibbons){
 	changeOldRibbons("unmerged");
 }
 
-/* change Gen III/IV/V origin marks */
+/* change Gen 3/4/5 origin marks */
 function changeExtraOriginMarks(o){
 	changeSetting("ExtraOriginMarks", o);
 	$("html").attr("data-extraoriginmarks", o);
@@ -1025,15 +1025,15 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 								}
 							}
 						} else if(ribbon == "footprint-ribbon"){
-							// if Pokemon can to go to Gen IV, it can always earn this
+							// if Pokemon can to go to Gen 4, it can always earn this
 							if(ribbonGen !== 4){
-								// if Pokemon is voiceless and can go to Gen VIII, it can always earn this
+								// if Pokemon is voiceless and can go to Gen 8, it can always earn this
 								var voiceless = getPokemonData(dex, "voiceless");
 								if(!(ribbonGen == 8 && voiceless) || ((dex === "beldum" || dex === "metang") && (originGame === "scar" || originGame === "vio")) ){
 									// otherwise, Footprint relies on Met Level < 71
 									// Beldum and Metang are voiceless, but Metagross is not, and Beldum can be met as high as Lv.74 in SV DLC, so evolving to Metagross will also disqualify it
 									var currentLevelBelow71 = currentLevel < 71;
-									// Met Level changes upon entering Gen V or leaving Virtual Console
+									// Met Level changes upon entering Gen 5 or leaving Virtual Console
 									if(currentGen < 5 || virtualConsole){
 										if(currentLevelBelow71){
 											// Pokemon's current level is < 71
@@ -1050,7 +1050,7 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 											continue;
 										}
 									} else {
-										// Pokemon has left Gen V and Virtual Console, so Met Level is now permanently set
+										// Pokemon has left Gen 5 and Virtual Console, so Met Level is now permanently set
 										if(metLevel){
 											// user has set Met Level
 											if(metLevel > 70){
@@ -1066,7 +1066,7 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 											// user has not set Met Level, let's try to determine it automatically
 											// Pokemon from GO must have Met Level < 50 and can always earn Footprint
 											if(originGame !== "go"){
-												// Pokemon in Gen V+ with Current Level < 71 must also have Met Level < 71 and can always earn Footprint
+												// Pokemon in Gen 5+ with Current Level < 71 must also have Met Level < 71 and can always earn Footprint
 												if(!currentLevelBelow71){
 													// we cannot automatically determine Met Level, warn the user as such (including Beldum/Metang case)
 													// before we warn the user as such, let's check if the ribbon will appear for the Pokemon in BDSP--if so, no warning is necessary
@@ -1698,8 +1698,8 @@ function ribbonChecklist(event){
 		for(var w in ribbonWarnings){
 			var warningText = "unknown warning";
 			if(ribbonWarnings[w] == "winning-ribbon") warningText = "If " + cardData.name + " reaches Lv.51, the Winning Ribbon will become unavailable!";
-			if(ribbonWarnings[w] == "footprint-gen4") warningText = "If " + cardData.name + " reaches Lv.71 before transferring to Gen&nbsp;V, the Footprint Ribbon will only be available in Gen&nbsp;IV!";
-			if(ribbonWarnings[w] == "footprint-virtualconsole") warningText = "If " + cardData.name + " reaches Lv.71 before transferring to Gen&nbsp;VII, the Footprint Ribbon will become unavailable!";
+			if(ribbonWarnings[w] == "footprint-gen4") warningText = "If " + cardData.name + " reaches Lv.71 before transferring to Gen&nbsp;5, the Footprint Ribbon will only be available in Gen&nbsp;4!";
+			if(ribbonWarnings[w] == "footprint-virtualconsole") warningText = "If " + cardData.name + " reaches Lv.71 before transferring to Gen&nbsp;7, the Footprint Ribbon will become unavailable!";
 			if(ribbonWarnings[w] == "footprint-met-level") warningText = cardData.name + "'s Met Level has not been set. The availability of the Footprint Ribbon cannot be determined.";
 			if(ribbonWarnings[w] == "footprint-beldum") warningText = "Evolving " + cardData.name + " into Metagross will make the Footprint Ribbon unavailable!";
 			if(ribbonWarnings[w] == "master-rank-sv-2025") warningText = cardData.name + " can temporarily earn the Master Rank Ribbon during the current " + getLanguage(getGameData("sv", "names", true)) + " regulation. This ends on January&nbsp;3!";
@@ -1882,7 +1882,7 @@ function createCard(p, id){
 		}
 	}
 	if(p.currentgame){
-		// origin game is only needed for Gen III and Nincada
+		// origin game is only needed for Gen 3 and Nincada
 		var canGetRibbonLists = false;
 		if(p.origingame){
 			canGetRibbonLists = true;
