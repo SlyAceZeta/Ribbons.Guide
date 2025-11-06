@@ -1,9 +1,18 @@
 [
 	{
+		"date": "6 November 2025",
+		"changes": [
+			"Added the ability to edit or delete multiple Pokémon at once",
+			"Added count of how many Pokémon are filtered and how many are present in total",
+			"Improved level filter placeholders on Lumiose and Power Construct themes"
+		]
+	},
+	{
 		"date": "2 November 2025",
 		"changes": [
 			"Improved error messages when loading the app",
 			"Added error messages when trying to save a Pokémon with a language of origin it cannot have",
+			"Changed all Roman numerals for game generations to Arabic numerals",
 			"Moved the filter button to its own row in preparation for future updates to the new row",
 			"Edit, copy, and delete buttons are now in a dropdown to prevent accidental clicks/taps and to free up space for a card button in the future",
 			"This update was re-released to fix some style issues with the dropdowns",
