@@ -2,7 +2,7 @@
 	{
 		"date": "12 November 2025",
 		"changes": [
-			"While selecting multiple Pokémon, the site now disables the ability to add/edit/copy/delete Pokémon, modify boxes, or filter the list",
+			"While selecting multiple Pokémon, the site now disables the ability to add/edit/copy/delete individual Pokémon, modify boxes, or filter the list",
 			"Selecting multiple Pokémon now allows clicking/tapping on images such as sprites, but not Ribbons",
 			"Evolution warnings no longer appear if a Pokémon has all earnable Ribbons (thanks dawn-path!)",
 			"Fixed issue where copying or deleting Pokémon while a filter was active did not update the number of shown Pokémon",
