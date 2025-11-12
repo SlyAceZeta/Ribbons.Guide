@@ -3652,13 +3652,13 @@ $(function(){
 		
 		$("#sectionTrackerButtonSelect").addClass("active").prop("aria-pressed", true);
 		$(".card-header-checkbox").prop({ "disabled": false }).removeClass("d-none");
-		$(".card-header img[src*='/balls']").addClass("d-none");
+		$(".card-header img[src*='/balls'], .card-footer-dropdown").addClass("d-none");
 		selectState = "selecting";
 	});
 	$("#offcanvasSelect").on("hide.bs.offcanvas", function(){
 		$("#sectionTrackerButtonSelect").removeClass("active").prop("aria-pressed", false);
 		$(".card-header-checkbox").addClass("d-none");
-		$(".card-header img[src*='/balls']").removeClass("d-none");
+		$(".card-header img[src*='/balls'], .card-footer-dropdown").removeClass("d-none");
 		$("#tracker-grid .col.selected").removeClass("selected");
 		selectState = "off";
 	});
