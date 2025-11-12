@@ -1640,11 +1640,13 @@ function deleteMultiplePokemon(){
 			$(e).fadeOut(250, function(){
 				$(e).remove();
 				userPokemon.splice(pokemonID, 1);
+				
 				$("#tracker-grid .col").each(function(){
 					if(Number(this.dataset.pokemonId) > pokemonID){
 						$(this).attr("data-pokemon-id", Number(this.dataset.pokemonId)-1);
 					}
 				});
+				
 				removedCount++;
 				if(removedCount === selectedPokemonNum){
 					localStorage.pokemon = JSON.stringify(userPokemon);
