@@ -1133,7 +1133,7 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	}
 
 	// TODO: make this smarter: check for the game differences and report them, unless there are no applicable ribbons
-	if(evoWarnMon && evoWarnGen){
+	if(evoWarnMon && evoWarnGen && Object.keys(earnableRibbons).length !== 0){
 		var testGen = currentGen;
 		if(currentGame == "go") testGen = 7;
 		if(testGen <= parseInt(evoWarnGen)){
