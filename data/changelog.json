@@ -6,7 +6,8 @@
 			"Selecting multiple Pokémon now allows clicking/tapping on images such as sprites, but not Ribbons",
 			"Evolution warnings no longer appear if a Pokémon has all earnable Ribbons (thanks dawn-path!)",
 			"Fixed issue where copying or deleting Pokémon while a filter was active did not update the number of shown Pokémon",
-			"Fixed generation numbers for mass Ribbon toggles"
+			"Fixed generation numbers for mass Ribbon toggles",
+			"This update was re-released to fix a bug where changing a Pokémon's species (i.e. evolution) would reset the \"Checked in Mesagoza\" checkbox (thanks Nexus!)"
 		]
 	},
 	{

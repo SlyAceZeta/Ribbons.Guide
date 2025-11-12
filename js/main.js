@@ -3267,9 +3267,15 @@ function initRun(){
 					$("#pokemonFormShinyGroup input").prop("disabled", false);
 				}
 				if(pokemonFlags && pokemonFlags.includes("sizeLocked")){
-					$("#pokemonFormScale").prop({ "checked": true, "disabled": true }).trigger("change");
+					// disable scale checkbox if the species is size-locked
+					$("#pokemonFormScale").prop({ "checked": true, "disabled": true });
+				} else if($("#pokemonFormRibbon-mini-mark").prop("checked") || $("#pokemonFormRibbon-jumbo-mark").prop("checked") || $("#pokemonFormRibbon-titan-mark").prop("checked") || $("#pokemonFormRibbon-alpha-mark").prop("checked")){
+					// disable scale checkbox if the Mini, Jumbo, Titan, or Alpha Marks are currently selected
+					$("#pokemonFormScale").prop({ "checked": true, "disabled": true });
 				} else {
-					$("#pokemonFormScale").prop({ "checked": false, "disabled": false }).trigger("change");
+					// checkbox should not be disabled
+					// we do not set "checked" because this will trigger upon editing a Pokémon i.e. evolution
+					$("#pokemonFormScale").prop({ "disabled": false });
 				}
 
 				updateFormSprite();
