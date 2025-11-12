@@ -2378,26 +2378,26 @@ function filterBubble(){
 	var activeFilterNum = Object.keys(activeFilters).length;
 	$("#sectionTrackerFilterCount-num").text(activeFilterNum);
 	if(activeSort == "default" && activeFilterNum == 0){
-		$("#sectionTrackerFilterCount, #sectionTrackerFilterCount-num, #sectionTrackerFilterCount-sort").hide();
+		$("#sectionTrackerFilterCount, #sectionTrackerFilterCount-num, #sectionTrackerFilterCount-sort").addClass("d-none");
 		if(sortablePokemon){
 			sortablePokemon.option("disabled", false);
 			$("body").removeClass("sorting-disabled");
 		}
 	} else {
-		$("#sectionTrackerFilterCount").show();
+		$("#sectionTrackerFilterCount").removeClass("d-none");
 		if(sortablePokemon){
 			sortablePokemon.option("disabled", true);
 			$("body").addClass("sorting-disabled");
 		}
 		if(activeSort == "default"){
-			$("#sectionTrackerFilterCount-sort").hide();
+			$("#sectionTrackerFilterCount-sort").addClass("d-none");
 		} else {
-			$("#sectionTrackerFilterCount-sort").show();
+			$("#sectionTrackerFilterCount-sort").removeClass("d-none");
 		}
 		if(activeFilterNum){
-			$("#sectionTrackerFilterCount-num").show();
+			$("#sectionTrackerFilterCount-num").removeClass("d-none");
 		} else {
-			$("#sectionTrackerFilterCount-num").hide();
+			$("#sectionTrackerFilterCount-num").addClass("d-none");
 		}
 	}
 
@@ -2553,17 +2553,16 @@ function filterPokemonList(){
 		$("#tracker-grid .col").each(function(){
 			var pokemonToFilter = userPokemon[this.dataset.pokemonId];
 			if(filterPokemon(pokemonToFilter, this.classList, this.dataset)){
-				$(this).show();
+				$(this).removeClass("d-none");
 				pokemonNumFiltered++;
 			} else {
-				$(this).hide();
+				$(this).addClass("d-none");
 			}
 		});
 		$("#sectionTrackerCountAll").addClass("d-none");
 		$("#sectionTrackerCountNotAll").removeClass("d-none").find("#sectionTrackerCountNotAllNum").text(pokemonNumFiltered);
 	} else {
-		$("#tracker-grid .col").show();
-		$("#sectionTrackerCountAll").removeClass("d-none");
+		$("#tracker-grid .col, #sectionTrackerCountAll").removeClass("d-none");
 		$("#sectionTrackerCountNotAll").addClass("d-none");
 	}
 	filterBubble();
@@ -3654,14 +3653,14 @@ $(function(){
 		$(".card-header-checkbox").prop({ "disabled": false }).removeClass("d-none");
 		$(".card-header img[src*='/balls']").addClass("d-none");
 		$(".dropdown-toggle.show").dropdown("hide");
-		$(".card-footer-dropdown .dropdown-toggle").prop("disabled", true);
+		$(".card-footer-dropdown .dropdown-toggle, .sectionTrackerButton:not(#sectionTrackerButtonSelect)").prop("disabled", true);
 		selectState = "selecting";
 	});
 	$("#offcanvasSelect").on("hide.bs.offcanvas", function(){
 		$("#sectionTrackerButtonSelect").removeClass("active").prop("aria-pressed", false);
 		$(".card-header-checkbox").addClass("d-none");
 		$(".card-header img[src*='/balls']").removeClass("d-none");
-		$(".card-footer-dropdown .dropdown-toggle").prop("disabled", false);
+		$(".card-footer-dropdown .dropdown-toggle, .sectionTrackerButton:not(#sectionTrackerButtonSelect)").prop("disabled", false);
 		$("#tracker-grid .col.selected").removeClass("selected");
 		selectState = "off";
 	});

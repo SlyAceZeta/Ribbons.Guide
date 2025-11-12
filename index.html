@@ -130,11 +130,11 @@
 			</div>
 			<div class="sectionTrackerButtonRow d-flex justify-content-between mt-4 px-3">
 				<div>
-					<button id="sectionTrackerButtonAdd" class="btn btn-primary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button">
+					<button id="sectionTrackerButtonAdd" class="btn btn-primary py-1 py-md-2 px-2 px-md-3 me-2 lh-1 sectionTrackerButton" type="button">
 						<img src="img/ui/add.svg" alt="Add">
 						<span class="align-middle d-none d-md-inline">Add New Pokémon</span>
 					</button>
-					<button id="sectionTrackerButtonImport" class="btn btn-secondary py-1 px-2 me-2 lh-1 d-none" type="button">
+					<button id="sectionTrackerButtonImport" class="btn btn-secondary py-1 px-2 me-2 lh-1 d-none sectionTrackerButton" type="button">
 						<img src="img/ui/import.svg" alt="Import">
 						<span class="align-middle d-none">Import</span>
 					</button>
@@ -146,7 +146,7 @@
 						<input type="radio" class="btn-check" name="switchViewBtn" id="switchViewBtn-expanded" value="expanded" checked>
 						<label class="btn btn-outline-secondary border-start-0" for="switchViewBtn-expanded"><img class="align-text-bottom" src="img/ui/expanded.svg" alt="Expanded"></label>
 					</div>
-					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button" data-bs-toggle="modal" data-bs-target="#modalBoxes">
+					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1 sectionTrackerButton" type="button" data-bs-toggle="modal" data-bs-target="#modalBoxes">
 						<img src="img/ui/box-closed.png" alt="Filter">
 						<span class="align-middle d-none d-md-inline">Boxes</span>
 					</button>
@@ -154,7 +154,7 @@
 			</div>
 			<div class="sectionTrackerButtonRow d-flex justify-content-between mt-2 px-3">
 				<div>
-					<button id="sectionTrackerButtonSelect" class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1" type="button">
+					<button id="sectionTrackerButtonSelect" class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 me-2 lh-1 sectionTrackerButton" type="button">
 						<img src="img/ui/select.svg" alt="Select" class="p-1 p-md-0">
 						<span class="align-middle d-none d-md-inline">Select Pokémon</span>
 					</button>
@@ -165,13 +165,13 @@
 						<span id="sectionTrackerCountNotAll" class="d-none"><span id="sectionTrackerCountNotAllNum">0</span> of </span>
 						<span id="sectionTrackerCountTotal">0</span> Pokémon
 					</div>
-					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 mx-2 lh-1 position-relative" type="button" data-bs-toggle="modal" data-bs-target="#modalFilterForm">
+					<button class="btn btn-secondary py-1 py-md-2 px-2 px-md-3 mx-2 lh-1 position-relative sectionTrackerButton" type="button" data-bs-toggle="modal" data-bs-target="#modalFilterForm">
 						<img src="img/ui/filter.svg" alt="Filter">
 						<span class="align-middle d-none d-md-inline">Filters</span>
-						<span id="sectionTrackerFilterCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-							<span id="sectionTrackerFilterCount-num" class="align-middle">0</span>
+						<span id="sectionTrackerFilterCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none">
+							<span id="sectionTrackerFilterCount-num" class="align-middle d-none">0</span>
 							<span class="visually-hidden">active filters</span>
-							<span id="sectionTrackerFilterCount-sort" class="align-middle">⇵</span>
+							<span id="sectionTrackerFilterCount-sort" class="align-middle d-none">⇵</span>
 						</span>
 					</button>
 				</div>
