@@ -1186,17 +1186,17 @@ function updatePopovers(){
 }
 
 function selectPokemon(event){
-	if($(event.target).closest(".popover").length){
-		event.stopPropagation();
-		return;
-	}
-	
 	if(selectState == "selecting"){
+		if($(event.target).closest(".popover, .card-footer-dropdown, a[role='button']").length){
+			event.stopPropagation();
+			return;
+		}
+		
 		var $cardContainer = $(event.target).parents(".col");
 		var $cardCheckbox = $cardContainer.find(".card-header-checkbox");
 		
 		var isCheckboxClick = event.target.classList.contains("card-header-checkbox");
-		var tagWhitelist = ["div", "span"];
+		var tagWhitelist = ["div", "span", "img"];
 		if(!isCheckboxClick && !tagWhitelist.includes(event.target.tagName.toLowerCase())){
 			return;
 		}
@@ -3652,13 +3652,16 @@ $(function(){
 		
 		$("#sectionTrackerButtonSelect").addClass("active").prop("aria-pressed", true);
 		$(".card-header-checkbox").prop({ "disabled": false }).removeClass("d-none");
-		$(".card-header img[src*='/balls'], .card-footer-dropdown").addClass("d-none");
+		$(".card-header img[src*='/balls']").addClass("d-none");
+		$(".dropdown-toggle.show").dropdown("hide");
+		$(".card-footer-dropdown .dropdown-toggle").prop("disabled", true);
 		selectState = "selecting";
 	});
 	$("#offcanvasSelect").on("hide.bs.offcanvas", function(){
 		$("#sectionTrackerButtonSelect").removeClass("active").prop("aria-pressed", false);
 		$(".card-header-checkbox").addClass("d-none");
-		$(".card-header img[src*='/balls'], .card-footer-dropdown").removeClass("d-none");
+		$(".card-header img[src*='/balls']").removeClass("d-none");
+		$(".card-footer-dropdown .dropdown-toggle").prop("disabled", false);
 		$("#tracker-grid .col.selected").removeClass("selected");
 		selectState = "off";
 	});
