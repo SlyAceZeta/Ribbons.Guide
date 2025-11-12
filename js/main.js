@@ -1605,6 +1605,7 @@ function copyPokemon(event){
 		});
 		cardContainer.after(createCard(pokemonToCopy, pokemonID+1));
 		$("#sectionTrackerCountTotal").text(userPokemon.length);
+		$("#sectionTrackerCountNotAllNum").text($("#tracker-grid .col:not(.d-none)").length);
 		updatePopovers();
 	}
 }
@@ -1616,39 +1617,45 @@ function deletePokemon(event){
 	if(confirm("Are you sure you want to delete " + pokemonName + "? This is permanent!")){
 		cardContainer.fadeOut(250, function(){
 			$(this).remove();
+			userPokemon.splice(pokemonID, 1);
+			localStorage.pokemon = JSON.stringify(userPokemon);
+			updateModifiedDate();
+			$("#tracker-grid .col").each(function(){
+				if(Number(this.dataset.pokemonId) > pokemonID){
+					$(this).attr("data-pokemon-id", Number(this.dataset.pokemonId)-1);
+				}
+			});
+			$("#sectionTrackerCountTotal").text(userPokemon.length);
+			$("#sectionTrackerCountNotAllNum").text($("#tracker-grid .col:not(.d-none)").length);
 		});
-		userPokemon.splice(pokemonID, 1);
-		localStorage.pokemon = JSON.stringify(userPokemon);
-		updateModifiedDate();
-		$("#tracker-grid .col").each(function(){
-			if(Number(this.dataset.pokemonId) > pokemonID){
-				$(this).attr("data-pokemon-id", Number(this.dataset.pokemonId)-1);
-			}
-		});
-		$("#sectionTrackerCountTotal").text(userPokemon.length);
 	}
 }
 
 function deleteMultiplePokemon(){
 	var selectedPokemonNum = $("#tracker-grid .col.selected").length;
 	if(confirm("Are you sure you want to delete " + selectedPokemonNum + " Pokémon? This is permanent!")){
-		$("#tracker-grid .col.selected").each(function(){
-			var pokemonID = Number($(this)[0].dataset.pokemonId);
-			$(this).fadeOut(250, function(){
-				$(this).remove();
-			});
-			userPokemon.splice(pokemonID, 1);
-			$("#tracker-grid .col").each(function(){
-				if(Number(this.dataset.pokemonId) > pokemonID){
-					$(this).attr("data-pokemon-id", Number(this.dataset.pokemonId)-1);
+		var removedCount = 0;
+		$("#tracker-grid .col.selected").each(function(i, e){
+			var pokemonID = Number($(e)[0].dataset.pokemonId);
+			$(e).fadeOut(250, function(){
+				$(e).remove();
+				userPokemon.splice(pokemonID, 1);
+				$("#tracker-grid .col").each(function(){
+					if(Number(this.dataset.pokemonId) > pokemonID){
+						$(this).attr("data-pokemon-id", Number(this.dataset.pokemonId)-1);
+					}
+				});
+				removedCount++;
+				if(removedCount === selectedPokemonNum){
+					localStorage.pokemon = JSON.stringify(userPokemon);
+					updateModifiedDate();
+					$("#sectionTrackerCountTotal").text(userPokemon.length);
+					$("#sectionTrackerCountNotAllNum").text($("#tracker-grid .col:not(.d-none)").length);
+					$("#offcanvasSelectEditNum").text("0");
+					$("#offcanvasSelectEdit, #offcanvasSelectDelete").prop("disabled", true);
 				}
 			});
 		});
-		localStorage.pokemon = JSON.stringify(userPokemon);
-		updateModifiedDate();
-		$("#sectionTrackerCountTotal").text(userPokemon.length);
-		$("#offcanvasSelectEditNum").text("0");
-		$("#offcanvasSelectEdit, #offcanvasSelectDelete").prop("disabled", true);
 	}
 }
 
