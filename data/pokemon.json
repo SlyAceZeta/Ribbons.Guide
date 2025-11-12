@@ -32729,7 +32729,8 @@
 		"games": [],
 		"evolvesFrom": null,
 		"flags": [
-			"shinyLocked"
+			"shinyLocked",
+			"sizeLocked"
 		],
 		"sort": 6
 	},
