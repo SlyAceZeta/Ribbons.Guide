@@ -15370,7 +15370,6 @@
 			"zh-Hant": "火稚雞"
 		},
 		"gender": "both",
-		"femsprite": true,
 		"natdex": 255,
 		"games": [
 			"ruby",
@@ -22996,7 +22995,6 @@
 			"zh-Hant": "泳圈鼬"
 		},
 		"gender": "both",
-		"femsprite": true,
 		"natdex": 418,
 		"games": [
 			"diamond",
