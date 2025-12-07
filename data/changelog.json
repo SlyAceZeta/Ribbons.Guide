@@ -2,7 +2,7 @@
 	{
 		"date": "6 December 2025",
 		"changes": [
-			"Added handling for missing Pokémon languages upon page load"
+			"Added handling for missing Pokémon languages upon page load (thanks raen!)"
 		]
 	},
 	{
