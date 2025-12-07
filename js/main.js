@@ -3445,11 +3445,17 @@ function initRun(){
 			"cht": "zh-Hant"
 		};
 		var changedALanguage = false;
+		var resetALanguage = false;
 		for(let p in userPokemon){
 			try {
-				if(languageConvert[userPokemon[p].language.toLowerCase()]){
-					changedALanguage = true;
-					userPokemon[p].language = languageConvert[userPokemon[p].language.toLowerCase()];
+				if(userPokemon[p].language){
+					if(languageConvert[userPokemon[p].language.toLowerCase()]){
+						changedALanguage = true;
+						userPokemon[p].language = languageConvert[userPokemon[p].language.toLowerCase()];
+					}
+				} else {
+					resetALanguage = true;
+					userPokemon[p].language = settings.language;
 				}
 			} catch(err) {
 				var $errorimg = $("<img>", { "src": "./img/ui/cross.svg" });
@@ -3461,9 +3467,12 @@ function initRun(){
 				return;
 			}
 		}
-		if(changedALanguage){
+		if(changedALanguage || resetALanguage){
 			localStorage.pokemon = JSON.stringify(userPokemon);
 			updateModifiedDate();
+			if(resetALanguage){
+				alert("At least one of your Pokémon had its language reset. Please verify your Pokémon languages once the page loads.")
+			}
 		}
 
 		/* create the Pokemon list */

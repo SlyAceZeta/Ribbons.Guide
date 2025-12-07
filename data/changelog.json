@@ -1,5 +1,11 @@
 [
 	{
+		"date": "6 December 2025",
+		"changes": [
+			"Added handling for missing Pokémon languages upon page load"
+		]
+	},
+	{
 		"date": "12 November 2025",
 		"changes": [
 			"While selecting multiple Pokémon, the site now disables the ability to add/edit/copy/delete individual Pokémon, modify boxes, or filter the list",
