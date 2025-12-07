@@ -3446,9 +3446,19 @@ function initRun(){
 		};
 		var changedALanguage = false;
 		for(let p in userPokemon){
-			if(languageConvert[userPokemon[p].language.toLowerCase()]){
-				changedALanguage = true;
-				userPokemon[p].language = languageConvert[userPokemon[p].language.toLowerCase()];
+			try {
+				if(languageConvert[userPokemon[p].language.toLowerCase()]){
+					changedALanguage = true;
+					userPokemon[p].language = languageConvert[userPokemon[p].language.toLowerCase()];
+				}
+			} catch(err) {
+				var $errorimg = $("<img>", { "src": "./img/ui/cross.svg" });
+				var $errortext = $("<div>", { "class": "fw-bold", "role": "status" })
+					.append($("<div>", { "class": "my-3" }).html("<span class='text-uppercase'>Pokémon language conversion error on Pokémon #" + p + "</span><br>" + err))
+					.append($("<div>").html("Please inform Sly on <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a> or <a href='https://discord.gg/frv7dpWzDG'>Discord</a>."))
+					.append($("<div>").html("Attach the following file with your report (tap or left-click to download): <button type='button' class='btn btn-link p-0 fw-bold align-baseline' onclick='saveBackup(\"RibbonError\")'>RibbonError.json</button>"));
+				$("#loading-spinner-info").html($errorimg).append($errortext);
+				return;
 			}
 		}
 		if(changedALanguage){
