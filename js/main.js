@@ -1361,6 +1361,8 @@ function savePokemon(edit = false){
 					continueForm = false;
 					setFormInvalid("CurrentGame", "HOME does not yet support Z-A.");
 				}
+			} else if(newP.currentgame == "go" && newP.originmark == "go"){
+				setFormValid("CurrentGame");
 			} else {
 				continueForm = false;
 				setFormInvalid("CurrentGame", "This Pokémon cannot go to this game.");
