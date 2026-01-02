@@ -1,5 +1,11 @@
 [
 	{
+		"date": "1 January 2026",
+		"changes": [
+			"Updated warnings for the end of the Scarlet/Violet ranked season to show an accurate date and time"
+		]
+	},
+	{
 		"date": "6 December 2025",
 		"changes": [
 			"Added handling for missing Pokémon languages upon page load (thanks raen!)"
