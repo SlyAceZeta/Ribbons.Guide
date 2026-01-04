@@ -1,7 +1,5 @@
 /* globals */
 var balls, changelog, games, gameOrder = {}, importmap, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off";
-var seasonEnd = new Date("2026-01-04T23:59:00Z");
-var seasonEndText = "January " + seasonEnd.getDate() + " at " + seasonEnd.toLocaleTimeString().replace(":00", "");
 // TODO: add tutorials
 /* clear old local storage properties if still present */
 /* except theme which gets special handling */
@@ -1081,15 +1079,6 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 									}
 								}
 							}
-						} else if(ribbon == "master-rank-ribbon"){
-							// Mythicals can temporarily earn this in Gen 9, but not in Gen 8
-							if(mythical){
-								if(ribbonGen == "8"){
-									continue;
-								} else {
-									earnableWarnings.push("master-rank-sv-2025");
-								}
-							}
 						}
 
 						// all checks passed
@@ -1715,7 +1704,6 @@ function ribbonChecklist(event){
 			if(ribbonWarnings[w] == "footprint-virtualconsole") warningText = "If " + cardData.name + " reaches Lv.71 before transferring to Gen&nbsp;7, the Footprint Ribbon will become unavailable!";
 			if(ribbonWarnings[w] == "footprint-met-level") warningText = cardData.name + "'s Met Level has not been set. The availability of the Footprint Ribbon cannot be determined.";
 			if(ribbonWarnings[w] == "footprint-beldum") warningText = "Evolving " + cardData.name + " into Metagross will make the Footprint Ribbon unavailable!";
-			if(ribbonWarnings[w] == "master-rank-sv-2025") warningText = cardData.name + " can temporarily earn the Master Rank Ribbon during the current " + getLanguage(getGameData("sv", "names", true)) + " regulation. This ends on " + seasonEndText + "!";
 			if(ribbonWarnings[w] == "evolution-warning"){
 				var evoWarnName = getLanguage(getPokemonData(cardData.evolutionWarning, "names"));
 				var evoWarnForms = getPokemonData(cardData.evolutionWarning, "forms");
@@ -3587,20 +3575,6 @@ function initRun(){
 		/* initialize tooltips */
 		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 		const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-		
-		/* show temporary Master Rank Ribbon warning */
-		if(!localStorage["master-rank-sv-2025"]){
-			$("#master-rank-sv-2025-alert").removeClass("d-none").addClass("d-flex show").find("#master-rank-sv-2025-alert-game").text(getLanguage(getGameData("sv", "names", true)));
-			$("#master-rank-sv-2025-alert").find(".fw-bold").text("This ends on " + seasonEndText + "!");
-			document.getElementById("master-rank-sv-2025-alert").addEventListener("close.bs.alert", event => {
-				if(confirm("Are you sure you want to permanently dismiss this alert?")){
-					localStorage["master-rank-sv-2025"] = "dismissed";
-					$("#headerNavDataLink").focus();
-				} else {
-					event.preventDefault();
-				}
-			});
-		}
 
 		/* image check */
 		loadingBar(25);
