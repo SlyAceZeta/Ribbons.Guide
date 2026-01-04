@@ -1,5 +1,12 @@
 [
 	{
+		"date": "4 January 2026",
+		"changes": [
+			"Mythical Pokémon can no longer earn the Master Rank Ribbon",
+			"Fixed issue where Pokémon could not be saved if they were currently in GO (thanks andromedork!)"
+		]
+	},
+	{
 		"date": "1 January 2026",
 		"changes": [
 			"Updated warnings for the end of the Scarlet/Violet ranked season to show an accurate date and time"
