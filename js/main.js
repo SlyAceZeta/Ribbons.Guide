@@ -117,14 +117,21 @@ if(settings.language){
 	if(typeof browserLocales === "string"){
 		if(supportedLanguages.includes(browserLocales)){
 			changeLanguage(browserLocales);
+		} else {
+			changeLanguage("en");
 		}
 	} else if(typeof browserLocales === "object"){
+		var changedALanguageObject = false;
 		for(var i = 0; i < browserLocales.length; i++){
 			var locale = browserLocales[i].split(/-|_/)[0];
 			if(supportedLanguages.includes(locale)){
+				changedALanguageObject = true;
 				changeLanguage(locale);
 				break;
 			}
+		}
+		if(!changedALanguageObject){
+			changeLanguage("en");
 		}
 	}
 }
