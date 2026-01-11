@@ -1,5 +1,11 @@
 [
 	{
+		"date": "11 January 2026",
+		"changes": [
+			"Fixed a bug where users who had an unsupported language set as their browser's main language could not open Ribbons.Guide; users will be forced to English by default (thanks raen, eldaorgue, and shubibs!)"
+		]
+	},
+	{
 		"date": "4 January 2026",
 		"changes": [
 			"Mythical Pokémon can no longer earn the Master Rank Ribbon",
