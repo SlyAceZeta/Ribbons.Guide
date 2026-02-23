@@ -2429,8 +2429,6 @@ function filterBubble(){
 			$("#sectionTrackerFilterCount-num").addClass("d-none");
 		}
 	}
-
-
 }
 
 function filterPokemon(p, classes, data){
@@ -2559,7 +2557,7 @@ function filterPokemon(p, classes, data){
 			}
 		} else if(f == "status"){
 			if(activeFilters[f] === "incomplete" || activeFilters[f] === "warning"){
-				if(classes.length !== 1){
+				if(classes.contains("ribbons-done")){
 					pass = false;
 					break;
 				}
