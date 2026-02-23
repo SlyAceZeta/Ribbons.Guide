@@ -542,6 +542,8 @@
 	"champion-ribbon": {
 		"gen": 3,
 		"available": [
+			"fr-switch",
+			"lg-switch",
 			"ruby",
 			"sapphire",
 			"emerald",

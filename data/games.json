@@ -42,6 +42,52 @@
 		"gen": 6,
 		"storage": true
 	},
+	"frlg-switch": {
+		"names": {
+			"en": "FireRed/LeafGreen (Switch)",
+			"es-es": "RojoFuego/VerdeHoja (Switch)",
+			"fr": "Rouge Feu/Vert Feuille (Switch)",
+			"de": "Feuerrot/Blattgrün (Switch)",
+			"it": "RossoFuoco/VerdeFoglia (Switch)",
+			"ja": "ファイアレッド/リーフグリーン (Switch)",
+			"ko": "파이어레드/리프그린 (스위치)",
+			"zh-Hans": "火红/叶绿 (Switch)",
+			"zh-Hant": "火紅/葉綠 (Switch)"
+		},
+		"gen": 3,
+		"combo": true,
+		"ribbonGenOrder": 4
+	},
+	"fr-switch": {
+		"names": {
+			"en": "FireRed (Switch)",
+			"es-es": "RojoFuego (Switch)",
+			"fr": "Rouge Feu (Switch)",
+			"de": "Feuerrot (Switch)",
+			"it": "RossoFuoco (Switch)",
+			"ja": "ファイアレッド (Switch)",
+			"ko": "파이어레드 (Switch)",
+			"zh-Hans": "火红 (Switch)",
+			"zh-Hant": "火紅 (Switch)"
+		},
+		"partOf": "frlg-switch",
+		"platformIcon": "gba"
+	},
+	"lg-switch": {
+		"names": {
+			"en": "LeafGreen (Switch)",
+			"es-es": "VerdeHoja (Switch)",
+			"fr": "Vert Feuille (Switch)",
+			"de": "Blattgrün (Switch)",
+			"it": "VerdeFoglia (Switch)",
+			"ja": "リーフグリーン (Switch)",
+			"ko": "리프그린 (Switch)",
+			"zh-Hans": "叶绿 (Switch)",
+			"zh-Hant": "葉綠 (Switch)"
+		},
+		"partOf": "frlg-switch",
+		"platformIcon": "gba"
+	},
 	"plza": {
 		"names": {
 			"en": "Legends: Z-A",
@@ -594,15 +640,15 @@
 	},
 	"frlg": {
 		"names": {
-			"en": "FireRed/LeafGreen",
-			"es-es": "RojoFuego/VerdeHoja",
-			"fr": "Rouge Feu/Vert Feuille",
-			"de": "Feuerrot/Blattgrün",
-			"it": "RossoFuoco/VerdeFoglia",
-			"ja": "ファイアレッド/リーフグリーン",
-			"ko": "파이어레드/리프그린",
-			"zh-Hans": "火红/叶绿",
-			"zh-Hant": "火紅/葉綠"
+			"en": "FireRed/LeafGreen (GBA)",
+			"es-es": "RojoFuego/VerdeHoja (GBA)",
+			"fr": "Rouge Feu/Vert Feuille (GBA)",
+			"de": "Feuerrot/Blattgrün (GBA)",
+			"it": "RossoFuoco/VerdeFoglia (GBA)",
+			"ja": "ファイアレッド/リーフグリーン (GBA)",
+			"ko": "파이어레드/리프그린 (GBA)",
+			"zh-Hans": "火红/叶绿 (GBA)",
+			"zh-Hant": "火紅/葉綠 (GBA)"
 		},
 		"gen": 3,
 		"combo": true,
@@ -610,30 +656,30 @@
 	},
 	"fr": {
 		"names": {
-			"en": "FireRed",
-			"es-es": "RojoFuego",
-			"fr": "Rouge Feu",
-			"de": "Feuerrot",
-			"it": "RossoFuoco",
-			"ja": "ファイアレッド",
-			"ko": "파이어레드",
-			"zh-Hans": "火红",
-			"zh-Hant": "火紅"
+			"en": "FireRed (GBA)",
+			"es-es": "RojoFuego (GBA)",
+			"fr": "Rouge Feu (GBA)",
+			"de": "Feuerrot (GBA)",
+			"it": "RossoFuoco (GBA)",
+			"ja": "ファイアレッド (GBA)",
+			"ko": "파이어레드 (GBA)",
+			"zh-Hans": "火红 (GBA)",
+			"zh-Hant": "火紅 (GBA)"
 		},
 		"partOf": "frlg",
 		"platformIcon": "gba"
 	},
 	"lg": {
 		"names": {
-			"en": "LeafGreen",
-			"es-es": "VerdeHoja",
-			"fr": "Vert Feuille",
-			"de": "Blattgrün",
-			"it": "VerdeFoglia",
-			"ja": "リーフグリーン",
-			"ko": "리프그린",
-			"zh-Hans": "叶绿",
-			"zh-Hant": "葉綠"
+			"en": "LeafGreen (GBA)",
+			"es-es": "VerdeHoja (GBA)",
+			"fr": "Vert Feuille (GBA)",
+			"de": "Blattgrün (GBA)",
+			"it": "VerdeFoglia (GBA)",
+			"ja": "リーフグリーン (GBA)",
+			"ko": "리프그린 (GBA)",
+			"zh-Hans": "叶绿 (GBA)",
+			"zh-Hant": "葉綠 (GBA)"
 		},
 		"partOf": "frlg",
 		"platformIcon": "gba"
