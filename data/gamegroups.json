@@ -27,7 +27,9 @@
 		"names": {
 			"en": "3DS Virtual Console"
 		},
-		"travelTo": ["7"]
+		"travelTo": ["7"],
+		"metLevelWillChange": true,
+		"metLevelWarning": "gen7"
 	},
 	"7": {
 		"names": {
@@ -64,13 +66,17 @@
 			"en": "Gen 4",
 			"ja": "第四世代"
 		},
-		"travelTo": ["5"]
+		"travelTo": ["5"],
+		"metLevelWillChange": true,
+		"metLevelWarning": "gen5"
 	},
 	"3": {
 		"names": {
 			"en": "Gen 3",
 			"ja": "第三世代"
 		},
-		"travelTo": ["4"]
+		"travelTo": ["4"],
+		"metLevelWillChange": true,
+		"metLevelWarning": "gen5"
 	}
 }
