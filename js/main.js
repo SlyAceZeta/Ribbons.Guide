@@ -1,5 +1,5 @@
 /* globals */
-var balls, changelog, games, gameOrder = {}, importmap, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off";
+var balls, changelog, games, gameOrder = {}, gameGroups, importmap, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off";
 // TODO: add tutorials
 /* clear old local storage properties if still present */
 /* except theme which gets special handling */
@@ -398,7 +398,7 @@ if(todayDate.getMonth() == 3 && todayDate.getDate() == 1){
 						transform: rotate(180deg);
 					}
 				}
-	`
+			`
 			document.head.appendChild(aprilFoolsStyleSheet);
 		}
 	}
@@ -478,12 +478,12 @@ function saveBackup(name = "RibbonBackup"){
 	backupObj.pokemon = localStorage.pokemon ? JSON.parse(localStorage.pokemon) : {};
 	backupObj.boxes = localStorage.boxes ? JSON.parse(localStorage.boxes) : {};
 	var blob = new Blob([JSON.stringify(backupObj)], {type: 'application/json'});
-
+	
 	var ele = document.createElement('a');
 	ele.href = URL.createObjectURL(blob);
 	ele.target = "_blank";
 	ele.download = name + ".json";
-
+	
 	document.body.appendChild(ele);
 	ele.click();
 	document.body.removeChild(ele);
@@ -568,12 +568,12 @@ function getStringFromBuffer(data) {
 
 var gen9First = 917;
 var gen9Table = [
-  65, -1, -1, -1, -1, 31, 31, 47, 47, 29, 29, 53, 31, 31, 46, 44, 30, 30, -7,
-  -7, -7, 13, 13, -2, -2, 23, 23, 24, -21, -21, 27, 27, 47, 47, 47, 26, 14, -33,
-  -33, -33, -17, -17, 3, -29, 12, -12, -31, -31, -31, 3, 3, -24, -24, -44, -44,
-  -30, -30, -28, -28, 23, 23, 6, 7, 29, 8, 3, 4, 4, 20, 4, 23, 6, 3, 3, 4, -1,
-  13, 9, 7, 5, 7, 9, 9, -43, -43, -43, -68, -68, -68, -58, -58, -25, -29, -31,
-  6, -1, 6, 0, 0, 0, 3, 3, 4, 2, 3, 3, -5, -12, -12,
+	65, -1, -1, -1, -1, 31, 31, 47, 47, 29, 29, 53, 31, 31, 46, 44, 30, 30, -7,
+	-7, -7, 13, 13, -2, -2, 23, 23, 24, -21, -21, 27, 27, 47, 47, 47, 26, 14, -33,
+	-33, -33, -17, -17, 3, -29, 12, -12, -31, -31, -31, 3, 3, -24, -24, -44, -44,
+	-30, -30, -28, -28, 23, 23, 6, 7, 29, 8, 3, 4, 4, 20, 4, 23, 6, 3, 3, 4, -1,
+	13, 9, 7, 5, 7, 9, 9, -43, -43, -43, -68, -68, -68, -58, -58, -25, -29, -31,
+	6, -1, 6, 0, 0, 0, 3, 3, 4, 2, 3, 3, -5, -12, -12,
 ];
 function getSpecies9(id) {
 	return importmap.species[getNational9(id)];
@@ -763,7 +763,7 @@ function importFiles(files, delay = 150, i = 0){
 			: shinyxor < 16
 			? "star"
 			: "";
-			
+		
 		var nickarrbuf = buf.slice(nicknameloc, nicknameloc + 26);
 		var nickname = getStringFromBuffer(new DataView(nickarrbuf));
 		// TODO: remove nickname if it equates to the Pokémon species name in the Pokémon's language
@@ -877,14 +877,51 @@ function getLanguage(data, language = settings.language){
 	}
 }
 
+function filterCompatibleGames(gameArray, game){
+	const reachableGroups = new Set();
+	const queue = [getGameData(game, "group")];
+	while(queue.length > 0){
+		const groupKey = queue.shift();
+		if(!reachableGroups.has(groupKey)){
+			reachableGroups.add(groupKey);
+			
+			// Add any groups this one can travel to into the queue
+			const connections = gameGroups[groupKey]?.travelTo || [];
+			for(const nextGroup of connections) {
+				if(!reachableGroups.has(nextGroup)){
+					queue.push(nextGroup);
+				}
+			}
+		}
+	}
+	const newArray = gameArray.filter(gameKey => {
+		return games[gameKey] && reachableGroups.has(getGameData(gameKey, "group"));
+	});
+	if(!newArray.includes(game)) newArray.push(game);
+	return newArray;
+}
+
+// TODO #145
+function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame, currentRibbons, checkedScale, totem = false, gmax = false, shadow = false){
+	currentLevel = parseInt(currentLevel);
+	
+	const gamesAndRibbons = {};
+	let currentGameStatus = "no-ribbons-left";
+	
+	// Pokemon info
+	const isMythical = getPokemonData(dex, "mythical");
+	const compatibleGames = getPokemonData(dex, "games"); // all compatible games for the species
+	const currentCompatibleGames = filterCompatibleGames(compatibleGames, currentGame); // all games the Pokemon can actually transfer to
+}
+
 function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame, currentRibbons, checkedScale, totem = false, gmax = false, shadow = false){
-	// TODO: reduce duplication: createCard
+	// TODO: reduce duplication -- getGamesAndRibbons
 	var earnableRibbons = {};
 	var earnableWarnings = [];
 	var evolutionWarning = {};
 	var currentGameStatus = "no-ribbons-left";
 	currentLevel = parseInt(currentLevel);
-
+	
 	// Pokemon info
 	var currentGen = parseInt(getGameData(currentGame, "gen"));
 	var virtualConsole = false;
@@ -908,7 +945,7 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	var mythical = getPokemonData(dex, "mythical");
 	var evoWarnMon = getPokemonData(dex, "evowarnmon", true);
 	var evoWarnGen = getPokemonData(dex, "evowarngen", true);
-
+	
 	for(let ribbon in ribbons){
 		// skip if Ribbon is already earned
 		if(currentRibbons.includes(ribbon)) continue;
@@ -920,7 +957,7 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 		if(ribbons[ribbon].nomythical && mythical) continue;
 		// skip if Ribbon is a Memory Ribbon
 		if(ribbon.startsWith("contest-memory-ribbon") || ribbon.startsWith("battle-memory-ribbon")) continue;
-
+		
 		var ribbonGames = ribbons[ribbon].available;
 		for(let g in ribbonGames){
 			var ribbonGame = ribbonGames[g];
@@ -933,7 +970,7 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 				// skip if this game is SV and the Pokemon is in Z-A
 				if(ribbonGameCombo == "sv" && currentGame == "plza") continue;
 			}
-
+			
 			var ribbonGen = parseInt(getGameData(ribbonGame, "gen"));
 			// verify this game has a gen
 			if(ribbonGen){
@@ -984,7 +1021,7 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 								}
 							}
 						}
-
+						
 						// Ribbon-specific restrictions
 						if(ribbon == "winning-ribbon"){
 							// can only be earned under Level 51
@@ -1091,7 +1128,7 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 								}
 							}
 						}
-
+						
 						// all checks passed
 						var ribbonGameKey = ribbonGame;
 						if(ribbonGameCombo){
@@ -1106,7 +1143,7 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 			}
 		}
 	}
-
+	
 	if(getGameData(currentGame, "storage")){
 		currentGameStatus = "in-storage";
 	} else {
@@ -1133,7 +1170,7 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 			}
 		}
 	}
-
+	
 	// TODO: make this smarter: check for the game differences and report them, unless there are no applicable ribbons
 	if(evoWarnMon && evoWarnGen && Object.keys(earnableRibbons).length !== 0){
 		var testGen = currentGen;
@@ -1143,10 +1180,10 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 			evolutionWarning.pokemon = evoWarnMon;
 		}
 	}
-
+	
 	// remove duplicate warnings
 	earnableWarnings = [...new Set(earnableWarnings)];
-
+	
 	// return
 	return {"remaining": earnableRibbons, "warnings": earnableWarnings, "currentGameStatus": currentGameStatus, "evolutionWarning": evolutionWarning};
 }
@@ -1681,17 +1718,17 @@ function deleteMultiplePokemon(){
 function ribbonChecklist(event){
 	var $cardContainer = $(event.target).parents(".col");
 	var cardData = $cardContainer[0].dataset;
-
+	
 	// top info - sprite
 	var cardSprite = $cardContainer.find(".card-sprite").attr("src");
 	$("#modalRibbonChecklistInfo-sprite img").attr("src", "img/ui/1x1.svg"); // initial reset
 	$("#modalRibbonChecklistInfo-sprite img").attr("src", cardSprite);
-
+	
 	// top info - name
 	var $cardName = $("<div>").html($cardContainer.find(".card-header-fullname").html());
 	$cardName.find("img, input").remove();
 	$("#modalRibbonChecklistInfo-name").html($cardName.html());
-
+	
 	// for alerts
 	var pronounSubject = "it";
 	var pronounObject = "it";
@@ -1712,11 +1749,11 @@ function ribbonChecklist(event){
 	if(currentGame === "scar" || currentGame === "vio"){
 		ribbonDisplay = "Ribbons or Marks";
 	}
-
+	
 	// reset
 	$("#modalRibbonChecklistRows").html("");
 	$("#modalRibbonChecklistStatus").html("").append($("<div>", { "id": "modalRibbonChecklistStatus-text", "class": "col-12 p-2 px-3 text-center" }));
-
+	
 	// handle warnings
 	if(cardData.ribbonWarnings){
 		var ribbonWarnings = JSON.parse(cardData.ribbonWarnings);
@@ -1753,7 +1790,7 @@ function ribbonChecklist(event){
 		}
 		$("#modalRibbonChecklistStatus-warnings > div:last-child").removeClass("border-bottom border-2");
 	}
-
+	
 	if(currentGame){
 		if(cardData.originGame || (cardData.species !== "nincada" && cardData.originMark !== "none")){
 			if(cardData.remainingRibbons){
@@ -1891,7 +1928,7 @@ function ribbonChecklist(event){
 
 function createCard(p, id){
 	/* information */
-	// TODO: reduce duplication: getEarnableRibbons -- merge some of this logic into a new function that returns earnable ribbons *and* compatible games
+	// TODO: reduce duplication: getEarnableRibbons -- merge some of this logic into a new function that returns earnable ribbons *and* compatible games (getGamesAndRibbons)
 	var ribbonLists;
 	var currentGen = 1000;
 	var virtualConsole = false;
@@ -1963,7 +2000,7 @@ function createCard(p, id){
 			}
 		}
 	}
-
+	
 	/* containers and filters */
 	var $cardCol = $("<div>", { "class": "col", "data-name": displayName, "data-national-dex": getPokemonData(p.species, "natdex"), "data-level": p.currentlevel, "data-origin-mark": p.originmark, "data-origin-game": p.origingame, "data-current-game": p.currentgame, "data-compatible-games": JSON.stringify(compatibleFiltered), "data-earned-ribbons": JSON.stringify(p.ribbons), "data-pokemon-id": id, "data-gender": p.gender, "data-species": p.species, "data-current-gen": currentGen, "data-scale-checked": p.scale ? "" + p.scale : "false" });
 	if(ribbonLists){
@@ -1980,12 +2017,12 @@ function createCard(p, id){
 		}
 	}
 	var $cardContainer = $("<div>", { "class": "card border-0", "onclick": "selectPokemon(event)" });
-
+	
 	/* sections */
 	var $cardHeader = $("<div>", { "class": "card-header d-flex justify-content-between" });
 	var $cardBody = $("<div>", { "class": "card-body d-flex align-items-center p-0" });
 	var $cardFooter = $("<div>", { "class": "card-footer" });
-
+	
 	/* header */
 	var $cardHeaderLeft = $("<div>", { "class": "card-header-fullname" });
 	var $cardHeaderCheckbox = $("<input>", { "type": "checkbox", "class": "card-header-checkbox form-check-input me-2 d-none", "aria-label": "Select " + displayName, "disabled": true });
@@ -2063,9 +2100,9 @@ function createCard(p, id){
 	var $cardHeaderButton = $("<button>", { "type": "button", "class": "btn btn-link p-0 ms-1 position-relative", "onclick": "ribbonChecklist(event)", "aria-label": "Ribbon Checklist", "title": "Ribbon Checklist" })
 		.append($("<span>", { "class": "ribbon-checklist-warning-badge position-absolute translate-middle bg-danger rounded-circle" }).html($("<span>", {"class": "visually-hidden"}).text("Warnings")));
 	$cardHeaderRight.append($cardHeaderTitle, $cardHeaderButton);
-
+	
 	$cardHeader.append($cardHeaderRight);
-
+	
 	/* body */
 	var speciesSprite = p.species;
 	if(aprilFools && settings["AprilFools"] == "true"){
@@ -2154,7 +2191,7 @@ function createCard(p, id){
 		$cardRibbons.append($ribbonBtn);
 	}
 	$cardBody.append($cardRibbons);
-
+	
 	/* footer */
 	var $cardFooterTop = $("<div>", { "class": "card-footer-top d-flex justify-content-between" })
 		.append($("<div>").text(ribbonCount + " Ribbon" + (ribbonCount !== 1 ? "s" : "") + (markCount ? ", " + markCount + " Mark" + (markCount !== 1 ? "s" : "") : "")));
@@ -2211,7 +2248,7 @@ function createCard(p, id){
 		);
 	$cardFooterBottom.append($cardFooterBottomLeft, $cardFooterBottomRight);
 	$cardFooter.append($cardFooterTop, $cardFooterBottom);
-
+	
 	/* create and return the card */
 	$cardContainer.append($cardHeader, $cardBody, $cardFooter);
 	$cardCol.append($cardContainer);
@@ -2291,7 +2328,7 @@ function resetPokemonForm(edit = false){
 	$("#pokemonFormNotes").val("");
 	$("#pokemonFormSprite").attr("src", "img/ui/1x1.svg");
 	$("#pokemonFormLanguage").val(settings.language).trigger("change");
-
+	
 	/* re-populate boxes dropdown */
 	var $boxNone = $("<option>", { "value": "-1" }).text(getLanguage(translations.none));
 	for(var lang in translations.none){
@@ -2320,7 +2357,7 @@ function resetPokemonFormMulti(){
 	});
 	$("#pokemonFormMultiRibbons li").removeClass("d-none");
 	$("#pokemonFormMultiRibbons-none").addClass("d-none");
-
+	
 	/* re-populate boxes dropdown */
 	var $boxNoChange = $("<option>", { "value": "nochange" }).text("No change");
 	$("#pokemonFormMultiBox").html($boxNoChange);
@@ -2351,12 +2388,12 @@ function relistFilterBoxes(){
 /* reset filter form */
 function resetFilterForm(relistBoxes = false){
 	filterState = "reset";
-
+	
 	/* re-populate boxes dropdown */
 	if(relistBoxes){
 		relistFilterBoxes();
 	}
-
+	
 	/* reset all options */
 	$("#modalFilterForm select, #modalFilterForm input").each(function(){
 		if(this.id === "filterFormSort"){
@@ -2890,7 +2927,7 @@ function initRun(){
 	} else {
 		updateModifiedDate();
 	}
-
+	
 	/* data load */
 	loadingBar(10);
 	$("#loading-spinner-info-text").text("Loading data");
@@ -2898,6 +2935,7 @@ function initRun(){
 		$.getJSON("./data/balls.json"),
 		$.getJSON("./data/changelog.json"),
 		$.getJSON("./data/games.json"),
+		$.getJSON("./data/gamegroups.json"),
 		$.getJSON("./data/importmap.json"),
 		$.getJSON("./data/origins.json"),
 		$.getJSON("./data/pokemon.json"),
@@ -2919,11 +2957,12 @@ function initRun(){
 		}
 		$errortext.append($("<div>").html("Please inform Sly on <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a> or <a href='https://discord.gg/frv7dpWzDG'>Discord</a>."));
 		$("#loading-spinner-info").html($errorimg).append($errortext);
-	}).done(function(dataBalls, dataChangelog, dataGames, dataImportMap, dataOrigins, dataPokemon, dataRibbons, dataTranslations){
+	}).done(function(dataBalls, dataChangelog, dataGames, dataGameGroups, dataImportMap, dataOrigins, dataPokemon, dataRibbons, dataTranslations){
 		/* set variables */
 		balls = dataBalls[0];
 		changelog = dataChangelog[0];
 		games = dataGames[0];
+		gameGroups = dataGameGroups[0];
 		importmap = dataImportMap[0];
 		origins = dataOrigins[0];
 		pokemon = dataPokemon[0];
@@ -2938,7 +2977,7 @@ function initRun(){
 			}
 			gameOrder[g] = thisGameOrder;
 		}
-
+		
 		/* initialize forms */
 		loadingBar(15);
 		$("#loading-spinner-info-text").text("Loading form");
@@ -3277,7 +3316,7 @@ function initRun(){
 					$("#pokemonFormGenderGroup input").prop("disabled", true);
 					$("#pokemonFormGender-" + pokemonGender).prop("checked", true).trigger("change");
 				}
-
+				
 				var pokemonFlags = getPokemonData(species, "flags");
 				if(pokemonFlags && pokemonFlags.includes("shinyLocked")){
 					$("#pokemonFormShinyGroup input").prop("disabled", true);
@@ -3296,7 +3335,7 @@ function initRun(){
 					// we do not set "checked" because this will trigger upon editing a Pokémon i.e. evolution
 					$("#pokemonFormScale").prop({ "disabled": false });
 				}
-
+				
 				updateFormSprite();
 			}
 		});
@@ -3375,7 +3414,7 @@ function initRun(){
 		/* initial form reset */
 		resetPokemonForm();
 		resetFilterForm(true);
-
+		
 		/* changelog logic */
 		/* TODO: reduce duplication with full changelog behavior */
 		loadingBar(20);
@@ -3418,7 +3457,7 @@ function initRun(){
 				});
 			}
 		}
-
+		
 		/* Samsung Internet detection */
 		if(navigator.userAgent.match(/samsungbrowser/i)){
 			$(function(){
@@ -3430,7 +3469,7 @@ function initRun(){
 				}
 			});
 		}
-
+		
 		/* data conversion from old app */
 		if((userPokemon.entries && typeof userPokemon.entries !== "function") || (userBoxes.entries && typeof userBoxes.entries !== "function")){
 			loadingBar(21);
@@ -3493,7 +3532,7 @@ function initRun(){
 				alert("At least one of your Pokémon had its language reset. Please verify your Pokémon languages once the page loads.")
 			}
 		}
-
+		
 		/* create the Pokemon list */
 		loadingBar(23);
 		$("#loading-spinner-info-text").text("Loading Pokémon list");
@@ -3598,11 +3637,11 @@ function initRun(){
 				}
 			}
 		});
-
+		
 		/* initialize tooltips */
 		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 		const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-
+		
 		/* image check */
 		loadingBar(25);
 		$("#loading-spinner-info-text").text("Loading images");

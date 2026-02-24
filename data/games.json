@@ -11,6 +11,7 @@
 			"zh-Hans": "HOME (Gen 8/朱/紫)",
 			"zh-Hant": "HOME (Gen 8/朱/紫)"
 		},
+		"group": "8",
 		"gen": 8,
 		"storage": true
 	},
@@ -25,6 +26,7 @@
 			"zh-Hans": "宝可梦虚拟银行 (Gen 7)",
 			"zh-Hant": "寶可夢虛擬銀行 (Gen 7)"
 		},
+		"group": "7",
 		"gen": 7,
 		"storage": true
 	},
@@ -39,6 +41,7 @@
 			"zh-Hans": "宝可梦虚拟银行 (Gen 6)",
 			"zh-Hant": "寶可夢虛擬銀行 (Gen 6)"
 		},
+		"group": "6",
 		"gen": 6,
 		"storage": true
 	},
@@ -54,6 +57,7 @@
 			"zh-Hans": "火红/叶绿 (Switch)",
 			"zh-Hant": "火紅/葉綠 (Switch)"
 		},
+		"group": "SwitchVC",
 		"gen": 3,
 		"combo": true,
 		"ribbonGenOrder": 4
@@ -100,6 +104,7 @@
 			"zh-Hans": "传说 Z-A",
 			"zh-Hant": "傳說 Z-A"
 		},
+		"group": "10",
 		"gen": 9,
 		"solo": true,
 		"ribbonGenOrder": 2
@@ -116,6 +121,7 @@
 			"zh-Hans": "朱/紫",
 			"zh-Hant": "朱/紫"
 		},
+		"group": "8",
 		"gen": 9,
 		"combo": true,
 		"ribbonGenOrder": 1
@@ -159,6 +165,7 @@
 			"zh-Hans": "传说 阿尔宙斯",
 			"zh-Hant": "傳說：阿爾宙斯"
 		},
+		"group": "8",
 		"gen": 8,
 		"solo": true,
 		"ribbonGenOrder": 3
@@ -175,6 +182,7 @@
 			"zh-Hans": "晶灿钻石/明亮珍珠",
 			"zh-Hant": "晶燦鑽石/明亮珍珠"
 		},
+		"group": "8",
 		"gen": 8,
 		"combo": true,
 		"ribbonGenOrder": 2
@@ -219,6 +227,7 @@
 			"zh-Hans": "剑/盾",
 			"zh-Hant": "劍/盾"
 		},
+		"group": "8",
 		"gen": 8,
 		"combo": true,
 		"ribbonGenOrder": 1
@@ -261,6 +270,7 @@
 			"zh-Hans": "Let's Go！皮卡丘/伊布",
 			"zh-Hant": "Let's Go！皮卡丘/伊布"
 		},
+		"group": "LGPE",
 		"gen": 7,
 		"combo": true
 	},
@@ -299,6 +309,7 @@
 			"zh-Hans": "究极之日/究极之月",
 			"zh-Hant": "究極之日/究極之月"
 		},
+		"group": "7",
 		"gen": 7,
 		"combo": true,
 		"ribbonGenOrder": 2
@@ -343,6 +354,7 @@
 			"zh-Hans": "太阳/月亮",
 			"zh-Hant": "太陽/月亮"
 		},
+		"group": "7",
 		"gen": 7,
 		"combo": true,
 		"ribbonGenOrder": 1
@@ -380,6 +392,7 @@
 			"en": "GO",
 			"ko": "고"
 		},
+		"group": "GO",
 		"gen": 6,
 		"solo": true
 	},
@@ -395,6 +408,7 @@
 			"zh-Hans": "欧米伽红宝石/阿尔法蓝宝石",
 			"zh-Hant": "歐米加紅寶石/阿爾法藍寶石"
 		},
+		"group": "6",
 		"gen": 6,
 		"combo": true,
 		"ribbonGenOrder": 2
@@ -431,6 +445,7 @@
 		"names": {
 			"en": "X/Y"
 		},
+		"group": "6",
 		"gen": 6,
 		"combo": true,
 		"ribbonGenOrder": 1
@@ -459,6 +474,7 @@
 			"zh-Hans": "黑 2/白 2",
 			"zh-Hant": "黑 2/白 2"
 		},
+		"group": "5",
 		"gen": 5,
 		"combo": true
 	},
@@ -504,6 +520,7 @@
 			"zh-Hans": "黑/白",
 			"zh-Hant": "黑/白"
 		},
+		"group": "5",
 		"gen": 5,
 		"combo": true
 	},
@@ -547,6 +564,7 @@
 			"zh-Hans": "心金/魂银",
 			"zh-Hant": "心金/魂銀"
 		},
+		"group": "4",
 		"gen": 4,
 		"combo": true,
 		"ribbonGenOrder": 2
@@ -589,6 +607,7 @@
 			"zh-Hans": "钻石/珍珠/白金",
 			"zh-Hant": "鑽石/珍珠/白金"
 		},
+		"group": "4",
 		"gen": 4,
 		"combo": true,
 		"ribbonGenOrder": 1
@@ -650,6 +669,7 @@
 			"zh-Hans": "火红/叶绿 (GBA)",
 			"zh-Hant": "火紅/葉綠 (GBA)"
 		},
+		"group": "3",
 		"gen": 3,
 		"combo": true,
 		"ribbonGenOrder": 2
@@ -696,6 +716,7 @@
 			"zh-Hans": "竞技场/XD: Gale of Darkness",
 			"zh-Hant": "圓形競技場/XD: Gale of Darkness"
 		},
+		"group": "3",
 		"gen": 3,
 		"combo": true,
 		"ribbonGenOrder": 3
@@ -738,6 +759,7 @@
 			"zh-Hans": "红宝石/蓝宝石/绿宝石",
 			"zh-Hant": "紅寶石/藍寶石/綠寶石"
 		},
+		"group": "3",
 		"gen": 3,
 		"combo": true,
 		"ribbonGenOrder": 1
@@ -795,6 +817,7 @@
 			"ja": "バーチャルコンソール",
 			"ko": "버추얼 콘솔"
 		},
+		"group": "3DSVC",
 		"combo": true
 	},
 	"gold": {

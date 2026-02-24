@@ -1,0 +1,76 @@
+{
+	"10": {
+		"names": {
+			"en": "Legends: Z-A"
+		},
+		"travelTo": []
+	},
+	"SwitchVC": {
+		"names": {
+			"en": "FireRed/LeafGreen (Switch)"
+		},
+		"travelTo": []
+	},
+	"8": {
+		"names": {
+			"en": "Gen 8/Scarlet/Violet"
+		},
+		"travelTo": []
+	},
+	"LGPE": {
+		"names": {
+			"en": "Let's Go"
+		},
+		"travelTo": ["8"]
+	},
+	"3DSVC": {
+		"names": {
+			"en": "3DS Virtual Console"
+		},
+		"travelTo": ["7"]
+	},
+	"7": {
+		"names": {
+			"en": "Gen 7",
+			"ja": "第七世代"
+		},
+		"travelTo": ["8"],
+		"_notes": "USUM have exclusive Pokemon and four Totems that cannot go to SM, as well as different eligibility for the Battle Tree Great Ribbon."
+	},
+	"GO": {
+		"names": {
+			"en": "GO",
+			"ko": "고"
+		},
+		"travelTo": ["LGPE", "8"],
+		"_notes": "Only Gen 1, Meltan, and Melmetal can travel to LGPE."
+	},
+	"6": {
+		"names": {
+			"en": "Gen 6",
+			"ja": "第六世代"
+		},
+		"travelTo": ["7"]
+	},
+	"5": {
+		"names": {
+			"en": "Gen 5",
+			"ja": "第五世代"
+		},
+		"travelTo": ["6"]
+	},
+	"4": {
+		"names": {
+			"en": "Gen 4",
+			"ja": "第四世代"
+		},
+		"travelTo": ["5"]
+	},
+	"3": {
+		"names": {
+			"en": "Gen 3",
+			"ja": "第三世代"
+		},
+		"travelTo": ["4"]
+	}
+}
