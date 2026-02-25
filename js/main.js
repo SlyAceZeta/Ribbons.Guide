@@ -907,6 +907,8 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	
 	const earnableRibbons = {};
 	let earnableRibbonWarnings = [];
+	let footprintVoicelessEvos = [];
+	let footprintVoicedEvos = [];
 	let currentGameStatus = "no-ribbons-left";
 	
 	// Pokemon info
@@ -962,6 +964,7 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 		const ribbonGames = ribbons[ribbon].available;
 		for(const g in ribbonGames){
 			const ribbonGame = ribbonGames[g];
+			const isBDSP = (ribbonGame == "bd" || ribbonGame == "sp");
 			// skip if Pokemon cannot go to this game
 			if(!currentCompatibleGames.includes(ribbonGame)) continue;
 			const ribbonGameCombo = getGameData(ribbonGame, "partOf", true);
@@ -985,7 +988,7 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 				}
 			} else if(ribbon == "tower-master-ribbon"){
 				// banlist and Mythicals cannot earn this, but only in BDSP
-				if(ribbonGame == "bd" || ribbonGame == "sp"){
+				if(isBDSP){
 					if(isMythical || ribbons[ribbon].bannedBDSP.includes(dex)){
 						continue;
 					}
@@ -1007,14 +1010,14 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 				}
 			} else if(ribbon == "gorgeous-ribbon"){
 				// Pokémon with the Royal or Gorgeous Royal Ribbon cannot earn this Ribbon in BDSP
-				if(ribbonGame == "bd" || ribbonGame == "sp"){
+				if(isBDSP){
 					if(currentRibbons.includes("royal-ribbon") || currentRibbons.includes("gorgeous-royal-ribbon")){
 						continue;
 					}
 				}
 			} else if(ribbon == "royal-ribbon"){
 				// Pokémon with the Gorgeous Royal Ribbon cannot earn this Ribbon in BDSP
-				if(ribbonGame == "bd" || ribbonGame == "sp"){
+				if(isBDSP){
 					if(currentRibbons.includes("gorgeous-royal-ribbon")){
 						continue;
 					}
@@ -1023,43 +1026,91 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 				// begin Footprint Ribbon checks
 				// always earnable in Diamond, Pearl, and Platinum
 				if(ribbonGame !== "diamond" && ribbonGame !== "pearl" && ribbonGame !== "platinum"){
-					// always earnable by voiceless Pokemon in BDSP
-					// TODO: evolutions
-					const isVoiceless = getPokemonData(dex, "voiceless");
-					if(!(isVoiceless && (ribbonGame == "bd" || ribbonGame == "sp"))){
-						// otherwise, can only be earned if Met Level < 71
-						const isCurrentLevelBelow71 = currentLevel < 71;
-						// check first if the Met Level is going to change
+					// we must do a comprehensive check for voices for BDSP
+					const isCurrentlyVoiceless = getPokemonData(dex, "voiceless");
+					
+					// voiced BDSP species that can evolve into voiceless BDSP species
+					const canEvolveVoiceless = {"caterpie": ["metapod"], "weedle": ["kakuna"], "venonat": ["venomoth"], "natu": ["xatu"], "larvitar": ["pupitar"], "wurmple": ["silcoon", "cascoon"], "bagon": ["shelgon"]};
+					
+					// voiceless BDSP species that can evolve into voiced BDSP species
+					const canEvolveVoiced = {"caterpie": ["butterfree"], "metapod": ["butterfree"], "weedle": ["beedrill"], "kakuna": ["beedrill"], "kabuto": ["kabutops"], "remoraid": ["octillery"], "pupitar": ["tyranitar"], "silcoon": ["beautifly"], "cascoon": ["dustox"], "seedot": ["nuzleaf", "shiftry"], "nincada": ["ninjask"], "anorith": ["armaldo"], "bagon": ["salamence"], "shelgon": ["salamence"], "beldum": ["metagross"], "metang": ["metagross"]};
+					
+					// we must also do a comprehensive level check
+					// first check: it's from GO (Met Level is always <= 50), it's eligible
+					// second check: Met Level has been set and it's < 71, it's eligible
+					// third check: Met Level has not been set, but it will not change and the current level is < 71, it's eligible
+					// fourth check: Met Level will change but the current level is < 71, it's eligible BUT we'll have to warn
+					const passesLevelCheck = (originGame === "go") || (!metLevelWillChange && metLevel && metLevel < 71) || (!metLevelWillChange && !metLevel && currentLevel < 71) || (metLevelWillChange && currentLevel < 71);
+					// we must also consider the scenario where Met Level won't change, but the user has not set it so we don't know what it is, and we can't determine it to be under 71
+					const notEnoughInfo = !metLevelWillChange && !metLevel && originGame !== "go" && currentLevel > 70;
+					
+					if(passesLevelCheck){
+						// Pokemon currently passes the level check
+						// however, if the met level will change (fourth check), we may need to warn the user
 						if(metLevelWillChange){
-							if(isCurrentLevelBelow71){
-								// Pokemon's current level is < 71
-								// if it transfers now, Met Level will become < 71 and the Pokemon can always earn the Footprint Ribbon
-								// but if it levels to 71+ before transferring, Footprint Ribbon will be unavailable
-								earnableRibbonWarnings.push("footprint-" + gameGroups[currentGameGroup].metLevelWarning);
+							// if the Pokemon is voiceless, then it can go to BDSP and we don't need to warn them about the Met Level...
+							if(isCurrentlyVoiceless){
+								// ... unless the Pokemon can evolve into a voiced Pokemon
+								if(canEvolveVoiced[dex]){
+									earnableRibbonWarnings.push("footprint-" + gameGroups[currentGameGroup].metLevelWarning + "-voiceless-evolution-danger");
+									footprintVoicedEvos = canEvolveVoiced[dex];
+								}
 							} else {
-								// Pokemon's current level is 71+, Footprint Ribbon is unavailable
+								earnableRibbonWarnings.push("footprint-" + gameGroups[currentGameGroup].metLevelWarning);
+							}
+						}
+					} else if(notEnoughInfo){
+						// we can't tell if the Pokemon passes the level check
+						// if we're looking at BDSP AND the Pokemon is voiceless, it can earn the ribbon...
+						if(isBDSP && isCurrentlyVoiceless){
+							// ...but we need to warn about potential voiced evolutions
+							if(canEvolveVoiced[dex]){
+								earnableRibbonWarnings.push("footprint-voiceless-evolution-danger");
+								footprintVoicedEvos = canEvolveVoiced[dex];
+							}
+						} else {
+							// ...we need to tell the user we don't have enough info
+							earnableRibbonWarnings.push("footprint-met-level");
+							
+							// although, we can suggest a voiceless evolution for BDSP
+							if(isBDSP && canEvolveVoiceless[dex]){
+								footprintVoicelessEvos = canEvolveVoiceless[dex];
+								// change the warning based on whether it can evolve into voiceless and then further evolve into voiced
+								const temporaryVoiceless = canEvolveVoiced[dex];
+								if(temporaryVoiceless){
+									earnableRibbonWarnings.push("footprint-voiceless-bypass-temporary");
+									footprintVoicedEvos = canEvolveVoiced[dex];
+								} else {
+									earnableRibbonWarnings.push("footprint-voiceless-bypass-permanent");
+								}
+							}
+						}
+					} else {
+						// Met Level has been set to 71+
+						// the only way to earn the Ribbon is in BDSP and if the Pokemon is, or can become, voiceless
+						if(isBDSP){
+							if(isCurrentlyVoiceless){
+								if(canEvolveVoiced[dex]){
+									earnableRibbonWarnings.push("footprint-voiceless-evolution-danger");
+									footprintVoicedEvos = canEvolveVoiced[dex];
+								}
+							} else if(canEvolveVoiceless[dex]){
+								footprintVoicelessEvos = canEvolveVoiceless[dex];
+								// change the warning based on whether it can evolve into voiceless and then further evolve into voiced
+								const temporaryVoiceless = canEvolveVoiced[dex];
+								if(temporaryVoiceless){
+									earnableRibbonWarnings.push("footprint-voiceless-bypass-temporary");
+									footprintVoicedEvos = canEvolveVoiced[dex];
+								} else {
+									earnableRibbonWarnings.push("footprint-voiceless-bypass-permanent");
+								}
+							} else {
+								// no voiceless bypass exists for BDSP
 								continue;
 							}
 						} else {
-							// Met Level is not going to change anymore
-							if(metLevel){
-								// if Pokemon was met at 71+, Footprint Ribbon is unavailable
-								if(metLevel > 70) continue;
-							} else {
-								// Met Level was not set, let's try to determine automatically
-								// Pokemon from GO have Met Level < 50 and can always earn the Footprint Ribbon
-								if(originGame !== "go"){
-									// Met Level cannot change anymore, so Pokemon with Current Level < 71 must also have Met Level < 71
-									if(!isCurrentLevelBelow71){
-										// we cannot automatically determine Met Level
-										// before we warn, check if the Pokemon is voiceless and can go to BDSP, if so then no warning is necessary
-										// TODO: evolutions
-										if(!((currentCompatibleGames.includes("bd") || currentCompatibleGames.includes("sp")) && isVoiceless)){
-											earnableRibbonWarnings.push("footprint-met-level");
-										}
-									}
-								}
-							}
+							// no BDSP bypass exists
+							continue;
 						}
 					}
 				}
@@ -1082,7 +1133,7 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	// remove duplicate warnings
 	earnableRibbonWarnings = [...new Set(earnableRibbonWarnings)];
 	
-	return {currentCompatibleGames, earnableRibbons, earnableRibbonWarnings, currentGameStatus};
+	return {currentCompatibleGames, earnableRibbons, earnableRibbonWarnings, footprintVoicedEvos, footprintVoicelessEvos, currentGameStatus};
 }
 
 function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame, currentRibbons, checkedScale, totem = false, gmax = false, shadow = false){
