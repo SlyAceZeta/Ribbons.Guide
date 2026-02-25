@@ -984,7 +984,7 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 			if(ribbon == "winning-ribbon"){
 				// can only be earned under Level 51
 				if(currentLevel < 51){
-					earnableRibbonWarnings.push("winning-ribbon");
+					earnableRibbonWarnings.push("winning");
 				} else {
 					continue;
 				}
@@ -1048,23 +1048,24 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 						// Pokemon currently passes the level check
 						// however, if the Met Level will change (fourth check), we may need to warn the user about it
 						if(metLevelWillChange){
+							const metLevelWarning = gameGroups[currentGameGroup].metLevelWarning;
 							// if the Pokemon is voiceless, then it can go to BDSP and we don't need to warn them about the Met Level...
 							if(isCurrentlyVoiceless){
 								// ... unless the Pokemon can evolve into a voiced Pokemon
 								if(canEvolveVoiced){
-									earnableRibbonWarnings.push("footprint-" + gameGroups[currentGameGroup].metLevelWarning + "-voiceless-evolution-danger");
+									earnableRibbonWarnings.push("footprint-danger-" + metLevelWarning);
 									footprintVoicedEvos = evolveVoicedMap[dex];
 								}
 							} else if(canEvolveVoiceless){
 								// if the Pokemon can evolve into a voiceless Pokemon, then it can go to BDSP and we can let them know
 								footprintVoicelessEvos = evolveVoicelessMap[dex];
 								// but we should also let them know if it can further evolve into a voiced Pokemon
-								const warning = canEvolveVoiced ? "footprint-" + gameGroups[currentGameGroup].metLevelWarning + "-voiceless-bypass-temporary" : "footprint-" + gameGroups[currentGameGroup].metLevelWarning + "-voiceless-bypass-permanent";
+								const warning = canEvolveVoiced ? "temporary" : "permanent";
 								if(canEvolveVoiced) footprintVoicedEvos = evolveVoicedMap[dex];
-								earnableRibbonWarnings.push(warning);
+								earnableRibbonWarnings.push("footprint-bypass-" + warning + "-" + metLevelWarning);
 							} else {
 								// no possible bypass, we must warn them about overleveling
-								earnableRibbonWarnings.push("footprint-" + gameGroups[currentGameGroup].metLevelWarning);
+								earnableRibbonWarnings.push("footprint-" + metLevelWarning);
 							}
 						}
 					} else {
@@ -1075,19 +1076,21 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 							if(isCurrentlyVoiceless){
 								// unless they evolve to a voiced Pokemon
 								if(canEvolveVoiced){
-									earnableRibbonWarnings.push("footprint-voiceless-evolution-danger");
+									const mlWarning = notEnoughInfo ? "-metlevel" : "";
+									earnableRibbonWarnings.push("footprint-danger" + mlWarning);
 									footprintVoicedEvos = evolveVoicedMap[dex];
 								}
 							} else if(canEvolveVoiceless){
 								// let the user know if we can evolve to voiceless
 								footprintVoicelessEvos = evolveVoicelessMap[dex];
 								// but we should also let them know if it can further evolve into a voiced Pokemon
-								const warning = canEvolveVoiced ? "footprint-voiceless-bypass-temporary" : "footprint-voiceless-bypass-permanent";
+								const warning = canEvolveVoiced ? "temporary" : "permanent";
 								if(canEvolveVoiced) footprintVoicedEvos = evolveVoicedMap[dex];
-								earnableRibbonWarnings.push(warning);
+								const mlWarning = notEnoughInfo ? "-metlevel" : "";
+								earnableRibbonWarnings.push("footprint-bypass-" + warning + mlWarning);
 							} else if(notEnoughInfo){
 								// the Pokemon is voiced, cannot evolve to voiceless, and we don't have enough info
-								earnableRibbonWarnings.push("footprint-met-level");
+								earnableRibbonWarnings.push("footprint-metlevel");
 							} else {
 								// the Pokemon is voiced, cannot evolve to voiceless, and was met at 71+
 								continue;
@@ -1095,7 +1098,7 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 						} else {
 							// we're in Gens 6 and 7, voices don't matter here
 							if(notEnoughInfo){
-								earnableRibbonWarnings.push("footprint-met-level");
+								earnableRibbonWarnings.push("footprint-metlevel");
 							} else {
 								continue;
 							}
