@@ -1,5 +1,9 @@
 /* globals */
 var balls, changelog, games, gameOrder = {}, gameGroups, importmap, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off";
+// voiced BDSP species that can evolve into voiceless BDSP species
+const evolveVoicelessMap = {"caterpie": ["metapod"], "weedle": ["kakuna"], "venonat": ["venomoth"], "natu": ["xatu"], "larvitar": ["pupitar"], "wurmple": ["silcoon", "cascoon"], "bagon": ["shelgon"]};
+// voiceless BDSP species that can evolve into voiced BDSP species
+const evolveVoicedMap = {"caterpie": ["butterfree"], "metapod": ["butterfree"], "weedle": ["beedrill"], "kakuna": ["beedrill"], "kabuto": ["kabutops"], "remoraid": ["octillery"], "pupitar": ["tyranitar"], "silcoon": ["beautifly"], "cascoon": ["dustox"], "seedot": ["nuzleaf", "shiftry"], "nincada": ["ninjask"], "anorith": ["armaldo"], "bagon": ["salamence"], "shelgon": ["salamence"], "beldum": ["metagross"], "metang": ["metagross"]};
 // TODO: add tutorials
 /* clear old local storage properties if still present */
 /* except theme which gets special handling */
@@ -915,10 +919,13 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	const isMythical = getPokemonData(dex, "mythical");
 	const currentGameGroup = getGameData(currentGame, "group");
 	const metLevelWillChange = gameGroups[currentGameGroup]?.metLevelWillChange || false;
+	const isCurrentlyVoiceless = getPokemonData(dex, "voiceless");
+	const canEvolveVoiceless = !!evolveVoicelessMap[dex];
+	const canEvolveVoiced = !!evolveVoicedMap[dex];
 	const compatibleGames = getPokemonData(dex, "games"); // all compatible games for the species
-	const currentCompatibleGames = filterCompatibleGames(compatibleGames, currentGame, currentGameGroup); // all games the Pokemon can actually transfer to
+	let currentCompatibleGames = filterCompatibleGames(compatibleGames, currentGame, currentGameGroup); // all games the Pokemon can actually transfer to
 	// Pokemon-specific restrictions
-	currentCompatibleGames.filter(game => {
+	currentCompatibleGames = currentCompatibleGames.filter(game => {
 		if(dex == "nincada"){
 			if(originGame == "bd" || originGame == "sp"){
 				// Nincada originally from BDSP cannot enter SwSh
@@ -1026,16 +1033,9 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 				// begin Footprint Ribbon checks
 				// always earnable in Diamond, Pearl, and Platinum
 				if(ribbonGame !== "diamond" && ribbonGame !== "pearl" && ribbonGame !== "platinum"){
-					// we must do a comprehensive check for voices for BDSP
-					const isCurrentlyVoiceless = getPokemonData(dex, "voiceless");
+					// we must do a comprehensive voice and level check
 					
-					// voiced BDSP species that can evolve into voiceless BDSP species
-					const canEvolveVoiceless = {"caterpie": ["metapod"], "weedle": ["kakuna"], "venonat": ["venomoth"], "natu": ["xatu"], "larvitar": ["pupitar"], "wurmple": ["silcoon", "cascoon"], "bagon": ["shelgon"]};
-					
-					// voiceless BDSP species that can evolve into voiced BDSP species
-					const canEvolveVoiced = {"caterpie": ["butterfree"], "metapod": ["butterfree"], "weedle": ["beedrill"], "kakuna": ["beedrill"], "kabuto": ["kabutops"], "remoraid": ["octillery"], "pupitar": ["tyranitar"], "silcoon": ["beautifly"], "cascoon": ["dustox"], "seedot": ["nuzleaf", "shiftry"], "nincada": ["ninjask"], "anorith": ["armaldo"], "bagon": ["salamence"], "shelgon": ["salamence"], "beldum": ["metagross"], "metang": ["metagross"]};
-					
-					// we must also do a comprehensive level check
+					// level checks
 					// first check: it's from GO (Met Level is always <= 50), it's eligible
 					// second check: Met Level has been set and it's < 71, it's eligible
 					// third check: Met Level has not been set, but it will not change and the current level is < 71, it's eligible
@@ -1046,71 +1046,59 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 					
 					if(passesLevelCheck){
 						// Pokemon currently passes the level check
-						// however, if the met level will change (fourth check), we may need to warn the user
+						// however, if the Met Level will change (fourth check), we may need to warn the user about it
 						if(metLevelWillChange){
 							// if the Pokemon is voiceless, then it can go to BDSP and we don't need to warn them about the Met Level...
 							if(isCurrentlyVoiceless){
 								// ... unless the Pokemon can evolve into a voiced Pokemon
-								if(canEvolveVoiced[dex]){
+								if(canEvolveVoiced){
 									earnableRibbonWarnings.push("footprint-" + gameGroups[currentGameGroup].metLevelWarning + "-voiceless-evolution-danger");
-									footprintVoicedEvos = canEvolveVoiced[dex];
+									footprintVoicedEvos = evolveVoicedMap[dex];
 								}
+							} else if(canEvolveVoiceless){
+								// if the Pokemon can evolve into a voiceless Pokemon, then it can go to BDSP and we can let them know
+								footprintVoicelessEvos = evolveVoicelessMap[dex];
+								// but we should also let them know if it can further evolve into a voiced Pokemon
+								const warning = canEvolveVoiced ? "footprint-" + gameGroups[currentGameGroup].metLevelWarning + "-voiceless-bypass-temporary" : "footprint-" + gameGroups[currentGameGroup].metLevelWarning + "-voiceless-bypass-permanent";
+								if(canEvolveVoiced) footprintVoicedEvos = evolveVoicedMap[dex];
+								earnableRibbonWarnings.push(warning);
 							} else {
+								// no possible bypass, we must warn them about overleveling
 								earnableRibbonWarnings.push("footprint-" + gameGroups[currentGameGroup].metLevelWarning);
 							}
 						}
-					} else if(notEnoughInfo){
-						// we can't tell if the Pokemon passes the level check
-						// if we're looking at BDSP AND the Pokemon is voiceless, it can earn the ribbon...
-						if(isBDSP && isCurrentlyVoiceless){
-							// ...but we need to warn about potential voiced evolutions
-							if(canEvolveVoiced[dex]){
-								earnableRibbonWarnings.push("footprint-voiceless-evolution-danger");
-								footprintVoicedEvos = canEvolveVoiced[dex];
-							}
-						} else {
-							// ...we need to tell the user we don't have enough info
-							earnableRibbonWarnings.push("footprint-met-level");
-							
-							// although, we can suggest a voiceless evolution for BDSP
-							if(isBDSP && canEvolveVoiceless[dex]){
-								footprintVoicelessEvos = canEvolveVoiceless[dex];
-								// change the warning based on whether it can evolve into voiceless and then further evolve into voiced
-								const temporaryVoiceless = canEvolveVoiced[dex];
-								if(temporaryVoiceless){
-									earnableRibbonWarnings.push("footprint-voiceless-bypass-temporary");
-									footprintVoicedEvos = canEvolveVoiced[dex];
-								} else {
-									earnableRibbonWarnings.push("footprint-voiceless-bypass-permanent");
-								}
-							}
-						}
 					} else {
-						// Met Level has been set to 71+
-						// the only way to earn the Ribbon is in BDSP and if the Pokemon is, or can become, voiceless
+						// either level check fails or we don't have enough info
+						// let's see if BDSP can save it
 						if(isBDSP){
+							// voiceless Pokemon can always earn the Ribbon in BDSP
 							if(isCurrentlyVoiceless){
-								if(canEvolveVoiced[dex]){
+								// unless they evolve to a voiced Pokemon
+								if(canEvolveVoiced){
 									earnableRibbonWarnings.push("footprint-voiceless-evolution-danger");
-									footprintVoicedEvos = canEvolveVoiced[dex];
+									footprintVoicedEvos = evolveVoicedMap[dex];
 								}
-							} else if(canEvolveVoiceless[dex]){
-								footprintVoicelessEvos = canEvolveVoiceless[dex];
-								// change the warning based on whether it can evolve into voiceless and then further evolve into voiced
-								const temporaryVoiceless = canEvolveVoiced[dex];
-								if(temporaryVoiceless){
-									earnableRibbonWarnings.push("footprint-voiceless-bypass-temporary");
-									footprintVoicedEvos = canEvolveVoiced[dex];
-								} else {
-									earnableRibbonWarnings.push("footprint-voiceless-bypass-permanent");
-								}
+							} else if(canEvolveVoiceless){
+								// let the user know if we can evolve to voiceless
+								footprintVoicelessEvos = evolveVoicelessMap[dex];
+								// but we should also let them know if it can further evolve into a voiced Pokemon
+								const warning = canEvolveVoiced ? "footprint-voiceless-bypass-temporary" : "footprint-voiceless-bypass-permanent";
+								if(canEvolveVoiced) footprintVoicedEvos = evolveVoicedMap[dex];
+								earnableRibbonWarnings.push(warning);
+							} else if(notEnoughInfo){
+								// the Pokemon is voiced, cannot evolve to voiceless, and we don't have enough info
+								earnableRibbonWarnings.push("footprint-met-level");
 							} else {
-								// no voiceless bypass exists for BDSP
+								// the Pokemon is voiced, cannot evolve to voiceless, and was met at 71+
 								continue;
 							}
 						} else {
-							// no BDSP bypass exists
-							continue;
+							// we're in Gens 6 and 7, voices don't matter here
+							if(notEnoughInfo){
+								earnableRibbonWarnings.push("footprint-met-level");
+							} else {
+								continue;
+							}
 						}
 					}
 				}
