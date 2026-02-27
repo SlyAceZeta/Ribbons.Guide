@@ -1,5 +1,12 @@
 [
 	{
+		"date": "27 February 2026",
+		"changes": [
+			"Added FireRed and LeafGreen on Switch; for now, they are included in the \"None\" origin mark",
+			"Fixed a bug where the filter would stop working correctly after filtering by a status"
+		]
+	},
+	{
 		"date": "11 January 2026",
 		"changes": [
 			"Fixed a bug where users who had an unsupported language set as their browser's main language could not open Ribbons.Guide; users will be forced to English by default (thanks raen, eldaorgue, and shubibs!)"
