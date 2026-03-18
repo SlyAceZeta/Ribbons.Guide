@@ -5,6 +5,12 @@
 		},
 		"travelTo": []
 	},
+	"XD-NSO": {
+		"names": {
+			"en": "XD: Gale of Darkness (NSO)"
+		},
+		"travelTo": []
+	},
 	"SwitchVC": {
 		"names": {
 			"en": "FireRed/LeafGreen (Switch)"

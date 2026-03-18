@@ -990,7 +990,7 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 				}
 			} else if(ribbon == "national-ribbon"){
 				// can only be earned by Shadow Pokemon in Colo/XD
-				if(!shadow || (currentGame !== "colosseum" && currentGame !== "xd")){
+				if(!shadow || (currentGame !== "colosseum" && currentGame !== "xd" && currentGame !== "xd-nso")){
 					continue;
 				}
 			} else if(ribbon == "tower-master-ribbon"){
@@ -1155,6 +1155,8 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	if(currentGame == "fr-switch" || currentGame == "lg-switch"){
 		compatibleGames = ["fr-switch", "lg-switch"];
 	}
+	// temporary until game groups
+	if(currentGame == "xd-nso") compatibleGames = ["xd-nso"];
 	var mythical = getPokemonData(dex, "mythical");
 	var evoWarnMon = getPokemonData(dex, "evowarnmon", true);
 	var evoWarnGen = getPokemonData(dex, "evowarngen", true);
@@ -1245,7 +1247,7 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 							}
 						} else if(ribbon == "national-ribbon"){
 							// can only be earned by Shadow Pokemon in Colo/XD
-							if(!shadow || (currentGame !== "colosseum" && currentGame !== "xd")){
+							if(!shadow || (currentGame !== "colosseum" && currentGame !== "xd" && currentGame !== "xd-nso")){
 								continue;
 							}
 						} else if(ribbon == "tower-master-ribbon"){
@@ -1611,14 +1613,9 @@ function savePokemon(edit = false){
 					continueForm = false;
 					setFormInvalid("CurrentGame", "HOME does not yet support Z-A.");
 				}
-			// temporary until FRLG HOME support
-			} else if(newP.currentgame == "fr-switch" || newP.currentgame == "lg-switch"){
-				if(newP.originmark == "none"){
-					setFormValid("CurrentGame");
-				} else {
-					continueForm = false;
-					setFormInvalid("CurrentGame", "HOME does not yet support FRLG.");
-				}
+			// temporary until game groups
+			} else if((newP.currentgame == "fr-switch" || newP.currentgame == "lg-switch" || newP.currentgame == "xd-nso") && newP.originmark == "none"){
+				setFormValid("CurrentGame");
 			} else if(newP.currentgame == "go" && newP.originmark == "go"){
 				setFormValid("CurrentGame");
 			} else {
@@ -1705,8 +1702,8 @@ function saveMultiplePokemon(){
 						if(newP.originmark !== "plza"){
 							gameChangeValid = false;
 						}
-					// temporary until FRLG HOME support
-					} else if(newP.currentgame == "fr-switch" || newP.currentgame == "lg-switch"){
+					// temporary until game groups
+					} else if(newP.currentgame == "fr-switch" || newP.currentgame == "lg-switch" || newP.currentgame == "xd-nso"){
 						if(newP.originmark !== "none"){
 							gameChangeValid = false;
 						}
@@ -2181,6 +2178,8 @@ function createCard(p, id){
 	if(p.currentgame == "fr-switch" || p.currentgame == "lg-switch"){
 		compatibleGames = ["fr-switch", "lg-switch"];
 	}
+	// temporary until game groups
+	if(p.currentgame == "xd-nso") compatibleGames = ["xd-nso"];
 	var compatibleFiltered = [];
 	if(currentGen < 1000){
 		for(var cg in compatibleGames){
@@ -3209,8 +3208,7 @@ function initRun(){
 		for(var g in games){
 			if(games[g].combo || games[g].solo){
 				// temporary until Z-A HOME support when we add "plza" to pokemon.json
-				// temporary until FRLG HOME support
-				if(g == "plza" || g == "frlg-switch"){
+				if(g == "plza"){
 					$("#filterFormTargetGames").append(new Option(getLanguage(games[g].names) + " (disabled until HOME support)", g)).children(":last").prop("disabled", true);
 				} else {
 					$("#filterFormTargetGames").append(new Option(getLanguage(games[g].names), g));

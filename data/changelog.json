@@ -1,5 +1,12 @@
 [
 	{
+		"date": "18 March 2026",
+		"changes": [
+			"Added Nintendo Switch Online version of XD: Gale of Darkness, which uses the \"None\" origin mark",
+			"Enabled ability to filter by Pokémon that can travel to the Switch versions of FireRed and LeafGreen (which are only Pokémon that are currently within those games)"
+		]
+	},
+	{
 		"date": "27 February 2026",
 		"changes": [
 			"Added FireRed and LeafGreen on Switch; for now, they are included in the \"None\" origin mark",

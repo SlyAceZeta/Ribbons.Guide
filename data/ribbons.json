@@ -749,7 +749,8 @@
 		"gen": 3,
 		"available": [
 			"colosseum",
-			"xd"
+			"xd",
+			"xd-nso"
 		],
 		"names": {
 			"en": "National Ribbon",
@@ -789,7 +790,8 @@
 		"gen": 3,
 		"available": [
 			"colosseum",
-			"xd"
+			"xd",
+			"xd-nso"
 		],
 		"names": {
 			"en": "Earth Ribbon",

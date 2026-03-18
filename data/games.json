@@ -45,6 +45,21 @@
 		"gen": 6,
 		"storage": true
 	},
+	"xd-nso": {
+		"names": {
+			"en": "XD: Gale of Darkness (NSO)",
+			"es-es": "XD: Tempestad Oscura (NSO)",
+			"fr": "XD : Le Souffle des Ténèbres (NSO)",
+			"de": "XD: Der Dunkle Sturm (NSO)",
+			"it": "XD: Tempesta Oscura (NSO)",
+			"ja": "ＸＤ 闇の旋風ダーク・ルギア (NSO)",
+			"ko": "XD 어둠의 선풍 다크루기아 (NSO)"
+		},
+		"group": "XD-NSO",
+		"gen": 3,
+		"solo": true,
+		"platformIcon": "gamecube"
+	},
 	"frlg-switch": {
 		"names": {
 			"en": "FireRed/LeafGreen (Switch)",
@@ -706,15 +721,15 @@
 	},
 	"coloxd": {
 		"names": {
-			"en": "Colosseum/XD: Gale of Darkness",
-			"es-es": "Colosseum/XD: Tempestad Oscura",
-			"fr": "Colosseum/XD : Le Souffle des Ténèbres",
-			"de": "Kolosseum/XD: Der Dunkle Sturm",
-			"it": "Colosseo/XD: Tempesta Oscura",
-			"ja": "コロシアム/ＸＤ 闇の旋風ダーク・ルギア",
-			"ko": "콜로세움/XD 어둠의 선풍 다크루기아",
-			"zh-Hans": "竞技场/XD: Gale of Darkness",
-			"zh-Hant": "圓形競技場/XD: Gale of Darkness"
+			"en": "Colosseum/XD: Gale of Darkness (GameCube)",
+			"es-es": "Colosseum/XD: Tempestad Oscura (GameCube)",
+			"fr": "Colosseum/XD : Le Souffle des Ténèbres (GameCube)",
+			"de": "Kolosseum/XD: Der Dunkle Sturm (GameCube)",
+			"it": "Colosseo/XD: Tempesta Oscura (GameCube)",
+			"ja": "コロシアム/ＸＤ 闇の旋風ダーク・ルギア (ゲームキューブ)",
+			"ko": "콜로세움/XD 어둠의 선풍 다크루기아 (게임큐브)",
+			"zh-Hans": "竞技场/XD: Gale of Darkness (GameCube)",
+			"zh-Hant": "圓形競技場/XD: Gale of Darkness (GameCube)"
 		},
 		"group": "3",
 		"gen": 3,
@@ -723,26 +738,26 @@
 	},
 	"colosseum": {
 		"names": {
-			"en": "Colosseum",
-			"de": "Kolosseum",
-			"it": "Colosseo",
-			"ja": "コロシアム",
-			"ko": "콜로세움",
-			"zh-Hans": "竞技场",
-			"zh-Hant": "圓形競技場"
+			"en": "Colosseum (GameCube)",
+			"de": "Kolosseum (GameCube)",
+			"it": "Colosseo (GameCube)",
+			"ja": "コロシアム (ゲームキューブ)",
+			"ko": "콜로세움 (게임큐브)",
+			"zh-Hans": "竞技场 (GameCube)",
+			"zh-Hant": "圓形競技場 (GameCube)"
 		},
 		"partOf": "coloxd",
 		"platformIcon": "gamecube"
 	},
 	"xd": {
 		"names": {
-			"en": "XD: Gale of Darkness",
-			"es-es": "XD: Tempestad Oscura",
-			"fr": "XD : Le Souffle des Ténèbres",
-			"de": "XD: Der Dunkle Sturm",
-			"it": "XD: Tempesta Oscura",
-			"ja": "ＸＤ 闇の旋風ダーク・ルギア",
-			"ko": "XD 어둠의 선풍 다크루기아"
+			"en": "XD: Gale of Darkness (GameCube)",
+			"es-es": "XD: Tempestad Oscura (GameCube)",
+			"fr": "XD : Le Souffle des Ténèbres (GameCube)",
+			"de": "XD: Der Dunkle Sturm (GameCube)",
+			"it": "XD: Tempesta Oscura (GameCube)",
+			"ja": "ＸＤ 闇の旋風ダーク・ルギア (ゲームキューブ)",
+			"ko": "XD 어둠의 선풍 다크루기아 (게임큐브)"
 		},
 		"partOf": "coloxd",
 		"platformIcon": "gamecube"
