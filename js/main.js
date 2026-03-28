@@ -2237,7 +2237,7 @@ function createCard(p, id){
 	
 	/* header */
 	var $cardHeaderLeft = $("<div>", { "class": "card-header-fullname" });
-	var $cardHeaderCheckbox = $("<input>", { "type": "checkbox", "class": "card-header-checkbox form-check-input me-2 d-none", "aria-label": "Select " + displayName, "disabled": true });
+	var $cardHeaderCheckbox = $("<input>", { "type": "checkbox", "class": "card-header-checkbox form-check-input me-2 d-none", "aria-label": "Select " + displayName, "disabled": "disabled" });
 	var $cardHeaderBallMain = $("<img>", { "class": "align-text-top me-2", "src": "img/balls/" + p.ball + ".png", "alt": getLanguage(balls[p.ball]), "title": getLanguage(balls[p.ball]) });
 	var $cardHeaderBallStrange = "";
 	if(p.currentgame && ((p.currentgame !== "pla" && p.currentgame !== "home" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
