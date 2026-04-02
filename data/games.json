@@ -1,4 +1,20 @@
 {
+	"homeza": {
+		"names": {
+			"en": "HOME (Legends: Z-A)",
+			"es-es": "HOME (Leyendas: Z-A)",
+			"fr": "HOME (Légendes : Z-A)",
+			"de": "HOME (Legenden: Z-A)",
+			"it": "HOME (Leggende: Z-A)",
+			"ja": "HOME (LEGENDS Z-A)",
+			"ko": "HOME (LEGENDS Z-A)",
+			"zh-Hans": "HOME (传说 Z-A)",
+			"zh-Hant": "HOME (傳說 Z-A)"
+		},
+		"group": "10",
+		"gen": 9,
+		"storage": true
+	},
 	"home": {
 		"names": {
 			"en": "HOME (Gen 8/Scarlet/Violet)",

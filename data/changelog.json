@@ -1,5 +1,14 @@
 [
 	{
+		"date": "2 April 2026",
+		"changes": [
+			"Added HOME compatibility with Legends: Z-A",
+			"Added second version of HOME for Pokémon that have moved to Z-A, similar to the second version of Bank for Pokémon that moved to Gen&nbsp;7",
+			"Added warning for Pokémon currently in GO regarding Latin American Spanish HOME accounts",
+			"Updated warning for Pokémon in Gen&nbsp;8, Scarlet, or Violet that still have Ribbons to earn regarding Legends: Z-A preventing them from going back"
+		]
+	},
+	{
 		"date": "18 March 2026",
 		"changes": [
 			"Added Nintendo Switch Online version of XD: Gale of Darkness, which uses the \"None\" origin mark",

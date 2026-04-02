@@ -21,7 +21,7 @@
 		"names": {
 			"en": "Gen 8/Scarlet/Violet"
 		},
-		"travelTo": []
+		"travelTo": ["10"]
 	},
 	"LGPE": {
 		"names": {
@@ -50,8 +50,8 @@
 			"en": "GO",
 			"ko": "고"
 		},
-		"travelTo": ["LGPE", "8"],
-		"_notes": "Only Gen 1, Meltan, and Melmetal can travel to LGPE."
+		"travelTo": ["LGPE", "8", "10"],
+		"_notes": "Only Gen 1, Meltan, and Melmetal can travel to LGPE. GO Pokémon transferred into a HOME account set to Latin American Spanish cannot go to LGPE or 8."
 	},
 	"6": {
 		"names": {

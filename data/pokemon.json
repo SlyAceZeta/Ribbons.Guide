@@ -54,7 +54,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"ivysaur": {
@@ -112,7 +113,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "bulbasaur"
 	},
@@ -172,7 +174,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "ivysaur"
 	},
@@ -231,7 +234,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"charmeleon": {
@@ -289,7 +293,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "charmander"
 	},
@@ -348,7 +353,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "charmeleon"
 	},
@@ -407,7 +413,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"wartortle": {
@@ -465,7 +472,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "squirtle"
 	},
@@ -524,7 +532,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "wartortle"
 	},
@@ -754,7 +763,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"kakuna": {
@@ -809,7 +819,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "weedle"
 	},
@@ -864,7 +875,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -922,7 +934,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"pidgeotto": {
@@ -976,7 +989,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -1034,7 +1048,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "pidgeotto"
 	},
@@ -1344,7 +1359,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"arbok": {
@@ -1400,7 +1416,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -1466,7 +1483,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "pichu"
 	},
@@ -1910,7 +1928,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "pikachu"
 	},
@@ -2478,7 +2497,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "cleffa"
 	},
@@ -2538,7 +2558,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "clefairy"
 	},
@@ -2754,7 +2775,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "igglybuff"
 	},
@@ -2813,7 +2835,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "jigglypuff"
 	},
@@ -2872,7 +2895,8 @@
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"golbat": {
@@ -2930,7 +2954,8 @@
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "zubat"
 	},
@@ -3553,7 +3578,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -3572,7 +3598,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"meowth-galar": {
@@ -3582,7 +3609,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"persian": {
@@ -3640,7 +3668,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "meowth"
 	},
@@ -3657,7 +3686,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "meowth-alola"
 	},
@@ -3836,7 +3866,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"primeape": {
@@ -3894,7 +3925,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -4273,7 +4305,8 @@
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"kadabra": {
@@ -4331,7 +4364,8 @@
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "abra"
 	},
@@ -4390,7 +4424,8 @@
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "kadabra"
 	},
@@ -4448,7 +4483,8 @@
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"machoke": {
@@ -4505,7 +4541,8 @@
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "machop"
 	},
@@ -4563,7 +4600,8 @@
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "machoke"
 	},
@@ -4620,7 +4658,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"weepinbell": {
@@ -4676,7 +4715,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -4736,7 +4776,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "weepinbell"
 	},
@@ -5266,7 +5307,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"slowpoke-galar": {
@@ -5276,7 +5318,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"slowbro": {
@@ -5334,7 +5377,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "slowpoke"
 	},
@@ -5345,7 +5389,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "slowpoke-galar"
 	},
@@ -5526,7 +5571,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -5537,7 +5583,8 @@
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"doduo": {
@@ -6095,7 +6142,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"haunter": {
@@ -6154,7 +6202,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "gastly"
 	},
@@ -6214,7 +6263,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "haunter"
 	},
@@ -6272,7 +6322,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"drowzee": {
@@ -6834,7 +6885,8 @@
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"marowak": {
@@ -6890,7 +6942,8 @@
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -6908,7 +6961,8 @@
 			"lgp",
 			"lge",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"evolvesFrom": "cubone"
 	},
@@ -7526,7 +7580,8 @@
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -7818,7 +7873,8 @@
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"starmie": {
@@ -7875,7 +7931,8 @@
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -7936,7 +7993,8 @@
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -7948,7 +8006,8 @@
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"evolvesFrom": "mime-jr"
 	},
@@ -8011,7 +8070,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -8253,7 +8313,8 @@
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -8432,7 +8493,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"gyarados": {
@@ -8492,7 +8554,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "magikarp"
 	},
@@ -8674,7 +8737,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"vaporeon": {
@@ -8733,7 +8797,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -8793,7 +8858,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -8853,7 +8919,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -8914,7 +8981,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"omanyte": {
@@ -9197,7 +9265,8 @@
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"snorlax": {
@@ -9531,7 +9600,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"dragonair": {
@@ -9589,7 +9659,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "dratini"
 	},
@@ -9648,7 +9719,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow",
@@ -9711,7 +9783,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"restricted"
@@ -9824,7 +9897,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"bayleef": {
@@ -9872,7 +9946,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -9925,7 +10000,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "bayleef"
 	},
@@ -10137,7 +10213,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"croconaw": {
@@ -10185,7 +10262,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -10237,7 +10315,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "croconaw"
 	},
@@ -10591,7 +10670,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -10642,7 +10722,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -10695,7 +10776,8 @@
 			"sh",
 			"pla",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "golbat"
 	},
@@ -10848,7 +10930,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"pichu-spiky-eared": {
@@ -10921,7 +11004,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"igglybuff": {
@@ -10971,7 +11055,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"togepi": {
@@ -11227,7 +11312,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -11278,7 +11364,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -11330,7 +11417,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "flaaffy"
 	},
@@ -12112,7 +12200,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -12164,7 +12253,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -12268,7 +12358,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "slowpoke"
 	},
@@ -12279,7 +12370,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "slowpoke-galar"
 	},
@@ -12939,7 +13031,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "onix"
 	},
@@ -13090,7 +13183,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -13102,7 +13196,8 @@
 		"games": [
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"scizor": {
@@ -13154,7 +13249,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -13261,7 +13357,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -13859,7 +13956,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -13965,7 +14063,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -14016,7 +14115,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -14068,7 +14168,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -14273,7 +14374,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "porygon"
 	},
@@ -14945,7 +15047,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"pupitar": {
@@ -14996,7 +15099,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "larvitar"
 	},
@@ -15047,7 +15151,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow",
@@ -15258,7 +15363,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"grovyle": {
@@ -15305,7 +15411,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "treecko"
 	},
@@ -15353,7 +15460,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "grovyle"
 	},
@@ -15401,7 +15509,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"combusken": {
@@ -15449,7 +15558,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "torchic"
 	},
@@ -15498,7 +15608,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "combusken"
 	},
@@ -15546,7 +15657,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"marshtomp": {
@@ -15593,7 +15705,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "mudkip"
 	},
@@ -15641,7 +15754,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "marshtomp"
 	},
@@ -16598,7 +16712,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -16649,7 +16764,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "ralts"
 	},
@@ -16698,7 +16814,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "kirlia"
 	},
@@ -17625,7 +17742,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -17673,7 +17791,8 @@
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -17721,7 +17840,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"lairon": {
@@ -17766,7 +17886,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "aron"
 	},
@@ -17812,7 +17933,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "lairon"
 	},
@@ -17859,7 +17981,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -17908,7 +18031,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "meditite"
 	},
@@ -17954,7 +18078,8 @@
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"manectric": {
@@ -17999,7 +18124,8 @@
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -18230,7 +18356,8 @@
 			"usun",
 			"umoon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -18280,7 +18407,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -18329,7 +18457,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "gulpin"
 	},
@@ -18375,7 +18504,8 @@
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -18423,7 +18553,8 @@
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"evolvesFrom": "carvanha"
 	},
@@ -18561,7 +18692,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -18610,7 +18742,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "numel"
 	},
@@ -18703,7 +18836,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"grumpig": {
@@ -18748,7 +18882,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "spoink"
 	},
@@ -19077,7 +19212,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -19127,7 +19263,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -19176,7 +19313,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -19224,7 +19362,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"lunatone": {
@@ -19842,7 +19981,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"milotic": {
@@ -19890,7 +20030,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "feebas"
 	},
@@ -19977,7 +20118,8 @@
 			"sun",
 			"moon",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		]
 	},
 	"shuppet": {
@@ -20022,7 +20164,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"banette": {
@@ -20067,7 +20210,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -20265,7 +20409,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "chingling"
 	},
@@ -20311,7 +20456,8 @@
 			"sw",
 			"sh",
 			"colosseum",
-			"xd"
+			"xd",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -20407,7 +20553,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -20458,7 +20605,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "snorunt"
 	},
@@ -20871,7 +21019,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"shelgon": {
@@ -20919,7 +21068,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "bagon"
 	},
@@ -20967,7 +21117,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"xdShadow"
@@ -21019,7 +21170,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"metang": {
@@ -21067,7 +21219,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "beldum"
 	},
@@ -21115,7 +21268,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"colShadow"
@@ -21310,7 +21464,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"latios": {
@@ -21357,7 +21512,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"kyogre": {
@@ -21404,7 +21560,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"restricted"
@@ -21454,7 +21611,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"restricted"
@@ -21504,7 +21662,8 @@
 			"colosseum",
 			"xd",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"restricted"
@@ -22058,7 +22217,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"staravia": {
@@ -22098,7 +22258,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "starly"
 	},
@@ -22139,7 +22300,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "staravia"
 	},
@@ -22465,7 +22627,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"roserade": {
@@ -22505,7 +22668,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "roselia"
 	},
@@ -23434,7 +23598,8 @@
 			"sh",
 			"pla",
 			"sun",
-			"moon"
+			"moon",
+			"plza"
 		]
 	},
 	"lopunny": {
@@ -23473,7 +23638,8 @@
 			"sh",
 			"pla",
 			"sun",
-			"moon"
+			"moon",
+			"plza"
 		],
 		"evolvesFrom": "buneary"
 	},
@@ -23668,7 +23834,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"stunky": {
@@ -23918,7 +24085,8 @@
 			"sh",
 			"pla",
 			"sun",
-			"moon"
+			"moon",
+			"plza"
 		]
 	},
 	"happiny": {
@@ -24079,7 +24247,8 @@
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"gabite": {
@@ -24121,7 +24290,8 @@
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "gible"
 	},
@@ -24164,7 +24334,8 @@
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "gabite"
 	},
@@ -24247,7 +24418,8 @@
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"lucario": {
@@ -24288,7 +24460,8 @@
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "riolu"
 	},
@@ -24331,7 +24504,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"hippowdon": {
@@ -24373,7 +24547,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "hippopotas"
 	},
@@ -24737,7 +24912,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"abomasnow": {
@@ -24779,7 +24955,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "snover"
 	},
@@ -25195,7 +25372,8 @@
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -25237,7 +25415,8 @@
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -25363,7 +25542,8 @@
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "porygon2"
 	},
@@ -25405,7 +25585,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "kirlia"
 	},
@@ -25530,7 +25711,8 @@
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "snorunt"
 	},
@@ -25572,7 +25754,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"rotom-fan": {
@@ -25895,7 +26078,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"regigigas": {
@@ -26148,7 +26332,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"restricted"
@@ -26425,7 +26610,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"pignite": {
@@ -26456,7 +26642,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "tepig"
 	},
@@ -26488,7 +26675,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "pignite"
 	},
@@ -26627,7 +26815,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"watchog": {
@@ -26656,7 +26845,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "patrat"
 	},
@@ -26783,7 +26973,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"liepard": {
@@ -26814,7 +27005,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "purrloin"
 	},
@@ -26844,7 +27036,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"simisage": {
@@ -26873,7 +27066,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "pansage"
 	},
@@ -26903,7 +27097,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"simisear": {
@@ -26932,7 +27127,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "pansear"
 	},
@@ -26962,7 +27158,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"simipour": {
@@ -26991,7 +27188,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "panpour"
 	},
@@ -27023,7 +27221,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"musharna": {
@@ -27054,7 +27253,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "munna"
 	},
@@ -27405,7 +27605,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"excadrill": {
@@ -27438,7 +27639,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "drilbur"
 	},
@@ -27470,7 +27672,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"timburr": {
@@ -27697,7 +27900,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"sawk": {
@@ -27728,7 +27932,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"sewaddle": {
@@ -27854,7 +28059,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"whirlipede": {
@@ -27885,7 +28091,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "venipede"
 	},
@@ -27917,7 +28124,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "whirlipede"
 	},
@@ -28175,7 +28383,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"krokorok": {
@@ -28208,7 +28417,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "sandile"
 	},
@@ -28242,7 +28452,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "krokorok"
 	},
@@ -28450,7 +28661,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"scrafty": {
@@ -28483,7 +28695,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "scraggy"
 	},
@@ -28546,7 +28759,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"yamask-galar": {
@@ -28554,7 +28768,8 @@
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"cofagrigus": {
@@ -28585,7 +28800,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "yamask"
 	},
@@ -28743,7 +28959,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"garbodor": {
@@ -28774,7 +28991,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"evolvesFrom": "trubbish"
 	},
@@ -29224,7 +29442,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"vanillish": {
@@ -29255,7 +29474,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"evolvesFrom": "vanillite"
 	},
@@ -29287,7 +29507,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"evolvesFrom": "vanillish"
 	},
@@ -29496,7 +29717,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"karrablast": {
@@ -29592,7 +29814,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"amoonguss": {
@@ -29625,7 +29848,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "foongus"
 	},
@@ -29978,7 +30202,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"eelektrik": {
@@ -30009,7 +30234,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "tynamo"
 	},
@@ -30041,7 +30267,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eelektrik"
 	},
@@ -30138,7 +30365,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"lampent": {
@@ -30171,7 +30399,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "litwick"
 	},
@@ -30205,7 +30434,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "lampent"
 	},
@@ -30407,7 +30637,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"shelmet": {
@@ -30501,7 +30732,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"stunfisk-galar": {
@@ -30509,7 +30741,8 @@
 		"form-source": "galar",
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"mienfoo": {
@@ -30640,7 +30873,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"golurk": {
@@ -30673,7 +30907,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "golett"
 	},
@@ -31184,7 +31419,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"terrakion": {
@@ -31217,7 +31453,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"virizion": {
@@ -31250,7 +31487,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"tornadus": {
@@ -31582,7 +31820,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"restricted"
@@ -31631,7 +31870,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"restricted"
@@ -31666,7 +31906,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"flags": [
 			"restricted"
@@ -31696,7 +31937,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"quilladin": {
@@ -31723,7 +31965,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "chespin"
 	},
@@ -31751,7 +31994,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "quilladin"
 	},
@@ -31779,7 +32023,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"braixen": {
@@ -31806,7 +32051,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "fennekin"
 	},
@@ -31834,7 +32080,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "braixen"
 	},
@@ -31862,7 +32109,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"frogadier": {
@@ -31889,7 +32137,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "froakie"
 	},
@@ -31917,7 +32166,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "frogadier"
 	},
@@ -31941,7 +32191,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": null,
 		"flags": [
@@ -31972,7 +32223,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"diggersby": {
@@ -31999,7 +32251,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "bunnelby"
 	},
@@ -32029,7 +32282,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"fletchinder": {
@@ -32058,7 +32312,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "fletchling"
 	},
@@ -32088,7 +32343,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "fletchinder"
 	},
@@ -32116,7 +32372,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"spewpa": {
@@ -32143,7 +32400,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "scatterbug"
 	},
@@ -32182,7 +32440,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "spewpa"
 	},
@@ -32480,7 +32739,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"pyroar": {
@@ -32508,7 +32768,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "litleo"
 	},
@@ -32547,7 +32808,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"sort": 1
 	},
@@ -32646,7 +32908,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "flabebe",
 		"sort": 1
@@ -32724,7 +32987,9 @@
 			"zh-Hans": "永恒之花",
 			"zh-Hant": "永恆之花"
 		},
-		"games": [],
+		"games": [
+			"plza"
+		],
 		"evolvesFrom": null,
 		"flags": [
 			"shinyLocked",
@@ -32767,7 +33032,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "floette",
 		"sort": 1
@@ -32856,7 +33122,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"gogoat": {
@@ -32883,7 +33150,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "skiddo"
 	},
@@ -32911,7 +33179,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"pangoro": {
@@ -32938,7 +33207,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"evolvesFrom": "pancham"
 	},
@@ -32975,7 +33245,8 @@
 			"usun",
 			"umoon",
 			"sun",
-			"moon"
+			"moon",
+			"plza"
 		],
 		"sort": 1
 	},
@@ -33140,7 +33411,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"meowstic": {
@@ -33170,7 +33442,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "espurr"
 	},
@@ -33198,7 +33471,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"doublade": {
@@ -33225,7 +33499,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "honedge"
 	},
@@ -33253,7 +33528,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "doublade"
 	},
@@ -33281,7 +33557,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"aromatisse": {
@@ -33308,7 +33585,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "spritzee"
 	},
@@ -33336,7 +33614,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"slurpuff": {
@@ -33363,7 +33642,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "swirlix"
 	},
@@ -33393,7 +33673,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"malamar": {
@@ -33422,7 +33703,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "inkay"
 	},
@@ -33450,7 +33732,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"barbaracle": {
@@ -33477,7 +33760,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "binacle"
 	},
@@ -33507,7 +33791,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"dragalge": {
@@ -33536,7 +33821,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "skrelp"
 	},
@@ -33566,7 +33852,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"clawitzer": {
@@ -33595,7 +33882,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "clauncher"
 	},
@@ -33623,7 +33911,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"heliolisk": {
@@ -33650,7 +33939,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "helioptile"
 	},
@@ -33678,7 +33968,8 @@
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"plza"
 		]
 	},
 	"tyrantrum": {
@@ -33705,7 +33996,8 @@
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"plza"
 		],
 		"evolvesFrom": "tyrunt"
 	},
@@ -33733,7 +34025,8 @@
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"plza"
 		]
 	},
 	"aurorus": {
@@ -33760,7 +34053,8 @@
 			"sw",
 			"sh",
 			"sun",
-			"moon"
+			"moon",
+			"plza"
 		],
 		"evolvesFrom": "amaura"
 	},
@@ -33791,7 +34085,8 @@
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "eevee"
 	},
@@ -33821,7 +34116,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"dedenne": {
@@ -33850,7 +34146,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"carbink": {
@@ -33879,7 +34176,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"goomy": {
@@ -33911,7 +34209,8 @@
 			"sh",
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"sliggoo": {
@@ -33940,7 +34239,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "goomy"
 	},
@@ -33950,7 +34250,8 @@
 		"games": [
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "goomy"
 	},
@@ -33980,7 +34281,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "sliggoo"
 	},
@@ -33990,7 +34292,8 @@
 		"games": [
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "sliggoo-hisui"
 	},
@@ -34020,7 +34323,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"phantump": {
@@ -34049,7 +34353,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"trevenant": {
@@ -34078,7 +34383,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "phantump"
 	},
@@ -34118,7 +34424,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		]
 	},
 	"pumpkaboo-large": {
@@ -34202,7 +34509,8 @@
 			"sun",
 			"moon",
 			"usun",
-			"umoon"
+			"umoon",
+			"plza"
 		],
 		"evolvesFrom": "pumpkaboo"
 	},
@@ -34280,7 +34588,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"avalugg": {
@@ -34309,7 +34618,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "bergmite"
 	},
@@ -34319,7 +34629,8 @@
 		"games": [
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "bergmite"
 	},
@@ -34349,7 +34660,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"noivern": {
@@ -34378,7 +34690,8 @@
 			"sun",
 			"moon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "noibat"
 	},
@@ -34406,7 +34719,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"flags": [
 			"restricted"
@@ -34436,7 +34750,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"flags": [
 			"restricted"
@@ -34478,7 +34793,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"flags": [
 			"restricted"
@@ -34504,7 +34820,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"diancie": {
@@ -34534,7 +34851,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"restricted"
@@ -35092,7 +35410,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"crabominable": {
@@ -35115,7 +35434,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "crabrawler"
 	},
@@ -35882,7 +36202,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"golisopod": {
@@ -35905,7 +36226,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"evolvesFrom": "wimpod"
 	},
@@ -35931,7 +36253,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"palossand": {
@@ -35956,7 +36279,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "sandygast"
 	},
@@ -36239,7 +36563,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"bruxish": {
@@ -36285,7 +36610,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"dhelmise": {
@@ -36855,7 +37181,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"shinyLocked"
@@ -36878,7 +37205,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"marshadow": {
@@ -36902,7 +37230,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"flags": [
 			"restricted",
@@ -37013,7 +37342,8 @@
 			"usun",
 			"umoon",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"flags": [
 			"restricted"
@@ -37038,7 +37368,8 @@
 			"lgp",
 			"lge",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"flags": [
 			"restricted"
@@ -37063,7 +37394,8 @@
 			"lgp",
 			"lge",
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"flags": [
 			"restricted"
@@ -37326,7 +37658,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"corvisquire": {
@@ -37347,7 +37680,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "rookidee"
 	},
@@ -37369,7 +37703,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "corvisquire"
 	},
@@ -37448,7 +37783,8 @@
 		"natdex": 827,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"thievul": {
@@ -37467,7 +37803,8 @@
 		"natdex": 828,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"evolvesFrom": "nickit"
 	},
@@ -37888,7 +38225,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"toxtricity": {
@@ -37920,7 +38258,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "toxel"
 	},
@@ -37993,7 +38332,8 @@
 		"natdex": 852,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		]
 	},
 	"grapploct": {
@@ -38012,7 +38352,8 @@
 		"natdex": 853,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"evolvesFrom": "clobbopus"
 	},
@@ -38227,7 +38568,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "meowth-galar"
 	},
@@ -38267,7 +38609,8 @@
 		"natdex": 865,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"evolvesFrom": "farfetchd-galar"
 	},
@@ -38287,7 +38630,8 @@
 		"natdex": 866,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"evolvesFrom": "mr-mime-galar"
 	},
@@ -38307,7 +38651,8 @@
 		"natdex": 867,
 		"games": [
 			"sw",
-			"sh"
+			"sh",
+			"plza"
 		],
 		"evolvesFrom": "yamask-galar"
 	},
@@ -39251,7 +39596,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"pincurchin": {
@@ -39379,7 +39725,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"morpeko": {
@@ -39400,7 +39747,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"cufant": {
@@ -39979,7 +40327,8 @@
 		"games": [
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "scyther"
 	},
@@ -40087,7 +40436,8 @@
 		"games": [
 			"pla",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "qwilfish-hisui"
 	},
@@ -40556,7 +40906,8 @@
 		"natdex": 926,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"dachsbun": {
@@ -40575,7 +40926,8 @@
 		"natdex": 927,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "fidough"
 	},
@@ -40665,7 +41017,8 @@
 		"natdex": 931,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"squawkabilly-blue": {
@@ -40680,11 +41033,7 @@
 			"ko": "블루 페더",
 			"zh-Hans": "蓝羽毛",
 			"zh-Hant": "藍羽毛"
-		},
-		"games": [
-			"scar",
-			"vio"
-		]
+		}
 	},
 	"squawkabilly-white": {
 		"data-source": "squawkabilly",
@@ -40698,11 +41047,7 @@
 			"ko": "화이트 페더",
 			"zh-Hans": "白羽毛",
 			"zh-Hant": "白羽毛"
-		},
-		"games": [
-			"scar",
-			"vio"
-		]
+		}
 	},
 	"squawkabilly-yellow": {
 		"data-source": "squawkabilly",
@@ -40716,11 +41061,7 @@
 			"ko": "옐로 페더",
 			"zh-Hans": "黄羽毛",
 			"zh-Hant": "黃羽毛"
-		},
-		"games": [
-			"scar",
-			"vio"
-		]
+		}
 	},
 	"nacli": {
 		"names": {
@@ -40738,7 +41079,8 @@
 		"natdex": 932,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"naclstack": {
@@ -40757,7 +41099,8 @@
 		"natdex": 933,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "nacli"
 	},
@@ -40777,7 +41120,8 @@
 		"natdex": 934,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "naclstack"
 	},
@@ -40797,7 +41141,8 @@
 		"natdex": 935,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"armarouge": {
@@ -40816,7 +41161,8 @@
 		"natdex": 936,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "charcadet"
 	},
@@ -40836,7 +41182,8 @@
 		"natdex": 937,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "charcadet"
 	},
@@ -40934,7 +41281,8 @@
 		"natdex": 942,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"mabosstiff": {
@@ -40953,7 +41301,8 @@
 		"natdex": 943,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "maschiff"
 	},
@@ -40973,7 +41322,8 @@
 		"natdex": 944,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"grafaiai": {
@@ -40992,7 +41342,8 @@
 		"natdex": 945,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "shroodle"
 	},
@@ -41109,7 +41460,8 @@
 		"natdex": 951,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"scovillain": {
@@ -41128,7 +41480,8 @@
 		"natdex": 952,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "capsakid"
 	},
@@ -41226,7 +41579,8 @@
 		"natdex": 957,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"tinkatuff": {
@@ -41245,7 +41599,8 @@
 		"natdex": 958,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "tinkatink"
 	},
@@ -41265,7 +41620,8 @@
 		"natdex": 959,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "tinkatuff"
 	},
@@ -41421,7 +41777,8 @@
 		"natdex": 967,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"orthworm": {
@@ -41459,7 +41816,8 @@
 		"natdex": 969,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"glimmora": {
@@ -41478,7 +41836,8 @@
 		"natdex": 970,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "glimmet"
 	},
@@ -41498,7 +41857,8 @@
 		"natdex": 971,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"houndstone": {
@@ -41517,7 +41877,8 @@
 		"natdex": 972,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "greavard"
 	},
@@ -41537,7 +41898,8 @@
 		"natdex": 973,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"cetoddle": {
@@ -41614,7 +41976,8 @@
 		"natdex": 977,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"tatsugiri": {
@@ -41644,7 +42007,8 @@
 		"natdex": 978,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"tatsugiri-droopy": {
@@ -41659,11 +42023,7 @@
 			"ko": "늘어진 모습",
 			"zh-Hans": "下垂姿势",
 			"zh-Hant": "下垂姿勢"
-		},
-		"games": [
-			"scar",
-			"vio"
-		]
+		}
 	},
 	"tatsugiri-stretchy": {
 		"data-source": "tatsugiri",
@@ -41677,11 +42037,7 @@
 			"ko": "뻗은 모습",
 			"zh-Hans": "平挺姿势",
 			"zh-Hant": "平挺姿勢"
-		},
-		"games": [
-			"scar",
-			"vio"
-		]
+		}
 	},
 	"annihilape": {
 		"names": {
@@ -41699,7 +42055,8 @@
 		"natdex": 979,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "primeape"
 	},
@@ -42058,7 +42415,8 @@
 		"natdex": 996,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"arctibax": {
@@ -42077,7 +42435,8 @@
 		"natdex": 997,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "frigibax"
 	},
@@ -42097,7 +42456,8 @@
 		"natdex": 998,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "arctibax"
 	},
@@ -42128,7 +42488,8 @@
 		"natdex": 999,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		]
 	},
 	"gimmighoul-roaming": {
@@ -42144,11 +42505,7 @@
 			"ko": "도보폼",
 			"zh-Hans": "徒步形态",
 			"zh-Hant": "徒步形態"
-		},
-		"games": [
-			"scar",
-			"vio"
-		]
+		}
 	},
 	"gholdengo": {
 		"names": {
@@ -42166,7 +42523,8 @@
 		"natdex": 1000,
 		"games": [
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "gimmighoul"
 	},

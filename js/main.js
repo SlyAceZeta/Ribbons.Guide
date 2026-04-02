@@ -971,7 +971,8 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 		const ribbonGames = ribbons[ribbon].available;
 		for(const g in ribbonGames){
 			const ribbonGame = ribbonGames[g];
-			const isBDSP = (ribbonGame == "bd" || ribbonGame == "sp");
+			const ribbonIsBDSP = ["bd", "sp"].includes(ribbonGame);
+			const ribbonIsGen8OrSV = ["sw", "sh", "bd", "sp", "pla", "scar", "vio"].includes(ribbonGame);
 			// skip if Pokemon cannot go to this game
 			if(!currentCompatibleGames.includes(ribbonGame)) continue;
 			const ribbonGameCombo = getGameData(ribbonGame, "partOf", true);
@@ -995,7 +996,7 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 				}
 			} else if(ribbon == "tower-master-ribbon"){
 				// banlist and Mythicals cannot earn this, but only in BDSP
-				if(isBDSP){
+				if(ribbonIsBDSP){
 					if(isMythical || ribbons[ribbon].bannedBDSP.includes(dex)){
 						continue;
 					}
@@ -1017,14 +1018,14 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 				}
 			} else if(ribbon == "gorgeous-ribbon"){
 				// Pokémon with the Royal or Gorgeous Royal Ribbon cannot earn this Ribbon in BDSP
-				if(isBDSP){
+				if(ribbonIsBDSP){
 					if(currentRibbons.includes("royal-ribbon") || currentRibbons.includes("gorgeous-royal-ribbon")){
 						continue;
 					}
 				}
 			} else if(ribbon == "royal-ribbon"){
 				// Pokémon with the Gorgeous Royal Ribbon cannot earn this Ribbon in BDSP
-				if(isBDSP){
+				if(ribbonIsBDSP){
 					if(currentRibbons.includes("gorgeous-royal-ribbon")){
 						continue;
 					}
@@ -1071,7 +1072,7 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 					} else {
 						// either level check fails or we don't have enough info
 						// let's see if BDSP can save it
-						if(isBDSP){
+						if(ribbonIsBDSP){
 							// voiceless Pokemon can always earn the Ribbon in BDSP
 							if(isCurrentlyVoiceless){
 								// unless they evolve to a voiced Pokemon
@@ -1108,6 +1109,10 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 			}
 			
 			// all checks passed
+			// add warning for GO language
+			if(currentGame == "go" && ribbonIsGen8OrSV){
+				earnableRibbonWarnings.push("go-language");
+			}
 			var ribbonGameKey = ribbonGame;
 			if(ribbonGameCombo){
 				ribbonGameKey = ribbonGameCombo;
@@ -1149,8 +1154,6 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	for(var g in getCompatibleGames){
 		compatibleGames.push(getCompatibleGames[g]);
 	}
-	// temporary until Z-A HOME support when we add "plza" to pokemon.json
-	if(currentGame == "plza") compatibleGames.push("plza");
 	// temporary until FRLG HOME support
 	if(currentGame == "fr-switch" || currentGame == "lg-switch"){
 		compatibleGames = ["fr-switch", "lg-switch"];
@@ -1183,7 +1186,7 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 				if(earnableRibbons[ribbonGameCombo] && earnableRibbons[ribbonGameCombo].includes(ribbon)) continue;
 				
 				// skip if this game is SV and the Pokemon is in Z-A
-				if(ribbonGameCombo == "sv" && currentGame == "plza") continue;
+				if(ribbonGameCombo == "sv" && (currentGame == "plza" || currentGame == "homeza")) continue;
 			}
 			
 			var ribbonGen = parseInt(getGameData(ribbonGame, "gen"));
@@ -1192,7 +1195,7 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 				// verify one of the following:
 				// A) this game's gen is the same as, or above, the Pokémon's current gen
 				// B) this game's gen is Gen 8 but the Pokémon is currently in a Gen 9 game other than Z-A
-				if( (ribbonGen >= currentGen) || (ribbonGen == 8 && currentGen == 9 && currentGame !== "plza") ){
+				if( (ribbonGen >= currentGen) || (ribbonGen == 8 && currentGen == 9 && currentGame !== "plza" && currentGame !== "homeza") ){
 					// verify that the Pokémon can even go to this game
 					// if this game is a Gen 7 game, also verify that this Pokémon is not currently in LGPE
 					if(compatibleGames.includes(ribbonGame) && !((currentGame == "lgp" || currentGame == "lge") && ribbonGen == 7)){
@@ -1345,6 +1348,10 @@ function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame
 						}
 						
 						// all checks passed
+						// add warning for GO language
+						if(currentGame == "go" && (ribbonGen == 8 || ribbonGame == "scar" || ribbonGame == "vio")){
+							earnableWarnings.push("go-language");
+						}
 						var ribbonGameKey = ribbonGame;
 						if(ribbonGameCombo){
 							ribbonGameKey = ribbonGameCombo;
@@ -1568,7 +1575,7 @@ function savePokemon(edit = false){
 		setFormValid("OriginMark");
 		var failOrigins = [];
 		if(newP.language == "es-419"){
-			failOrigins = ["none", "pentagon", "clover", "game-boy", "go", "lets-go", "galar", "bdsp", "hisui", "paldea"];
+			failOrigins = ["none", "pentagon", "clover", "game-boy", "lets-go", "galar", "bdsp", "hisui", "paldea"];
 		} else if(newP.language == "zh-Hans" || newP.language == "zh-Hant"){
 			failOrigins = ["none", "pentagon"];
 		} else if(newP.language == "ko"){
@@ -1601,20 +1608,15 @@ function savePokemon(edit = false){
 		setFormValid("TrainerName");
 	}
 	if(newP.currentgame){
-		if(getPokemonData(newP.species, "cannotStore") && getGameData(newP.currentgame, "storage", true)){
+		if(newP.language == "es-419" && ["sw", "sh", "bd", "sp", "pla", "scar", "vio", "lgp", "lge", "home"].includes(newP.currentgame)){
+			continueForm = false;
+			setFormInvalid("CurrentGame", "Latin American Spanish Pokémon cannot go to this game.");
+		} else if(getPokemonData(newP.species, "cannotStore") && getGameData(newP.currentgame, "storage", true)){
 			continueForm = false;
 			setFormInvalid("CurrentGame", "This Pokémon cannot be stored in Bank or HOME.");
 		} else if(!getGameData(newP.currentgame, "storage", true) && !getPokemonData(newP.species, "games").includes(newP.currentgame)) {
-			// temporary until Z-A HOME support when we add "plza" to pokemon.json
-			if(newP.currentgame == "plza"){
-				if(newP.originmark == "plza"){
-					setFormValid("CurrentGame");
-				} else {
-					continueForm = false;
-					setFormInvalid("CurrentGame", "HOME does not yet support Z-A.");
-				}
 			// temporary until game groups
-			} else if((newP.currentgame == "fr-switch" || newP.currentgame == "lg-switch" || newP.currentgame == "xd-nso") && newP.originmark == "none"){
+			if((newP.currentgame == "fr-switch" || newP.currentgame == "lg-switch" || newP.currentgame == "xd-nso") && newP.originmark == "none"){
 				setFormValid("CurrentGame");
 			} else if(newP.currentgame == "go" && newP.originmark == "go"){
 				setFormValid("CurrentGame");
@@ -1697,13 +1699,8 @@ function saveMultiplePokemon(){
 				if(getPokemonData(newP.species, "cannotStore") && getGameData(newP.currentgame, "storage", true)){
 					gameChangeValid = false;
 				} else if(!getGameData(newP.currentgame, "storage", true) && !getPokemonData(newP.species, "games").includes(newP.currentgame)) {
-					// temporary until Z-A HOME support when we add "plza" to pokemon.json
-					if(newP.currentgame == "plza"){
-						if(newP.originmark !== "plza"){
-							gameChangeValid = false;
-						}
 					// temporary until game groups
-					} else if(newP.currentgame == "fr-switch" || newP.currentgame == "lg-switch" || newP.currentgame == "xd-nso"){
+					if(newP.currentgame == "fr-switch" || newP.currentgame == "lg-switch" || newP.currentgame == "xd-nso"){
 						if(newP.originmark !== "none"){
 							gameChangeValid = false;
 						}
@@ -1975,6 +1972,7 @@ function ribbonChecklist(event){
 			if(ribbonWarnings[w] == "footprint-virtualconsole") warningText = "If " + cardData.name + " reaches Lv.71 before transferring to Gen&nbsp;7, the Footprint Ribbon will become unavailable!";
 			if(ribbonWarnings[w] == "footprint-met-level") warningText = cardData.name + "'s Met Level has not been set. The availability of the Footprint Ribbon cannot be determined.";
 			if(ribbonWarnings[w] == "footprint-beldum") warningText = "Evolving " + cardData.name + " into Metagross will make the Footprint Ribbon unavailable!";
+			if(ribbonWarnings[w] == "go-language") warningText = "If " + cardData.name + " is moved to a HOME account set to Latin American Spanish, it cannot travel to Gen&nbsp;8, Scarlet, or Violet!";
 			if(ribbonWarnings[w] == "evolution-warning"){
 				var evoWarnName = getLanguage(getPokemonData(cardData.evolutionWarning, "names"));
 				var evoWarnForms = getPokemonData(cardData.evolutionWarning, "forms");
@@ -2103,7 +2101,7 @@ function ribbonChecklist(event){
 				});
 				if(currentGameStatus === "last-chance"){
 					$("#modalRibbonChecklistStatus-text").addClass("bg-danger-subtle").html(cardData.name + " still has " + ribbonDisplay + " to earn in <span class='text-nowrap'>" + getLanguage(games[currentGame].names) + "</span>");
-					if(compatibleGames.includes("plza") && currentGame !== "plza"){
+					if(compatibleGames.includes("plza") && currentGame !== "plza" && currentGame !== "homeza"){
 						// if this Pokemon can travel to Z-A, warn that it shouldn't
 						$("#modalRibbonChecklistStatus-text").append(" and cannot enter Legends: Z-A yet.");
 					} else {
@@ -2113,7 +2111,7 @@ function ribbonChecklist(event){
 					var moveTo = $(".last-chance, .scale-marks").first().prev().html().toString();
 					if(lastChanceGen == Number(getGameData(currentGame, "gen")) && lastChanceGen < 8){
 						$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").html(cardData.name + " can safely move to " + moveTo + " but " + pronounSubject + " cannot leave Gen " + lastChanceGen + " yet.");
-					} else if((lastChanceGen == 8 || lastChanceGen == 9) && compatibleGames.includes("plza") && currentGame !== "plza"){
+					} else if((lastChanceGen == 8 || lastChanceGen == 9) && compatibleGames.includes("plza") && currentGame !== "plza" && currentGame !== "homeza"){
 						// if this Pokemon can travel to Z-A, warn that it shouldn't
 						$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").html(cardData.name + " can safely move to " + moveTo + " but " + pronounSubject + " cannot enter Legends: Z-A yet.");
 					} else {
@@ -2172,8 +2170,6 @@ function createCard(p, id){
 	for(var g in getCompatibleGames){
 		compatibleGames.push(getCompatibleGames[g]);
 	}
-	// temporary until Z-A HOME support when we add "plza" to pokemon.json
-	if(p.currentgame == "plza") compatibleGames.push("plza");
 	// temporary until FRLG HOME support
 	if(p.currentgame == "fr-switch" || p.currentgame == "lg-switch"){
 		compatibleGames = ["fr-switch", "lg-switch"];
@@ -2192,7 +2188,7 @@ function createCard(p, id){
 				} else {
 					var targetGen = parseInt(getGameData(compatibleGames[cg], "gen"));
 					if(targetGen >= currentGen || (virtualConsole && targetGen < 3) || (currentGen == 9 && targetGen == 8)){
-						if(p.currentgame == "plza" && targetGen == 9){
+						if((p.currentgame == "plza" || p.currentgame == "homeza") && targetGen == 9){
 							// Pokemon in Z-A can only travel to Z-A in Gen 9
 							if(compatibleGames[cg] == "plza"){
 								compatibleTest = true;
@@ -2240,7 +2236,7 @@ function createCard(p, id){
 	var $cardHeaderCheckbox = $("<input>", { "type": "checkbox", "class": "card-header-checkbox form-check-input me-2 d-none", "aria-label": "Select " + displayName, "disabled": "disabled" });
 	var $cardHeaderBallMain = $("<img>", { "class": "align-text-top me-2", "src": "img/balls/" + p.ball + ".png", "alt": getLanguage(balls[p.ball]), "title": getLanguage(balls[p.ball]) });
 	var $cardHeaderBallStrange = "";
-	if(p.currentgame && ((p.currentgame !== "pla" && p.currentgame !== "home" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
+	if(p.currentgame && ((p.currentgame !== "pla" && p.currentgame !== "home" && p.currentgame !== "homeza" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
 		if(p.strangeball !== "disabled"){
 			$cardHeaderBallStrange = $("<img>", { "class": "align-text-top me-2", "src": "img/balls/strange.png", "alt": getLanguage(translations["strange-ball"]), "title": getLanguage(translations["strange-ball"]) });
 			if(p.strangeball == ""){
@@ -2363,7 +2359,7 @@ function createCard(p, id){
 		$cardRibbons.append($("<div>", { "class": "ms-2" }).text("This Pokémon has no ribbons."));
 	}
 	if(!p.ribbons.includes("battle-memory-ribbon") && !p.ribbons.includes("battle-memory-ribbon-gold") && battleMemories.length && currentGen >= 6){
-		if(p.currentgame === "scar" || p.currentgame === "vio" || p.currentgame === "home"){
+		if(p.currentgame === "scar" || p.currentgame === "vio" || p.currentgame === "home" || p.currentgame === "homeza"){
 			if(battleMemories.length >= 7){
 				battleMemory = "-gold";
 			}
@@ -3207,12 +3203,7 @@ function initRun(){
 		$("#imageHoldingArea").append($("<img>", { "src": "img/balls/strange.png" }));
 		for(var g in games){
 			if(games[g].combo || games[g].solo){
-				// temporary until Z-A HOME support when we add "plza" to pokemon.json
-				if(g == "plza"){
-					$("#filterFormTargetGames").append(new Option(getLanguage(games[g].names) + " (disabled until HOME support)", g)).children(":last").prop("disabled", true);
-				} else {
-					$("#filterFormTargetGames").append(new Option(getLanguage(games[g].names), g));
-				}
+				$("#filterFormTargetGames").append(new Option(getLanguage(games[g].names), g));
 			}
 			if(!games[g].combo){
 				$("#pokemonFormCurrentGame, #pokemonFormMultiCurrentGame, #filterFormCurrentGame").append(new Option(getLanguage(games[g].names), g));
