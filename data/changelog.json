@@ -1,5 +1,11 @@
 [
 	{
+		"date": "4 April 2026",
+		"changes": [
+			"Fixed a bug where Alolan Raichu could not move to Legends: Z-A (thanks Nexus!)"
+		]
+	},
+	{
 		"date": "2 April 2026",
 		"changes": [
 			"Added HOME compatibility with Legends: Z-A",

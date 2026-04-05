@@ -1947,7 +1947,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"evolvesFrom": "pikachu"
 	},
