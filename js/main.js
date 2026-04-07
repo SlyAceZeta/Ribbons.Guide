@@ -1572,7 +1572,6 @@ function savePokemon(edit = false){
 		}
 	}
 	if(newP.originmark){
-		setFormValid("OriginMark");
 		var failOrigins = [];
 		if(newP.language == "es-419"){
 			failOrigins = ["none", "pentagon", "clover", "game-boy", "lets-go", "galar", "bdsp", "hisui", "paldea"];
@@ -1597,11 +1596,9 @@ function savePokemon(edit = false){
 		} else if(newP.language !== "ko") {
 			setFormValid("Language");
 		}
-	} else {
-		continueForm = false;
-		setFormInvalid("OriginMark", "Please select an Origin Mark.");
 	}
-	if((newP.ribbons.includes("partner-ribbon") || newP.title == "partner-ribbon") && !newP.trainername){
+	const failedPartnerRibbon = ((newP.ribbons.includes("partner-ribbon") || newP.title == "partner-ribbon") && !newP.trainername);
+	if(failedPartnerRibbon){
 		continueForm = false;
 		setFormInvalid("TrainerName", "The Partner Ribbon requires an OT.");
 	} else {
@@ -1646,7 +1643,11 @@ function savePokemon(edit = false){
 		updatePopovers();
 		modalPokemonForm.toggle();
 	} else {
-		$("#pokemonFormTabs-details").trigger("click");
+		if(failedPartnerRibbon){
+			$("#pokemonFormTabs-memories").trigger("click");
+		} else {
+			$("#pokemonFormTabs-details").trigger("click");
+		}
 		modalPokemonState = edit ? "editing" : "default";
 	}
 }
@@ -2427,7 +2428,7 @@ function createCard(p, id){
 		}
 	} else if(p.originmark === "none"){
 		originName = getLanguage(translations.none);
-	} else {
+	} else if(p.originmark){
 		originName = getLanguage(origins[p.originmark].names);
 	}
 	if(p.originmark == "none"){
@@ -2440,7 +2441,7 @@ function createCard(p, id){
 				.append($("<img>", { "class": "align-middle card-footer-origin card-footer-origin-roman-outline", "src": "img/origins/custom/roman-outline/" + originGen + ".svg", "alt": originName, "title": originName }))
 				.append($("<img>", { "class": "align-middle card-footer-origin card-footer-origin-platform", "src": "img/origins/custom/platforms/" + platformIcon + ".svg", "alt": originName, "title": originName }));
 		}
-	} else {
+	} else if(p.originmark){
 		$cardFooterBottomLeft.append($("<img>", { "class": "align-middle card-footer-origin", "src": "img/origins/" + p.originmark + ".png", "alt": originName, "title": originName }));
 	}
 	var $cardFooterBottomRight = $("<div>")

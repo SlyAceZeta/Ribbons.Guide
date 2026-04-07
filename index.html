@@ -254,7 +254,7 @@
 														<img class="align-middle light-invert" src="img/ui/shiny-square.svg" style="height:16px;" alt="Square Shiny">
 														<span class="align-middle d-none d-lg-inline">Square</span>
 													</label>
-													<img class="align-middle ms-2 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="Square Shiny Pokémon have a unique animation in Sword/Shield. If the Pokémon is shiny and you're unsure which type, select Star.">
+													<img class="align-middle ms-2 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="Square Shiny Pokémon have a unique animation in Sword/Shield. If the Pokémon is Shiny and you're unsure which type, select Star.">
 												</div>
 											</div>
 										</div>
@@ -266,7 +266,7 @@
 									<div class="col-lg-6">
 										<label for="pokemonFormLanguage" class="form-label">
 											<span class="align-middle">Language <span class="form-asterisk">*</span></span>
-											<img class="align-middle ms-1 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="Abbreviations use the updated values from Legends: Z-A and may display differently in previous games.">
+											<img class="align-middle ms-1 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="Abbreviations may display differently in older games.">
 										</label>
 										<select class="form-select" id="pokemonFormLanguage" data-minimum-results-for-search="Infinity"></select>
 									</div>
@@ -317,13 +317,19 @@
 											<div class="col-6">
 												<div class="form-check">
 													<input class="form-check-input" type="checkbox" id="pokemonFormShadow">
-													<label class="form-check-label" for="pokemonFormShadow">Shadow (Colo/XD)</label>
+													<label class="form-check-label" for="pokemonFormShadow">
+														<span>Shadow (Colo/XD)</span>
+														<img src="img/ui/shadow.png" style="height:16px;" alt="Shadow">
+													</label>
 												</div>
 											</div>
 											<div class="col-6">
 												<div class="form-check">
 													<input class="form-check-input" type="checkbox" id="pokemonFormTotem">
-													<label class="form-check-label" for="pokemonFormTotem">Totem (SM/USUM)</label>
+													<label class="form-check-label" for="pokemonFormTotem">
+														<span>Totem (USUM)</span>
+														<img src="img/ui/totem.png" style="height:16px;" alt="Totem-sized">
+													</label>
 												</div>
 											</div>
 											<div class="col-12">
@@ -337,24 +343,15 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-6">
-										<label for="pokemonFormTrainerName" class="form-label">Original Trainer</label>
-										<input type="text" class="form-control" id="pokemonFormTrainerName" maxlength="15">
-									</div>
-									<div class="col-6">
-										<label for="pokemonFormTrainerID" class="form-label">ID No.</label>
-										<input type="text" class="form-control" id="pokemonFormTrainerID" inputmode="numeric" maxlength="6">
-									</div>
 									<div class="col-6 d-flex flex-column justify-content-between">
-										<label for="pokemonFormOriginMark" class="form-label">Origin Mark <span class="form-asterisk">*</span></label>
-										<select class="form-select" id="pokemonFormOriginMark" data-placeholder="" data-minimum-results-for-search="Infinity">
+										<label for="pokemonFormOriginMark" class="form-label">Origin Mark</label>
+										<select class="form-select" id="pokemonFormOriginMark" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
 											<option value="">&nbsp;</option>
 										</select>
 									</div>
 									<div class="col-6">
 										<label for="pokemonFormOriginGame" class="form-label">
 											<span class="align-middle">Origin Game</span>
-											<img class="align-middle ms-1 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="This is not necessary for Ribbon Checklist functionality. Only games compatible with the selected Origin Mark will appear.">
 										</label>
 										<select class="form-select" id="pokemonFormOriginGame" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true" disabled>
 											<option value="">&nbsp;</option>
@@ -423,6 +420,14 @@
 							<div class="tab-pane fade" id="pokemonFormSections-memories" role="tabpanel" aria-labelledby="pokemonFormTabs-memories" tabindex="0">
 								<div class="row g-2">
 									<div class="col-6">
+										<label for="pokemonFormTrainerName" class="form-label">Original Trainer</label>
+										<input type="text" class="form-control" id="pokemonFormTrainerName" maxlength="15">
+									</div>
+									<div class="col-6">
+										<label for="pokemonFormTrainerID" class="form-label">ID No.</label>
+										<input type="text" class="form-control" id="pokemonFormTrainerID" inputmode="numeric" maxlength="6">
+									</div>
+									<div class="col-6">
 										<label for="pokemonFormMetLevel" class="form-label">
 											<span class="align-middle">Met Level</span><!--
 											--><img class="align-middle ms-2 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="When a Pokémon enters <span class='text-nowrap'>Gen 5</span> or leaves Virtual Console, its Current Level becomes its Met Level.">
@@ -432,7 +437,7 @@
 									<div class="col-6">
 										<label for="pokemonFormMetDate" class="form-label">
 											<span class="align-middle">Met Date</span><!--
-											--><img class="align-middle ms-2 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="When a Pokémon enters <span class='text-nowrap'>Gen 4</span> or <span class='text-nowrap'>Gen 5</span> or leaves Virtual Console, the DS/3DS system date becomes the Pokémon's Met Date.">
+											--><img class="align-middle ms-2 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="When a Pokémon enters <span class='text-nowrap'>Gen 4,</span> enters <span class='text-nowrap'>Gen 5,</span> or leaves Virtual Console, the DS/3DS system date becomes the Pokémon's Met Date.">
 										</label>
 										<input type="date" class="form-control" id="pokemonFormMetDate">
 									</div>
@@ -462,7 +467,7 @@
 									<div class="col-12">
 										<div class="form-label">
 											<span class="align-middle">Optional Achievements</span>
-											<img class="align-middle ms-1 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="These achievements are not tracked by the games when transferring across generations.">
+											<img class="align-middle ms-1 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="These achievements are lost when transferring across generations.">
 										</div>
 									</div>
 									<div class="col-lg-6">
@@ -470,7 +475,7 @@
 											<input class="form-check-input pokemonFormAchievements" type="checkbox" id="pokemonFormAchievements-LeafCrown">
 											<label class="form-check-label" for="pokemonFormAchievements-LeafCrown">
 												<span>Leaf Crown (HGSS)</span>
-												<img class="align-middle ms-1" src="img/ui/leaf-crown.png" style="height:16px;" alt="Leaf Crown" title="Leaf Crown">
+												<img class="align-middle ms-1" src="img/ui/leaf-crown.png" style="height:16px;" alt="Leaf Crown">
 											</label>
 										</div>
 									</div>
@@ -479,14 +484,17 @@
 											<input class="form-check-input pokemonFormAchievements" type="checkbox" id="pokemonFormAchievements-PokestarShine">
 											<label class="form-check-label" for="pokemonFormAchievements-PokestarShine">
 												<span>Pokéstar Shine (B2W2)</span>
-												<img class="align-middle ms-1" src="img/ui/pokestar.svg" style="height:16px;" alt="PokéStar" title="PokéStar">
+												<img class="align-middle ms-1" src="img/ui/pokestar.svg" style="height:16px;" alt="PokéStar">
 											</label>
 										</div>
 									</div>
 									<div class="col-lg-6">
 										<div class="form-check">
 											<input class="form-check-input pokemonFormAchievements" type="checkbox" id="pokemonFormAchievements-TimeTraveler">
-											<label class="form-check-label" for="pokemonFormAchievements-TimeTraveler">Time Travel Award (ORAS/BDSP)</label>
+											<label class="form-check-label" for="pokemonFormAchievements-TimeTraveler">
+												<span>Time Travel Award (ORAS/BDSP)</span>
+												<img class="align-middle ms-1" src="img/ui/diploma.png" style="height:16px;" alt="Diploma">
+											</label>
 										</div>
 									</div>
 									<div class="col-lg-6">
@@ -494,14 +502,14 @@
 											<input class="form-check-input pokemonFormAchievements" type="checkbox" id="pokemonFormAchievements-BestBuddyGO">
 											<label class="form-check-label" for="pokemonFormAchievements-BestBuddyGO">
 												<span>Best Buddy Ribbon (GO)</span>
-												<img class="align-middle ms-1" src="img/ui/pogo-buddy-ribbon.png" style="height:16px;" alt="Best Buddy Ribbon" title="Best Buddy Ribbon">
+												<img class="align-middle ms-1" src="img/ui/pogo-buddy-ribbon.png" style="height:16px;" alt="Best Buddy Ribbon">
 											</label>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="tab-pane fade" id="pokemonFormSections-notes" role="tabpanel" aria-labelledby="pokemonFormTabs-notes" tabindex="0">
-								<textarea class="form-control" id="pokemonFormNotes" rows="10"></textarea>
+								<textarea class="form-control" id="pokemonFormNotes" rows="10" placeholder="Enter any notes here..."></textarea>
 							</div>
 						</div>
 					</div>
