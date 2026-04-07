@@ -1417,11 +1417,15 @@ function setFormValidAll(){
 	$("#modalPokemonForm .invalid-feedback").each(function(){
 		$(this).remove();
 	});
+	$("#pokemonFormTrainerNameSpacer").hide();
 }
 
 function setFormValid(id){
 	$("#pokemonForm" + id).removeClass("is-invalid");
 	$("#pokemonForm" + id).parent().find(".invalid-feedback").remove();
+	if(id === "TrainerName"){
+		$("#pokemonFormTrainerNameSpacer").hide();
+	}
 }
 
 function setFormInvalid(id, message){
@@ -1431,6 +1435,9 @@ function setFormInvalid(id, message){
 		$($existingElement[0]).text(message);
 	} else {
 		$("#pokemonForm" + id).parent().append($("<span>", { "class": "invalid-feedback" }).text(message));
+	}
+	if(id === "TrainerName"){
+		$("#pokemonFormTrainerNameSpacer").show();
 	}
 }
 
@@ -1600,7 +1607,7 @@ function savePokemon(edit = false){
 	const failedPartnerRibbon = ((newP.ribbons.includes("partner-ribbon") || newP.title == "partner-ribbon") && !newP.trainername);
 	if(failedPartnerRibbon){
 		continueForm = false;
-		setFormInvalid("TrainerName", "The Partner Ribbon requires an OT.");
+		setFormInvalid("TrainerName", "The Partner Ribbon requires an Original Trainer.");
 	} else {
 		setFormValid("TrainerName");
 	}

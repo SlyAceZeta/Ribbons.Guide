@@ -185,7 +185,8 @@ a:not(.btn) {
 [data-bs-theme="lumioseday"] #navbarLinks .nav-link:focus img {
 	filter: none;
 }
-[data-bs-theme="lumioseday"] input[placeholder]::placeholder {
+[data-bs-theme="lumioseday"] input[placeholder]::placeholder,
+[data-bs-theme="lumioseday"] textarea[placeholder]::placeholder {
 	opacity: 0.33;
 }
 @media (min-width: 992px) {
@@ -472,7 +473,8 @@ a:not(.btn) {
 [data-bs-theme="start"] .form-switch .form-check-input:not(:checked):not(:focus) {
 	--bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 0.25%29'/%3e%3c/svg%3e");
 }
-[data-bs-theme="start"] input[placeholder]::placeholder {
+[data-bs-theme="start"] input[placeholder]::placeholder,
+[data-bs-theme="start"] textarea[placeholder]::placeholder {
 	opacity: 0.33;
 }
 [data-bs-theme="start"] .bg-success-subtle {
@@ -615,7 +617,8 @@ a:not(.btn) {
 	--bs-progress-bar-bg: #1a7fa8;
 	--bs-progress-bg: #052f61;
 }
-[data-bs-theme="lumiosenight"] input[placeholder]::placeholder {
+[data-bs-theme="lumiosenight"] input[placeholder]::placeholder,
+[data-bs-theme="lumiosenight"] textarea[placeholder]::placeholder {
 	opacity: 0.33;
 }
 @media (min-width: 992px) {
@@ -766,7 +769,8 @@ a:not(.btn) {
 [data-bs-theme="powerconstruct"] .modal-body .tab-content {
 	background: var(--bs-body-bg);
 }
-[data-bs-theme="powerconstruct"] input[placeholder]::placeholder {
+[data-bs-theme="powerconstruct"] input[placeholder]::placeholder,
+[data-bs-theme="powerconstruct"] textarea[placeholder]::placeholder {
 	opacity: 0.33;
 }
 @media (min-width: 992px) {
@@ -885,7 +889,8 @@ a:not(.btn) {
 [data-bs-theme="naranja"] .form-switch .form-check-input:not(:checked):not(:focus) {
 	--bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 0.25%29'/%3e%3c/svg%3e");
 }
-[data-bs-theme="naranja"] input[placeholder]::placeholder {
+[data-bs-theme="naranja"] input[placeholder]::placeholder,
+[data-bs-theme="naranja"] textarea[placeholder]::placeholder {
 	opacity: 0.33;
 }
 [data-bs-theme="naranja"] .bg-success-subtle {
@@ -1000,7 +1005,8 @@ a:not(.btn) {
 [data-bs-theme="uva"] .form-switch .form-check-input:not(:checked):not(:focus) {
 	--bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 0.25%29'/%3e%3c/svg%3e");
 }
-[data-bs-theme="uva"] input[placeholder]::placeholder {
+[data-bs-theme="uva"] input[placeholder]::placeholder,
+[data-bs-theme="uva"] textarea[placeholder]::placeholder {
 	opacity: 0.33;
 }
 [data-bs-theme="uva"] .bg-success-subtle {

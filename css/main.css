@@ -294,6 +294,18 @@ label[for="pokemonFormShiny-square"] {
 	background-position: right .75rem center,center right 2rem;
 	background-size: 16px 12px,calc(.75em + .375rem) calc(.75em + .375rem);
 }
+#pokemonFormTrainerNameContainer {
+	position: relative;
+}
+#pokemonFormTrainerNameSpacer {
+	font-size: .875em;
+	margin-top: .25rem;
+	display: none;
+}
+#pokemonFormTrainerName + .invalid-feedback {
+	position: absolute;
+	width: 100%;
+}
 .pokemonFormSelectIcon,
 .filterFormSelectIcon {
 	width: auto;
