@@ -1337,11 +1337,10 @@ function savePokemon(edit = false){
 		} else if(getPokemonData(newP.species, "cannotStore") && getGameData(newP.currentgame, "storage", true)){
 			continueForm = false;
 			setFormInvalid("CurrentGame", "This Pokémon cannot be stored in Bank or HOME.");
-		} else if(!getGameData(newP.currentgame, "storage", true) && !getPokemonData(newP.species, "games").includes(newP.currentgame)) {
-			// temporary until game groups
-			if((newP.currentgame == "fr-switch" || newP.currentgame == "lg-switch" || newP.currentgame == "xd-nso") && newP.originmark == "none"){
-				setFormValid("CurrentGame");
-			} else if(newP.currentgame == "go" && newP.originmark == "go"){
+		} else if(!getGameData(newP.currentgame, "storage", true) && !getPokemonData(newP.species, "games").includes(newP.currentgame)){
+			const hasOrigin = newP.originmark || newP.origingame;
+			const isOriginGO = newP.originmark === "go" || newP.origingame === "go";
+			if(newP.currentgame === "go" && (isOriginGO || !hasOrigin)){
 				setFormValid("CurrentGame");
 			} else {
 				continueForm = false;
@@ -1425,15 +1424,8 @@ function saveMultiplePokemon(){
 				newP.currentgame = newCurrentGame;
 				if(getPokemonData(newP.species, "cannotStore") && getGameData(newP.currentgame, "storage", true)){
 					gameChangeValid = false;
-				} else if(!getGameData(newP.currentgame, "storage", true) && !getPokemonData(newP.species, "games").includes(newP.currentgame)) {
-					// temporary until game groups
-					if(newP.currentgame == "fr-switch" || newP.currentgame == "lg-switch" || newP.currentgame == "xd-nso"){
-						if(newP.originmark !== "none"){
-							gameChangeValid = false;
-						}
-					} else {
-						gameChangeValid = false;
-					}
+				} else if(!getGameData(newP.currentgame, "storage", true) && !getPokemonData(newP.species, "games").includes(newP.currentgame)){
+					gameChangeValid = false;
 				}
 				if(!gameChangeValid){
 					newP.currentgame = originalgame;
