@@ -439,13 +439,9 @@ function updateOldPokemon(p){
 		notes: p.notes ? p.notes : ""
 	};
 	if(p.origin){
-		var newmark = "none";
-		for(let o in origins){
-			if(origins[o].games.includes(p.origin)){
-				newmark = o;
-				// old app only had one origin game per mark, so there will only be one result
-				break;
-			}
+		var newmark = getGameData(p.origin, "originmark");
+		if(!newmark){
+			newmark = "none";
 		}
 		newP.originmark = newmark;
 		newP.origingame = p.origin;
@@ -2862,6 +2858,12 @@ function updateFormSprite(){
 	}
 }
 
+// removes accents from letters and sets them to uppercase for comparison
+// this allows users to search for "e" and return "é", or vice versa
+function normalizeSearch(text){
+	return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim();
+}
+
 function selectCustomMatcher(params, data){
 	// fallbacks
 	if(!params.term){
@@ -2890,6 +2892,46 @@ function selectCustomMatcher(params, data){
 			}
 		}
 	}
+	return null;
+}
+
+function selectCustomMatcherWithGroups(params, data){
+	// if there are no search terms, return everything
+	if(!params.term) return data;
+	const searchTerm = normalizeSearch(params.term);
+	if(searchTerm === "") return data;
+	
+	// skip if there is no children property
+	if(typeof data.children === "undefined") return null;
+	
+	// data.children contains the actual options we want to match against
+	let filteredChildren = [];
+	$.each(data.children, function(idx, child){
+		let childText = normalizeSearch(child.text);
+		if(childText.indexOf(searchTerm) > -1){
+			// plain text match
+			filteredChildren.push(child);
+		} else {
+			// check other language matches
+			for(let ded in child.element.dataset){
+				if(ded.indexOf("lang") === 0){
+					childText = normalizeSearch(child.element.dataset[ded]);
+					if(childText.indexOf(searchTerm) > -1){
+						filteredChildren.push(child);
+					}
+				}
+			}
+		}
+	});
+	
+	// if children matched, set matched children on group and return group
+	if(filteredChildren.length){
+		let modifiedData = $.extend({}, data, true);
+		modifiedData.children = filteredChildren;
+		return modifiedData;
+	}
+	
+	// if nothing matched, do not return anything
 	return null;
 }
 
@@ -3209,12 +3251,21 @@ function initRun(){
 			$("#imageHoldingArea").append($("<img>", { "src": "img/balls/" + b + ".png" }));
 		}
 		$("#imageHoldingArea").append($("<img>", { "src": "img/balls/strange.png" }));
+		$("#pokemonFormCurrentGame, #pokemonFormMultiCurrentGame, #filterFormCurrentGame").append($("<optgroup>", { "class": "selectGame-storage", "label": "Storage" }));
+		for(var i = 9; i > 0; i--){
+			$("#pokemonFormCurrentGame, #pokemonFormOriginGame, #pokemonFormMultiCurrentGame, #filterFormCurrentGame").append($("<optgroup>", { "class": "selectGame-gen" + i, "label": "Gen " + i }));
+		}
 		for(var g in games){
 			if(games[g].combo || games[g].solo){
 				$("#filterFormTargetGames").append(new Option(getLanguage(games[g].names), g));
 			}
 			if(!games[g].combo){
-				$("#pokemonFormCurrentGame, #pokemonFormMultiCurrentGame, #filterFormCurrentGame").append(new Option(getLanguage(games[g].names), g));
+				if(games[g].storage){
+					$(".selectGame-storage").append(new Option(getLanguage(games[g].names), g));
+				} else {
+					var gameGen = getGameData(g, "gen");
+					$(".selectGame-gen" + gameGen).append(new Option(getLanguage(games[g].names), g));
+				}
 			}
 		}
 		for(var lang in translations.languages){
@@ -3391,7 +3442,7 @@ function initRun(){
 		}
 		/* apply select2 dropdowns */
 		$("#pokemonFormMultiCurrentGame").select2({
-			matcher: selectCustomMatcher,
+			matcher: selectCustomMatcherWithGroups,
 			dropdownParent: $("#modalPokemonFormMulti")
 		});
 		$("#pokemonFormMultiBox").select2({
@@ -3400,8 +3451,12 @@ function initRun(){
 			templateResult: selectCustomOption,
 			dropdownParent: $("#modalPokemonFormMulti")
 		});
-		$("#pokemonFormLanguage, #pokemonFormOriginGame, #pokemonFormCurrentGame").select2({
+		$("#pokemonFormLanguage").select2({
 			matcher: selectCustomMatcher,
+			dropdownParent: $("#pokemonFormSections")
+		});
+		$("#pokemonFormCurrentGame, #pokemonFormOriginGame").select2({
+			matcher: selectCustomMatcherWithGroups,
 			dropdownParent: $("#pokemonFormSections")
 		});
 		$("#pokemonFormBall, #pokemonFormNature, #pokemonFormBox, #pokemonFormOriginMark, #pokemonFormSpecies, #pokemonFormTitle").select2({
@@ -3410,8 +3465,12 @@ function initRun(){
 			templateResult: selectCustomOption,
 			dropdownParent: $("#pokemonFormSections")
 		});
-		$("#filterFormSort, #filterFormLanguage, #filterFormCurrentGame, #filterFormTargetGames").select2({
+		$("#filterFormSort, #filterFormLanguage, #filterFormTargetGames").select2({
 			matcher: selectCustomMatcher,
+			dropdownParent: $("#modalFilterForm .modal-body")
+		});
+		$("#filterFormCurrentGame").select2({
+			matcher: selectCustomMatcherWithGroups,
 			dropdownParent: $("#modalFilterForm .modal-body")
 		});
 		$("#filterFormStatus, #filterFormGender, #filterFormShiny, #filterFormBall, #filterFormOriginMark, #filterFormBox, #filterFormEarnedRibbons, #filterFormTargetRibbons, #filterFormGMax, #filterFormPokerus").select2({
@@ -3549,31 +3608,12 @@ function initRun(){
 				updateFormSprite();
 			}
 		});
-		$("#pokemonFormOriginMark").on("change", function(){
+		$("#pokemonFormOriginGame").on("change", function(){
 			if($(this).val()){
-				var matchingGames = origins[$(this).val()].games;
-				if(matchingGames.length == 1){
-					$("#pokemonFormOriginGame").html("<option></option>").prop("disabled", true);
-					var gameName = getLanguage(games[matchingGames[0]].names);
-					if(getGameData(gameKey, "storage", true)){
-						gameName = gameName.replace(/ \(.*\)/, "");
-					}
-					$("#pokemonFormOriginGame").append(new Option(gameName, matchingGames[0]));
-					$("#pokemonFormOriginGame").val(matchingGames[0]).trigger("change");
-				} else {
-					$("#pokemonFormOriginGame").html("<option></option>").prop("disabled", false);
-					for(var g in matchingGames){
-						var gameKey = matchingGames[g];
-						var gameName = getLanguage(games[gameKey].names);
-						if(getGameData(gameKey, "storage", true)){
-							gameName = gameName.replace(/ \(.*\)/, "");
-						}
-						$("#pokemonFormOriginGame").append(new Option(gameName, gameKey));
-					}
-					$("#pokemonFormOriginGame").val("").trigger("change");
-				}
+				const setOrigin = getGameData($(this).val(), "originmark");
+				$("#pokemonFormOriginMark").val(setOrigin).prop("disabled", true).trigger("change");
 			} else {
-				$("#pokemonFormOriginGame").html("<option></option>").prop("disabled", true);
+				$("#pokemonFormOriginMark").val("").prop("disabled", false).trigger("change");
 			}
 		});
 		$("#modalFilterForm select:not(#filterFormSort), #modalFilterForm input[type='number'], #modalFilterForm input[type='text']").on("change", function(){

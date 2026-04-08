@@ -405,17 +405,15 @@
 							</div>
 							<div class="tab-pane fade" id="pokemonFormSections-memories" role="tabpanel" aria-labelledby="pokemonFormTabs-memories" tabindex="0">
 								<div class="row g-2">
-									<div class="col-6 d-flex flex-column justify-content-between">
-										<label for="pokemonFormOriginMark" class="form-label">Origin Mark</label>
-										<select class="form-select" id="pokemonFormOriginMark" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
-											<option value="">&nbsp;</option>
-										</select>
-									</div>
 									<div class="col-6">
 										<label for="pokemonFormOriginGame" class="form-label">
 											<span class="align-middle">Origin Game</span>
 										</label>
-										<select class="form-select" id="pokemonFormOriginGame" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true" disabled>
+										<select class="form-select" id="pokemonFormOriginGame" data-placeholder="" data-allow-clear="true"></select>
+									</div>
+									<div class="col-6 d-flex flex-column justify-content-between">
+										<label for="pokemonFormOriginMark" class="form-label">Origin Mark</label>
+										<select class="form-select" id="pokemonFormOriginMark" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
 											<option value="">&nbsp;</option>
 										</select>
 									</div>
@@ -450,7 +448,7 @@
 											<div class="col-6">
 												<label for="pokemonFormMetDate" class="form-label">
 													<span class="align-middle">Met Date</span><!--
-													--><img class="align-middle ms-2 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="When a Pokémon enters <span class='text-nowrap'>Gen 4,</span> enters <span class='text-nowrap'>Gen 5,</span> or leaves Virtual Console, the DS/3DS system date becomes the Pokémon's Met Date.">
+													--><img class="align-middle ms-2 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="When a Pokémon enters <span class='text-nowrap'>Gen 4,</span> enters <span class='text-nowrap'>Gen 5,</span> or leaves Virtual Console, the system date becomes the Pokémon's Met Date.">
 												</label>
 												<input type="date" class="form-control" id="pokemonFormMetDate">
 											</div>

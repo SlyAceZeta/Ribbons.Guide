@@ -1,27 +1,5 @@
 {
-	"none": {
-		"games": [
-			"xd-nso",
-			"fr-switch",
-			"lg-switch",
-			"black2",
-			"white2",
-			"black",
-			"white",
-			"hg",
-			"ss",
-			"diamond",
-			"pearl",
-			"platinum",
-			"fr",
-			"lg",
-			"colosseum",
-			"xd",
-			"ruby",
-			"sapphire",
-			"emerald"
-		]
-	},
+	"none": {},
 	"pentagon": {
 		"names": {
 			"en": "Pentagon",
@@ -33,14 +11,7 @@
 			"ko": "오각형",
 			"zh-Hans": "五边形",
 			"zh-Hant": "五邊形"
-		},
-		"games": [
-			"or",
-			"as",
-			"x",
-			"y",
-			"bank"
-		]
+		}
 	},
 	"clover": {
 		"names": {
@@ -53,52 +24,26 @@
 			"ko": "토끼풀",
 			"zh-Hans": "三叶草属",
 			"zh-Hant": "三葉草屬"
-		},
-		"games": [
-			"usun",
-			"umoon",
-			"sun",
-			"moon",
-			"bank7"
-		]
+		}
 	},
 	"game-boy": {
 		"names": {
 			"en": "Game Boy",
 			"ja": "ゲームボーイ",
 			"ko": "게임보이"
-		},
-		"games": [
-			"gold",
-			"silver",
-			"crystal",
-			"red-eng",
-			"red-jpn",
-			"blue-eng",
-			"blue-jpn",
-			"green",
-			"yellow"
-		]
+		}
 	},
 	"go": {
 		"names": {
 			"en": "GO",
 			"ko": "고"
-		},
-		"games": [
-			"go"
-		]
+		}
 	},
 	"lets-go": {
 		"names": {
 			"en": "Let's Go",
 			"ko": "레츠고"
-		},
-		"games": [
-			"lgp",
-			"lge",
-			"home"
-		]
+		}
 	},
 	"galar": {
 		"names": {
@@ -107,12 +52,7 @@
 			"ko": "가라르",
 			"zh-Hans": "伽勒尔",
 			"zh-Hant": "伽勒爾"
-		},
-		"games": [
-			"sw",
-			"sh",
-			"home"
-		]
+		}
 	},
 	"bdsp": {
 		"names": {
@@ -125,12 +65,7 @@
 			"ko": "신오 (브릴리언트 다이아몬드・샤이닝 펄)",
 			"zh-Hans": "神奥 (晶灿钻石／明亮珍珠)",
 			"zh-Hant": "神奧 (晶燦鑽石／明亮珍珠)"
-		},
-		"games": [
-			"bd",
-			"sp",
-			"home"
-		]
+		}
 	},
 	"hisui": {
 		"names": {
@@ -139,11 +74,7 @@
 			"ko": "히스이",
 			"zh-Hans": "洗翠",
 			"zh-Hant": "洗翠"
-		},
-		"games": [
-			"pla",
-			"home"
-		]
+		}
 	},
 	"paldea": {
 		"names": {
@@ -152,20 +83,11 @@
 			"ko": "팔데아",
 			"zh-Hans": "帕底亚",
 			"zh-Hant": "帕底亞"
-		},
-		"games": [
-			"scar",
-			"vio",
-			"home"
-		]
+		}
 	},
 	"plza": {
 		"names": {
 			"en": "Z-A"
-		},
-		"games": [
-			"plza",
-			"homeza"
-		]
+		}
 	}
 }

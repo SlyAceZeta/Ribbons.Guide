@@ -734,6 +734,11 @@ html[lang="zh-Hans"] .translation-zh-Hans {
 	margin: 0;
 }
 
+/* tooltips */
+.tooltip a {
+	color: #236074;
+}
+
 /* printing */
 @media print {
 	body {

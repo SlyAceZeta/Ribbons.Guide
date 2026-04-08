@@ -74,6 +74,7 @@
 		"group": "XD-NSO",
 		"gen": 3,
 		"solo": true,
+		"originmark": "none",
 		"platformIcon": "gamecube"
 	},
 	"frlg-switch": {
@@ -91,7 +92,8 @@
 		"group": "SwitchVC",
 		"gen": 3,
 		"combo": true,
-		"ribbonGenOrder": 4
+		"ribbonGenOrder": 4,
+		"originmark": "none"
 	},
 	"fr-switch": {
 		"names": {
@@ -138,7 +140,8 @@
 		"group": "10",
 		"gen": 9,
 		"solo": true,
-		"ribbonGenOrder": 2
+		"ribbonGenOrder": 2,
+		"originmark": "plza"
 	},
 	"sv": {
 		"names": {
@@ -155,7 +158,8 @@
 		"group": "8",
 		"gen": 9,
 		"combo": true,
-		"ribbonGenOrder": 1
+		"ribbonGenOrder": 1,
+		"originmark": "paldea"
 	},
 	"scar": {
 		"names": {
@@ -199,7 +203,8 @@
 		"group": "8",
 		"gen": 8,
 		"solo": true,
-		"ribbonGenOrder": 3
+		"ribbonGenOrder": 3,
+		"originmark": "hisui"
 	},
 	"bdsp": {
 		"names": {
@@ -216,7 +221,8 @@
 		"group": "8",
 		"gen": 8,
 		"combo": true,
-		"ribbonGenOrder": 2
+		"ribbonGenOrder": 2,
+		"originmark": "bdsp"
 	},
 	"bd": {
 		"names": {
@@ -261,7 +267,8 @@
 		"group": "8",
 		"gen": 8,
 		"combo": true,
-		"ribbonGenOrder": 1
+		"ribbonGenOrder": 1,
+		"originmark": "galar"
 	},
 	"sw": {
 		"names": {
@@ -303,7 +310,8 @@
 		},
 		"group": "LGPE",
 		"gen": 7,
-		"combo": true
+		"combo": true,
+		"originmark": "lets-go"
 	},
 	"lgp": {
 		"names": {
@@ -343,7 +351,8 @@
 		"group": "7",
 		"gen": 7,
 		"combo": true,
-		"ribbonGenOrder": 2
+		"ribbonGenOrder": 2,
+		"originmark": "clover"
 	},
 	"usun": {
 		"names": {
@@ -388,7 +397,8 @@
 		"group": "7",
 		"gen": 7,
 		"combo": true,
-		"ribbonGenOrder": 1
+		"ribbonGenOrder": 1,
+		"originmark": "clover"
 	},
 	"sun": {
 		"names": {
@@ -425,7 +435,8 @@
 		},
 		"group": "GO",
 		"gen": 6,
-		"solo": true
+		"solo": true,
+		"originmark": "go"
 	},
 	"oras": {
 		"names": {
@@ -442,7 +453,8 @@
 		"group": "6",
 		"gen": 6,
 		"combo": true,
-		"ribbonGenOrder": 2
+		"ribbonGenOrder": 2,
+		"originmark": "pentagon"
 	},
 	"or": {
 		"names": {
@@ -479,7 +491,8 @@
 		"group": "6",
 		"gen": 6,
 		"combo": true,
-		"ribbonGenOrder": 1
+		"ribbonGenOrder": 1,
+		"originmark": "pentagon"
 	},
 	"x": {
 		"names": {
@@ -507,7 +520,8 @@
 		},
 		"group": "5",
 		"gen": 5,
-		"combo": true
+		"combo": true,
+		"originmark": "none"
 	},
 	"black2": {
 		"names": {
@@ -553,7 +567,8 @@
 		},
 		"group": "5",
 		"gen": 5,
-		"combo": true
+		"combo": true,
+		"originmark": "none"
 	},
 	"black": {
 		"names": {
@@ -598,7 +613,8 @@
 		"group": "4",
 		"gen": 4,
 		"combo": true,
-		"ribbonGenOrder": 2
+		"ribbonGenOrder": 2,
+		"originmark": "none"
 	},
 	"hg": {
 		"names": {
@@ -641,7 +657,8 @@
 		"group": "4",
 		"gen": 4,
 		"combo": true,
-		"ribbonGenOrder": 1
+		"ribbonGenOrder": 1,
+		"originmark": "none"
 	},
 	"diamond": {
 		"names": {
@@ -703,7 +720,8 @@
 		"group": "3",
 		"gen": 3,
 		"combo": true,
-		"ribbonGenOrder": 2
+		"ribbonGenOrder": 2,
+		"originmark": "none"
 	},
 	"fr": {
 		"names": {
@@ -750,7 +768,8 @@
 		"group": "3",
 		"gen": 3,
 		"combo": true,
-		"ribbonGenOrder": 3
+		"ribbonGenOrder": 3,
+		"originmark": "none"
 	},
 	"colosseum": {
 		"names": {
@@ -793,7 +812,8 @@
 		"group": "3",
 		"gen": 3,
 		"combo": true,
-		"ribbonGenOrder": 1
+		"ribbonGenOrder": 1,
+		"originmark": "none"
 	},
 	"ruby": {
 		"names": {
@@ -849,7 +869,8 @@
 			"ko": "버추얼 콘솔"
 		},
 		"group": "3DSVC",
-		"combo": true
+		"combo": true,
+		"originmark": "game-boy"
 	},
 	"gold": {
 		"names": {
