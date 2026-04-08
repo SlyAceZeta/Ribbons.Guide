@@ -2877,7 +2877,7 @@ function selectCustomMatcher(params, data){
 		return null;
 	}
 	// if the plain text matches
-	var dataText = data.text.normalize("NFC").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+	var dataText = normalizeSearch(data.text);
 	if(dataText.indexOf(searchTerm) > -1){
 		var modifiedData = $.extend({}, data, true);
 		return modifiedData;
@@ -2885,7 +2885,7 @@ function selectCustomMatcher(params, data){
 	// if other languages match
 	for(var ded in data.element.dataset){
 		if(ded.indexOf("lang") == 0){
-			dataText = data.element.dataset[ded].normalize("NFC").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+			dataText = normalizeSearch(data.element.dataset[ded]);
 			if(dataText.indexOf(searchTerm) > -1){
 				var modifiedData = $.extend({}, data, true);
 				return modifiedData;
@@ -3492,12 +3492,12 @@ function initRun(){
 		$("#pokemonFormRibbonSearch, #pokemonFormMultiRibbonSearch").on("input", function(){
 			var openForm = "pokemonFormRibbons";
 			if(this.id == "pokemonFormMultiRibbonSearch") openForm = "pokemonFormMultiRibbons";
-			var searchText = $(this).val().normalize("NFC").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim();
+			var searchText = normalizeSearch($(this).val());
 			if(searchText){
 				var matchedRibbons = 0;
 				$("#" + openForm + " li").each(function(i, e){
 					if(i !== 0){
-						var ribbonText = $(this).text().normalize("NFC").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+						var ribbonText = normalizeSearch($(this).text());
 						if(ribbonText.indexOf(searchText) > -1){
 							matchedRibbons++;
 							$(e).removeClass("d-none");
