@@ -902,14 +902,13 @@ function filterCompatibleGames(gameArray, game, gameGroup){
 }
 
 // TODO #145
-function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame, currentRibbons, checkedScale, totem = false, gmax = false, shadow = false){
+function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame, originMark, currentRibbons, checkedScale, totem = false, gmax = false, shadow = false){
 	currentLevel = parseInt(currentLevel);
 	
 	const earnableRibbons = {};
 	let earnableRibbonWarnings = [];
 	let footprintVoicelessEvos = [];
 	let footprintVoicedEvos = [];
-	let currentGameStatus = "no-ribbons-left";
 	
 	// Pokemon info
 	const isMythical = getPokemonData(dex, "mythical");
@@ -921,29 +920,31 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	const compatibleGames = getPokemonData(dex, "games"); // all compatible games for the species
 	let currentCompatibleGames = filterCompatibleGames(compatibleGames, currentGame, currentGameGroup); // all games the Pokemon can actually transfer to
 	// Pokemon-specific restrictions
-	currentCompatibleGames = currentCompatibleGames.filter(game => {
+	currentCompatibleGames = currentCompatibleGames.filter(targetGame => {
 		if(dex == "nincada"){
-			if(originGame == "bd" || originGame == "sp"){
+			if((originMark === "bdsp" || originGame === "bd" || originGame === "sp") && (currentGame !== "sw" && currentGame !== "sh")){
 				// Nincada originally from BDSP cannot enter SwSh
-				if(game == "sw" || game == "sh") return false;
-			} else {
+				// sanity check: if they're somehow in SwSh, ignore this
+				if(targetGame == "sw" || targetGame == "sh") return false;
+			} else if(currentGame !== "bd" && currentGame !== "sp"){
 				// all other Nincada cannot enter BDSP
-				if(game == "bd" || game == "sp") return false;
+				// sanity check: if they're somehow in BDSP, ignore this
+				if(targetGame == "bd" || targetGame == "sp") return false;
 			}
 		} else if(dex == "spinda"){
-			if(originGame == "bd" || originGame == "sp"){
-				// Spinda from BDSP cannot leave BDSP
-				if(game !== "bd" && game !== "sp") return false;
+			if(currentGame === "bd" || currentGame === "sp" || originMark === "bdsp" || originGame === "bd" || originGame === "sp"){
+				// Spinda from or in BDSP cannot leave BDSP
+				if(targetGame !== "bd" && targetGame !== "sp") return false;
 			} else {
 				// all other Spinda cannot enter BDSP
-				if(game == "bd" || game == "sp") return false;
+				if(targetGame == "bd" || targetGame == "sp") return false;
 			}
 		} else if(dex === "marowak-alola" || dex === "ribombee" || dex === "araquanid" || dex === "togedemaru"){
 			// Totem-sized versions of these Pokemon cannot leave USUM
-			if(totem && game !== "usun" && game !== "umoon") return false;
+			if(totem && targetGame !== "usun" && targetGame !== "umoon") return false;
 		} else if(dex === "pikachu" || dex === "eevee" || dex === "meowth" || dex == "duraludon"){
 			// if these Pokemon have GMax, they cannot leave SwSh
-			if(gmax && game !== "sw" && game !== "sh") return false;
+			if(gmax && targetGame !== "sw" && targetGame !== "sh") return false;
 		}
 		return true;
 	});
@@ -1037,9 +1038,9 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 					// second check: Met Level has been set and it's < 71, it's eligible
 					// third check: Met Level has not been set, but it will not change and the current level is < 71, it's eligible
 					// fourth check: Met Level will change but the current level is < 71, it's eligible BUT we'll have to warn
-					const passesLevelCheck = (originGame === "go") || (!metLevelWillChange && metLevel && metLevel < 71) || (!metLevelWillChange && !metLevel && currentLevel < 71) || (metLevelWillChange && currentLevel < 71);
+					const passesLevelCheck = (originMark === "go" || originGame === "go") || (!metLevelWillChange && metLevel && metLevel < 71) || (!metLevelWillChange && !metLevel && currentLevel < 71) || (metLevelWillChange && currentLevel < 71);
 					// we must also consider the scenario where Met Level won't change, but the user has not set it so we don't know what it is, and we can't determine it to be under 71
-					const notEnoughInfo = !metLevelWillChange && !metLevel && originGame !== "go" && currentLevel > 70;
+					const notEnoughInfo = !metLevelWillChange && !metLevel && originMark !== "go" && originGame !== "go" && currentLevel > 70;
 					
 					if(passesLevelCheck){
 						// Pokemon currently passes the level check
@@ -1120,290 +1121,12 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 		}
 	}
 	
-	// TODO: check and change currentGameStatus
+	// TODO: evolution changes in ribbon availability
 	
 	// remove duplicate warnings
 	earnableRibbonWarnings = [...new Set(earnableRibbonWarnings)];
 	
-	return {currentCompatibleGames, earnableRibbons, earnableRibbonWarnings, footprintVoicedEvos, footprintVoicelessEvos, currentGameStatus};
-}
-
-function getEarnableRibbons(dex, currentLevel, metLevel, currentGame, originGame, currentRibbons, checkedScale, totem = false, gmax = false, shadow = false){
-	// TODO: reduce duplication -- getGamesAndRibbons
-	var earnableRibbons = {};
-	var earnableWarnings = [];
-	var evolutionWarning = {};
-	var currentGameStatus = "no-ribbons-left";
-	currentLevel = parseInt(currentLevel);
-	
-	// Pokemon info
-	var currentGen = parseInt(getGameData(currentGame, "gen"));
-	var virtualConsole = false;
-	if(currentGen < 3){
-		virtualConsole = true;
-		currentGen = 7;
-	} else if(currentGame == "go"){
-		currentGen = 8;
-	}
-	var compatibleGames = [];
-	var getCompatibleGames = getPokemonData(dex, "games");
-	for(var g in getCompatibleGames){
-		compatibleGames.push(getCompatibleGames[g]);
-	}
-	// temporary until FRLG HOME support
-	if(currentGame == "fr-switch" || currentGame == "lg-switch"){
-		compatibleGames = ["fr-switch", "lg-switch"];
-	}
-	// temporary until game groups
-	if(currentGame == "xd-nso") compatibleGames = ["xd-nso"];
-	var mythical = getPokemonData(dex, "mythical");
-	var evoWarnMon = getPokemonData(dex, "evowarnmon", true);
-	var evoWarnGen = getPokemonData(dex, "evowarngen", true);
-	
-	for(let ribbon in ribbons){
-		// skip if Ribbon is already earned
-		if(currentRibbons.includes(ribbon)) continue;
-		// skip if Ribbon cannot be earned
-		if(!ribbons[ribbon].available) continue;
-		// skip if Pokemon is on Ribbon's ban list
-		if(ribbons[ribbon].banned && ribbons[ribbon].banned.includes(dex)) continue;
-		// skip if Pokemon is Mythical and Ribbon is not allowed for Mythicals
-		if(ribbons[ribbon].nomythical && mythical) continue;
-		// skip if Ribbon is a Memory Ribbon
-		if(ribbon.startsWith("contest-memory-ribbon") || ribbon.startsWith("battle-memory-ribbon")) continue;
-		
-		var ribbonGames = ribbons[ribbon].available;
-		for(let g in ribbonGames){
-			var ribbonGame = ribbonGames[g];
-			
-			var ribbonGameCombo = getGameData(ribbonGame, "partOf", true);
-			if(ribbonGameCombo){
-				// skip if this game is part of a combo that already has this Ribbon
-				if(earnableRibbons[ribbonGameCombo] && earnableRibbons[ribbonGameCombo].includes(ribbon)) continue;
-				
-				// skip if this game is SV and the Pokemon is in Z-A
-				if(ribbonGameCombo == "sv" && (currentGame == "plza" || currentGame == "homeza")) continue;
-			}
-			
-			var ribbonGen = parseInt(getGameData(ribbonGame, "gen"));
-			// verify this game has a gen
-			if(ribbonGen){
-				// verify one of the following:
-				// A) this game's gen is the same as, or above, the Pokémon's current gen
-				// B) this game's gen is Gen 8 but the Pokémon is currently in a Gen 9 game other than Z-A
-				if( (ribbonGen >= currentGen) || (ribbonGen == 8 && currentGen == 9 && currentGame !== "plza" && currentGame !== "homeza") ){
-					// verify that the Pokémon can even go to this game
-					// if this game is a Gen 7 game, also verify that this Pokémon is not currently in LGPE
-					if(compatibleGames.includes(ribbonGame) && !((currentGame == "lgp" || currentGame == "lge") && ribbonGen == 7)){
-						// Pokemon-specific restrictions
-						if(dex == "nincada"){
-							// Nincada originally from BDSP cannot enter SwSh
-							if(originGame == "bd" || originGame == "sp"){
-								if(ribbonGame == "sw" || ribbonGame == "sh"){
-									continue;
-								}
-							// all other Nincada cannot enter BDSP
-							} else {
-								if(ribbonGame == "bd" || ribbonGame == "sp"){
-									continue;
-								}
-							}
-						} else if(dex == "spinda"){
-							// Spinda in BDSP cannot leave BDSP
-							if(currentGame == "bd" || currentGame == "sp"){
-								if(ribbonGame !== "bd" && ribbonGame !== "sp"){
-									continue;
-								}
-							// all other Spinda cannot enter BDSP
-							} else {
-								if(ribbonGame == "bd" || ribbonGame == "sp"){
-									continue;
-								}
-							}
-						} else if(dex === "marowak-alola" || dex === "ribombee" || dex === "araquanid" || dex === "togedemaru"){
-							// Totem-sized versions of these Pokemon cannot leave USUM
-							if(totem){
-								if(ribbonGame !== "usun" && ribbonGame !== "umoon"){
-									continue;
-								}
-							}
-						} else if(dex === "pikachu" || dex === "eevee" || dex === "meowth" || dex == "duraludon"){
-							// if these Pokemon have GMax, they cannot leave SwSh
-							if(gmax){
-								if(ribbonGame !== "sw" && ribbonGame !== "sh"){
-									continue;
-								}
-							}
-						}
-						
-						// Ribbon-specific restrictions
-						if(ribbon == "winning-ribbon"){
-							// can only be earned under Level 51
-							if(currentLevel < 51){
-								earnableWarnings.push("winning-ribbon");
-							} else {
-								continue;
-							}
-						} else if(ribbon == "national-ribbon"){
-							// can only be earned by Shadow Pokemon in Colo/XD
-							if(!shadow || (currentGame !== "colosseum" && currentGame !== "xd" && currentGame !== "xd-nso")){
-								continue;
-							}
-						} else if(ribbon == "tower-master-ribbon"){
-							// banlist and Mythicals cannot earn this, but only in BDSP
-							if(ribbonGame == "bd" || ribbonGame == "sp"){
-								if(mythical || ribbons[ribbon].bannedBDSP.includes(dex)){
-									continue;
-								}
-							}
-						} else if(ribbon == "jumbo-mark"){
-							if((checkedScale || currentRibbons.includes("mini-mark")) && !currentRibbons.includes("titan-mark") && !currentRibbons.includes("alpha-mark")){
-								continue;
-							}
-						} else if(ribbon == "mini-mark"){
-							if(checkedScale || currentRibbons.includes("jumbo-mark") || currentRibbons.includes("titan-mark") || currentRibbons.includes("alpha-mark")){
-								continue;
-							}
-						} else if(ribbon == "battle-tree-great-ribbon"){
-							// Legendaries and Mythicals can earn this in USUM, but not in SM
-							// the banlist is identical to the Battle Tree Master Ribbon
-							if(ribbonGame == "sun" || ribbonGame == "moon"){
-								if(mythical || ribbons["battle-tree-master-ribbon"].banned.includes(dex)){
-									continue;
-								}
-							}
-						} else if(ribbon == "gorgeous-ribbon"){
-							// Pokémon with the Royal or Gorgeous Royal Ribbon cannot earn this Ribbon in BDSP
-							if(ribbonGame == "bd" || ribbonGame == "sp"){
-								if(currentRibbons.includes("royal-ribbon") || currentRibbons.includes("gorgeous-royal-ribbon")){
-									continue;
-								}
-							}
-						} else if(ribbon == "royal-ribbon"){
-							// Pokémon with the Gorgeous Royal Ribbon cannot earn this Ribbon in BDSP
-							if(ribbonGame == "bd" || ribbonGame == "sp"){
-								if(currentRibbons.includes("gorgeous-royal-ribbon")){
-									continue;
-								}
-							}
-						} else if(ribbon == "footprint-ribbon"){
-							// if Pokemon can to go to Gen 4, it can always earn this
-							if(ribbonGen !== 4){
-								// if Pokemon is voiceless and can go to Gen 8, it can always earn this
-								var voiceless = getPokemonData(dex, "voiceless");
-								if(!(ribbonGen == 8 && voiceless) || ((dex === "beldum" || dex === "metang") && (originGame === "scar" || originGame === "vio")) ){
-									// otherwise, Footprint relies on Met Level < 71
-									// Beldum and Metang are voiceless, but Metagross is not, and Beldum can be met as high as Lv.74 in SV DLC, so evolving to Metagross will also disqualify it
-									var currentLevelBelow71 = currentLevel < 71;
-									// Met Level changes upon entering Gen 5 or leaving Virtual Console
-									if(currentGen < 5 || virtualConsole){
-										if(currentLevelBelow71){
-											// Pokemon's current level is < 71
-											// if it transfers now, its Met Level will also be < 71
-											// therefore it will always be able to earn Footprint
-											// BUT if the player levels to 71+ before transferring, Footprint will be blocked
-											if(currentGen < 5){
-												earnableWarnings.push("footprint-gen4");
-											} else if(virtualConsole){
-												earnableWarnings.push("footprint-virtualconsole");
-											}
-										} else {
-											// Pokemon has already leveled to 71+, Footprint is unavailable
-											continue;
-										}
-									} else {
-										// Pokemon has left Gen 5 and Virtual Console, so Met Level is now permanently set
-										if(metLevel){
-											// user has set Met Level
-											if(metLevel > 70){
-												// Pokemon was met at 71+, Footprint is unavailable
-												// Beldum and Metang can still get it, but they need a warning
-												if(dex === "beldum" || dex === "metang"){
-													earnableWarnings.push("footprint-beldum");
-												} else {
-													continue;
-												}
-											}
-										} else {
-											// user has not set Met Level, let's try to determine it automatically
-											// Pokemon from GO must have Met Level < 50 and can always earn Footprint
-											if(originGame !== "go"){
-												// Pokemon in Gen 5+ with Current Level < 71 must also have Met Level < 71 and can always earn Footprint
-												if(!currentLevelBelow71){
-													// we cannot automatically determine Met Level, warn the user as such (including Beldum/Metang case)
-													// before we warn the user as such, let's check if the ribbon will appear for the Pokemon in BDSP--if so, no warning is necessary
-													if(!((compatibleGames.includes("bd") || compatibleGames.includes("sp")) && voiceless) || dex === "beldum" || dex === "metang"){
-														earnableWarnings.push("footprint-met-level");
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-						
-						// all checks passed
-						// add warning for GO language
-						if(currentGame == "go" && (ribbonGen == 8 || ribbonGame == "scar" || ribbonGame == "vio")){
-							earnableWarnings.push("go-language");
-						}
-						var ribbonGameKey = ribbonGame;
-						if(ribbonGameCombo){
-							ribbonGameKey = ribbonGameCombo;
-						}
-						if(!earnableRibbons[ribbonGameKey]){
-							earnableRibbons[ribbonGameKey] = [];
-						}
-						earnableRibbons[ribbonGameKey].push(ribbon);
-					}
-				}
-			}
-		}
-	}
-	
-	if(getGameData(currentGame, "storage")){
-		currentGameStatus = "in-storage";
-	} else {
-		var currentGameKey = currentGame;
-		var currentGameCombo = getGameData(currentGame, "partOf", true);
-		if(currentGameCombo){
-			currentGameKey = currentGameCombo;
-		}
-		if(Object.keys(earnableRibbons).includes(currentGameKey)){
-			currentGameStatus = "safe-to-leave";
-			var currentGameRibbons = earnableRibbons[currentGameKey];
-			for(var r in currentGameRibbons){
-				var thisRibbon = currentGameRibbons[r];
-				var availableElsewhere = false;
-				for(var g in earnableRibbons){
-					if(g === currentGameKey) continue;
-					if(earnableRibbons[g].includes(thisRibbon)){
-						availableElsewhere = true;
-					}
-				}
-				if(!availableElsewhere){
-					currentGameStatus = "last-chance";
-				}
-			}
-		}
-	}
-	
-	// TODO: make this smarter: check for the game differences and report them, unless there are no applicable ribbons
-	if(evoWarnMon && evoWarnGen && Object.keys(earnableRibbons).length !== 0){
-		var testGen = currentGen;
-		if(currentGame == "go") testGen = 7;
-		if(testGen <= parseInt(evoWarnGen)){
-			earnableWarnings.push("evolution-warning");
-			evolutionWarning.pokemon = evoWarnMon;
-		}
-	}
-	
-	// remove duplicate warnings
-	earnableWarnings = [...new Set(earnableWarnings)];
-	
-	// return
-	return {"remaining": earnableRibbons, "warnings": earnableWarnings, "currentGameStatus": currentGameStatus, "evolutionWarning": evolutionWarning};
+	return {currentCompatibleGames, earnableRibbons, earnableRibbonWarnings, footprintVoicedEvos, footprintVoicelessEvos};
 }
 
 function setFormValidAll(){
@@ -2004,7 +1727,9 @@ function ribbonChecklist(event){
 	}
 	
 	if(currentGame){
-		if(cardData.originGame || (cardData.species !== "nincada" && cardData.originMark !== "none")){
+		const isNincada = cardData.species === "nincada";
+		const hasOrigin = cardData.originGame || cardData.originMark;
+		if(!isNincada || hasOrigin){
 			if(cardData.remainingRibbons){
 				var remainingRibbons = JSON.parse(cardData.remainingRibbons);
 				var compatibleGames = JSON.parse(cardData.compatibleGames);
@@ -2139,9 +1864,7 @@ function ribbonChecklist(event){
 }
 
 function createCard(p, id){
-	/* information */
-	// TODO: reduce duplication: getEarnableRibbons -- merge some of this logic into a new function that returns earnable ribbons *and* compatible games (getGamesAndRibbons)
-	var ribbonLists;
+	// TODO: improve blue/gold memory ribbon helper
 	var currentGen = 1000;
 	var virtualConsole = false;
 	if(p.currentgame){
@@ -2155,78 +1878,48 @@ function createCard(p, id){
 			currentGen = 7;
 		}
 	}
-	if(p.currentgame){
-		// origin game is only needed for Gen 3 and Nincada
-		var canGetRibbonLists = false;
-		if(p.origingame){
-			canGetRibbonLists = true;
-		} else if(p.species !== "nincada" && currentGen !== 3){
-			canGetRibbonLists = true;
-		}
-		ribbonLists = getEarnableRibbons(p.species, p.currentlevel, p.metlevel, p.currentgame, p.origingame, p.ribbons, p.scale, p.totem, p.gmax, p.shadow);
-	}
+	
+	// display name
 	var displayName = p.nickname;
 	if(displayName.length === 0){
 		displayName = getLanguage(getPokemonData(p.species, "names"), p.language);
 	}
-	var compatibleGames = [];
-	var getCompatibleGames = getPokemonData(p.species, "games");
-	for(var g in getCompatibleGames){
-		compatibleGames.push(getCompatibleGames[g]);
-	}
-	// temporary until FRLG HOME support
-	if(p.currentgame == "fr-switch" || p.currentgame == "lg-switch"){
-		compatibleGames = ["fr-switch", "lg-switch"];
-	}
-	// temporary until game groups
-	if(p.currentgame == "xd-nso") compatibleGames = ["xd-nso"];
-	var compatibleFiltered = [];
-	if(currentGen < 1000){
-		for(var cg in compatibleGames){
-			var compatibleTest = false;
-			if(games[compatibleGames[cg]]){
-				if(compatibleGames[cg] == "lgp" || compatibleGames[cg] == "lge"){
-					if(p.currentgame == "lgp" || p.currentgame == "lge" || p.currentgame == "go"){
-						compatibleTest = true;
-					}
-				} else {
-					var targetGen = parseInt(getGameData(compatibleGames[cg], "gen"));
-					if(targetGen >= currentGen || (virtualConsole && targetGen < 3) || (currentGen == 9 && targetGen == 8)){
-						if((p.currentgame == "plza" || p.currentgame == "homeza") && targetGen == 9){
-							// Pokemon in Z-A can only travel to Z-A in Gen 9
-							if(compatibleGames[cg] == "plza"){
-								compatibleTest = true;
-							}
-						} else {
-							compatibleTest = true;
-						}
-					}
-				}
-				if(compatibleTest){
-					compatibleFiltered.push(compatibleGames[cg]);
-					var comboToAdd = getGameData(compatibleGames[cg], "partOf", true);
-					if(comboToAdd && !compatibleFiltered.includes(comboToAdd)){
-						compatibleFiltered.push(comboToAdd);
-					}
-				}
-			}
-		}
+	
+	// get compatible games and ribbons
+	let compatibleGamesAndRibbons = {}; //{"currentCompatibleGames": [], "earnableRibbonWarnings": [], "earnableRibbons": {}, "footprintVoicedEvos": [], "footprintVoicelessEvos": []};
+	if(p.currentgame){
+		compatibleGamesAndRibbons = getGamesAndRibbons(p.species, p.currentlevel, p.metlevel, p.currentgame, p.origingame, p.originmark, p.ribbons, p.scale, p.totem, p.gmax, p.shadow);
 	}
 	
 	/* containers and filters */
-	var $cardCol = $("<div>", { "class": "col", "data-name": displayName, "data-national-dex": getPokemonData(p.species, "natdex"), "data-level": p.currentlevel, "data-origin-mark": p.originmark, "data-origin-game": p.origingame, "data-current-game": p.currentgame, "data-compatible-games": JSON.stringify(compatibleFiltered), "data-earned-ribbons": JSON.stringify(p.ribbons), "data-pokemon-id": id, "data-gender": p.gender, "data-species": p.species, "data-current-gen": currentGen, "data-scale-checked": p.scale ? "" + p.scale : "false" });
-	if(ribbonLists){
-		if(Object.keys(ribbonLists.remaining).length == 0){
-			$cardCol.addClass("ribbons-done");
+	var $cardCol = $("<div>", { "class": "col", "data-name": displayName, "data-national-dex": getPokemonData(p.species, "natdex"), "data-level": p.currentlevel, "data-origin-mark": p.originmark, "data-origin-game": p.origingame, "data-current-game": p.currentgame, "data-compatible-games": "[]", "data-earned-ribbons": JSON.stringify(p.ribbons), "data-pokemon-id": id, "data-gender": p.gender, "data-species": p.species, "data-current-gen": currentGen, "data-scale-checked": p.scale ? "" + p.scale : "false" });
+	if(Object.keys(compatibleGamesAndRibbons).length){
+		// attach compatible games
+		$cardCol.attr({ "data-compatible-games": JSON.stringify(compatibleGamesAndRibbons.currentCompatibleGames) });
+		
+		// attach earnable ribbons, or mark Pokemon as complete if no ribbons are left to earn
+		if(Object.keys(compatibleGamesAndRibbons.earnableRibbons).length){
+			$cardCol.attr({ "data-remaining-ribbons": JSON.stringify(compatibleGamesAndRibbons.earnableRibbons) });
 		} else {
-			$cardCol.attr({ "data-remaining-ribbons": JSON.stringify(ribbonLists.remaining) });
+			$cardCol.addClass("ribbons-done");
 		}
-		if(ribbonLists.warnings.length !== 0){
-			$cardCol.attr({ "data-ribbon-warnings": JSON.stringify(ribbonLists.warnings) });
+		
+		// attach warnings
+		if(compatibleGamesAndRibbons.earnableRibbonWarnings.length){
+			$cardCol.attr({ "data-ribbon-warnings": JSON.stringify(compatibleGamesAndRibbons.earnableRibbonWarnings) });
 		}
-		if(ribbonLists.evolutionWarning.pokemon){
+		if(compatibleGamesAndRibbons.footprintVoicedEvos.length){
+			$cardCol.attr({ "data-footprint-voicedevos": JSON.stringify(compatibleGamesAndRibbons.footprintVoicedEvos) });
+		}
+		if(compatibleGamesAndRibbons.footprintVoicelessEvos.length){
+			$cardCol.attr({ "data-footprint-voicelessevos": JSON.stringify(compatibleGamesAndRibbons.footprintVoicelessEvos) });
+		}
+		
+		// TODO: evolution warnings
+		// previous code:
+		/*if(ribbonLists.evolutionWarning.pokemon){
 			$cardCol.attr({ "data-evolution-warning": ribbonLists.evolutionWarning.pokemon });
-		}
+		}*/
 	}
 	var $cardContainer = $("<div>", { "class": "card border-0", "onclick": "selectPokemon(event)" });
 	
