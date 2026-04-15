@@ -2941,7 +2941,7 @@ function initRun(){
 			$("#imageHoldingArea").append($("<img>", { "src": "img/balls/" + b + ".png" }));
 		}
 		$("#imageHoldingArea").append($("<img>", { "src": "img/balls/strange.png" }));
-		$("#pokemonFormCurrentGame, #pokemonFormOriginGame, #pokemonFormMultiCurrentGame, #filterFormCurrentGame").append($("<optgroup>", { "class": "selectGame-storage", "label": "Storage" }));
+		$("#pokemonFormCurrentGame, #pokemonFormOriginGame, #pokemonFormMultiCurrentGame, #filterFormCurrentGame").append($("<optgroup>", { "class": "selectGame-storage", "label": "Storage / GO" }));
 		for(var i = 9; i > 0; i--){
 			$("#pokemonFormCurrentGame, #pokemonFormOriginGame, #pokemonFormMultiCurrentGame, #filterFormCurrentGame").append($("<optgroup>", { "class": "selectGame-gen" + i, "label": "Gen " + i }));
 		}
@@ -2950,7 +2950,7 @@ function initRun(){
 				$("#filterFormTargetGames").append(new Option(getLanguage(games[g].names), g));
 			}
 			if(!games[g].combo){
-				if(games[g].storage){
+				if(games[g].storage || g == "go"){
 					$(".selectGame-storage").append(new Option(getLanguage(games[g].names), g));
 				} else {
 					var gameGen = getGameData(g, "gen");
