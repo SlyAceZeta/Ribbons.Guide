@@ -771,19 +771,6 @@
 		"ribbonGenOrder": 3,
 		"originmark": "none"
 	},
-	"colosseum": {
-		"names": {
-			"en": "Colosseum (GameCube)",
-			"de": "Kolosseum (GameCube)",
-			"it": "Colosseo (GameCube)",
-			"ja": "コロシアム (ゲームキューブ)",
-			"ko": "콜로세움 (게임큐브)",
-			"zh-Hans": "竞技场 (GameCube)",
-			"zh-Hant": "圓形競技場 (GameCube)"
-		},
-		"partOf": "coloxd",
-		"platformIcon": "gamecube"
-	},
 	"xd": {
 		"names": {
 			"en": "XD: Gale of Darkness (GameCube)",
@@ -793,6 +780,19 @@
 			"it": "XD: Tempesta Oscura (GameCube)",
 			"ja": "ＸＤ 闇の旋風ダーク・ルギア (ゲームキューブ)",
 			"ko": "XD 어둠의 선풍 다크루기아 (게임큐브)"
+		},
+		"partOf": "coloxd",
+		"platformIcon": "gamecube"
+	},
+	"colosseum": {
+		"names": {
+			"en": "Colosseum (GameCube)",
+			"de": "Kolosseum (GameCube)",
+			"it": "Colosseo (GameCube)",
+			"ja": "コロシアム (ゲームキューブ)",
+			"ko": "콜로세움 (게임큐브)",
+			"zh-Hans": "竞技场 (GameCube)",
+			"zh-Hant": "圓形競技場 (GameCube)"
 		},
 		"partOf": "coloxd",
 		"platformIcon": "gamecube"
@@ -862,11 +862,11 @@
 	},
 	"vc": {
 		"names": {
-			"en": "Virtual Console",
-			"es-es": "Consola Virtual",
-			"fr": "Console virtuelle",
-			"ja": "バーチャルコンソール",
-			"ko": "버추얼 콘솔"
+			"en": "3DS Virtual Console",
+			"es-es": "3DS Consola Virtual",
+			"fr": "3DS Console virtuelle",
+			"ja": "3DSバーチャルコンソール",
+			"ko": "3DS 버추얼 콘솔"
 		},
 		"group": "3DSVC",
 		"combo": true,
@@ -874,134 +874,104 @@
 	},
 	"gold": {
 		"names": {
-			"en": "Gold",
-			"es-es": "Oro",
-			"fr": "Or",
-			"it": "Oro",
-			"ja": "金",
-			"ko": "금",
-			"zh-Hans": "金",
-			"zh-Hant": "金"
+			"en": "Gold (3DS)",
+			"es-es": "Oro (3DS)",
+			"fr": "Or (3DS)",
+			"it": "Oro (3DS)",
+			"ja": "金 (3DS)",
+			"ko": "금 (3DS)",
+			"zh-Hans": "金 (3DS)",
+			"zh-Hant": "金 (3DS)"
 		},
 		"gen": 2,
 		"partOf": "vc"
 	},
 	"silver": {
 		"names": {
-			"en": "Silver",
-			"es-es": "Plata",
-			"fr": "Argent",
-			"de": "Silber",
-			"it": "Argento",
-			"ja": "銀",
-			"ko": "은",
-			"zh-Hans": "银",
-			"zh-Hant": "銀"
+			"en": "Silver (3DS)",
+			"es-es": "Plata (3DS)",
+			"fr": "Argent (3DS)",
+			"de": "Silber (3DS)",
+			"it": "Argento (3DS)",
+			"ja": "銀 (3DS)",
+			"ko": "은 (3DS)",
+			"zh-Hans": "银 (3DS)",
+			"zh-Hant": "銀 (3DS)"
 		},
 		"gen": 2,
 		"partOf": "vc"
 	},
 	"crystal": {
 		"names": {
-			"en": "Crystal",
-			"es-es": "Cristal",
-			"fr": "Cristal",
-			"de": "Kristall",
-			"it": "Cristallo",
-			"ja": "クリスタル",
-			"ko": "크리스탈",
-			"zh-Hans": "水晶",
-			"zh-Hant": "水晶"
+			"en": "Crystal (3DS)",
+			"es-es": "Cristal (3DS)",
+			"fr": "Cristal (3DS)",
+			"de": "Kristall (3DS)",
+			"it": "Cristallo (3DS)",
+			"ja": "クリスタル (3DS)",
+			"ko": "크리스탈 (3DS)",
+			"zh-Hans": "水晶 (3DS)",
+			"zh-Hant": "水晶 (3DS)"
 		},
 		"gen": 2,
 		"partOf": "vc"
 	},
-	"red-eng": {
+	"red": {
 		"names": {
-			"en": "Red (ENG)",
-			"es-es": "Roja (ING)",
-			"fr": "Rouge (ANG)",
-			"de": "Rot (ENG)",
-			"it": "Rossa (ING)",
-			"ja": "赤 (ENG)",
-			"ko": "레드 (ENG)",
-			"zh-Hans": "红 (ENG)",
-			"zh-Hant": "紅 (ENG)"
-		},
-		"gen": 1,
-		"partOf": "vc"
-	},
-	"red-jpn": {
-		"names": {
-			"en": "Red (JPN)",
-			"es-es": "Roja (JAP)",
-			"fr": "Rouge (JAP)",
-			"de": "Rot (JPN)",
-			"it": "Rossa (GPN)",
-			"ja": "赤 (JPN)",
-			"ko": "레드 (JPN)",
-			"zh-Hans": "红 (JPN)",
-			"zh-Hant": "紅 (JPN)"
-		},
-		"gen": 1,
-		"partOf": "vc"
-	},
-	"blue-eng": {
-		"names": {
-			"en": "Blue (ENG)",
-			"es-es": "Azul (ING)",
-			"fr": "Bleue (ANG)",
-			"de": "Blau (ENG)",
-			"it": "Blu (ING)",
-			"ja": "青 (ENG)",
-			"ko": "블루 (ENG)",
-			"zh-Hans": "蓝 (ENG)",
-			"zh-Hant": "藍 (ENG)"
-		},
-		"gen": 1,
-		"partOf": "vc"
-	},
-	"blue-jpn": {
-		"names": {
-			"en": "Blue (JPN)",
-			"es-es": "Azul (JAP)",
-			"fr": "Bleue (JAP)",
-			"de": "Blau (JPN)",
-			"it": "Blu (GPN)",
-			"ja": "青 (JPN)",
-			"ko": "블루 (JPN)",
-			"zh-Hans": "蓝 (JPN)",
-			"zh-Hant": "藍 (JPN)"
+			"en": "Red (3DS)",
+			"es-es": "Roja (3DS)",
+			"fr": "Rouge (3DS)",
+			"de": "Rot (3DS)",
+			"it": "Rossa (3DS)",
+			"ja": "赤 (3DS)",
+			"ko": "레드 (3DS)",
+			"zh-Hans": "红 (3DS)",
+			"zh-Hant": "紅 (3DS)"
 		},
 		"gen": 1,
 		"partOf": "vc"
 	},
 	"green": {
 		"names": {
-			"en": "Green",
-			"es-es": "Verde",
-			"fr": "Vert",
-			"de": "Grün",
-			"it": "Verde",
-			"ja": "緑",
-			"ko": "그린",
-			"zh-Hans": "绿",
-			"zh-Hant": "綠"
+			"en": "Green (3DS)",
+			"es-es": "Verde (3DS)",
+			"fr": "Vert (3DS)",
+			"de": "Grün (3DS)",
+			"it": "Verde (3DS)",
+			"ja": "緑 (3DS)",
+			"ko": "그린 (3DS)",
+			"zh-Hans": "绿 (3DS)",
+			"zh-Hant": "綠 (3DS)"
+		},
+		"gen": 1,
+		"partOf": "vc"
+	},
+	"blue": {
+		"names": {
+			"en": "Blue (3DS)",
+			"es-es": "Azul (3DS)",
+			"fr": "Bleue (3DS)",
+			"de": "Blau (3DS)",
+			"it": "Blu (3DS)",
+			"ja": "青 (3DS)",
+			"ko": "블루 (3DS)",
+			"zh-Hans": "蓝 (3DS)",
+			"zh-Hant": "藍 (3DS)"
 		},
 		"gen": 1,
 		"partOf": "vc"
 	},
 	"yellow": {
 		"names": {
-			"en": "Yellow",
-			"es-es": "Amarilla",
-			"fr": "Jaune",
-			"de": "Gelb",
-			"it": "Gialla",
-			"ja": "黄",
-			"ko": "피카츄",
-			"zh-Hans": "黄",
-			"zh-Hant": "皮卡丘"
+			"en": "Yellow (3DS)",
+			"es-es": "Amarilla (3DS)",
+			"fr": "Jaune (3DS)",
+			"de": "Gelb (3DS)",
+			"it": "Gialla (3DS)",
+			"ja": "黄 (3DS)",
+			"ko": "피카츄 (3DS)",
+			"zh-Hans": "黄 (3DS)",
+			"zh-Hant": "皮卡丘 (3DS)"
 		},
 		"gen": 1,
 		"partOf": "vc"

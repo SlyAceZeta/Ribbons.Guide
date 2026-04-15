@@ -3478,8 +3478,59 @@ function initRun(){
 			}
 		}
 		
-		/* create the Pokemon list */
+		/* update all Pokemon games */
 		loadingBar(23);
+		$("#loading-spinner-info-text").text("Updating Pokémon games");
+		const gameConvert = {
+			"blue-eng": "blue",
+			"blue-jpn": "blue",
+			"red-eng": "red",
+			"red-jpn": "red"
+		};
+		let changedAGame = false;
+		for(let p in userPokemon){
+			try {
+				if(userPokemon[p].currentgame){
+					const oldCurrentGame = userPokemon[p].currentgame.toLowerCase();
+					if(gameConvert[oldCurrentGame]){
+						changedAGame = true;
+						userPokemon[p].currentgame = gameConvert[oldCurrentGame];
+					}
+				}
+			} catch(err) {
+				const $errorimg = $("<img>", { "src": "./img/ui/cross.svg" });
+				const $errortext = $("<div>", { "class": "fw-bold", "role": "status" })
+					.append($("<div>", { "class": "my-3" }).html("<span class='text-uppercase'>Pokémon current game conversion error on Pokémon #" + p + "</span><br>" + err))
+					.append($("<div>").html("Please inform Sly on <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a> or <a href='https://discord.gg/frv7dpWzDG'>Discord</a>."))
+					.append($("<div>").html("Attach the following file with your report (tap or left-click to download): <button type='button' class='btn btn-link p-0 fw-bold align-baseline' onclick='saveBackup(\"RibbonError\")'>RibbonError.json</button>"));
+				$("#loading-spinner-info").html($errorimg).append($errortext);
+				return;
+			}
+			try {
+				if(userPokemon[p].origingame){
+					const oldOriginGame = userPokemon[p].origingame.toLowerCase();
+					if(gameConvert[oldOriginGame]){
+						changedAGame = true;
+						userPokemon[p].origingame = gameConvert[oldOriginGame];
+					}
+				}
+			} catch(err) {
+				const $errorimg = $("<img>", { "src": "./img/ui/cross.svg" });
+				const $errortext = $("<div>", { "class": "fw-bold", "role": "status" })
+					.append($("<div>", { "class": "my-3" }).html("<span class='text-uppercase'>Pokémon origin game conversion error on Pokémon #" + p + "</span><br>" + err))
+					.append($("<div>").html("Please inform Sly on <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a> or <a href='https://discord.gg/frv7dpWzDG'>Discord</a>."))
+					.append($("<div>").html("Attach the following file with your report (tap or left-click to download): <button type='button' class='btn btn-link p-0 fw-bold align-baseline' onclick='saveBackup(\"RibbonError\")'>RibbonError.json</button>"));
+				$("#loading-spinner-info").html($errorimg).append($errortext);
+				return;
+			}
+		}
+		if(changedAGame){
+			localStorage.pokemon = JSON.stringify(userPokemon);
+			updateModifiedDate();
+		}
+		
+		/* create the Pokemon list */
+		loadingBar(24);
 		$("#loading-spinner-info-text").text("Loading Pokémon list");
 		for(let p in userPokemon){
 			try {
