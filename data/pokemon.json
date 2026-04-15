@@ -36154,6 +36154,28 @@
 			"vio"
 		]
 	},
+	"rockruff-own-tempo": {
+		"data-source": "rockruff",
+		"forms": {
+			"en": "Own Tempo",
+			"es-es": "Ritmo Propio",
+			"fr": "Tempo Perso",
+			"de": "Gleichmut",
+			"it": "Mente Locale",
+			"ja": "マイペース",
+			"ko": "마이페이스",
+			"zh-Hans": "我行我素",
+			"zh-Hant": "我行我素"
+		},
+		"games": [
+			"usun",
+			"umoon",
+			"sw",
+			"sh",
+			"scar",
+			"vio"
+		]
+	},
 	"lycanroc": {
 		"names": {
 			"en": "Lycanroc",
@@ -36191,20 +36213,6 @@
 		],
 		"evolvesFrom": "rockruff"
 	},
-	"lycanroc-dusk": {
-		"data-source": "lycanroc",
-		"forms": {
-			"en": "Dusk Form",
-			"es-es": "Forma Crepuscular",
-			"fr": "Forme Crépusculaire",
-			"de": "Zwielichtform",
-			"it": "Forma Crepuscolo",
-			"ja": "たそがれのすがた",
-			"ko": "황혼의 모습",
-			"zh-Hans": "黄昏的样子",
-			"zh-Hant": "黃昏的樣子"
-		}
-	},
 	"lycanroc-midnight": {
 		"data-source": "lycanroc",
 		"forms": {
@@ -36218,6 +36226,29 @@
 			"zh-Hans": "黑夜的样子",
 			"zh-Hant": "黑夜的樣子"
 		}
+	},
+	"lycanroc-dusk": {
+		"data-source": "lycanroc",
+		"forms": {
+			"en": "Dusk Form",
+			"es-es": "Forma Crepuscular",
+			"fr": "Forme Crépusculaire",
+			"de": "Zwielichtform",
+			"it": "Forma Crepuscolo",
+			"ja": "たそがれのすがた",
+			"ko": "황혼의 모습",
+			"zh-Hans": "黄昏的样子",
+			"zh-Hant": "黃昏的樣子"
+		},
+		"games": [
+			"usun",
+			"umoon",
+			"sw",
+			"sh",
+			"scar",
+			"vio"
+		],
+		"evolvesFrom": "rockruff-own-tempo"
 	},
 	"wishiwashi": {
 		"names": {
