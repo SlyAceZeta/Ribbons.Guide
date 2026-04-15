@@ -903,7 +903,6 @@ function filterCompatibleGames(gameArray, game, gameGroup){
 	return newArray;
 }
 
-// TODO #145
 function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame, originMark, currentRibbons, checkedScale, totem = false, gmax = false, shadow = false){
 	currentLevel = parseInt(currentLevel);
 	
@@ -2942,7 +2941,7 @@ function initRun(){
 			$("#imageHoldingArea").append($("<img>", { "src": "img/balls/" + b + ".png" }));
 		}
 		$("#imageHoldingArea").append($("<img>", { "src": "img/balls/strange.png" }));
-		$("#pokemonFormCurrentGame, #pokemonFormMultiCurrentGame, #filterFormCurrentGame").append($("<optgroup>", { "class": "selectGame-storage", "label": "Storage" }));
+		$("#pokemonFormCurrentGame, #pokemonFormOriginGame, #pokemonFormMultiCurrentGame, #filterFormCurrentGame").append($("<optgroup>", { "class": "selectGame-storage", "label": "Storage" }));
 		for(var i = 9; i > 0; i--){
 			$("#pokemonFormCurrentGame, #pokemonFormOriginGame, #pokemonFormMultiCurrentGame, #filterFormCurrentGame").append($("<optgroup>", { "class": "selectGame-gen" + i, "label": "Gen " + i }));
 		}
@@ -3301,8 +3300,13 @@ function initRun(){
 		});
 		$("#pokemonFormOriginGame").on("change", function(){
 			if($(this).val()){
-				const setOrigin = getGameData($(this).val(), "originmark");
-				$("#pokemonFormOriginMark").val(setOrigin).prop("disabled", true).trigger("change");
+				const isStorage = getGameData($(this).val(), "storage");
+				if(isStorage){
+					$("#pokemonFormOriginMark").val("").prop("disabled", false).trigger("change");
+				} else {
+					const setOrigin = getGameData($(this).val(), "originmark");
+					$("#pokemonFormOriginMark").val(setOrigin).prop("disabled", true).trigger("change");
+				}
 			} else {
 				$("#pokemonFormOriginMark").val("").prop("disabled", false).trigger("change");
 			}
