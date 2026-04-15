@@ -36156,6 +36156,7 @@
 	},
 	"rockruff-own-tempo": {
 		"data-source": "rockruff",
+		"sprite-source": "rockruff",
 		"forms": {
 			"en": "Own Tempo",
 			"es-es": "Ritmo Propio",
@@ -43271,6 +43272,7 @@
 	},
 	"koraidon-ride": {
 		"data-source": "koraidon",
+		"sprite-source": "koraidon",
 		"forms": {
 			"en": "Ride",
 			"es-es": "Montura",
@@ -43316,6 +43318,7 @@
 	},
 	"miraidon-ride": {
 		"data-source": "miraidon",
+		"sprite-source": "miraidon",
 		"forms": {
 			"en": "Ride",
 			"es-es": "Montura",

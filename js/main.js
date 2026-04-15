@@ -796,6 +796,8 @@ function importFiles(files, delay = 150, i = 0){
 		newP.notes = "";
 		
 		var speciesSprite = newP.species;
+		const spriteSourceCheck = getPokemonData(speciesSprite, "sprite-source", true);
+		if(spriteSourceCheck) speciesSprite = spriteSourceCheck;
 		var genderDirectory = (getPokemonData(speciesSprite, "femsprite") && newP.gender === "female") ? "female/" : "";
 		if(speciesSprite.startsWith("alcremie-") && newP.shiny){
 			var alcremieRegex = /caramel|lemon|matcha|mint|rainbow|rubycream|rubyswirl|salted|vanilla/;
@@ -2002,6 +2004,8 @@ function createCard(p, id){
 	
 	/* body */
 	var speciesSprite = p.species;
+	const spriteSourceCheck = getPokemonData(speciesSprite, "sprite-source", true);
+	if(spriteSourceCheck) speciesSprite = spriteSourceCheck;
 	if(aprilFools && settings["AprilFools"] == "true"){
 		speciesSprite = "ditto";
 		if(p.species == "ditto"){
@@ -2535,6 +2539,8 @@ function updateFormSprite(){
 		var species = $("#pokemonFormSpecies").val();
 		var shinyDir = $("#pokemonFormShiny-normal").prop("checked") ? "regular/" : "shiny/";
 		var femaleDir = $("#pokemonFormGender-female").prop("checked") && getPokemonData(species, "femsprite") ? "female/" : "";
+		const spriteSourceCheck = getPokemonData(species, "sprite-source", true);
+		if(spriteSourceCheck) species = spriteSourceCheck;
 		if(species.startsWith("alcremie-") && shinyDir == "shiny/"){
 			var alcremieRegex = /caramel|lemon|matcha|mint|rainbow|rubycream|rubyswirl|salted|vanilla/;
 			species = species.replace(alcremieRegex, "").replace("--", "-").replace("-strawberry", "");
