@@ -1,5 +1,5 @@
 /* globals */
-var balls, changelog, games, gameOrder = {}, gameGroups, importmap, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off", DROPBOX_CLIENT_ID = "xxvozybw2lp9ycy";
+var balls, changelog, games, gameOrder = {}, gameGroups, importmap, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off", DROPBOX_CLIENT_ID = "xxvozybw2lp9ycy", dropbox_auth_url;
 // voiced BDSP species that can evolve into voiceless BDSP species
 const evolveVoicelessMap = {"caterpie": ["metapod"], "weedle": ["kakuna"], "venonat": ["venomoth"], "natu": ["xatu"], "larvitar": ["pupitar"], "wurmple": ["silcoon", "cascoon"], "bagon": ["shelgon"]};
 // voiceless BDSP species (and voiced BDSP species that can evolve into voiceless BDSP species) that can evolve into voiced BDSP species
@@ -3770,6 +3770,13 @@ $(function(){
 	$("#modalBoxesNew").on("click", function(){
 		createOrEditBox();
 	});
+	$("#modalDataOnlineLogin").on("click", function(){
+		if(dropbox_auth_url){
+			window.location.href = dropbox_auth_url;
+		} else {
+			console.error("Error: no authentication URL");
+		}
+	});
 	/* TODO: reduce duplication with changelog updates */
 	$("#modalAboutViewChangelog").on("click", function(){
 		var changeList = [];
@@ -3805,6 +3812,75 @@ $(function(){
 		}
 	});
 	modalRibbonChecklist = new bootstrap.Modal("#modalRibbonChecklist");
+	
+	/* Dropbox functionality */
+	// "global" Dropbox object
+	let dbx;
+	// "global" Dropbox authentication object
+	const dbxAuth = new Dropbox.DropboxAuth({ clientId: DROPBOX_CLIENT_ID });
+	// check for an auth code in the URL bar
+	const queryParams = window.utils.parseQueryString(window.location.search);
+	const authCode = queryParams.code;
+	// check for a saved refresh token in local storage
+	const refreshToken = localStorage.getItem("DropboxRefreshToken");
+	if(authCode){
+		// user has just returned from the Dropbox login screen
+		// exchange the temporary auth code for a permanent refresh token
+		const codeVerifier = window.sessionStorage.getItem("dropbox_code_verifier");
+		dbxAuth.setCodeVerifier(codeVerifier);
+		dbxAuth.getAccessTokenFromCode(window.location.origin, authCode)
+			.then(function(response){
+				// save the refresh token to local storage for future visits
+				localStorage.setItem("DropboxRefreshToken", response.result.refresh_token);
+				dbxAuth.setRefreshToken(response.result.refresh_token);
+				
+				dbx = new Dropbox.Dropbox({ auth: dbxAuth });
+				window.utils.clearUrl(); // remove code from the URL bar
+				
+				showLoggedInUI();
+			})
+			.catch(function(error){
+				console.error("Dropbox authentication error", error);
+				showError("Authentication failed. Please try logging in again.");
+				showLoggedOutUI();
+			});
+	} else if(refreshToken){
+		// user has previously authenticated and is returning to the app
+		dbxAuth.setRefreshToken(refreshToken);
+		dbx = new Dropbox.Dropbox({ auth: dbxAuth }); 
+		showLoggedInUI();
+	} else {
+		// user has never authenticated
+		showLoggedOutUI();
+	}
+	// UI functions
+	function showLoggedInUI(){
+		$("#modalDataOnlineLoggedIn").removeClass("d-none");
+	}
+	function showLoggedOutUI(){
+		$("#modalDataOnlineLogin").removeClass("d-none");
+		// generate PKCE authentication URL to request an "offline" token
+		dbxAuth.getAuthenticationUrl(window.location.origin, undefined, 'code', 'offline', undefined, 'none', true)
+			.then(function(authUrl){
+				// save PKCE verifier to session storage for when we return
+				window.sessionStorage.setItem("dropbox_code_verifier", dbxAuth.getCodeVerifier());
+				dropbox_auth_url = authUrl;
+			});
+	}
+	function showError(msg){
+		$("#modalDataOnlineErrorText").text(msg);
+		$("#modalDataOnlineError").removeClass("d-none");
+	}
+	// logout function
+	$("#modalDataOnlineLogout, #modalDataOnlineErrorLogout").on("click", function(){
+		// purge the user's refresh token to revoke persistent access
+		localStorage.removeItem("DropboxRefreshToken");
+		// reload page to clear instance memory
+		modalData.toggle();
+		new bootstrap.Modal("#modalReloading").toggle();
+		console.log("reload D: Dropbox logout");
+		setTimeout(function(){ location.reload() }, 500);
+	});
 	
 	/* button to scroll to top */
 	window.onscroll = function(){

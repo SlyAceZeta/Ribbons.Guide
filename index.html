@@ -1028,19 +1028,17 @@
 							<button type="button" class="btn btn-outline-primary btn-sm ms-1" id="modalDataLoadBackupButton">Restore Backup File</button>
 						</div>
 						<input type="file" id="modalDataLoadBackupFile" accept="application/json,text/plain" hidden>
-						<div id="dropboxTest" class="d-none">
-							<hr>
-							<p id="modalDataOnline" class="fw-bold">Online Backup (Dropbox)</p>
-							<a href="" role="button" class="btn btn-primary btn-sm d-none" id="modalDataOnlineLogin">Login to Dropbox</a>
-							<div id="modalDataOnlineLoggedIn" class="btn-group d-none" role="group" aria-labelledby="modalDataOnline">
-								<button type="button" class="btn btn-primary btn-sm" id="modalDataOnlineSave">Upload to Dropbox</button>
-								<button type="button" class="btn btn-outline-primary btn-sm mx-1" id="modalDataOnlineLoad">Download from Dropbox</button>
-								<button type="button" class="btn btn-danger btn-sm" id="modalDataOnlineLogout">Logout</button>
-							</div>
-							<div id="modalDataOnlineError" class="d-none" aria-label="Dropbox error">
-								<p>Error: <span id="modalDataOnlineErrorText"></span></p>
-								<button type="button" class="btn btn-danger btn-sm" id="modalDataOnlineLogout">Logout</button>
-							</div>
+						<hr>
+						<p id="modalDataOnline" class="fw-bold">Online Backup</p>
+						<button type="button" class="btn btn-primary btn-sm d-none" id="modalDataOnlineLogin">Login to Dropbox</button>
+						<div id="modalDataOnlineLoggedIn" class="btn-group d-none" role="group" aria-labelledby="modalDataOnline">
+							<button type="button" class="btn btn-primary btn-sm d-none" id="modalDataOnlineSave">Upload to Dropbox</button>
+							<button type="button" class="btn btn-outline-primary btn-sm mx-1 d-none" id="modalDataOnlineLoad">Download from Dropbox</button>
+							<button type="button" class="btn btn-danger btn-sm" id="modalDataOnlineLogout">Logout</button>
+						</div>
+						<div id="modalDataOnlineError" class="d-none" aria-label="Dropbox error">
+							<p>Error: <span id="modalDataOnlineErrorText"></span></p>
+							<button type="button" class="btn btn-danger btn-sm" id="modalDataOnlineErrorLogout">Logout</button>
 						</div>
 					</div>
 					<div class="modal-footer justify-content-center">
