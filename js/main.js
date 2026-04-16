@@ -2,8 +2,8 @@
 var balls, changelog, games, gameOrder = {}, gameGroups, importmap, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off";
 // voiced BDSP species that can evolve into voiceless BDSP species
 const evolveVoicelessMap = {"caterpie": ["metapod"], "weedle": ["kakuna"], "venonat": ["venomoth"], "natu": ["xatu"], "larvitar": ["pupitar"], "wurmple": ["silcoon", "cascoon"], "bagon": ["shelgon"]};
-// voiceless BDSP species that can evolve into voiced BDSP species
-const evolveVoicedMap = {"caterpie": ["butterfree"], "metapod": ["butterfree"], "weedle": ["beedrill"], "kakuna": ["beedrill"], "kabuto": ["kabutops"], "remoraid": ["octillery"], "pupitar": ["tyranitar"], "silcoon": ["beautifly"], "cascoon": ["dustox"], "seedot": ["nuzleaf", "shiftry"], "nincada": ["ninjask"], "anorith": ["armaldo"], "bagon": ["salamence"], "shelgon": ["salamence"], "beldum": ["metagross"], "metang": ["metagross"]};
+// voiceless BDSP species (and voiced BDSP species that can evolve into voiceless BDSP species) that can evolve into voiced BDSP species
+const evolveVoicedMap = {"caterpie": ["butterfree"], "metapod": ["butterfree"], "weedle": ["beedrill"], "kakuna": ["beedrill"], "kabuto": ["kabutops"], "remoraid": ["octillery"], "larvitar": ["tyranitar"], "pupitar": ["tyranitar"], "wurmple": ["beautifly", "dustox"], "silcoon": ["beautifly"], "cascoon": ["dustox"], "seedot": ["nuzleaf", "shiftry"], "nincada": ["ninjask"], "anorith": ["armaldo"], "bagon": ["salamence"], "shelgon": ["salamence"], "beldum": ["metagross"], "metang": ["metagross"]};
 // TODO: add tutorials
 /* clear old local storage properties if still present */
 /* except theme which gets special handling */
@@ -908,16 +908,12 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	
 	const earnableRibbons = {};
 	let earnableRibbonWarnings = [];
-	let footprintVoicelessEvos = [];
-	let footprintVoicedEvos = [];
 	
 	// Pokemon info
 	const isMythical = getPokemonData(dex, "mythical");
 	const currentGameGroup = getGameData(currentGame, "group");
 	const metLevelWillChange = gameGroups[currentGameGroup]?.metLevelWillChange || false;
 	const isCurrentlyVoiceless = getPokemonData(dex, "voiceless");
-	const canEvolveVoiceless = !!evolveVoicelessMap[dex];
-	const canEvolveVoiced = !!evolveVoicedMap[dex];
 	const compatibleGames = getPokemonData(dex, "games"); // all compatible games for the species
 	let currentCompatibleGames = filterCompatibleGames(compatibleGames, currentGame, currentGameGroup); // all games the Pokemon can actually transfer to
 	// Pokemon-specific restrictions
@@ -950,6 +946,39 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 		return true;
 	});
 	
+	// Footprint Ribbon level status
+	let footprintLevelStatus;
+	if(originGame === "go" || originMark === "go"){
+		// PASS: Pokemon from GO are met <=50
+		footprintLevelStatus = "PASS";
+	} else if(metLevelWillChange){
+		// if the met level will change, use the current level for the check
+		// PASS: current level under 71
+		// FAIL: current level at or above 71
+		footprintLevelStatus = currentLevel < 71 ? "PASS" : "FAIL";
+	} else if(metLevel){
+		// if the met level will not change, and a met level has been set, use the met level for the check
+		// PASS: met level under 71
+		// FAIL: met level at or above 71
+		footprintLevelStatus = metLevel < 71 ? "PASS" : "FAIL";
+	} else {
+		// if the met level will not change, but a met level has not been set, use the current level for the check
+		// PASS: current level is under 71, therefore met level is also under 71
+		// UNKNOWN: current level is at or above 71
+		footprintLevelStatus = currentLevel < 71 ? "PASS" : "UNKNOWN";
+	}
+	const footprintWarning = {
+		id: "footprint",
+		gens: [],
+		flStatus: footprintLevelStatus,
+		mlChangeGen: null,
+		toVoiceless: evolveVoicelessMap[dex],
+		toVoiced: evolveVoicedMap[dex]
+	}
+	if(metLevelWillChange){
+		footprintWarning.mlChangeGen = gameGroups[currentGameGroup].metLevelWarning.replace("gen", "");
+	}
+	
 	for(const ribbon in ribbons){
 		// skip if Ribbon is a Memory Ribbon
 		if(ribbon.includes("memory-ribbon")) continue;
@@ -969,6 +998,7 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 		const ribbonGames = ribbons[ribbon].available;
 		for(const g in ribbonGames){
 			const ribbonGame = ribbonGames[g];
+			const ribbonGameGen = getGameData(ribbonGame, "gen");
 			const ribbonIsBDSP = ["bd", "sp"].includes(ribbonGame);
 			const ribbonIsGen8OrSV = ["sw", "sh", "bd", "sp", "pla", "scar", "vio"].includes(ribbonGame);
 			// skip if Pokemon cannot go to this game
@@ -983,7 +1013,7 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 			if(ribbon == "winning-ribbon"){
 				// can only be earned under Level 51
 				if(currentLevel < 51){
-					earnableRibbonWarnings.push("winning");
+					earnableRibbonWarnings.push({ id: "winning" });
 				} else {
 					continue;
 				}
@@ -1032,75 +1062,36 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 				// begin Footprint Ribbon checks
 				// always earnable in Diamond, Pearl, and Platinum
 				if(ribbonGame !== "diamond" && ribbonGame !== "pearl" && ribbonGame !== "platinum"){
-					// we must do a comprehensive voice and level check
+					// if this game's gen is already present in the warning, move on
+					if(footprintWarning.gens.includes(ribbonGameGen)) continue;
 					
-					// level checks
-					// first check: it's from GO (Met Level is always <= 50), it's eligible
-					// second check: Met Level has been set and it's < 71, it's eligible
-					// third check: Met Level has not been set, but it will not change and the current level is < 71, it's eligible
-					// fourth check: Met Level will change but the current level is < 71, it's eligible BUT we'll have to warn
-					const passesLevelCheck = (originMark === "go" || originGame === "go") || (!metLevelWillChange && metLevel && metLevel < 71) || (!metLevelWillChange && !metLevel && currentLevel < 71) || (metLevelWillChange && currentLevel < 71);
-					// we must also consider the scenario where Met Level won't change, but the user has not set it so we don't know what it is, and we can't determine it to be under 71
-					const notEnoughInfo = !metLevelWillChange && !metLevel && originMark !== "go" && originGame !== "go" && currentLevel > 70;
-					
-					if(passesLevelCheck){
-						// Pokemon currently passes the level check
-						// however, if the Met Level will change (fourth check), we may need to warn the user about it
-						if(metLevelWillChange){
-							const metLevelWarning = gameGroups[currentGameGroup].metLevelWarning;
-							// if the Pokemon is voiceless, then it can go to BDSP and we don't need to warn them about the Met Level...
-							if(isCurrentlyVoiceless){
-								// ... unless the Pokemon can evolve into a voiced Pokemon
-								if(canEvolveVoiced){
-									earnableRibbonWarnings.push("footprint-danger-" + metLevelWarning);
-									footprintVoicedEvos = evolveVoicedMap[dex];
-								}
-							} else if(canEvolveVoiceless){
-								// if the Pokemon can evolve into a voiceless Pokemon, then it can go to BDSP and we can let them know
-								footprintVoicelessEvos = evolveVoicelessMap[dex];
-								// but we should also let them know if it can further evolve into a voiced Pokemon
-								const warning = canEvolveVoiced ? "temporary" : "permanent";
-								if(canEvolveVoiced) footprintVoicedEvos = evolveVoicedMap[dex];
-								earnableRibbonWarnings.push("footprint-bypass-" + warning + "-" + metLevelWarning);
-							} else {
-								// no possible bypass, we must warn them about overleveling
-								earnableRibbonWarnings.push("footprint-" + metLevelWarning);
+					if(ribbonIsBDSP && isCurrentlyVoiceless){
+						// we're checking BDSP and Pokemon is voiceless, so level requirements are bypassed
+						if(footprintWarning.toVoiced){
+							// however, if the Pokemon can lose its voiceless status by evolving, then we may need to warn the user
+							if(footprintLevelStatus !== "PASS" || metLevelWillChange){
+								// only if the level is unknown or known to fail, or if it passes but may change
+								footprintWarning.gens.push(ribbonGameGen);
 							}
 						}
 					} else {
-						// either level check fails or we don't have enough info
-						// let's see if BDSP can save it
-						if(ribbonIsBDSP){
-							// voiceless Pokemon can always earn the Ribbon in BDSP
-							if(isCurrentlyVoiceless){
-								// unless they evolve to a voiced Pokemon
-								if(canEvolveVoiced){
-									const mlWarning = notEnoughInfo ? "-metlevel" : "";
-									earnableRibbonWarnings.push("footprint-danger" + mlWarning);
-									footprintVoicedEvos = evolveVoicedMap[dex];
-								}
-							} else if(canEvolveVoiceless){
-								// let the user know if we can evolve to voiceless
-								footprintVoicelessEvos = evolveVoicelessMap[dex];
-								// but we should also let them know if it can further evolve into a voiced Pokemon
-								const warning = canEvolveVoiced ? "temporary" : "permanent";
-								if(canEvolveVoiced) footprintVoicedEvos = evolveVoicedMap[dex];
-								const mlWarning = notEnoughInfo ? "-metlevel" : "";
-								earnableRibbonWarnings.push("footprint-bypass-" + warning + mlWarning);
-							} else if(notEnoughInfo){
-								// the Pokemon is voiced, cannot evolve to voiceless, and we don't have enough info
-								earnableRibbonWarnings.push("footprint-metlevel");
-							} else {
-								// the Pokemon is voiced, cannot evolve to voiceless, and was met at 71+
-								continue;
+						// we're checking Gen 6 or Gen 7, or we're checking BDSP and the Pokemon is voiced
+						if(footprintLevelStatus === "PASS"){
+                            // Pokemon can earn the ribbon if it stays at this current level
+							if(metLevelWillChange){
+								// but the met level will change, so we need to warn
+								footprintWarning.gens.push(ribbonGameGen);
 							}
+						} else if(footprintLevelStatus === "UNKNOWN"){
+							// we can't tell the level
+							footprintWarning.gens.push(ribbonGameGen);
 						} else {
-							// we're in Gens 6 and 7, voices don't matter here
-							if(notEnoughInfo){
-								earnableRibbonWarnings.push("footprint-metlevel");
-							} else {
-								continue;
+							// level fails, do not display the ribbon
+							// but if voiceless can save it, warn the user
+							if(ribbonIsBDSP && footprintWarning.toVoiceless){
+								footprintWarning.gens.push(ribbonGameGen);
 							}
+							continue;
 						}
 					}
 				}
@@ -1109,7 +1100,7 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 			// all checks passed
 			// add warning for GO language
 			if(currentGame == "go" && ribbonIsGen8OrSV){
-				earnableRibbonWarnings.push("go-language");
+				earnableRibbonWarnings.push({ id: "go-language" });
 			}
 			var ribbonGameKey = ribbonGame;
 			if(ribbonGameCombo){
@@ -1124,10 +1115,15 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	
 	// TODO: evolution changes in ribbon availability
 	
-	// remove duplicate warnings
-	earnableRibbonWarnings = [...new Set(earnableRibbonWarnings)];
+	// add Footprint Ribbon warning
+	if(footprintWarning.gens.length){
+		earnableRibbonWarnings.push(footprintWarning);
+	}
 	
-	return {currentCompatibleGames, earnableRibbons, earnableRibbonWarnings, footprintVoicedEvos, footprintVoicelessEvos};
+	// remove duplicate warnings
+	earnableRibbonWarnings = [...new Map(earnableRibbonWarnings.map(item => [item.id, item])).values()];
+	
+	return {currentCompatibleGames, earnableRibbons, earnableRibbonWarnings};
 }
 
 function setFormValidAll(){
@@ -1683,17 +1679,45 @@ function ribbonChecklist(event){
 	
 	// handle warnings
 	if(cardData.ribbonWarnings){
-		var ribbonWarnings = JSON.parse(cardData.ribbonWarnings);
 		$("#modalRibbonChecklistStatus").prepend($("<div>", { "id": "modalRibbonChecklistStatus-warnings", "class": "col-12 p-0 text-center bg-danger" }));
-		for(var w in ribbonWarnings){
-			var warningText = "unknown warning";
-			if(ribbonWarnings[w] == "winning-ribbon") warningText = "If " + cardData.name + " reaches Lv.51, the Winning Ribbon will become unavailable!";
-			if(ribbonWarnings[w] == "footprint-gen4") warningText = "If " + cardData.name + " reaches Lv.71 before transferring to Gen&nbsp;5, the Footprint Ribbon will only be available in Gen&nbsp;4!";
-			if(ribbonWarnings[w] == "footprint-virtualconsole") warningText = "If " + cardData.name + " reaches Lv.71 before transferring to Gen&nbsp;7, the Footprint Ribbon will become unavailable!";
-			if(ribbonWarnings[w] == "footprint-met-level") warningText = cardData.name + "'s Met Level has not been set. The availability of the Footprint Ribbon cannot be determined.";
-			if(ribbonWarnings[w] == "footprint-beldum") warningText = "Evolving " + cardData.name + " into Metagross will make the Footprint Ribbon unavailable!";
-			if(ribbonWarnings[w] == "go-language") warningText = "If " + cardData.name + " is moved to a HOME account set to Latin American Spanish, it cannot travel to Gen&nbsp;8, Scarlet, or Violet!";
-			if(ribbonWarnings[w] == "evolution-warning"){
+		const ribbonWarnings = JSON.parse(cardData.ribbonWarnings);
+		for(let w in ribbonWarnings){
+			const warning = ribbonWarnings[w];
+			warning.classes = "";
+			if(warning.id === "winning"){
+				warning.text = "If " + cardData.name + " reaches Lv.51, the Winning Ribbon will become unavailable.";
+			} else if(warning.id === "go-language"){
+				warning.text = "If " + cardData.name + " is moved to a HOME account set to Latin American Spanish, it cannot travel to Gen&nbsp;8, Scarlet, or Violet.";
+			} else if(warning.id === "footprint"){
+				warning.classes += " text-start";
+				warning.text = "Footprint Ribbon:<ul class='mb-0'>";
+				const genText = warning.gens.map(g => g === 8 ? "BDSP" : "Gen&nbsp;" + g).join(", ").replace(/, ([^,]*)$/, " and $1");
+				
+				if(warning.flStatus === "UNKNOWN"){
+					warning.text += "<li>" + cardData.name + "'s Met Level is unknown, so eligibility in " + genText + " cannot be determined.</li>";
+				}
+				
+				if(warning.mlChangeGen && warning.flStatus === "PASS"){
+					warning.text += "<li>Leveling " + cardData.name + " to Lv.71 before transferring to Gen&nbsp;" + warning.mlChangeGen + " will make the ribbon unavailable in " + genText + ".</li>";
+				}
+				
+				if(warning.toVoiceless){
+					let voicelessEvo = getLanguage(getPokemonData(warning.toVoiceless[0], "names"));
+					if(warning.toVoiceless[1]){
+						voicelessEvo = voicelessEvo + " or " + getLanguage(getPokemonData(warning.toVoiceless[1], "names"));
+					}
+					warning.text += "<li>Evolving " + cardData.name + " into " + voicelessEvo + " will make the ribbon available in BDSP.</li>";
+				}
+				if(warning.toVoiced){
+					let voicedEvo = getLanguage(getPokemonData(warning.toVoiced[0], "names"));
+					if(warning.toVoiced[1]){
+						voicedEvo = voicedEvo + " or " + getLanguage(getPokemonData(warning.toVoiced[1], "names"));
+					}
+					warning.text += "<li>Evolving " + cardData.name + " into " + voicedEvo + " will make the ribbon unavailable in BDSP.</li>";
+				}
+			}
+			// TODO: evolution warning
+			/*if(warningText == "evolution-warning"){
 				var evoWarnName = getLanguage(getPokemonData(cardData.evolutionWarning, "names"));
 				var evoWarnForms = getPokemonData(cardData.evolutionWarning, "forms");
 				if(!evoWarnForms){
@@ -1713,8 +1737,8 @@ function ribbonChecklist(event){
 					}
 				}
 				warningText = "Evolving " + cardData.name + " into " + evoWarnName + " may change the availability of certain Ribbons!";
-			}
-			$("#modalRibbonChecklistStatus-warnings").append($("<div>", { "class": "p-2 px-3 border-bottom border-2" }).html(warningText));
+			}*/
+			$("#modalRibbonChecklistStatus-warnings").append($("<div>", { "class": "p-2 px-3 border-bottom border-2 " + warning.classes }).html(warning.text));
 		}
 		$("#modalRibbonChecklistStatus-warnings > div:last-child").removeClass("border-bottom border-2");
 	}
@@ -1879,7 +1903,7 @@ function createCard(p, id){
 	}
 	
 	// get compatible games and ribbons
-	let compatibleGamesAndRibbons = {}; //{"currentCompatibleGames": [], "earnableRibbonWarnings": [], "earnableRibbons": {}, "footprintVoicedEvos": [], "footprintVoicelessEvos": []};
+	let compatibleGamesAndRibbons = {}; //{"currentCompatibleGames": [], "earnableRibbonWarnings": [], "earnableRibbons": {}};
 	if(p.currentgame){
 		compatibleGamesAndRibbons = getGamesAndRibbons(p.species, p.currentlevel, p.metlevel, p.currentgame, p.origingame, p.originmark, p.ribbons, p.scale, p.totem, p.gmax, p.shadow);
 	}
@@ -1900,12 +1924,6 @@ function createCard(p, id){
 		// attach warnings
 		if(compatibleGamesAndRibbons.earnableRibbonWarnings.length){
 			$cardCol.attr({ "data-ribbon-warnings": JSON.stringify(compatibleGamesAndRibbons.earnableRibbonWarnings) });
-		}
-		if(compatibleGamesAndRibbons.footprintVoicedEvos.length){
-			$cardCol.attr({ "data-footprint-voicedevos": JSON.stringify(compatibleGamesAndRibbons.footprintVoicedEvos) });
-		}
-		if(compatibleGamesAndRibbons.footprintVoicelessEvos.length){
-			$cardCol.attr({ "data-footprint-voicelessevos": JSON.stringify(compatibleGamesAndRibbons.footprintVoicelessEvos) });
 		}
 		
 		// TODO: evolution warnings
