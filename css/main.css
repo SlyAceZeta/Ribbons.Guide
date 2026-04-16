@@ -469,6 +469,15 @@ html[data-ribbonformview="grid"] #pokemonFormMultiRibbons li.d-flex {
 	border-radius: inherit;
 	padding: 9px 18px;
 }
+#modalDataCompareArrowLeft {
+	transform: rotate(-90deg);
+}
+.modalDataCompareReverse #modalDataCompareArrowLeft {
+	transform: rotate(90deg);
+}
+.modalDataCompareReverse #modalDataCompareArrowUp {
+	transform: rotate(180deg);
+}
 
 /* links */
 a:not(:hover):not(:focus) {

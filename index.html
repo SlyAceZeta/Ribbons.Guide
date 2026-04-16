@@ -23,8 +23,8 @@
 		}
 		</script>
 		<!-- fonts -->
-		<link rel="preload" href="fonts/NunitoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-		<link rel="preload" href="fonts/NunitoSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+		<link href="fonts/NunitoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link href="fonts/NunitoSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
 		<style type="text/css">
 		@font-face {
 			font-family: "Nunito Sans";
@@ -962,8 +962,8 @@
 				</div>
 			</div>
 		</div>
-		<!-- Backup Reload Modal -->
-		<div class="modal" id="modalReloading" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalReloadingLabel" aria-hidden="true">
+		<!-- Reload Modal -->
+		<div class="modal fade" id="modalReloading" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalReloadingLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -1019,9 +1019,6 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<p class="fw-bold">Last Modified</p>
-						<p id="modalDataLastModified">Unknown</p>
-						<hr>
 						<p id="modalDataLocal" class="fw-bold">Local Backup</p>
 						<div class="btn-group" role="group" aria-labelledby="modalDataLocal">
 							<button type="button" class="btn btn-primary btn-sm" id="modalDataSaveBackup">Save Backup File</button>
@@ -1043,6 +1040,42 @@
 					</div>
 					<div class="modal-footer justify-content-center">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Data Comparison Modal -->
+		<div class="modal fade" id="modalDataCompare" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalDataCompareLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalDataCompareLabel">Confirm Data Overwrite</h2>
+					</div>
+					<div class="modal-body">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-md-5 text-md-start text-center" id="modalDataCompareLocal">
+									<h3 class="fs-5 fw-bold" id="modalDataCompareLocalHeader">Local Data</h3>
+									<div id="modalDataCompareLocalDate"></div>
+									<div id="modalDataCompareLocalPokemon"><span id="modalDataCompareLocalPokemonNum"></span> Pokémon</div>
+									<div id="modalDataCompareLocalBoxes"><span id="modalDataCompareLocalBoxesNum"></span> Boxes</div>
+								</div>
+								<div class="col-md-2 d-flex align-items-center justify-content-center my-md-0 my-3">
+									<img class="modalDataCompareArrow d-md-none" id="modalDataCompareArrowUp" src="img/ui/arrow-up.svg">
+									<img class="modalDataCompareArrow d-none d-md-inline" id="modalDataCompareArrowLeft" src="img/ui/arrow-up.svg">
+								</div>
+								<div class="col-md-5 text-md-end text-center" id="modalDataCompareOther">
+									<h3 class="fs-5 fw-bold" id="modalDataCompareOtherHeader"></h3>
+									<div id="modalDataCompareOtherDate"></div>
+									<div id="modalDataCompareOtherPokemon"><span id="modalDataCompareOtherPokemonNum"></span> Pokémon</div>
+									<div id="modalDataCompareOtherBoxes"><span id="modalDataCompareOtherBoxesNum"></span> Boxes</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-primary" id="modalDataCompareAccept">Accept</button>
+						<button type="button" class="btn btn-secondary" id="modalDataCompareCancel">Cancel</button>
 					</div>
 				</div>
 			</div>

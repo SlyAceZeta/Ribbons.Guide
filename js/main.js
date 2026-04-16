@@ -1,5 +1,5 @@
 /* globals */
-var balls, changelog, games, gameOrder = {}, gameGroups, importmap, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off", DROPBOX_CLIENT_ID = "xxvozybw2lp9ycy", dropbox_auth_url;
+var balls, changelog, games, gameOrder = {}, gameGroups, importmap, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off", DROPBOX_CLIENT_ID = "xxvozybw2lp9ycy", dropbox_auth_url, backupPokemon = [], backupBoxes = [], backupLastModified = 0, backupSettings = {};
 // voiced BDSP species that can evolve into voiceless BDSP species
 const evolveVoicelessMap = {"caterpie": ["metapod"], "weedle": ["kakuna"], "venonat": ["venomoth"], "natu": ["xatu"], "larvitar": ["pupitar"], "wurmple": ["silcoon", "cascoon"], "bagon": ["shelgon"]};
 // voiceless BDSP species (and voiced BDSP species that can evolve into voiceless BDSP species) that can evolve into voiced BDSP species
@@ -37,14 +37,8 @@ if(localStorage.changelog){
 var sortablePokemon, sortableBoxes;
 
 /* set data modified date */
-function updateModifiedDate(newDate = true){
-	var modifiedDate = new Date();
-	if(newDate){
-		localStorage.lastModified = Number(modifiedDate);
-	} else {
-		modifiedDate.setTime(localStorage.lastModified);
-	}
-	$("#modalDataLastModified").text(modifiedDate.toLocaleDateString() + ", " + modifiedDate.toLocaleTimeString());
+function updateModifiedDate(){
+	localStorage.lastModified = Number(new Date());
 }
 
 /* change setting */
@@ -394,86 +388,151 @@ function updateOldPokemon(p){
 	return newP;
 }
 
-/* save backup */
-function saveBackup(name = "RibbonBackup"){
-	var backupObj = {};
-	backupObj.lastModified = localStorage.lastModified;
-	backupObj.settings = JSON.parse(localStorage.settings);
-	backupObj.pokemon = localStorage.pokemon ? JSON.parse(localStorage.pokemon) : {};
-	backupObj.boxes = localStorage.boxes ? JSON.parse(localStorage.boxes) : {};
-	var blob = new Blob([JSON.stringify(backupObj)], {type: 'application/json'});
+/* create backup for saving */
+function createBackup(){
+	const backup = {};
+	backup.fileVersion = 5;
+	backup.lastModified = localStorage.lastModified;
+	backup.settings = JSON.parse(localStorage.settings);
+	backup.pokemon = localStorage.pokemon ? JSON.parse(localStorage.pokemon) : {};
+	backup.boxes = localStorage.boxes ? JSON.parse(localStorage.boxes) : {};
+	return JSON.stringify(backup);
+}
+
+/* save a local backup file */
+function saveBackupFile(name = "RibbonBackup"){
+	const backup = createBackup();
+	const blob = new Blob([backup], { type: "application/json" });
+	const url = URL.createObjectURL(blob);
 	
-	var ele = document.createElement('a');
-	ele.href = URL.createObjectURL(blob);
-	ele.target = "_blank";
+	const ele = document.createElement("a");
+	ele.href = url;
 	ele.download = name + ".json";
 	
 	document.body.appendChild(ele);
 	ele.click();
+	
 	document.body.removeChild(ele);
+	URL.revokeObjectURL(url);
+}
+
+/* show a confirmation prompt for backup data application */
+function confirmLocalDataChange(online = false){
+	// local side
+	const localModifiedDate = new Date(Number(localStorage.lastModified));
+	$("#modalDataCompareLocalDate").text(localModifiedDate.toLocaleDateString());
+	$("#modalDataCompareLocalPokemonNum").text(userPokemon.length);
+	$("#modalDataCompareLocalBoxesNum").text(userBoxes.length);
+	
+	// backup side
+	if(online){
+		$("#modalDataCompareOtherHeader").text("Online Backup");
+	} else {
+		$("#modalDataCompareOtherHeader").text("Backup File");
+	}
+	const otherModifiedDate = new Date(backupLastModified);
+	$("#modalDataCompareOtherDate").text(otherModifiedDate.toLocaleDateString());
+	$("#modalDataCompareOtherPokemonNum").text(backupPokemon.length);
+	$("#modalDataCompareOtherBoxesNum").text(backupBoxes.length);
+	
+	// present modal
+	$("#modalDataCompare").removeClass("modalDataCompareReverse");
+	modalData.hide();
+	modalDataCompare.show();
+}
+
+/* actually apply the backup data to the site */
+function applyBackup(){
+	localStorage.pokemon = JSON.stringify(backupPokemon);
+	localStorage.boxes = JSON.stringify(backupBoxes);
+	localStorage.lastModified = backupLastModified;
+	localStorage.settings = JSON.stringify(backupSettings);
+	modalDataCompare.hide();
+	modalData.hide();
+	new bootstrap.Modal("#modalReloading").show();
+	console.log("reload B");
+	setTimeout(function(){ location.reload() }, 500);
+}
+
+/* cancel backup */
+function cancelBackup(){
+	// reset globals
+	backupPokemon = [];
+	backupBoxes = [];
+	backupLastModified = 0;
+	backupSettings = {};
+	modalDataCompare.hide();
+	modalData.show();
 }
 
 /* load backup */
-function loadBackup(file, filename){
-	var filename = filename.replace("C:\\fakepath\\", "");
-	var reader = new FileReader();
+function loadBackupFile(file, online = false){
+	const reader = new FileReader();
 	reader.onload = function(e){
-		var contents = e.target.result;
-		var proceed = false;
-		if(localStorage.pokemon || localStorage.boxes){
-			if(confirm("Are you sure you want to replace all of the current data with " + filename + "? You can't reverse this decision!")){
-				proceed = true;
+		// safely reset globals just to be sure
+		backupPokemon = [];
+		backupBoxes = [];
+		backupLastModified = Number(new Date());
+		backupSettings = {};
+		
+		// determine backup file version for data handling
+		let backupContents = e.target.result;
+		let fileVersion = 0;
+		if(backupContents.indexOf(',{"entries":[') > -1){
+			fileVersion = 2;
+		} else if(backupContents.indexOf('{"entries"') === 0){
+			fileVersion = 1;
+		} else {
+			try {
+				backupContents = JSON.parse(backupContents);
+				if(backupContents.fileVersion){
+					fileVersion = backupContents.fileVersion;
+				} else if(backupContents.settings && backupContents.pokemon && backupContents.boxes){
+					fileVersion = 3;
+					if(backupContents.lastModified) fileVersion = 4;
+				}
+			} catch(err){
+				console.error("Error", err);
+			}
+		}
+		
+		if(fileVersion){
+			// we successfully determined the backup file version
+			
+			// old data handling
+			if(fileVersion === 1){
+				backupPokemon = JSON.parse(backupContents);
+			} else if(fileVersion === 2){
+				const oldBoxPosition = backupContents.indexOf(',{"entries":[');
+				backupPokemon = JSON.parse(backupContents.substring(0, oldBoxPosition));
+				backupBoxes = JSON.parse(backupContents.substring(oldBoxPosition+1));
+				backupBoxes = Object.assign([], backupBoxes.entries.filter(Boolean));
+			}
+			
+			// data conversion
+			if(fileVersion < 3){
+				backupPokemon = Object.assign([], backupPokemon.entries.filter(Boolean));
+				for(let p in backupPokemon){
+					backupPokemon[p] = updateOldPokemon(backupPokemon[p]);
+				}
+			} else {
+				backupPokemon = backupContents.pokemon;
+				backupBoxes = backupContents.boxes;
+				backupSettings = backupContents.settings;
+				if(fileVersion >= 4) backupLastModified = Number(backupContents.lastModified);
+			}
+			
+			// prepare to apply backup data
+			if((localStorage.pokemon && JSON.parse(localStorage.pokemon).length) || (localStorage.boxes && JSON.parse(localStorage.boxes).length)){
+				// have the user compare data to confirm if they want to overwrite
+				confirmLocalDataChange(online);
+			} else {
+				// user has no data to overwrite, just continue
+				applyBackup();
 			}
 		} else {
-			proceed = true;
-		}
-		if(proceed){
-			var fileVersion = 0;
-			// check for the different backup file versions
-			var oldBoxPosition = contents.indexOf(',{"entries":[');
-			var backupPokemon = [], backupBoxes = [], backupLastModified = Number(new Date());
-			if(oldBoxPosition > -1){
-				fileVersion = 2;
-				backupPokemon = JSON.parse(contents.substring(0, oldBoxPosition));
-				backupBoxes = JSON.parse(contents.substring(oldBoxPosition+1));
-				backupBoxes = Object.assign([], backupBoxes.entries.filter(Boolean));
-			} else {
-				if(contents.indexOf('{"entries"') == 0){
-					fileVersion = 1;
-					backupPokemon = JSON.parse(contents);
-				} else {
-					var backupObj = JSON.parse(contents);
-					if(backupObj.fileVersion){
-						fileVersion = backupObj.fileVersion;
-					} else if(backupObj.settings && backupObj.pokemon && backupObj.boxes){
-						fileVersion = 3;
-						if(backupObj.lastModified) fileVersion = 4;
-					}
-				}
-			}
-			if(fileVersion){
-				if(fileVersion < 3){
-					backupPokemon = Object.assign([], backupPokemon.entries.filter(Boolean));
-					for(let p in backupPokemon){
-						backupPokemon[p] = updateOldPokemon(backupPokemon[p]);
-					}
-				} else if(fileVersion >= 3){
-					backupPokemon = backupObj.pokemon;
-					backupBoxes = backupObj.boxes;
-					settings = backupObj.settings;
-					localStorage.settings = JSON.stringify(backupObj.settings);
-					if(fileVersion >= 4) backupLastModified = backupObj.lastModified;
-				}
-				localStorage.pokemon = JSON.stringify(backupPokemon);
-				localStorage.boxes = JSON.stringify(backupBoxes);
-				localStorage.lastModified = backupLastModified;
-				modalData.toggle();
-				new bootstrap.Modal("#modalReloading").toggle();
-				console.log("reload B: fileVersion = " + fileVersion);
-				setTimeout(function(){ location.reload() }, 500);
-			} else {
-				alert("This is not a valid Ribbons.Guide backup. Your data has not changed.");
-			}
+			// if we cannot determine the backup file version, do not continue
+			alert("This is not a valid Ribbons.Guide backup. Your data has not changed.");
 		}
 	}
 	reader.readAsText(file);
@@ -2813,9 +2872,7 @@ function initRun(){
 	/* initial preset of settings and data modals */
 	$("#loading-spinner-info-text").text("Loading settings");
 	presetSettings();
-	if(localStorage.lastModified){
-		updateModifiedDate(false);
-	} else {
+	if(!localStorage.lastModified){
 		updateModifiedDate();
 	}
 	
@@ -3408,7 +3465,7 @@ function initRun(){
 				var $errortext = $("<div>", { "class": "fw-bold", "role": "status" })
 					.append($("<div>", { "class": "my-3" }).html("<span class='text-uppercase'>Pokémon language conversion error on Pokémon #" + p + "</span><br>" + err))
 					.append($("<div>").html("Please inform Sly on <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a> or <a href='https://discord.gg/frv7dpWzDG'>Discord</a>."))
-					.append($("<div>").html("Attach the following file with your report (tap or left-click to download): <button type='button' class='btn btn-link p-0 fw-bold align-baseline' onclick='saveBackup(\"RibbonError\")'>RibbonError.json</button>"));
+					.append($("<div>").html("Attach the following file with your report (tap or left-click to download): <button type='button' class='btn btn-link p-0 fw-bold align-baseline' onclick='saveBackupFile(\"RibbonError\")'>RibbonError.json</button>"));
 				$("#loading-spinner-info").html($errorimg).append($errortext);
 				return;
 			}
@@ -3445,7 +3502,7 @@ function initRun(){
 				const $errortext = $("<div>", { "class": "fw-bold", "role": "status" })
 					.append($("<div>", { "class": "my-3" }).html("<span class='text-uppercase'>Pokémon current game conversion error on Pokémon #" + p + "</span><br>" + err))
 					.append($("<div>").html("Please inform Sly on <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a> or <a href='https://discord.gg/frv7dpWzDG'>Discord</a>."))
-					.append($("<div>").html("Attach the following file with your report (tap or left-click to download): <button type='button' class='btn btn-link p-0 fw-bold align-baseline' onclick='saveBackup(\"RibbonError\")'>RibbonError.json</button>"));
+					.append($("<div>").html("Attach the following file with your report (tap or left-click to download): <button type='button' class='btn btn-link p-0 fw-bold align-baseline' onclick='saveBackupFile(\"RibbonError\")'>RibbonError.json</button>"));
 				$("#loading-spinner-info").html($errorimg).append($errortext);
 				return;
 			}
@@ -3462,7 +3519,7 @@ function initRun(){
 				const $errortext = $("<div>", { "class": "fw-bold", "role": "status" })
 					.append($("<div>", { "class": "my-3" }).html("<span class='text-uppercase'>Pokémon origin game conversion error on Pokémon #" + p + "</span><br>" + err))
 					.append($("<div>").html("Please inform Sly on <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a> or <a href='https://discord.gg/frv7dpWzDG'>Discord</a>."))
-					.append($("<div>").html("Attach the following file with your report (tap or left-click to download): <button type='button' class='btn btn-link p-0 fw-bold align-baseline' onclick='saveBackup(\"RibbonError\")'>RibbonError.json</button>"));
+					.append($("<div>").html("Attach the following file with your report (tap or left-click to download): <button type='button' class='btn btn-link p-0 fw-bold align-baseline' onclick='saveBackupFile(\"RibbonError\")'>RibbonError.json</button>"));
 				$("#loading-spinner-info").html($errorimg).append($errortext);
 				return;
 			}
@@ -3483,7 +3540,7 @@ function initRun(){
 				var $errortext = $("<div>", { "class": "fw-bold", "role": "status" })
 					.append($("<div>", { "class": "my-3" }).html("<span class='text-uppercase'>Pokémon list error on Pokémon #" + p + "</span><br>" + err))
 					.append($("<div>").html("Please inform Sly on <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a> or <a href='https://discord.gg/frv7dpWzDG'>Discord</a>."))
-					.append($("<div>").html("Attach the following file with your report (tap or left-click to download): <button type='button' class='btn btn-link p-0 fw-bold align-baseline' onclick='saveBackup(\"RibbonError\")'>RibbonError.json</button>"));
+					.append($("<div>").html("Attach the following file with your report (tap or left-click to download): <button type='button' class='btn btn-link p-0 fw-bold align-baseline' onclick='saveBackupFile(\"RibbonError\")'>RibbonError.json</button>"));
 				$("#loading-spinner-info").html($errorimg).append($errortext);
 				return;
 			}
@@ -3615,6 +3672,7 @@ $(function(){
 	/* set modals */
 	modalSettings = new bootstrap.Modal("#modalSettings");
 	modalData = new bootstrap.Modal("#modalData");
+	modalDataCompare = new bootstrap.Modal("#modalDataCompare");
 	modalImport = new bootstrap.Modal("#modalImport");
 	/* dropdown listeners */
 	$("#settingsTheme").on("change", function(){
@@ -3709,14 +3767,14 @@ $(function(){
 		modalData.toggle();
 	});
 	$("#modalDataSaveBackup").on("click", function(){
-		saveBackup();
+		saveBackupFile();
 	});
 	$("#modalDataLoadBackupButton").on("click", function(){
 		$("#modalDataLoadBackupFile").trigger("click");
 	});
 	$("#modalDataLoadBackupFile").on("change", function(){
 		var file = $(this)[0].files[0];
-		if(file) loadBackup(file, $(this).val());
+		if(file) loadBackupFile(file);
 	});
 	modalPokemonForm = new bootstrap.Modal("#modalPokemonForm");
 	$("#modalPokemonForm").on("hide.bs.modal", function(e){
@@ -3769,13 +3827,6 @@ $(function(){
 	});
 	$("#modalBoxesNew").on("click", function(){
 		createOrEditBox();
-	});
-	$("#modalDataOnlineLogin").on("click", function(){
-		if(dropbox_auth_url){
-			window.location.href = dropbox_auth_url;
-		} else {
-			console.error("Error: no authentication URL");
-		}
 	});
 	/* TODO: reduce duplication with changelog updates */
 	$("#modalAboutViewChangelog").on("click", function(){
@@ -3871,6 +3922,29 @@ $(function(){
 		$("#modalDataOnlineErrorText").text(msg);
 		$("#modalDataOnlineError").removeClass("d-none");
 	}
+	// login function
+	$("#modalDataOnlineLogin").on("click", function(){
+		if(dropbox_auth_url){
+			window.location.href = dropbox_auth_url;
+		} else {
+			console.error("Error: no authentication URL");
+		}
+	});
+	// upload function
+	$("#modalDataOnlineSave").on("click", function(){
+		uploadBackup();
+	});
+	// download function
+	$("#modalDataOnlineLoad").on("click", function(){
+		downloadBackup();
+	});
+	// backup comparison modal functions
+	$("#modalDataCompareAccept").on("click", function(){
+		applyBackup();
+	});
+	$("#modalDataCompareCancel").on("click", function(){
+		cancelBackup();
+	});
 	// logout function
 	$("#modalDataOnlineLogout, #modalDataOnlineErrorLogout").on("click", function(){
 		// purge the user's refresh token to revoke persistent access
