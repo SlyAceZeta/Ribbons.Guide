@@ -7,17 +7,17 @@
 	--bs-font-sans-serif: "Nunito Sans", sans-serif;
 	--bs-link-color: #0148B1;
 	--bs-link-hover-color: var(--bs-link-color);
-
+	
 	--rg-header-background: #ddd;
 	--rg-header-text: #444;
 	--rg-header-text-active: #000;
-
+	
 	--rg-card-bg: #eee;
 	--rg-card-cap-bg: #d5d5d5;
 	--rg-card-color: #000;
 	--rg-card-lang-bg: #efefef;
 	--rg-card-lang-text: #121212;
-
+	
 	--rg-icon-filter: invert(1);
 	--rg-pulse-rgb: 0, 0, 0;
 }
@@ -216,7 +216,7 @@ a:not(.btn) {
 [data-bs-theme="sword"],
 [data-bs-theme="shield"] {
 	--bs-border-color: #000;
-
+	
 	--rg-header-background: #000;
 	--rg-header-text: #000;
 	--rg-header-text-active: #000;
@@ -289,17 +289,17 @@ a:not(.btn) {
 	--bs-body-color: #fff;
 	--bs-border-color: #555;
 	--bs-link-color: #9CC4FE;
-
+	
 	--rg-header-background: #333;
 	--rg-header-text: #bbb;
 	--rg-header-text-active: #fff;
-
+	
 	--rg-card-bg: #333;
 	--rg-card-cap-bg: #222;
 	--rg-card-color: #fff;
 	--rg-card-lang-bg: #111;
 	--rg-card-lang-text: #fff;
-
+	
 	--rg-icon-filter: none;
 	--rg-pulse-rgb: 255, 255, 255;
 }
@@ -389,18 +389,18 @@ a:not(.btn) {
 	--bs-emphasis-color: #fff;
 	--bs-btn-close-filter: invert(1) grayscale(1) brightness(2);
 	--bs-link-color: #9CC4FE;
-
+	
 	--rg-header-background: #112028;
 	--rg-header-text: #bbb;
 	--rg-header-text-active: #fff;
 	--rg-header-border: #f7cd12;
-
+	
 	--rg-card-bg: #1f2f45;
 	--rg-card-cap-bg: #112028;
 	--rg-card-color: #fff;
 	--rg-card-lang-bg: #111;
 	--rg-card-lang-text: #fff;
-
+	
 	--rg-icon-filter: none;
 	--rg-pulse-rgb: 255, 255, 255;
 }
@@ -808,18 +808,18 @@ a:not(.btn) {
 	--bs-emphasis-color: #fff;
 	--bs-btn-close-filter: invert(1) grayscale(1) brightness(2);
 	--bs-link-color: #add8e6;
-
+	
 	--rg-header-background: #b65726;
 	--rg-header-text: #fff;
 	--rg-header-text-active: #fff;
 	--rg-header-border: #f7cd12;
-
+	
 	--rg-card-bg: #002c67;
 	--rg-card-cap-bg: #081d3c;
 	--rg-card-color: #fff;
 	--rg-card-lang-bg: #111;
 	--rg-card-lang-text: #fff;
-
+	
 	--rg-icon-filter: none;
 	--rg-pulse-rgb: 255, 255, 255;
 }
@@ -924,18 +924,18 @@ a:not(.btn) {
 	--bs-emphasis-color: #fff;
 	--bs-btn-close-filter: invert(1) grayscale(1) brightness(2);
 	--bs-link-color: #add8e6;
-
+	
 	--rg-header-background: #842EAF;
 	--rg-header-text: #fff;
 	--rg-header-text-active: #fff;
 	--rg-header-border: #f7cd12;
-
+	
 	--rg-card-bg: #002c67;
 	--rg-card-cap-bg: #081d3c;
 	--rg-card-color: #fff;
 	--rg-card-lang-bg: #111;
 	--rg-card-lang-text: #fff;
-
+	
 	--rg-icon-filter: none;
 	--rg-pulse-rgb: 255, 255, 255;
 }
