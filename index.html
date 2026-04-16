@@ -4,6 +4,8 @@
 		<title>Ribbons.Guide - Ribbon Tracking and Guidance</title>
 		<meta name="description" content="Keep track of your Pokémon and their Ribbons using Ribbons.Guide!">
 		<link rel="shortcut icon" href="favicon.ico">
+		<meta name="theme-color" content="#112028">
+		<link rel="apple-touch-icon" href="img/icons/android-chrome-192x192.png">
 		<!-- compatibility -->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +13,18 @@
 		<meta name="darkreader-lock" content="foo">
 		<!-- PWA -->
 		<link rel="manifest" href="manifest.json">
-		<script>if(navigator.serviceWorker) navigator.serviceWorker.register("sw.js");</script>
+		<script>
+		if("serviceWorker" in navigator){
+			window.addEventListener("load", () => {
+				navigator.serviceWorker.register("sw.js").then(reg => {
+					reg.update();
+				});
+			});
+		}
+		</script>
 		<!-- fonts -->
-		<link href="fonts/NunitoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-		<link href="fonts/NunitoSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="fonts/NunitoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="fonts/NunitoSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
 		<style type="text/css">
 		@font-face {
 			font-family: "Nunito Sans";
@@ -1049,7 +1059,7 @@
 					</div>
 					<div class="modal-body">
 						<p>Ribbons.Guide is an open-source <a href="https://en.wikipedia.org/wiki/Progressive_web_app">progressive web app</a> that allows you to keep track of your Pokémon and their Ribbons! Ribbons.Guide is hosted via GitHub Pages. It was developed as a love letter to the helpful and welcoming <a href="https://www.reddit.com/r/pokemonribbons/">r/PokémonRibbons</a> community.</p>
-						<p>The images used in Ribbons.Guide were provided by <a href="https://pokejungle.net">PokéJungle</a>, <a href="https://pokemondb.net">Pokémon Database</a>, <a href="https://github.com/msikma/pokesprite">PokéSprite</a>, <a href="https://archives.bulbagarden.net/wiki/Main_Page">Bulbagarden Archives</a>, <a href="https://github.com/PokeMiners/pogo_assets">Pokémon GO Assets</a>, and <a href="https://github.com/google/material-design-icons">Material Symbols</a>. Ribbons.Guide also makes use of <a href="https://github.com/jquery/jquery">jQuery</a>, <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://github.com/select2/select2">Select2</a>, <a href="https://github.com/SortableJS/Sortable">Sortable</a>, <a href="https://github.com/GoogleChrome/workbox">Workbox</a>, and <a href="https://fonts.google.com/">Google Fonts</a>. This project is tested with <a href="https://www.browserstack.com/">BrowserStack</a>.</p>
+						<p>The images used in Ribbons.Guide were provided by <a href="https://pokejungle.net">PokéJungle</a>, <a href="https://pokemondb.net">Pokémon Database</a>, <a href="https://github.com/msikma/pokesprite">PokéSprite</a>, <a href="https://archives.bulbagarden.net/wiki/Main_Page">Bulbagarden Archives</a>, <a href="https://github.com/PokeMiners/pogo_assets">Pokémon GO Assets</a>, and <a href="https://github.com/google/material-design-icons">Material Symbols</a>. Ribbons.Guide also makes use of <a href="https://github.com/jquery/jquery">jQuery</a>, <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://github.com/select2/select2">Select2</a>, <a href="https://github.com/SortableJS/Sortable">Sortable</a>, and <a href="https://fonts.google.com/">Google Fonts</a>. This project is tested with <a href="https://www.browserstack.com/">BrowserStack</a>.</p>
 						<p>Pokémon and all images © Nintendo/Creatures Inc./Game Freak. This free fan project is not affiliated with Nintendo, Creatures Inc., Game Freak, or The Pokémon Company. All original content and code is governed by the <a href="https://opensource.org/license/gpl-3-0/">GPL-3.0 license</a>.</p>
 					</div>
 					<div class="modal-footer justify-content-center">
