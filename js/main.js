@@ -1,5 +1,5 @@
 /* globals */
-var balls, changelog, games, gameOrder = {}, gameGroups, importmap, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off", DROPBOX_CLIENT_ID = "xxvozybw2lp9ycy", dropbox_auth_url, backupPokemon = [], backupBoxes = [], backupLastModified = 0, backupSettings = {};
+var balls, changelog, games, gameOrder = {}, gameGroups, importmap, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalData, modalDataCompare, modalCheckDropbox, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off", DROPBOX_CLIENT_ID = "xxvozybw2lp9ycy", dropbox_auth_url, backupPokemon = [], backupBoxes = [], backupLastModified = 0, backupSettings = {}, dbx;
 // voiced BDSP species that can evolve into voiceless BDSP species
 const evolveVoicelessMap = {"caterpie": ["metapod"], "weedle": ["kakuna"], "venonat": ["venomoth"], "natu": ["xatu"], "larvitar": ["pupitar"], "wurmple": ["silcoon", "cascoon"], "bagon": ["shelgon"]};
 // voiceless BDSP species (and voiced BDSP species that can evolve into voiceless BDSP species) that can evolve into voiced BDSP species
@@ -392,10 +392,10 @@ function updateOldPokemon(p){
 function createBackup(){
 	const backup = {};
 	backup.fileVersion = 5;
-	backup.lastModified = localStorage.lastModified;
+	backup.lastModified = Number(localStorage.lastModified);
 	backup.settings = JSON.parse(localStorage.settings);
-	backup.pokemon = localStorage.pokemon ? JSON.parse(localStorage.pokemon) : {};
-	backup.boxes = localStorage.boxes ? JSON.parse(localStorage.boxes) : {};
+	backup.pokemon = localStorage.pokemon ? JSON.parse(localStorage.pokemon) : [];
+	backup.boxes = localStorage.boxes ? JSON.parse(localStorage.boxes) : [];
 	return JSON.stringify(backup);
 }
 
@@ -414,6 +414,81 @@ function saveBackupFile(name = "RibbonBackup"){
 	
 	document.body.removeChild(ele);
 	URL.revokeObjectURL(url);
+}
+
+/* save an online backup */
+function uploadBackup(){
+	$("#modalDataOnlineLoggedIn button").prop("disabled", true);
+	modalData.hide();
+	modalCheckDropbox.show();
+	dbx.filesDownload({ path: "/RibbonBackup.json" })
+		.then(function(res){
+			const blob = res.result.fileBlob;
+			checkOnlineBackup(blob);
+		})
+		.catch(function(err){
+			if(err.status === 409 || (err.error && JSON.stringify(err.error).includes("not_found"))){
+				// no remote file exists, upload first backup
+				executeActualUpload();
+			} else {
+				console.error(err);
+				alert("Error fetching remote backup: " + err);
+				modalData.show();
+			}
+		})
+		.finally(function(){
+			$("#modalDataOnlineLoggedIn button").prop("disabled", false);
+		});
+}
+function executeActualUpload(){
+	const backup = createBackup();
+	modalData.hide();
+	modalDataCompare.hide();
+	modalCheckDropbox.show();
+	dbx.filesUpload({
+		path: "/RibbonBackup.json",
+		contents: backup,
+		mode: "overwrite"
+	})
+		.then(function(res){
+			alert("Backup successfully saved to Dropbox!");
+			modalCheckDropbox.hide();
+			modalData.show();
+		})
+		.catch(function(err){
+			console.error(err);
+			alert("Failed to upload. " + err);
+			modalCheckDropbox.hide();
+			modalData.show();
+		})
+		.finally(function(){
+			$("#modalDataOnlineLoggedIn button").prop("disabled", false);
+		});
+}
+
+/* download an online backup */
+function downloadBackup(){
+	$("#modalDataOnlineLoggedIn button").prop("disabled", true);
+	modalData.hide();
+	modalCheckDropbox.show();
+	dbx.filesDownload({ path: "/RibbonBackup.json" })
+		.then(function(res){
+			const blob = res.result.fileBlob;
+			loadBackupFile(blob, true);
+		})
+		.catch(function(err){
+			console.error(err);
+			var errorMsg = err?.error?.error_summary || "";
+			if(errorMsg.includes("path/not_found")){
+				errorMsg = "No backup file exists in your Dropbox yet.";
+			}
+			alert(errorMsg);
+			modalCheckDropbox.hide();
+			modalData.show();
+		})
+		.finally(function(){
+			$("#modalDataOnlineLoggedIn button").prop("disabled", false);
+		});
 }
 
 /* show a confirmation prompt for backup data application */
@@ -437,18 +512,51 @@ function confirmLocalDataChange(online = false){
 	
 	// present modal
 	$("#modalDataCompare").removeClass("modalDataCompareReverse");
-	modalData.hide();
+	if(online){
+		modalCheckDropbox.hide();
+	} else {
+		modalData.hide();
+	}
+	modalDataCompare.show();
+}
+
+/* show a confirmation prompt for online data backup */
+function confirmOnlineDataChange(success = true){
+	// local side
+	const localModifiedDate = new Date(Number(localStorage.lastModified));
+	$("#modalDataCompareLocalDate").text(localModifiedDate.toLocaleDateString());
+	$("#modalDataCompareLocalPokemonNum").text(userPokemon.length);
+	$("#modalDataCompareLocalBoxesNum").text(userBoxes.length);
+	
+	// backup side
+	if(success){
+		$("#modalDataCompareOtherHeader").text("Online Backup");
+		const otherModifiedDate = new Date(backupLastModified);
+		$("#modalDataCompareOtherDate").text(otherModifiedDate.toLocaleDateString());
+		$("#modalDataCompareOtherPokemonNum").text(backupPokemon.length);
+		$("#modalDataCompareOtherBoxesNum").text(backupBoxes.length);
+	} else {
+		$("#modalDataCompareOtherHeader").text("Online Backup");
+		$("#modalDataCompareOtherDate").text("Error");
+		$("#modalDataCompareOtherPokemonNum").text("???");
+		$("#modalDataCompareOtherBoxesNum").text("???");
+	}
+	
+	// present modal
+	$("#modalDataCompare").addClass("modalDataCompareReverse");
+	modalCheckDropbox.hide();
 	modalDataCompare.show();
 }
 
 /* actually apply the backup data to the site */
-function applyBackup(){
+function applyLocalBackup(){
 	localStorage.pokemon = JSON.stringify(backupPokemon);
 	localStorage.boxes = JSON.stringify(backupBoxes);
 	localStorage.lastModified = backupLastModified;
 	localStorage.settings = JSON.stringify(backupSettings);
 	modalDataCompare.hide();
 	modalData.hide();
+	modalCheckDropbox.hide();
 	new bootstrap.Modal("#modalReloading").show();
 	console.log("reload B");
 	setTimeout(function(){ location.reload() }, 500);
@@ -463,6 +571,38 @@ function cancelBackup(){
 	backupSettings = {};
 	modalDataCompare.hide();
 	modalData.show();
+}
+
+function checkOnlineBackup(file){
+	const reader = new FileReader();
+	reader.onload = function(e){
+		// safely reset globals just to be sure
+		backupPokemon = [];
+		backupBoxes = [];
+		backupLastModified = 0;
+		backupSettings = {};
+		
+		// determine backup file version for data handling
+		let backupContents = e.target.result;
+		let fileVersion = 0;
+		try {
+			backupContents = JSON.parse(backupContents);
+			fileVersion = backupContents.fileVersion;
+		} catch(err){
+			console.error("Failed to parse remote backup", err);
+		} finally {
+			if(fileVersion){
+				backupPokemon = backupContents.pokemon;
+				backupBoxes = backupContents.boxes;
+				backupSettings = backupContents.settings;
+				backupLastModified = Number(backupContents.lastModified);
+				confirmOnlineDataChange();
+			} else {
+				confirmOnlineDataChange(false);
+			}
+		}
+	}
+	reader.readAsText(file);
 }
 
 /* load backup */
@@ -528,7 +668,7 @@ function loadBackupFile(file, online = false){
 				confirmLocalDataChange(online);
 			} else {
 				// user has no data to overwrite, just continue
-				applyBackup();
+				applyLocalBackup();
 			}
 		} else {
 			// if we cannot determine the backup file version, do not continue
@@ -3673,6 +3813,7 @@ $(function(){
 	modalSettings = new bootstrap.Modal("#modalSettings");
 	modalData = new bootstrap.Modal("#modalData");
 	modalDataCompare = new bootstrap.Modal("#modalDataCompare");
+	modalCheckDropbox = new bootstrap.Modal("#modalCheckDropbox");
 	modalImport = new bootstrap.Modal("#modalImport");
 	/* dropdown listeners */
 	$("#settingsTheme").on("change", function(){
@@ -3865,8 +4006,6 @@ $(function(){
 	modalRibbonChecklist = new bootstrap.Modal("#modalRibbonChecklist");
 	
 	/* Dropbox functionality */
-	// "global" Dropbox object
-	let dbx;
 	// "global" Dropbox authentication object
 	const dbxAuth = new Dropbox.DropboxAuth({ clientId: DROPBOX_CLIENT_ID });
 	// check for an auth code in the URL bar
@@ -3939,10 +4078,13 @@ $(function(){
 		downloadBackup();
 	});
 	// backup comparison modal functions
-	$("#modalDataCompareAccept").on("click", function(){
-		applyBackup();
+	$("#modalDataCompareLocalAccept").on("click", function(){
+		applyLocalBackup();
 	});
-	$("#modalDataCompareCancel").on("click", function(){
+	$("#modalDataCompareOnlineAccept").on("click", function(){
+		executeActualUpload();
+	});
+	$("#modalDataCompare").on("hidden.bs.modal", function(){
 		cancelBackup();
 	});
 	// logout function

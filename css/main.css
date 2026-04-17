@@ -472,11 +472,20 @@ html[data-ribbonformview="grid"] #pokemonFormMultiRibbons li.d-flex {
 #modalDataCompareArrowLeft {
 	transform: rotate(-90deg);
 }
+#modalDataCompareOnlineAccept {
+	display: none;
+}
 .modalDataCompareReverse #modalDataCompareArrowLeft {
 	transform: rotate(90deg);
 }
 .modalDataCompareReverse #modalDataCompareArrowUp {
 	transform: rotate(180deg);
+}
+.modalDataCompareReverse #modalDataCompareLocalAccept {
+	display: none;
+}
+.modalDataCompareReverse #modalDataCompareOnlineAccept {
+	display: block;
 }
 
 /* links */

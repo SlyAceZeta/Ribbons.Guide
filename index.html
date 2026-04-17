@@ -1029,8 +1029,8 @@
 						<p id="modalDataOnline" class="fw-bold">Online Backup</p>
 						<button type="button" class="btn btn-primary btn-sm d-none" id="modalDataOnlineLogin">Login to Dropbox</button>
 						<div id="modalDataOnlineLoggedIn" class="btn-group d-none" role="group" aria-labelledby="modalDataOnline">
-							<button type="button" class="btn btn-primary btn-sm d-none" id="modalDataOnlineSave">Upload to Dropbox</button>
-							<button type="button" class="btn btn-outline-primary btn-sm mx-1 d-none" id="modalDataOnlineLoad">Download from Dropbox</button>
+							<button type="button" class="btn btn-primary btn-sm" id="modalDataOnlineSave">Upload to Dropbox</button>
+							<button type="button" class="btn btn-outline-primary btn-sm mx-1" id="modalDataOnlineLoad">Download from Dropbox</button>
 							<button type="button" class="btn btn-danger btn-sm" id="modalDataOnlineLogout">Logout</button>
 						</div>
 						<div id="modalDataOnlineError" class="d-none" aria-label="Dropbox error">
@@ -1050,6 +1050,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<h2 class="modal-title fs-6 fw-bold" id="modalDataCompareLabel">Confirm Data Overwrite</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
 						<div class="container-fluid">
@@ -1074,8 +1075,22 @@
 						</div>
 					</div>
 					<div class="modal-footer justify-content-center">
-						<button type="button" class="btn btn-primary" id="modalDataCompareAccept">Accept</button>
+						<button type="button" class="btn btn-primary" id="modalDataCompareLocalAccept">Accept</button>
+						<button type="button" class="btn btn-primary" id="modalDataCompareOnlineAccept">Accept</button>
 						<button type="button" class="btn btn-secondary" id="modalDataCompareCancel">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Checking Dropbox Modal -->
+		<div class="modal fade" id="modalCheckDropbox" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalCheckDropboxLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalCheckDropboxLabel">Dropbox</h2>
+					</div>
+					<div class="modal-body">
+						<div>Please wait...</div>
 					</div>
 				</div>
 			</div>
