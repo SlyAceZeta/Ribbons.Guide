@@ -256,6 +256,30 @@ for(let i in toggles){
 	}
 }
 
+function createToast(message, type = "primary", persistent = false){
+	let toastPersist = "";
+	if(persistent){
+		toastPersist = 'data-bs-autohide="false"';
+	}
+	const toastHTML = `
+		<div class="toast align-items-center border-0 text-bg-${type}" role="alert" aria-live="assertive" aria-atomic="true" ${toastPersist}>
+			<div class="d-flex">
+				<div class="toast-body">
+					${message}
+				</div>
+				<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+			</div>
+		</div>`;
+	
+	const $toastElement = $(toastHTML).appendTo("#toast-container");
+	const toast = new bootstrap.Toast($toastElement[0]);
+	toast.show();
+	
+	$toastElement.on("hidden.bs.toast", function(){
+		$(this).remove();
+	});
+}
+
 /* Dropbox URL helper utilities */
 (function (window) {
 	window.utils = {
@@ -432,7 +456,7 @@ function uploadBackup(){
 				executeActualUpload();
 			} else {
 				console.error(err);
-				alert("Error fetching remote backup: " + err);
+				createToast("Error fetching remote backup: " + err, "danger");
 				modalData.show();
 			}
 		})
@@ -451,17 +475,15 @@ function executeActualUpload(){
 		mode: "overwrite"
 	})
 		.then(function(res){
-			alert("Backup successfully saved to Dropbox!");
-			modalCheckDropbox.hide();
-			modalData.show();
+			createToast("Backup successfully uploaded to Dropbox!", "success");
 		})
 		.catch(function(err){
 			console.error(err);
-			alert("Failed to upload. " + err);
-			modalCheckDropbox.hide();
-			modalData.show();
+			createToast("Upload failed: " + err, "danger");
 		})
 		.finally(function(){
+			modalCheckDropbox.hide();
+			modalData.show();
 			$("#modalDataOnlineLoggedIn button").prop("disabled", false);
 		});
 }
@@ -480,9 +502,9 @@ function downloadBackup(){
 			console.error(err);
 			var errorMsg = err?.error?.error_summary || "";
 			if(errorMsg.includes("path/not_found")){
-				errorMsg = "No backup file exists in your Dropbox yet.";
+				errorMsg = "No backup file exists in your Dropbox yet!";
 			}
-			alert(errorMsg);
+			createToast(errorMsg, "danger");
 			modalCheckDropbox.hide();
 			modalData.show();
 		})
@@ -672,7 +694,7 @@ function loadBackupFile(file, online = false){
 			}
 		} else {
 			// if we cannot determine the backup file version, do not continue
-			alert("This is not a valid Ribbons.Guide backup. Your data has not changed.");
+			createToast("This file is not a valid Ribbons.Guide backup. Your data has not changed.");
 		}
 	}
 	reader.readAsText(file);
@@ -719,7 +741,7 @@ function importFiles(files, delay = 150, i = 0){
 	switch(ext){
 		case ".pk9": // SV
 		case ".pa9": // Z-A
-			if (file.size != 344) return alert("Incorrect file size!\nExpected: 344\nGot: " + file.size);
+			if (file.size != 344) return createToast("File size error: " + filename, "danger");
 			speciesloc = 0x08;
 			idsloc = 0x0c;
 			pidloc = 0x1c;
@@ -736,7 +758,7 @@ function importFiles(files, delay = 150, i = 0){
 			break;
 			
 		case ".pa8": // PLA
-			if (file.size != 376) return alert("Incorrect file size!\nExpected: 376\nGot: " + file.size);
+			if (file.size != 376) return createToast("File size error: " + filename, "danger");
 			speciesloc = 0x08;
 			idsloc = 0x0c;
 			pidloc = 0x1c;
@@ -754,7 +776,7 @@ function importFiles(files, delay = 150, i = 0){
 			
 		case ".pk8": // SwSh
 		case ".pb8": // BDSP
-			if(file.size != 344) return alert("Incorrect file size!\nExpected: 344\nGot: " + file.size);
+			if(file.size != 344) return createToast("File size error: " + filename, "danger");
 			speciesloc = 0x08;
 			idsloc = 0x0c;
 			gmaxloc = 0x16;
@@ -772,7 +794,7 @@ function importFiles(files, delay = 150, i = 0){
 			break;
 			
 		case ".pk7": // SM/USUM
-			if (file.size != 206) return alert("Incorrect file size!\nExpected: 206\nGot: " + file.size);
+			if (file.size != 206) return createToast("File size error: " + filename, "danger");
 			speciesloc = 0x08;
 			idsloc = 0x0c;
 			pidloc = 0x18;
@@ -789,7 +811,7 @@ function importFiles(files, delay = 150, i = 0){
 			break;
 			
 		case ".pk6": // XY/ORAS
-			if (file.size != 206) return alert("Incorrect file size!\nExpected: 206\nGot: " + file.size);
+			if (file.size != 206) return createToast("File size error: " + filename, "danger");
 			speciesloc = 0x08;
 			idsloc = 0x0c;
 			pidloc = 0x18;
@@ -806,7 +828,7 @@ function importFiles(files, delay = 150, i = 0){
 			break;
 			
 		default:
-			return alert("Unsupported file type provided: " + filename);
+			return createToast(filename + " is not a supported file type.", "danger");
 	}
 	
 	file.arrayBuffer().then((buf) => {
@@ -1531,7 +1553,7 @@ function saveMultiplePokemon(){
 		}
 	}
 	if(saveConfirm == saveConfirmInitial){
-		alert("You didn't make any changes!");
+		createToast("You haven't made any changes!");
 		return;
 	}
 	if(confirm(saveConfirm)){
@@ -1776,7 +1798,7 @@ function ribbonChecklist(event){
 	$cardName.find("img, input").remove();
 	$("#modalRibbonChecklistInfo-name").html($cardName.html());
 	
-	// for alerts
+	// for warnings
 	var pronounSubject = "it";
 	var pronounObject = "it";
 	if(cardData.gender == "male"){
@@ -3614,7 +3636,7 @@ function initRun(){
 			localStorage.pokemon = JSON.stringify(userPokemon);
 			updateModifiedDate();
 			if(resetALanguage){
-				alert("At least one of your Pokémon had its language reset. Please verify your Pokémon languages once the page loads.")
+				createToast("At least one of your Pokémon had its language reset. Please verify your Pokémon's languages.", "primary", true);
 			}
 		}
 		
