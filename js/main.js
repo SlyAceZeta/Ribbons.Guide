@@ -4084,7 +4084,7 @@ $(function(){
 	$("#modalDataCompareOnlineAccept").on("click", function(){
 		executeActualUpload();
 	});
-	$("#modalDataCompare").on("hidden.bs.modal", function(){
+	$("#modalDataCompareCancel").on("click", function(){
 		cancelBackup();
 	});
 	// logout function
