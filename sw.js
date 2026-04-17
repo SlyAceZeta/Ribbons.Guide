@@ -1,4 +1,4 @@
-const CACHE = "2026-04-04-0";
+const CACHE = "2026-04-17-0";
 
 // basic UI
 const PRECACHE = [

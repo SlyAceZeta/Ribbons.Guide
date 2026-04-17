@@ -1,5 +1,27 @@
 [
 	{
+		"date": "17 April 2026",
+		"header": "<strong>Online backups are finally here!</strong> Thank you to everyone for your patience! Many more improvements are live as well. If you find this app useful, <a href='https://ko-fi.com/slyacezeta'>I have a Ko-fi</a> but Ribbons.Guide will always be FOSS (free and open-source software)!",
+		"changes": [
+			"Temporarily disabled evolution warnings pending a redesign to make them more useful",
+			"Data can now be backed up to/restored from personal Dropbox accounts",
+			"Old cached files are now automatically deleted to save storage space, especially for regular users",
+			"Added Own Tempo Rockruff as a unique form",
+			"Fixed issue where Dusk Form Lycanroc could travel to Sun and Moon (thanks JustTopaz!)",
+			"English and Japanese versions of Red and Blue have been merged into one version of Red and one version of Blue, respectively; all existing Pokémon are automatically updated to match",
+			"Footprint Ribbon logic has been reworked and improved; warnings are now very descriptive and now include mentions of all possible evolutions that will affect BDSP compatibility",
+			"Multiple input fields have been updated to account for diacritical marks; for example, searching \"Flabebe\" will now return \"Flabébé\" instead of returning nothing",
+			"Origin Mark is no longer required to save a Pokémon",
+			"Origin Mark and Origin Game are no longer required to use the Ribbon Checklist, except for Nincada",
+			"It is now possible to select an Origin Game first, which will select the correct Origin Mark",
+			"Origin Game, Origin Mark, Original Trainer, and ID No. have moved to the Memories tab",
+			"Origin Game and Current Game dropdowns are now grouped by generation",
+			"Added icons for Shadow Pokémon (Colo/XD), Totem-sized Pokémon, and Time Travel Awards",
+			"Numerous code rewrites, optimizations, and cleanup behind the scenes",
+			"Removed Workbox as a dependency"
+		]
+	},
+	{
 		"date": "4 April 2026",
 		"changes": [
 			"Fixed a bug where Alolan Raichu could not move to Legends: Z-A (thanks Nexus!)"
