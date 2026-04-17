@@ -4070,14 +4070,18 @@ $(function(){
 		$("#modalDataOnlineLoggedIn").removeClass("d-none");
 	}
 	function showLoggedOutUI(){
-		$("#modalDataOnlineLogin").removeClass("d-none");
-		// generate PKCE authentication URL to request an "offline" token
-		dbxAuth.getAuthenticationUrl(window.location.origin, undefined, 'code', 'offline', undefined, 'none', true)
-			.then(function(authUrl){
-				// save PKCE verifier to session storage for when we return
-				window.sessionStorage.setItem("dropbox_code_verifier", dbxAuth.getCodeVerifier());
-				dropbox_auth_url = authUrl;
-			});
+		if(!window.isSecureContext || !window.crypto.subtle){
+			$("#modalDataOnlineUnavailable").removeClass("d-none");
+		} else {
+			$("#modalDataOnlineLogin").removeClass("d-none");
+			// generate PKCE authentication URL to request an "offline" token
+			dbxAuth.getAuthenticationUrl(window.location.origin, undefined, 'code', 'offline', undefined, 'none', true)
+				.then(function(authUrl){
+					// save PKCE verifier to session storage for when we return
+					window.sessionStorage.setItem("dropbox_code_verifier", dbxAuth.getCodeVerifier());
+					dropbox_auth_url = authUrl;
+				});
+		}
 	}
 	function showError(msg){
 		$("#modalDataOnlineErrorText").text(msg);
