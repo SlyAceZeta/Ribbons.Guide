@@ -1,32 +1,8 @@
-const CACHE = "2026-04-17-0";
-
-// basic UI
-const PRECACHE = [
-	"/",
-	"/index.html",
-	"/favicon.ico",
-	"/manifest.json",
-	"/fonts/NunitoSans-Regular.woff2",
-	"/fonts/NunitoSans-Bold.woff2",
-	"/js/jquery.min.js",
-	"/js/select2.min.js",
-	"/js/sortable.min.js",
-	"/js/bootstrap.bundle.min.js",
-	"/js/Dropbox-sdk.min.js",
-	"/css/bootstrap.min.css",
-	"/css/select2.min.css",
-	"/css/themes.css",
-	"/css/main.css",
-	"/js/main.js"
-];
+const CACHE = "2026-04-17-1";
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/7.3.0/workbox-sw.js");
 
 // on installation
 self.addEventListener("install", (event) => {
-	// precache basic UI
-	event.waitUntil(
-		caches.open(CACHE).then((cache) => cache.addAll(PRECACHE))
-	);
-	
 	self.skipWaiting();
 });
 
@@ -48,29 +24,10 @@ self.addEventListener("activate", (event) => {
 });
 
 // on asset fetch
-self.addEventListener("fetch", (event) => {
-	const url = new URL(event.request.url);
-	
-	// load images from cache first to avoid flickering as much as possible
-	if(event.request.destination === "image"){
-		event.respondWith(
-			caches.match(event.request).then((cached) => {
-				return cached || fetch(event.request).then((response) => {
-					const clone = response.clone();
-					caches.open(CACHE).then(c => c.put(event.request, clone));
-					return response;
-				});
-			})
-		);
-		return;
-	}
-	
-	// load everything else from the network first
-	event.respondWith(
-		fetch(event.request).then((response) => {
-			const clone = response.clone();
-			caches.open(CACHE).then(c => c.put(event.request, clone));
-			return response;
-		}).catch(() => caches.match(event.request))
-	);
-});
+workbox.routing.registerRoute(
+	new RegExp("/*"),
+	new workbox.strategies.NetworkFirst({
+		networkTimeoutSeconds: 3,
+		cacheName: CACHE
+	})
+);

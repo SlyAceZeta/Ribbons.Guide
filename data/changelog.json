@@ -17,8 +17,7 @@
 			"Origin Game, Origin Mark, Original Trainer, and ID No. have moved to the Memories tab",
 			"Origin Game and Current Game dropdowns are now grouped by generation",
 			"Added icons for Shadow Pokémon (Colo/XD), Totem-sized Pokémon, and Time Travel Awards",
-			"Numerous code rewrites, optimizations, and cleanup behind the scenes",
-			"Removed Workbox as a dependency"
+			"Numerous code rewrites, optimizations, and cleanup behind the scenes"
 		]
 	},
 	{
