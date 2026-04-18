@@ -1,9 +1,5 @@
-const CACHE = "2026-04-17-1";
-
-const PRECACHE = [
-	"/",
-	"/index.html"
-];
+const APP_CACHE = "app-2026-04-17-1";
+const ASSET_CACHE = "assets-v1";
 
 // helper function to create a timeout for fetch requests
 const fetchWithTimeout = (request, timeoutSeconds) => {
@@ -27,9 +23,9 @@ const fetchWithTimeout = (request, timeoutSeconds) => {
 
 // on installation
 self.addEventListener("install", (event) => {
-	// precache basic UI
+	// precache index.html for spinner
 	event.waitUntil(
-		caches.open(CACHE).then((cache) => cache.addAll(PRECACHE))
+		caches.open(APP_CACHE).then((cache) => cache.addAll(["/", "/index.html"]))
 	);
 	
 	self.skipWaiting();
@@ -41,8 +37,8 @@ self.addEventListener("activate", (event) => {
 		caches.keys().then((cacheNames) => {
 			return Promise.all(
 				cacheNames.map((cacheName) => {
-					// if the cache name isn't the current one, delete it
-					if(cacheName !== CACHE){
+					// if this is not a current cache, delete it
+					if(cacheName !== APP_CACHE && cacheName !== ASSET_CACHE){
 						return caches.delete(cacheName);
 					}
 				})
@@ -61,35 +57,27 @@ self.addEventListener("fetch", (event) => {
 	const url = new URL(event.request.url);
 	const cacheKey = (url.pathname === "/") ? "/index.html" : event.request;
 	
-	// load images from cache first to avoid flickering as much as possible
-	if(event.request.destination === "image"){
-		event.respondWith(
-			caches.match(cacheKey).then((cached) => {
-				return cached || fetch(event.request).then((response) => {
-					// ensure the image was actually retrieved
-					if(response && response.status === 200 && response.ok){
-						const clone = response.clone();
-						caches.open(CACHE).then(c => c.put(cacheKey, clone));
-					}
-					return response;
-				});
-			})
-		);
-		return;
-	}
+	// store images and fonts in a dedicated cache since they rarely change
+	const isAsset = event.request.destination === "image" || event.request.destination === "font";
+	const targetCache = isAsset ? ASSET_CACHE : APP_CACHE;
 	
-	// load everything else from the network first, but if 3 seconds have passed with no response, time out and fall back on cache
 	event.respondWith(
-		fetchWithTimeout(event.request, 3).then((response) => {
-			// ensure the asset was actually retrieved
-			if(response && response.status === 200 && response.ok){
-				const clone = response.clone();
-				caches.open(CACHE).then(c => c.put(cacheKey, clone));
-			}
-			return response;
-		}).catch(() => {
-			// if network fails or times out, fall back to cache
-			return caches.match(cacheKey);
+		caches.match(cacheKey).then((cached) => {
+			// load images and fonts from cache first to avoid flickering as much as possible
+			if(isAsset && cached) return cached;
+			
+			// otherwise, pull from network with a 3 second timeout
+			return fetchWithTimeout(event.request, 3).then((response) => {
+				// ensure the asset was actually retrieved
+				if(response.ok){
+					const clone = response.clone();
+					caches.open(targetCache).then(c => c.put(cacheKey, clone));
+				}
+				return response;
+			}).catch(() => {
+				// if network fails or times out, fall back to cache
+				return cached;
+			});
 		})
 	);
 });
