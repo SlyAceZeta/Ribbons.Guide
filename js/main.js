@@ -2609,9 +2609,11 @@ function filterPokemon(p, classes, data){
 			}
 		} else if(f == "targetgames"){
 			var targetgames = JSON.parse(data.compatibleGames);
-			if(!targetgames.includes(activeFilters[f])){
-				pass = false;
-				break;
+			for(var tg in activeFilters[f]){
+				if(!targetgames.includes(activeFilters[f][tg])){
+					pass = false;
+					break filter_check;
+				}
 			}
 		} else if(f == "earnedribbons"){
 			var earnedRibbons = JSON.parse(data.earnedRibbons);
@@ -3051,12 +3053,9 @@ function initRun(){
 		$("#imageHoldingArea").append($("<img>", { "src": "img/balls/strange.png" }));
 		$("#pokemonFormCurrentGame, #pokemonFormOriginGame, #pokemonFormMultiCurrentGame, #filterFormCurrentGame").append($("<optgroup>", { "class": "selectGame-storage", "label": "Storage / GO" }));
 		for(var i = 9; i > 0; i--){
-			$("#pokemonFormCurrentGame, #pokemonFormOriginGame, #pokemonFormMultiCurrentGame, #filterFormCurrentGame").append($("<optgroup>", { "class": "selectGame-gen" + i, "label": "Gen " + i }));
+			$("#pokemonFormCurrentGame, #pokemonFormOriginGame, #pokemonFormMultiCurrentGame, #filterFormCurrentGame, #filterFormTargetGames").append($("<optgroup>", { "class": "selectGame-gen" + i, "label": "Gen " + i }));
 		}
 		for(var g in games){
-			if(games[g].combo || games[g].solo){
-				$("#filterFormTargetGames").append(new Option(getLanguage(games[g].names), g));
-			}
 			if(!games[g].combo){
 				if(games[g].storage || g == "go"){
 					$(".selectGame-storage").append(new Option(getLanguage(games[g].names), g));
@@ -3245,11 +3244,11 @@ function initRun(){
 			templateResult: selectCustomOption,
 			dropdownParent: $("#pokemonFormSections")
 		});
-		$("#filterFormSort, #filterFormLanguage, #filterFormTargetGames").select2({
+		$("#filterFormSort, #filterFormLanguage").select2({
 			matcher: selectCustomMatcher,
 			dropdownParent: $("#modalFilterForm .modal-body")
 		});
-		$("#filterFormCurrentGame").select2({
+		$("#filterFormCurrentGame, #filterFormTargetGames").select2({
 			matcher: selectCustomMatcherWithGroups,
 			dropdownParent: $("#modalFilterForm .modal-body")
 		});
