@@ -1021,21 +1021,23 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<p id="modalDataLocal" class="fw-bold">Local Backup</p>
-						<div class="btn-group" role="group" aria-labelledby="modalDataLocal">
-							<button type="button" class="btn btn-primary btn-sm" id="modalDataSaveBackup">Save Backup File</button>
-							<button type="button" class="btn btn-outline-primary btn-sm ms-1" id="modalDataLoadBackupButton">Restore Backup File</button>
+						<p class="fw-bold">Local Backup</p>
+						<div class="d-grid gap-2 d-sm-block">
+							<button type="button" class="btn btn-primary btn-sm" id="modalDataSaveBackup">Save Backup File</button><!--
+							--><button type="button" class="btn btn-outline-primary btn-sm ms-sm-1" id="modalDataLoadBackupButton">Restore Backup File</button>
 						</div>
 						<input type="file" id="modalDataLoadBackupFile" accept="application/json,text/plain" hidden>
 						<hr>
-						<p id="modalDataOnline" class="fw-bold">Online Backup</p>
-						<button type="button" class="btn btn-primary btn-sm d-none" id="modalDataOnlineLogin">Login to Dropbox</button>
-						<div id="modalDataOnlineLoggedIn" class="btn-group d-none" role="group" aria-labelledby="modalDataOnline">
-							<button type="button" class="btn btn-primary btn-sm" id="modalDataOnlineSave">Upload to Dropbox</button>
-							<button type="button" class="btn btn-outline-primary btn-sm mx-1" id="modalDataOnlineLoad">Download from Dropbox</button>
-							<button type="button" class="btn btn-danger btn-sm" id="modalDataOnlineLogout">Logout</button>
+						<p class="fw-bold">Online Backup</p>
+						<div id="modalDataOnlineLoggedOut" class="gap-2 d-none">
+							<button type="button" class="btn btn-primary btn-sm" id="modalDataOnlineLogin">Login to Dropbox</button>
 						</div>
-						<div id="modalDataOnlineError" class="d-none" aria-label="Dropbox error">
+						<div id="modalDataOnlineLoggedIn" class="gap-2 d-none">
+							<button type="button" class="btn btn-primary btn-sm" id="modalDataOnlineSave">Upload to Dropbox</button><!--
+							--><button type="button" class="btn btn-outline-primary btn-sm mx-sm-1" id="modalDataOnlineLoad">Download from Dropbox</button><!--
+							--><button type="button" class="btn btn-danger btn-sm" id="modalDataOnlineLogout">Logout</button>
+						</div>
+						<div id="modalDataOnlineError" class="gap-2 d-none" aria-label="Dropbox error">
 							<p>Error: <span id="modalDataOnlineErrorText"></span></p>
 							<button type="button" class="btn btn-danger btn-sm" id="modalDataOnlineErrorLogout">Logout</button>
 						</div>

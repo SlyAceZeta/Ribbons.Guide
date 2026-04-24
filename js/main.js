@@ -4067,13 +4067,13 @@ $(function(){
 	}
 	// UI functions
 	function showLoggedInUI(){
-		$("#modalDataOnlineLoggedIn").removeClass("d-none");
+		$("#modalDataOnlineLoggedIn").removeClass("d-none").addClass("d-grid d-sm-block");
 	}
 	function showLoggedOutUI(){
 		if(!window.isSecureContext || !window.crypto.subtle){
 			$("#modalDataOnlineUnavailable").removeClass("d-none");
 		} else {
-			$("#modalDataOnlineLogin").removeClass("d-none");
+			$("#modalDataOnlineLoggedOut").removeClass("d-none").addClass("d-grid d-sm-block");
 			// generate PKCE authentication URL to request an "offline" token
 			dbxAuth.getAuthenticationUrl(window.location.origin, undefined, 'code', 'offline', undefined, 'none', true)
 				.then(function(authUrl){
@@ -4085,7 +4085,7 @@ $(function(){
 	}
 	function showError(msg){
 		$("#modalDataOnlineErrorText").text(msg);
-		$("#modalDataOnlineError").removeClass("d-none");
+		$("#modalDataOnlineError").removeClass("d-none").addClass("d-grid d-sm-block");
 	}
 	// login function
 	$("#modalDataOnlineLogin").on("click", function(){
@@ -4115,13 +4115,15 @@ $(function(){
 	});
 	// logout function
 	$("#modalDataOnlineLogout, #modalDataOnlineErrorLogout").on("click", function(){
-		// purge the user's refresh token to revoke persistent access
-		localStorage.removeItem("DropboxRefreshToken");
-		// reload page to clear instance memory
-		modalData.toggle();
-		new bootstrap.Modal("#modalReloading").toggle();
-		console.log("reload D: Dropbox logout");
-		setTimeout(function(){ location.reload() }, 500);
+		if(confirm("Are you sure you want to logout from Dropbox?")){
+			// purge the user's refresh token to revoke persistent access
+			localStorage.removeItem("DropboxRefreshToken");
+			// reload page to clear instance memory
+			modalData.toggle();
+			new bootstrap.Modal("#modalReloading").toggle();
+			console.log("reload D: Dropbox logout");
+			setTimeout(function(){ location.reload() }, 500);
+		}
 	});
 	
 	/* button to scroll to top */
