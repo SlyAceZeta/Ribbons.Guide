@@ -2026,6 +2026,14 @@ function ribbonChecklist(event){
 	modalRibbonChecklist.toggle();
 }
 
+function createTitle(p){
+	let titleText = getLanguage(ribbons[p.title].titles);
+	if(p.title === "partner-ribbon"){
+		titleText = titleText.replace(/\[.*?\]/, p.trainername);
+	}
+	return titleText;
+}
+
 function createCard(p, id){
 	// TODO: improve blue/gold memory ribbon helper
 	var currentGen = 1000;
@@ -2103,38 +2111,22 @@ function createCard(p, id){
 	}
 	$cardHeaderLeft.append($cardHeaderCheckbox, $cardHeaderBallMain, $cardHeaderBallStrange);
 	var $cardHeaderLeftName = $("<span>", { "class": "align-baseline" });
-	var titleRibbon;
-	var titlePositions = {};
+	let titlePosition;
 	if(p.title && p.title !== "None"){
-		titleRibbon = ribbons[p.title];
-		for(var lang in translations.languages){
-			var titlePosition = translations.languages[lang].titlePosition;
-			if(titleRibbon.titlePositions && titleRibbon.titlePositions[lang]){
-				titlePosition = titleRibbon.titlePositions[lang];
-			}
-			titlePositions[lang] = titlePosition;
-		}
-		for(let tp in titlePositions){
-			if(titlePositions[tp] == "prefix"){
-				var titleText = getLanguage(titleRibbon.titles, tp);
-				if(p.title == "partner-ribbon"){
-					titleText = titleText.replace(/\[.*?\]/, p.trainername);
-				}
-				$cardHeaderLeftName.append($("<span>", { "class": "me-1 card-header-title translation translation-" + tp, text: titleText }));
+		titlePosition = getLanguage(translations.languages).titlePosition;
+		if(ribbons[p.title].titlePositions){
+			let ribbonTitlePosition = getLanguage(ribbons[p.title].titlePositions);
+			if(ribbonTitlePosition){
+				titlePosition = ribbonTitlePosition;
 			}
 		}
 	}
+	if(titlePosition === "prefix"){
+		$cardHeaderLeftName.append($("<span>", { "class": "me-1 card-header-title", text: createTitle(p) }));
+	}
 	$cardHeaderLeftName.append($("<span>", { "class": "fw-bold d-inline-block card-header-name", text: displayName }));
-	if(p.title && p.title !== "None"){
-		for(let tp in titlePositions){
-			if(titlePositions[tp] == "suffix"){
-				var titleText = getLanguage(titleRibbon.titles, tp);
-				if(p.title == "partner-ribbon"){
-					titleText = titleText.replace(/\[.*?\]/, p.trainername);
-				}
-				$cardHeaderLeftName.append($("<span>", { "class": "ms-1 card-header-title translation translation-" + tp, text: titleText }));
-			}
-		}
+	if(titlePosition === "suffix"){
+		$cardHeaderLeftName.append($("<span>", { "class": "ms-1 card-header-title", text: createTitle(p) }));
 	}
 	$cardHeaderLeft.append($cardHeaderLeftName);
 	if(p.gender && p.gender !== "unknown"){
@@ -2395,9 +2387,6 @@ function resetPokemonForm(edit = false){
 	
 	/* re-populate boxes dropdown */
 	var $boxNone = $("<option>", { "value": "-1" }).text(getLanguage(translations.none));
-	for(var lang in translations.none){
-		$boxNone.attr("data-lang-" + lang, translations.none[lang]);
-	}
 	$("#pokemonFormBox").html($boxNone);
 	for(var b in userBoxes){
 		$("#pokemonFormBox").append(new Option(userBoxes[b], b));
@@ -2427,9 +2416,6 @@ function resetPokemonFormMulti(){
 	$("#pokemonFormMultiBox").html($boxNoChange);
 	
 	var $boxNone = $("<option>", { "value": "-1" }).text(getLanguage(translations.none));
-	for(var lang in translations.none){
-		$boxNone.attr("data-lang-" + lang, translations.none[lang]);
-	}
 	$("#pokemonFormMultiBox").append($boxNone);
 	
 	for(var b in userBoxes){
@@ -2440,9 +2426,6 @@ function resetPokemonFormMulti(){
 
 function relistFilterBoxes(){
 	var $boxNone = $("<option>", { "value": "-1" }).text(getLanguage(translations.none));
-	for(var lang in translations.none){
-		$boxNone.attr("data-lang-" + lang, translations.none[lang]);
-	}
 	$("#filterFormBox").html(new Option()).append($boxNone);
 	for(var b in userBoxes){
 		$("#filterFormBox").append(new Option(userBoxes[b], b));
@@ -2791,7 +2774,6 @@ function selectCustomMatcherWithGroups(params, data){
 
 function selectCustomOption(o){
 	// o.id is the option value
-	// TODO: some of these alternate-language options have data- attributes holding them, so there shouldn't be any need to search global JSON a second time
 	var result = o._resultId || o.text;
 	var selectIconClass = "pokemonFormSelectIcon";
 	if(result.indexOf("filterForm") > 0){
@@ -2800,7 +2782,7 @@ function selectCustomOption(o){
 	if(result.indexOf("pokemonFormBall") > 0 || result.indexOf("filterFormBall") > 0){
 		var $ball = $("<span>")
 			.append($("<img>", { "class": selectIconClass, "src": "img/balls/" + o.id + ".png" }))
-			.append($("<span>").text(getLanguage(balls[o.id])));
+			.append($("<span>").text(o.text));
 		return $ball;
 	} else if(result.indexOf("pokemonFormOriginMark") > 0 || result.indexOf("filterFormOriginMark") > 0){
 		var $mark = $("<span>");
@@ -2820,7 +2802,7 @@ function selectCustomOption(o){
 			$mark.append($("<span>").text(getLanguage(translations.none)));
 		} else {
 			$mark.append($("<img>", { "class": selectIconClass + " light-invert", "src": "img/origins/" + o.id + ".png" }))
-				.append($("<span>").text(getLanguage(origins[o.id].names)));
+				.append($("<span>").text(o.text));
 		}
 		return $mark;
 	} else if(result.indexOf("settingsExtraOriginMarks") > 0){
@@ -2839,9 +2821,6 @@ function selectCustomOption(o){
 		}
 		$marks.append($("<span>").text(o.text));
 		return $marks;
-	} else if(result.indexOf("pokemonFormNature") > 0){
-		var $nature = $("<span>").text(getLanguage(natures[o.id]));
-		return $nature;
 	} else if(result.indexOf("pokemonFormBox") > 0 || result.indexOf("pokemonFormMultiBox") > 0 || result.indexOf("filterFormBox") > 0){
 		var $box = $("<span>");
 		var boxImage = "closed";
@@ -2849,45 +2828,15 @@ function selectCustomOption(o){
 			boxImage = "ball";
 		}
 		if(o.id !== "nochange") $box.append($("<img>", { "class": selectIconClass, "src": "img/ui/box-" + boxImage + ".png" }));
-		if(o.id == "-1"){
-			$box.append($("<span>").text(getLanguage(translations.none)));
-		} else if(o.id == "nochange") {
-			$box.append($("<span>").text("No change"));
-		} else {
-			$box.append($("<span>").text(userBoxes[o.id]));
-		}
+		$box.append($("<span>").text(o.text));
 		return $box;
-	} else if(result.indexOf("pokemonFormSpecies") > 0){
-		var $pokemon = $("<span>");
-		for(var oed in o.element.dataset){
-			if(oed.indexOf("name") == 0){
-				var lang = oed.substring(4);
-				var form = "";
-				if(o.element.dataset["form" + lang]){
-					form = " (" + o.element.dataset["form" + lang] + ")";
-				} else if(o.element.dataset["formAll"]){
-					form = " (" + o.element.dataset["formAll"] + ")";
-				}
-				$pokemon.append($("<span>", { "class": "translation translation-" + normalizeLang(lang.toLowerCase()) }).text(o.element.dataset["name" + lang] + form));
-			}
-		}
-		return $pokemon;
 	} else if(result.indexOf("pokemonFormTitle") > 0 || result.indexOf("filterFormEarnedRibbons") > 0 || result.indexOf("filterFormTargetRibbons") > 0){
-		$option = $("<span>");
+		var $option = $("<span>");
 		if(o.id === "None"){
 			$option.append($("<span>").text(getLanguage(translations.none)));
 		} else {
-			$option.append($("<img>", { "class": selectIconClass, "src": "img/ribbons-and-marks/" + o.id + ".png", "alt": getLanguage(ribbons[o.id].names) }));
-			for(var oed in o.element.dataset){
-				if(oed.indexOf("lang") == 0 && oed.indexOf("langRibbon") == -1){
-					lang = oed.substring(4).toLowerCase();
-					if(result.indexOf("pokemonFormTitle") > 0){
-						$option.append($("<span>", { "class": "translation translation-" + normalizeLang(lang) }).text(getLanguage(ribbons[o.id].titles, normalizeLang(lang))));
-					} else if(result.indexOf("filterFormEarnedRibbons") > 0 || result.indexOf("filterFormTargetRibbons") > 0){
-						$option.append($("<span>", { "class": "translation translation-" + normalizeLang(lang) }).text(getLanguage(ribbons[o.id].names, normalizeLang(lang))));
-					}
-				}
-			}
+			$option.append($("<img>", { "class": selectIconClass, "src": "img/ribbons-and-marks/" + o.id + ".png", "alt": getLanguage(ribbons[o.id].names) }))
+				.append($("<span>").text(o.text));
 		}
 		return $option;
 	} else if(result.indexOf("filterFormGender") > 0){
@@ -3096,9 +3045,6 @@ function initRun(){
 		/* add form options */
 		for(var b in balls){
 			var $ballOption = $("<option>", { "value": b }).text(getLanguage(balls[b]));
-			for(var lang in translations.languages){
-				$ballOption.attr("data-lang-" + lang, getLanguage(balls[b], lang));
-			}
 			$("#pokemonFormBall, #filterFormBall").append($ballOption);
 			$("#imageHoldingArea").append($("<img>", { "src": "img/balls/" + b + ".png" }));
 		}
@@ -3164,9 +3110,6 @@ function initRun(){
 			pokemonCount++;
 			var $pokemon = $("<option>", { "value": p, "data-natdex": getPokemonData(p, "natdex") });
 			var pokemonNames = getPokemonData(p, "names");
-			for(var lang in translations.languages){
-				$pokemon.attr("data-name-" + lang, getLanguage(pokemonNames, lang));
-			}
 			var pokemonForms = getPokemonData(p, "forms");
 			var pokemonFormDisplay = "";
 			if(!pokemonForms){
@@ -3181,12 +3124,8 @@ function initRun(){
 			if(pokemonForms){
 				if(typeof pokemonForms === "string"){
 					pokemonFormDisplay = " (" + pokemonForms + ")";
-					$pokemon.attr("data-form-all", pokemonForms);
 				} else {
 					pokemonFormDisplay = " (" + getLanguage(pokemonForms) + ")";
-					for(var lang in translations.languages){
-						$pokemon.attr("data-form-" + lang, getLanguage(pokemonForms, lang));
-					}
 				}
 			}
 			var pokemonSort = getPokemonData(p, "sort", true);
@@ -3227,11 +3166,6 @@ function initRun(){
 			var $ribbonRowInfo = $("<div>", { "class": "w-100" });
 			var $ribbonRowInfoName = $("<div>", { "class": "fw-bold lh-1 my-1 d-flex w-100 justify-content-between align-items-center" }).append($("<span>").text(getLanguage(ribbons[r].names)));
 			var $ribbonRowInfoDesc = $("<div>", { "class": "lh-1 mb-1" }).append($("<small>").text(getLanguage(ribbons[r].descs)));
-			for(var lang in translations.languages){
-				$ribbonOption.attr("data-lang-" + lang, getLanguage(ribbons[r].names, lang));
-				$ribbonRowInfoName.append($("<span>", { "class": "d-none" }).text(getLanguage(ribbons[r].names, lang)));
-				$ribbonRowInfoDesc.append($("<small>", { "class": "d-none" }).text(getLanguage(ribbons[r].descs, lang)));
-			}
 			var ribbonGen = ribbons[r].gen;
 			var ribbonGenText = "Gen " + ribbonGen;
 			if(ribbons[r].available && r !== "jumbo-mark" && r !== "mini-mark"){
@@ -3278,18 +3212,12 @@ function initRun(){
 			
 			if(ribbons[r].titles){
 				var $titleOption = $("<option>", { "value": r }).text(getLanguage(ribbons[r].titles));
-				for(var lang in translations.languages){
-					$titleOption.attr("data-lang-" + lang, getLanguage(ribbons[r].titles, lang)).attr("data-lang-ribbon-" + lang, getLanguage(ribbons[r].names, lang));
-				}
 				$("#pokemonFormTitle").append($titleOption);
 			}
 			$("#imageHoldingArea").append($("<img>", { "src": "img/ribbons-and-marks/" + r + ".png" }));
 		}
 		for(var n in natures){
 			var $natureOption = $("<option>", { "value": n }).text(getLanguage(natures[n]));
-			for(var lang in translations.languages){
-				$natureOption.attr("data-lang-" + lang, getLanguage(natures[n], lang));
-			}
 			$("#pokemonFormNature").append($natureOption);
 		}
 		/* apply select2 dropdowns */
@@ -3303,7 +3231,7 @@ function initRun(){
 			templateResult: selectCustomOption,
 			dropdownParent: $("#modalPokemonFormMulti")
 		});
-		$("#pokemonFormLanguage").select2({
+		$("#pokemonFormLanguage, #pokemonFormNature, #pokemonFormSpecies").select2({
 			matcher: selectCustomMatcher,
 			dropdownParent: $("#pokemonFormSections")
 		});
@@ -3311,7 +3239,7 @@ function initRun(){
 			matcher: selectCustomMatcherWithGroups,
 			dropdownParent: $("#pokemonFormSections")
 		});
-		$("#pokemonFormBall, #pokemonFormNature, #pokemonFormBox, #pokemonFormOriginMark, #pokemonFormSpecies, #pokemonFormTitle").select2({
+		$("#pokemonFormBall, #pokemonFormBox, #pokemonFormOriginMark, #pokemonFormTitle").select2({
 			matcher: selectCustomMatcher,
 			templateSelection: selectCustomOption,
 			templateResult: selectCustomOption,
