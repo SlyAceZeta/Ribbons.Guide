@@ -8,7 +8,7 @@ const fetchWithTimeout = (request, timeoutSeconds) => {
 			reject(new Error("Network timeout"));
 		}, timeoutSeconds * 1000);
 		
-		fetch(request).then(
+		fetch(request, { cache: "no-cache" }).then(
 			(response) => {
 				clearTimeout(timeoutId);
 				resolve(response);
@@ -76,7 +76,12 @@ self.addEventListener("fetch", (event) => {
 				return response;
 			}).catch(() => {
 				// if network fails or times out, fall back to cache
-				return cached;
+				if(cached) return cached;
+				// if cache was cleared and network failed, return error
+				return new Response("Network timeout and no cache available.", { 
+					status: 504, 
+					statusText: "Gateway Timeout" 
+				});
 			});
 		})
 	);
