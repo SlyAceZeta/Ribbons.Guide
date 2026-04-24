@@ -160,6 +160,10 @@ body {
 .modal-header {
 	--bs-modal-header-padding: 0.75rem 1rem;
 }
+.modal-gamegroup-name {
+	background: var(--rg-card-cap-bg);
+	color: var(--rg-card-color);
+}
 #modalAbout .btn img {
 	width: 20px;
 	height: 20px;

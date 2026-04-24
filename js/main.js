@@ -1025,28 +1025,35 @@ function getLanguage(data, language = settings.language){
 	}
 }
 
-function filterCompatibleGames(gameArray, game, gameGroup){
-	const reachableGroups = new Set();
-	const queue = [gameGroup];
-	while(queue.length > 0){
-		const groupKey = queue.shift();
-		if(!reachableGroups.has(groupKey)){
-			reachableGroups.add(groupKey);
-			
-			// Add any groups this one can travel to into the queue
-			const connections = gameGroups[groupKey]?.travelTo || [];
-			for(const nextGroup of connections) {
-				if(!reachableGroups.has(nextGroup)){
-					queue.push(nextGroup);
+// precompute all possible gamegroup paths
+const gameGroupPaths = {};
+function precomputeGroupPaths(){
+	for(const startGroup in gameGroups){
+		const reachable = new Set([startGroup]);
+		const queue = [startGroup];
+		while(queue.length > 0){
+			const cur = queue.shift();
+			for(const neighbor of (gameGroups[cur]?.travelTo ?? [])){
+				if(!reachable.has(neighbor)){
+					reachable.add(neighbor);
+					queue.push(neighbor);
 				}
 			}
 		}
+		gameGroupPaths[startGroup] = reachable;
 	}
-	const newArray = gameArray.filter(gameKey => {
-		return games[gameKey] && reachableGroups.has(getGameData(gameKey, "group"));
-	});
-	if(!newArray.includes(game)) newArray.push(game);
-	return newArray;
+}
+
+function filterCompatibleGames(gameArray, game, gameGroup){
+	const reachable = gameGroupPaths[gameGroup] || new Set([gameGroup]);
+	
+	const filtered = gameArray.filter(key =>
+		games[key] && reachable.has(getGameData(key, "group"))
+	);
+	
+	if (!filtered.includes(game)) filtered.push(game);
+	
+	return [filtered, [...reachable]];
 }
 
 function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame, originMark, currentRibbons, checkedScale, totem = false, gmax = false, shadow = false){
@@ -1061,7 +1068,7 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	const metLevelWillChange = gameGroups[currentGameGroup]?.metLevelWillChange || false;
 	const isCurrentlyVoiceless = getPokemonData(dex, "voiceless");
 	const compatibleGames = getPokemonData(dex, "games"); // all compatible games for the species
-	let currentCompatibleGames = filterCompatibleGames(compatibleGames, currentGame, currentGameGroup); // all games the Pokemon can actually transfer to
+	let [currentCompatibleGames, compatibleGroups] = filterCompatibleGames(compatibleGames, currentGame, currentGameGroup); // all games and groups the Pokemon can actually transfer to
 	// Pokemon-specific restrictions
 	currentCompatibleGames = currentCompatibleGames.filter(targetGame => {
 		if(dex == "nincada"){
@@ -1269,7 +1276,7 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	// remove duplicate warnings
 	earnableRibbonWarnings = [...new Map(earnableRibbonWarnings.map(item => [item.id, item])).values()];
 	
-	return {currentCompatibleGames, earnableRibbons, earnableRibbonWarnings};
+	return {currentCompatibleGames, compatibleGroups, earnableRibbons, earnableRibbonWarnings};
 }
 
 function setFormValidAll(){
@@ -1785,38 +1792,34 @@ function deleteMultiplePokemon(){
 }
 
 function ribbonChecklist(event){
-	var $cardContainer = $(event.target).parents(".col");
-	var cardData = $cardContainer[0].dataset;
+	const $cardContainer = $(event.target).parents(".col");
+	const cardData = $cardContainer[0].dataset;
 	
 	// top info - sprite
-	var cardSprite = $cardContainer.find(".card-sprite").attr("src");
+	const cardSprite = $cardContainer.find(".card-sprite").attr("src");
 	$("#modalRibbonChecklistInfo-sprite img").attr("src", "img/ui/1x1.svg"); // initial reset
 	$("#modalRibbonChecklistInfo-sprite img").attr("src", cardSprite);
 	
 	// top info - name
-	var $cardName = $("<div>").html($cardContainer.find(".card-header-fullname").html());
+	const $cardName = $("<div>").html($cardContainer.find(".card-header-fullname").html());
 	$cardName.find("img, input").remove();
 	$("#modalRibbonChecklistInfo-name").html($cardName.html());
 	
 	// for warnings
-	var pronounSubject = "it";
-	var pronounObject = "it";
-	if(cardData.gender == "male"){
+	let pronounSubject = "it";
+	let pronounObject = "it";
+	if(cardData.gender === "male"){
 		pronounSubject = "he";
 		pronounObject = "him";
 	}
-	if(cardData.gender == "female"){
+	if(cardData.gender === "female"){
 		pronounSubject = "she";
 		pronounObject = "her";
 	}
-	var currentGame;
+	let currentGame;
 	if(cardData.currentGame){
 		currentGame = cardData.currentGame;
 		$("#modalRibbonChecklistInfo-currentgame").text("Currently in " + getLanguage(getGameData(currentGame, "names", true)));
-	}
-	var ribbonDisplay = "Ribbons";
-	if(currentGame === "scar" || currentGame === "vio"){
-		ribbonDisplay = "Ribbons or Marks";
 	}
 	
 	// reset
@@ -1889,13 +1892,16 @@ function ribbonChecklist(event){
 		$("#modalRibbonChecklistStatus-warnings > div:last-child").removeClass("border-bottom border-2");
 	}
 	
+	// actually build the checklist
 	if(currentGame){
 		const isNincada = cardData.species === "nincada";
 		const hasOrigin = cardData.originGame || cardData.originMark;
 		if(!isNincada || hasOrigin){
 			if(cardData.remainingRibbons){
+				$("#modalRibbonChecklistStatus-text").remove();
 				var remainingRibbons = JSON.parse(cardData.remainingRibbons);
 				var compatibleGames = JSON.parse(cardData.compatibleGames);
+				var compatibleGroups = JSON.parse(cardData.compatibleGroups);
 				var currentGameStatus = "";
 				var lastChanceGen = 1000;
 				/* initial game push */
@@ -1991,36 +1997,14 @@ function ribbonChecklist(event){
 						$(g).find(addToList).append($ribbonBtn);
 					}
 				});
-				if(currentGameStatus === "last-chance"){
-					$("#modalRibbonChecklistStatus-text").addClass("bg-danger-subtle").html(cardData.name + " still has " + ribbonDisplay + " to earn in <span class='text-nowrap'>" + getLanguage(games[currentGame].names) + "</span>");
-					if(compatibleGames.includes("plza") && currentGame !== "plza" && currentGame !== "homeza"){
-						// if this Pokemon can travel to Z-A, warn that it shouldn't
-						$("#modalRibbonChecklistStatus-text").append(" and cannot enter Legends: Z-A yet.");
-					} else {
-						$("#modalRibbonChecklistStatus-text").append(".");
-					}
-				} else {
-					var moveTo = $(".last-chance, .scale-marks").first().prev().html().toString();
-					if(lastChanceGen == Number(getGameData(currentGame, "gen")) && lastChanceGen < 8){
-						$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").html(cardData.name + " can safely move to " + moveTo + " but " + pronounSubject + " cannot leave Gen " + lastChanceGen + " yet.");
-					} else if((lastChanceGen == 8 || lastChanceGen == 9) && compatibleGames.includes("plza") && currentGame !== "plza" && currentGame !== "homeza"){
-						// if this Pokemon can travel to Z-A, warn that it shouldn't
-						$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").html(cardData.name + " can safely move to " + moveTo + " but " + pronounSubject + " cannot enter Legends: Z-A yet.");
-					} else {
-						$("#modalRibbonChecklistStatus-text").addClass("bg-success-subtle").html(cardData.name + " can safely move to " + moveTo + ".");
-					}
-				}
 			} else {
-				ribbonDisplay = "Ribbons or Marks";
-				$("#modalRibbonChecklistStatus-text").addClass("bg-success-subtle").text("There are no more " + ribbonDisplay + " for " + cardData.name + " to earn!");
+				$("#modalRibbonChecklistStatus-text").addClass("bg-success-subtle").text("There are no more Ribbons or Marks for " + cardData.name + " to earn!");
 			}
 		} else {
-			ribbonDisplay = "Ribbons or Marks";
-			$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").text("You must set " + cardData.name + "'s Origin Game to determine which " + ribbonDisplay + " " + pronounSubject + " can earn.");
+			$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").text("You must set " + cardData.name + "'s Origin Game to determine which Ribbons or Marks " + pronounSubject + " can earn.");
 		}
 	} else {
-		ribbonDisplay = "Ribbons or Marks";
-		$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").text("You must set " + cardData.name + "'s Current Game to determine which " + ribbonDisplay + " " + pronounSubject + " can earn.");
+		$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").text("You must set " + cardData.name + "'s Current Game to determine which Ribbons or Marks " + pronounSubject + " can earn.");
 	}
 	updatePopovers();
 	modalRibbonChecklist.toggle();
@@ -2057,7 +2041,7 @@ function createCard(p, id){
 	}
 	
 	// get compatible games and ribbons
-	let compatibleGamesAndRibbons = {}; //{"currentCompatibleGames": [], "earnableRibbonWarnings": [], "earnableRibbons": {}};
+	let compatibleGamesAndRibbons = {}; //{"currentCompatibleGames": [], "compatibleGroups": [], "earnableRibbonWarnings": [], "earnableRibbons": {}};
 	if(p.currentgame){
 		compatibleGamesAndRibbons = getGamesAndRibbons(p.species, p.currentlevel, p.metlevel, p.currentgame, p.origingame, p.originmark, p.ribbons, p.scale, p.totem, p.gmax, p.shadow);
 	}
@@ -2067,6 +2051,9 @@ function createCard(p, id){
 	if(Object.keys(compatibleGamesAndRibbons).length){
 		// attach compatible games
 		$cardCol.attr({ "data-compatible-games": JSON.stringify(compatibleGamesAndRibbons.currentCompatibleGames) });
+		
+		// attach compatible groups
+		$cardCol.attr({ "data-compatible-groups": JSON.stringify(compatibleGamesAndRibbons.compatibleGroups) });
 		
 		// attach earnable ribbons, or mark Pokemon as complete if no ribbons are left to earn
 		if(Object.keys(compatibleGamesAndRibbons.earnableRibbons).length){
@@ -3448,6 +3435,7 @@ function initRun(){
 		/* initial form reset */
 		resetPokemonForm();
 		resetFilterForm(true);
+		precomputeGroupPaths();
 		
 		/* changelog logic */
 		/* TODO: reduce duplication with full changelog behavior */
