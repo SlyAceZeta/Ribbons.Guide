@@ -1,5 +1,15 @@
 [
 	{
+		"date": "24 April 2026",
+		"changes": [
+			"Searching for a Pokémon, Ribbon, etc. now only searches the user's current language",
+			"Data buttons on mobile are now full-width to avoid visual glitches",
+			"Tapping the help icon on Met Level and Met Date no longer triggers the inputs",
+			"Images and fonts no longer redownload every time the app is updated",
+			"Removed Workbox as a dependency"
+		]
+	},
+	{
 		"date": "17 April 2026",
 		"header": "<strong>Online backups are finally here!</strong> Thank you to everyone for your patience! Many more improvements are live as well. If you find this app useful, <a href='https://ko-fi.com/slyacezeta'>I have a Ko-fi</a> but Ribbons.Guide will always be FOSS (free and open-source software)!",
 		"changes": [
