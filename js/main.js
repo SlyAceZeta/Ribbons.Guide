@@ -1047,13 +1047,16 @@ function precomputeGroupPaths(){
 function filterCompatibleGames(gameArray, game, gameGroup){
 	const reachable = gameGroupPaths[gameGroup] || new Set([gameGroup]);
 	
-	const filtered = gameArray.filter(key =>
+	const filteredGames = gameArray.filter(key =>
 		games[key] && reachable.has(getGameData(key, "group"))
 	);
 	
-	if (!filtered.includes(game)) filtered.push(game);
+	if (!filteredGames.includes(game)) filteredGames.push(game);
 	
-	return [filtered, [...reachable]];
+	const activeGroups = new Set(filteredGames.map(key => getGameData(key, "group")));
+	const filteredGroups = [...reachable].filter(group => activeGroups.has(group));
+	
+	return [filteredGames, filteredGroups];
 }
 
 function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame, originMark, currentRibbons, checkedScale, totem = false, gmax = false, shadow = false){
@@ -1824,11 +1827,11 @@ function ribbonChecklist(event){
 	
 	// reset
 	$("#modalRibbonChecklistRows").html("");
-	$("#modalRibbonChecklistStatus").html("").append($("<div>", { "id": "modalRibbonChecklistStatus-text", "class": "col-12 p-2 px-3 text-center" }));
+	$("#modalRibbonChecklistStatus").html("").append($("<div>", { "id": "modalRibbonChecklistStatus-text", "class": "col-12 p-2 px-3 text-center rounded-2" }));
 	
 	// handle warnings
 	if(cardData.ribbonWarnings){
-		$("#modalRibbonChecklistStatus").prepend($("<div>", { "id": "modalRibbonChecklistStatus-warnings", "class": "col-12 p-0 text-center bg-danger" }));
+		$("#modalRibbonChecklistStatus").prepend($("<div>", { "id": "modalRibbonChecklistStatus-warnings", "class": "col-12 p-0 mb-2 text-center bg-danger rounded-2" }));
 		const ribbonWarnings = JSON.parse(cardData.ribbonWarnings);
 		for(let w in ribbonWarnings){
 			const warning = ribbonWarnings[w];
@@ -1839,7 +1842,7 @@ function ribbonChecklist(event){
 				warning.text = "If " + cardData.name + " is moved to a HOME account set to Latin American Spanish, it cannot travel to Gen&nbsp;8, Scarlet, or Violet.";
 			} else if(warning.id === "footprint"){
 				warning.classes += " text-start";
-				warning.text = "Footprint Ribbon:<ul class='mb-0'>";
+				warning.text = "Footprint Ribbon:<ul class='mb-0 ps-3'>";
 				const genText = warning.gens.map(g => g === 8 ? "BDSP" : "Gen&nbsp;" + g).join(", ").replace(/, ([^,]*)$/, " and $1");
 				
 				if(warning.flStatus === "UNKNOWN"){
@@ -1898,105 +1901,124 @@ function ribbonChecklist(event){
 		const hasOrigin = cardData.originGame || cardData.originMark;
 		if(!isNincada || hasOrigin){
 			if(cardData.remainingRibbons){
+				// status text no longer needed
 				$("#modalRibbonChecklistStatus-text").remove();
-				var remainingRibbons = JSON.parse(cardData.remainingRibbons);
-				var compatibleGames = JSON.parse(cardData.compatibleGames);
-				var compatibleGroups = JSON.parse(cardData.compatibleGroups);
-				var currentGameStatus = "";
-				var lastChanceGen = 1000;
-				/* initial game push */
-				for(var game in remainingRibbons){
-					var gameRemainingRibbons = remainingRibbons[game];
-					if(gameRemainingRibbons.includes("world-ability-ribbon") && settings.ShowWorldAbility == "false"){
-						if(gameRemainingRibbons.length == 1){
-							continue;
-						} else {
-							gameRemainingRibbons = gameRemainingRibbons.filter(item => item !== "world-ability-ribbon");
-						}
-					}
-					$checklistRow = $("<div>", { "class": "col-12 border-bottom border-2 pb-2", "data-gen": getGameData(game, "gen"), "data-ribbons": JSON.stringify(gameRemainingRibbons) });
-					var plainGameName = getLanguage(games[game].names);
-					// SM/USUM Battle Tree Great check
-					var combineGen7 = true;
-					if(remainingRibbons["usum"] && remainingRibbons["usum"].includes("battle-tree-great-ribbon") && (getPokemonData(cardData.species, "mythical") || ribbons["battle-tree-master-ribbon"]["banned"].includes(cardData.species))){
-						combineGen7 = false;
-					}
-					if(combineGen7 && (game == "sm" || game == "usum")){
-						if($("#modalRibbonChecklistRows .alola").length){
-							continue;
-						} else {
-							$checklistRow.addClass("alola");
-							if((game == "sm" && Object.keys(remainingRibbons).includes("usum")) || (game == "usum" && Object.keys(remainingRibbons).includes("sm"))){
-								plainGameName = getLanguage(games["sm"].names) + "/" + getLanguage(games["usum"].names);
-							}
-						}
-					}
-					var formattedGameName = "<span class='text-nowrap'>" + plainGameName.replaceAll("/", "/</span><span class='text-nowrap'>") + "</span>";
-					$checklistRowTitle = $("<div>", { "class": "modalRibbonChecklistRows-gamename fw-bold mb-2" }).html(formattedGameName);
-					if(game == currentGame || game == getGameData(currentGame, "partOf", true) || (combineGen7 && game == "sm" && getGameData(currentGame, "partOf", true) == "usum")){
-						$checklistRow.attr("data-order", "0");
-					} else {
-						$checklistRow.attr("data-order", gameOrder[game]);
-					}
-					$checklistRow.append($checklistRowTitle);
-					$("#modalRibbonChecklistRows").append($checklistRow);
+				
+				// parse Pokemon data
+				const remainingRibbons = JSON.parse(cardData.remainingRibbons);
+				const compatibleGroups = JSON.parse(cardData.compatibleGroups);
+				
+				// add gamegroup sections
+				for(const group in compatibleGroups){
+					$("#modalRibbonChecklistRows").append($("<div>", { "id": "modalRibbonChecklistRows-" + compatibleGroups[group], "class": "col-12 p-0" }));
+					$("#modalRibbonChecklistRows-" + compatibleGroups[group]).append($("<div>", { "class": "text-center fw-bold border border-2 rounded-top-4 p-1 px-3 modal-gamegroup-name", "data-order": "-1" }).append($("<span>").text(getLanguage(gameGroups[compatibleGroups[group]].names))));
 				}
-				/* sort games in order */
-				var checklistGameList = document.querySelector("#modalRibbonChecklistRows");
-				var comparison = function(a, b){
+				
+				// add games and their ribbons to each gamegroup section
+				for(const game in remainingRibbons){
+					let gameRibbons = remainingRibbons[game];
+					
+					// skip World Ability Ribbon if setting is enabled
+					if(gameRibbons.includes("world-ability-ribbon") && settings.ShowWorldAbility === "false"){
+						if(gameRibbons.length === 1){
+							// World Ability Ribbon is the only remaining ribbon in this game, so just skip the game entirely
+							continue;
+						} else {
+							// there are other ribbons, so just remove the World Ability Ribbon
+							gameRibbons = gameRibbons.filter(item => item !== "world-ability-ribbon");
+						}
+					}
+					
+					// begin constructing game info
+					const $gameInfo = $("<div>", { "class": "pb-3 p-2 border border-2 border-top-0 modal-gamegroup-game", "data-ribbons": JSON.stringify(gameRibbons) })
+						.append($("<div>", { "class": "modal-gamegroup-game-name fw-bold mb-2" }).text(getLanguage(games[game].names)));
+					
+					// add sort attribute
+					if(game === currentGame || game === getGameData(currentGame, "partOf", true)){
+						$gameInfo.attr("data-order", "0");
+					} else {
+						$gameInfo.attr("data-order", gameOrder[game]);
+					}
+					
+					// add game to gamegroup section
+					$("#modalRibbonChecklistRows-" + getGameData(game, "group")).append($gameInfo);
+				}
+				
+				// sort games in each section
+				const gameComparison = function(a, b){
 					return a.dataset.order - b.dataset.order;
-				};
-				[...checklistGameList.children].sort(comparison).forEach(node => checklistGameList.appendChild(node));
-				$("#modalRibbonChecklistRows > .col-12:last-child").removeClass("border-bottom border-2 pb-2");
-				$("#modalRibbonChecklistRows > .col-12").each(function(i, g){
-					var allGameRibbons = JSON.parse(g.dataset.ribbons);
-					var thisGameOrder = Number(g.dataset.order);
-					for(var r in allGameRibbons){
-						var availableElsewhere = false;
-						$("#modalRibbonChecklistRows > .col-12[data-ribbons*='\"" + allGameRibbons[r] + "\"']").each(function(ii, gi){
-							if(Number(gi.dataset.order) > thisGameOrder){
+				}
+				for(const group in compatibleGroups){
+					const groupSection = document.querySelector("#modalRibbonChecklistRows-" + compatibleGroups[group]);
+					[...groupSection.children].sort(gameComparison).forEach(node => groupSection.appendChild(node));
+				}
+				
+				// display all ribbons
+				$(".modal-gamegroup-game").each(function(i, g){
+					const thisRibbons = JSON.parse(g.dataset.ribbons);
+					const thisOrder = Number(g.dataset.order);
+					for(const r in thisRibbons){
+						const thisRibbon = thisRibbons[r];
+						let availableElsewhere = false;
+						$(".modal-gamegroup-game[data-ribbons*='\"" + thisRibbon + "\"']").each(function(ii, gi){
+							if(Number(gi.dataset.order) > thisOrder){
 								availableElsewhere = true;
 							}
 						});
-						var addToList = ".last-chance-list";
+						
+						let addToList = ".last-chance-list";
+						let ribbonSize = "32";
 						if(availableElsewhere){
-							if(thisGameOrder === 0 && currentGameStatus !== "last-chance"){
-								currentGameStatus = "available-elsewhere";
-							}
+							addToList = ".available-elsewhere-list";
+							ribbonSize = "24";
 							if(!$(g).find(".available-elsewhere").length){
-								$sectionLabel = $("<div>").text("Available in other games");
+								$sectionLabel = $("<div>", { "class": "modal-gamegroup-ribbonlabel" }).html("<small>Available in other games</small>");
 								$sectionRibbons = $("<div>", { "class": "available-elsewhere-list" });
 								$(g).append($("<div>", { "class": "available-elsewhere px-3" }).append($sectionLabel, $sectionRibbons));
 							}
-							addToList = ".available-elsewhere-list";
 						} else {
-							if(thisGameOrder === 0){
-								currentGameStatus = "last-chance";
-							}
-							if(Number(g.dataset.gen) < lastChanceGen){
-								lastChanceGen = Number(g.dataset.gen);
-							}
-							if((allGameRibbons[r] == "mini-mark" || allGameRibbons[r] == "jumbo-mark") && cardData.scaleChecked == "false"){
+							if((thisRibbon === "mini-mark" || thisRibbon === "jumbo-mark") && cardData.scaleChecked === "false"){
+								addToList = ".scale-marks";
 								if(!$(g).find(".scale-marks").length){
-									$sectionLabel = $("<div>", { "class": "fw-bold" }).text("Check scale in Mesagoza");
+									$sectionLabel = $("<div>", { "class": "modal-gamegroup-ribbonlabel fw-bold" }).text("Check scale in Mesagoza");
 									$sectionRibbons = $("<div>", { "class": "scale-marks-list" });
 									$(g).append($("<div>", { "class": "scale-marks px-3" }).append($sectionLabel, $sectionRibbons));
 								}
-								addToList = ".scale-marks";
 							} else if(!$(g).find(".last-chance").length){
-								$sectionLabel = $("<div>", { "class": "fw-bold" }).text("Last chance");
+								$sectionLabel = $("<div>", { "class": "modal-gamegroup-ribbonlabel fw-bold" }).text("Last chance");
 								$sectionRibbons = $("<div>", { "class": "last-chance-list" });
-								$(g).find(".modalRibbonChecklistRows-gamename").after($("<div>", { "class": "last-chance px-3 mb-2" }).append($sectionLabel, $sectionRibbons));
+								$(g).find(".modal-gamegroup-game-name").after($("<div>", { "class": "last-chance px-3 mb-2" }).append($sectionLabel, $sectionRibbons));
 							}
 						}
-						var $ribbonBtn = $("<a>", { "class": "d-inline-block p-0 my-1 modalRibbonChecklistRows-ribbon", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": getLanguage(ribbons[allGameRibbons[r]].names), "data-bs-content": getLanguage(ribbons[allGameRibbons[r]].descs) })
-							.append($("<img>", { "src": "img/ribbons-and-marks/" + allGameRibbons[r] + ".png", "style": "width:32px;" }));
-						if(ribbons[allGameRibbons[r]].titles){
-							$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons[allGameRibbons[r]].titles) + ")</div>");
+						
+						const $ribbonBtn = $("<a>", { "class": "d-inline-block p-0 my-1 modalRibbonChecklistRows-ribbon", "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": getLanguage(ribbons[thisRibbon].names), "data-bs-content": getLanguage(ribbons[thisRibbon].descs) })
+							.append($("<img>", { "src": "img/ribbons-and-marks/" + thisRibbon + ".png", "style": "width:" + ribbonSize + "px;" }));
+						if(ribbons[thisRibbon].titles){
+							$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons[thisRibbon].titles) + ")</div>");
 						}
 						$(g).find(addToList).append($ribbonBtn);
 					}
 				});
+				
+				// display each gamegroup's status
+				let groupProceed = true;
+				for(const group in compatibleGroups){
+					if(groupProceed === false){
+						if($("#modalRibbonChecklistRows-" + compatibleGroups[group]).find(".modalRibbonChecklistRows-ribbon").length){
+							$("#modalRibbonChecklistRows-" + compatibleGroups[group]).each(function(){
+								$(this).find(".modal-gamegroup-name span, .modal-gamegroup-game-name, .modal-gamegroup-ribbonlabel, .modal-gamegroup-game img").addClass("opacity-50");
+							});
+							$("#modalRibbonChecklistRows-" + compatibleGroups[group] + " > div:last-child").addClass("rounded-bottom-4");
+						} else {
+							$("#modalRibbonChecklistRows-" + compatibleGroups[group]).remove();
+						}
+					} else if($("#modalRibbonChecklistRows-" + compatibleGroups[group]).find(".last-chance").length){
+						groupProceed = false;
+						$("#modalRibbonChecklistRows-" + compatibleGroups[group]).append($("<div>", { "class": "border border-2 border-top-0 rounded-bottom-4 bg-danger-subtle text-center p-2 px-3" }).text(cardData.name + " cannot safely leave " + getLanguage(gameGroups[compatibleGroups[group]].names) + "."));
+					} else {
+						$("#modalRibbonChecklistRows-" + compatibleGroups[group]).append($("<div>", { "class": "border border-2 border-top-0 rounded-bottom-4 bg-success-subtle text-center p-2 px-3" }).text(cardData.name + " can safely leave " + getLanguage(gameGroups[compatibleGroups[group]].names) + "."));
+					}
+				}
 			} else {
 				$("#modalRibbonChecklistStatus-text").addClass("bg-success-subtle").text("There are no more Ribbons or Marks for " + cardData.name + " to earn!");
 			}
