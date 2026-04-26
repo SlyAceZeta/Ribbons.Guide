@@ -1602,5 +1602,18 @@
 		"iron-crown",
 		"terapagos",
 		"pecharunt"
+	],
+	"languages": [
+		"jp", 
+		"en",
+		"fr",
+		"it",
+		"de",
+		"es-es",
+		null,
+		"ko",
+		"zh-Hans",
+		"zh-Hant",
+		"es-419"
 	]
 }
