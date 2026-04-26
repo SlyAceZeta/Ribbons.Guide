@@ -1833,7 +1833,6 @@ function ribbonChecklist(event){
 	
 	// top info - sprite
 	const cardSprite = $cardContainer.find(".card-sprite").attr("src");
-	$("#modalRibbonChecklistInfo-sprite img").attr("src", "img/ui/1x1.svg"); // initial reset
 	$("#modalRibbonChecklistInfo-sprite img").attr("src", cardSprite);
 	
 	// top info - name
@@ -3998,6 +3997,7 @@ $(function(){
 	$("#modalPokemonForm").on("hidden.bs.modal", function(e){
 		modalPokemonState = "default";
 		modalPokemonEditing = -1;
+		resetPokemonForm();
 	});
 	modalPokemonFormMulti = new bootstrap.Modal("#modalPokemonFormMulti");
 	$("#modalPokemonFormMulti").on("hide.bs.modal", function(e){
@@ -4008,7 +4008,6 @@ $(function(){
 		}
 	});
 	$("#sectionTrackerButtonAdd").on("click", function(){
-		resetPokemonForm();
 		modalPokemonForm.toggle();
 	});
 	if(localStorage.importTest){
@@ -4074,6 +4073,9 @@ $(function(){
 		}
 	});
 	modalRibbonChecklist = new bootstrap.Modal("#modalRibbonChecklist");
+	$("#modalRibbonChecklist").on("hidden.bs.modal", function(e){
+		$("#modalRibbonChecklistInfo-sprite img").attr("src", "img/ui/1x1.svg");
+	});
 	
 	/* Dropbox functionality */
 	// "global" Dropbox authentication object
