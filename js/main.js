@@ -1,5 +1,5 @@
 /* globals */
-var balls, changelog, games, gameOrder = {}, gameGroups, importmap, origins, pokemon, ribbons, translations, forms, natures, modalSettings, modalData, modalDataCompare, modalCheckDropbox, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off", DROPBOX_CLIENT_ID = "xxvozybw2lp9ycy", dropbox_auth_url, backupPokemon = [], backupBoxes = [], backupLastModified = 0, backupSettings = {}, dbx;
+var balls, changelog, games, gameOrder = {}, gameGroups, importmap, origins, pokemon, ribbons, ribbonOrder, translations, forms, natures, modalSettings, modalData, modalDataCompare, modalCheckDropbox, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off", DROPBOX_CLIENT_ID = "xxvozybw2lp9ycy", dropbox_auth_url, backupPokemon = [], backupBoxes = [], backupLastModified = 0, backupSettings = {}, dbx;
 // voiced BDSP species that can evolve into voiceless BDSP species
 const evolveVoicelessMap = {"caterpie": ["metapod"], "weedle": ["kakuna"], "venonat": ["venomoth"], "natu": ["xatu"], "larvitar": ["pupitar"], "wurmple": ["silcoon", "cascoon"], "bagon": ["shelgon"]};
 // voiceless BDSP species (and voiced BDSP species that can evolve into voiceless BDSP species) that can evolve into voiced BDSP species
@@ -256,13 +256,13 @@ for(let i in toggles){
 	}
 }
 
-function createToast(message, type = "primary", persistent = false){
-	let toastPersist = "";
-	if(persistent){
-		toastPersist = 'data-bs-autohide="false"';
+function createToast(message, type = "primary", delay = 5000){
+	let toastDelay = 'data-bs-delay="' + delay + '"';
+	if(!delay){
+		toastDelay = 'data-bs-autohide="false"';
 	}
 	const toastHTML = `
-		<div class="toast align-items-center border-0 text-bg-${type}" role="alert" aria-live="assertive" aria-atomic="true" ${toastPersist}>
+		<div class="toast align-items-center border-0 text-bg-${type}" role="alert" aria-live="assertive" aria-atomic="true" ${toastDelay}>
 			<div class="d-flex">
 				<div class="toast-body">
 					${message}
@@ -1728,10 +1728,20 @@ function editPokemon(event){
 	$("#pokemonFormOriginGame").val(pokemonToEdit.origingame).trigger("change");
 	$("#pokemonFormCurrentGame").val(pokemonToEdit.currentgame).trigger("change");
 	if(pokemonToEdit.box || pokemonToEdit.box == 0) $("#pokemonFormBox").val(pokemonToEdit.box).trigger("change");
-	$("#pokemonFormTitle").val(pokemonToEdit.title).trigger("change");
 	if(pokemonToEdit.scale) $("#pokemonFormScale").prop("checked", true).trigger("change");
 	for(var r in pokemonToEdit.ribbons){
 		$("#pokemonFormRibbon-" + pokemonToEdit.ribbons[r]).prop("checked", true).trigger("change");
+	}
+	if($("#pokemonFormTitle option[value='" + pokemonToEdit.title + "']").length){
+		$("#pokemonFormTitle").val(pokemonToEdit.title).trigger("change");
+	} else {
+		$("#pokemonFormTitle").val("None").trigger("change");
+		let ribbonType = "Ribbon";
+		if(ribbons[pokemonToEdit.title].mark){
+			ribbonType = "Mark";
+		}
+		createToast("This Pokémon's title was reset because it does not have the required " + ribbonType + ".", "danger", 10000);
+		$("#pokemonFormTabs-ribbons").trigger("click");
 	}
 	if(pokemonToEdit.metlevel) $("#pokemonFormMetLevel").val(pokemonToEdit.metlevel);
 	$("#pokemonFormMetDate").val(pokemonToEdit.metdate).trigger("change");
@@ -3286,12 +3296,9 @@ function initRun(){
 			$ribbonRowMulti = $(ribbonRowMultiHtml);
 			$("#pokemonFormMultiRibbons").append($ribbonRowMulti);
 			
-			if(ribbons[r].titles){
-				var $titleOption = $("<option>", { "value": r }).text(getLanguage(ribbons[r].titles));
-				$("#pokemonFormTitle").append($titleOption);
-			}
 			$("#imageHoldingArea").append($("<img>", { "src": "img/ribbons-and-marks/" + r + ".png" }));
 		}
+		ribbonOrder = Object.keys(ribbons);
 		for(var n in natures){
 			var $natureOption = $("<option>", { "value": n }).text(getLanguage(natures[n]));
 			$("#pokemonFormNature").append($natureOption);
@@ -3418,6 +3425,22 @@ function initRun(){
 					$("#pokemonFormRibbon-contest-memory-ribbon-gold").prop({ "checked": false, "disabled": true });
 				} else {
 					$("#pokemonFormRibbon-contest-memory-ribbon-gold").prop({ "disabled": false });
+				}
+			}
+			if(ribbons[ribbon].titles){
+				const $dropdown = $("#pokemonFormTitle");
+				const currentTitle = $dropdown.val();
+				if($("#pokemonFormRibbon-" + ribbon).prop("checked")){
+					const $titleOption = $("<option>", { "value": ribbon }).text(getLanguage(ribbons[ribbon].titles));
+					$dropdown.append($titleOption);
+					// sort titles
+					const sortedOptions = $dropdown.find("option").get().sort((a, b) => {
+						return ribbonOrder.indexOf(a.value) - ribbonOrder.indexOf(b.value);
+					});
+					$dropdown.empty().append(sortedOptions).val(currentTitle).trigger("change");
+				} else {
+					if(currentTitle === ribbon) $dropdown.val("None").trigger("change");
+					$dropdown.find("option[value='" + ribbon + "']").remove();
 				}
 			}
 		});
@@ -3641,7 +3664,7 @@ function initRun(){
 			localStorage.pokemon = JSON.stringify(userPokemon);
 			updateModifiedDate();
 			if(resetALanguage){
-				createToast("At least one of your Pokémon had its language reset. Please verify your Pokémon's languages.", "primary", true);
+				createToast("At least one of your Pokémon had its language reset. Please verify your Pokémon's languages.", "primary", 0);
 			}
 		}
 		
