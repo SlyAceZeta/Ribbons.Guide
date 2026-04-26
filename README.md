@@ -9,7 +9,7 @@ Ribbons.Guide runs in a web browser and all data is stored in the browser's loca
 
 The easiest way to use Ribbons.Guide is to simply visit https://ribbons.guide on your favorite device! If you use a [supported browser](https://en.wikipedia.org/wiki/Progressive_web_app), you can also install Ribbons.Guide as a dedicated app on your device!
 
-For advanced users, you can run a local copy of Ribbons.Guide by [downloading the latest ZIP archive of the project](https://github.com/SlyAceZeta/Ribbons.Guide/zipball/main/). Extract all contents to one folder and open `index.html` to run the app. **Keep in mind that you'll need to update your local copy manually; it will not automatically update.** Follow the same steps to update your local copy, replacing all files when prompted.
+For advanced users, you can run a local copy of Ribbons.Guide by [downloading the latest ZIP archive of the project](https://github.com/SlyAceZeta/Ribbons.Guide/zipball/main/). You will need to run a local web server for the app to function, and you will also need to update it manually.
 
 ### Credits
 
