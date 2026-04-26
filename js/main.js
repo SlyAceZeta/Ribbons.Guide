@@ -924,11 +924,6 @@ function importFiles(files, delay = 150, i = 0){
 
 		var metlevel = data.getUint8(metlevelloc) & ~0x80;
 		
-		var nickarrbuf = buf.slice(nicknameloc, nicknameloc + 26);
-		var nickname = getStringFromBuffer(new DataView(nickarrbuf));
-		// TODO: remove nickname if it equates to the Pokémon species name in the Pokémon's language
-		newP.nickname = nickname;
-		
 		newP.ball = importmap.balls[data.getUint8(ballloc)];
 		newP.strangeball = "";
 		
@@ -942,6 +937,12 @@ function importFiles(files, delay = 150, i = 0){
 		newP.trainerid = tid;
 
 		newP.language = importmap.languages[langid];
+		
+		var nickarrbuf = buf.slice(nicknameloc, nicknameloc + 26);
+		var nickname = getStringFromBuffer(new DataView(nickarrbuf));
+		var speciesName = getLanguage(getPokemonData(newP.species, "names"), newP.language);
+		if(nickname === speciesName) nickname = "";
+		newP.nickname = nickname;
 
 		newP.metlevel = metlevel;
 		
@@ -973,7 +974,7 @@ function importFiles(files, delay = 150, i = 0){
 			"<div>" + 
 				"<div class='fs-5'>" +
 					"<img src='img/balls/" + newP.ball + ".png' style='height:24px'>" +
-					"<span class='ms-2 fw-bold align-middle'>" + newP.nickname + "</span>" +
+					"<span class='ms-2 fw-bold align-middle'>" + (newP.nickname.length ? newP.nickname : speciesName) + "</span>" +
 				"</div>" +
 				"<div>OT: " + newP.trainername + "&nbsp;&nbsp;&nbsp;ID: " + newP.trainerid + "</div>" +
 				"<div>Origin Game: " + (newP.origingame ? getLanguage(getGameData(newP.origingame, "names")) : "<em>unknown</em>") + "</div>" +
