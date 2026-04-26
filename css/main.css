@@ -311,13 +311,21 @@ label[for="pokemonFormShiny-square"] {
 	width: 100%;
 }
 .pokemonFormSelectIcon,
-.filterFormSelectIcon {
+.filterFormSelectIcon,
+.filterSortSelectIcon {
 	width: auto;
 	height: 24px;
 	margin-top: -2px;
 	margin-right: 5px;
 	display: inline-block;
 	vertical-align: middle;
+}
+.filterSortSelectIcon {
+	height: 14px;
+	margin: -3px 5px 0;
+}
+.filterSortSelectIcon-desc {
+	transform: rotate(180deg);
 }
 #pokemonFormSections-ribbons .list-group-item,
 #pokemonFormMultiRibbons .list-group-item {

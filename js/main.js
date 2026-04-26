@@ -2960,6 +2960,23 @@ function selectCustomOption(o){
 		}
 		$pokerus.append($("<span>").text(o.text));
 		return $pokerus;
+	} else if(result.indexOf("filterFormSort") > 0){
+		selectIconClass = "filterSortSelectIcon";
+		const $sort = $("<span>");
+		if(o.id.endsWith("asc")){
+			const sortText = o.text.split(" ▲ ");
+			$sort.append($("<span>").text(sortText[0]))
+				.append($("<img>", { "class": selectIconClass, "src": "img/ui/triangle.svg" }))
+				.append($("<span>").text(sortText[1]));
+		} else if(o.id.endsWith("desc")){
+			const sortText = o.text.split(" ▼ ");
+			$sort.append($("<span>").text(sortText[0]))
+				.append($("<img>", { "class": selectIconClass + " filterSortSelectIcon-desc", "src": "img/ui/triangle.svg" }))
+				.append($("<span>").text(sortText[1]));
+		} else {
+			$sort.text(o.text);
+		}
+		return $sort;
 	} else {
 		return o.text;
 	}
@@ -3328,7 +3345,7 @@ function initRun(){
 			templateResult: selectCustomOption,
 			dropdownParent: $("#pokemonFormSections")
 		});
-		$("#filterFormSort, #filterFormLanguage").select2({
+		$("#filterFormLanguage").select2({
 			matcher: selectCustomMatcher,
 			dropdownParent: $("#modalFilterForm .modal-body")
 		});
@@ -3336,7 +3353,7 @@ function initRun(){
 			matcher: selectCustomMatcherWithGroups,
 			dropdownParent: $("#modalFilterForm .modal-body")
 		});
-		$("#filterFormStatus, #filterFormGender, #filterFormShiny, #filterFormBall, #filterFormOriginMark, #filterFormBox, #filterFormEarnedRibbons, #filterFormTargetRibbons, #filterFormGMax, #filterFormPokerus").select2({
+		$("#filterFormSort, #filterFormStatus, #filterFormGender, #filterFormShiny, #filterFormBall, #filterFormOriginMark, #filterFormBox, #filterFormEarnedRibbons, #filterFormTargetRibbons, #filterFormGMax, #filterFormPokerus").select2({
 			matcher: selectCustomMatcher,
 			templateSelection: selectCustomOption,
 			templateResult: selectCustomOption,
