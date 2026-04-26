@@ -2078,17 +2078,17 @@ function updateRibbonNumbers($e = $("#tracker-grid .col")){
 		const $visibleRibbons = $(this).find(".card-ribbons > a:visible > img");
 		const numRibbons = $visibleRibbons.not("[src*='-mark.png']").length;
 		const numMarks = $visibleRibbons.filter("[src*='-mark.png']").length;
-		let numText = "No Ribbons or Marks";
+		let numText = "0 Ribbons/Marks";
 		if(numRibbons){
 			if(numRibbons === 1){
 				if(numMarks){
-					numText = (numRibbons+numMarks) + " Ribbons and Marks";
+					numText = (numRibbons+numMarks) + " Ribbons/Marks";
 				} else {
 					numText = "1 Ribbon";
 				}
 			} else {
 				if(numMarks){
-					numText = (numRibbons+numMarks) + " Ribbons and Marks";
+					numText = (numRibbons+numMarks) + " Ribbons/Marks";
 				} else {
 					numText = numRibbons + " Ribbons";
 				}
