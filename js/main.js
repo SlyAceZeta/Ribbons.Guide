@@ -833,33 +833,33 @@ function importFiles(files, delay = 150, i = 0){
 	
 	file.arrayBuffer().then((buf) => {
 		var newP = {
-			//species:		DONE
-			//gender:		DONE
-			//shiny:		DONE
-			//nickname:		DONE
-			//language:
-			//ball:			DONE
-			//strangeball:	DONE
-			//currentlevel:
-			//nature:		DONE
-			//totem:		DONE
-			//gmax:			DONE
-			//shadow:
-			//trainername:	DONE
-			//trainerid:	DONE
-			//originmark:	DONE
-			//origingame:	DONE
-			//currentgame:	LET USER SELECT
-			//box:			DONE
-			//title:
-			//scale:		DONE
-			//ribbons:
-			//metlevel:
-			//metdate:
-			//metlocation:
-			//pokerus:
-			//achievements:
-			//notes:		DONE
+			//species:
+			//gender:
+			//shiny:
+			//nickname:
+			//language:		TODO
+			//ball:
+			//strangeball:
+			//currentlevel:	TODO
+			//nature:
+			//totem:
+			//gmax:
+			//shadow:		TODO
+			//trainername:
+			//trainerid:
+			//originmark:
+			//origingame:
+			//currentgame:	TODO by user selection
+			//box:
+			//title:		TODO
+			//scale:
+			//ribbons:		TODO
+			//metlevel:		TODO
+			//metdate:		TODO
+			//metlocation:	TODO
+			//pokerus:		TODO
+			//achievements:	TODO
+			//notes:
 		};
 		
 		var data = new DataView(buf);
