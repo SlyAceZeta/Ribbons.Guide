@@ -736,7 +736,7 @@ function importFiles(files, delay = 150, i = 0){
 	var filename = file.name;
 	var ext = filename.substring(filename.lastIndexOf("."));
 	
-	var speciesloc, idsloc, gmaxloc, pidloc, natureloc, fatefulloc, genderloc, formloc, nicknameloc, ogloc, formargloc, otloc, ballloc, gen;
+	var speciesloc, idsloc, gmaxloc, pidloc, natureloc, fatefulloc, genderloc, formloc, nicknameloc, ogloc, formargloc, otloc, ballloc, langloc, metlevelloc, gen;
 	
 	switch(ext){
 		case ".pk9": // SV
@@ -752,8 +752,10 @@ function importFiles(files, delay = 150, i = 0){
 			nicknameloc = 0x58;
 			ogloc = 0xce;
 			formargloc = 0xd0;
+			langloc = 0xd5;
 			otloc = 0xf8;
 			ballloc = 0x124;
+			metlevelloc = 0x125;
 			gen = 9;
 			break;
 			
@@ -768,9 +770,11 @@ function importFiles(files, delay = 150, i = 0){
 			formloc = 0x24;
 			nicknameloc = 0x60;
 			ogloc = 0xee;
+			langlog = 0xf2;
 			formargloc = 0xf4;
 			otloc = 0x110;
 			ballloc = 0x137;
+			metlevelloc = 0x13d;
 			gen = 8;
 			break;
 			
@@ -787,9 +791,11 @@ function importFiles(files, delay = 150, i = 0){
 			formloc = 0x24;
 			nicknameloc = 0x58;
 			ogloc = 0xde;
+			langloc = 0xe2;
 			formargloc = 0xe4;
 			otloc = 0xf8;
 			ballloc = 0x124;
+			metlevelloc = 0x125;
 			gen = 8;
 			break;
 			
@@ -806,7 +812,9 @@ function importFiles(files, delay = 150, i = 0){
 			nicknameloc = 0x40;
 			otloc = 0xb0;
 			ballloc = 0xdc;
+			metlevelloc = 0xdd;
 			ogloc = 0xdf;
+			langloc = 0xe3;
 			gen = 7;
 			break;
 			
@@ -823,7 +831,9 @@ function importFiles(files, delay = 150, i = 0){
 			nicknameloc = 0x40;
 			otloc = 0xb0;
 			ballloc = 0xdc;
+			metlevel = 0xdd;
 			ogloc = 0xdf;
+			langloc = 0xe3;
 			gen = 6;
 			break;
 			
@@ -837,7 +847,7 @@ function importFiles(files, delay = 150, i = 0){
 			//gender:
 			//shiny:
 			//nickname:
-			//language:		TODO
+			//language:
 			//ball:
 			//strangeball:
 			//currentlevel:	TODO
@@ -854,7 +864,7 @@ function importFiles(files, delay = 150, i = 0){
 			//title:		TODO
 			//scale:
 			//ribbons:		TODO
-			//metlevel:		TODO
+			//metlevel:
 			//metdate:		TODO
 			//metlocation:	TODO
 			//pokerus:		TODO
@@ -910,6 +920,10 @@ function importFiles(files, delay = 150, i = 0){
 			? "star"
 			: "";
 		
+		var langid = data.getUint8(langloc);
+
+		var metlevel = data.getUint8(metlevelloc) & ~0x80;
+		
 		var nickarrbuf = buf.slice(nicknameloc, nicknameloc + 26);
 		var nickname = getStringFromBuffer(new DataView(nickarrbuf));
 		// TODO: remove nickname if it equates to the Pokémon species name in the Pokémon's language
@@ -926,6 +940,10 @@ function importFiles(files, delay = 150, i = 0){
 		var otarrbuf = buf.slice(otloc, otloc + 26);
 		newP.trainername = getStringFromBuffer(new DataView(otarrbuf));
 		newP.trainerid = tid;
+
+		newP.language = importmap.languages[langid];
+
+		newP.metlevel = metlevel;
 		
 		if(importmap.originmarks[ogval]){
 			newP.originmark = importmap.originmarks[ogval];
