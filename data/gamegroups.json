@@ -3,7 +3,8 @@
 		"names": {
 			"en": "Legends: Z-A"
 		},
-		"travelTo": []
+		"travelTo": [],
+		"mergeMemoryRibbons": true
 	},
 	"XD-NSO": {
 		"names": {
@@ -21,7 +22,8 @@
 		"names": {
 			"en": "Gen 8/Scarlet/Violet"
 		},
-		"travelTo": ["10"]
+		"travelTo": ["10"],
+		"mergeMemoryRibbons": true
 	},
 	"LGPE": {
 		"names": {
@@ -43,6 +45,7 @@
 			"ja": "第七世代"
 		},
 		"travelTo": ["8"],
+		"mergeMemoryRibbons": true,
 		"_notes": "USUM have exclusive Pokemon and four Totems that cannot go to SM, as well as different eligibility for the Battle Tree Great Ribbon."
 	},
 	"GO": {
@@ -58,7 +61,8 @@
 			"en": "Gen 6",
 			"ja": "第六世代"
 		},
-		"travelTo": ["7"]
+		"travelTo": ["7"],
+		"mergeMemoryRibbons": true
 	},
 	"5": {
 		"names": {

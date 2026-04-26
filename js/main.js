@@ -1527,10 +1527,12 @@ function savePokemon(edit = false){
 		if(edit){
 			userPokemon[modalPokemonEditing] = newP;
 			$("#tracker-grid .col[data-pokemon-id='" + modalPokemonEditing + "']").replaceWith(createCard(newP, modalPokemonEditing));
+			updateRibbonNumbers($("#tracker-grid .col[data-pokemon-id='" + modalPokemonEditing + "']"));
 		} else {
 			userPokemon.push(newP);
 			$("#tracker-grid").append(createCard(newP, userPokemon.length-1));
 			$("#sectionTrackerCountTotal").text(userPokemon.length);
+			updateRibbonNumbers($("#tracker-grid .col:last-child"));
 		}
 		sortPokemonList();
 		filterPokemonList();
@@ -1651,6 +1653,7 @@ function saveMultiplePokemon(){
 			if(changedAnything){
 				userPokemon[pokemonID] = newP;
 				$("#tracker-grid .col[data-pokemon-id='" + pokemonID + "']").replaceWith(createCard(newP, pokemonID));
+				updateRibbonNumbers($("#tracker-grid .col[data-pokemon-id='" + pokemonID + "']"));
 			}
 		});
 		
@@ -1757,6 +1760,7 @@ function copyPokemon(event){
 		cardContainer.after(createCard(pokemonToCopy, pokemonID+1));
 		$("#sectionTrackerCountTotal").text(userPokemon.length);
 		$("#sectionTrackerCountNotAllNum").text($("#tracker-grid .col:not(.d-none)").length);
+		updateRibbonNumbers($("#tracker-grid .col[data-pokemon-id='" + (pokemonID+1) + "']"));
 		updatePopovers();
 	}
 }
@@ -2058,21 +2062,40 @@ function createTitle(p){
 	return titleText;
 }
 
+function updateRibbonNumbers($e = $("#tracker-grid .col")){
+	$e.each(function(){
+		const $visibleRibbons = $(this).find(".card-ribbons > a:visible > img");
+		const numRibbons = $visibleRibbons.not("[src*='-mark.png']").length;
+		const numMarks = $visibleRibbons.filter("[src*='-mark.png']").length;
+		let numText = "No Ribbons or Marks";
+		if(numRibbons){
+			if(numRibbons === 1){
+				if(numMarks){
+					numText = (numRibbons+numMarks) + " Ribbons and Marks";
+				} else {
+					numText = "1 Ribbon";
+				}
+			} else {
+				if(numMarks){
+					numText = (numRibbons+numMarks) + " Ribbons and Marks";
+				} else {
+					numText = numRibbons + " Ribbons";
+				}
+			}
+		} else if(numMarks){
+			if(numMarks === 1){
+				numText = "1 Mark";
+			} else {
+				numText = numMarks + " Marks";
+			}
+		}
+		$(this).find(".card-footer-top-ribbons").html(numText);
+	});
+}
+
 function createCard(p, id){
-	// TODO: improve blue/gold memory ribbon helper
-	var currentGen = 1000;
-	var virtualConsole = false;
-	if(p.currentgame){
-		if(p.currentgame == "go"){
-			currentGen = 8;
-		} else {
-			currentGen = parseInt(getGameData(p.currentgame, "gen"));
-		}
-		if(currentGen < 3){
-			virtualConsole = true;
-			currentGen = 7;
-		}
-	}
+	const currentGameGroup = getGameData(p.currentgame, "group");
+	const mergeMemoryRibbons = gameGroups[currentGameGroup]?.mergeMemoryRibbons || false;
 	
 	// display name
 	var displayName = p.nickname;
@@ -2087,7 +2110,7 @@ function createCard(p, id){
 	}
 	
 	/* containers and filters */
-	var $cardCol = $("<div>", { "class": "col", "data-name": displayName, "data-national-dex": getPokemonData(p.species, "natdex"), "data-level": p.currentlevel, "data-origin-mark": p.originmark, "data-origin-game": p.origingame, "data-current-game": p.currentgame, "data-compatible-games": "[]", "data-earned-ribbons": JSON.stringify(p.ribbons), "data-pokemon-id": id, "data-gender": p.gender, "data-species": p.species, "data-current-gen": currentGen, "data-scale-checked": p.scale ? "" + p.scale : "false" });
+	var $cardCol = $("<div>", { "class": "col", "data-name": displayName, "data-national-dex": getPokemonData(p.species, "natdex"), "data-level": p.currentlevel, "data-origin-mark": p.originmark, "data-origin-game": p.origingame, "data-current-game": p.currentgame, "data-compatible-games": "[]", "data-earned-ribbons": JSON.stringify(p.ribbons), "data-pokemon-id": id, "data-gender": p.gender, "data-species": p.species, "data-game-memory-merged": mergeMemoryRibbons, "data-scale-checked": p.scale ? "" + p.scale : "false" });
 	if(Object.keys(compatibleGamesAndRibbons).length){
 		// attach compatible games
 		$cardCol.attr({ "data-compatible-games": JSON.stringify(compatibleGamesAndRibbons.currentCompatibleGames) });
@@ -2201,44 +2224,40 @@ function createCard(p, id){
 	}
 	$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + speciesSprite + ".png", "alt": getLanguage(getPokemonData(p.species, "names")), "title": getLanguage(getPokemonData(p.species, "names")) }));
 	var $cardRibbons = $("<div>", { "class": "card-ribbons flex-grow-1 d-flex flex-wrap p-1" });
-	var ribbonCount = 0, ribbonCountGen7Check = 0, markCount = 0, battleMemory = "", contestMemory = "", battleMemories = [], contestMemories = [];
+	let ribbonCountGen7Check = 0, battleMemory = "", contestMemory = "", battleMemories = [], contestMemories = [];
 	for(let r in p.ribbons){
-		var cardRibbonClass = p.ribbons[r];
-		if(ribbons[p.ribbons[r]].mark){
-			markCount++;
-		} else {
-			if(ribbons[p.ribbons[r]].merge){
-				cardRibbonClass = cardRibbonClass + " old-ribbon-to-merge";
-			}
-			if(!p.ribbons[r].startsWith("battle-memory-ribbon") && !p.ribbons[r].startsWith("contest-memory-ribbon")){
-				ribbonCount++;
-				if(ribbons[p.ribbons[r]].merge == "battle"){
-					if(!battleMemories.length) ribbonCountGen7Check++;
-					battleMemories.push(p.ribbons[r]);
-				} else if(ribbons[p.ribbons[r]].merge == "contest"){
-					if(!contestMemories.length) ribbonCountGen7Check++;
-					contestMemories.push(p.ribbons[r]);
-				} else {
-					ribbonCountGen7Check++;
-				}
+		const ribbon = p.ribbons[r];
+		let cardRibbonClass = ribbon;
+		if(ribbons[ribbon].merge){
+			cardRibbonClass = cardRibbonClass + " old-ribbon-to-merge";
+		}
+		if(!ribbon.startsWith("battle-memory-ribbon") && !ribbon.startsWith("contest-memory-ribbon")){
+			if(ribbons[ribbon].merge === "battle"){
+				if(!battleMemories.length) ribbonCountGen7Check++;
+				battleMemories.push(ribbon);
+			} else if(ribbons[ribbon].merge === "contest"){
+				if(!contestMemories.length) ribbonCountGen7Check++;
+				contestMemories.push(ribbon);
+			} else {
+				ribbonCountGen7Check++;
 			}
 		}
-		var $ribbonBtn = $("<a>", { "class": cardRibbonClass, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": getLanguage(ribbons[p.ribbons[r]].names), "data-bs-content": getLanguage(ribbons[p.ribbons[r]].descs) })
-			.append($("<img>", { "src": "img/ribbons-and-marks/" + p.ribbons[r] + ".png" }));
-		if(ribbons[p.ribbons[r]].titles){
-			$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons[p.ribbons[r]].titles) + ")</div>");
+		var $ribbonBtn = $("<a>", { "class": cardRibbonClass, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": getLanguage(ribbons[ribbon].names), "data-bs-content": getLanguage(ribbons[ribbon].descs) })
+			.append($("<img>", { "src": "img/ribbons-and-marks/" + ribbon + ".png" }));
+		if(ribbons[ribbon].titles){
+			$ribbonBtn.attr("title", "<div>" + $ribbonBtn.attr("title") + "</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons[ribbon].titles) + ")</div>");
 		}
 		$cardRibbons.append($ribbonBtn);
 	}
-	if(ribbonCount == 0 && markCount == 0){
-		$cardRibbons.append($("<div>", { "class": "ms-2" }).text("This Pokémon has no ribbons."));
+	if(!$cardRibbons.find("a").length){
+		$cardRibbons.append($("<div>", { "class": "ms-2" }).text("This Pokémon has no Ribbons or Marks."));
 	}
-	if(!p.ribbons.includes("battle-memory-ribbon") && !p.ribbons.includes("battle-memory-ribbon-gold") && battleMemories.length && currentGen >= 6){
-		if(p.currentgame === "scar" || p.currentgame === "vio" || p.currentgame === "home" || p.currentgame === "homeza"){
+	if(battleMemories.length && mergeMemoryRibbons && !p.ribbons.includes("battle-memory-ribbon") && !p.ribbons.includes("battle-memory-ribbon-gold")){
+		if(currentGameGroup === "10" || p.currentgame === "scar" || p.currentgame === "vio" || p.currentgame === "home"){
 			if(battleMemories.length >= 7){
 				battleMemory = "-gold";
 			}
-		} else if(currentGen === 7){
+		} else if(currentGameGroup === "7"){
 			if(ribbonCountGen7Check >= 8){
 				battleMemory = "-gold";
 			}
@@ -2255,8 +2274,8 @@ function createCard(p, id){
 		$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "</div>");
 		$cardRibbons.append($ribbonBtn);
 	}
-	if(!p.ribbons.includes("contest-memory-ribbon") && !p.ribbons.includes("contest-memory-ribbon-gold") && contestMemories.length && currentGen >= 6){
-		if(currentGen === 7){
+	if(contestMemories.length && mergeMemoryRibbons && !p.ribbons.includes("contest-memory-ribbon") && !p.ribbons.includes("contest-memory-ribbon-gold")){
+		if(currentGameGroup === "7"){
 			if(ribbonCountGen7Check >= 40){
 				contestMemory = "-gold";
 			}
@@ -2268,7 +2287,7 @@ function createCard(p, id){
 		var $ribbonBtn = $("<a>", { "class": "auto-memory-ribbon contest-memory-ribbon" + contestMemory, "tabindex": "0", "role": "button", "data-bs-toggle": "popover", "title": "<div>" + getLanguage(ribbons["contest-memory-ribbon" + contestMemory].names) + " (" + contestMemories.length + ")</div><div class='popover-ribbon-title'>(" + getLanguage(ribbons["contest-memory-ribbon" + contestMemory].titles) + ")</div>", "data-bs-content": getLanguage(ribbons["contest-memory-ribbon" + contestMemory].descs) + "<div class='card-ribbons-memories d-flex flex-wrap mt-2'>" })
 			.append($("<img>", { "src": "img/ribbons-and-marks/contest-memory-ribbon" + contestMemory + ".png" }));
 		for(let m in contestMemories){
-			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<img class='" + contestMemories[m] + "' src='img/ribbons-and-marks/" + contestMemories[m] + ".png' alt='" + getLanguage(ribbons[contestMemories[m]].names) + "'></span>");
+			$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "<img class='" + contestMemories[m] + "' src='img/ribbons-and-marks/" + contestMemories[m] + ".png' alt='" + getLanguage(ribbons[contestMemories[m]].names) + "'>");
 		}
 		$ribbonBtn.attr("data-bs-content", $ribbonBtn.attr("data-bs-content") + "</div>");
 		$cardRibbons.append($ribbonBtn);
@@ -2277,7 +2296,7 @@ function createCard(p, id){
 	
 	/* footer */
 	var $cardFooterTop = $("<div>", { "class": "card-footer-top d-flex justify-content-between" })
-		.append($("<div>").text(ribbonCount + " Ribbon" + (ribbonCount !== 1 ? "s" : "") + (markCount ? ", " + markCount + " Mark" + (markCount !== 1 ? "s" : "") : "")));
+		.append($("<div>", { "class": "card-footer-top-ribbons" }));
 	if(p.box !== -1){
 		$cardCol.attr("data-box", "" + p.box);
 		var boxName = userBoxes[p.box];
@@ -3662,6 +3681,7 @@ function initRun(){
 				return;
 			}
 		}
+		updateRibbonNumbers();
 		$("#sectionTrackerCountTotal").text(userPokemon.length);
 		updatePopovers();
 		sortablePokemon = new Sortable($("#tracker-grid")[0], {
@@ -3811,6 +3831,7 @@ $(function(){
 	});
 	$("#settingsOldRibbons").on("change", function(){
 		changeOldRibbons($(this).val());
+		updateRibbonNumbers();
 	});
 	$("#settingsExtraOriginMarks").on("change", function(){
 		changeExtraOriginMarks($(this).val());
@@ -3835,6 +3856,7 @@ $(function(){
 	for(let i in toggles){
 		$("#settings" + i).on("change", function(){
 			changeCheckToggle(i, $(this).prop("checked") ? "true" : "false", true);
+			if(i === "AutoMemoryRibbons") updateRibbonNumbers();
 		});
 	}
 	/* offcanvas listeners */
