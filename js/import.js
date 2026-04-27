@@ -101,14 +101,14 @@ function processPkx(pk, gen) {
 
     obj.box = -1;
 
-    var affixed = Object.hasOwn(pk, "AffixedRibbon") ? pk.AffixedRibbon : -1;
+    var affixed = pk?.AffixedRibbon ?? -1;
     var title = "";
     if (affixed >= 0) { // 0 is Kalos Champ, so check >= 0 instead of > 0
         var id = getInternalRibbonID6789(affixed);
         // getInternalRibbonID6789 can return once-in-a-lifetime-ribbon, but it doesn't exist in the importmap
         // Filter it out here as a failsafe against hacked imports
         if (id !== "once-in-a-lifetime-ribbon")  
-            title = importmap.ribbons[id].titles[obj.language];
+            title = ribbons[id].titles[obj.language];
     }
     obj.title = title;
 
