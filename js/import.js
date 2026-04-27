@@ -440,7 +440,7 @@ function handlePkxRibbons(pk, gen) {
             var part = parts[j];
 
             for (var i = 0; i < 32; i++) {
-                if ((part >>> i) & 1 == 1) rib.push(getInternalRibbonID45(i + (j + 1) * 32));
+                if ((part >>> i) & 1 == 1) rib.push(getInternalRibbonID45(i + ((j + 1) * 32)));
             }
         }
     }
