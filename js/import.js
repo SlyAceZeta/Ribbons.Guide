@@ -46,7 +46,7 @@ function processPkx(pk, gen) {
         _form = importmap[forms][species][form].replace(obj.species, "")
     }
 
-    var formarg = Object.hasOwn(pk, "FormArgument") ? pk.FormArgument : 0;
+    var formarg = pk?.FormArgument ?? 0;
     if (species === 869 /* Alcremie */) _form += importmap["alcremie-sweets"][formarg];
 
     obj.totem = false;
@@ -89,7 +89,7 @@ function processPkx(pk, gen) {
     var nature = pk.Nature;
     obj.nature = importmap.natures[nature];
 
-    obj.gmax = Object.hasOwn(pk, "CanGigantamax") && pk.CanGigantamax;
+    obj.gmax = pk?.CanGigantamax;
     
     // Prompt user for this later, ideally
     obj.shadow = false;
@@ -112,8 +112,8 @@ function processPkx(pk, gen) {
     }
     obj.title = title;
 
-    var hasScale = Object.hasOwn(pk, "Scale");
-    var hasHeight = Object.hasOwn(pk, "HeightScalar");
+    var hasScale = "Scale" in pk;
+    var hasHeight = "HeightScalar" in pk;
 
     if (hasScale && pk.Scale === 0 || pk.Scale === 255) obj.scale = true;
     else if (hasHeight && pk.HeightScalar === 0 || pk.HeightScalar === 255) obj.scale = true;
