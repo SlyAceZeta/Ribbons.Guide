@@ -738,110 +738,54 @@ function importFiles(files, delay = 150, i = 0){
 	
 	var speciesloc, idsloc, gmaxloc, pidloc, natureloc, fatefulloc, genderloc, formloc, nicknameloc, ogloc, formargloc, otloc, ballloc, langloc, metlevelloc, gen;
 	
-	switch(ext){
+	switch (ext) {
+		// Only need to assign offsets here for file types unsupported by pkmjs
+
 		case ".pk9": // SV
 		case ".pa9": // Z-A
 			if (file.size != 344) return createToast("File size error: " + filename, "danger");
-			speciesloc = 0x08;
-			idsloc = 0x0c;
-			pidloc = 0x1c;
-			natureloc = 0x20;
-			fatefulloc = 0x22;
-			genderloc = 0x22;
-			formloc = 0x24;
-			nicknameloc = 0x58;
-			ogloc = 0xce;
-			formargloc = 0xd0;
-			langloc = 0xd5;
-			otloc = 0xf8;
-			ballloc = 0x124;
-			metlevelloc = 0x125;
 			gen = 9;
 			break;
 			
 		case ".pa8": // PLA
 			if (file.size != 376) return createToast("File size error: " + filename, "danger");
-			speciesloc = 0x08;
-			idsloc = 0x0c;
-			pidloc = 0x1c;
-			natureloc = 0x20;
-			fatefulloc = 0x22;
-			genderloc = 0x22;
-			formloc = 0x24;
-			nicknameloc = 0x60;
-			ogloc = 0xee;
-			langlog = 0xf2;
-			formargloc = 0xf4;
-			otloc = 0x110;
-			ballloc = 0x137;
-			metlevelloc = 0x13d;
 			gen = 8;
 			break;
 			
 		case ".pk8": // SwSh
 		case ".pb8": // BDSP
 			if(file.size != 344) return createToast("File size error: " + filename, "danger");
-			speciesloc = 0x08;
-			idsloc = 0x0c;
-			gmaxloc = 0x16;
-			pidloc = 0x1c;
-			natureloc = 0x20;
-			fatefulloc = 0x22;
-			genderloc = 0x22;
-			formloc = 0x24;
-			nicknameloc = 0x58;
-			ogloc = 0xde;
-			langloc = 0xe2;
-			formargloc = 0xe4;
-			otloc = 0xf8;
-			ballloc = 0x124;
-			metlevelloc = 0x125;
 			gen = 8;
 			break;
 			
 		case ".pk7": // SM/USUM
 			if (file.size != 206) return createToast("File size error: " + filename, "danger");
-			speciesloc = 0x08;
-			idsloc = 0x0c;
-			pidloc = 0x18;
-			natureloc = 0x1c;
-			fatefulloc = 0x1d;
-			genderloc = 0x1d;
-			formloc = 0x1d;
-			formargloc = 0x3c;
-			nicknameloc = 0x40;
-			otloc = 0xb0;
-			ballloc = 0xdc;
-			metlevelloc = 0xdd;
-			ogloc = 0xdf;
-			langloc = 0xe3;
 			gen = 7;
 			break;
 			
 		case ".pk6": // XY/ORAS
 			if (file.size != 206) return createToast("File size error: " + filename, "danger");
-			speciesloc = 0x08;
-			idsloc = 0x0c;
-			pidloc = 0x18;
-			natureloc = 0x1c;
-			fatefulloc = 0x1d;
-			genderloc = 0x1d;
-			formloc = 0x1d;
-			formargloc = 0x3c;
-			nicknameloc = 0x40;
-			otloc = 0xb0;
-			ballloc = 0xdc;
-			metlevel = 0xdd;
-			ogloc = 0xdf;
-			langloc = 0xe3;
 			gen = 6;
+			break;
+		
+		case ".pk5": // BW/B2W2
+			gen = 5;
+			break;
+		
+		case ".pk4": // DPPtHGSS
+			gen = 4;
+			break;
+		
+		case ".pk3": // RSEFRLG
+			gen = 3;
 			break;
 			
 		default:
 			return createToast(filename + " is not a supported file type.", "danger");
 	}
-	
+
 	file.arrayBuffer().then((buf) => {
+		/** @type {pokemon} */
 		var newP = {
 			//species:
 			//gender:
@@ -850,115 +794,156 @@ function importFiles(files, delay = 150, i = 0){
 			//language:
 			//ball:
 			//strangeball:
-			//currentlevel:	TODO
+			//currentlevel:	TODO calc from exp
 			//nature:
 			//totem:
 			//gmax:
-			//shadow:		TODO
+			//shadow:		TODO by user selection, cannot be derived from xk3 without sav
 			//trainername:
 			//trainerid:
 			//originmark:
 			//origingame:
 			//currentgame:	TODO by user selection
 			//box:
-			//title:		TODO
+			//title:
 			//scale:
-			//ribbons:		TODO
+			//ribbons:		TODO partially, need to fix merged ribbons
 			//metlevel:
-			//metdate:		TODO
-			//metlocation:	TODO
-			//pokerus:		TODO
-			//achievements:	TODO
+			//metdate:		
+			//metlocation:	TODO partially, need to map location IDs to strings
+			//pokerus:		
+			//achievements:	TODO by user selection
 			//notes:
 		};
-		
-		var data = new DataView(buf);
-		var devid = data.getUint16(speciesloc, true);
-		var species = gen === 9 ? getSpecies9(devid) : importmap.species[devid];
-		var formdata = data.getUint8(formloc);
-		var formval = gen <= 7 ? formdata >>> 3 : formdata;
-		var form =
-			formval > 0 || devid === 666 || devid === 774 // Vivillon and Minior need special handling because of course they do
-			? importmap.forms[String(getNational9(devid))][formval].replace(species, "")
-			: "";
-		var formarg = data.getUint32(formargloc, true);
-		if (devid === 869) form += importmap["alcremie-sweets"][formarg]; // Special handling for Alcremie Sweets
-		var totem = false;
-		if(form == "-totem"){
-			totem = true;
-			form = "";
+
+		var pk;
+		switch (file.ext) {
+        	case ".pa9":
+          		pk = new pkmjs.PA9(buf);
+          		break;
+        	case ".pk9":
+          		pk = new pkmjs.PK9(buf);
+          		break;
+        	case ".pb8":
+          		pk = new pkmjs.PB8(buf);
+          		break;
+        	case ".pa8":
+          		pk = new pkmjs.PA8(buf);
+          		break;
+        	case ".pk8":
+         		 pk = new pkmjs.PK8(buf);
+          		break;
+        	case ".pb7":
+          		pk = new pkmjs.PB7(buf);
+          		break;
+        	case ".pk7":
+          		pk = new pkmjs.PK7(buf);
+          		break;
+        	case ".pk6":
+          		pk = new pkmjs.PK6(buf);
+          		break;
+        	case ".pk5":
+          		pk = new pkmjs.PK5(buf);
+          		break;
+        	case ".pk4":
+          		pk = new pkmjs.PK4(buf);
+          		break;
+        	case ".pk3":
+         		pk = new pkmjs.PK3(buf);
+         		break;
 		}
-		newP.species = species + form;
-		
-		var genderID = (data.getUint8(genderloc) >>> (gen === 8 ? 2 : 1)) & 0x3;
-		if(genderID == 0){
-			newP.gender = "male";
-		} else if(genderID == 1){
-			newP.gender = "female";
+
+		if (pk != null) {
+			newP = processPkx(pk, gen);
 		} else {
-			newP.gender = "unknown";
-		}
+			var data = new DataView(buf);
+			var devid = data.getUint16(speciesloc, true);
+			var species = gen === 9 ? getSpecies9(devid) : importmap.species[devid];
+			var formdata = data.getUint8(formloc);
+			var formval = gen <= 7 ? formdata >>> 3 : formdata;
+			var form =
+				formval > 0 || devid === 666 || devid === 774 // Vivillon and Minior need special handling because of course they do
+					? importmap.forms[String(getNational9(devid))][formval].replace(species, "")
+					: "";
+			var formarg = data.getUint32(formargloc, true);
+			if (devid === 869) form += importmap["alcremie-sweets"][formarg]; // Special handling for Alcremie Sweets
+			var totem = false;
+			if (form == "-totem") {
+				totem = true;
+				form = "";
+			}
+			newP.species = species + form;
 		
-		var ogval = data.getUint8(ogloc);
-		var pid = data.getUint32(pidloc, true);
-		var ids = data.getUint32(idsloc, true);
-		var tid5 = ids & 0xffff;
-		var sid5 = ids >>> 16;
-		var fullid = sid5 * 65536 + tid5;
-		var tid7 = fullid % 1000000;
-		var sid7 = ~~(fullid / 1000000);
-		var tid =
-			(ogval >= 30 && ogval <= 34) || ogval >= 42 // Exclude VC
-			? tid7.toString().padStart(6, "0")
-			: tid5.toString().padStart(5, "0");
-		var fateful = (data.getUint8(fatefulloc) & 1) === 1;
-		var shinyxor = (pid >>> 16) ^ (pid & 0xffff) ^ tid5 ^ sid5;
-		newP.shiny =
-			(shinyxor < 16 && fateful) || shinyxor === 0
-			? "square"
-			: shinyxor < 16
-			? "star"
-			: "";
+			var genderID = (data.getUint8(genderloc) >>> (gen === 8 ? 2 : 1)) & 0x3;
+			if (genderID == 0) {
+				newP.gender = "male";
+			} else if (genderID == 1) {
+				newP.gender = "female";
+			} else {
+				newP.gender = "unknown";
+			}
 		
-		var langid = data.getUint8(langloc);
+			var ogval = data.getUint8(ogloc);
+			var pid = data.getUint32(pidloc, true);
+			var ids = data.getUint32(idsloc, true);
+			var tid5 = ids & 0xffff;
+			var sid5 = ids >>> 16;
+			var fullid = sid5 * 65536 + tid5;
+			var tid7 = fullid % 1000000;
+			var sid7 = ~~(fullid / 1000000);
+			var tid =
+				(ogval >= 30 && ogval <= 34) || ogval >= 42 // Exclude VC
+					? tid7.toString().padStart(6, "0")
+					: tid5.toString().padStart(5, "0");
+			var fateful = (data.getUint8(fatefulloc) & 1) === 1;
+			var shinyxor = (pid >>> 16) ^ (pid & 0xffff) ^ tid5 ^ sid5;
+			newP.shiny =
+				(shinyxor < 16 && fateful) || shinyxor === 0
+					? "square"
+					: shinyxor < 16
+						? "star"
+						: "";
+		
+			var langid = data.getUint8(langloc);
 
-		var metlevel = data.getUint8(metlevelloc) & ~0x80;
+			var metlevel = data.getUint8(metlevelloc) & ~0x80;
 		
-		newP.ball = importmap.balls[data.getUint8(ballloc)];
-		newP.strangeball = "";
+			newP.ball = importmap.balls[data.getUint8(ballloc)];
+			newP.strangeball = "";
 		
-		newP.nature = importmap.natures[data.getUint8(natureloc)];
+			newP.nature = importmap.natures[data.getUint8(natureloc)];
 		
-		newP.totem = totem;
-		newP.gmax = gmaxloc ? (data.getUint8(gmaxloc) & 16) !== 0 : false;
+			newP.totem = totem;
+			newP.gmax = gmaxloc ? (data.getUint8(gmaxloc) & 16) !== 0 : false;
 		
-		var otarrbuf = buf.slice(otloc, otloc + 26);
-		newP.trainername = getStringFromBuffer(new DataView(otarrbuf));
-		newP.trainerid = tid;
+			var otarrbuf = buf.slice(otloc, otloc + 26);
+			newP.trainername = getStringFromBuffer(new DataView(otarrbuf));
+			newP.trainerid = tid;
 
-		newP.language = importmap.languages[langid];
+			newP.language = importmap.languages[langid];
 		
-		var nickarrbuf = buf.slice(nicknameloc, nicknameloc + 26);
-		var nickname = getStringFromBuffer(new DataView(nickarrbuf));
-		var speciesName = getLanguage(getPokemonData(newP.species, "names"), newP.language);
-		if(nickname === speciesName) nickname = "";
-		newP.nickname = nickname;
+			var nickarrbuf = buf.slice(nicknameloc, nicknameloc + 26);
+			var nickname = getStringFromBuffer(new DataView(nickarrbuf));
+			var speciesName = getLanguage(getPokemonData(newP.species, "names"), newP.language);
+			if (nickname === speciesName) nickname = "";
+			newP.nickname = nickname;
 
-		newP.metlevel = metlevel;
+			newP.metlevel = metlevel;
 		
-		if(importmap.originmarks[ogval]){
-			newP.originmark = importmap.originmarks[ogval];
+			if (importmap.originmarks[ogval]) {
+				newP.originmark = importmap.originmarks[ogval];
+			}
+			if (importmap.origingames[ogval]) {
+				newP.origingame = importmap.origingames[ogval];
+			} else {
+				newP.origingame = "";
+			}
+			newP.currentgame = "";
+			newP.box = -1;
+			newP.scale = false;
+			newP.achievements = [];
+			newP.notes = "";
 		}
-		if(importmap.origingames[ogval]){
-			newP.origingame = importmap.origingames[ogval];
-		} else {
-			newP.origingame = "";
-		}
-		newP.currentgame = "";
-		newP.box = -1;
-		newP.scale = false;
-		newP.achievements = [];
-		newP.notes = "";
 		
 		var speciesSprite = newP.species;
 		const spriteSourceCheck = getPokemonData(speciesSprite, "sprite-source", true);
