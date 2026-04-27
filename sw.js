@@ -1,4 +1,4 @@
-const APP_CACHE = "app-2026-04-27-0";
+const APP_CACHE = "app-2026-04-27-1";
 const ASSET_CACHE = "assets-v1";
 
 // helper function to create a timeout for fetch requests
@@ -24,11 +24,13 @@ const fetchWithTimeout = (request, timeoutSeconds) => {
 // on installation
 self.addEventListener("install", (event) => {
 	// precache index.html for spinner
-	event.waitUntil(
-		caches.open(APP_CACHE).then((cache) => cache.addAll(["/", "/index.html"]))
+	const requests = ["/", "/index.html"].map(
+		(url) => new Request(url, { cache: "no-cache" })
 	);
 	
-	self.skipWaiting();
+	event.waitUntil(
+		caches.open(APP_CACHE).then((cache) => cache.addAll(requests))
+	);
 });
 
 // on activation
@@ -85,4 +87,11 @@ self.addEventListener("fetch", (event) => {
 			});
 		})
 	);
+});
+
+// on message received from app
+self.addEventListener("message", (event) => {
+	if(event.data && event.data.type === "SKIP_WAITING"){
+		self.skipWaiting();
+	}
 });

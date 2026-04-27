@@ -256,7 +256,7 @@ for(let i in toggles){
 	}
 }
 
-function createToast(message, type = "primary", delay = 5000){
+function createToast(message, type = "primary", delay = 5000, closeable = true, $buttons){
 	let toastDelay = 'data-bs-delay="' + delay + '"';
 	if(!delay){
 		toastDelay = 'data-bs-autohide="false"';
@@ -267,11 +267,18 @@ function createToast(message, type = "primary", delay = 5000){
 				<div class="toast-body">
 					${message}
 				</div>
-				<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
 			</div>
 		</div>`;
 	
 	const $toastElement = $(toastHTML).appendTo("#toast-container");
+	if(closeable){
+		$toastElement.find(".toast-body").after($("<button>", { "type": "button", "class": "btn-close btn-close-white me-2 m-auto", "data-bs-dismiss": "toast", "aria-label": "Close" }));
+	} else {
+		$toastElement.find(".d-flex").addClass("w-100");
+	}
+	if($buttons){
+		$toastElement.find(".toast-body").append($buttons);
+	}
 	const toast = new bootstrap.Toast($toastElement[0]);
 	toast.show();
 	
@@ -279,6 +286,20 @@ function createToast(message, type = "primary", delay = 5000){
 		$(this).remove();
 	});
 }
+
+/* service worker update */
+window.addEventListener("pwa-update-available", (event) => {
+	const newWorker = event.detail;
+	
+	const $button = $("<button>", { "type": "button", "class": "btn btn-success btn-sm" }).text("Click here to update!");
+	$button.on("click", function(){
+		newWorker.postMessage({ type: "SKIP_WAITING" });
+	})
+	
+	const $buttons = $("<div>", { "class": "mt-2" }).append($button);
+	
+	createToast("A new version of Ribbons.Guide is now available!", "primary", 0, false, $buttons);
+});
 
 /* Dropbox URL helper utilities */
 (function (window) {

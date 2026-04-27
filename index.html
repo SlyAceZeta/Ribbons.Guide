@@ -18,6 +18,32 @@
 			window.addEventListener("load", () => {
 				navigator.serviceWorker.register("sw.js").then(reg => {
 					reg.update();
+					
+					// if a service worker update is already pending, notify about the update
+					if(reg.waiting){
+						window.dispatchEvent(new CustomEvent("pwa-update-available", { detail: reg.waiting }));
+					}
+					
+					// if a new service worker is found and installs...
+					reg.addEventListener("updatefound", () => {
+						const newWorker = reg.installing;
+						newWorker.addEventListener("statechange", () => {
+							// ...and if there's an existing service worker, notify about the update
+							if(newWorker.state === "installed" && navigator.serviceWorker.controller){
+								window.dispatchEvent(new CustomEvent("pwa-update-available", { detail: newWorker }));
+							}
+						});
+					});
+				});
+				
+				// when notification is clicked to refresh, perform the refresh
+				// this also forces other tabs to refresh if the user performs the update
+				let refreshing = false;
+				navigator.serviceWorker.addEventListener("controllerchange", () => {
+					if(!refreshing){
+						window.location.reload();
+						refreshing = true;
+					}
 				});
 			});
 		}

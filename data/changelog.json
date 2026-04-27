@@ -11,7 +11,8 @@
 			"Fixed a bug where the triangles in the sorting dropdown looked inconsistent across devices and browsers",
 			"Fixed an unreported bug where Pokémon with only Memory Ribbons would still display text saying they had no Ribbons",
 			"Attempting to fix a bug where opening a Ribbon Checklist or the add/edit form could show an outdated sprite for a different Pokémon",
-			"Updated documentation for running Ribbons.Guide locally to specify that you need a local web server"
+			"Updated documentation for running Ribbons.Guide locally to specify that you need a local web server",
+			"This update was re-released to introduce a new update notification with an update button, to prevent situations where only part of the app updated upon refresh (thanks Randomdice101!)"
 		]
 	},
 	{
