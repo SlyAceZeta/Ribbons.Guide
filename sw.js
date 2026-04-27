@@ -1,4 +1,4 @@
-const APP_CACHE = "app-2026-04-24-0";
+const APP_CACHE = "app-2026-04-27-0";
 const ASSET_CACHE = "assets-v1";
 
 // helper function to create a timeout for fetch requests

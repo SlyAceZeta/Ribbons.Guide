@@ -1,5 +1,20 @@
 [
 	{
+		"date": "27 April 2026",
+		"changes": [
+			"Volcanion can now be Shiny",
+			"The add/edit form's Title dropdown now only shows titles from selected Ribbons, not the entire list (thanks Nexus!)",
+			"The Ribbon Checklist now groups games in a transfer-compatible pool together, making it clearer how far you can currently transfer a Pokémon",
+			"A Pokémon's displayed number of Ribbons/Marks now adds both numbers and only shows how many are visible on the card, respecting user settings regarding Memory Ribbons and the Ribbons that merge into them (thanks UnknownWarrior!)",
+			"Selecting Memory Ribbons manually will now still display all selected Ribbons that merge into them in the popup, similar to the automatic Memory Ribbons (thanks Josh Lemmy!)",
+			"When filtering by games a Pokémon can go to, the games are now listed individually and multiple games can be selected; as with other filters, Pokémon must fulfill all filter requirements to appear",
+			"Fixed a bug where the triangles in the sorting dropdown looked inconsistent across devices and browsers",
+			"Fixed an unreported bug where Pokémon with only Memory Ribbons would still display text saying they had no Ribbons",
+			"Attempting to fix a bug where opening a Ribbon Checklist or the add/edit form could show an outdated sprite for a different Pokémon",
+			"Updated documentation for running Ribbons.Guide locally to specify that you need a local web server"
+		]
+	},
+	{
 		"date": "24 April 2026",
 		"changes": [
 			"Searching for a Pokémon, Ribbon, etc. now only searches the user's current language",

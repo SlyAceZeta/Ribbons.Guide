@@ -35205,8 +35205,7 @@
 			"vio"
 		],
 		"flags": [
-			"restricted",
-			"shinyLocked"
+			"restricted"
 		]
 	},
 	"rowlet": {
