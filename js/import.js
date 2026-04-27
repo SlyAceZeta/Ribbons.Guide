@@ -3,6 +3,7 @@
  * @property {string} species
  * @property {string} gender
  * @property {string} shiny
+ * @property {string} speciesName
  * @property {string} nickname
  * @property {string?} language
  * @property {string} ball
@@ -40,7 +41,7 @@ function processPkx(pk, gen) {
     obj.species = importmap.species[species];
 
     var form = pk.Form;
-    var _form;
+    var _form = "";
     if (form > 0 || species === 666 /* Vivillon */ || species === 774 /* Minior */) {
         _form = importmap[forms][species][form].replace(obj.species, "")
     }
@@ -61,31 +62,32 @@ function processPkx(pk, gen) {
 
     var origingame = pk.Version;
     var _origingame = importmap.origingames[origingame];
-    pk.origingame = !!_origingame ? _origingame : ""; // safe to check with !! because 0 (falsey) is normalized to the game name at this point
+    obj.origingame = !!_origingame ? _origingame : ""; // safe to check with !! because 0 (falsey) is normalized to the game name at this point
 
     var shiny = pk.IsSquareShiny ? "square" : pk.IsStarShiny ? "star" : "";
-    pk.shiny = shiny;
+    obj.shiny = shiny;
 
     var language = pk.Language;
     obj.language = importmap.languages[language];
 
     var nickname = pk.Nickname;
     var _name = getLanguage(getPokemonData(obj.species, "names"), obj.language);
-    pk.nickname = nickname !== _name ? nickname : "";
+    obj.speciesName = _name;
+    obj.nickname = nickname !== _name ? nickname : "";
 
     var ball = pk.Ball;
     obj.ball = importmap.balls[ball];
     obj.strangeball = "";
 
     // TODO: Calculate this
-    // Maybe add growth rates to /data/pokemon.json ?
+    // Maybe add growth rates to /data/pokemon.json ? See #159
     // var exp = pk.EXP;
     // var level = getLevel(exp, growthrates[species]);
     // obj.currentlevel = level;
-    obj.currentlevel = 100;
+    obj.currentlevel = -1;
 
     var nature = pk.Nature;
-    obj.nature = importmap.natures[data.getUint8(nature)];
+    obj.nature = importmap.natures[nature];
 
     obj.gmax = Object.hasOwn(pk, "CanGigantamax") && pk.CanGigantamax;
     
@@ -95,7 +97,7 @@ function processPkx(pk, gen) {
     obj.trainername = pk.OriginalTrainerName;
     obj.trainerid =
         (origingame >= 30 && origingame <= 34) || origingame >= 42 ?
-            (pk.ID32 % 1_0000_000).toString().padStart(6, "0") : (pk.TID16).toString().padStart(5, "0");
+            (pk.ID32 % 1_000_000).toString().padStart(6, "0") : (pk.TID16).toString().padStart(5, "0");
 
     obj.box = -1;
 
@@ -119,7 +121,7 @@ function processPkx(pk, gen) {
 
     obj.metlevel = pk.MetLevel;
 
-    obj.metdate = pk.MetYear + "-" + pk.MetMonth + "-" + pk.MetDay;
+    obj.metdate = "20" + pk.MetYear + "-" + pk.MetMonth + "-" + pk.MetDay;
 
     var metlocation = pk.MetLocation; // TODO: Make this human-readable instead of just an ID
     obj.metlocation = metlocation;

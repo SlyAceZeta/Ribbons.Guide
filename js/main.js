@@ -817,7 +817,7 @@ function importFiles(files, delay = 150, i = 0){
 		};
 
 		var pk;
-		switch (file.ext) {
+		switch (ext) {
         	case ".pa9":
           		pk = new pkmjs.PA9(buf);
           		break;
