@@ -222,6 +222,7 @@ var toggles = { // default settings
 	"AutoStrangeBall": true,
 	"FooterExtraInfo": true,
 	"CompleteColor": true,
+	"IllegalTitles": false,
 	"Reordering": true,
 	"NewChangelogs": true,
 	"AprilFools": true
@@ -230,7 +231,7 @@ var toggles = { // default settings
 function changeCheckToggle(name, value, reload = false){
 	changeSetting(name, "" + value);
 	if(name !== "AprilFools" && name !== "ShowWorldAbility") $("html").attr("data-" + name.toLowerCase(), "" + value);
-	if(reload && name == "AprilFools"){
+	if(reload && (name == "AprilFools" || name == "IllegalTitles")){
 		modalSettings.toggle();
 		new bootstrap.Modal("#modalReloading").toggle();
 		console.log("reload A: name = " + name + ", value = " + value + ", reload = " + reload);
@@ -1753,7 +1754,7 @@ function editPokemon(event){
 	for(var r in pokemonToEdit.ribbons){
 		$("#pokemonFormRibbon-" + pokemonToEdit.ribbons[r]).prop("checked", true).trigger("change");
 	}
-	if($("#pokemonFormTitle option[value='" + pokemonToEdit.title + "']").length){
+	if(settings.IllegalTitles == "true" || $("#pokemonFormTitle option[value='" + pokemonToEdit.title + "']").length){
 		$("#pokemonFormTitle").val(pokemonToEdit.title).trigger("change");
 	} else {
 		$("#pokemonFormTitle").val("None").trigger("change");
@@ -1761,7 +1762,7 @@ function editPokemon(event){
 		if(ribbons[pokemonToEdit.title].mark){
 			ribbonType = "Mark";
 		}
-		createToast("This Pokémon's title was reset because it does not have the required " + ribbonType + ".", "danger", 10000);
+		createToast("This Pokémon's title was reset because it does not have the required " + ribbonType + ". You can change this behavior in Settings.", "danger", 15000);
 		$("#pokemonFormTabs-ribbons").trigger("click");
 	}
 	if(pokemonToEdit.metlevel) $("#pokemonFormMetLevel").val(pokemonToEdit.metlevel);
@@ -3333,6 +3334,11 @@ function initRun(){
 			$ribbonRowMulti = $(ribbonRowMultiHtml);
 			$("#pokemonFormMultiRibbons").append($ribbonRowMulti);
 			
+			if(settings.IllegalTitles == "true" && ribbons[r].titles){
+				var $titleOption = $("<option>", { "value": r }).text(getLanguage(ribbons[r].titles));
+				$("#pokemonFormTitle").append($titleOption);
+			}
+			
 			$("#imageHoldingArea").append($("<img>", { "src": "img/ribbons-and-marks/" + r + ".png" }));
 		}
 		ribbonOrder = Object.keys(ribbons);
@@ -3340,6 +3346,8 @@ function initRun(){
 			var $natureOption = $("<option>", { "value": n }).text(getLanguage(natures[n]));
 			$("#pokemonFormNature").append($natureOption);
 		}
+		/* add sorting triangle to image holding area */
+		$("#imageHoldingArea").append($("<img>", { "src": "img/ui/triangle.svg" }));
 		/* apply select2 dropdowns */
 		$("#pokemonFormMultiCurrentGame").select2({
 			matcher: selectCustomMatcherWithGroups,
@@ -3464,7 +3472,7 @@ function initRun(){
 					$("#pokemonFormRibbon-contest-memory-ribbon-gold").prop({ "disabled": false });
 				}
 			}
-			if(ribbons[ribbon].titles){
+			if(settings.IllegalTitles == "false" && ribbons[ribbon].titles){
 				const $dropdown = $("#pokemonFormTitle");
 				const currentTitle = $dropdown.val();
 				if($("#pokemonFormRibbon-" + ribbon).prop("checked")){
