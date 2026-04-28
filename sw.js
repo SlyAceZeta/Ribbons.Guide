@@ -1,29 +1,9 @@
 const APP_CACHE = "app-2026-04-27-1";
 const ASSET_CACHE = "assets-v1";
 
-// helper function to create a timeout for fetch requests
-const fetchWithTimeout = (request, timeoutSeconds) => {
-	return new Promise((resolve, reject) => {
-		const timeoutId = setTimeout(() => {
-			reject(new Error("Network timeout"));
-		}, timeoutSeconds * 1000);
-		
-		fetch(request, { cache: "no-cache" }).then(
-			(response) => {
-				clearTimeout(timeoutId);
-				resolve(response);
-			},
-			(error) => {
-				clearTimeout(timeoutId);
-				reject(error);
-			}
-		);
-	});
-};
-
 // on installation
 self.addEventListener("install", (event) => {
-	// precache index.html for spinner
+	// precache index.html
 	const requests = ["/", "/index.html"].map(
 		(url) => new Request(url, { cache: "no-cache" })
 	);
@@ -47,7 +27,6 @@ self.addEventListener("activate", (event) => {
 			);
 		})
 	);
-	self.clients.claim();
 });
 
 // on asset fetch
@@ -65,25 +44,19 @@ self.addEventListener("fetch", (event) => {
 	
 	event.respondWith(
 		caches.match(cacheKey).then((cached) => {
-			// load images and fonts from cache first to avoid flickering as much as possible
-			if(isAsset && cached) return cached;
+			// load everything from cache first if it exists
+			if(cached) return cached;
 			
-			// otherwise, pull from network with a 3 second timeout
-			return fetchWithTimeout(event.request, 3).then((response) => {
-				// ensure the asset was actually retrieved
+			// otherwise, fetch from network, cache, and return
+			return fetch(event.request).then((response) => {
 				if(response.ok){
 					const clone = response.clone();
 					caches.open(targetCache).then(c => c.put(cacheKey, clone));
 				}
 				return response;
 			}).catch(() => {
-				// if network fails or times out, fall back to cache
-				if(cached) return cached;
-				// if cache was cleared and network failed, return error
-				return new Response("Network timeout and no cache available.", { 
-					status: 504, 
-					statusText: "Gateway Timeout" 
-				});
+				// if user is offline and this asset isn't cached, fail
+				return new Response("Asset offline", { status: 503, statusText: "Service Unavailable" });
 			});
 		})
 	);
