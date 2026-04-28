@@ -1,5 +1,5 @@
 /* globals */
-var balls, changelog, games, gameOrder = {}, gameGroups, importmap, origins, pokemon, ribbons, ribbonOrder, translations, forms, natures, modalSettings, modalData, modalDataCompare, modalCheckDropbox, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off", DROPBOX_CLIENT_ID = "xxvozybw2lp9ycy", dropbox_auth_url, backupPokemon = [], backupBoxes = [], backupLastModified = 0, backupSettings = {}, dbx;
+var balls, changelog, games, gameOrder = {}, gameGroups, origins, pokemon, ribbons, ribbonOrder, translations, forms, natures, modalSettings, modalData, modalDataCompare, modalCheckDropbox, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off", DROPBOX_CLIENT_ID = "xxvozybw2lp9ycy", dropbox_auth_url, backupPokemon = [], backupBoxes = [], backupLastModified = 0, backupSettings = {}, dbx;
 // voiced BDSP species that can evolve into voiceless BDSP species
 const evolveVoicelessMap = {"caterpie": ["metapod"], "weedle": ["kakuna"], "venonat": ["venomoth"], "natu": ["xatu"], "larvitar": ["pupitar"], "wurmple": ["silcoon", "cascoon"], "bagon": ["shelgon"]};
 // voiceless BDSP species (and voiced BDSP species that can evolve into voiceless BDSP species) that can evolve into voiced BDSP species
@@ -720,295 +720,6 @@ function loadBackupFile(file, online = false){
 		}
 	}
 	reader.readAsText(file);
-}
-
-/* import Pokémon files */
-/* massive credit to https://github.com/PSWiFi/PSWiFi.github.io/tree/master/misc/pkparse */
-function getStringFromBuffer(data) {
-	var res = "";
-	for (var i = 0; i < 26; i += 2) {
-		var char = data.getUint16(i, true);
-		if (char == 0) break;
-		res += String.fromCharCode(char);
-	}
-	return res;
-}
-
-var gen9First = 917;
-var gen9Table = [
-	65, -1, -1, -1, -1, 31, 31, 47, 47, 29, 29, 53, 31, 31, 46, 44, 30, 30, -7,
-	-7, -7, 13, 13, -2, -2, 23, 23, 24, -21, -21, 27, 27, 47, 47, 47, 26, 14, -33,
-	-33, -33, -17, -17, 3, -29, 12, -12, -31, -31, -31, 3, 3, -24, -24, -44, -44,
-	-30, -30, -28, -28, 23, 23, 6, 7, 29, 8, 3, 4, 4, 20, 4, 23, 6, 3, 3, 4, -1,
-	13, 9, 7, 5, 7, 9, 9, -43, -43, -43, -68, -68, -68, -58, -58, -25, -29, -31,
-	6, -1, 6, 0, 0, 0, 3, 3, 4, 2, 3, 3, -5, -12, -12,
-];
-function getSpecies9(id) {
-	return importmap.species[getNational9(id)];
-}
-function getNational9(raw) {
-	if (raw < gen9First) return raw;
-	return raw + gen9Table[raw - gen9First];
-}
-
-function importFiles(files, delay = 150, i = 0){
-	if(i >= files.length){ return; }
-	
-	var file = files[i];
-	var filename = file.name;
-	var ext = filename.substring(filename.lastIndexOf("."));
-	
-	var speciesloc, idsloc, gmaxloc, pidloc, natureloc, fatefulloc, genderloc, formloc, nicknameloc, ogloc, formargloc, otloc, ballloc, langloc, metlevelloc, gen;
-	
-	switch(ext){
-		case ".pk9": // SV
-		case ".pa9": // Z-A
-			if (file.size != 344) return createToast("File size error: " + filename, "danger");
-			speciesloc = 0x08;
-			idsloc = 0x0c;
-			pidloc = 0x1c;
-			natureloc = 0x20;
-			fatefulloc = 0x22;
-			genderloc = 0x22;
-			formloc = 0x24;
-			nicknameloc = 0x58;
-			ogloc = 0xce;
-			formargloc = 0xd0;
-			langloc = 0xd5;
-			otloc = 0xf8;
-			ballloc = 0x124;
-			metlevelloc = 0x125;
-			gen = 9;
-			break;
-			
-		case ".pa8": // PLA
-			if (file.size != 376) return createToast("File size error: " + filename, "danger");
-			speciesloc = 0x08;
-			idsloc = 0x0c;
-			pidloc = 0x1c;
-			natureloc = 0x20;
-			fatefulloc = 0x22;
-			genderloc = 0x22;
-			formloc = 0x24;
-			nicknameloc = 0x60;
-			ogloc = 0xee;
-			langlog = 0xf2;
-			formargloc = 0xf4;
-			otloc = 0x110;
-			ballloc = 0x137;
-			metlevelloc = 0x13d;
-			gen = 8;
-			break;
-			
-		case ".pk8": // SwSh
-		case ".pb8": // BDSP
-			if(file.size != 344) return createToast("File size error: " + filename, "danger");
-			speciesloc = 0x08;
-			idsloc = 0x0c;
-			gmaxloc = 0x16;
-			pidloc = 0x1c;
-			natureloc = 0x20;
-			fatefulloc = 0x22;
-			genderloc = 0x22;
-			formloc = 0x24;
-			nicknameloc = 0x58;
-			ogloc = 0xde;
-			langloc = 0xe2;
-			formargloc = 0xe4;
-			otloc = 0xf8;
-			ballloc = 0x124;
-			metlevelloc = 0x125;
-			gen = 8;
-			break;
-			
-		case ".pk7": // SM/USUM
-			if (file.size != 206) return createToast("File size error: " + filename, "danger");
-			speciesloc = 0x08;
-			idsloc = 0x0c;
-			pidloc = 0x18;
-			natureloc = 0x1c;
-			fatefulloc = 0x1d;
-			genderloc = 0x1d;
-			formloc = 0x1d;
-			formargloc = 0x3c;
-			nicknameloc = 0x40;
-			otloc = 0xb0;
-			ballloc = 0xdc;
-			metlevelloc = 0xdd;
-			ogloc = 0xdf;
-			langloc = 0xe3;
-			gen = 7;
-			break;
-			
-		case ".pk6": // XY/ORAS
-			if (file.size != 206) return createToast("File size error: " + filename, "danger");
-			speciesloc = 0x08;
-			idsloc = 0x0c;
-			pidloc = 0x18;
-			natureloc = 0x1c;
-			fatefulloc = 0x1d;
-			genderloc = 0x1d;
-			formloc = 0x1d;
-			formargloc = 0x3c;
-			nicknameloc = 0x40;
-			otloc = 0xb0;
-			ballloc = 0xdc;
-			metlevel = 0xdd;
-			ogloc = 0xdf;
-			langloc = 0xe3;
-			gen = 6;
-			break;
-			
-		default:
-			return createToast(filename + " is not a supported file type.", "danger");
-	}
-	
-	file.arrayBuffer().then((buf) => {
-		var newP = {
-			//species:
-			//gender:
-			//shiny:
-			//nickname:
-			//language:
-			//ball:
-			//strangeball:
-			//currentlevel:	TODO
-			//nature:
-			//totem:
-			//gmax:
-			//shadow:		TODO
-			//trainername:
-			//trainerid:
-			//originmark:
-			//origingame:
-			//currentgame:	TODO by user selection
-			//box:
-			//title:		TODO
-			//scale:
-			//ribbons:		TODO
-			//metlevel:
-			//metdate:		TODO
-			//metlocation:	TODO
-			//pokerus:		TODO
-			//achievements:	TODO
-			//notes:
-		};
-		
-		var data = new DataView(buf);
-		var devid = data.getUint16(speciesloc, true);
-		var species = gen === 9 ? getSpecies9(devid) : importmap.species[devid];
-		var formdata = data.getUint8(formloc);
-		var formval = gen <= 7 ? formdata >>> 3 : formdata;
-		var form =
-			formval > 0 || devid === 666 || devid === 774 // Vivillon and Minior need special handling because of course they do
-			? importmap.forms[String(getNational9(devid))][formval].replace(species, "")
-			: "";
-		var formarg = data.getUint32(formargloc, true);
-		if (devid === 869) form += importmap["alcremie-sweets"][formarg]; // Special handling for Alcremie Sweets
-		var totem = false;
-		if(form == "-totem"){
-			totem = true;
-			form = "";
-		}
-		newP.species = species + form;
-		
-		var genderID = (data.getUint8(genderloc) >>> (gen === 8 ? 2 : 1)) & 0x3;
-		if(genderID == 0){
-			newP.gender = "male";
-		} else if(genderID == 1){
-			newP.gender = "female";
-		} else {
-			newP.gender = "unknown";
-		}
-		
-		var ogval = data.getUint8(ogloc);
-		var pid = data.getUint32(pidloc, true);
-		var ids = data.getUint32(idsloc, true);
-		var tid5 = ids & 0xffff;
-		var sid5 = ids >>> 16;
-		var fullid = sid5 * 65536 + tid5;
-		var tid7 = fullid % 1000000;
-		var sid7 = ~~(fullid / 1000000);
-		var tid =
-			(ogval >= 30 && ogval <= 34) || ogval >= 42 // Exclude VC
-			? tid7.toString().padStart(6, "0")
-			: tid5.toString().padStart(5, "0");
-		var fateful = (data.getUint8(fatefulloc) & 1) === 1;
-		var shinyxor = (pid >>> 16) ^ (pid & 0xffff) ^ tid5 ^ sid5;
-		newP.shiny =
-			(shinyxor < 16 && fateful) || shinyxor === 0
-			? "square"
-			: shinyxor < 16
-			? "star"
-			: "";
-		
-		var langid = data.getUint8(langloc);
-
-		var metlevel = data.getUint8(metlevelloc) & ~0x80;
-		
-		newP.ball = importmap.balls[data.getUint8(ballloc)];
-		newP.strangeball = "";
-		
-		newP.nature = importmap.natures[data.getUint8(natureloc)];
-		
-		newP.totem = totem;
-		newP.gmax = gmaxloc ? (data.getUint8(gmaxloc) & 16) !== 0 : false;
-		
-		var otarrbuf = buf.slice(otloc, otloc + 26);
-		newP.trainername = getStringFromBuffer(new DataView(otarrbuf));
-		newP.trainerid = tid;
-
-		newP.language = importmap.languages[langid];
-		
-		var nickarrbuf = buf.slice(nicknameloc, nicknameloc + 26);
-		var nickname = getStringFromBuffer(new DataView(nickarrbuf));
-		var speciesName = getLanguage(getPokemonData(newP.species, "names"), newP.language);
-		if(nickname === speciesName) nickname = "";
-		newP.nickname = nickname;
-
-		newP.metlevel = metlevel;
-		
-		if(importmap.originmarks[ogval]){
-			newP.originmark = importmap.originmarks[ogval];
-		}
-		if(importmap.origingames[ogval]){
-			newP.origingame = importmap.origingames[ogval];
-		} else {
-			newP.origingame = "";
-		}
-		newP.currentgame = "";
-		newP.box = -1;
-		newP.scale = false;
-		newP.achievements = [];
-		newP.notes = "";
-		
-		var speciesSprite = newP.species;
-		const spriteSourceCheck = getPokemonData(speciesSprite, "sprite-source", true);
-		if(spriteSourceCheck) speciesSprite = spriteSourceCheck;
-		var genderDirectory = (getPokemonData(speciesSprite, "femsprite") && newP.gender === "female") ? "female/" : "";
-		if(speciesSprite.startsWith("alcremie-") && newP.shiny){
-			var alcremieRegex = /caramel|lemon|matcha|mint|rainbow|rubycream|rubyswirl|salted|vanilla/;
-			speciesSprite = speciesSprite.replace(alcremieRegex, "").replace("--", "-").replace("-strawberry", "");
-		}
-		
-		$("#modalImportPokemonList").append("<div class='my-1 py-1 border-top d-flex'>" +
-			"<img src='img/pkmn/" + (newP.shiny ? "shiny" : "regular") + "/" + genderDirectory + speciesSprite + ".png' class='me-2' style='height:80px'>" + 
-			"<div>" + 
-				"<div class='fs-5'>" +
-					"<img src='img/balls/" + newP.ball + ".png' style='height:24px'>" +
-					"<span class='ms-2 fw-bold align-middle'>" + (newP.nickname.length ? newP.nickname : speciesName) + "</span>" +
-				"</div>" +
-				"<div>OT: " + newP.trainername + "&nbsp;&nbsp;&nbsp;ID: " + newP.trainerid + "</div>" +
-				"<div>Origin Game: " + (newP.origingame ? getLanguage(getGameData(newP.origingame, "names")) : "<em>unknown</em>") + "</div>" +
-			"</div>" +
-		"</div>");
-	});
-	
-	i++;
-	
-	setTimeout(() => {
-		importFiles(files, delay, i);
-	}, delay);
 }
 
 function getGameData(game, field, doNotSearch = false){
@@ -3122,7 +2833,6 @@ function initRun(){
 		$.getJSON("./data/changelog.json"),
 		$.getJSON("./data/games.json"),
 		$.getJSON("./data/gamegroups.json"),
-		$.getJSON("./data/importmap.json"),
 		$.getJSON("./data/origins.json"),
 		$.getJSON("./data/pokemon.json"),
 		$.getJSON("./data/ribbons.json"),
@@ -3143,13 +2853,12 @@ function initRun(){
 		}
 		$errortext.append($("<div>").html("Please inform Sly on <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a> or <a href='https://discord.gg/frv7dpWzDG'>Discord</a>."));
 		$("#loading-spinner-info").html($errorimg).append($errortext);
-	}).done(function(dataBalls, dataChangelog, dataGames, dataGameGroups, dataImportMap, dataOrigins, dataPokemon, dataRibbons, dataTranslations){
+	}).done(function(dataBalls, dataChangelog, dataGames, dataGameGroups, dataOrigins, dataPokemon, dataRibbons, dataTranslations){
 		/* set variables */
 		balls = dataBalls[0];
 		changelog = dataChangelog[0];
 		games = dataGames[0];
 		gameGroups = dataGameGroups[0];
-		importmap = dataImportMap[0];
 		origins = dataOrigins[0];
 		pokemon = dataPokemon[0];
 		ribbons = dataRibbons[0];
@@ -3910,7 +3619,6 @@ $(function(){
 	modalData = new bootstrap.Modal("#modalData");
 	modalDataCompare = new bootstrap.Modal("#modalDataCompare");
 	modalCheckDropbox = new bootstrap.Modal("#modalCheckDropbox");
-	modalImport = new bootstrap.Modal("#modalImport");
 	/* dropdown listeners */
 	$("#settingsTheme").on("change", function(){
 		changeTheme($(this).val());
@@ -4038,19 +3746,6 @@ $(function(){
 	});
 	$("#sectionTrackerButtonAdd").on("click", function(){
 		modalPokemonForm.toggle();
-	});
-	if(localStorage.importTest){
-		$("#sectionTrackerButtonImport").removeClass("d-none");
-	}
-	$("#sectionTrackerButtonImport").on("click", function(){
-		modalImport.toggle();
-	});
-	$("#modalImportButton").on("click", function(){
-		$("#modalImportFiles").trigger("click");
-	});
-	$("#modalImportFiles").on("change", function(){
-		var files = $(this)[0].files;
-		if(files && files.length) importFiles(files);
 	});
 	$("#modalPokemonFormSave").on("click", function(){
 		savePokemon(modalPokemonState === "editing");
