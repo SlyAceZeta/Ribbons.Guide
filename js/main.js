@@ -1745,8 +1745,8 @@ function editPokemon(event){
 	if(pokemonToEdit.shadow) $("#pokemonFormShadow").prop("checked", true).trigger("change");
 	$("#pokemonFormTrainerName").val(pokemonToEdit.trainername);
 	$("#pokemonFormTrainerID").val(pokemonToEdit.trainerid);
-	$("#pokemonFormOriginMark").val(pokemonToEdit.originmark).trigger("change");
 	$("#pokemonFormOriginGame").val(pokemonToEdit.origingame).trigger("change");
+	$("#pokemonFormOriginMark").val(pokemonToEdit.originmark).trigger("change");
 	$("#pokemonFormCurrentGame").val(pokemonToEdit.currentgame).trigger("change");
 	if(pokemonToEdit.box || pokemonToEdit.box == 0) $("#pokemonFormBox").val(pokemonToEdit.box).trigger("change");
 	if(pokemonToEdit.scale) $("#pokemonFormScale").prop("checked", true).trigger("change");
