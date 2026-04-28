@@ -1,8 +1,17 @@
 [
 	{
+		"date": "28 April 2026",
+		"changes": [
+			"Introduced a new setting to allow selecting titles from unselected Ribbons as before (thanks Lilith!)",
+			"Fixed a bug where editing a Pokémon with a Bank or HOME origin would reset its origin mark",
+			"Fixed a bug where the site would forcibly refresh when opened by a new user or in a private window",
+			"Fixed a bug where it was possible to open the site without any styles or scripts (thanks Valle Odinson!)"
+		]
+	},
+	{
 		"date": "27 April 2026",
 		"changes": [
-			"Volcanion can now be Shiny",
+			"Volcanion is no longer Shiny-locked",
 			"The add/edit form's Title dropdown now only shows titles from selected Ribbons, not the entire list (thanks Nexus!)",
 			"The Ribbon Checklist now groups games in a transfer-compatible pool together, making it clearer how far you can currently transfer a Pokémon",
 			"A Pokémon's displayed number of Ribbons/Marks now adds both numbers and only shows how many are visible on the card, respecting user settings regarding Memory Ribbons and the Ribbons that merge into them (thanks UnknownWarrior!)",
