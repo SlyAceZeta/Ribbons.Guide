@@ -35154,7 +35154,8 @@
 			"usun",
 			"umoon",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"restricted",
@@ -35202,7 +35203,8 @@
 			"sw",
 			"sh",
 			"scar",
-			"vio"
+			"vio",
+			"plza"
 		],
 		"flags": [
 			"restricted"
@@ -42988,7 +42990,8 @@
 			"restricted",
 			"sizeLocked",
 			"shinyLocked"
-		]
+		],
+		"cannotStore": true
 	},
 	"miraidon": {
 		"names": {
@@ -43034,7 +43037,8 @@
 			"restricted",
 			"sizeLocked",
 			"shinyLocked"
-		]
+		],
+		"cannotStore": true
 	},
 	"walking-wake": {
 		"names": {
