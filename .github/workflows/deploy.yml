@@ -32,12 +32,8 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v6
-          - name: Minify JS and CSS
-            run: |
-                npm install -g minify
-                find . -type f \( -iname "*.js" -o -iname "*.css" \) | while read fname; do
-                    minify "$fname" > "$fname.tmp" && mv "$fname.tmp" "$fname"
-                done
+          - name: Minify HTML/JS/CSS
+            uses: dra1ex/minify-action@v1.0.3
           - name: Setup Pages
             uses: actions/configure-pages@v6
           - name: Upload artifact

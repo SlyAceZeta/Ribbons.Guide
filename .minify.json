@@ -1,0 +1,12 @@
+{
+    "html": {
+        "removeRedundantAttributes": false,
+		"removeEmptyAttributes": false
+    },
+    "css": {
+        "compatibility": "*"
+    },
+    "js": {
+        "ecma": 2020
+    }
+}
