@@ -1,5 +1,13 @@
 [
 	{
+		"date": "2 May 2026",
+		"changes": [
+			"Updated name of blank origin mark to prevent confusion",
+			"Fixed a bug where Volcanion and Hoopa could not be saved in Legends: Z-A",
+			"Fixed a bug where the ride variants of Koraidon and Miraidon could be saved in HOME"
+		]
+	},
+	{
 		"date": "28 April 2026",
 		"changes": [
 			"Introduced a new setting to allow selecting titles from unselected Ribbons as before (thanks Lilith!)",
