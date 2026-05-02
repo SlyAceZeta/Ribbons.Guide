@@ -2620,11 +2620,10 @@ function selectCustomOption(o){
 			for(var p in nonePlatforms){
 				$mark.append($("<img>", { "class": selectIconClass + " light-invert select-icon-origin select-icon-origin-platform", "src": "img/origins/custom/platforms/" + nonePlatforms[p] + ".svg" }));
 			}
-			$mark.append($("<span>").text(getLanguage(translations.none)));
 		} else {
-			$mark.append($("<img>", { "class": selectIconClass + " light-invert", "src": "img/origins/" + o.id + ".png" }))
-				.append($("<span>").text(o.text));
+			$mark.append($("<img>", { "class": selectIconClass + " light-invert", "src": "img/origins/" + o.id + ".png" }));
 		}
+		$mark.append($("<span>").text(o.text));
 		return $mark;
 	} else if(result.indexOf("settingsExtraOriginMarks") > 0){
 		var $marks = $("<span>");
@@ -2915,7 +2914,7 @@ function initRun(){
 		for(var o in origins){
 			var optionText;
 			if(o === "none"){
-				optionText = getLanguage(translations.none);
+				optionText = "Blank";
 			} else {
 				optionText = getLanguage(origins[o].names);
 			}
