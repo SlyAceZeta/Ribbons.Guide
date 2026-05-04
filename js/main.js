@@ -79,21 +79,6 @@ if(settings.theme){
 	}
 }
 
-/* normalize languages */
-function normalizeLang(lang){
-	if(lang === "eses"){
-		return "es-es";
-	} else if(lang === "es419"){
-		return "es-419";
-	} else if(lang === "zhhans"){
-		return "zh-Hans";
-	} else if(lang === "zhhant"){
-		return "zh-Hant";
-	} else {
-		return lang;
-	}
-}
-
 /* change site language */
 var supportedLanguages = ["en", "es-es", "es-419", "fr", "de", "it", "ja", "ko", "zh-Hans", "zh-Hant"];
 function changeLanguage(l, page = true){
