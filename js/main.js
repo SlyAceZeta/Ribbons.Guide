@@ -1,5 +1,5 @@
 /* globals */
-var balls, changelog, games, gameOrder = {}, gameGroups, origins, pokemon, ribbons, ribbonOrder, translations, forms, natures, modalSettings, modalData, modalDataCompare, modalCheckDropbox, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off", DROPBOX_CLIENT_ID = "xxvozybw2lp9ycy", dropbox_auth_url, backupPokemon = [], backupBoxes = [], backupLastModified = 0, backupSettings = {}, dbx;
+var balls, changelog, games, gameOrder = {}, gameGroups, origins, pokedex, ribbons, ribbonOrder, translations, forms, natures, modalSettings, modalData, modalDataCompare, modalCheckDropbox, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off", DROPBOX_CLIENT_ID = "xxvozybw2lp9ycy", dropbox_auth_url, backupPokemon = [], backupBoxes = [], backupLastModified = 0, backupSettings = {}, dbx;
 // voiced BDSP species that can evolve into voiceless BDSP species
 const evolveVoicelessMap = {"caterpie": ["metapod"], "weedle": ["kakuna"], "venonat": ["venomoth"], "natu": ["xatu"], "larvitar": ["pupitar"], "wurmple": ["silcoon", "cascoon"], "bagon": ["shelgon"]};
 // voiceless BDSP species (and voiced BDSP species that can evolve into voiceless BDSP species) that can evolve into voiced BDSP species
@@ -742,13 +742,13 @@ function getGameData(game, field, doNotSearch = false){
 	}
 }
 
-function getPokemonData(dex, field, doNotSearch = false){
-	var thisPkmn = pokemon[dex];
-	if(pokemon[dex]){
+function getPokedexData(dex, field, doNotSearch = false){
+	var thisPkmn = pokedex[dex];
+	if(pokedex[dex]){
 		var data = thisPkmn[field];
 		if(typeof data === "undefined"){
 			if(!doNotSearch && thisPkmn["data-source"]){
-				thisPkmn = pokemon[thisPkmn["data-source"]];
+				thisPkmn = pokedex[thisPkmn["data-source"]];
 				data = thisPkmn[field];
 			} else {
 				data = false;
@@ -818,11 +818,11 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 	let earnableRibbonWarnings = [];
 	
 	// Pokemon info
-	const isMythical = getPokemonData(dex, "mythical");
+	const isMythical = getPokedexData(dex, "mythical");
 	const currentGameGroup = getGameData(currentGame, "group");
 	const metLevelWillChange = gameGroups[currentGameGroup]?.metLevelWillChange || false;
-	const isCurrentlyVoiceless = getPokemonData(dex, "voiceless");
-	const compatibleGames = getPokemonData(dex, "games"); // all compatible games for the species
+	const isCurrentlyVoiceless = getPokedexData(dex, "voiceless");
+	const compatibleGames = getPokedexData(dex, "games"); // all compatible games for the species
 	let [currentCompatibleGames, compatibleGroups] = filterCompatibleGames(compatibleGames, currentGame, currentGameGroup); // all games and groups the Pokemon can actually transfer to
 	// Pokemon-specific restrictions
 	currentCompatibleGames = currentCompatibleGames.filter(targetGame => {
@@ -1239,10 +1239,10 @@ function savePokemon(edit = false){
 		if(newP.language == "es-419" && ["sw", "sh", "bd", "sp", "pla", "scar", "vio", "lgp", "lge", "home"].includes(newP.currentgame)){
 			continueForm = false;
 			setFormInvalid("CurrentGame", "Latin American Spanish Pokémon cannot go to this game.");
-		} else if(getPokemonData(newP.species, "cannotStore") && getGameData(newP.currentgame, "storage", true)){
+		} else if(getPokedexData(newP.species, "cannotStore") && getGameData(newP.currentgame, "storage", true)){
 			continueForm = false;
 			setFormInvalid("CurrentGame", "This Pokémon cannot be stored in Bank or HOME.");
-		} else if(!getGameData(newP.currentgame, "storage", true) && !getPokemonData(newP.species, "games").includes(newP.currentgame)){
+		} else if(!getGameData(newP.currentgame, "storage", true) && !getPokedexData(newP.species, "games").includes(newP.currentgame)){
 			const hasOrigin = newP.originmark || newP.origingame;
 			const isOriginGO = newP.originmark === "go" || newP.origingame === "go";
 			if(newP.currentgame === "go" && (isOriginGO || !hasOrigin)){
@@ -1329,9 +1329,9 @@ function saveMultiplePokemon(){
 			if(newCurrentGame !== "nochange"){
 				var originalgame = newP.currentgame;
 				newP.currentgame = newCurrentGame;
-				if(getPokemonData(newP.species, "cannotStore") && getGameData(newP.currentgame, "storage", true)){
+				if(getPokedexData(newP.species, "cannotStore") && getGameData(newP.currentgame, "storage", true)){
 					gameChangeValid = false;
-				} else if(!getGameData(newP.currentgame, "storage", true) && !getPokemonData(newP.species, "games").includes(newP.currentgame)){
+				} else if(!getGameData(newP.currentgame, "storage", true) && !getPokedexData(newP.species, "games").includes(newP.currentgame)){
 					gameChangeValid = false;
 				}
 				if(!gameChangeValid){
@@ -1619,28 +1619,28 @@ function ribbonChecklist(event){
 				}
 				
 				if(warning.toVoiceless){
-					let voicelessEvo = getLanguage(getPokemonData(warning.toVoiceless[0], "names"));
+					let voicelessEvo = getLanguage(getPokedexData(warning.toVoiceless[0], "names"));
 					if(warning.toVoiceless[1]){
-						voicelessEvo = voicelessEvo + " or " + getLanguage(getPokemonData(warning.toVoiceless[1], "names"));
+						voicelessEvo = voicelessEvo + " or " + getLanguage(getPokedexData(warning.toVoiceless[1], "names"));
 					}
 					warning.text += "<li>Evolving " + cardData.name + " into " + voicelessEvo + " will make the ribbon available in BDSP.</li>";
 				}
 				if(warning.toVoiced){
-					let voicedEvo = getLanguage(getPokemonData(warning.toVoiced[0], "names"));
+					let voicedEvo = getLanguage(getPokedexData(warning.toVoiced[0], "names"));
 					if(warning.toVoiced[1]){
-						voicedEvo = voicedEvo + " or " + getLanguage(getPokemonData(warning.toVoiced[1], "names"));
+						voicedEvo = voicedEvo + " or " + getLanguage(getPokedexData(warning.toVoiced[1], "names"));
 					}
 					warning.text += "<li>Evolving " + cardData.name + " into " + voicedEvo + " will make the ribbon unavailable in BDSP.</li>";
 				}
 			}
 			// TODO: evolution warning
 			/*if(warningText == "evolution-warning"){
-				var evoWarnName = getLanguage(getPokemonData(cardData.evolutionWarning, "names"));
-				var evoWarnForms = getPokemonData(cardData.evolutionWarning, "forms");
+				var evoWarnName = getLanguage(getPokedexData(cardData.evolutionWarning, "names"));
+				var evoWarnForms = getPokedexData(cardData.evolutionWarning, "forms");
 				if(!evoWarnForms){
-					evoWarnForms = getPokemonData(cardData.evolutionWarning, "forms-all");
+					evoWarnForms = getPokedexData(cardData.evolutionWarning, "forms-all");
 					if(!evoWarnForms){
-						var pokemonFormSource = getPokemonData(cardData.evolutionWarning, "form-source");
+						var pokemonFormSource = getPokedexData(cardData.evolutionWarning, "form-source");
 						if(pokemonFormSource){
 							evoWarnForms = translations.forms[pokemonFormSource];
 						}
@@ -1843,7 +1843,7 @@ function createCard(p, id){
 	// display name
 	var displayName = p.nickname;
 	if(displayName.length === 0){
-		displayName = getLanguage(getPokemonData(p.species, "names"), p.language);
+		displayName = getLanguage(getPokedexData(p.species, "names"), p.language);
 	}
 	
 	// get compatible games and ribbons
@@ -1853,7 +1853,7 @@ function createCard(p, id){
 	}
 	
 	/* containers and filters */
-	var $cardCol = $("<div>", { "class": "col", "data-name": displayName, "data-national-dex": getPokemonData(p.species, "natdex"), "data-level": p.currentlevel, "data-origin-mark": p.originmark, "data-origin-game": p.origingame, "data-current-game": p.currentgame, "data-compatible-games": "[]", "data-earned-ribbons": JSON.stringify(p.ribbons), "data-pokemon-id": id, "data-gender": p.gender, "data-species": p.species, "data-game-memory-merged": mergeMemoryRibbons, "data-scale-checked": p.scale ? "" + p.scale : "false" });
+	var $cardCol = $("<div>", { "class": "col", "data-name": displayName, "data-national-dex": getPokedexData(p.species, "natdex"), "data-level": p.currentlevel, "data-origin-mark": p.originmark, "data-origin-game": p.origingame, "data-current-game": p.currentgame, "data-compatible-games": "[]", "data-earned-ribbons": JSON.stringify(p.ribbons), "data-pokemon-id": id, "data-gender": p.gender, "data-species": p.species, "data-game-memory-merged": mergeMemoryRibbons, "data-scale-checked": p.scale ? "" + p.scale : "false" });
 	if(Object.keys(compatibleGamesAndRibbons).length){
 		// attach compatible games
 		$cardCol.attr({ "data-compatible-games": JSON.stringify(compatibleGamesAndRibbons.currentCompatibleGames) });
@@ -1952,7 +1952,7 @@ function createCard(p, id){
 	
 	/* body */
 	var speciesSprite = p.species;
-	const spriteSourceCheck = getPokemonData(speciesSprite, "sprite-source", true);
+	const spriteSourceCheck = getPokedexData(speciesSprite, "sprite-source", true);
 	if(spriteSourceCheck) speciesSprite = spriteSourceCheck;
 	if(aprilFools && settings["AprilFools"] == "true"){
 		speciesSprite = "ditto";
@@ -1960,12 +1960,12 @@ function createCard(p, id){
 			speciesSprite = "mew";
 		}
 	}
-	var genderDirectory = ((!aprilFools || settings["AprilFools"] == "false") && getPokemonData(speciesSprite, "femsprite") && p.gender === "female") ? "female/" : "";
+	var genderDirectory = ((!aprilFools || settings["AprilFools"] == "false") && getPokedexData(speciesSprite, "femsprite") && p.gender === "female") ? "female/" : "";
 	if(speciesSprite.startsWith("alcremie-") && p.shiny){
 		var alcremieRegex = /caramel|lemon|matcha|mint|rainbow|rubycream|rubyswirl|salted|vanilla/;
 		speciesSprite = speciesSprite.replace(alcremieRegex, "").replace("--", "-").replace("-strawberry", "");
 	}
-	$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + speciesSprite + ".png", "alt": getLanguage(getPokemonData(p.species, "names")), "title": getLanguage(getPokemonData(p.species, "names")) }));
+	$cardBody.append($("<img>", { "class": "card-sprite p-1 flex-shrink-0", "src": "img/pkmn/" + (p.shiny ? "shiny" : "regular") + "/" + genderDirectory + speciesSprite + ".png", "alt": getLanguage(getPokedexData(p.species, "names")), "title": getLanguage(getPokedexData(p.species, "names")) }));
 	var $cardRibbons = $("<div>", { "class": "card-ribbons flex-grow-1 d-flex flex-wrap p-1" });
 	let ribbonCountGen7Check = 0, battleMemory = "", contestMemory = "", battleMemories = [], contestMemories = [];
 	for(let r in p.ribbons){
@@ -2505,8 +2505,8 @@ function updateFormSprite(){
 		$("#pokemonFormSprite").attr("src", "img/ui/1x1.svg"); // initial reset
 		var species = $("#pokemonFormSpecies").val();
 		var shinyDir = $("#pokemonFormShiny-normal").prop("checked") ? "regular/" : "shiny/";
-		var femaleDir = $("#pokemonFormGender-female").prop("checked") && getPokemonData(species, "femsprite") ? "female/" : "";
-		const spriteSourceCheck = getPokemonData(species, "sprite-source", true);
+		var femaleDir = $("#pokemonFormGender-female").prop("checked") && getPokedexData(species, "femsprite") ? "female/" : "";
+		const spriteSourceCheck = getPokedexData(species, "sprite-source", true);
 		if(spriteSourceCheck) species = spriteSourceCheck;
 		if(species.startsWith("alcremie-") && shinyDir == "shiny/"){
 			var alcremieRegex = /caramel|lemon|matcha|mint|rainbow|rubycream|rubyswirl|salted|vanilla/;
@@ -2852,14 +2852,14 @@ function initRun(){
 		}
 		$errortext.append($("<div>").html("Please inform Sly on <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a> or <a href='https://discord.gg/frv7dpWzDG'>Discord</a>."));
 		$("#loading-spinner-info").html($errorimg).append($errortext);
-	}).done(function(dataBalls, dataChangelog, dataGames, dataGameGroups, dataOrigins, dataPokemon, dataRibbons, dataTranslations){
+	}).done(function(dataBalls, dataChangelog, dataGames, dataGameGroups, dataOrigins, dataPokedex, dataRibbons, dataTranslations){
 		/* set variables */
 		balls = dataBalls[0];
 		changelog = dataChangelog[0];
 		games = dataGames[0];
 		gameGroups = dataGameGroups[0];
 		origins = dataOrigins[0];
-		pokemon = dataPokemon[0];
+		pokedex = dataPokedex[0];
 		ribbons = dataRibbons[0];
 		translations = dataTranslations[0];
 		forms = translations.forms;
@@ -2937,17 +2937,17 @@ function initRun(){
 			}
 		}
 		var pokemonCount = 0;
-		var pokemonTotal = Object.keys(pokemon).length;
-		for(var p in pokemon){
+		var pokemonTotal = Object.keys(pokedex).length;
+		for(var p in pokedex){
 			pokemonCount++;
-			var $pokemon = $("<option>", { "value": p, "data-natdex": getPokemonData(p, "natdex") });
-			var pokemonNames = getPokemonData(p, "names");
-			var pokemonForms = getPokemonData(p, "forms");
+			var $pokemon = $("<option>", { "value": p, "data-natdex": getPokedexData(p, "natdex") });
+			var pokemonNames = getPokedexData(p, "names");
+			var pokemonForms = getPokedexData(p, "forms");
 			var pokemonFormDisplay = "";
 			if(!pokemonForms){
-				pokemonForms = getPokemonData(p, "forms-all");
+				pokemonForms = getPokedexData(p, "forms-all");
 				if(!pokemonForms){
-					var pokemonFormSource = getPokemonData(p, "form-source");
+					var pokemonFormSource = getPokedexData(p, "form-source");
 					if(pokemonFormSource){
 						pokemonForms = translations.forms[pokemonFormSource];
 					}
@@ -2960,7 +2960,7 @@ function initRun(){
 					pokemonFormDisplay = " (" + getLanguage(pokemonForms) + ")";
 				}
 			}
-			var pokemonSort = getPokemonData(p, "sort", true);
+			var pokemonSort = getPokedexData(p, "sort", true);
 			if(pokemonSort){
 				$pokemon.attr("data-sort", pokemonSort);
 			}
@@ -3134,7 +3134,7 @@ function initRun(){
 		});
 		$("#pokemonFormRibbons input[type='checkbox']").on("change", function(){
 			var ribbon = this.id.replace("pokemonFormRibbon-", "");
-			var pokemonFlags = getPokemonData($("#pokemonFormSpecies").val(), "flags");
+			var pokemonFlags = getPokedexData($("#pokemonFormSpecies").val(), "flags");
 			var pokemonSizeLocked = false;
 			if(pokemonFlags && pokemonFlags.includes("sizeLocked")){
 				pokemonSizeLocked = true;
@@ -3206,7 +3206,7 @@ function initRun(){
 		$("#pokemonFormSpecies").on("change", function(){
 			var species = $(this).val();
 			if(species){
-				var pokemonGender = getPokemonData(species, "gender");
+				var pokemonGender = getPokedexData(species, "gender");
 				if(pokemonGender === "both"){
 					$("#pokemonFormGender-unknown").prop("disabled", true);
 					$("#pokemonFormGender-male, #pokemonFormGender-female").prop("disabled", false);
@@ -3218,7 +3218,7 @@ function initRun(){
 					$("#pokemonFormGender-" + pokemonGender).prop("checked", true).trigger("change");
 				}
 				
-				var pokemonFlags = getPokemonData(species, "flags");
+				var pokemonFlags = getPokedexData(species, "flags");
 				if(pokemonFlags && pokemonFlags.includes("shinyLocked")){
 					$("#pokemonFormShinyGroup input").prop("disabled", true);
 					$("#pokemonFormShiny-normal").prop("checked", true).trigger("change");
