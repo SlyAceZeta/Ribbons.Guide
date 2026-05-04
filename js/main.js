@@ -168,7 +168,7 @@ if(settings.ExtraOriginMarks){
 }
 
 /* change card view */
-function changeCardView(view){
+function changeCardView(view, updateNumbers = false){
 	changeSetting("CardView", view);
 	$(function(){
 		$("html").attr("data-cardview", view);
@@ -176,6 +176,7 @@ function changeCardView(view){
 			$("#tracker-grid").attr("class", "row g-3 mt-2 mb-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 row-cols-xxl-auto");
 		} else if(view == "expanded"){
 			$("#tracker-grid").attr("class", "row g-3 mt-2 mb-4 row-cols-1 row-cols-md-2 row-cols-xl-3");
+			if(updateNumbers) updateRibbonNumbers();
 		}
 	});
 }
@@ -1791,6 +1792,7 @@ function createTitle(p){
 }
 
 function updateRibbonNumbers($e = $("#tracker-grid .col")){
+	if(settings.CardView === "condensed") return;
 	$e.each(function(){
 		const $visibleRibbons = $(this).find(".card-ribbons > a:visible > img");
 		const numRibbons = $visibleRibbons.not("[src*='-mark.png']").length;
@@ -3635,7 +3637,7 @@ $(function(){
 	});
 	/* card view listener */
 	$("#switchView label").on("click", function(){
-		changeCardView($(this).prev().val());
+		changeCardView($(this).prev().val(), true);
 	});
 	/* ribbon form view listener */
 	$("#switchRibbonFormView label, #switchRibbonFormMultiView label").on("click", function(){
