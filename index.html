@@ -355,10 +355,7 @@
 											<div class="col-6">
 												<div class="form-check">
 													<input class="form-check-input" type="checkbox" id="pokemonFormShadow">
-													<label class="form-check-label" for="pokemonFormShadow">
-														<span>Shadow (Colo/XD)</span>
-														<img src="img/ui/shadow.png" style="height:16px;" alt="Shadow">
-													</label>
+													<label class="form-check-label" for="pokemonFormShadow">Shadow (Colo/XD)</label>
 												</div>
 											</div>
 											<div class="col-6">
@@ -770,6 +767,69 @@
 					</div>
 					<div class="modal-footer justify-content-center">
 						<button type="button" class="btn btn-secondary" id="modalFilterFormReset">Reset</button>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Pokémon Info Modal -->
+		<div class="modal fade" id="modalPokemonInfo" tabindex="-1" aria-labelledby="modalPokemonInfoLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-6 fw-bold" id="modalPokemonInfoLabel">Pokémon Info</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div id="modalPokemonInfoName" class="badge d-block mb-1 py-2 text-wrap position-relative">
+							<div class="ms-2 position-absolute start-0 top-50 translate-middle-y">
+								<img id="modalPokemonInfoBall" src="img/balls/1x1.svg" class="align-middle me-1">
+							</div>
+							<div class="align-middle d-inline-block">&nbsp;</div>
+							<div class="me-2 position-absolute end-0 top-50 translate-middle-y">
+								<img id="modalPokemonInfoGender" src="img/ui/1x1.svg" class="align-middle ms-1">
+								<img id="modalPokemonInfoShiny" src="img/ui/1x1.svg" class="align-middle ms-1">
+							</div>
+						</div>
+						<div id="modalPokemonInfoTitle" class="d-none badge d-block mb-1 py-2">&nbsp;</div>
+						<div class="text-center mt-1 mb-1">
+							<img id="modalPokemonInfoSprite" src="img/ui/1x1.svg">
+						</div>
+						<div id="modalPokemonInfoData" class="d-flex mb-1 flex-wrap justify-content-start">
+							<div class="d-flex ms-sm-1">
+								<div class="d-flex flex-column justify-content-evenly">
+									<div class="badge rounded-pill d-block text-end mb-1 py-2 ps-sm-3">Level</div>
+									<div class="badge rounded-pill d-block text-end mb-1 py-2 ps-sm-3">Nature</div>
+									<div class="badge rounded-pill d-block text-end mb-1 py-2 ps-sm-3">OT</div>
+									<div class="badge rounded-pill d-block text-end mb-1 py-2 ps-sm-3">ID No.</div>
+								</div>
+								<div class="d-flex flex-column justify-content-evenly">
+									<div id="modalPokemonInfoLevel" class="badge d-block text-start mb-1 p-2">&nbsp;</div>
+									<div id="modalPokemonInfoNature" class="badge d-block text-start mb-1 p-2">&nbsp;</div>
+									<div id="modalPokemonInfoTrainer" class="badge d-block text-start mb-1 p-2">&nbsp;</div>
+									<div id="modalPokemonInfoID" class="badge d-block text-start mb-1 p-2">&nbsp;</div>
+								</div>
+							</div>
+							<div class="d-flex ms-sm-1">
+								<div class="d-flex flex-column justify-content-evenly">
+									<div class="badge rounded-pill d-block text-end mb-1 py-2 ps-sm-3"><span class="d-none d-sm-inline">Origin </span>Game</div>
+									<div class="badge rounded-pill d-block text-end mb-1 py-2 ps-sm-3">Met <span class="d-none d-sm-inline">Level</span><span class="d-inline d-sm-none">Lv.</span></div>
+									<div class="badge rounded-pill d-block text-end mb-1 py-2 ps-sm-3">Met Date</div>
+									<div class="badge rounded-pill d-block text-end mb-1 py-2 ps-sm-3"><span class="d-none d-sm-inline">Met </span>Location</div>
+								</div>
+								<div class="d-flex flex-column justify-content-evenly">
+									<div id="modalPokemonOriginGame" class="badge d-block text-start mb-1 p-2">&nbsp;</div>
+									<div id="modalPokemonMetLevel" class="badge d-block text-start mb-1 p-2">&nbsp;</div>
+									<div id="modalPokemonMetDate" class="badge d-block text-start mb-1 p-2">&nbsp;</div>
+									<div id="modalPokemonMetLocation" class="badge d-block text-start mb-1 p-2">&nbsp;</div>
+								</div>
+							</div>
+						</div>
+						<div id="modalPokemonInfoRibbonHeader" class="badge d-block mb-2 py-2">Ribbons and Marks</div>
+						<div id="modalPokemonInfoRibbonList" class="px-2 mb-2"></div>
+						<div id="modalPokemonInfoAddtlHeader" class="badge d-block mb-2 py-2 d-none">Additional Info</div>
+						<div id="modalPokemonInfoAddtlList" class="d-none justify-content-center px-2"></div><!-- d-flex -->
+					<div class="modal-footer justify-content-center">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
 					</div>
 				</div>

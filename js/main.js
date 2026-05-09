@@ -1,5 +1,5 @@
 /* globals */
-var balls, changelog, games, gameOrder = {}, gameGroups, origins, pokedex, ribbons, ribbonOrder, translations, forms, natures, modalSettings, modalData, modalDataCompare, modalCheckDropbox, modalRibbonChecklist, modalPokemonForm, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off", DROPBOX_CLIENT_ID = "xxvozybw2lp9ycy", dropbox_auth_url, backupPokemon = [], backupBoxes = [], backupLastModified = 0, backupSettings = {}, dbx;
+var balls, changelog, games, gameOrder = {}, gameGroups, origins, pokedex, ribbons, ribbonOrder, translations, forms, natures, modalSettings, modalData, modalDataCompare, modalCheckDropbox, modalRibbonChecklist, modalPokemonForm, modalPokemonInfo, modalPokemonState = "default", modalPokemonEditing = -1, activeFilters = {}, activeSort = "default", filterState = "default", offcanvasSelect, selectState = "off", DROPBOX_CLIENT_ID = "xxvozybw2lp9ycy", dropbox_auth_url, backupPokemon = [], backupBoxes = [], backupLastModified = 0, backupSettings = {}, dbx;
 // voiced BDSP species that can evolve into voiceless BDSP species
 const evolveVoicelessMap = {"caterpie": ["metapod"], "weedle": ["kakuna"], "venonat": ["venomoth"], "natu": ["xatu"], "larvitar": ["pupitar"], "wurmple": ["silcoon", "cascoon"], "bagon": ["shelgon"]};
 // voiceless BDSP species (and voiced BDSP species that can evolve into voiceless BDSP species) that can evolve into voiced BDSP species
@@ -2098,7 +2098,9 @@ function createCard(p, id){
 		$cardFooterBottomLeft.append($("<img>", { "class": "align-middle card-footer-origin", "src": "img/origins/" + p.originmark + ".png", "alt": originName, "title": originName }));
 	}
 	var $cardFooterBottomRight = $("<div>")
-		.append($("<button>", { "class": "btn btn-link p-0 ms-2 lh-1 align-text-bottom card-sortable-handle" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/move.svg", "alt": "Move", "title": "Drag to re-order" })))
+		.append($("<button>", { "class": "btn btn-link p-0 lh-1 align-text-bottom card-sortable-handle" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/move.svg", "alt": "Move", "title": "Drag to re-order" })))
+		// TODO
+		//.append($("<button>", { "class": "btn btn-link p-0 ms-2 lh-1 align-text-bottom" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/card" })))
 		.append($("<div>", { "class": "card-footer-dropdown dropdown d-inline ms-2 align-text-bottom" })
 			.append($("<button>", { "class": "btn btn-link dropdown-toggle p-0 border-0", "type": "button", "data-bs-toggle": "dropdown", "data-bs-display": "static", "aria-expanded": "false" }).html($("<img>", { "src": "img/ui/more.svg", "alt": "More", "title": "More actions" })))
 			.append($("<ul>", { "class": "dropdown-menu dropdown-menu-end py-1" })
@@ -3605,6 +3607,7 @@ $(function(){
 	modalData = new bootstrap.Modal("#modalData");
 	modalDataCompare = new bootstrap.Modal("#modalDataCompare");
 	modalCheckDropbox = new bootstrap.Modal("#modalCheckDropbox");
+	modalPokemonInfo = new bootstrap.Modal("#modalPokemonInfo");
 	/* dropdown listeners */
 	$("#settingsTheme").on("change", function(){
 		changeTheme($(this).val());

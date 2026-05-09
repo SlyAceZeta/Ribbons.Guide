@@ -499,6 +499,69 @@ html[data-ribbonformview="grid"] #pokemonFormMultiRibbons li.d-flex {
 .modalDataCompareReverse #modalDataCompareOnlineAccept {
 	display: block;
 }
+/* Pokemon Info */
+#modalPokemonInfoName,
+#modalPokemonInfoTitle,
+#modalPokemonInfoRibbonHeader,
+#modalPokemonInfoAddtlHeader,
+#modalPokemonInfoData .badge.rounded-pill {
+	background: var(--rg-card-cap-bg);
+}
+#modalPokemonInfoName {
+	font-size: 1rem;
+}
+#modalPokemonInfoName img:not([src*="1x1.svg"]) {
+	width: auto;
+	height: 20px;
+}
+#modalPokemonInfoName img[src*="1x1.svg"] {
+	display: none;
+}
+#modalPokemonInfoSprite {
+	width: 128px;
+}
+#modalPokemonInfoData > div:first-child {
+	min-width: 40%;
+}
+#modalPokemonInfoTitle,
+#modalPokemonInfoRibbonHeader,
+#modalPokemonInfoAddtlHeader {
+	font-size: 0.8rem;
+}
+#modalPokemonInfoRibbonList {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(28px, 1fr));
+	gap: 5px;
+}
+#modalPokemonInfoRibbonList > a > img {
+	width: auto;
+	height: 28px;
+}
+#modalPokemonInfoAddtlList img {
+	width: auto;
+	height: 20px;
+}
+@media (min-width: 576px){
+	#modalPokemonInfoName,
+	#modalPokemonInfoData {
+		font-size: 1.25rem;
+	}
+	#modalPokemonInfoTitle,
+	#modalPokemonInfoRibbonHeader,
+	#modalPokemonInfoAddtlHeader {
+		font-size: 1rem;
+	}
+	#modalPokemonInfoName img,
+	#modalPokemonInfoAddtlList img {
+		height: 24px;
+	}
+	#modalPokemonInfoRibbonList {
+		grid-template-columns: repeat(auto-fit, minmax(36px, 1fr));
+	}
+	#modalPokemonInfoRibbonList > a > img {
+		height: 36px;
+	}
+}
 
 /* links */
 a:not(:hover):not(:focus) {
