@@ -1,10 +1,10 @@
-const APP_CACHE = "app-2026-05-02-1";
+const APP_CACHE = "app-2026-05-18-0";
 const ASSET_CACHE = "assets-v1";
 
 // on installation
 self.addEventListener("install", (event) => {
 	// precache index.html
-	const requests = ["/", "/index.html"].map(
+	const requests = ["/", "/index.html", "/PRIVACY.md"].map(
 		(url) => new Request(url, { cache: "no-cache" })
 	);
 	
