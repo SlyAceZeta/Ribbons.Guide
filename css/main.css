@@ -45,11 +45,11 @@ body {
 	width: 32px;
 	height: 32px;
 }
-.nav-link,
+.nav-link, a.nav-link,
 .nav-link.disabled, .nav-link:disabled {
 	color: var(--rg-header-text);
 }
-.nav-link:focus, .nav-link:hover,
+.nav-link:focus, .nav-link:hover, a.nav-link:focus, a.nav-link:hover,
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
 	color: var(--rg-header-text-active);
 }
