@@ -1,5 +1,13 @@
 [
 	{
+		"date": "18 May 2026",
+		"changes": [
+			"Added a privacy policy",
+			"Removed Shadow icon from Shadow checkbox to prevent confusion, since the icon was from GO",
+			"Fixed a bug where loading the app in condensed view, and then switching to expanded view, would cause all Pokemon to show 0 Ribbons/Marks"
+		]
+	},
+	{
 		"date": "2 May 2026",
 		"changes": [
 			"Updated name of blank origin mark to prevent confusion",
