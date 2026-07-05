@@ -34,8 +34,15 @@ self.addEventListener("fetch", (event) => {
 	// ignore requests that aren't fetching an asset (such as POST requests to APIs)
 	if(event.request.method !== "GET") return;
 	
-	// normalize "/" to "/index.html" to avoid duplicating them
+	// parse request URL
 	const url = new URL(event.request.url);
+	
+	// bypass cache for local development
+	if(url.hostname === "127.0.0.1" || url.hostname === "localhost"){
+		return;
+    }
+	
+	// normalize "/" to "/index.html" to avoid duplicating them
 	const cacheKey = (url.pathname === "/") ? "/index.html" : event.request;
 	
 	// store images and fonts in a dedicated cache since they rarely change

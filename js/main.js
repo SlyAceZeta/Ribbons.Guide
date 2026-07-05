@@ -1419,6 +1419,50 @@ function saveMultiplePokemon(){
 	}
 }
 
+// TODO
+function infoPokemon(event){
+	const $cardContainer = $(event.target).parents(".col");
+	const pokemonID = $cardContainer[0].dataset.pokemonId;
+	const pokemonToShow = userPokemon[pokemonID];
+	$("#modalPokemonInfoNameText").html($cardContainer.find(".card-header-name").text());
+	if($cardContainer.find(".card-header-ball-strange").length && settings.AutoStrangeBall === "true"){
+		$("#modalPokemonInfoBall").attr("src", "img/balls/strange.png");
+	} else if($cardContainer.find(".card-header-ball-selected").length){
+		$("#modalPokemonInfoBall").attr("src", $cardContainer.find(".card-header-ball-selected").attr("src"));
+	} else {
+		$("#modalPokemonInfoBall").attr("src", $cardContainer.find(".card-header-fullname img[src^='img/balls/']").attr("src"));
+	}
+	if(pokemonToShow.gender === "unknown"){
+		$("#modalPokemonInfoGender").attr("src", "img/ui/1x1.svg");
+	} else {
+		$("#modalPokemonInfoGender").attr("src", "img/ui/gender-" + pokemonToShow.gender + ".png");
+	}
+	if(pokemonToShow.shiny === "square"){
+		$("#modalPokemonInfoGender").attr("src", "img/ui/shiny-square.svg");
+	} else if(pokemonToShow.shiny){
+		$("#modalPokemonInfoGender").attr("src", "img/ui/shiny-star.png");
+	} else {
+		$("#modalPokemonInfoShiny").attr("src", "img/ui/1x1.svg");
+	}
+	$("#modalPokemonInfoSprite").attr("src", $cardContainer.find(".card-sprite").attr("src"));
+	if(pokemonToShow.ribbons.length){
+		$("#modalPokemonInfoRibbonHeader").removeClass("d-none");
+		$("#modalPokemonInfoRibbonList").removeClass("d-none").html($cardContainer.find(".card-ribbons").html());
+	} else {
+		$("#modalPokemonInfoRibbonHeader, #modalPokemonInfoRibbonList").addClass("d-none");
+	}
+	$("#modalPokemonInfoLevel").text(pokemonToShow.currentlevel);
+	$("#modalPokemonInfoNature").text(pokemonToShow.nature ? getLanguage(natures[pokemonToShow.nature]) : "—");
+	$("#modalPokemonInfoTrainer").text(pokemonToShow.trainername ? pokemonToShow.trainername : "—");
+	$("#modalPokemonInfoID").text(pokemonToShow.trainerid ? pokemonToShow.trainerid : "—");
+	$("#modalPokemonOriginGame").text(pokemonToShow.origingame ? getLanguage(games[pokemonToShow.origingame].names).replace(/\(.*?\)/g, "").trim() : "—");
+	$("#modalPokemonMetLevel").text(pokemonToShow.metlevel ? pokemonToShow.metlevel : "—");
+	//
+	$("#modalPokemonMetLocation").text(pokemonToShow.metlocation ? pokemonToShow.metlocation : "—");
+	modalPokemonInfo.toggle();
+	console.log(pokemonToShow);
+}
+
 function editPokemon(event){
 	resetPokemonForm(true);
 	var cardContainer = $(event.target).parents(".col");
@@ -2099,8 +2143,7 @@ function createCard(p, id){
 	}
 	var $cardFooterBottomRight = $("<div>")
 		.append($("<button>", { "class": "btn btn-link p-0 lh-1 align-text-bottom card-sortable-handle" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/move.svg", "alt": "Move", "title": "Drag to re-order" })))
-		// TODO
-		//.append($("<button>", { "class": "btn btn-link p-0 ms-2 lh-1 align-text-bottom" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/card" })))
+		.append($("<button>", { "class": "btn btn-link p-0 ms-2 lh-1 align-text-bottom", "onclick": "infoPokemon(event)" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/card.svg" })))
 		.append($("<div>", { "class": "card-footer-dropdown dropdown d-inline ms-2 align-text-bottom" })
 			.append($("<button>", { "class": "btn btn-link dropdown-toggle p-0 border-0", "type": "button", "data-bs-toggle": "dropdown", "data-bs-display": "static", "aria-expanded": "false" }).html($("<img>", { "src": "img/ui/more.svg", "alt": "More", "title": "More actions" })))
 			.append($("<ul>", { "class": "dropdown-menu dropdown-menu-end py-1" })
