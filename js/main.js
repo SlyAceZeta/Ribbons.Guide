@@ -1419,10 +1419,10 @@ function saveMultiplePokemon(){
 	}
 }
 
-function infoPokemon(event){
-	const $cardContainer = $(event.target).parents(".col");
+function infoPokemon(e){
+	const $cardContainer = $(e.target).parents(".col");
 	const pokemonID = $cardContainer[0].dataset.pokemonId;
-	const pokemonToShow = userPokemon[pokemonID];
+	const p = userPokemon[pokemonID];
 	$("#modalPokemonInfoNameText").html($cardContainer.find(".card-header-name").text());
 	if($cardContainer.find(".card-header-ball-strange").length && settings.AutoStrangeBall === "true"){
 		$("#modalPokemonInfoBall").attr("src", "img/balls/strange.png");
@@ -1431,64 +1431,64 @@ function infoPokemon(event){
 	} else {
 		$("#modalPokemonInfoBall").attr("src", $cardContainer.find(".card-header-fullname img[src^='img/balls/']").attr("src"));
 	}
-	if(pokemonToShow.gender === "unknown"){
+	if(p.gender === "unknown"){
 		$("#modalPokemonInfoGender").attr("src", "img/ui/1x1.svg");
 	} else {
-		$("#modalPokemonInfoGender").attr("src", "img/ui/gender-" + pokemonToShow.gender + ".png");
+		$("#modalPokemonInfoGender").attr("src", "img/ui/gender-" + p.gender + ".png");
 	}
-	if(pokemonToShow.shiny === "square"){
+	if(p.shiny === "square"){
 		$("#modalPokemonInfoGender").attr("src", "img/ui/shiny-square.svg");
-	} else if(pokemonToShow.shiny){
+	} else if(p.shiny){
 		$("#modalPokemonInfoGender").attr("src", "img/ui/shiny-star.png");
 	} else {
 		$("#modalPokemonInfoShiny").attr("src", "img/ui/1x1.svg");
 	}
-	if($cardContainer.find(".card-header-title").length){
-		$("#modalPokemonInfoTitle").text($cardContainer.find(".card-header-title").text()).removeClass("d-none");
+	if(p.title && p.title !== "None"){
+		$("#modalPokemonInfoTitle").text(createTitle(p)).removeClass("d-none");
 	} else {
 		$("#modalPokemonInfoTitle").html("&nbsp;").addClass("d-none");
 	}
 	$("#modalPokemonInfoSprite").attr("src", $cardContainer.find(".card-sprite").attr("src"));
-	$("#modalPokemonInfoLevel").text(pokemonToShow.currentlevel);
-	$("#modalPokemonInfoNature").text(pokemonToShow.nature ? getLanguage(natures[pokemonToShow.nature]) : "—");
-	$("#modalPokemonInfoTrainer").text(pokemonToShow.trainername ? pokemonToShow.trainername : "—");
-	$("#modalPokemonInfoID").text(pokemonToShow.trainerid ? pokemonToShow.trainerid : "—");
-	$("#modalPokemonOriginGame").text(pokemonToShow.origingame ? getLanguage(games[pokemonToShow.origingame].names).replace(/\(.*?\)/g, "").trim() : "—");
-	$("#modalPokemonMetLevel").text(pokemonToShow.metlevel ? pokemonToShow.metlevel : "—");
-	$("#modalPokemonMetDate").text(pokemonToShow.metdate ? new Intl.DateTimeFormat().format(new Date(pokemonToShow.metdate.replaceAll("-", "/"))) : "—");
-	$("#modalPokemonMetLocation").text(pokemonToShow.metlocation ? pokemonToShow.metlocation : "—");
+	$("#modalPokemonInfoLevel").text(p.currentlevel);
+	$("#modalPokemonInfoNature").text(p.nature ? getLanguage(natures[p.nature]) : "—");
+	$("#modalPokemonInfoTrainer").text(p.trainername ? p.trainername : "—");
+	$("#modalPokemonInfoID").text(p.trainerid ? p.trainerid : "—");
+	$("#modalPokemonOriginGame").text(p.origingame ? getLanguage(games[p.origingame].names).replace(/\(.*?\)/g, "").trim() : "—");
+	$("#modalPokemonMetLevel").text(p.metlevel ? p.metlevel : "—");
+	$("#modalPokemonMetDate").text(p.metdate ? new Intl.DateTimeFormat().format(new Date(p.metdate.replaceAll("-", "/"))) : "—");
+	$("#modalPokemonMetLocation").text(p.metlocation ? p.metlocation : "—");
 	// TODO - ribbon/mark display does not match the card
-	if(pokemonToShow.ribbons.length){
+	if(p.ribbons.length){
 		$("#modalPokemonInfoRibbonHeader").removeClass("d-none");
 		$("#modalPokemonInfoRibbonList").removeClass("d-none").html($cardContainer.find(".card-ribbons").html());
 	} else {
 		$("#modalPokemonInfoRibbonHeader, #modalPokemonInfoRibbonList").addClass("d-none");
 	}
 	$("#modalPokemonInfoAddtlList").html("");
-	if(pokemonToShow.gmax || pokemonToShow.totem || pokemonToShow.pokerus || pokemonToShow.achievements.length){
+	if(p.gmax || p.totem || p.pokerus || p.achievements.length){
 		$("#modalPokemonInfoAddtlHeader, #modalPokemonInfoAddtlList").removeClass("d-none");
-		if(pokemonToShow.pokerus){
-			$("#modalPokemonInfoAddtlList").append($("<img>", { "src": "img/ui/pokerus-" + pokemonToShow.pokerus + ".png", "alt": "Pokérus", "title": "Pokérus" }));
+		if(p.pokerus){
+			$("#modalPokemonInfoAddtlList").append($("<img>", { "src": "img/ui/pokerus-" + p.pokerus + ".png", "alt": "Pokérus", "title": "Pokérus" }));
 		}
-		for(let a in pokemonToShow.achievements){
+		for(let a in p.achievements){
 			let achImg = "pogo-buddy-ribbon.png";
 			let achDesc = "Best Buddy Ribbon";
-			if(pokemonToShow.achievements[a] === "LeafCrown"){
+			if(p.achievements[a] === "LeafCrown"){
 				achImg = "leaf-crown.png";
 				achDesc = "Leaf Crown";
-			} else if(pokemonToShow.achievements[a] === "TimeTraveler"){
+			} else if(p.achievements[a] === "TimeTraveler"){
 				achImg = "diploma.png";
 				achDesc = "Time Travel Award";
-			} else if(pokemonToShow.achievements[a] === "PokestarShine"){
+			} else if(p.achievements[a] === "PokestarShine"){
 				achImg = "pokestar.svg";
 				achDesc = "Pokéstar Shine";
 			}
 			$("#modalPokemonInfoAddtlList").append($("<img>", { "src": "img/ui/" + achImg, "alt": achDesc, "title": achDesc }));
 		}
-		if(pokemonToShow.totem){
+		if(p.totem){
 			$("#modalPokemonInfoAddtlList").append($("<img>", { "src": "img/ui/totem.png", "alt": "Totem", "title": "Totem" }));
 		}
-		if(pokemonToShow.gmax){
+		if(p.gmax){
 			$("#modalPokemonInfoAddtlList").append($("<img>", { "src": "img/ui/gigantamax.png", "alt": "Gigantamax Factor", "title": "Gigantamax Factor" }));
 		}
 	} else {
