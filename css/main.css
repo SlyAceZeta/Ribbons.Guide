@@ -528,10 +528,12 @@ html[data-ribbonformview="grid"] #pokemonFormMultiRibbons li.d-flex {
 #modalPokemonInfoAddtlHeader {
 	font-size: 0.8rem;
 }
-#modalPokemonInfoRibbonList {
+#modalPokemonInfoRibbonList,
+#modalPokemonInfoAddtlList {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, 28px);
 	gap: 5px;
+	justify-items: center;
 }
 #modalPokemonInfoRibbonList > a > img {
 	width: auto;
@@ -555,7 +557,8 @@ html[data-ribbonformview="grid"] #pokemonFormMultiRibbons li.d-flex {
 	#modalPokemonInfoAddtlList img {
 		height: 24px;
 	}
-	#modalPokemonInfoRibbonList {
+	#modalPokemonInfoRibbonList,
+	#modalPokemonInfoAddtlList {
 		grid-template-columns: repeat(auto-fit, 36px);
 	}
 	#modalPokemonInfoRibbonList > a > img {
