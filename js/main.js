@@ -1477,7 +1477,7 @@ function infoPokemon(e){
 				achImg = "leaf-crown.png";
 				achDesc = "Leaf Crown";
 			} else if(p.achievements[a] === "TimeTraveler"){
-				achImg = "diploma.png";
+				achImg = "time-travel-award.png";
 				achDesc = "Time Travel Award";
 			} else if(p.achievements[a] === "PokestarShine"){
 				achImg = "pokestar.svg";
