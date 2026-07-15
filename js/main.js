@@ -3649,6 +3649,20 @@ function initRun(){
 		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 		const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 		
+		
+		/* show Rising Stars event alert */
+		if(!localStorage["regiultima-rising-stars"]){
+			$("#alert-regiultima-rising-stars").removeClass("d-none").addClass("d-flex show");
+			document.getElementById("alert-regiultima-rising-stars").addEventListener("close.bs.alert", event => {
+				if(confirm("Are you sure you want to permanently dismiss this alert?")){
+					localStorage["regiultima-rising-stars"] = "dismissed";
+					$("#headerNavDataLink").focus();
+				} else {
+					event.preventDefault();
+				}
+			});
+		}
+		
 		/* image check */
 		loadingBar(25);
 		$("#loading-spinner-info-text").text("Loading images");
