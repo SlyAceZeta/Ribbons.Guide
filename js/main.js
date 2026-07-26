@@ -1423,7 +1423,7 @@ function infoPokemon(e){
 	const $cardContainer = $(e.target).parents(".col");
 	const pokemonID = $cardContainer[0].dataset.pokemonId;
 	const p = userPokemon[pokemonID];
-	$("#modalPokemonInfoNameText").html($cardContainer.find(".card-header-name").text());
+	$("#modalPokemonInfoNameText, #modalPokemonInfoRibbonCompleteName").html($cardContainer.find(".card-header-name").text());
 	if($cardContainer.find(".card-header-ball-strange").length && settings.AutoStrangeBall === "true"){
 		$("#modalPokemonInfoBall").attr("src", "img/balls/strange.png");
 	} else if($cardContainer.find(".card-header-ball-selected").length){
@@ -1457,12 +1457,16 @@ function infoPokemon(e){
 	$("#modalPokemonMetLevel").text(p.metlevel ? p.metlevel : "—");
 	$("#modalPokemonMetDate").text(p.metdate ? new Intl.DateTimeFormat().format(new Date(p.metdate.replaceAll("-", "/"))) : "—");
 	$("#modalPokemonMetLocation").text(p.metlocation ? p.metlocation : "—");
-	// TODO - ribbon/mark display does not match the card
 	if(p.ribbons.length){
 		$("#modalPokemonInfoRibbonHeader").removeClass("d-none");
 		$("#modalPokemonInfoRibbonList").removeClass("d-none").html($cardContainer.find(".card-ribbons").html());
 	} else {
 		$("#modalPokemonInfoRibbonHeader, #modalPokemonInfoRibbonList").addClass("d-none");
+	}
+	if($cardContainer[0].classList.contains("ribbons-done")){
+		$("#modalPokemonInfoRibbonComplete").removeClass("d-none");
+	} else {
+		$("#modalPokemonInfoRibbonComplete").addClass("d-none");
 	}
 	$("#modalPokemonInfoAddtlList").html("");
 	if(p.gmax || p.totem || p.pokerus || p.achievements.length){
