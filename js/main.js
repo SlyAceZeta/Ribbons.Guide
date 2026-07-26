@@ -1468,6 +1468,11 @@ function infoPokemon(e){
 	} else {
 		$("#modalPokemonInfoRibbonComplete").addClass("d-none");
 	}
+	if($cardContainer[0].dataset["gameMemoryMerged"]){
+		$("#modalPokemonInfoRibbonList").addClass("game-memory-merged");
+	} else {
+		$("#modalPokemonInfoRibbonList").removeClass("game-memory-merged");
+	}
 	$("#modalPokemonInfoAddtlList").html("");
 	if(p.gmax || p.totem || p.pokerus || p.achievements.length){
 		$("#modalPokemonInfoAddtlHeader, #modalPokemonInfoAddtlList").removeClass("d-none");

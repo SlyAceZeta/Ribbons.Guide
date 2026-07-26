@@ -5,7 +5,8 @@
 			"Added profile cards for each tracked Pokémon, showing more details than what is displayed on the tracker by default, for the purposes of sharing",
 			"Replaced the Gen&nbsp;5 National Diploma sprite with the Gen&nbsp;6 Time Travel Award decoration sprite for the Time Travel Award achievement",
 			"Added information on the Rising Stars event, taking place on August 19–26",
-			"Corrected the English descriptions of the Hoenn contest ribbons (thanks mickylindsay!)"
+			"Corrected the English descriptions of the Hoenn contest ribbons (thanks mickylindsay!)",
+			"This update was re-released to fix an issue where profile cards did not respect the Old Battle/Contest Ribbons setting"
 		]
 	},
 	{
