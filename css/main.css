@@ -656,7 +656,9 @@ html[data-autostrangeball="true"] .card-header-ball-strange {
 }
 .card-header-shiny,
 .card-footer-origin,
-.card .btn-link img {
+.card .btn-link img,
+.card-footer-dropdown .dropdown-item img,
+#modalPokemonInfoShiny {
 	filter: var(--rg-icon-filter);
 }
 .card-header .card-header-right .ribbon-checklist-warning-badge {

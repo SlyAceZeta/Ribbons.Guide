@@ -1,5 +1,13 @@
 [
 	{
+		"date": "27 July 2026",
+		"changes": [
+			"Fixed an issue where Pokémon profile cards would display white text and white Shiny icons on light themes (thanks Duzz and RubyHexagon!)",
+			"Fixed an issue where Shiny male and female Pokémon would never show their gender icon on their profile card",
+			"Fixed an issue where Edit, Copy, and Delete icons were white on light themes"
+		]
+	},
+	{
 		"date": "26 July 2026",
 		"changes": [
 			"Added profile cards for each tracked Pokémon, showing more details than what is displayed on the tracker by default, for the purposes of sharing",

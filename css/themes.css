@@ -24,6 +24,9 @@
 a:not(.btn) {
 	color: var(--bs-link-color);
 }
+.badge {
+	--bs-badge-color: #000;
+}
 .btn-link:not(:hover) {
 	text-decoration: none;
 }
@@ -303,6 +306,9 @@ a:not(.btn) {
 	--rg-icon-filter: none;
 	--rg-pulse-rgb: 255, 255, 255;
 }
+[data-bs-theme="dark"] .badge {
+	--bs-badge-color: #fff;
+}
 [data-bs-theme="dark"][data-completecolor="true"] .ribbons-done {
 	--rg-card-bg: #020;
 	--rg-card-cap-bg: #030;
@@ -406,6 +412,9 @@ a:not(.btn) {
 }
 [data-bs-theme="start"] body {
 	background-image: linear-gradient(#111e34, #243a5b);
+}
+[data-bs-theme="start"] .badge {
+	--bs-badge-color: #fff;
 }
 [data-bs-theme="start"][data-completecolor="true"] .ribbons-done {
 	--rg-card-bg: #020;
@@ -519,6 +528,9 @@ a:not(.btn) {
 	--rg-card-color: #fff;
 	
 	--rg-icon-filter: none;
+}
+[data-bs-theme="lumiosenight"] .badge {
+	--bs-badge-color: #fff;
 }
 [data-bs-theme="lumiosenight"][data-completecolor="true"] .ribbons-done {
 	--rg-card-bg: #020;
@@ -669,6 +681,9 @@ a:not(.btn) {
 	--rg-card-color: #fff;
 	
 	--rg-icon-filter: none;
+}
+[data-bs-theme="powerconstruct"] .badge {
+	--bs-badge-color: #fff;
 }
 [data-bs-theme="powerconstruct"][data-completecolor="true"] .ribbons-done {
 	--rg-card-bg: #020;
@@ -826,6 +841,9 @@ a:not(.btn) {
 [data-bs-theme="naranja"] body {
 	background-image: linear-gradient(225deg, #001e4f, #0058ba);
 }
+[data-bs-theme="naranja"] .badge {
+	--bs-badge-color: #fff;
+}
 [data-bs-theme="naranja"][data-completecolor="true"] .ribbons-done {
 	--rg-card-bg: #020;
 	--rg-card-cap-bg: #030;
@@ -942,6 +960,9 @@ a:not(.btn) {
 [data-bs-theme="uva"] body {
 	background-image: linear-gradient(225deg, #001e4f, #0058ba);
 }
+[data-bs-theme="uva"] .badge {
+	--bs-badge-color: #fff;
+}
 [data-bs-theme="uva"][data-completecolor="true"] .ribbons-done {
 	--rg-card-bg: #020;
 	--rg-card-cap-bg: #030;
@@ -1026,4 +1047,11 @@ a:not(.btn) {
 }
 [data-bs-theme="uva"] #loading-spinner-info-progress {
 	--bs-progress-bar-bg: #842EAF;
+}
+
+/* multiple overrides */
+[data-bs-theme="light"] #alert-regiultima-rising-stars .btn-outline-primary,
+[data-bs-theme="sword"] #alert-regiultima-rising-stars .btn-outline-primary,
+[data-bs-theme="shield"] #alert-regiultima-rising-stars .btn-outline-primary {
+	--bs-btn-color: #fff;
 }

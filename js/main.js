@@ -1437,9 +1437,9 @@ function infoPokemon(e){
 		$("#modalPokemonInfoGender").attr("src", "img/ui/gender-" + p.gender + ".png");
 	}
 	if(p.shiny === "square"){
-		$("#modalPokemonInfoGender").attr("src", "img/ui/shiny-square.svg");
+		$("#modalPokemonInfoShiny").attr("src", "img/ui/shiny-square.svg");
 	} else if(p.shiny){
-		$("#modalPokemonInfoGender").attr("src", "img/ui/shiny-star.png");
+		$("#modalPokemonInfoShiny").attr("src", "img/ui/shiny-star.png");
 	} else {
 		$("#modalPokemonInfoShiny").attr("src", "img/ui/1x1.svg");
 	}
