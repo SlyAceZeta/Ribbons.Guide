@@ -673,7 +673,10 @@
 					<div class="modal-body p-3 pt-2">
 						<div class="row g-2">
 							<div class="col-lg-6">
-								<label for="filterFormSort" class="form-label">Sort</label>
+								<label for="filterFormSort" class="form-label">
+									<span class="align-middle">Sort</span>
+								</label><!--
+								--><img class="align-middle ms-2 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" data-bs-html="true" title="Met Date options will always display Pokémon without Met Dates at the bottom.">
 								<select id="filterFormSort" class="form-select" data-minimum-results-for-search="Infinity">
 									<option value="default">Default</option>
 									<option value="dexasc">National Pokédex # ▲ (0001-1025)</option>
@@ -682,6 +685,8 @@
 									<option value="leveldesc">Current Level ▼ (100-1)</option>
 									<option value="nameasc">Name ▲ (A-Z)</option>
 									<option value="namedesc">Name ▼ (Z-A)</option>
+									<option value="metdateasc">Met Date ▲ (1995-2099)</option>
+									<option value="metdatedesc">Met Date ▼ (2099-1995)</option>
 								</select>
 							</div>
 							<div class="col-6">
@@ -963,17 +968,6 @@
 									<img class="align-middle ms-1 light-invert" src="img/ui/help.png" style="height:16px;" data-bs-toggle="tooltip" title="Changing this setting will reload the page.">
 								</label>
 								<select class="form-select" id="settingsLanguage" aria-label="Language selection" data-minimum-results-for-search="Infinity"></select>
-							</div>
-							<div class="mb-2">
-								<label class="form-label" for="settingsExtraOriginMarks">Gen 3/4/5 origin marks</label>
-								<select class="form-select" id="settingsExtraOriginMarks" aria-label="Gen 3/4/5 origin marks" data-minimum-results-for-search="Infinity">
-									<option value="none">None (official)</option>
-									<option value="platforms">Platform icons</option>
-									<option value="roman">Roman numerals</option>
-									<option value="roman-outline">Roman numerals, outlined</option>
-									<option value="arabic">Arabic numerals</option>
-									<option value="arabic-outline">Arabic numerals, outlined</option>
-								</select>
 							</div>
 							<div class="mb-2">
 								<label class="form-label" for="settingsChecklistButtons">Ribbon Checklist buttons</label>

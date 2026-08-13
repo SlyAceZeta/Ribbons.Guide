@@ -4,6 +4,9 @@ var balls, changelog, games, gameOrder = {}, gameGroups, origins, pokedex, ribbo
 const evolveVoicelessMap = {"caterpie": ["metapod"], "weedle": ["kakuna"], "venonat": ["venomoth"], "natu": ["xatu"], "larvitar": ["pupitar"], "wurmple": ["silcoon", "cascoon"], "bagon": ["shelgon"]};
 // voiceless BDSP species (and voiced BDSP species that can evolve into voiceless BDSP species) that can evolve into voiced BDSP species
 const evolveVoicedMap = {"caterpie": ["butterfree"], "metapod": ["butterfree"], "weedle": ["beedrill"], "kakuna": ["beedrill"], "kabuto": ["kabutops"], "remoraid": ["octillery"], "larvitar": ["tyranitar"], "pupitar": ["tyranitar"], "wurmple": ["beautifly", "dustox"], "silcoon": ["beautifly"], "cascoon": ["dustox"], "seedot": ["nuzleaf", "shiftry"], "nincada": ["ninjask"], "anorith": ["armaldo"], "bagon": ["salamence"], "shelgon": ["salamence"], "beldum": ["metagross"], "metang": ["metagross"]};
+// bank shutdown date/time display
+const bankShutdown = new Date("2027-02-26T03:00:00Z");
+const bankShutdownText = bankShutdown.toLocaleString([], { weekday: "long", month: "long", day: "numeric", hour: "numeric" });
 // TODO: add tutorials
 /* clear old local storage properties if still present */
 /* except theme which gets special handling */
@@ -18,6 +21,14 @@ if(!localStorage.settings){
 	localStorage.settings = "{}";
 }
 var settings = JSON.parse(localStorage.settings);
+/* clear old settings if still present */
+var oldSettings = ["ExtraOriginMarks"];
+for(var s in oldSettings){
+	if(settings[oldSettings[s]]){
+		delete settings[oldSettings[s]];
+		localStorage.settings = JSON.stringify(settings);
+	}
+}
 /* get pokemon */
 if(!localStorage.pokemon){
 	localStorage.pokemon = "[]";
@@ -153,18 +164,6 @@ if(settings.OldRibbons){
 	changeOldRibbons(settings.OldRibbons);
 } else {
 	changeOldRibbons("unmerged");
-}
-
-/* change Gen 3/4/5 origin marks */
-function changeExtraOriginMarks(o){
-	changeSetting("ExtraOriginMarks", o);
-	$("html").attr("data-extraoriginmarks", o);
-}
-/* initial origin mark set */
-if(settings.ExtraOriginMarks){
-	changeExtraOriginMarks(settings.ExtraOriginMarks);
-} else {
-	changeExtraOriginMarks("none");
 }
 
 /* change card view */
@@ -797,7 +796,7 @@ function filterCompatibleGames(gameArray, game, gameGroup){
 	return [filteredGames, filteredGroups];
 }
 
-function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame, originMark, currentRibbons, checkedScale, totem = false, gmax = false, shadow = false){
+function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame, originMark, ball, currentRibbons, checkedScale, totem = false, gmax = false, shadow = false){
 	currentLevel = parseInt(currentLevel);
 	
 	const earnableRibbons = {};
@@ -836,6 +835,9 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 		} else if(dex === "pikachu" || dex === "eevee" || dex === "meowth" || dex == "duraludon"){
 			// if these Pokemon have GMax, they cannot leave SwSh
 			if(gmax && targetGame !== "sw" && targetGame !== "sh") return false;
+		} else if(ball == "go-safari"){
+			// Pokemon in GO Safari Balls cannot leave GO
+			if(targetGame !== "go") return false;
 		}
 		return true;
 	});
@@ -995,6 +997,10 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 			// add warning for GO language
 			if(currentGame == "go" && ribbonIsGen8OrSV){
 				earnableRibbonWarnings.push({ id: "go-language" });
+			}
+			// add warnings for Bank shutdown
+			if(ribbonIsGen8OrSV && currentGameGroup !== "GO" && currentGameGroup !== "LGPE" && currentGameGroup !== "8" && currentGameGroup !== "SwitchVC" && currentGameGroup !== "XD-NSO" && currentGameGroup !== "10"){
+				earnableRibbonWarnings.push({ id: "bank-shutdown" });
 			}
 			var ribbonGameKey = ribbonGame;
 			if(ribbonGameCombo){
@@ -1679,6 +1685,8 @@ function ribbonChecklist(event){
 				warning.text = "If " + cardData.name + " reaches Lv.51, the Winning Ribbon will become unavailable.";
 			} else if(warning.id === "go-language"){
 				warning.text = "If " + cardData.name + " is moved to a HOME account set to Latin American Spanish, it cannot travel to Gen&nbsp;8, Scarlet, or Violet.";
+			} else if(warning.id === "bank-shutdown"){
+				warning.text = "Bank will shut down on " + bankShutdownText + ". Make sure to transfer " + cardData.name + " to HOME before then!";
 			} else if(warning.id === "footprint"){
 				warning.classes += " text-start";
 				warning.text = "Footprint Ribbon:<ul class='mb-0 ps-3'>";
@@ -1924,11 +1932,11 @@ function createCard(p, id){
 	// get compatible games and ribbons
 	let compatibleGamesAndRibbons = {}; //{"currentCompatibleGames": [], "compatibleGroups": [], "earnableRibbonWarnings": [], "earnableRibbons": {}};
 	if(p.currentgame){
-		compatibleGamesAndRibbons = getGamesAndRibbons(p.species, p.currentlevel, p.metlevel, p.currentgame, p.origingame, p.originmark, p.ribbons, p.scale, p.totem, p.gmax, p.shadow);
+		compatibleGamesAndRibbons = getGamesAndRibbons(p.species, p.currentlevel, p.metlevel, p.currentgame, p.origingame, p.originmark, p.ball, p.ribbons, p.scale, p.totem, p.gmax, p.shadow);
 	}
 	
 	/* containers and filters */
-	var $cardCol = $("<div>", { "class": "col", "data-name": displayName, "data-national-dex": getPokedexData(p.species, "natdex"), "data-level": p.currentlevel, "data-origin-mark": p.originmark, "data-origin-game": p.origingame, "data-current-game": p.currentgame, "data-compatible-games": "[]", "data-earned-ribbons": JSON.stringify(p.ribbons), "data-pokemon-id": id, "data-gender": p.gender, "data-species": p.species, "data-game-memory-merged": mergeMemoryRibbons, "data-scale-checked": p.scale ? "" + p.scale : "false" });
+	var $cardCol = $("<div>", { "class": "col", "data-name": displayName, "data-national-dex": getPokedexData(p.species, "natdex"), "data-level": p.currentlevel, "data-origin-mark": p.originmark, "data-origin-game": p.origingame, "data-current-game": p.currentgame, "data-compatible-games": "[]", "data-earned-ribbons": JSON.stringify(p.ribbons), "data-pokemon-id": id, "data-gender": p.gender, "data-species": p.species, "data-game-memory-merged": mergeMemoryRibbons, "data-scale-checked": p.scale ? "" + p.scale : "false", "data-met-date": p.metdate });
 	if(Object.keys(compatibleGamesAndRibbons).length){
 		// attach compatible games
 		$cardCol.attr({ "data-compatible-games": JSON.stringify(compatibleGamesAndRibbons.currentCompatibleGames) });
@@ -1966,7 +1974,7 @@ function createCard(p, id){
 	var $cardHeaderCheckbox = $("<input>", { "type": "checkbox", "class": "card-header-checkbox form-check-input me-2 d-none", "aria-label": "Select " + displayName, "disabled": "disabled" });
 	var $cardHeaderBallMain = $("<img>", { "class": "align-text-top me-2", "src": "img/balls/" + p.ball + ".png", "alt": getLanguage(balls[p.ball]), "title": getLanguage(balls[p.ball]) });
 	var $cardHeaderBallStrange = "";
-	if(p.currentgame && ((p.currentgame !== "pla" && p.currentgame !== "home" && p.currentgame !== "homeza" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui))){
+	if(p.currentgame && ((p.currentgame !== "pla" && p.currentgame !== "home" && p.currentgame !== "homeza" && balls[p.ball].hisui) || (p.currentgame == "pla" && !balls[p.ball].hisui) || (p.currentgame !== "go" && p.ball === "go-safari"))){
 		if(p.strangeball !== "disabled"){
 			$cardHeaderBallStrange = $("<img>", { "class": "align-text-top me-2", "src": "img/balls/strange.png", "alt": getLanguage(translations["strange-ball"]), "title": getLanguage(translations["strange-ball"]) });
 			if(p.strangeball == ""){
@@ -2167,23 +2175,13 @@ function createCard(p, id){
 		if(getGameData(p.origingame, "storage", true)){
 			originName = originName.replace(/ \(.*\)/, "");
 		}
-	} else if(p.originmark === "none"){
-		originName = getLanguage(translations.none);
-	} else if(p.originmark){
+	} else if(p.originmark && p.originmark !== "none"){
 		originName = getLanguage(origins[p.originmark].names);
 	}
-	if(p.originmark == "none"){
-		if(p.origingame){
-			var originGen = getGameData(p.origingame, "gen");
-			var platformIcon = getGameData(p.origingame, "platformIcon");
-			$cardFooterBottomLeft.append($("<img>", { "class": "align-middle card-footer-origin card-footer-origin-arabic", "src": "img/origins/custom/arabic/" + originGen + ".svg", "alt": originName, "title": originName }))
-				.append($("<img>", { "class": "align-middle card-footer-origin card-footer-origin-arabic-outline", "src": "img/origins/custom/arabic-outline/" + originGen + ".svg", "alt": originName, "title": originName }))
-				.append($("<img>", { "class": "align-middle card-footer-origin card-footer-origin-roman", "src": "img/origins/custom/roman/" + originGen + ".svg", "alt": originName, "title": originName }))
-				.append($("<img>", { "class": "align-middle card-footer-origin card-footer-origin-roman-outline", "src": "img/origins/custom/roman-outline/" + originGen + ".svg", "alt": originName, "title": originName }))
-				.append($("<img>", { "class": "align-middle card-footer-origin card-footer-origin-platform", "src": "img/origins/custom/platforms/" + platformIcon + ".svg", "alt": originName, "title": originName }));
-		}
-	} else if(p.originmark){
-		$cardFooterBottomLeft.append($("<img>", { "class": "align-middle card-footer-origin", "src": "img/origins/" + p.originmark + ".png", "alt": originName, "title": originName }));
+	if(p.originmark && p.originmark !== "none"){
+		let originImg = p.originmark;
+		if(origins[p.originmark].image) originImg = origins[p.originmark].image;
+		$cardFooterBottomLeft.append($("<img>", { "class": "align-middle card-footer-origin", "src": "img/origins/" + originImg + ".png", "alt": originName, "title": originName }));
 	}
 	var $cardFooterBottomRight = $("<div>")
 		.append($("<button>", { "class": "btn btn-link p-0 lh-1 align-text-bottom card-sortable-handle" }).html($("<img>", { "class": "align-text-bottom", "src": "img/ui/move.svg", "alt": "Move", "title": "Drag to re-order" })))
@@ -2223,10 +2221,6 @@ function presetSettings(change = false){
 	if(settings.OldRibbons){
 		$("#settingsOldRibbons").val(settings.OldRibbons);
 		if(change) $("#settingsOldRibbons").trigger("change");
-	}
-	if(settings.ExtraOriginMarks){
-		$("#settingsExtraOriginMarks").val(settings.ExtraOriginMarks);
-		if(change) $("#settingsExtraOriginMarks").trigger("change");
 	}
 	if(settings.CardView){
 		$("#switchViewBtn-" + settings.CardView).prop("checked", true);
@@ -2376,6 +2370,30 @@ function sortPokemonList(){
 	} else if(activeSort == "namedesc"){
 		comparison = function(a, b){
 			return b.dataset.name.toLowerCase().localeCompare(a.dataset.name.toLowerCase());
+		}
+	} else if(activeSort == "metdateasc"){
+		comparison = function(a, b){
+			if(a.dataset.metDate){
+				if(b.dataset.metDate){
+					return new Date(a.dataset.metDate) > new Date(b.dataset.metDate);
+				} else {
+					return false;
+				}
+			} else {
+				return true;
+			}
+		}
+	} else if(activeSort == "metdatedesc"){
+		comparison = function(a, b){
+			if(a.dataset.metDate){
+				if(b.dataset.metDate){
+					return new Date(b.dataset.metDate) > new Date(a.dataset.metDate);
+				} else {
+					return false;
+				}
+			} else {
+				return true;
+			}
 		}
 	}
 	[...trackerList.children].sort(comparison).forEach(node => trackerList.appendChild(node));
@@ -2683,40 +2701,14 @@ function selectCustomOption(o){
 		return $ball;
 	} else if(result.indexOf("pokemonFormOriginMark") > 0 || result.indexOf("filterFormOriginMark") > 0){
 		var $mark = $("<span>");
-		if(o.id === "none"){
-			// TODO: reduce duplication: image holding area
-			var noneGens = [3, 4, 5];
-			var noneTypes = ["arabic", "arabic-outline", "roman", "roman-outline"];
-			var nonePlatforms = ["gba", "gamecube", "dsi"];
-			for(var i in noneGens){
-				for(var t in noneTypes){
-					$mark.append($("<img>", { "class": selectIconClass + " light-invert select-icon-origin select-icon-origin-" + noneTypes[t], "src": "img/origins/custom/" + noneTypes[t] + "/" + noneGens[i] + ".svg" }));
-				}
-			}
-			for(var p in nonePlatforms){
-				$mark.append($("<img>", { "class": selectIconClass + " light-invert select-icon-origin select-icon-origin-platform", "src": "img/origins/custom/platforms/" + nonePlatforms[p] + ".svg" }));
-			}
-		} else {
-			$mark.append($("<img>", { "class": selectIconClass + " light-invert", "src": "img/origins/" + o.id + ".png" }));
+		// TODO: reduce duplication: image holding area
+		if(o.id !== "none"){
+			let originImg = o.id;
+			if(origins[o.id].image) originImg = origins[o.id].image;
+			$mark.append($("<img>", { "class": selectIconClass + " light-invert", "src": "img/origins/" + originImg + ".png" }));
 		}
 		$mark.append($("<span>").text(o.text));
 		return $mark;
-	} else if(result.indexOf("settingsExtraOriginMarks") > 0){
-		var $marks = $("<span>");
-		// TODO: reduce duplication: image holding area
-		if(o.id === "platforms"){
-			var nonePlatforms = ["gba", "gamecube", "dsi"];
-			for(var p in nonePlatforms){
-				$marks.append($("<img>", { "class": selectIconClass + " light-invert", "src": "img/origins/custom/platforms/" + nonePlatforms[p] + ".svg" }));
-			}
-		} else if(o.id !== "none"){
-			var noneGens = [3, 4, 5];
-			for(var i in noneGens){
-				$marks.append($("<img>", { "class": selectIconClass + " light-invert", "src": "img/origins/custom/" + o.id + "/" + noneGens[i] + ".svg" }));
-			}
-		}
-		$marks.append($("<span>").text(o.text));
-		return $marks;
 	} else if(result.indexOf("pokemonFormBox") > 0 || result.indexOf("pokemonFormMultiBox") > 0 || result.indexOf("filterFormBox") > 0){
 		var $box = $("<span>");
 		var boxImage = "closed";
@@ -2901,7 +2893,7 @@ function initRun(){
 	}
 	
 	/* data load */
-	loadingBar(10);
+	loadingBar(5);
 	$("#loading-spinner-info-text").text("Loading data");
 	$.when(
 		$.getJSON("./data/balls.json"),
@@ -2949,7 +2941,7 @@ function initRun(){
 		}
 		
 		/* initialize forms */
-		loadingBar(15);
+		loadingBar(10);
 		$("#loading-spinner-info-text").text("Loading form");
 		/* create temporary image area for later image loading */
 		$("body").append($("<div>", { "id": "imageHoldingArea", "class": "d-none" }));
@@ -2996,20 +2988,10 @@ function initRun(){
 			}
 			$("#pokemonFormOriginMark, #filterFormOriginMark").prepend(new Option(optionText, o));
 			// TODO: reduce duplication: selectCustomOption
-			if(o == "none"){
-				var noneGens = [3, 4, 5];
-				var noneTypes = ["arabic", "arabic-outline", "roman", "roman-outline"];
-				var nonePlatforms = ["dsi", "gamecube", "gba"];
-				for(var i in noneGens){
-					for(var t in noneTypes){
-						$("#imageHoldingArea").append($("<img>", { "src": "img/origins/custom/" + noneTypes[t] + "/" + noneGens[i] + ".svg" }));
-					}
-				}
-				for(var p in nonePlatforms){
-					$("#imageHoldingArea").append($("<img>", { "src": "img/origins/custom/platforms/" + nonePlatforms[p] + ".svg" }));
-				}
-			} else {
-				$("#imageHoldingArea").append($("<img>", { "src": "img/origins/" + o + ".png" }));
+			if(o !== "none"){
+				let originImg = o;
+				if(origins[o].image) originImg = origins[o].image;
+				$("#imageHoldingArea").append($("<img>", { "src": "img/origins/" + originImg + ".png" }));
 			}
 		}
 		var pokemonCount = 0;
@@ -3171,7 +3153,7 @@ function initRun(){
 			templateResult: selectCustomOption,
 			dropdownParent: $("#modalFilterForm .modal-body")
 		});
-		$("#settingsTheme, #settingsLanguage, #settingsChecklistButtons, #settingsTitleRibbon, #settingsOldRibbons, #settingsExtraOriginMarks").select2({
+		$("#settingsTheme, #settingsLanguage, #settingsChecklistButtons, #settingsTitleRibbon, #settingsOldRibbons").select2({
 			matcher: selectCustomMatcher,
 			templateSelection: selectCustomOption,
 			templateResult: selectCustomOption,
@@ -3381,7 +3363,7 @@ function initRun(){
 		
 		/* changelog logic */
 		/* TODO: reduce duplication with full changelog behavior */
-		loadingBar(20);
+		loadingBar(15);
 		$("#loading-spinner-info-text").text("Loading changelog");
 		if(settings.NewChangelogs === "true"){
 			var newChanges = [], initialRun = true;
@@ -3436,7 +3418,7 @@ function initRun(){
 		
 		/* data conversion from old app */
 		if((userPokemon.entries && typeof userPokemon.entries !== "function") || (userBoxes.entries && typeof userBoxes.entries !== "function")){
-			loadingBar(21);
+			loadingBar(20);
 			$("#loading-spinner-info-text").text("Converting old data");
 			if(userPokemon.entries && typeof userPokemon.entries !== "function"){
 				userPokemon = Object.assign([], userPokemon.entries.filter(Boolean));
@@ -3453,7 +3435,7 @@ function initRun(){
 		}
 		
 		/* update all Pokemon languages */
-		loadingBar(22);
+		loadingBar(21);
 		$("#loading-spinner-info-text").text("Updating Pokémon languages");
 		var languageConvert = {
 			"eng": "en",
@@ -3498,7 +3480,7 @@ function initRun(){
 		}
 		
 		/* update all Pokemon games */
-		loadingBar(23);
+		loadingBar(22);
 		$("#loading-spinner-info-text").text("Updating Pokémon games");
 		const gameConvert = {
 			"blue-eng": "blue",
@@ -3544,6 +3526,55 @@ function initRun(){
 			}
 		}
 		if(changedAGame){
+			localStorage.pokemon = JSON.stringify(userPokemon);
+			updateModifiedDate();
+		}
+		
+		/* update GO Safari Balls */
+		loadingBar(23);
+		$("#loading-spinner-info-text").text("Updating Poké Balls");
+		let changedABall = false;
+		for(let p in userPokemon){
+			try {
+				if(((userPokemon[p].currentgame && userPokemon[p].currentgame == "go") || (userPokemon[p].origingame && userPokemon[p].origingame == "go") || (userPokemon[p].originmark && userPokemon[p].originmark == "go")) && userPokemon[p].ball === "safari"){
+					changedABall = true;
+					userPokemon[p].ball = "go-safari";
+				}
+			} catch(err) {
+				const $errorimg = $("<img>", { "src": "./img/ui/cross.svg" });
+				const $errortext = $("<div>", { "class": "fw-bold", "role": "status" })
+					.append($("<div>", { "class": "my-3" }).html("<span class='text-uppercase'>Pokémon ball conversion error on Pokémon #" + p + "</span><br>" + err))
+					.append($("<div>").html("Please inform Sly on <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a> or <a href='https://discord.gg/frv7dpWzDG'>Discord</a>."))
+					.append($("<div>").html("Attach the following file with your report (tap or left-click to download): <button type='button' class='btn btn-link p-0 fw-bold align-baseline' onclick='saveBackupFile(\"RibbonError\")'>RibbonError.json</button>"));
+				$("#loading-spinner-info").html($errorimg).append($errortext);
+				return;
+			}
+		}
+		if(changedABall){
+			localStorage.pokemon = JSON.stringify(userPokemon);
+			updateModifiedDate();
+		}
+		
+		/* update FRLG origin marks */
+		$("#loading-spinner-info-text").text("Updating origin marks");
+		let changedAMark = false;
+		for(let p in userPokemon){
+			try {
+				if(userPokemon[p].originmark && userPokemon[p].origingame && userPokemon[p].originmark === "none" && (userPokemon[p].origingame == "fr-switch" || userPokemon[p].origingame == "lg-switch")){
+					changedAMark = true;
+					userPokemon[p].originmark = "gba";
+				}
+			} catch(err) {
+				const $errorimg = $("<img>", { "src": "./img/ui/cross.svg" });
+				const $errortext = $("<div>", { "class": "fw-bold", "role": "status" })
+					.append($("<div>", { "class": "my-3" }).html("<span class='text-uppercase'>Pokémon origin mark conversion error on Pokémon #" + p + "</span><br>" + err))
+					.append($("<div>").html("Please inform Sly on <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a> or <a href='https://discord.gg/frv7dpWzDG'>Discord</a>."))
+					.append($("<div>").html("Attach the following file with your report (tap or left-click to download): <button type='button' class='btn btn-link p-0 fw-bold align-baseline' onclick='saveBackupFile(\"RibbonError\")'>RibbonError.json</button>"));
+				$("#loading-spinner-info").html($errorimg).append($errortext);
+				return;
+			}
+		}
+		if(changedAMark){
 			localStorage.pokemon = JSON.stringify(userPokemon);
 			updateModifiedDate();
 		}
@@ -3658,7 +3689,6 @@ function initRun(){
 		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 		const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 		
-		
 		/* show Rising Stars event alert */
 		if(!localStorage["regiultima-rising-stars"]){
 			$("#alert-regiultima-rising-stars").removeClass("d-none").addClass("d-flex show");
@@ -3729,9 +3759,6 @@ $(function(){
 	$("#settingsOldRibbons").on("change", function(){
 		changeOldRibbons($(this).val());
 		updateRibbonNumbers();
-	});
-	$("#settingsExtraOriginMarks").on("change", function(){
-		changeExtraOriginMarks($(this).val());
 	});
 	/* device theme change listener */
 	window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', () => {

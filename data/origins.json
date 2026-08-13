@@ -89,5 +89,13 @@
 		"names": {
 			"en": "Z-A"
 		}
+	},
+	"gba": {
+		"image": "gba-temp",
+		"names": {
+			"en": "Game Boy Advance",
+			"ja": "ゲームボーイアドバンス",
+			"ko": "게임보이 어드밴스"
+		}
 	}
 }

@@ -440,5 +440,17 @@
 		"ko": "오리진볼",
 		"zh-Hans": "起源球",
 		"zh-Hant": "起源球"
+	},
+	"go-safari": {
+		"en": "GO Safari Ball",
+		"es-es": "Safari GO Ball",
+		"es-419": "Safaribola GO",
+		"fr": "Safari GO Ball",
+		"de": "GO-Safariball",
+		"it": "Safari GO Ball",
+		"ja": "GOサファリボール",
+		"ko": "GO사파리볼",
+		"zh-Hans": "GO狩猎球",
+		"zh-Hant": "GO狩獵球"
 	}
 }
