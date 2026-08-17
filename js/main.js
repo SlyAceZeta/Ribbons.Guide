@@ -3691,13 +3691,12 @@ function initRun(){
 		
 		/* show Rising Stars event alert */
 		if(!localStorage["regiultima-rising-stars"]){
-			$("#alert-regiultima-rising-stars").removeClass("d-none").addClass("d-flex show");
-			document.getElementById("alert-regiultima-rising-stars").addEventListener("close.bs.alert", event => {
+			$("#alert-regiultima-rising-stars").removeClass("d-none").addClass("d-flex show").on("close.bs.alert", function(e){
 				if(confirm("Are you sure you want to permanently dismiss this alert?")){
 					localStorage["regiultima-rising-stars"] = "dismissed";
 					$("#headerNavDataLink").focus();
 				} else {
-					event.preventDefault();
+					e.preventDefault();
 				}
 			});
 		}

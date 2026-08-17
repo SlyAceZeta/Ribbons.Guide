@@ -1,5 +1,11 @@
 [
 	{
+		"date": "16 August 2026",
+		"changes": [
+			"Fixed an issue with the Rising Stars banner that prevented Ribbons.Guide from loading (thanks dawn!)"
+		]
+	},
+	{
 		"date": "13 August 2026",
 		"header": "The announcement we all dreaded is finally here: <strong>Pokémon Bank is shutting down in February.</strong>",
 		"changes": [
