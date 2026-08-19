@@ -999,7 +999,7 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 				earnableRibbonWarnings.push({ id: "go-language" });
 			}
 			// add warnings for Bank shutdown
-			if(ribbonIsGen8OrSV && currentGameGroup !== "GO" && currentGameGroup !== "LGPE" && currentGameGroup !== "8" && currentGameGroup !== "SwitchVC" && currentGameGroup !== "XD-NSO" && currentGameGroup !== "10"){
+			if(ribbonIsGen8OrSV && currentGameGroup !== "GO" && !gameGroups[currentGameGroup].switch){
 				earnableRibbonWarnings.push({ id: "bank-shutdown" });
 			}
 			var ribbonGameKey = ribbonGame;
@@ -1962,6 +1962,11 @@ function createCard(p, id){
 			$cardCol.attr({ "data-evolution-warning": ribbonLists.evolutionWarning.pokemon });
 		}*/
 	}
+	if(currentGameGroup && gameGroups[currentGameGroup].switch){
+		$cardCol.addClass("on-switch");
+	} else {
+		$cardCol.addClass("not-on-switch");
+	}
 	var $cardContainer = $("<div>", { "class": "card border-0", "onclick": "selectPokemon(event)" });
 	
 	/* sections */
@@ -2568,6 +2573,14 @@ function filterPokemon(p, classes, data){
 				pass = false;
 				break;
 			}
+		} else if(f == "switch"){
+			if(activeFilters[f] === "true" && classes.contains("not-on-switch")){
+				pass = false;
+				break;
+			} else if(activeFilters[f] === "false" && classes.contains("on-switch")){
+				pass = false;
+				break;
+			}
 		}
 	}
 	return pass;
@@ -3147,7 +3160,7 @@ function initRun(){
 			matcher: selectCustomMatcherWithGroups,
 			dropdownParent: $("#modalFilterForm .modal-body")
 		});
-		$("#filterFormSort, #filterFormStatus, #filterFormGender, #filterFormShiny, #filterFormBall, #filterFormOriginMark, #filterFormBox, #filterFormEarnedRibbons, #filterFormTargetRibbons, #filterFormGMax, #filterFormPokerus").select2({
+		$("#filterFormSort, #filterFormSwitch, #filterFormStatus, #filterFormGender, #filterFormShiny, #filterFormBall, #filterFormOriginMark, #filterFormBox, #filterFormEarnedRibbons, #filterFormTargetRibbons, #filterFormGMax, #filterFormPokerus").select2({
 			matcher: selectCustomMatcher,
 			templateSelection: selectCustomOption,
 			templateResult: selectCustomOption,

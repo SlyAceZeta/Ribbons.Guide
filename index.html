@@ -672,7 +672,7 @@
 					</div>
 					<div class="modal-body p-3 pt-2">
 						<div class="row g-2">
-							<div class="col-lg-6">
+							<div>
 								<label for="filterFormSort" class="form-label">
 									<span class="align-middle">Sort</span>
 								</label><!--
@@ -692,6 +692,14 @@
 							<div class="col-6">
 								<label for="filterFormName" class="form-label">Name/Species/#</label>
 								<input id="filterFormName" class="form-control" type="text" placeholder="">
+							</div>
+							<div class="col-6">
+								<label for="filterFormSwitch" class="form-label">In a Switch game</label>
+								<select id="filterFormSwitch" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true">
+									<option value="">&nbsp;</option>
+									<option value="false">No</option>
+									<option value="true">Yes</option>
+								</select>
 							</div>
 							<div class="col-6">
 								<label for="filterFormStatus" class="form-label">Status</label>
@@ -762,12 +770,12 @@
 								<select id="filterFormOriginMark" class="form-select" data-placeholder="" data-minimum-results-for-search="Infinity" data-allow-clear="true"></select>
 							</div>
 							<div class="col-6">
-								<label for="filterFormCurrentGame" class="form-label">Current Game</label>
-								<select id="filterFormCurrentGame" class="form-select" data-placeholder="" data-allow-clear="true"></select>
-							</div>
-							<div class="col-6">
 								<label for="filterFormBox" class="form-label">Box</label>
 								<select id="filterFormBox" class="form-select" data-placeholder="" data-allow-clear="true"></select>
+							</div>
+							<div class="col-lg-6">
+								<label for="filterFormCurrentGame" class="form-label">Current Game</label>
+								<select id="filterFormCurrentGame" class="form-select" data-placeholder="" data-allow-clear="true"></select>
 							</div>
 							<div class="col-lg-6">
 								<label for="filterFormTargetGames" class="form-label">

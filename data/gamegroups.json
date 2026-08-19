@@ -4,32 +4,37 @@
 			"en": "Legends: Z-A"
 		},
 		"travelTo": [],
-		"mergeMemoryRibbons": true
+		"mergeMemoryRibbons": true,
+		"switch": true
 	},
 	"XD-NSO": {
 		"names": {
 			"en": "XD: Gale of Darkness (NSO)"
 		},
-		"travelTo": []
+		"travelTo": [],
+		"switch": true
 	},
 	"SwitchVC": {
 		"names": {
 			"en": "FireRed/LeafGreen (Switch)"
 		},
-		"travelTo": []
+		"travelTo": [],
+		"switch": true
 	},
 	"8": {
 		"names": {
 			"en": "Gen 8/Scarlet/Violet"
 		},
 		"travelTo": ["10"],
-		"mergeMemoryRibbons": true
+		"mergeMemoryRibbons": true,
+		"switch": true
 	},
 	"LGPE": {
 		"names": {
 			"en": "Let's Go"
 		},
-		"travelTo": ["8"]
+		"travelTo": ["8"],
+		"switch": true
 	},
 	"3DSVC": {
 		"names": {
