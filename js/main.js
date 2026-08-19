@@ -210,6 +210,7 @@ var toggles = { // default settings
 	"IllegalTitles": false,
 	"Reordering": true,
 	"NewChangelogs": true,
+	"EditEarnableOnly": false,
 	"AprilFools": true
 };
 /* change toggle settings */
@@ -1283,6 +1284,44 @@ function savePokemon(edit = false){
 	}
 }
 
+function updateFormEarnableRibbons(){
+	if(settings.EditEarnableOnly === "false"){
+		$("#pokemonFormRibbons-none, #pokemonFormRibbons-origin, #pokemonFormRibbons-currentorspecies").addClass("d-none");
+		$("#pokemonFormRibbons > li:not(#pokemonFormRibbons-none):not(#pokemonFormRibbons-currentorspecies):not(#pokemonFormRibbons-origin)").removeClass("d-none");
+		$("#pokemonFormRibbonSearch").prop("disabled", false);
+	} else {
+		$("#pokemonFormRibbonSearch").val("").prop("disabled", true);
+		$("#pokemonFormRibbons > li").addClass("d-none");
+		let pokemonSpecies = $("#pokemonFormSpecies").val();
+		let pokemonCurrentGame = $("#pokemonFormCurrentGame").val();
+		if(pokemonSpecies && pokemonCurrentGame){
+			$("#pokemonFormRibbons-currentorspecies").addClass("d-none");
+			let pokemonOriginGame = $("#pokemonFormOriginGame").val();
+			let pokemonOriginMark = $("#pokemonFormOriginMark").val();
+			if(pokemonOriginGame || pokemonOriginMark || pokemonSpecies !== "nincada"){
+				$("#pokemonFormRibbons-origin").addClass("d-none");
+				let compatibleGamesAndRibbons = getGamesAndRibbons(pokemonSpecies, $("#pokemonFormCurrentLevel").val(), $("#pokemonFormMetLevel").val(), pokemonCurrentGame, pokemonOriginGame, pokemonOriginMark, $("#pokemonFormBall").val(), [], false, $("#pokemonFormTotem").prop("checked"), $("#pokemonFormGMax").prop("checked"), $("#pokemonFormShadow").prop("checked"));
+				let plainRibbons = [];
+				for(let game in compatibleGamesAndRibbons.earnableRibbons){
+					plainRibbons = plainRibbons.concat(compatibleGamesAndRibbons.earnableRibbons[game]);
+				}
+				plainRibbons = [...new Set(plainRibbons)];
+				if(plainRibbons.length){
+					for(let r in plainRibbons){
+						$("#pokemonFormRibbon-li-" + plainRibbons[r]).removeClass("d-none");
+					}
+				} else {
+					$("#pokemonFormRibbons-none").removeClass("d-none");
+				}
+			} else {
+				$("#pokemonFormRibbons-origin").removeClass("d-none");
+			}
+		} else {
+			$("#pokemonFormRibbons-currentorspecies").removeClass("d-none");
+		}
+	}
+}
+
 function saveMultiplePokemon(){
 	selectState = "saving";
 	var newRibbons = [];
@@ -1877,7 +1916,7 @@ function ribbonChecklist(event){
 				$("#modalRibbonChecklistStatus-text").addClass("bg-success-subtle").text("There are no more Ribbons or Marks for " + cardData.name + " to earn!");
 			}
 		} else {
-			$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").text("You must set " + cardData.name + "'s Origin Game to determine which Ribbons or Marks " + pronounSubject + " can earn.");
+			$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").text("You must set " + cardData.name + "'s Origin Game or Origin Mark to determine which Ribbons or Marks " + pronounSubject + " can earn.");
 		}
 	} else {
 		$("#modalRibbonChecklistStatus-text").addClass("bg-warning-subtle").text("You must set " + cardData.name + "'s Current Game to determine which Ribbons or Marks " + pronounSubject + " can earn.");
@@ -2272,7 +2311,7 @@ function resetPokemonForm(edit = false){
 	$("#modalPokemonForm input").each(function(){
 		if($(this).attr("type") === "text" || $(this).attr("type") === "number" || $(this).attr("type") === "date" || $(this).attr("type") === "search"){
 			$(this).val("").trigger("change");
-		} else if($(this).attr("type") === "checkbox"){
+		} else if($(this).attr("type") === "checkbox" && $(this).attr("id") !== "settingsEditEarnableOnly"){
 			$(this).prop("checked", false).trigger("change");
 		}
 	});
@@ -2295,7 +2334,7 @@ function resetPokemonForm(edit = false){
 	$("#pokemonFormBox").val("-1").trigger("change");
 	$("#pokemonFormTitle").val("None").trigger("change");
 	$("#pokemonFormRibbons li").removeClass("d-none");
-	$("#pokemonFormRibbons-none").addClass("d-none");
+	$("#pokemonFormRibbons-none, #pokemonFormRibbons-currentorspecies, #pokemonFormRibbons-origin").addClass("d-none");
 }
 
 function resetPokemonFormMulti(){
@@ -2908,6 +2947,9 @@ function initRun(){
 	/* initial preset of settings and data modals */
 	$("#loading-spinner-info-text").text("Loading settings");
 	presetSettings();
+	$("#settingsEditEarnableOnly").on("change", function(){
+		updateFormEarnableRibbons();
+	});
 	if(!localStorage.lastModified){
 		updateModifiedDate();
 	}
@@ -3066,7 +3108,7 @@ function initRun(){
 		for(var r in ribbons){
 			var $ribbonOption = $("<option>", { "value": r }).text(getLanguage(ribbons[r].names));
 			var formRibbonSelect = "#filterFormEarnedRibbons";
-			var $ribbonRow = $("<li>", { "class": "list-group-item list-group-item-action d-flex align-items-center border-0", "aria-label": getLanguage(ribbons[r].names) + " - " + getLanguage(ribbons[r].descs) })
+			var $ribbonRow = $("<li>", { "class": "list-group-item list-group-item-action d-flex align-items-center border-0", "id": "pokemonFormRibbon-li-" + r, "aria-label": getLanguage(ribbons[r].names) + " - " + getLanguage(ribbons[r].descs) })
 				.append($("<input>", { "type": "checkbox", "value": "", "class": "form-check-input mt-0 ms-lg-1 me-1 me-lg-2", "id": "pokemonFormRibbon-" + r }));
 			if(r.startsWith("contest-memory-ribbon") || r.startsWith("battle-memory-ribbon")){
 				$ribbonRow.append($("<img>", { "src": "img/ui/sync.svg", "class": "pokemonFormRibbon-memory-sync" }));
@@ -3190,7 +3232,7 @@ function initRun(){
 			if(searchText){
 				var matchedRibbons = 0;
 				$("#" + openForm + " li").each(function(i, e){
-					if(i !== 0){
+					if(i !== 0 && (openForm !== "pokemonFormRibbons" || (i !== 1 && i !== 2))){
 						var ribbonText = normalizeSearch($(this).text());
 						if(ribbonText.indexOf(searchText) > -1){
 							matchedRibbons++;
@@ -3208,6 +3250,9 @@ function initRun(){
 			} else {
 				$("#" + openForm + " li").removeClass("d-none");
 				$("#" + openForm + "-none").addClass("d-none");
+				if(openForm === "pokemonFormRibbons"){
+					$("#pokemonFormRibbons-currentorspecies, #pokemonFormRibbons-origin").addClass("d-none");
+				}
 			}
 		});
 		$("#pokemonFormRibbons input[type='checkbox']").on("change", function(){
@@ -3871,6 +3916,9 @@ $(function(){
 		modalPokemonState = "default";
 		modalPokemonEditing = -1;
 		resetPokemonForm();
+	});
+	$("#pokemonFormTabs-ribbons").on("show.bs.tab", function(e){
+		updateFormEarnableRibbons();
 	});
 	modalPokemonFormMulti = new bootstrap.Modal("#modalPokemonFormMulti");
 	$("#modalPokemonFormMulti").on("hide.bs.modal", function(e){

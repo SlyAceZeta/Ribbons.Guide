@@ -445,10 +445,22 @@
 											</ul>
 										</div>
 									</div>
+									<div>
+										<div class="form-check form-switch d-flex align-items-center">
+											<input class="form-check-input" type="checkbox" role="switch" id="settingsEditEarnableOnly" style="margin-top:0;margin-right:0.5em">
+											<label class="form-check-label" for="settingsEditEarnableOnly">Only show Ribbons and Marks this Pokémon can earn</label>
+										</div>
+									</div>
 									<div class="col-12">
 										<ul id="pokemonFormRibbons" class="list-group overflow-y-scroll border">
 											<li id="pokemonFormRibbons-none" class="list-group-item border-0 text-center d-none">
 												<div>No results found</div>
+											</li>
+											<li id="pokemonFormRibbons-currentorspecies" class="list-group-item border-0 text-center d-none">
+												<div>Not enough information; please select a species and set the Current Game</div>
+											</li>
+											<li id="pokemonFormRibbons-origin" class="list-group-item border-0 text-center d-none">
+												<div>Not enough information; please set the Origin Game or Origin Mark</div>
 											</li>
 										</ul>
 									</div>
