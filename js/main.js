@@ -1148,6 +1148,8 @@ function savePokemon(edit = false){
 		notes: $("#pokemonFormNotes").val()
 	};
 	var continueForm = true;
+	const hasOrigin = newP.originmark || newP.origingame;
+	const isOriginGO = newP.originmark === "go" || newP.origingame === "go";
 	if(newP.species){
 		setFormValid("Species");
 	} else {
@@ -1235,15 +1237,13 @@ function savePokemon(edit = false){
 		setFormValid("TrainerName");
 	}
 	if(newP.currentgame){
-		if(newP.language == "es-419" && ["sw", "sh", "bd", "sp", "pla", "scar", "vio", "lgp", "lge", "home"].includes(newP.currentgame)){
+		if(newP.language == "es-419" && ["sw", "sh", "bd", "sp", "pla", "scar", "vio", "lgp", "lge", "home", "bank", "bank7"].includes(newP.currentgame)){
 			continueForm = false;
 			setFormInvalid("CurrentGame", "Latin American Spanish Pokémon cannot go to this game.");
 		} else if(getPokedexData(newP.species, "cannotStore") && getGameData(newP.currentgame, "storage", true)){
 			continueForm = false;
 			setFormInvalid("CurrentGame", "This Pokémon cannot be stored in Bank or HOME.");
 		} else if(!getGameData(newP.currentgame, "storage", true) && !getPokedexData(newP.species, "games").includes(newP.currentgame)){
-			const hasOrigin = newP.originmark || newP.origingame;
-			const isOriginGO = newP.originmark === "go" || newP.origingame === "go";
 			if(newP.currentgame === "go" && (isOriginGO || !hasOrigin)){
 				setFormValid("CurrentGame");
 			} else {
