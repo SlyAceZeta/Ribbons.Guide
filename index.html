@@ -435,7 +435,7 @@
 											<label class="btn btn-outline-secondary border-start-0" for="switchRibbonFormViewBtn-list"><img class="align-text-bottom" src="img/ui/expanded.svg" alt="List"></label>
 										</div>
 										<div class="dropdown ms-2 flex-grow-1">
-											<button class="btn btn-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">Toggle all...</button>
+											<button id="pokemonFormRibbonToggleBtn" class="btn btn-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">Toggle all...</button>
 											<ul id="pokemonFormRibbonToggle" class="dropdown-menu dropdown-menu-end">
 												<li><button class="dropdown-item" type="button" data-gen="3">introduced in Gen 3</button></li>
 												<li><button class="dropdown-item" type="button" data-gen="4">introduced in Gen 4</button></li>
@@ -994,7 +994,7 @@
 								<label class="form-label" for="settingsChecklistButtons">Ribbon Checklist buttons</label>
 								<select class="form-select" id="settingsChecklistButtons" aria-label="Ribbon Checklist buttons" data-minimum-results-for-search="Infinity">
 									<option value="always">Always show</option>
-									<option value="incomplete">Only show for incomplete Pokémon</option>
+									<option value="incomplete">Only show for incomplete Pokémon or warnings</option>
 									<option value="never">Never show</option>
 								</select>
 							</div>

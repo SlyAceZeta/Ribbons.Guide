@@ -1296,9 +1296,10 @@ function updateFormEarnableRibbons(){
 	if(settings.EditEarnableOnly === "false"){
 		$("#pokemonFormRibbons-none, #pokemonFormRibbons-origin, #pokemonFormRibbons-currentorspecies").addClass("d-none");
 		$("#pokemonFormRibbons > li:not(#pokemonFormRibbons-none):not(#pokemonFormRibbons-currentorspecies):not(#pokemonFormRibbons-origin)").removeClass("d-none");
-		$("#pokemonFormRibbonSearch").prop("disabled", false);
+		$("#pokemonFormRibbonSearch, #pokemonFormRibbonToggleBtn").prop("disabled", false);
 	} else {
 		$("#pokemonFormRibbonSearch").val("").prop("disabled", true);
+		$("#pokemonFormRibbonToggleBtn").prop("disabled", true);
 		$("#pokemonFormRibbons > li").addClass("d-none");
 		let pokemonSpecies = $("#pokemonFormSpecies").val();
 		let pokemonCurrentGame = $("#pokemonFormCurrentGame").val();
@@ -1915,7 +1916,7 @@ function ribbonChecklist(event){
 						}
 					} else if($("#modalRibbonChecklistRows-" + compatibleGroups[group]).find(".last-chance").length){
 						groupProceed = false;
-						$("#modalRibbonChecklistRows-" + compatibleGroups[group]).append($("<div>", { "class": "border border-2 border-top-0 rounded-bottom-4 bg-danger-subtle text-center p-2 px-3" }).text(cardData.name + " cannot safely leave " + getLanguage(gameGroups[compatibleGroups[group]].names) + "."));
+						$("#modalRibbonChecklistRows-" + compatibleGroups[group]).append($("<div>", { "class": "border border-2 border-top-0 rounded-bottom-4 bg-danger-subtle text-center p-2 px-3" }).text(cardData.name + " cannot safely leave " + getLanguage(gameGroups[compatibleGroups[group]].names) + " yet."));
 					} else {
 						$("#modalRibbonChecklistRows-" + compatibleGroups[group]).append($("<div>", { "class": "border border-2 border-top-0 rounded-bottom-4 bg-success-subtle text-center p-2 px-3" }).text(cardData.name + " can safely leave " + getLanguage(gameGroups[compatibleGroups[group]].names) + "."));
 					}

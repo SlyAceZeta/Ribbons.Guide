@@ -1,5 +1,17 @@
 [
 	{
+		"date": "19 August 2026",
+		"changes": [
+			"Added an option in the Add/Edit Pokémon form to only show Ribbons and Marks that the Pokémon is capable of earning (thanks geralddhill and many others!); this may be finnicky, and both the search box and \"Toggle all\" buttons are currently disabled with this new option enabled, but with Bank's shutdown imminent, implementing even a basic form of this feature became top priority. Please send feedback if you spot any quirks!",
+			"Added a filter that will display Pokémon currently or not currently in a Switch game, including HOME (thanks absurd_maxim!)",
+			"Fixed an issue where some Pokémon, such as older-gen Spinda, would not show a Bank warning (thanks Nexus!)",
+			"Updated functionality of checklist button setting where the incomplete setting will also show the checklist button for Pokémon with active warnings",
+			"Added a message to the loading screen if the app takes more than 10 seconds to load",
+			"Pokémon from GO can no longer be stored in a Poké Ball not available in GO, including the regular Safari Ball",
+			"Latin American Spanish Pokémon can no longer be stored in Bank"
+		]
+	},
+	{
 		"date": "16 August 2026",
 		"changes": [
 			"Fixed an issue with the Rising Stars banner that prevented Ribbons.Guide from loading (thanks dawn!)"

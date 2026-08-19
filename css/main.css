@@ -740,7 +740,7 @@ html[data-reordering="false"] .card-sortable-handle {
 .card-footer-dropdown .dropdown-toggle::after {
 	display: none;
 }
-html[data-checklistbuttons="incomplete"] .ribbons-done .card-header button,
+html[data-checklistbuttons="incomplete"] .ribbons-done:not([data-ribbon-warnings]) .card-header button,
 html[data-checklistbuttons="never"] .card-header button {
 	display: none;
 }
