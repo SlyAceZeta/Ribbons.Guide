@@ -1155,7 +1155,14 @@ function savePokemon(edit = false){
 		setFormInvalid("Species", "Please select a species.");
 	}
 	if(newP.ball){
-		setFormValid("Ball");
+		if((newP.currentgame && newP.currentgame === "go") || (hasOrigin && isOriginGO)){
+			if(newP.ball !== "poke" && newP.ball !== "great" && newP.ball !== "ultra" && newP.ball !== "master" && newP.ball !== "premier" && newP.ball !== "beast" && newP.Ball !== "go-safari"){
+				continueForm = false;
+				setFormInvalid("Ball", "Pokémon from GO cannot be in this Poké Ball.");
+			}
+		} else {
+			setFormValid("Ball");
+		}
 	} else {
 		continueForm = false;
 		setFormInvalid("Ball", "Please select a Poké Ball.");
