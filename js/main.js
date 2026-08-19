@@ -3787,7 +3787,8 @@ function initRun(){
 		/* finally ready to remove spinner */
 		function allImagesLoaded(){
 			setTimeout(() => {
-				$("#loading-spinner").fadeOut("fast")
+				$("#loading-spinner").fadeOut("fast");
+				$("#loading-spinner-info-long").remove();
 			}, 500);
 		}
 	});
@@ -3795,6 +3796,10 @@ function initRun(){
 
 /* init */
 $(function(){
+	// handle perpetual loading
+	setTimeout(function(){
+		if($("#loading-spinner-info-long").length) $("#loading-spinner-info-long").html("Ribbons.Guide is taking a while to load. <br>If the app does not load soon, try clearing your browser cache. <br>If that does not work, please inform Sly on <a href='https://github.com/SlyAceZeta/Ribbons.Guide'>GitHub</a> or <a href='https://discord.gg/frv7dpWzDG'>Discord</a>.");
+	}, 10000);
 	/* set offcanvas */
 	offcanvasSelect = new bootstrap.Offcanvas("#offcanvasSelect");
 	/* set modals */
