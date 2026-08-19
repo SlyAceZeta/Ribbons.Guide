@@ -843,6 +843,18 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 		return true;
 	});
 	
+	// add warning for Bank shutdown
+	if(currentGameGroup !== "GO" && !gameGroups[currentGameGroup].switch){
+		let canGoToSwitch = false;
+		for(let g in compatibleGroups){
+			if(gameGroups[compatibleGroups[g]].switch){
+				canGoToSwitch = true;
+				break;
+			}
+		}
+		if(canGoToSwitch) earnableRibbonWarnings.push({ id: "bank-shutdown" });
+	}
+	
 	// Footprint Ribbon level status
 	let footprintLevelStatus;
 	if(originGame === "go" || originMark === "go"){
@@ -998,10 +1010,6 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 			// add warning for GO language
 			if(currentGame == "go" && ribbonIsGen8OrSV){
 				earnableRibbonWarnings.push({ id: "go-language" });
-			}
-			// add warnings for Bank shutdown
-			if(ribbonIsGen8OrSV && currentGameGroup !== "GO" && !gameGroups[currentGameGroup].switch){
-				earnableRibbonWarnings.push({ id: "bank-shutdown" });
 			}
 			var ribbonGameKey = ribbonGame;
 			if(ribbonGameCombo){
