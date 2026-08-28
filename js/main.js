@@ -832,7 +832,10 @@ function getGamesAndRibbons(dex, currentLevel, metLevel, currentGame, originGame
 			}
 		} else if(dex === "marowak-alola" || dex === "ribombee" || dex === "araquanid" || dex === "togedemaru"){
 			// Totem-sized versions of these Pokemon cannot leave USUM
-			if(totem && targetGame !== "usun" && targetGame !== "umoon") return false;
+			if(totem && targetGame !== "usun" && targetGame !== "umoon"){
+				compatibleGroups = ["7"];
+				return false;
+			}
 		} else if(dex === "pikachu" || dex === "eevee" || dex === "meowth" || dex == "duraludon"){
 			// if these Pokemon have GMax, they cannot leave SwSh
 			if(gmax && targetGame !== "sw" && targetGame !== "sh") return false;
