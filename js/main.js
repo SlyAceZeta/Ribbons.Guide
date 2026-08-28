@@ -10,7 +10,7 @@ const bankShutdownText = bankShutdown.toLocaleString([], { weekday: "long", mont
 // TODO: add tutorials
 /* clear old local storage properties if still present */
 /* except theme which gets special handling */
-var oldProps = ["site-update-warning", "master-rank-sv-2025"];
+var oldProps = ["site-update-warning", "master-rank-sv-2025", "regiultima-rising-stars"];
 for(var o in oldProps){
 	if(localStorage[oldProps[o]]){
 		localStorage.removeItem(oldProps[o]);
@@ -3762,18 +3762,6 @@ function initRun(){
 		/* initialize tooltips */
 		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 		const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-		
-		/* show Rising Stars event alert */
-		if(!localStorage["regiultima-rising-stars"]){
-			$("#alert-regiultima-rising-stars").removeClass("d-none").addClass("d-flex show").on("close.bs.alert", function(e){
-				if(confirm("Are you sure you want to permanently dismiss this alert?")){
-					localStorage["regiultima-rising-stars"] = "dismissed";
-					$("#headerNavDataLink").focus();
-				} else {
-					e.preventDefault();
-				}
-			});
-		}
 		
 		/* image check */
 		loadingBar(25);
