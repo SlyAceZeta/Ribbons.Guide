@@ -483,6 +483,7 @@ html[data-ribbonformview="grid"] #pokemonFormMultiRibbons li.d-flex {
 }
 #modalDataCompareArrowLeft {
 	transform: rotate(-90deg);
+	filter: var(--rg-icon-filter);
 }
 #modalDataCompareOnlineAccept {
 	display: none;

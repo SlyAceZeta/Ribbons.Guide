@@ -1,5 +1,11 @@
 [
 	{
+		"date": "7 September 2026",
+		"changes": [
+			"Fixed visibility of arrow in data backup/restore modal when using a light theme (thanks RubyHexagon!)"
+		]
+	},
+	{
 		"date": "27 August 2026",
 		"changes": [
 			"Fixed issue where USUM-exclusive Totems were showing a Bank shutdown warning (thanks SadisticMystic!)",
