@@ -91,7 +91,6 @@
 		}
 	},
 	"gba": {
-		"image": "gba-temp",
 		"names": {
 			"en": "Game Boy Advance",
 			"ja": "ゲームボーイアドバンス",

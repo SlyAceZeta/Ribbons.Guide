@@ -1170,10 +1170,13 @@ function savePokemon(edit = false){
 	}
 	if(newP.ball){
 		if((newP.currentgame && newP.currentgame === "go") || (hasOrigin && isOriginGO)){
-			if(newP.ball !== "poke" && newP.ball !== "great" && newP.ball !== "ultra" && newP.ball !== "master" && newP.ball !== "premier" && newP.ball !== "beast" && newP.Ball !== "go-safari"){
+			if(newP.ball !== "poke" && newP.ball !== "great" && newP.ball !== "ultra" && newP.ball !== "master" && newP.ball !== "premier" && newP.ball !== "beast" && newP.ball !== "go-safari"){
 				continueForm = false;
 				setFormInvalid("Ball", "Pokémon from GO cannot be in this Poké Ball.");
 			}
+		} else if(newP.ball === "go-safari" && ((newP.currentgame && newP.currentgame !== "go") || (hasOrigin && !isOriginGO))){
+			continueForm = false;
+			setFormInvalid("Ball", "Pokémon not from GO cannot be in this Poké Ball.");
 		} else {
 			setFormValid("Ball");
 		}
@@ -1726,6 +1729,8 @@ function ribbonChecklist(event){
 	if(cardData.currentGame){
 		currentGame = cardData.currentGame;
 		$("#modalRibbonChecklistInfo-currentgame").text("Currently in " + getLanguage(getGameData(currentGame, "names", true)));
+	} else {
+		$("#modalRibbonChecklistInfo-currentgame").text("");
 	}
 	
 	// reset

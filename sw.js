@@ -1,4 +1,4 @@
-const APP_CACHE = "app-2026-09-07-0";
+const APP_CACHE = "app-2026-10-07-0";
 const ASSET_CACHE = "assets-v1";
 
 // on installation

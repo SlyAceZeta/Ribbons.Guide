@@ -1,5 +1,14 @@
 [
 	{
+		"date": "7 October 2026",
+		"changes": [
+			"Added FireRed/LeafGreen (Switch) compatibility with HOME",
+			"Fixed issue where Pokémon in GO could not be saved with the GO Safari Ball (thanks KonanRabbit!)",
+			"Added prevention measure from selecting GO Safari Ball for non-GO Pokémon",
+			"Fixed issue where a previous Pokémon's Current Game was shown when opening the Ribbon Checklist for a Pokémon without a Current Game set"
+		]
+	},
+	{
 		"date": "7 September 2026",
 		"changes": [
 			"Fixed visibility of arrow in data backup/restore modal when using a light theme (thanks RubyHexagon!)"
