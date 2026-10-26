@@ -1,5 +1,15 @@
 [
 	{
+		"date": "26 October 2026",
+		"changes": [
+			"Pokémon from FireRed/LeafGreen (Switch) no longer show the Master Rank Ribbon earnable in Scarlet/Violet",
+			"Ribbon Checklists now require an Origin Game or an Origin Mark to be set on the Pokémon, due to the above as well as previous fringe cases with Spinda and Nincada",
+			"Pokémon in a GO Safari Ball now show earnable Ribbons in relevant games",
+			"Added Bank shutdown warning to Alolan Rattata and Alolan Raticate (thanks jenniferff!)",
+			"Added prevention measure to only show one update popup (thanks Morganium!)"
+		]
+	},
+	{
 		"date": "7 October 2026",
 		"changes": [
 			"Added FireRed/LeafGreen (Switch) compatibility with HOME",
