@@ -1326,7 +1326,7 @@ function updateFormEarnableRibbons(){
 			let pokemonOriginMark = $("#pokemonFormOriginMark").val();
 			if(pokemonOriginGame || pokemonOriginMark || pokemonSpecies !== "nincada"){
 				$("#pokemonFormRibbons-origin").addClass("d-none");
-				let compatibleGamesAndRibbons = getGamesAndRibbons(pokemonSpecies, $("#pokemonFormCurrentLevel").val(), $("#pokemonFormMetLevel").val(), pokemonCurrentGame, pokemonOriginGame, pokemonOriginMark, $("#pokemonFormBall").val(), [], false, $("#pokemonFormTotem").prop("checked"), $("#pokemonFormGMax").prop("checked"), $("#pokemonFormShadow").prop("checked"));
+				let compatibleGamesAndRibbons = getGamesAndRibbons(pokemonSpecies, $("#pokemonFormCurrentLevel").val(), $("#pokemonFormMetLevel").val(), pokemonCurrentGame, pokemonOriginGame, pokemonOriginMark, [], false, $("#pokemonFormTotem").prop("checked"), $("#pokemonFormGMax").prop("checked"), $("#pokemonFormShadow").prop("checked"));
 				let plainRibbons = [];
 				for(let game in compatibleGamesAndRibbons.earnableRibbons){
 					plainRibbons = plainRibbons.concat(compatibleGamesAndRibbons.earnableRibbons[game]);
@@ -2009,7 +2009,7 @@ function createCard(p, id){
 	// get compatible games and ribbons
 	let compatibleGamesAndRibbons = {}; //{"currentCompatibleGames": [], "compatibleGroups": [], "earnableRibbonWarnings": [], "earnableRibbons": {}};
 	if(p.currentgame){
-		compatibleGamesAndRibbons = getGamesAndRibbons(p.species, p.currentlevel, p.metlevel, p.currentgame, p.origingame, p.originmark, p.ball, p.ribbons, p.scale, p.totem, p.gmax, p.shadow);
+		compatibleGamesAndRibbons = getGamesAndRibbons(p.species, p.currentlevel, p.metlevel, p.currentgame, p.origingame, p.originmark, p.ribbons, p.scale, p.totem, p.gmax, p.shadow);
 	}
 	
 	/* containers and filters */
